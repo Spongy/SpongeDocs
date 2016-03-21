@@ -1,0 +1,695 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+     <title>Fichiers Log &mdash; documentation Sponge 3.1.0</title>
+    
+  <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
+  <link href='//fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:400italic,700italic,700,400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../../_static/tomorrow.css" type="text/css" />
+  <link id="syntax-highlighting-ref" rel="stylesheet" href="../../_static/tomorrow_night.css" type="text/css" />
+      
+  <script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+      URL_ROOT:    '../../',
+      VERSION:     '3.1.0',
+      COLLAPSE_INDEX: false,
+      FILE_SUFFIX: '.html',
+      HAS_SOURCE:  true
+    };
+  </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/store.min.js"></script>
+    <script type="text/javascript" src="../../_static/lights.js"></script>
+      <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+        <link rel="top" title="documentation Sponge 3.1.0" href="../../index.html" />
+        <link rel="up" title="Devenir un Expert Spongineer" href="index.html" />
+        <link rel="next" title="Debugging" href="debugging.html" />
+        <link rel="prev" title="Dépannage" href="troubleshooting.html" />
+    
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-59476017-2', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+    
+  <link rel="alternate" hreflang="da" href="/3.1.0/da/">
+  <link rel="alternate" hreflang="de" href="/3.1.0/de/">
+  <link rel="alternate" hreflang="en-GB" href="/3.1.0/en-GB/">
+  <link rel="alternate" hreflang="en-PT" href="/3.1.0/en-PT/">
+  <link rel="alternate" hreflang="en" href="/3.1.0/en/">
+  <link rel="alternate" hreflang="es-ES" href="/3.1.0/es-ES/">
+  <link rel="alternate" hreflang="fi" href="/3.1.0/fi/">
+  <link rel="alternate" hreflang="fr" href="/3.1.0/fr/">
+  <link rel="alternate" hreflang="it" href="/3.1.0/it/">
+  <link rel="alternate" hreflang="ja" href="/3.1.0/ja/">
+  <link rel="alternate" hreflang="ko" href="/3.1.0/ko/">
+  <link rel="alternate" hreflang="nb" href="/3.1.0/nb/">
+  <link rel="alternate" hreflang="nl" href="/3.1.0/nl/">
+  <link rel="alternate" hreflang="pl" href="/3.1.0/pl/">
+  <link rel="alternate" hreflang="pt-BR" href="/3.1.0/pt-BR/">
+  <link rel="alternate" hreflang="pt-PT" href="/3.1.0/pt-PT/">
+  <link rel="alternate" hreflang="ru" href="/3.1.0/ru/">
+  <link rel="alternate" hreflang="uk" href="/3.1.0/uk/">
+  <link rel="alternate" hreflang="zh-CN" href="/3.1.0/zh-CN/">
+  <link rel="alternate" hreflang="zh-TW" href="/3.1.0/zh-TW/">
+  <link rel="alternate" hreflang="x-default" href="/"> 
+  </head>
+  <body role="document" id="top">
+    <div class="topbar">
+  <div role="navigation" aria-label="related navigation">
+    <div class="menu-left">
+      <a href="https://docs.spongepowered.org">
+        <img src="../../_static/spongelogo.png" height="40px" style="vertical-align:middle"/>
+        <i class="icon-down-open-big lights-icon" style="vertical-align:middle"></i>
+      </a>
+      <ul class="dropdown" id="ddleft">
+        <a href="https://www.spongepowered.org"><li><i class="icon-home lights-icon"></i> Homepage</li></a>
+        <a href="https://forums.spongepowered.org"><li><i class="icon-pencil lights-icon"></i> Forums</li></a>
+        <a href="https://github.com/SpongePowered"><li><i class="icon-code lights-icon"></i> Code</li></a>
+        <a href="https://docs.spongepowered.org"><li class="active"><i class="icon-book-open lights-icon"></i> SpongeDocs</li></a>
+        <a href="https://jd.spongepowered.org"><li><i class="icon-graduation-cap lights-icon"></i> JavaDocs</li></a>
+        <a href="https://forums.spongepowered.org/c/plugins/plugin-releases"><li><i class="icon-tools lights-icon"></i> Plugins</li></a>
+        <a href="https://forums.spongepowered.org/t/sponge-downloads/11448"><li><i class="icon-download lights-icon"></i> Get Sponge</li></a>
+      </ul>
+    </div>
+    <div class="menu-right">
+      <div><i class="icon-language lights-icon"></i></div>
+        <ul class="dropdown" id="ddlang">
+          <li><a href="/3.1.0/da/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/da.png" alt="Flag for Danish"/></a></li>
+          <li><a href="/3.1.0/de/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/de.png" alt="Flag for German"/></a></li>
+          <li><a href="/3.1.0/en-GB/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/en-GB.png" alt="Flag for English, United Kingdom"/></a></li>
+          <li><a href="/3.1.0/en-PT/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/en-PT.png" alt="Flag for Pirate English"/></a></li>
+          <li><a href="/3.1.0/en/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/en.png" alt="Flag for English"/></a></li>
+          <li><a href="/3.1.0/es-ES/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/es-ES.png" alt="Flag for Spanish"/></a></li>
+          <li><a href="/3.1.0/fi/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/fi.png" alt="Flag for Finnish"/></a></li>
+          <li><a href="/3.1.0/fr/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/fr.png" alt="Flag for French"/></a></li>
+          <li><a href="/3.1.0/it/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/it.png" alt="Flag for Italian"/></a></li>
+          <li><a href="/3.1.0/ja/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/ja.png" alt="Flag for Japanese"/></a></li>
+          <li><a href="/3.1.0/ko/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/ko.png" alt="Flag for Korean"/></a></li>
+          <li><a href="/3.1.0/nb/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/nb.png" alt="Flag for Norwegian Bokmal"/></a></li>
+          <li><a href="/3.1.0/nl/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/nl.png" alt="Flag for Dutch"/></a></li>
+          <li><a href="/3.1.0/pl/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/pl.png" alt="Flag for Polish"/></a></li>
+          <li><a href="/3.1.0/pt-BR/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/pt-BR.png" alt="Flag for Portuguese, Brazilian"/></a></li>
+          <li><a href="/3.1.0/pt-PT/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/pt-PT.png" alt="Flag for Portuguese"/></a></li>
+          <li><a href="/3.1.0/ru/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/ru.png" alt="Flag for Russian"/></a></li>
+          <li><a href="/3.1.0/uk/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/uk.png" alt="Flag for Ukrainian"/></a></li>
+          <li><a href="/3.1.0/zh-CN/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/zh-CN.png" alt="Flag for Chinese Simplified"/></a></li>
+          <li><a href="/3.1.0/zh-TW/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/zh-TW.png" alt="Flag for Chinese Traditional"/></a></li>
+        </ul>
+    </div>
+    <div class="menu-right">
+      <div><i class="icon-tag lights-icon"></i><a>3.1.0</a></div>
+        <ul class="dropdown" id="ddvers">
+          <li><a href="/master/en/"><i class="icon-tag lights-icon"></i> latest</a></li>
+          <li><a href="/3.1.0/en/"><i class="icon-tag lights-icon"></i> 3.1.0</a></li>
+        </ul>
+    </div>
+    <div class="menu-right">
+      <div title="Toggle syntax highlighting between light and dark" id="lights">
+        <i class="icon-lamp lights-icon"></i>
+      </div>
+    </div>
+    <div>
+      <ul class="controls">
+        <li>|</li>
+        
+        <li><a href="debugging.html" title="Next Page"><i class="icon-right-open-big lights-icon"></i></a></li>
+        
+        <li><a href="#top" title="To the top"><i class="icon-up-open-big lights-icon"></i></a></li>
+        <li><a href="../../index.html" title="Home"><i class="icon-home lights-icon"></i></a></li>
+        
+        <li><a href="troubleshooting.html" title="Previous Page"><i class="icon-left-open-big lights-icon"></i></a></li>
+        
+        <li>|</li>
+        
+          <li><a href="https://github.com/SpongePowered/SpongeDocs/blob/master/source/server/spongineer/logs.rst" title="Edit on GitHub"><i class="icon-github lights-icon"></i></a></li>
+        
+      </ul>
+    </div>
+    <h3>Navigation</h3>
+  </div>
+    </div>
+    <div class="container">
+
+      <div class="breadcrumbs">
+        <ul>
+        <li><a href="../../index.html">documentation Sponge 3.1.0</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="../index.html" >Creating a Server</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="index.html" accesskey="U">Devenir un Expert Spongineer</a><i class="icon-right-open lights-icon"></i></li>
+        </ul>
+      </div> 
+    <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+    <form class="search" action="../../search.html" method="get">
+      <div class="searchbox-inner">
+        <input class="field" type="text" name="q" autocomplete="off" />
+        <button class="submit" type="submit"><i class="icon-search"></i></button>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </div>
+    </form>
+    <p class="searchtip" style="font-size: 90%"></p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../index.html">Table des Matières</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Creating a Server</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/index.html">Premiers pas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/jre.html">Installation de Java</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/migrating.html">Passer à Sponge</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/implementations/index.html">Choisir une implémentation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/implementations/spongeforge.html">Installing SpongeForge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/launch-script.html">Création d&#8217;un script de lancement</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/port-forward.html">Redirection de port</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/bungeecord.html">Utiliser Sponge avec BungeeCord</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/configuration/index.html">Configurer Sponge</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/configuration/hocon.html">Introduction à HOCON</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/configuration/json.html">Syntaxe JSON</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/configuration/sponge-conf.html">global.conf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/configuration/server-properties.html">server.properties</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../management/index.html">Gestion de Serveur</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../management/whitelist.html">Gestion de la liste blanche (whitelist)</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../management/bans.html">Gestion des bannissements</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../management/permissions.html">Gestion des permissions</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../management/plugins.html">Installer des plugins</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../management/exploit-patches.html">Correctifs d&#8217;exploitation de bugs</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Devenir un Expert Spongineer</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="commands.html">Commandes</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html">Dépannage</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Fichiers Log</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="debugging.html">Debugging</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bugreport.html">Rapporter des bugs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Preparing for Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preparing/jdk.html">Installer le JDK</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../preparing/ide.html">Installation d&#8217;un IDE</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../preparing/text.html">Installer un Editeur de Texte</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../preparing/git.html">Installer Git</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../plugin/index.html">Création d&#8217;un Plugin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/workspace/index.html">Mise en Place de votre Espace de Travail</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/workspace/idea.html">Configurer IntelliJ IDEA</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/workspace/eclipse.html">Préparation d&#8217;Eclipse</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/workspace/netbeans.html">Configuration de NetBeans</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/workspace/dependencies.html">Ajout des Dépendances de Sponge</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/practices.html">Meilleures Pratiques</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/templates.html">Modèles de Plugin</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/main-class.html">Créer la Classe Principale de votre Plugin</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/lifecycle.html">Cycle de vie des Plugins</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/optional/index.html">Optionnels</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/optional/basic.html">Optionals Explained</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/optional/usage.html">Exemples d&#8217;utilisation</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/logging.html">Journalisation (Logging) et Débogage</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/text/index.html">Travailler avec du Texte</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/text.html">Création de texte</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../plugin/text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../plugin/text/representations/xml.html">Format TextXML</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../plugin/text/representations/json.html">Format JSON</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../plugin/text/representations/configurate.html">Configuration Format</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/pagination.html">Le Service de Pagination</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/templates.html">Working with TextTemplates</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/commands/index.html">Création de commandes</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/creating.html">Construction d&#8217;une commande</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/arguments.html">Séparation des Arguments</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/childcommands.html">Sous-Commandes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/service.html">Le gestionnaire de commandes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/commandcallable.html">API pour Commandes de Bas Niveau</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/event/index.html">Working with Events</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/listeners.html">Event Listeners</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/causes.html">Event Causes</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/filters.html">Filtres d&#8217;événement</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/custom.html">Creating Custom Events</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/configuration/index.html">Configuration des plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/configuration/loaders.html">Loaders de Configuration</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/configuration/nodes.html">Configuration des Nœuds</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/configuration/serialization.html">Sérialisation d&#8217;objets</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/data/index.html">La Data API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/data/keys.html">Utilisation des touches</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/data/datamanipulators.html">Manipulateurs de données</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/data/transactions.html">Transactions</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/data/serialization.html">Serializing Data</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/blocks/index.html">Travailler avec les blocs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/concepts.html">Concepts</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/accessing.html">Accéder aux Blocs</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/modifying.html">Modifier des Blocs</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/tileentities.html">Travailler avec les Tiles Entities</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/entities/index.html">Utilisation des Entités</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/entities/spawning.html">Invoquer une entité</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/entities/modifying.html">Modification d&#8217;une entité</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/items/index.html">Working with Items</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/items/usage.html">Basic Item Usage</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/items/creating.html">Création d&#8217;un ItemStack</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/injection.html">Injection de Dépendances</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/scheduler.html">Utiliser le Scheduler</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/database.html">Travailler avec des Bases de Données</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/permissions.html">Travailler avec l&#8217;API de Permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/economy/index.html">L&#8217;API Economie</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/economy/basics.html">Les concepts de base</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/economy/using.html">Utilisation de l&#8217;API Economie</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/economy/practices.html">Meilleurs exemples d&#8217;utilisation de l&#8217;API Economie</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/economy/implementing.html">Implémentation de l&#8217;API Economie</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/services.html">Travailler avec des Services</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/wgen/index.html">Génération du monde</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/wgen/modifiers.html">Travailler avec WorldGeneratorModifiers</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/wgen/customwgen.html">Modification de la génération du monde</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/manager.html">Utiliser le Gestionnaire de Plugins</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/debugging.html">Debugging d&#8217;un plugin</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/messagechannels.html">Message Channels</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/tutorials.html">Tutoriels</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing to Sponge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">Lignes directrices des contributions</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/howtogit.html">Comment utiliser Git(Hub)</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/implementation/index.html">Développer Sponge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/codestyle.html">Style de Code</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/git-implementation.html">Git Workflow pour API et Implémentations</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/pr.html">Soumettre une Contribution</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/debugging.html">Déboguer Sponge dans l&#8217;IDE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/mixins.html">Mixins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/datamanipulator.html">Implémenter des DataManipulators</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/spongedocs.html">Écrire pour SpongeDocs</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/porting.html">Migrer de Sponge vers d&#8217;Autres Plateformes</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/versioning.html">Versioning System and Repository Branch Layout</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">À propos du projet Sponge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">Introduction</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/faq.html">Foire aux Questions</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/structure.html">La Structure du Sponge Project</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/future.html">Projets pour le futur</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/license.html">Licence</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/posting.html">Directives de Publication du Forum</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/rules.html">Règles du forum et du salon IRC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/staff.html">Staff</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Glossaire de Sponge</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/assets.html">Art Assets</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/history.html">L&#8217;histoire de Sponge</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads.html">Téléchargement</a><ul class="simple">
+</ul>
+</li>
+</ul>
+<ul class="simple">
+</ul>
+
+      </div>
+    </div> 
+
+        <div class="document">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body" role="main">
+                  
+  <div class="section" id="log-files">
+<h1>Fichiers Log<a class="headerlink" href="#log-files" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Les Logfiles sont une partie essentielle du debugging d&#8217;un serveur en vous indiquant ce qui ne tourne pas rond. Cette page contient les logfiles de SpongeForge et SpongeVanilla en incluant de courtes descriptions.</p>
+<div class="contents local topic" id="provided-logfiles">
+<p class="topic-title first"><strong>Le Logfile Fournit</strong></p>
+<ul class="simple">
+<li><a class="reference internal" href="#spongeforge-logfiles" id="id2">Le logfile de SpongeForge</a><ul>
+<li><a class="reference internal" href="#fml-junk-earlystartup-log" id="id3">fml-junk-earlystartup.log</a></li>
+<li><a class="reference internal" href="#fml-server-latest-log" id="id4">fml-server-latest.log</a></li>
+<li><a class="reference internal" href="#latest-log" id="id5">latest.log</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#spongevanilla-logfiles" id="id6">Le logfiles de SpongeVanilla</a><ul>
+<li><a class="reference internal" href="#id1" id="id7">latest.log</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#reading-logfiles" id="id8">Lire les logfiles</a></li>
+<li><a class="reference internal" href="#common-errors" id="id9">Erreurs communes</a></li>
+</ul>
+</div>
+<div class="section" id="spongeforge-logfiles">
+<h2><a class="toc-backref" href="#id2">Le logfile de SpongeForge</a><a class="headerlink" href="#spongeforge-logfiles" title="Lien permanent vers ce titre">¶</a></h2>
+<p>SpongeForge écrit la plupart des logfiles dans le dossier <code class="docutils literal"><span class="pre">/logs</span></code>, situé dans le dossier de votre serveur. Depuis Forge 1521, il y a :</p>
+<ol class="arabic simple">
+<li><code class="docutils literal"><span class="pre">fml-junk-earlystartup.log</span></code></li>
+<li><code class="docutils literal"><span class="pre">fml-server-latest.log</span></code></li>
+<li><code class="docutils literal"><span class="pre">latest.log</span></code></li>
+</ol>
+<div class="section" id="fml-junk-earlystartup-log">
+<h3><a class="toc-backref" href="#id3">fml-junk-earlystartup.log</a><a class="headerlink" href="#fml-junk-earlystartup-log" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Seulement quelques lignes sont montrées ici. Pour lire un exemple complet de log, suivez ce lien <a class="reference download internal" href="../../_downloads/forge-1521-fml-junk-earlystartup.txt"><code class="xref download docutils literal"><span class="pre">SpongeForge</span> <span class="pre">1521</span> <span class="pre">fml-junk-earlystartup.log</span> <span class="pre">file</span></code></a></p>
+</div>
+</div>
+<div class="section" id="fml-server-latest-log">
+<h3><a class="toc-backref" href="#id4">fml-server-latest.log</a><a class="headerlink" href="#fml-server-latest-log" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Seulement quelques lignes sont montrées ici. Pour lire un exemple complet de log, suivez ce lien <a class="reference download internal" href="../../_downloads/forge-1521-fml-server-latest.txt"><code class="xref download docutils literal"><span class="pre">SpongeForge</span> <span class="pre">1521</span> <span class="pre">fml-server-latest.log</span></code></a></p>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>[main/INFO] [FML/]: Forge Mod Loader version 11.14.3.1521 for Minecraft 1.8 loading
+[main/INFO] [FML/]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_51, running on Windows 8.1:amd64:6.3, installed at ##PATH_TO_JAVA_HERE##
+[main/DEBUG] [FML/]: Java classpath at launch is forge.jar
+[main/DEBUG] [FML/]: Java library path at launch is ##PATH_TO_JAVA_HERE##
+</pre></div>
+</div>
+<p>L&#8217;exemple de log nous indique que nous utilisons:</p>
+<ul class="simple">
+<li>Forge 11.14.3.1521 (Version 1521)</li>
+<li>Java 8 64bit Update 51</li>
+<li>Windows 8.1 x64</li>
+<li><p class="first">le <code class="docutils literal"><span class="pre">répertoire</span></code> Java a été installé à (Ligne 4)</p>
+</li>
+</ul>
+<div class="admonition warning">
+<p class="first admonition-title">Avertissement</p>
+<p class="last">SpongeForge ne fonctionne pas sur Java 6 (<code class="docutils literal"><span class="pre">1.6.x</span></code>) ou Java 7 (<code class="docutils literal"><span class="pre">1.7.x</span></code>). Si vous rencontrez une erreur indiquant que vous exécutez une version de Java antérieure à Java 8,mettez à jour votre JRE en <code class="docutils literal"><span class="pre">1.8.x</span></code> et réessayez !</p>
+</div>
+<div class="highlight-none"><div class="highlight"><pre><span></span>[main/DEBUG] [FML/]: Examining for coremod candidacy spongeforge-1.8-1521-2.1-DEV-750.jar
+[main/INFO] [FML/]: Loading tweaker org.spongepowered.asm.launch.MixinTweaker from spongeforge-1.8-1521-2.1-DEV-750.jar
+</pre></div>
+</div>
+<p>Cela indique que SpongeForge 750 a été trouvé et a été chargé par Forge. Pour plus d&#8217;informations concernant le schéma de nommage SpongeForge, jetez un œil ici : <a class="reference internal" href="../getting-started/implementations/spongeforge.html"><em>Installing SpongeForge</em></a></p>
+</div>
+<div class="section" id="latest-log">
+<h3><a class="toc-backref" href="#id5">latest.log</a><a class="headerlink" href="#latest-log" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Seulement quelques lignes sont montrées ici. Pour lire un exemple complet de log, suivez ce lien <a class="reference download internal" href="../../_downloads/forge-1521-latest.txt"><code class="xref download docutils literal"><span class="pre">SpongeForge</span> <span class="pre">1521</span> <span class="pre">latest.log</span></code></a></p>
+</div>
+<p>C&#8217;est ce que vous devriez voir dans la fenêtre de votre serveur Minecraft.</p>
+</div>
+</div>
+<div class="section" id="spongevanilla-logfiles">
+<h2><a class="toc-backref" href="#id6">Le logfiles de SpongeVanilla</a><a class="headerlink" href="#spongevanilla-logfiles" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="id1">
+<h3><a class="toc-backref" href="#id7">latest.log</a><a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Seulement quelques lignes sont montrées ici. Pour lire un exemple complet de log, suivez ce lien <a class="reference download internal" href="../../_downloads/vanilla-47-latest.txt"><code class="xref download docutils literal"><span class="pre">SpongeVanilla</span> <span class="pre">47</span> <span class="pre">latest.log</span></code></a></p>
+</div>
+<p>C&#8217;est ce que vous devriez voir dans la fenêtre de votre serveur Minecraft.</p>
+</div>
+</div>
+<div class="section" id="reading-logfiles">
+<h2><a class="toc-backref" href="#id8">Lire les logfiles</a><a class="headerlink" href="#reading-logfiles" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Si vous ne savez pas comment lire un crashlog, vous trouverez de l&#8217;aide ici, mais tout d&#8217;abord vous aurez besoin d&#8217;un crashlog. Pour cette courte introduction, nous allons juste utiliser un exemple de crash de la page <a class="reference internal" href="debugging.html"><em>Debugging</em></a> : <a class="reference download internal" href="../../_downloads/crashlog-sponge575-plugin750.txt"><code class="xref download docutils literal"><span class="pre">Exemple</span> <span class="pre">de</span> <span class="pre">crashlog</span> <span class="pre">d'une</span> <span class="pre">version</span> <span class="pre">obsolète</span> <span class="pre">de</span> <span class="pre">SpongeForge</span></code></a></p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>WARNING: coremods are present:
+SpongeCoremod (sponge-1.8-1499-2.1DEV-575.jar)
+Contact their authors BEFORE contacting forge
+</pre></div>
+</div>
+<p>La première chose que vous remarquerez est qu&#8217;il y a un <code class="docutils literal"><span class="pre">Warning</span></code>, pour montrer qu&#8217;un coremod est présent, mais ne vous en faites pas, ce n&#8217;est pas une erreur, ce message ne sert qu&#8217;à dire qu&#8217;il faut contacter le support de Sponge et non pas Forge.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>java.lang.NoClassDefFoundError: org/spongepowered/api/event/game/state/GameStartingServerEvent
+</pre></div>
+</div>
+<p>On trouve ci-dessous les quelques lignes de l&#8217;erreur actuelle. Dan ce cas c&#8217;est une <code class="docutils literal"><span class="pre">NoClassDefFoundError</span></code>, si vous n&#8217;êtes pas sûr de savoir ce que cela signifie, faites un tour sur la page <a class="reference internal" href="debugging.html"><em>Debugging</em></a>. Si c&#8217;est une erreur commune, elle sera listée là-bas. Si ce n&#8217;est pas le cas, vous pouvez toujours demandez de l&#8217;aide sur les forums ! Mais assurez vous de fournir le crashlog complet.</p>
+<p>Heureusement, les détails sur votre système figurent au bas du crashlog:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>Minecraft Version: 1.8
+Operating System: Windows 8.1 (amd64) version 6.3
+Java Version: 1.8.0_51, Oracle Corporation
+Java VM Version: Java HotSpot(TM) 64-Bit Server VM (mixed mode), Oracle Corporation
+Memory: 515666256 bytes (491 MB) / 782761984 bytes (746 MB) up to 1847590912 bytes (1762 MB)
+JVM Flags: 0 total;
+IntCache: cache: 0, tcache: 0, allocated: 0, tallocated: 0
+FML: MCP v9.10 FML v8.0.99.99 Minecraft Forge 11.14.3.1521 5 mods loaded, 5 mods active
+States: &#39;U&#39; = Unloaded &#39;L&#39; = Loaded &#39;C&#39; = Constructed &#39;H&#39; = Pre-initialized &#39;I&#39; = Initialized &#39;J&#39; = Post-initialized &#39;A&#39; = Available &#39;D&#39; = Disabled &#39;E&#39; = Errored
+UC     mcp{9.05} [Minecraft Coder Pack] (minecraft.jar)
+UC     FML{8.0.99.99} [Forge Mod Loader] (forge.jar)
+UC     Forge{11.14.3.1521} [Minecraft Forge] (forge.jar)
+UC     Sponge{1.8-1499-2.1DEV-575} [SpongeForge] (minecraft.jar)
+U      Core{unknown} [Core Plugin] (Core.jar)
+Loaded coremods (and transformers):
+SpongeCoremod (sponge-1.8-1499-2.1DEV-575.jar)
+</pre></div>
+</div>
+<p>Cela indique que</p>
+<ul>
+<li><p class="first">Minecraft 1.8 avec Forge 1521 fonctionne avec</p>
+</li>
+<li><p class="first">Java 8 Update 51 (64bit version) et que</p>
+</li>
+<li><p class="first">2 autres mods sont installés</p>
+<blockquote>
+<div><ul class="simple">
+<li><p class="first">SpongeForge 1.8-1499-2.1DEV-575 (qui est la version #575) et</p>
+</li>
+<li>Core</li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">Notez que les trois autres mods installés (mcp, FML, Forge) sont requis pour chaque serveur Forge et sont essentiels pour le faire fonctionner proprement.</p>
+</div>
+<p>Maintenant, les hypothèses suivantes peuvent être formulées:</p>
+<ul class="simple">
+<li><p class="first">le plugin a sûrement fait crasher le serveur</p>
+</li>
+<li><p class="first">SpongeForge ne correspond pas à la version de Forge: la version 1499 est requise, mais c&#8217;est la version 1521 qui est installée</p>
+</li>
+</ul>
+<p>Si vous voulez savoir comment résoudre cette erreur, consultez notre checklist de la page <a class="reference internal" href="debugging.html"><em>Debugging</em></a>.</p>
+</div>
+<div class="section" id="common-errors">
+<h2><a class="toc-backref" href="#id9">Erreurs communes</a><a class="headerlink" href="#common-errors" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Parcourez la page <a class="reference internal" href="debugging.html"><em>Debugging</em></a> pour en savoir davantage sur les erreurs et exceptions courantes.</p>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          <div class="clearer"></div>
+        </div>
+        <div class="footer" role="contentinfo">
+              &copy; Copyright 2014-2016, Sponge Contributors.
+            Créé avec <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.3.
+        </div>
+    </div>
+  </body>
+</html>

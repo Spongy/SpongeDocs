@@ -1,0 +1,1049 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+     <title>server.properties &mdash; Sponge 3.1.0 documentation</title>
+    
+  <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/sponge.css" type="text/css" />
+  <link href='//fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:400italic,700italic,700,400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../../../_static/tomorrow.css" type="text/css" />
+  <link id="syntax-highlighting-ref" rel="stylesheet" href="../../../_static/tomorrow_night.css" type="text/css" />
+      
+  <script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+      URL_ROOT:    '../../../',
+      VERSION:     '3.1.0',
+      COLLAPSE_INDEX: false,
+      FILE_SUFFIX: '.html',
+      HAS_SOURCE:  true
+    };
+  </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/store.min.js"></script>
+    <script type="text/javascript" src="../../../_static/lights.js"></script>
+      <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+        <link rel="top" title="Sponge 3.1.0 documentation" href="../../../index.html" />
+        <link rel="up" title="Configuring Sponge" href="index.html" />
+        <link rel="next" title="Server Management" href="../../management/index.html" />
+        <link rel="prev" title="global.conf" href="sponge-conf.html" />
+    
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-59476017-2', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+    
+  <link rel="alternate" hreflang="da" href="/3.1.0/da/">
+  <link rel="alternate" hreflang="de" href="/3.1.0/de/">
+  <link rel="alternate" hreflang="en-GB" href="/3.1.0/en-GB/">
+  <link rel="alternate" hreflang="en-PT" href="/3.1.0/en-PT/">
+  <link rel="alternate" hreflang="en" href="/3.1.0/en/">
+  <link rel="alternate" hreflang="es-ES" href="/3.1.0/es-ES/">
+  <link rel="alternate" hreflang="fi" href="/3.1.0/fi/">
+  <link rel="alternate" hreflang="fr" href="/3.1.0/fr/">
+  <link rel="alternate" hreflang="it" href="/3.1.0/it/">
+  <link rel="alternate" hreflang="ja" href="/3.1.0/ja/">
+  <link rel="alternate" hreflang="ko" href="/3.1.0/ko/">
+  <link rel="alternate" hreflang="nb" href="/3.1.0/nb/">
+  <link rel="alternate" hreflang="nl" href="/3.1.0/nl/">
+  <link rel="alternate" hreflang="pl" href="/3.1.0/pl/">
+  <link rel="alternate" hreflang="pt-BR" href="/3.1.0/pt-BR/">
+  <link rel="alternate" hreflang="pt-PT" href="/3.1.0/pt-PT/">
+  <link rel="alternate" hreflang="ru" href="/3.1.0/ru/">
+  <link rel="alternate" hreflang="uk" href="/3.1.0/uk/">
+  <link rel="alternate" hreflang="zh-CN" href="/3.1.0/zh-CN/">
+  <link rel="alternate" hreflang="zh-TW" href="/3.1.0/zh-TW/">
+  <link rel="alternate" hreflang="x-default" href="/"> 
+  </head>
+  <body role="document" id="top">
+    <div class="topbar">
+  <div role="navigation" aria-label="related navigation">
+    <div class="menu-left">
+      <a href="https://docs.spongepowered.org">
+        <img src="../../../_static/spongelogo.png" height="40px" style="vertical-align:middle"/>
+        <i class="icon-down-open-big lights-icon" style="vertical-align:middle"></i>
+      </a>
+      <ul class="dropdown" id="ddleft">
+        <a href="https://www.spongepowered.org"><li><i class="icon-home lights-icon"></i> Homepage</li></a>
+        <a href="https://forums.spongepowered.org"><li><i class="icon-pencil lights-icon"></i> Forums</li></a>
+        <a href="https://github.com/SpongePowered"><li><i class="icon-code lights-icon"></i> Code</li></a>
+        <a href="https://docs.spongepowered.org"><li class="active"><i class="icon-book-open lights-icon"></i> SpongeDocs</li></a>
+        <a href="https://jd.spongepowered.org"><li><i class="icon-graduation-cap lights-icon"></i> JavaDocs</li></a>
+        <a href="https://forums.spongepowered.org/c/plugins/plugin-releases"><li><i class="icon-tools lights-icon"></i> Plugins</li></a>
+        <a href="https://forums.spongepowered.org/t/sponge-downloads/11448"><li><i class="icon-download lights-icon"></i> Get Sponge</li></a>
+      </ul>
+    </div>
+    <div class="menu-right">
+      <div><i class="icon-language lights-icon"></i></div>
+        <ul class="dropdown" id="ddlang">
+          <li><a href="/3.1.0/da/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/da.png" alt="Flag for Danish"/></a></li>
+          <li><a href="/3.1.0/de/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/de.png" alt="Flag for German"/></a></li>
+          <li><a href="/3.1.0/en-GB/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/en-GB.png" alt="Flag for English, United Kingdom"/></a></li>
+          <li><a href="/3.1.0/en-PT/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/en-PT.png" alt="Flag for Pirate English"/></a></li>
+          <li><a href="/3.1.0/en/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/en.png" alt="Flag for English"/></a></li>
+          <li><a href="/3.1.0/es-ES/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/es-ES.png" alt="Flag for Spanish"/></a></li>
+          <li><a href="/3.1.0/fi/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/fi.png" alt="Flag for Finnish"/></a></li>
+          <li><a href="/3.1.0/fr/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/fr.png" alt="Flag for French"/></a></li>
+          <li><a href="/3.1.0/it/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/it.png" alt="Flag for Italian"/></a></li>
+          <li><a href="/3.1.0/ja/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/ja.png" alt="Flag for Japanese"/></a></li>
+          <li><a href="/3.1.0/ko/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/ko.png" alt="Flag for Korean"/></a></li>
+          <li><a href="/3.1.0/nb/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/nb.png" alt="Flag for Norwegian Bokmal"/></a></li>
+          <li><a href="/3.1.0/nl/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/nl.png" alt="Flag for Dutch"/></a></li>
+          <li><a href="/3.1.0/pl/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/pl.png" alt="Flag for Polish"/></a></li>
+          <li><a href="/3.1.0/pt-BR/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/pt-BR.png" alt="Flag for Portuguese, Brazilian"/></a></li>
+          <li><a href="/3.1.0/pt-PT/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/pt-PT.png" alt="Flag for Portuguese"/></a></li>
+          <li><a href="/3.1.0/ru/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/ru.png" alt="Flag for Russian"/></a></li>
+          <li><a href="/3.1.0/uk/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/uk.png" alt="Flag for Ukrainian"/></a></li>
+          <li><a href="/3.1.0/zh-CN/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/zh-CN.png" alt="Flag for Chinese Simplified"/></a></li>
+          <li><a href="/3.1.0/zh-TW/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/zh-TW.png" alt="Flag for Chinese Traditional"/></a></li>
+        </ul>
+    </div>
+    <div class="menu-right">
+      <div><i class="icon-tag lights-icon"></i><a>3.1.0</a></div>
+        <ul class="dropdown" id="ddvers">
+          <li><a href="/master/en/"><i class="icon-tag lights-icon"></i> latest</a></li>
+          <li><a href="/3.1.0/en/"><i class="icon-tag lights-icon"></i> 3.1.0</a></li>
+        </ul>
+    </div>
+    <div class="menu-right">
+      <div title="Toggle syntax highlighting between light and dark" id="lights">
+        <i class="icon-lamp lights-icon"></i>
+      </div>
+    </div>
+    <div>
+      <ul class="controls">
+        <li>|</li>
+        
+        <li><a href="../../management/index.html" title="Next Page"><i class="icon-right-open-big lights-icon"></i></a></li>
+        
+        <li><a href="#top" title="To the top"><i class="icon-up-open-big lights-icon"></i></a></li>
+        <li><a href="../../../index.html" title="Home"><i class="icon-home lights-icon"></i></a></li>
+        
+        <li><a href="sponge-conf.html" title="Previous Page"><i class="icon-left-open-big lights-icon"></i></a></li>
+        
+        <li>|</li>
+        
+          <li><a href="https://github.com/SpongePowered/SpongeDocs/blob/master/source/server/getting-started/configuration/server-properties.rst" title="Edit on GitHub"><i class="icon-github lights-icon"></i></a></li>
+        
+      </ul>
+    </div>
+    <h3>Navikointi</h3>
+  </div>
+    </div>
+    <div class="container">
+
+      <div class="breadcrumbs">
+        <ul>
+        <li><a href="../../../index.html">Sponge 3.1.0 documentation</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="../../index.html" >Creating a Server</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="../index.html" >Getting Started</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="index.html" accesskey="U">Configuring Sponge</a><i class="icon-right-open lights-icon"></i></li>
+        </ul>
+      </div> 
+    <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+    <form class="search" action="../../../search.html" method="get">
+      <div class="searchbox-inner">
+        <input class="field" type="text" name="q" autocomplete="off" />
+        <button class="submit" type="submit"><i class="icon-search"></i></button>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </div>
+    </form>
+    <p class="searchtip" style="font-size: 90%"></p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../../index.html">Sisällysluettelo</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Creating a Server</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Getting Started</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jre.html">Installing Java</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../migrating.html">Migrating to Sponge</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../implementations/index.html">Choosing an Implementation</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../implementations/spongeforge.html">Installing SpongeForge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../launch-script.html">Creating a Launch Script</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../port-forward.html">Porttiohjaukset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bungeecord.html">Using Sponge with BungeeCord</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Configuring Sponge</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="hocon.html">Introduction to HOCON</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json.html">JSON syntaksi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sponge-conf.html">global.conf</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">server.properties</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../management/index.html">Server Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../management/whitelist.html">Sallittu-listan ylläpito</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../management/bans.html">Managing Bans</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../management/permissions.html">Managing Permissions</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../management/plugins.html">Lisäosien asentaminen</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../management/exploit-patches.html">Exploit Patches</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../spongineer/index.html">Becoming an Expert Spongineer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../spongineer/commands.html">Komennot</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../spongineer/troubleshooting.html">Ongelmanratkaisu</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../spongineer/logs.html">Log Files</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../spongineer/debugging.html">Debugging</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../spongineer/bugreport.html">Reporting Bugs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../preparing/index.html">Preparing for Development</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../preparing/jdk.html">Installing the JDK</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preparing/ide.html">Installing an IDE</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preparing/text.html">Installing a Text Editor</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preparing/git.html">Installing Git</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../plugin/index.html">Creating a Plugin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/workspace/index.html">Setting Up Your Workspace</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/workspace/idea.html">Setting Up IntelliJ IDEA</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/workspace/eclipse.html">Setting Up Eclipse</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/workspace/netbeans.html">Setting Up NetBeans</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/workspace/dependencies.html">Adding Sponge API Dependencies</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/practices.html">Best Practices</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/templates.html">Plugin Templates</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/main-class.html">Creating Your Main Plugin Class</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/lifecycle.html">Plugin Lifecycle</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/optional/index.html">Optionals</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/optional/basic.html">Optionals Explained</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/optional/usage.html">Usage Examples</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/logging.html">Logging and Debugging</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/text/index.html">Working with Text</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/text.html">Creating Text</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../plugin/text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../plugin/text/representations/xml.html">TextXML Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../plugin/text/representations/json.html">JSON Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../plugin/text/representations/configurate.html">Configuration Format</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/pagination.html">The Pagination Service</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/templates.html">Working with TextTemplates</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/commands/index.html">Creating Commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/creating.html">Building a Command</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/arguments.html">Argument Parsing</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/childcommands.html">Child Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/service.html">The Command Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/commandcallable.html">Low-Level Command API</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/event/index.html">Working with Events</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/listeners.html">Event Listeners</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/causes.html">Event Causes</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/filters.html">Event Filters</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/custom.html">Creating Custom Events</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/configuration/index.html">Configuring Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/configuration/loaders.html">Configuration Loaders</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/configuration/nodes.html">Configuration Nodes</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/configuration/serialization.html">Serializing Objects</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/data/index.html">The Data API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/data/keys.html">Using Keys</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/data/datamanipulators.html">Data Manipulators</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/data/transactions.html">Transactions</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/data/serialization.html">Serializing Data</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/blocks/index.html">Working with Blocks</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/blocks/concepts.html">Concepts</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/blocks/accessing.html">Accessing Blocks</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/blocks/modifying.html">Modifying Blocks</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/blocks/tileentities.html">Working with Tile Entities</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/entities/index.html">Working with Entities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/entities/spawning.html">Spawning an Entity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/entities/modifying.html">Modifying an Entity</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/items/index.html">Working with Items</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/items/usage.html">Basic Item Usage</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/items/creating.html">Creating an ItemStack</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/injection.html">Dependency Injection</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/scheduler.html">Using the Scheduler</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/database.html">Working with Databases</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/permissions.html">Working with the Permissions API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/economy/index.html">The Economy API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/economy/basics.html">Basic Concepts</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/economy/using.html">Using the Economy API</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/economy/practices.html">Economy API Best Practices</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/economy/implementing.html">Implementing the Economy API</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/services.html">Working with Services</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/wgen/index.html">World Generation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/wgen/modifiers.html">Working with WorldGeneratorModifiers</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/wgen/customwgen.html">Modifying World Generation</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/manager.html">Using the Plugin Manager</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/debugging.html">Plugin Debugging</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/messagechannels.html">Message Channels</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/tutorials.html">Tutorials</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing/index.html">Contributing to Sponge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/guidelines.html">Contribution Guidelines</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/howtogit.html">How to Git(Hub)</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/implementation/index.html">Developing Sponge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/codestyle.html">Code Style</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/git-implementation.html">Git Workflow for API and Implementations</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/pr.html">Submitting a Pull-Request</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/debugging.html">Spongen debuggaus IDE:n sisällä</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/mixins.html">Mixins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/datamanipulator.html">Implementing DataManipulators</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/spongedocs.html">SpongeDocs Writing</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/porting.html">Porting Sponge to Other Platforms</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/versioning.html">Versioning System and Repository Branch Layout</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">Tietoa Sponge projektista</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/introduction.html">Johdanto</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html">Usein kysytyt kysymykset</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/structure.html">The Structure of the Sponge Project</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/future.html">Tulevaisuuden suunitelmat</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/license.html">Lisenssi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/posting.html">Forum Posting Guidelines</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/rules.html">Keskustelualueen &amp; IRC säännöt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/staff.html">Henkilökunta</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/glossary.html">Sponge Glossary</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/assets.html">Art Assets</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/history.html">The History of Sponge</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../downloads.html">Lataukset</a><ul class="simple">
+</ul>
+</li>
+</ul>
+<ul class="simple">
+</ul>
+
+      </div>
+    </div> 
+
+        <div class="document">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body" role="main">
+                  
+  <div class="section" id="server-properties">
+<h1>server.properties<a class="headerlink" href="#server-properties" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="default-file">
+<h2>Oletustiedosto<a class="headerlink" href="#default-file" title="Permalink to this headline">¶</a></h2>
+<p>Tässä on muokkaamaton 1.8.1 Minecraft palvelimen asetustiedosto.</p>
+<div class="highlight-properties"><div class="highlight"><pre><span></span><span class="c">#Minecraft server properties</span>
+<span class="c">#(File modification datestamp)</span>
+<span class="na">spawn-protection</span><span class="o">=</span><span class="s">16</span>
+<span class="na">max-tick-time</span><span class="o">=</span><span class="s">60000</span>
+<span class="na">generator-settings</span><span class="o">=</span>
+<span class="na">force-gamemode</span><span class="o">=</span><span class="s">false</span>
+<span class="na">allow-nether</span><span class="o">=</span><span class="s">true</span>
+<span class="na">gamemode</span><span class="o">=</span><span class="s">0</span>
+<span class="na">enable-query</span><span class="o">=</span><span class="s">false</span>
+<span class="na">player-idle-timeout</span><span class="o">=</span><span class="s">0</span>
+<span class="na">difficulty</span><span class="o">=</span><span class="s">1</span>
+<span class="na">spawn-monsters</span><span class="o">=</span><span class="s">true</span>
+<span class="na">op-permission-level</span><span class="o">=</span><span class="s">4</span>
+<span class="na">resource-pack-hash</span><span class="o">=</span>
+<span class="na">announce-player-achievements</span><span class="o">=</span><span class="s">true</span>
+<span class="na">pvp</span><span class="o">=</span><span class="s">true</span>
+<span class="na">snooper-enabled</span><span class="o">=</span><span class="s">true</span>
+<span class="na">level-type</span><span class="o">=</span><span class="s">DEFAULT</span>
+<span class="na">hardcore</span><span class="o">=</span><span class="s">false</span>
+<span class="na">enable-command-block</span><span class="o">=</span><span class="s">false</span>
+<span class="na">max-players</span><span class="o">=</span><span class="s">20</span>
+<span class="na">network-compression-threshold</span><span class="o">=</span><span class="s">256</span>
+<span class="na">max-world-size</span><span class="o">=</span><span class="s">29999984</span>
+<span class="na">server-port</span><span class="o">=</span><span class="s">25565</span>
+<span class="na">server-ip</span><span class="o">=</span>
+<span class="na">spawn-npcs</span><span class="o">=</span><span class="s">true</span>
+<span class="na">allow-flight</span><span class="o">=</span><span class="s">false</span>
+<span class="na">level-name</span><span class="o">=</span><span class="s">world</span>
+<span class="na">view-distance</span><span class="o">=</span><span class="s">10</span>
+<span class="na">resource-pack</span><span class="o">=</span>
+<span class="na">spawn-animals</span><span class="o">=</span><span class="s">true</span>
+<span class="na">white-list</span><span class="o">=</span><span class="s">false</span>
+<span class="na">generate-structures</span><span class="o">=</span><span class="s">true</span>
+<span class="na">online-mode</span><span class="o">=</span><span class="s">true</span>
+<span class="na">max-build-height</span><span class="o">=</span><span class="s">256</span>
+<span class="na">level-seed</span><span class="o">=</span>
+<span class="na">use-native-transport</span><span class="o">=</span><span class="s">true</span>
+<span class="na">motd</span><span class="o">=</span><span class="s">A Minecraft Server</span>
+<span class="na">enable-rcon</span><span class="o">=</span><span class="s">false</span>
+</pre></div>
+</div>
+<div class="section" id="property-explanation">
+<h3>Asetuksen selitys<a class="headerlink" href="#property-explanation" title="Permalink to this headline">¶</a></h3>
+<p>Kiitokset selityksille kuuluu <a class="reference external" href="http://minecraft.gamepedia.com">Minecraft Wiki</a> tekijöille.</p>
+<p><strong>Totuusarvosuodatin</strong> arvoilla on vain kaksi sallittua arvoa: <em>true</em> ja <em>false</em>. <strong>Lukujono</strong> arvo on aina kokonaisnumero. Jos alue on määritelty, täytyy arvon olla määritellyn alueen sisällä. <strong>Merkkijono</strong> arvo voi olla mikä tahansa symboli tai teksti.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="26%" />
+<col width="11%" />
+<col width="11%" />
+<col width="51%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Avain</p>
+</th>
+<th class="head"><p class="first last">Tyyppi</p>
+</th>
+<th class="head"><p class="first last">Oletusarvo</p>
+</th>
+<th class="head"><p class="first last">Kuvaus</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="first last">Salli lentäminen</p>
+</td>
+<td><p class="first last">totuusarvosuodatin</p>
+</td>
+<td>false</td>
+<td><p class="first">Sallii käyttäjien lentää palvelimella kun he ovat Survival tilassa, jos palvelimella on lisäosa joka sallii lentämisen.</p>
+<p>Jos sallitset lentämisen, saattavat pahantekijät olla yleisempiä, koska se tekee heidän työstään helpompaa. Luovassa tilassa tällä ei ole vaikutusta.</p>
+<blockquote class="last">
+<div><p><strong>false</strong> - Lento ei ole sallittua (pelaajat jotka ovat yli 5 sekuntia ilmassa, potkitaan ulos).</p>
+<p><strong>true</strong> - Lento on sallittu</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-odd"><td>allow-nether</td>
+<td><p class="first last">totuusarvosuodatin</p>
+</td>
+<td>true</td>
+<td><p class="first">Sallii pelaajien matkustaa Ala-Maailmaan.</p>
+<blockquote class="last">
+<div><p><strong>false</strong> - Alamaailman portaalit eivät toimi.</p>
+<p><strong>true</strong> - Palvelin sallii Ala maailman portaalien luonnin ja niistä kulkemisen.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-even"><td>announce-player-achievements</td>
+<td><p class="first last">totuusarvosuodatin</p>
+</td>
+<td>true</td>
+<td><p class="first last">Sallii palvelimen julkaista pelaajien saavutukset.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">vaikeustaso</p>
+</td>
+<td><p class="first last">numeroarvo (0-3)</p>
+</td>
+<td>1</td>
+<td><p class="first">Säätää vaikeustason (kuten monstereiden vahingon, nälän ja myrkkyjen vaikutuksen pelaajiin) palvelimella.</p>
+<blockquote class="last">
+<div><p><strong>0</strong> - Rauhallinen</p>
+<p><strong>1</strong> - Helppo</p>
+<p><strong>2</strong> - Normaali</p>
+<p><strong>3</strong> - Vaikea</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-even"><td>enable-query</td>
+<td><p class="first last">totuusarvosuodatin</p>
+</td>
+<td>false</td>
+<td><p class="first last">Sallii GameSpy4 protokolla palvelimen. Tätä käytetään palvelimen infon hankkimiseksi.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>enable-rcon</td>
+<td><p class="first last">totuusarvosuodatin</p>
+</td>
+<td>false</td>
+<td><p class="first last">Sallii etäyhteyden palvelimen konsoliin.</p>
+</td>
+</tr>
+<tr class="row-even"><td>enable-command-block</td>
+<td><p class="first last">totuusarvosuodatin</p>
+</td>
+<td>false</td>
+<td><p class="first last">Sallii komentopalikat.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>force-gamemode</td>
+<td><p class="first last">totuusarvosuodatin</p>
+</td>
+<td>false</td>
+<td><p class="first">Pakottaa pelaajien pelimuodon liittyessä palvelimeen.</p>
+<blockquote class="last">
+<div><p><strong>false</strong> - Pelaajat liittyvät samassa pelimuodossa missä he lähtivät.</p>
+<p><strong>true</strong> - Pelaajat liittyvät aina oletuspelimuodossa.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-even"><td>gamemode</td>
+<td><p class="first last">numeroarvo (0-3)</p>
+</td>
+<td>0</td>
+<td><p class="first">Määrittelee palvelimen pelimuodon.</p>
+<blockquote class="last">
+<div><p><strong>0</strong> - Selviytyminen</p>
+<p><strong>1</strong> - Luova</p>
+<p><strong>2</strong> - Seikkailu</p>
+<p><strong>3</strong> - Katsoja</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-odd"><td>generate-structures</td>
+<td><p class="first last">totuusarvosuodatin</p>
+</td>
+<td>true</td>
+<td><p class="first">Määrittelee luodaanko uusille alueille rakennuksia (kuten kyliä).</p>
+<blockquote>
+<div><p><strong>false</strong> - Rakennuksia ei luoda.</p>
+<p><strong>true</strong> - Rakennuksia luodaan.</p>
+</div></blockquote>
+<p class="last"><strong>Huomautus:</strong> Tyrmiä luodaan vaikka asetus olisi false.</p>
+</td>
+</tr>
+<tr class="row-even"><td>generator-settings</td>
+<td><p class="first last">Merkkijono</p>
+</td>
+<td><p class="first last"><em>tyhjä</em></p>
+</td>
+<td><p class="first last">Asetukset joilla voidaan vaikuttaa maailmojen luontiin. Katso <a class="reference external" href="http://minecraft.gamepedia.com/Superflat">Superlitteä</a> ja <a class="reference external" href="http://minecraft.gamepedia.com/Customized">Kustomoitu</a> Minecraft wikistä (ulkoiset linkit) jos haluat tietää mahdolliset asetukset.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>hardcore</td>
+<td><p class="first last">totuusarvosuodatin</p>
+</td>
+<td>false</td>
+<td><p class="first last">Jos asetat tämän <strong>true</strong> pelaajat poistetaan palvelimelta lopullisesti jos he kuolevat.</p>
+</td>
+</tr>
+<tr class="row-even"><td>level-name</td>
+<td><p class="first last">Merkkijono</p>
+</td>
+<td>world</td>
+<td><p class="first">&#8220;level-name&#8221; arvoa käytetään maailman nimeämiseksi. Voit myös kopioida valmiin maailman tänne, ja nimetä tämä samaksi kuin kopioitu maailma jos haluat pelata siinä.</p>
+<blockquote class="last">
+<div><p>Erikoismerkkeihin kuten &#8216; (kenoviiva) täytyy mahdollisesti lisätä eteen toinen kenoviiva (\).</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-odd"><td>level-seed</td>
+<td><p class="first last">Merkkijono</p>
+</td>
+<td><p class="first last"><em>tyhjä</em></p>
+</td>
+<td><p class="first">Lisää seedi maailmaasi, samalla tavalla kuin yksinpelissä.</p>
+<blockquote class="last">
+<div><p>Joitakin esimerkkejä: minecraft, 404, 1a2b3c...</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-even"><td>level-type</td>
+<td><p class="first last">Merkkijono</p>
+</td>
+<td>DEFAULT</td>
+<td><p class="first">Määrittelee luotavan kartan tyypin.</p>
+<blockquote class="last">
+<div><p><strong>DEFAULT</strong> - Perusmaailma vuorilla, laaksoilla, vedellä, tms...</p>
+<p><strong>FLAT</strong> - Litteä maailma ilman mitään erikoisuuksia, tarkoitettu rakenteluun.</p>
+<p><strong>LARGEBIOMES</strong> - Sama kuin default, mutta kaikki biomit ovat suurempia.</p>
+<p><strong>AMPLIFIED</strong> - Sama kuin default, mutta maailmageneraattorin korkeusrajat on nostettu.</p>
+<p><strong>CUSTOMIZED</strong> - Sama kuin default, ellei generator-settings asetusta ole muutettu.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-odd"><td>max-build-height</td>
+<td><p class="first last">numeroarvo</p>
+</td>
+<td>256</td>
+<td><p class="first last">Maksimikorkeus jossa saa rakentaa. Maasto saattaa mennä tämän rajan yli jos se on alhainen.</p>
+</td>
+</tr>
+<tr class="row-even"><td>max-players</td>
+<td><p class="first last">numeroarvo (0- 2147483647)</p>
+</td>
+<td>20</td>
+<td><p class="first last">Yhtäaikaisten pelaajien maksimimäärä. Huomaa että mitä isompi määrä pelaajia, sitä tehokkaampi palvelin pitää olla. Huomaa myös että OP-pelaajia ei lasketa määrään mukaan, mutta ominaisuus ei tällä hetkellä toimi. Äärimmäisen suuret arvot saattavat rikkoa pelaajien oman pelin.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>max-tick-time</td>
+<td><p class="first last">numeroarvo (0- (2^63-1))</p>
+</td>
+<td>60000</td>
+<td><p class="first">The maximum number of milliseconds a single tick may take
+before the server watchdog stops the server with the
+message: &#8220;A single server tick took 60.00 seconds (should
+be max 0.05); Considering it to be crashed, server will
+forcibly shutdown&#8221;. Once this criteria is met, it calls
+System.exit(1).</p>
+<blockquote class="last">
+<div><p><strong>-1</strong> - poista monitoriprosessi käytöstä</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-even"><td>max-world-size</td>
+<td><p class="first last">numeroarvo (1- 29999984)</p>
+</td>
+<td>29999984</td>
+<td><p class="first">Tämä asettaa maailman maksimikoon palikoina, ilmaistuna säteenä. Maailman rajojen asettaminen tällä käskyllä onnistuu oikein, mutta raja ei oikeasti liiku yli tämän koon. max-world-size asettaminen suuremmaksi kuin oletusarvo, ei näytä tekevän mitään.</p>
+<p>Esimerkkejä:</p>
+<blockquote class="last">
+<div><ul class="simple">
+<li><p class="first">max-world-size asettaminen 1000 sallii 2000x2000 maailman.</p>
+</li>
+<li><p class="first">max-world-size asettaminen 4000 antaa sinulle 8000x8000 maailman.</p>
+</li>
+</ul>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-odd"><td>motd</td>
+<td><p class="first last">Merkkijono</p>
+</td>
+<td><p class="first last"><em>Tämä</em> <em>on</em> <em>Minecraft</em> <em>Palvelin</em></p>
+</td>
+<td><p class="first">Tämä on viesti joka näkyy palvelinlistauksessa, palvelimen nimen alla.</p>
+<blockquote class="last">
+<div><ul class="simple">
+<li><p class="first">Päivän viesti sallii värikoodien ja muokkauskoodien käyttämisen.</p>
+</li>
+<li><p class="first">Jos päivän viesti on yli 59 merkkiä, palvelinlistaus luultavasti ilmoittaa yhteysvirheen.</p>
+</li>
+</ul>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-even"><td>network-compression-threshold</td>
+<td><p class="first last">numeroarvo</p>
+</td>
+<td>256</td>
+<td><p class="first">Oletuksena sallii pakettit joiden koko on n-1 bittiä, mutta suuremmat kuin n bittiä pakataan pienemmäksi. Pienempi arvo lisää pakettien pakkausta, mutta pienten pakettien pakkaus saattaa johtaa isompiin lopullisiin paketteihin.</p>
+<blockquote>
+<div><p><strong>-1</strong> . poista pakkaus kokonaan käytöstä</p>
+<p><strong>0</strong> - pakkaa kaikki paketit</p>
+</div></blockquote>
+<p class="last"><strong>Huomaa</strong> <em>Ethernetin spesifikaatio vaatii että</em> <em>alle 64 bitin paketit pakataan 64 bitin kokoisiksi. Joten, arvon asettaminen</em> <em>alle 64 bittiin ei ole hyödyllistä. Ei ole myöskään</em> <em>suositeltavaa ylittää pakettien maksimikokoa (MTU - Maximum Transmission</em> <em>Unit), yleensä 1500 bittiä.</em></p>
+</td>
+</tr>
+<tr class="row-odd"><td>online-mode</td>
+<td><p class="first last">totuusarvosuodatin</p>
+</td>
+<td>true</td>
+<td><p class="first">Palvelin tarkistaa yhdistävän pelaajan tilin Minecraftin pelaajatietokannasta. Aseta tämä false vain jos palvelimesi ei ole yhteydessä internettiin. Väärennetyillä tileillä yhdistävät hakkerit voivat yhdistää palvelimeen jos arvo on false! Jos minecraft.net on kaatunut tai siihen ei saada yhteyttä, pelaajat eivät voi yhdistää palvelimeen jos arvo on true. Arvon asettaminen tarkoituksella falseksi kutsutaan &#8220;kräkkäämiseksi&#8221;, näin pelaajat joilla ei ole ostettua Minecraftia voivat liittyä palvelimelle.</p>
+<blockquote class="last">
+<div><p><strong>false</strong> - Pois käytöstä. Palvelin ei yritä tarkistaa yhdistävien pelaajien nimiä.</p>
+<p><strong>true</strong> - Päällä. Palvelin olettaa olevansa yhdistettynä internettiin ja tarkistaa jokaisen yhdistävän pelaajan.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-even"><td>op-permission-level</td>
+<td><p class="first last">numeroarvo (1-4)</p>
+</td>
+<td>4</td>
+<td><p class="first">Asettaa admineiden oikeustason. Jokainen taso sisältää myös alemman tason oikeudet.</p>
+<blockquote class="last">
+<div><p><strong>1</strong> - Adminit voivat ohittaa syntymäalueen suojauksen.</p>
+<p><strong>2</strong> - Adminit voivat käyttää /clear, /difficulty, /effect, /gamemode, /gamerule, /give, ja /tp, ja muokata komentopalikoita.</p>
+<p><strong>3</strong> - Adminit voivat käyttää /ban, /deop, /kick, ja /op.</p>
+<p><strong>4</strong> - Adminit voivat käyttää /stop.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-odd"><td>player-idle-timeout</td>
+<td><p class="first last">numeroarvo</p>
+</td>
+<td>0</td>
+<td><p class="first">Jos arvo on muu kuin 0, pelaajat poistetaan palvelimelta jos he eivät ole aktiivisia määritellyn ajan sisällä.</p>
+<blockquote class="last">
+<div><p><strong>Huomautus</strong> <em>Aktiivisuusmittari resetoituu jos palvelin saa</em> <em>jonkun näistä paketeista:</em></p>
+<blockquote>
+<div><ul class="simple">
+<li>102 (0x66) WindowClick</li>
+<li>108 (0x6c) ButtonClick</li>
+<li>130 (0x82) UpdateSign</li>
+<li>14 (0xe) BlockDig</li>
+<li>15 (0xf) Place</li>
+<li>16 (0x10) BlockItemSwitch</li>
+<li>18 (0x12) ArmAnimation</li>
+<li>19 (0x13) EntityAction</li>
+<li>205 (0xcd) ClientCommand</li>
+<li>3 (0x3) Chat</li>
+<li>7 (0x7) UseEntity</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-even"><td>pvp</td>
+<td><p class="first last">totuusarvosuodatin</p>
+</td>
+<td>true</td>
+<td><p class="first">Sallii PvP:n palvelimella. Pelaajat jotka ampuvat itseään nuolilla saavat vahinkoa vain jos PvP on sallittu.</p>
+<blockquote>
+<div><p><strong>false</strong> - Pelaajat eivät voi tappaa toisia pelaajia (tunnettu myös nimellä <strong>Player versus Environment</strong> (<strong>PvE</strong>))</p>
+<p><strong>true</strong> - Pelaajat voivat tappaa toisiaan.</p>
+</div></blockquote>
+<p class="last"><strong>Huomaa</strong> <em>Ei suoraan pelaajien aiheuttama vahinko</em> <em>(kuten laava, tuli, TNT ja joissakin määrin vesi, hiekka</em> <em>ja sora) tekevät silti vahinkoa muihin pelaajiin.</em></p>
+</td>
+</tr>
+<tr class="row-odd"><td>query.port</td>
+<td><p class="first last">numerarvo (1- 65534)</p>
+</td>
+<td>25565</td>
+<td><p class="first last">Määrittelee etäpalvelimen portin (katso <strong>enable-query</strong>)</p>
+</td>
+</tr>
+<tr class="row-even"><td>rcon.password</td>
+<td><p class="first last">Merkkijono</p>
+</td>
+<td><p class="first last"><em>tyhjä</em></p>
+</td>
+<td><p class="first last">Asettaa etäkonsolin salasanan.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rcon.port</td>
+<td><p class="first last">numerarvo (1- 65534)</p>
+</td>
+<td>25575</td>
+<td><p class="first last">Asettaa etäkonsolin portin.</p>
+</td>
+</tr>
+<tr class="row-even"><td>resource-pack</td>
+<td><p class="first last">Merkkijono</p>
+</td>
+<td><p class="first last"><em>tyhjä</em></p>
+</td>
+<td><p class="first last">Linkki palvelimen omaan tekstuuripakettiin. Pelaaja voi valita käyttääkö sitä.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>resource-pack-hash</td>
+<td><p class="first last">Merkkijono</p>
+</td>
+<td><p class="first last"><em>tyhjä</em></p>
+</td>
+<td><p class="first last">Lisä SHA-1 merkkijono resurssipaketista, pienillä heksadesimaali kirjaimilla. On suositeltavaa asettaa tämä. Tätä ei vielä käytetä resurssipaketin tarkistamiseen, mutta se auttaa pelaajien paikallisten väliaikaistiedoston varmennuksessa.</p>
+</td>
+</tr>
+<tr class="row-even"><td>server-ip</td>
+<td><p class="first last">Merkkijono</p>
+</td>
+<td><p class="first last"><em>tyhjä</em></p>
+</td>
+<td><p class="first last">Aseta tämä jos haluat palvelimen kiinnittyvän johonkin tiettyyn IP-osoitteeseen. On hyvin suositeltavaa jättää tämä tyhjäksi.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>server-port</td>
+<td><p class="first last">numerarvo (1- 65534)</p>
+</td>
+<td>25565</td>
+<td><p class="first last">Vaihtaa portin jota palvelin kuuntelee (listen). Tämä portti pitää olla ohjattu palvelimeen jos palvelin on NAT-verkossa (jos sinulla on koti reititin/palomuuri).</p>
+</td>
+</tr>
+<tr class="row-even"><td>snooper-enabled</td>
+<td><p class="first last">totuusarvosuodatin</p>
+</td>
+<td>true</td>
+<td><p class="first">Asettaa lähettääkö palvelin meta-dataa tasaisin väliajoin <a class="reference external" href="http://snoop.minecraft.net">http://snoop.minecraft.net</a> osoitteeseen. (ulkoinen linkki)</p>
+<blockquote class="last">
+<div><p><strong>false</strong> - Poista datan lähetys käytöstä.</p>
+<p><strong>true</strong> - Salli datan lähetys.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-odd"><td>spawn-animals</td>
+<td><p class="first last">totuusarvosuodatin</p>
+</td>
+<td>true</td>
+<td><p class="first">Määrittää sallitaanko eläimien syntyminen.</p>
+<blockquote>
+<div><p><strong>false</strong> - Kaikki eläimet katoavat heti, ja yhtäkään uutta ei synny.</p>
+<p><strong>true</strong> - Eläimet syntyvät normaalisti.</p>
+</div></blockquote>
+<p class="last"><em>Vinkki: jos palvelimesi on hidas, aseta tämä false.</em></p>
+</td>
+</tr>
+<tr class="row-even"><td>spawn-monsters</td>
+<td><p class="first last">totuusarvosuodatin</p>
+</td>
+<td>true</td>
+<td><p class="first">Määrittelee syntyykö monstereita.</p>
+<blockquote>
+<div><p><strong>false</strong> - Kaikki monsterit katoavat heti, eikä uusia enää synny, päivällä tai yöllä.</p>
+<p><strong>true</strong> - Monsterit syntyvät normaalisti; pimeässä sekä yöllä.</p>
+</div></blockquote>
+<p>Tällä asetuksella ei ole merkitystä jos palvelimen vaikeustaso on Rauhallinen.</p>
+<p class="last"><em>Vinkki: jos palvelimesi on hidas, aseta tämä false.</em></p>
+</td>
+</tr>
+<tr class="row-odd"><td>spawn-npcs</td>
+<td><p class="first last">totuusarvosuodatin</p>
+</td>
+<td>true</td>
+<td><p class="first">Määrittelee syntyykö kyläläiset.</p>
+<blockquote class="last">
+<div><p><strong>true</strong> - Käytössä. Kyläläiset syntyvät.</p>
+<p><strong>false</strong> - Pois käytöstä. Ei kyläläisiä.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-even"><td>spawn-protection</td>
+<td><p class="first last">numeroarvo</p>
+</td>
+<td>16</td>
+<td><p class="first last">Määrittelee syntymäpaikan alueen suojauksen. Tämän asettaminen 0 ei poista alueen suojausta. 0 suojaa yhden palikan alueella. 1 suojaa 3x3 alueen jonka keskipiste on syntymäpaikassa. 2 suojaa 5x5, 3 suojaa 7x7, jne. Tämä asetus ei tule esiin palvelimen käynnistyksessä, vaan vasta kun ensimmäinen pelaaja liittyy palvelimelle. Jos palvelimella ei ole Admineita, alueen suojaus poistuu automaattisesti käytöstä.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>use-native-transport</td>
+<td><p class="first last">totuusarvosuodatin</p>
+</td>
+<td>true</td>
+<td><p class="first">Linux palvelimen optimointia: optimoitu pakettien lähetys ja vastaanotto Linuxissa.</p>
+<blockquote class="last">
+<div><p><strong>false</strong> - Pois käytöstä. Poista Linuxin pakettien lähetyksen ja vastaanoton optimointi.</p>
+<p><strong>true</strong> - Päällä. Optimoi Linuxin pakettien lähetys ja vastaanotto.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-even"><td>view-distance</td>
+<td><p class="first">numeroarvo</p>
+<p class="last">(3-15)</p>
+</td>
+<td>10</td>
+<td><p class="first">Asettaa pelaajalle lähetettävien alueiden määrän, mitattuna chunkkeina, joka suuntaan pelaajasta (alue, ei halkaisija). Tämä määrittää palvelimen oman katseluetäisyyden.</p>
+<p class="last"><em>10 on suositeltava perusarvo. Jos palvelimesi on todella hidas,</em> <em>pienennä tätä arvoa.</em></p>
+</td>
+</tr>
+<tr class="row-odd"><td>white-list</td>
+<td><p class="first last">totuusarvosuodatin</p>
+</td>
+<td>false</td>
+<td><p class="first">Enables a whitelist on the server.
+See <a class="reference internal" href="../../management/whitelist.html"><em>Sallittu-listan ylläpito</em></a>
+With a whitelist enabled, users not on the whitelist will
+be unable to connect. Intended for private servers, such
+as those for real-life friends or strangers carefully
+selected via an application process, for example.</p>
+<blockquote>
+<div><p><strong>false</strong> - Sallittujen lista ei ole käytössä.</p>
+<p><strong>true</strong> - Tiedostoa &#8220;whitelist.json&#8221; käytetään sallittujen listan tekemiseen.</p>
+</div></blockquote>
+<p class="last"><strong>Huomaa:</strong> <em>Adminit lisätään automaattisesti listaan, heitä ei</em> <em>tarvitse erikseen lisätä sallittujen listaan.</em></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          <div class="clearer"></div>
+        </div>
+        <div class="footer" role="contentinfo">
+              &copy; Copyright 2014-2016, Sponge Contributors.
+            Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.3.
+        </div>
+    </div>
+  </body>
+</html>

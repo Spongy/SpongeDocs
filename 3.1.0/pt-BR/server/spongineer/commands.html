@@ -1,0 +1,928 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+     <title>Comandos &mdash; Sponge 3.1.0 documentação</title>
+    
+  <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
+  <link href='//fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:400italic,700italic,700,400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../../_static/tomorrow.css" type="text/css" />
+  <link id="syntax-highlighting-ref" rel="stylesheet" href="../../_static/tomorrow_night.css" type="text/css" />
+      
+  <script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+      URL_ROOT:    '../../',
+      VERSION:     '3.1.0',
+      COLLAPSE_INDEX: false,
+      FILE_SUFFIX: '.html',
+      HAS_SOURCE:  true
+    };
+  </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../_static/store.min.js"></script>
+    <script type="text/javascript" src="../../_static/lights.js"></script>
+      <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+        <link rel="top" title="Sponge 3.1.0 documentação" href="../../index.html" />
+        <link rel="up" title="Tornando-se um Spongineer perito" href="index.html" />
+        <link rel="next" title="Resolução de Problemas" href="troubleshooting.html" />
+        <link rel="prev" title="Tornando-se um Spongineer perito" href="index.html" />
+    
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-59476017-2', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+    
+  <link rel="alternate" hreflang="da" href="/3.1.0/da/">
+  <link rel="alternate" hreflang="de" href="/3.1.0/de/">
+  <link rel="alternate" hreflang="en-GB" href="/3.1.0/en-GB/">
+  <link rel="alternate" hreflang="en-PT" href="/3.1.0/en-PT/">
+  <link rel="alternate" hreflang="en" href="/3.1.0/en/">
+  <link rel="alternate" hreflang="es-ES" href="/3.1.0/es-ES/">
+  <link rel="alternate" hreflang="fi" href="/3.1.0/fi/">
+  <link rel="alternate" hreflang="fr" href="/3.1.0/fr/">
+  <link rel="alternate" hreflang="it" href="/3.1.0/it/">
+  <link rel="alternate" hreflang="ja" href="/3.1.0/ja/">
+  <link rel="alternate" hreflang="ko" href="/3.1.0/ko/">
+  <link rel="alternate" hreflang="nb" href="/3.1.0/nb/">
+  <link rel="alternate" hreflang="nl" href="/3.1.0/nl/">
+  <link rel="alternate" hreflang="pl" href="/3.1.0/pl/">
+  <link rel="alternate" hreflang="pt-BR" href="/3.1.0/pt-BR/">
+  <link rel="alternate" hreflang="pt-PT" href="/3.1.0/pt-PT/">
+  <link rel="alternate" hreflang="ru" href="/3.1.0/ru/">
+  <link rel="alternate" hreflang="uk" href="/3.1.0/uk/">
+  <link rel="alternate" hreflang="zh-CN" href="/3.1.0/zh-CN/">
+  <link rel="alternate" hreflang="zh-TW" href="/3.1.0/zh-TW/">
+  <link rel="alternate" hreflang="x-default" href="/"> 
+  </head>
+  <body role="document" id="top">
+    <div class="topbar">
+  <div role="navigation" aria-label="related navigation">
+    <div class="menu-left">
+      <a href="https://docs.spongepowered.org">
+        <img src="../../_static/spongelogo.png" height="40px" style="vertical-align:middle"/>
+        <i class="icon-down-open-big lights-icon" style="vertical-align:middle"></i>
+      </a>
+      <ul class="dropdown" id="ddleft">
+        <a href="https://www.spongepowered.org"><li><i class="icon-home lights-icon"></i> Homepage</li></a>
+        <a href="https://forums.spongepowered.org"><li><i class="icon-pencil lights-icon"></i> Forums</li></a>
+        <a href="https://github.com/SpongePowered"><li><i class="icon-code lights-icon"></i> Code</li></a>
+        <a href="https://docs.spongepowered.org"><li class="active"><i class="icon-book-open lights-icon"></i> SpongeDocs</li></a>
+        <a href="https://jd.spongepowered.org"><li><i class="icon-graduation-cap lights-icon"></i> JavaDocs</li></a>
+        <a href="https://forums.spongepowered.org/c/plugins/plugin-releases"><li><i class="icon-tools lights-icon"></i> Plugins</li></a>
+        <a href="https://forums.spongepowered.org/t/sponge-downloads/11448"><li><i class="icon-download lights-icon"></i> Get Sponge</li></a>
+      </ul>
+    </div>
+    <div class="menu-right">
+      <div><i class="icon-language lights-icon"></i></div>
+        <ul class="dropdown" id="ddlang">
+          <li><a href="/3.1.0/da/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/da.png" alt="Flag for Danish"/></a></li>
+          <li><a href="/3.1.0/de/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/de.png" alt="Flag for German"/></a></li>
+          <li><a href="/3.1.0/en-GB/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/en-GB.png" alt="Flag for English, United Kingdom"/></a></li>
+          <li><a href="/3.1.0/en-PT/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/en-PT.png" alt="Flag for Pirate English"/></a></li>
+          <li><a href="/3.1.0/en/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/en.png" alt="Flag for English"/></a></li>
+          <li><a href="/3.1.0/es-ES/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/es-ES.png" alt="Flag for Spanish"/></a></li>
+          <li><a href="/3.1.0/fi/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/fi.png" alt="Flag for Finnish"/></a></li>
+          <li><a href="/3.1.0/fr/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/fr.png" alt="Flag for French"/></a></li>
+          <li><a href="/3.1.0/it/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/it.png" alt="Flag for Italian"/></a></li>
+          <li><a href="/3.1.0/ja/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/ja.png" alt="Flag for Japanese"/></a></li>
+          <li><a href="/3.1.0/ko/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/ko.png" alt="Flag for Korean"/></a></li>
+          <li><a href="/3.1.0/nb/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/nb.png" alt="Flag for Norwegian Bokmal"/></a></li>
+          <li><a href="/3.1.0/nl/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/nl.png" alt="Flag for Dutch"/></a></li>
+          <li><a href="/3.1.0/pl/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/pl.png" alt="Flag for Polish"/></a></li>
+          <li><a href="/3.1.0/pt-BR/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/pt-BR.png" alt="Flag for Portuguese, Brazilian"/></a></li>
+          <li><a href="/3.1.0/pt-PT/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/pt-PT.png" alt="Flag for Portuguese"/></a></li>
+          <li><a href="/3.1.0/ru/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/ru.png" alt="Flag for Russian"/></a></li>
+          <li><a href="/3.1.0/uk/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/uk.png" alt="Flag for Ukrainian"/></a></li>
+          <li><a href="/3.1.0/zh-CN/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/zh-CN.png" alt="Flag for Chinese Simplified"/></a></li>
+          <li><a href="/3.1.0/zh-TW/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/zh-TW.png" alt="Flag for Chinese Traditional"/></a></li>
+        </ul>
+    </div>
+    <div class="menu-right">
+      <div><i class="icon-tag lights-icon"></i><a>3.1.0</a></div>
+        <ul class="dropdown" id="ddvers">
+          <li><a href="/master/en/"><i class="icon-tag lights-icon"></i> latest</a></li>
+          <li><a href="/3.1.0/en/"><i class="icon-tag lights-icon"></i> 3.1.0</a></li>
+        </ul>
+    </div>
+    <div class="menu-right">
+      <div title="Toggle syntax highlighting between light and dark" id="lights">
+        <i class="icon-lamp lights-icon"></i>
+      </div>
+    </div>
+    <div>
+      <ul class="controls">
+        <li>|</li>
+        
+        <li><a href="troubleshooting.html" title="Next Page"><i class="icon-right-open-big lights-icon"></i></a></li>
+        
+        <li><a href="#top" title="To the top"><i class="icon-up-open-big lights-icon"></i></a></li>
+        <li><a href="../../index.html" title="Home"><i class="icon-home lights-icon"></i></a></li>
+        
+        <li><a href="index.html" title="Previous Page"><i class="icon-left-open-big lights-icon"></i></a></li>
+        
+        <li>|</li>
+        
+          <li><a href="https://github.com/SpongePowered/SpongeDocs/blob/master/source/server/spongineer/commands.rst" title="Edit on GitHub"><i class="icon-github lights-icon"></i></a></li>
+        
+      </ul>
+    </div>
+    <h3>Navegação</h3>
+  </div>
+    </div>
+    <div class="container">
+
+      <div class="breadcrumbs">
+        <ul>
+        <li><a href="../../index.html">Sponge 3.1.0 documentação</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="../index.html" >Creating a Server</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="index.html" accesskey="U">Tornando-se um Spongineer perito</a><i class="icon-right-open lights-icon"></i></li>
+        </ul>
+      </div> 
+    <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+    <form class="search" action="../../search.html" method="get">
+      <div class="searchbox-inner">
+        <input class="field" type="text" name="q" autocomplete="off" />
+        <button class="submit" type="submit"><i class="icon-search"></i></button>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </div>
+    </form>
+    <p class="searchtip" style="font-size: 90%"></p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../index.html">Tabela de Conteúdo</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Creating a Server</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../getting-started/index.html">Guia de Início</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/jre.html">Instalar o Java</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/migrating.html">Migrar para o Sponge</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/implementations/index.html">Escolher uma Implementação</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/implementations/spongeforge.html">Installing SpongeForge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/launch-script.html">Criar um <em>Launch Script</em></a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/port-forward.html">Encaminhamento de Portas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/bungeecord.html">Usar o Sponge com o BungeeCord</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/configuration/index.html">Configurando o Sponge</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/configuration/hocon.html">Introdução ao HOCON</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/configuration/json.html">SIntaxe JSON</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/configuration/sponge-conf.html">global.conf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../getting-started/configuration/server-properties.html">server.properties</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../management/index.html">Gestão do Servidor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../management/whitelist.html">Gerir a Whitelist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../management/bans.html">Gerir os Bans</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../management/permissions.html">Gerir Permissões</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../management/plugins.html">Instalar Plugins</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../management/exploit-patches.html">Correção de exploração de bugs</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Tornando-se um Spongineer perito</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="">Comandos</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html">Resolução de Problemas</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="logs.html">Ficheiros de Registo</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="debugging.html">Depuração</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="bugreport.html">Denunciar Bugs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Preparação para Desenvolvimento</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preparing/jdk.html">Instalar o JDK</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../preparing/ide.html">Instalar um IDE</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../preparing/text.html">Instalar um Editor de Texto</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../preparing/git.html">Instalar o Git</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../plugin/index.html">Criando um plugin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/workspace/index.html">Setting Up Your Workspace</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/workspace/idea.html">Setting Up IntelliJ IDEA</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/workspace/eclipse.html">Instalar o Eclipse</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/workspace/netbeans.html">Setting Up NetBeans</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/workspace/dependencies.html">Adding Sponge API Dependencies</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/practices.html">Best Practices</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/templates.html">Plugin Templates</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/main-class.html">Creating Your Main Plugin Class</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/lifecycle.html">Ciclo de Vida de um Plugin</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/optional/index.html">Optionals</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/optional/basic.html">Optionals Explained</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/optional/usage.html">Usage Examples</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/logging.html">Logging and Debugging</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/text/index.html">Working with Text</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/text.html">Creating Text</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../plugin/text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../plugin/text/representations/xml.html">TextXML Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../plugin/text/representations/json.html">JSON Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../plugin/text/representations/configurate.html">Configuration Format</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/pagination.html">The Pagination Service</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/templates.html">Working with TextTemplates</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/commands/index.html">Criar Comandos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/creating.html">Building a Command</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/arguments.html">Argument Parsing</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/childcommands.html">Child Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/service.html">The Command Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/commandcallable.html">Low-Level Command API</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/event/index.html">Working with Events</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/listeners.html">Event Listeners</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/causes.html">Event Causes</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/filters.html">Event Filters</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/custom.html">Creating Custom Events</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/configuration/index.html">Configuring Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/configuration/loaders.html">Configuration Loaders</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/configuration/nodes.html">Configuration Nodes</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/configuration/serialization.html">Serializing Objects</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/data/index.html">The Data API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/data/keys.html">Using Keys</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/data/datamanipulators.html">Data Manipulators</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/data/transactions.html">Transactions</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/data/serialization.html">Serializing Data</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/blocks/index.html">Trabalhar com Blocos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/concepts.html">Conceitos</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/accessing.html">Accessing Blocks</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/modifying.html">Modifying Blocks</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/tileentities.html">Working with Tile Entities</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/entities/index.html">Working with Entities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/entities/spawning.html">Spawning an Entity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/entities/modifying.html">Modifying an Entity</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/items/index.html">Working with Items</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/items/usage.html">Basic Item Usage</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/items/creating.html">Creating an ItemStack</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/injection.html">Injeção de dependência</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/scheduler.html">Using the Scheduler</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/database.html">Trabalhar com Bases de Dados</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/permissions.html">Trabalhar com o API das Permissões</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/economy/index.html">The Economy API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/economy/basics.html">Basic Concepts</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/economy/using.html">Using the Economy API</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/economy/practices.html">Economy API Best Practices</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/economy/implementing.html">Implementing the Economy API</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/services.html">Working with Services</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/wgen/index.html">World Generation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/wgen/modifiers.html">Working with WorldGeneratorModifiers</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/wgen/customwgen.html">Modifying World Generation</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/manager.html">Using the Plugin Manager</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/debugging.html">Plugin Debugging</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/messagechannels.html">Message Channels</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/tutorials.html">Tutoriais</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing to Sponge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">Diretrizes de Contribuição</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/howtogit.html">Como Git(Hub)</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/implementation/index.html">Desenvolver o Sponge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/codestyle.html">Estilo de Código</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/git-implementation.html">Git Workflow for API and Implementations</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/pr.html">Submitting a Pull-Request</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/debugging.html">Depuração do Sponge dentro do IDE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/mixins.html">Mixins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/datamanipulator.html">Implementar DataManipulators</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/spongedocs.html">Escrever os SpongeDocs</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/porting.html">Adaptar o Sponge para outras plataformas</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/versioning.html">Versioning System and Repository Branch Layout</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">Sobre o Projeto Sponge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">Introdução</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/faq.html">Dúvidas frequentes</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/structure.html">Estrutura do Projeto Sponge</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/future.html">Planos para o Futuro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/license.html">Licença</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/posting.html">Diretrizes para Publicação no Fórum</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/rules.html">Regras do Fórum e IRC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/staff.html">Equipe</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Glossário do Sponge</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/assets.html">Ativos Artísticos</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/history.html">A História do Sponge</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads.html">Download</a><ul class="simple">
+</ul>
+</li>
+</ul>
+<ul class="simple">
+</ul>
+
+      </div>
+    </div> 
+
+        <div class="document">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body" role="main">
+                  
+  <div class="section" id="commands">
+<h1>Comandos<a class="headerlink" href="#commands" title="Link permanente para este título">¶</a></h1>
+<p>Comandos são um método a partir do qual os operadores do servidor podem administrar os seus servidores, e ainda com que os jogadores podem interagir com o servidor.</p>
+<p>No Sponge, comandos seguem um sistema de permissões. Esse sistema permite que os donos dos servidores controlem quem tem acesso a determinados comandos. Por padrão, todos os comandos estão disponíveis para jogadores com status de operador (OP). Assim, jogadores sem OP não tem acesso a nenhum comando administrativo ou que requira uma permissão específica. Um operador pode determinar quem tem acesso a determinados comandos, adicionando ou negando nódulos de permissões através de um plugin feito para esse propósito.</p>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">O Sponge não é um plugin de gestão de permissoões. Para adicionar ou retirar permissões a jogadores individuais ou a grupos, precisas de um plugin de gestão de permissões.</p>
+</div>
+<div class="section" id="operator-commands">
+<h2>Comandos de Operadores<a class="headerlink" href="#operator-commands" title="Link permanente para este título">¶</a></h2>
+<p>Estes comandos, para além dos comandos normais do jogador, estão disponíveis para os operadores do servidor.</p>
+<div class="section" id="sponge">
+<h3>Sponge<a class="headerlink" href="#sponge" title="Link permanente para este título">¶</a></h3>
+<p>Os seguintes comandos estão disponíveis para os jogadores com o estatuto de operador (ou o nó de permissão correto) em servidores com o Sponge.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="49%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Comando</p>
+</th>
+<th class="head">Description</th>
+<th class="head"><p class="first last">Permissão</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>/sponge audit</td>
+<td><p class="first last">Força o carregamento das classes que não foram carregadas para ativar o debugging dos mixins.</p>
+</td>
+<td>sponge.command.audit</td>
+</tr>
+<tr class="row-odd"><td>/sponge chunks</td>
+<td><p class="first last">Imprime dados da chunck para um mundo, uma dimensão, ou globalmente.</p>
+</td>
+<td>sponge.command.chunks</td>
+</tr>
+<tr class="row-even"><td>/sponge config</td>
+<td><p class="first last">Altera uma configuração global, de mundo ou de dimensão.</p>
+</td>
+<td>sponge.command.config</td>
+</tr>
+<tr class="row-odd"><td>/sponge heap</td>
+<td><p class="first last">Faz um dump do heap da JVM.</p>
+</td>
+<td>sponge.command.heap</td>
+</tr>
+<tr class="row-even"><td>/sponge plugins</td>
+<td><p class="first last">Lista os plugins instalados no momento.</p>
+</td>
+<td>sponge.command.plugins</td>
+</tr>
+<tr class="row-odd"><td>/sponge reload</td>
+<td><p class="first last">Recarrega a configuração do mundo, da dimensão ou global.</p>
+</td>
+<td>sponge.command.reload</td>
+</tr>
+<tr class="row-even"><td>/sponge save</td>
+<td><p class="first last">Grava a configuração do mundo, da dimensão ou global.</p>
+</td>
+<td>sponge.command.save</td>
+</tr>
+<tr class="row-odd"><td>/sponge version</td>
+<td><p class="first last">Imprime as versões do Sponge/SpongeAPI na consola.</p>
+</td>
+<td>sponge.command.version</td>
+</tr>
+<tr class="row-even"><td>/sponge timings</td>
+<td><p class="first last">O comando principal para o módulo de timings.</p>
+</td>
+<td>sponge.command.timings</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p><strong>Parâmetros dos Comandos do Sponge</strong></p>
+<ul class="simple">
+<li>/sponge chunks [-g] [-d dim] [-w world]</li>
+<li>/sponge config [-g] [-d dim] [-w world] key value</li>
+<li>/sponge save [-g] [-d dim|*] [-w world|*]</li>
+<li><p class="first">/sponge save [-g] [-d dim|*] [-w world|*]</p>
+</li>
+</ul>
+<div class="admonition note">
+<p class="first admonition-title">Nota</p>
+<p class="last">O comando <code class="docutils literal"><span class="pre">/sponge</span> <span class="pre">audit</span></code> força o carregamento de quaisquer classes que ainda não tenham sido carregadas, permitindo que se visualize todo o <em>output</em> das variáveis de ambiente de <em>debugging</em> dos mixins. Isto também requer a variável ´´mixins.checks´´, vê a <a class="reference external" href="https://github.com/SpongePowered/Mixin/wiki/Mixin-Java-System-Properties">*Mixin wiki*</a> para mais informação.</p>
+</div>
+<div class="admonition tip">
+<p class="first admonition-title">Dica</p>
+<p>Aqui estão alguns exemplos do comando ´´sponge config´´ em ação. Por favor, vê <a class="reference internal" href="../getting-started/configuration/index.html"><em>Configurando o Sponge</em></a> para uma explicação mais detalhada.</p>
+<ol class="loweralpha simple">
+<li><code class="docutils literal"><span class="pre">/sponge</span> <span class="pre">config</span> <span class="pre">logging.chunk-load</span> <span class="pre">true</span></code></li>
+</ol>
+<blockquote>
+<div><p>Como não foi especificada qualquer dimensão, a dimensão afetada é aquela em que o ´´sender´´ (o jogador) se encontra. Por isso, se estivesses numa dimensão ´´mystcraft´´, isto alteraria a configuração da dimensão ´´mystcraft´´.</p>
+</div></blockquote>
+<ol class="loweralpha simple" start="2">
+<li><code class="docutils literal"><span class="pre">/sponge</span> <span class="pre">config</span> <span class="pre">-d</span> <span class="pre">nether</span> <span class="pre">logging.chunk-load</span> <span class="pre">true</span></code></li>
+</ol>
+<p>Como foi especificado um tipo de dimensão, isto alteraria a configuração da dimensão nether (e por isso de todos os mundos nether).</p>
+<ol class="loweralpha simple" start="3">
+<li><code class="docutils literal"><span class="pre">/sponge</span> <span class="pre">config</span> <span class="pre">-w</span> <span class="pre">DIM1</span> <span class="pre">logging.chunk-load</span> <span class="pre">true</span></code></li>
+</ol>
+<p class="last">Isto alteraria a configuração do mundo chamado DIM1.</p>
+</div>
+</div>
+<div class="section" id="timings">
+<h3>Timings<a class="headerlink" href="#timings" title="Link permanente para este título">¶</a></h3>
+<p>Os Timings são uma ferramenta constituinte do Sponge que permitem aos administradores dos servidores monitorizarem o desempenho dos seus servidores. Os Timings vão recolhendo informação sobre um servidor de tal modo que um relatório pode ser gerado com base nesses dados. A informação que é registada pelos timings inclui a <em>motd</em>, a versão do servidor, o <em>uptime</em>, estatísticas de memória, os plugins instalados, o número de ticks por segundo, a percentagem de perdas de tps, o número de jogadores, <em>tile entities</em>, entidades, e chunks. Segue-se uma lista de sub-comandos de <code class="docutils literal"><span class="pre">/sponge</span> <span class="pre">timings</span></code>:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="38%" />
+<col width="63%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Comando</p>
+</th>
+<th class="head">Description</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>/sponge timings on</td>
+<td><p class="first last">Ativa os timings: tem em conta que este comando vai reiniciar as estatísticas.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>/sponge timings off</td>
+<td><p class="first last">Desativa os timings. Tem em conta que a maior parte dos comandos dos timings não funcionarão e os timings não vão ser registados se estiverem desativados.</p>
+</td>
+</tr>
+<tr class="row-even"><td>/sponge timings reset</td>
+<td><p class="first last">Apaga todos os dados e começa a registá-los após a execução deste comando.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>/sponge timings report</td>
+<td><p class="first last">Gera o relatório dos timings do desempenho do teu servidor em <a class="reference external" href="http://timings.aikar.co">http://timings.aikar.co</a></p>
+</td>
+</tr>
+<tr class="row-even"><td>/sponge timings verbon</td>
+<td><p class="first last">Ativa monitorização dos timings a nível detalhado (<em>verbose</em>).</p>
+</td>
+</tr>
+<tr class="row-odd"><td>/sponge timings verboff</td>
+<td><p class="first last">Desativa monitorização dos timings a nível detalhado (<em>verbose</em>). Tem em conta que os timings de alta frequência não estarão disponíveis.</p>
+</td>
+</tr>
+<tr class="row-even"><td>/sponge timings cost</td>
+<td><p class="first last">Calcula o custo de utilizar timings.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="forge">
+<h3>Forge<a class="headerlink" href="#forge" title="Link permanente para este título">¶</a></h3>
+<p>Os comandos que se seguem só estão disponíveis quando se utiliza o SpongeForge coremod no Forge. Outras implementações da SpongeAPI, tal como o SpongeVanilla, não incluem estes comandos.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="25%" />
+<col width="50%" />
+<col width="25%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Comando</p>
+</th>
+<th class="head">Description</th>
+<th class="head"><p class="first last">Permissão</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>/forge tps</td>
+<td><p class="first last">Mostra as <em>ticks</em> por segundo de cada mundo.</p>
+</td>
+<td>forge.command.forge</td>
+</tr>
+<tr class="row-odd"><td>/forge track</td>
+<td><p class="first last">Ativa o <em>tile entity tracking</em>.</p>
+</td>
+<td>forge.command.forge</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Para quaisquer mods do Forge que usem a API de comandos vanilla, as permissões de comandos são da forma <code class="docutils literal"><span class="pre">&lt;modid&gt;.command.&lt;commandname&gt;</span></code>.</p>
+</div>
+<div class="section" id="vanilla">
+<h3>Vanilla<a class="headerlink" href="#vanilla" title="Link permanente para este título">¶</a></h3>
+<p>Há vários comandos incorporados no Minecraft vanilla que também estão disponíveis nos servidores com o Sponge. A lista abaixo não está completa, mas inclui os comandos mais comuns. Estes comandos estão disponíveis a jogadores com estatuto de operador (ou com o nó de permissão correto). Em geral, as permissões dos comandos vanilla num servidor Sponge são da forma <code class="docutils literal"><span class="pre">minecraft.command.&lt;command&gt;</span></code>, como mostrado abaixo.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="43%" />
+<col width="35%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Comando</p>
+</th>
+<th class="head">Description</th>
+<th class="head"><p class="first last">Permissão</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>/ban</td>
+<td><p class="first last">Banir um jogador.</p>
+</td>
+<td>minecraft.command.ban</td>
+</tr>
+<tr class="row-odd"><td>/ban-ip</td>
+<td><p class="first last">Banir o endereço IP de um jogador.</p>
+</td>
+<td>minecraft.command.ban-ip</td>
+</tr>
+<tr class="row-even"><td>/banlist</td>
+<td><p class="first last">Ver todos os jogadores banidos.</p>
+</td>
+<td>minecraft.command.banlist</td>
+</tr>
+<tr class="row-odd"><td>/clear</td>
+<td><p class="first last">Limpar um inventário.</p>
+</td>
+<td>minecraft.command.clear</td>
+</tr>
+<tr class="row-even"><td>/deop</td>
+<td><p class="first last">Retirar o estatuto OP a um jogador.</p>
+</td>
+<td>minecraft.command.deop</td>
+</tr>
+<tr class="row-odd"><td>/difficulty</td>
+<td><p class="first last">Definir a dificuldade do jogo.</p>
+</td>
+<td>minecraft.command.difficulty</td>
+</tr>
+<tr class="row-even"><td>/gamemode</td>
+<td><p class="first last">Definir o modo de jogo de um jogador.</p>
+</td>
+<td>minecraft.command.gamemode</td>
+</tr>
+<tr class="row-odd"><td>/gamerule</td>
+<td><p class="first last">Definir uma regra do jogo.</p>
+</td>
+<td>minecraft.command.gamerule</td>
+</tr>
+<tr class="row-even"><td>/give</td>
+<td><p class="first last">Dar um item a um jogador.</p>
+</td>
+<td>minecraft.command.give</td>
+</tr>
+<tr class="row-odd"><td>/kill</td>
+<td><p class="first last">Matar um jogador ou uma entidade.</p>
+</td>
+<td>minecraft.command.kill</td>
+</tr>
+<tr class="row-even"><td>/op</td>
+<td><p class="first last">Dar estatuto de operador a um jogador.</p>
+</td>
+<td>minecraft.command.op</td>
+</tr>
+<tr class="row-odd"><td>/pardon</td>
+<td><p class="first last">Remover um jogador da lista de banidos.</p>
+</td>
+<td>minecraft.command.pardon</td>
+</tr>
+<tr class="row-even"><td>/save-all</td>
+<td><p class="first last">Guardar o servidor.</p>
+</td>
+<td>minecraft.command.save-all</td>
+</tr>
+<tr class="row-odd"><td>/save-off</td>
+<td><p class="first last">Desativar a gravação automática do servidor.</p>
+</td>
+<td>minecraft.command.save-off</td>
+</tr>
+<tr class="row-even"><td>/save-on</td>
+<td><p class="first last">Ativar a gravação automática do servidor.</p>
+</td>
+<td>minecraft.command.save-on</td>
+</tr>
+<tr class="row-odd"><td>/setidletimeout</td>
+<td><p class="first last">Define quanto tempo os jogadores podem estar ausentes antes de serem <em>kickados</em>.</p>
+</td>
+<td>minecraft.command.setidletimeout</td>
+</tr>
+<tr class="row-even"><td>/setworldspawn</td>
+<td><p class="first last">Definir o <em>spawnpoint</em> do mundo.</p>
+</td>
+<td>minecraft.command.setworldspawn</td>
+</tr>
+<tr class="row-odd"><td>/stop</td>
+<td><p class="first last">Parar o servidor.</p>
+</td>
+<td>minecraft.command.stop</td>
+</tr>
+<tr class="row-even"><td>/toggledownfall</td>
+<td><p class="first last">Alternar entre tempo chuvoso ou sol.</p>
+</td>
+<td>minecraft.command.toggledownfall</td>
+</tr>
+<tr class="row-odd"><td>/tp</td>
+<td><p class="first last">Teleportar jogadores e entidades.</p>
+</td>
+<td>minecraft.command.tp</td>
+</tr>
+<tr class="row-even"><td>/weather</td>
+<td><p class="first last">Mudar as condições meteorológicas.</p>
+</td>
+<td>minecraft.command.weather</td>
+</tr>
+<tr class="row-odd"><td>/whitelist</td>
+<td><p class="first last">Gerir a whitelist do servidor.</p>
+</td>
+<td>minecraft.command.whitelist</td>
+</tr>
+<tr class="row-even"><td>/worldborder</td>
+<td><p class="first last">Modificar os limites do mundo.</p>
+</td>
+<td>minecraft.command.worldborder</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>In addition, there are two permissions created by Sponge for controlling the ability to edit commandblocks. Note that
+this permission uses the actual <em>name</em> of the commandblock, which is normally <code class="docutils literal"><span class="pre">&#64;</span></code> by default.</p>
+<ul class="simple">
+<li>Allow editing an ordinary commandblock of the given name: minecraft.commandblock.edit.block.&lt;name&gt;</li>
+<li>Allow editing a minecart commandblock of the given name: minecraft.commandblock.edit.minecart.&lt;name&gt;</li>
+</ul>
+</div>
+</div>
+<div class="section" id="player-commands">
+<h2>Comandos dos Jogadores<a class="headerlink" href="#player-commands" title="Link permanente para este título">¶</a></h2>
+<p>Os comandos seguintes estão disponíveis como parte do Minecraft vanilla para jogadores sem o estatuto de operador.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="24%" />
+<col width="49%" />
+<col width="27%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Comando</p>
+</th>
+<th class="head">Description</th>
+<th class="head"><p class="first last">Permissão</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>/help</td>
+<td><p class="first last">Ver informações sobre os comandos utilizados no servidor</p>
+</td>
+<td>minecraft.command.help</td>
+</tr>
+<tr class="row-odd"><td>/me</td>
+<td><p class="first last">Dizer a toda a gente o que estás a fazer.</p>
+</td>
+<td>minecraft.command.me</td>
+</tr>
+<tr class="row-even"><td>/say</td>
+<td><p class="first last">Mostrar uma mensagem a toda a gente (ou, se utilizares canais, a jogadores específicos).</p>
+</td>
+<td>minecraft.command.say</td>
+</tr>
+<tr class="row-odd"><td>/tell</td>
+<td><p class="first last">Enviar uma mensagem privada para outro jogador.</p>
+</td>
+<td>minecraft.command.tell</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<p>Uma lista completa dos comandos vanilla pode ser encontrada em: <a class="reference external" href="http://minecraft.gamepedia.com/Commands#List_of_commands">http://minecraft.gamepedia.com/Commands#List_of_commands</a>. As permissões para os comandos de Minecraft Vanilla num servidor Sponge seguem a estrutura <code class="docutils literal"><span class="pre">minecraft.command.&lt;comando&gt;</span></code>.</p>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          <div class="clearer"></div>
+        </div>
+        <div class="footer" role="contentinfo">
+              &copy; Copyright 2014-2016, Sponge Contributors.
+            Criado usando <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.3.
+        </div>
+    </div>
+  </body>
+</html>
