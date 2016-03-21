@@ -1,0 +1,834 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+     <title>Drużyna Sponge &mdash; Sponge 4.0.3 - dokumentacja</title>
+    
+  <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
+  <link href='//fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:400italic,700italic,700,400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../_static/tomorrow.css" type="text/css" />
+  <link id="syntax-highlighting-ref" rel="stylesheet" href="../_static/tomorrow_night.css" type="text/css" />
+      
+  <script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+      URL_ROOT:    '../',
+      VERSION:     '4.0.3',
+      COLLAPSE_INDEX: false,
+      FILE_SUFFIX: '.html',
+      HAS_SOURCE:  true
+    };
+  </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/store.min.js"></script>
+    <script type="text/javascript" src="../_static/lights.js"></script>
+      <link rel="shortcut icon" href="../_static/favicon.ico"/>
+        <link rel="top" title="Sponge 4.0.3 - dokumentacja" href="../index.html" />
+        <link rel="up" title="Czym jest projekt Sponge?" href="index.html" />
+        <link rel="next" title="Definicje słów Sponge" href="glossary.html" />
+        <link rel="prev" title="Zasady i etyka na kanałach komunikacyjnych" href="rules.html" />
+    
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-59476017-2', 'auto');
+    ga('send', 'pageview');
+
+  </script> 
+  </head>
+  <body role="document" id="top">
+    <div class="topbar">
+  <div role="navigation" aria-label="related navigation">
+    <div class="menu-left">
+      <a href="https://docs.spongepowered.org">
+        <img src="../_static/spongelogo.png" height="40px" style="vertical-align:middle"/>
+        <i class="icon-down-open-big lights-icon" style="vertical-align:middle"></i>
+      </a>
+      <ul class="dropdown" id="ddleft">
+        <a href="https://www.spongepowered.org"><li><i class="icon-home lights-icon"></i> Homepage</li></a>
+        <a href="https://forums.spongepowered.org"><li><i class="icon-pencil lights-icon"></i> Forums</li></a>
+        <a href="https://github.com/SpongePowered"><li><i class="icon-code lights-icon"></i> Code</li></a>
+        <a href="https://docs.spongepowered.org"><li class="active"><i class="icon-book-open lights-icon"></i> SpongeDocs</li></a>
+        <a href="https://jd.spongepowered.org"><li><i class="icon-graduation-cap lights-icon"></i> JavaDocs</li></a>
+        <a href="https://forums.spongepowered.org/c/plugins/plugin-releases"><li><i class="icon-tools lights-icon"></i> Plugins</li></a>
+        <a href="https://forums.spongepowered.org/t/sponge-downloads/11448"><li><i class="icon-download lights-icon"></i> Get Sponge</li></a>
+      </ul>
+    </div>
+    <div class="menu-right">
+      <div><i class="icon-language lights-icon"></i></div>
+        <ul class="dropdown" id="ddlang">
+          {§#curver§}
+          {|#langs|}
+          <li><a href="/test-repo/{§currentversion§}/{|crowdin_code|}/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/{|crowdin_code|}.png" alt="Flag for {|name|}"/></a></li>
+          {|/langs|}
+          {§/curver§}
+        </ul>
+    </div>
+    <div class="menu-right">
+      <div><i class="icon-tag lights-icon"></i><a>4.0.3</a></div>
+        <ul class="dropdown" id="ddvers">
+          <li><a href="/test-repo/master/en/"><i class="icon-tag lights-icon"></i> latest</a></li>
+          {[#vers]}
+          <li><a href="/test-repo/{[apiversion]}/en/"><i class="icon-tag lights-icon"></i> {[apiversion]}</a></li>
+          {[/vers]}
+        </ul>
+    </div>
+    <div class="menu-right">
+      <div title="Toggle syntax highlighting between light and dark" id="lights">
+        <i class="icon-lamp lights-icon"></i>
+      </div>
+    </div>
+    <div>
+      <ul class="controls">
+        <li>|</li>
+        
+        <li><a href="glossary.html" title="Next Page"><i class="icon-right-open-big lights-icon"></i></a></li>
+        
+        <li><a href="#top" title="To the top"><i class="icon-up-open-big lights-icon"></i></a></li>
+        <li><a href="../index.html" title="Home"><i class="icon-home lights-icon"></i></a></li>
+        
+        <li><a href="rules.html" title="Previous Page"><i class="icon-left-open-big lights-icon"></i></a></li>
+        
+        <li>|</li>
+        
+          <li><a href="https://github.com/SpongePowered/SpongeDocs/blob/master/source/about/staff.rst" title="Edit on GitHub"><i class="icon-github lights-icon"></i></a></li>
+        
+      </ul>
+    </div>
+    <h3>Nawigacja</h3>
+  </div>
+    </div>
+    <div class="container">
+
+      <div class="breadcrumbs">
+        <ul>
+        <li><a href="../index.html">Sponge 4.0.3 - dokumentacja</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="index.html" accesskey="U">Czym jest projekt Sponge?</a><i class="icon-right-open lights-icon"></i></li>
+        </ul>
+      </div> 
+    <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+    <form class="search" action="../search.html" method="get">
+      <div class="searchbox-inner">
+        <input class="field" type="text" name="q" autocomplete="off" />
+        <button class="submit" type="submit"><i class="icon-search"></i></button>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </div>
+    </form>
+    <p class="searchtip" style="font-size: 90%"></p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../index.html">Spis treści</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Tworzenie serwera</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../server/getting-started/index.html">Wprowadzenie</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/jre.html">Instalacja Java</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/migrating.html">Migracja na Sponge</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/implementations/index.html">Wybór implementacji</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongeforge.html">Installing SpongeForge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/launch-script.html">Tworzenie skryptu uruchamiania</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/port-forward.html">Przekierowywanie Portów</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/bungeecord.html">Using Sponge with BungeeCord</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/configuration/index.html">Konfiguracja Sponge</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/hocon.html">Wprowadzenie do HOCON</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/json.html">JSON Syntax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/sponge-conf.html">global.conf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/server-properties.html">Plik server.properties</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../server/management/index.html">Zarządzanie serwerem</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../server/management/whitelist.html">Zarządzanie białą listą</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server/management/bans.html">Zarządzanie Banami</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server/management/permissions.html">Managing Permissions</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../server/management/plugins.html">Instalowanie Pluginów</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../server/management/exploit-patches.html">Exploit Patches</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../server/spongineer/index.html">Becoming an Expert Spongineer</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../server/spongineer/commands.html">Komendy</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../server/spongineer/troubleshooting.html">Rozwiązywanie problemów</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../server/spongineer/logs.html">Log Files</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../server/spongineer/debugging.html">Debugging</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../server/spongineer/bugreport.html">Reporting Bugs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../preparing/index.html">Przygotowanie do tworzenia</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../preparing/jdk.html">Instalacja JDK</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../preparing/ide.html">Instalacja IDE</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../preparing/text.html">Instalacja edytora tekstu</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../preparing/git.html">Instalacja Git</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../plugin/index.html">Tworzenie pluginu</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/workspace/index.html">Przygotowywanie obszaru roboczego</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/workspace/idea.html">Setting Up IntelliJ IDEA</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/workspace/eclipse.html">Setting Up Eclipse</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/workspace/netbeans.html">Setting Up NetBeans</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/workspace/dependencies.html">Adding Sponge API Dependencies</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/practices.html">Best Practices</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/templates.html">Plugin Templates</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/main-class.html">Creating Your Main Plugin Class</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/lifecycle.html">Cykl działania wtyczki</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/optional/index.html">Optionals</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/optional/basic.html">Optionals Explained</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/optional/usage.html">Usage Examples</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/logging.html">Logging and Debugging</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/text/index.html">Working with Text</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/text/text.html">Creating Text</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/text/representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../plugin/text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../plugin/text/representations/xml.html">TextXML Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../plugin/text/representations/json.html">JSON Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../plugin/text/representations/configurate.html">Configuration Format</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/text/pagination.html">The Pagination Service</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/text/templates.html">Working with TextTemplates</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/commands/index.html">Tworzenie komend</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/commands/creating.html">Building a Command</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/commands/arguments.html">Argumenty przetwarzania</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/commands/childcommands.html">Child Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/commands/service.html">The Command Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/commands/commandcallable.html">Low-Level Command API</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/event/index.html">Praca ze zdarzeniami</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/event/listeners.html">Event Listeners</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/event/causes.html">Event Causes</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/event/filters.html">Event Filters</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/event/custom.html">Tworzenie zdarzeń niestandardowych:</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/configuration/index.html">Configuring Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/configuration/loaders.html">Configuration Loaders</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/configuration/nodes.html">Configuration Nodes</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/configuration/serialization.html">Serializing Objects</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/data/index.html">The Data API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/data/keys.html">Using Keys</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/data/datamanipulators.html">Data Manipulators</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/data/transactions.html">Transactions</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/data/serialization.html">Serializing Data</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/blocks/index.html">Praca z Block-ami</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/blocks/concepts.html">Koncepcje</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/blocks/accessing.html">Wejście do Block-ów</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/blocks/modifying.html">Modyfikacja Block-ów</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/blocks/tileentities.html">Praca z Płytkami</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/entities/index.html">Working with Entities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/entities/spawning.html">Spawning an Entity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/entities/modifying.html">Modifying an Entity</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/items/index.html">Working with Items</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/items/usage.html">Basic Item Usage</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/items/creating.html">Creating an ItemStack</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/injection.html">Wstrzykiwanie zależności</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/scheduler.html">Using the Scheduler</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/database.html">Praca z bazami danych</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/permissions.html">Praca nad Permissions API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/economy/index.html">The Economy API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/economy/basics.html">Basic Concepts</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/economy/using.html">Using the Economy API</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/economy/practices.html">Economy API Best Practices</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/economy/implementing.html">Implementing the Economy API</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/services.html">Working with Services</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/wgen/index.html">World Generation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/wgen/modifiers.html">Working with WorldGeneratorModifiers</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/wgen/customwgen.html">Modifying World Generation</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/manager.html">Using the Plugin Manager</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/debugging.html">Plugin Debugging</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/messagechannels.html">Message Channels</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/tutorials.html">Tutorials</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Twój wkład w Sponge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/guidelines.html">Zasady współpracy</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/howtogit.html">Praca z Git(Hub)</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/implementation/index.html">Praca nad rozwojem Sponge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/codestyle.html">Estetyka kodu w programowaniu</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/git-implementation.html">Git Workflow dla API i wdrożeń</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/pr.html">Rozpoczęcie pracy z Pull-Request</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/debugging.html">Debugowanie - Szukanie dziury w cały, aby sprawdzić Sponge w IDE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/mixins.html">Jak działa Mixins?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/datamanipulator.html">Wykorzystanie DataManipulators</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/spongedocs.html">Rozwijanie SpongeDocs</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/porting.html">Przenoszenie Sponge na inne platformy</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/versioning.html">System wersji i układu repozytorium Branch</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Czym jest projekt Sponge?</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">Wprowadzenie</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="faq.html">(FAQ) Najczęściej Zadawane Pytania</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html">Struktura subsekcji Projektu Sponge</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="future.html">Plany na przyszłość</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html">Warunki licencji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="posting.html">Wytyczne pisania postów na forum</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rules.html">Zasady i etyka na kanałach komunikacyjnych</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Drużyna Sponge</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="glossary.html">Definicje słów Sponge</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="assets.html">Logo i znaki graficzne</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="history.html">Sponge - historia prawdziwa</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads.html">Wersje do pobrania</a><ul class="simple">
+</ul>
+</li>
+</ul>
+<ul class="simple">
+</ul>
+
+      </div>
+    </div> 
+
+        <div class="document">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body" role="main">
+                  
+  <div class="section" id="staff">
+<h1>Drużyna Sponge<a class="headerlink" href="#staff" title="Stały odnośnik do tego nagłówka">¶</a></h1>
+<p>Poniżej znajduje się lista personelów projektu Sponge. W każdej sekcji osoby prezentowane są alfabetycznie.</p>
+<div class="section" id="sponge-leaders">
+<h2>Zarząd Projektu Sponge<a class="headerlink" href="#sponge-leaders" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p><strong>Zarząd Projektu Sponge</strong> nadzoruje nad projektem i to oni podejmują ostateczne decyzje.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="49%" />
+<col width="51%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Nazwa użytkownika</p>
+</th>
+<th class="head"><p class="first last">Pełniona funkcja</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>blood</td>
+<td><p class="first last">Koordynator wdrożeń, SpongeForge</p>
+</td>
+</tr>
+<tr class="row-odd"><td>gabizou</td>
+<td><p class="first last">Koordynator Modelu API</p>
+</td>
+</tr>
+<tr class="row-even"><td>Zidane</td>
+<td><p class="first last">Koordynator wdrożeń, SpongeVanilla</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="project-managers">
+<h2>Menagerzy Projektu<a class="headerlink" href="#project-managers" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p><strong>Menager Projektu</strong> w Sponge koordynuje prace i działania w aspekcie przydzielonego mu zadania, będącego częścią projektu Sponge.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="49%" />
+<col width="51%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Nazwa użytkownika</p>
+</th>
+<th class="head"><p class="first last">Pełniona funkcja</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Dockter</td>
+<td><p class="first">Dyrektor ds. Finansowych</p>
+<p class="last">Dyrektor ds. Technologi</p>
+</td>
+</tr>
+<tr class="row-odd"><td>gratimax</td>
+<td><p class="first">Menager Zasobów Internetowych</p>
+<p class="last">Programista Rozwojowy</p>
+</td>
+</tr>
+<tr class="row-even"><td>Inscrutable</td>
+<td><p class="first last">Dyrektor ds. SpongeDocs</p>
+</td>
+</tr>
+<tr class="row-odd"><td>lukegb</td>
+<td><p class="first last">Menager ds. Systemowych</p>
+</td>
+</tr>
+<tr class="row-even"><td>Me4502</td>
+<td><p class="first">Menager ds. SubReddit</p>
+<p class="last">Programista Rozwojowy</p>
+</td>
+</tr>
+<tr class="row-odd"><td>Owexz</td>
+<td><p class="first last">Menager ds. Forum i Społeczności</p>
+</td>
+</tr>
+<tr class="row-even"><td>progwml6</td>
+<td><p class="first last">Menager ds. IRC</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="api-and-implementation-developers">
+<h2>Programista Realizacji<a class="headerlink" href="#api-and-implementation-developers" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p><strong>Programista Realizacji</strong> pracuje przy produkcji SpongeAPI i dwóch innych oficjalnych wdrożeń SpongeForge oraz SpongeVanilla.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="49%" />
+<col width="51%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Nazwa użytkownika</p>
+</th>
+<th class="head"><p class="first last">Pełniona funkcja</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>Aaron1011</td>
+<td><p class="first last">Programista Rozwojowy</p>
+</td>
+</tr>
+<tr class="row-odd"><td>Dark_Arc</td>
+<td><p class="first last">Programista Rozwojowy</p>
+</td>
+</tr>
+<tr class="row-even"><td>DDoS</td>
+<td><p class="first last">Programista Rozwojowy</p>
+</td>
+</tr>
+<tr class="row-odd"><td>Deamon</td>
+<td><p class="first last">Programista Rozwojowy</p>
+</td>
+</tr>
+<tr class="row-even"><td>Minecrell</td>
+<td><p class="first last">Programista Rozwojowy</p>
+</td>
+</tr>
+<tr class="row-odd"><td>modwizcode</td>
+<td><p class="first last">Programista Rozwojowy</p>
+</td>
+</tr>
+<tr class="row-even"><td>Mumfrey</td>
+<td><p class="first">Inżynier Szyfrowania Danych</p>
+<p class="last">Programista Rozwojowy</p>
+</td>
+</tr>
+<tr class="row-odd"><td>simon816</td>
+<td><p class="first last">Programista Rozwojowy</p>
+</td>
+</tr>
+<tr class="row-even"><td>windy</td>
+<td><p class="first last">Programista Rozwojowy</p>
+</td>
+</tr>
+<tr class="row-odd"><td>zml</td>
+<td><p class="first last">Programista Rozwojowy</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="systems-maintainers">
+<h2>Wsparcie Systemów<a class="headerlink" href="#systems-maintainers" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p><strong>Technik Systemów</strong> podtrzymuje sprawne działanie serwerów projektu Sponge.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="49%" />
+<col width="51%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Nazwa użytkownika</p>
+</th>
+<th class="head"><p class="first last">Pełniona funkcja</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>GenPage</td>
+<td><p class="first last">Technik Systemów</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="spongedocs-editors">
+<h2>Redaktorzy SpongeDocs<a class="headerlink" href="#spongedocs-editors" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p><strong>Redaktorzy SpongeDocs</strong> zajmują się pisaniem, edytowaniem i utrzymaniem porządku dla oficjalnej dokumentacji Sponge.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="49%" />
+<col width="51%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Nazwa użytkownika</p>
+</th>
+<th class="head"><p class="first last">Pełniona funkcja</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>12AwsomeMan34</td>
+<td><p class="first last">Redaktor</p>
+</td>
+</tr>
+<tr class="row-odd"><td>boformer</td>
+<td><p class="first last">Redaktor</p>
+</td>
+</tr>
+<tr class="row-even"><td>hawtre</td>
+<td><p class="first last">Redaktor</p>
+</td>
+</tr>
+<tr class="row-odd"><td>Saladoc</td>
+<td><p class="first last">Redaktor</p>
+</td>
+</tr>
+<tr class="row-even"><td>Tzk</td>
+<td><p class="first last">Redaktor</p>
+</td>
+</tr>
+<tr class="row-odd"><td>Zirconium</td>
+<td><p class="first last">Redaktor</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="moderators-and-support">
+<h2>Moderatorzy i HelpDesk<a class="headerlink" href="#moderators-and-support" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p><strong>Moderatorzy i Personel HelpDesk</strong> przeszukują fora i kanały IRC, aby zareagować gdy potrzebna jest pomoc.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="49%" />
+<col width="51%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Nazwa użytkownika</p>
+</th>
+<th class="head"><p class="first last">Pełniona funkcja</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>FerusGrim</td>
+<td>Moderator</td>
+</tr>
+<tr class="row-odd"><td>Grinch</td>
+<td>Moderator</td>
+</tr>
+<tr class="row-even"><td>mbaxter</td>
+<td>Moderator</td>
+</tr>
+<tr class="row-odd"><td>phroa</td>
+<td>Moderator</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="retired-staff">
+<h2>Lista personelu zasłużonego<a class="headerlink" href="#retired-staff" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Wymienione poniżej osoby pracowały dla dobra projektu Sponge wystarczająco, aby zostać wyróżnionym. Nie są już aktywnie zaangażowani w naszą społeczność, ale znajdują się tutaj, aby podziękować im i potwierdzić ich cenny wkład. Dziękujemy, że jesteście z nami!</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="49%" />
+<col width="51%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Nazwa użytkownika</p>
+</th>
+<th class="head"><p class="first last">Ostatnie stanowisko</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>AzureusNation</td>
+<td><p class="first last">Programista Rozwojowy</p>
+</td>
+</tr>
+<tr class="row-odd"><td>Cedeel</td>
+<td><p class="first last">Redaktor</p>
+</td>
+</tr>
+<tr class="row-even"><td>DarkArcana</td>
+<td><p class="first last">Manager IRC i Społecznościowy</p>
+</td>
+</tr>
+<tr class="row-odd"><td>Disconsented</td>
+<td>Moderator</td>
+</tr>
+<tr class="row-even"><td>drtshock</td>
+<td>Moderator</td>
+</tr>
+<tr class="row-odd"><td>jckf</td>
+<td><p class="first last">Programista Rozwojowy</p>
+</td>
+</tr>
+<tr class="row-even"><td>kitsub</td>
+<td><p class="first last">Programista Rozwojowy</p>
+</td>
+</tr>
+<tr class="row-odd"><td>kobata</td>
+<td><p class="first last">Programista Rozwojowy</p>
+</td>
+</tr>
+<tr class="row-even"><td>Kodfod</td>
+<td><p class="first last">Dyrektor ds. Dokumentacji</p>
+</td>
+</tr>
+<tr class="row-odd"><td>Kornagan</td>
+<td><p class="first last">Programista Rozwojowy</p>
+</td>
+</tr>
+<tr class="row-even"><td>Pandette</td>
+<td><p class="first last">Redaktor</p>
+</td>
+</tr>
+<tr class="row-odd"><td>sibomots</td>
+<td><p class="first last">Programista Rozwojowy</p>
+</td>
+</tr>
+<tr class="row-even"><td>sk89q</td>
+<td><p class="first last">Zarząd ds. Zasobów</p>
+</td>
+</tr>
+<tr class="row-odd"><td>theresajayne</td>
+<td><p class="first last">Programista Rozwojowy</p>
+</td>
+</tr>
+<tr class="row-even"><td>TnT</td>
+<td>Moderator</td>
+</tr>
+<tr class="row-odd"><td>Tyrannokapi</td>
+<td><p class="first last">Redaktor</p>
+</td>
+</tr>
+<tr class="row-even"><td>Voltasalt</td>
+<td><p class="first last">Programista Rozwojowy</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          <div class="clearer"></div>
+        </div>
+        <div class="footer" role="contentinfo">
+              &copy; Copyright 2014-2016, Sponge Contributors.
+            Utworzone przy pomocy <a href="http://sphinx-doc.org/">Sphinx</a>'a 1.3.3.
+        </div>
+    </div>
+  </body>
+</html>

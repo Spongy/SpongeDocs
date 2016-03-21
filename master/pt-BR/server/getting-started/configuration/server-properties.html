@@ -1,0 +1,995 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+     <title>server.properties &mdash; Sponge 4.0.3 documentação</title>
+    
+  <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/sponge.css" type="text/css" />
+  <link href='//fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:400italic,700italic,700,400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../../../_static/tomorrow.css" type="text/css" />
+  <link id="syntax-highlighting-ref" rel="stylesheet" href="../../../_static/tomorrow_night.css" type="text/css" />
+      
+  <script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+      URL_ROOT:    '../../../',
+      VERSION:     '4.0.3',
+      COLLAPSE_INDEX: false,
+      FILE_SUFFIX: '.html',
+      HAS_SOURCE:  true
+    };
+  </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/store.min.js"></script>
+    <script type="text/javascript" src="../../../_static/lights.js"></script>
+      <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+        <link rel="top" title="Sponge 4.0.3 documentação" href="../../../index.html" />
+        <link rel="up" title="Configurando o Sponge" href="index.html" />
+        <link rel="next" title="Gestão do Servidor" href="../../management/index.html" />
+        <link rel="prev" title="global.conf" href="sponge-conf.html" />
+    
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-59476017-2', 'auto');
+    ga('send', 'pageview');
+
+  </script> 
+  </head>
+  <body role="document" id="top">
+    <div class="topbar">
+  <div role="navigation" aria-label="related navigation">
+    <div class="menu-left">
+      <a href="https://docs.spongepowered.org">
+        <img src="../../../_static/spongelogo.png" height="40px" style="vertical-align:middle"/>
+        <i class="icon-down-open-big lights-icon" style="vertical-align:middle"></i>
+      </a>
+      <ul class="dropdown" id="ddleft">
+        <a href="https://www.spongepowered.org"><li><i class="icon-home lights-icon"></i> Homepage</li></a>
+        <a href="https://forums.spongepowered.org"><li><i class="icon-pencil lights-icon"></i> Forums</li></a>
+        <a href="https://github.com/SpongePowered"><li><i class="icon-code lights-icon"></i> Code</li></a>
+        <a href="https://docs.spongepowered.org"><li class="active"><i class="icon-book-open lights-icon"></i> SpongeDocs</li></a>
+        <a href="https://jd.spongepowered.org"><li><i class="icon-graduation-cap lights-icon"></i> JavaDocs</li></a>
+        <a href="https://forums.spongepowered.org/c/plugins/plugin-releases"><li><i class="icon-tools lights-icon"></i> Plugins</li></a>
+        <a href="https://forums.spongepowered.org/t/sponge-downloads/11448"><li><i class="icon-download lights-icon"></i> Get Sponge</li></a>
+      </ul>
+    </div>
+    <div class="menu-right">
+      <div><i class="icon-language lights-icon"></i></div>
+        <ul class="dropdown" id="ddlang">
+          {§#curver§}
+          {|#langs|}
+          <li><a href="/test-repo/{§currentversion§}/{|crowdin_code|}/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/{|crowdin_code|}.png" alt="Flag for {|name|}"/></a></li>
+          {|/langs|}
+          {§/curver§}
+        </ul>
+    </div>
+    <div class="menu-right">
+      <div><i class="icon-tag lights-icon"></i><a>4.0.3</a></div>
+        <ul class="dropdown" id="ddvers">
+          <li><a href="/test-repo/master/en/"><i class="icon-tag lights-icon"></i> latest</a></li>
+          {[#vers]}
+          <li><a href="/test-repo/{[apiversion]}/en/"><i class="icon-tag lights-icon"></i> {[apiversion]}</a></li>
+          {[/vers]}
+        </ul>
+    </div>
+    <div class="menu-right">
+      <div title="Toggle syntax highlighting between light and dark" id="lights">
+        <i class="icon-lamp lights-icon"></i>
+      </div>
+    </div>
+    <div>
+      <ul class="controls">
+        <li>|</li>
+        
+        <li><a href="../../management/index.html" title="Next Page"><i class="icon-right-open-big lights-icon"></i></a></li>
+        
+        <li><a href="#top" title="To the top"><i class="icon-up-open-big lights-icon"></i></a></li>
+        <li><a href="../../../index.html" title="Home"><i class="icon-home lights-icon"></i></a></li>
+        
+        <li><a href="sponge-conf.html" title="Previous Page"><i class="icon-left-open-big lights-icon"></i></a></li>
+        
+        <li>|</li>
+        
+          <li><a href="https://github.com/SpongePowered/SpongeDocs/blob/master/source/server/getting-started/configuration/server-properties.rst" title="Edit on GitHub"><i class="icon-github lights-icon"></i></a></li>
+        
+      </ul>
+    </div>
+    <h3>Navegação</h3>
+  </div>
+    </div>
+    <div class="container">
+
+      <div class="breadcrumbs">
+        <ul>
+        <li><a href="../../../index.html">Sponge 4.0.3 documentação</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="../../index.html" >Criando um servidor</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="../index.html" >Guia de Início</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="index.html" accesskey="U">Configurando o Sponge</a><i class="icon-right-open lights-icon"></i></li>
+        </ul>
+      </div> 
+    <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+    <form class="search" action="../../../search.html" method="get">
+      <div class="searchbox-inner">
+        <input class="field" type="text" name="q" autocomplete="off" />
+        <button class="submit" type="submit"><i class="icon-search"></i></button>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </div>
+    </form>
+    <p class="searchtip" style="font-size: 90%"></p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../../index.html">Tabela de Conteúdo</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Criando um servidor</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Guia de Início</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jre.html">Instalar o Java</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../migrating.html">Migrar para o Sponge</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../implementations/index.html">Escolher uma Implementação</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../implementations/spongeforge.html">Instalar o SpongeForge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../implementations/spongevanilla.html">Instalar o SpongeVanilla</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../launch-script.html">Criar um <em>Launch Script</em></a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../port-forward.html">Encaminhamento de Portas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bungeecord.html">Usar o Sponge com o BungeeCord</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Configurando o Sponge</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="hocon.html">Introdução ao HOCON</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json.html">SIntaxe JSON</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sponge-conf.html">global.conf</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">server.properties</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../management/index.html">Gestão do Servidor</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../management/whitelist.html">Gerir a Whitelist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../management/bans.html">Gerir os Bans</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../management/permissions.html">Gerir Permissões</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../management/plugins.html">Instalar Plugins</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../management/exploit-patches.html">Correção de exploração de bugs</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../spongineer/index.html">Tornando-se um Spongineer perito</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../spongineer/commands.html">Comandos</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../spongineer/troubleshooting.html">Resolução de Problemas</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../spongineer/logs.html">Ficheiros de Registo</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../spongineer/debugging.html">Depuração</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../spongineer/bugreport.html">Denunciar Bugs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../preparing/index.html">Preparando-se para o desenvolvimento</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../preparing/jdk.html">Instalar o JDK</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preparing/ide.html">Instalar um IDE</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preparing/text.html">Instalar um Editor de Texto</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preparing/git.html">Instalar o Git</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../plugin/index.html">Criando um plugin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/workspace/index.html">Setting Up Your Workspace</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/workspace/idea.html">Setting Up IntelliJ IDEA</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/workspace/eclipse.html">Instalar o Eclipse</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/workspace/netbeans.html">Setting Up NetBeans</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/workspace/dependencies.html">Adding Sponge API Dependencies</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/practices.html">Best Practices</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/templates.html">Plugin Templates</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/main-class.html">Creating Your Main Plugin Class</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/lifecycle.html">Ciclo de Vida de um Plugin</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/optional/index.html">Optionals</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/optional/basic.html">Optionals Explained</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/optional/usage.html">Usage Examples</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/logging.html">Logging and Debugging</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/text/index.html">Working with Text</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/text.html">Creating Text</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../plugin/text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../plugin/text/representations/xml.html">TextXML Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../plugin/text/representations/json.html">JSON Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../plugin/text/representations/configurate.html">Configuration Format</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/pagination.html">The Pagination Service</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/templates.html">Working with TextTemplates</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/commands/index.html">Criar Comandos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/creating.html">Building a Command</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/arguments.html">Argument Parsing</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/childcommands.html">Child Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/service.html">The Command Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/commandcallable.html">Low-Level Command API</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/event/index.html">Trabalhar com Eventos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/listeners.html">Event Listeners</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/causes.html">Event Causes</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/filters.html">Event Filters</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/custom.html">Creating Custom Events</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/configuration/index.html">Configuring Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/configuration/loaders.html">Configuration Loaders</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/configuration/nodes.html">Configuration Nodes</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/configuration/serialization.html">Serializing Objects</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/data/index.html">The Data API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/data/keys.html">Using Keys</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/data/datamanipulators.html">Data Manipulators</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/data/transactions.html">Transactions</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/data/serialization.html">Serializing Data</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/blocks/index.html">Trabalhar com Blocos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/blocks/concepts.html">Conceitos</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/blocks/accessing.html">Accessing Blocks</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/blocks/modifying.html">Modifying Blocks</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/blocks/tileentities.html">Working with Tile Entities</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/entities/index.html">Working with Entities</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/entities/spawning.html">Spawning an Entity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/entities/modifying.html">Modifying an Entity</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/items/index.html">Trabalhando com itens</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/items/usage.html">Basic Item Usage</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/items/creating.html">Creating an ItemStack</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/injection.html">Injeção de dependência</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/scheduler.html">Using the Scheduler</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/database.html">Trabalhar com Bases de Dados</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/permissions.html">Trabalhar com o API das Permissões</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/economy/index.html">The Economy API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/economy/basics.html">Basic Concepts</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/economy/using.html">Using the Economy API</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/economy/practices.html">Economy API Best Practices</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/economy/implementing.html">Implementing the Economy API</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/services.html">Working with Services</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/wgen/index.html">World Generation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/wgen/modifiers.html">Working with WorldGeneratorModifiers</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/wgen/customwgen.html">Modifying World Generation</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/manager.html">Using the Plugin Manager</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/debugging.html">Plugin Debugging</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/messagechannels.html">Message Channels</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/tutorials.html">Tutoriais</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing/index.html">Contribuindo para o Sponge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/guidelines.html">Diretrizes de Contribuição</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/howtogit.html">Como Git(Hub)</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/implementation/index.html">Desenvolver o Sponge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/codestyle.html">Estilo de Código</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/git-implementation.html">Git Workflow for API and Implementations</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/pr.html">Submitting a Pull-Request</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/debugging.html">Depuração do Sponge dentro do IDE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/mixins.html">Mixins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/datamanipulator.html">Implementar DataManipulators</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/spongedocs.html">Escrever os SpongeDocs</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/porting.html">Adaptar o Sponge para outras plataformas</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/versioning.html">Versioning System and Repository Branch Layout</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">Sobre o Projeto Sponge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/introduction.html">Introdução</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html">Dúvidas frequentes</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/structure.html">The Structure of the Sponge Project</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/future.html">Planos para o Futuro</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/license.html">Licença</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/posting.html">Diretrizes para Publicação no Fórum</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/rules.html">Regras do Fórum e IRC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/staff.html">Equipe</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/glossary.html">Glossário do Sponge</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/assets.html">Ativos Artísticos</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/history.html">A História do Sponge</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../downloads.html">Download</a><ul class="simple">
+</ul>
+</li>
+</ul>
+<ul class="simple">
+</ul>
+
+      </div>
+    </div> 
+
+        <div class="document">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body" role="main">
+                  
+  <div class="section" id="server-properties">
+<h1>server.properties<a class="headerlink" href="#server-properties" title="Link permanente para este título">¶</a></h1>
+<div class="section" id="default-file">
+<h2>Ficheiro Original<a class="headerlink" href="#default-file" title="Link permanente para este título">¶</a></h2>
+<p>Aqui está o ficheiro server.properties, pré-definido, de um servidor de Minecraft 1.8.1, não modificado.</p>
+<div class="highlight-properties"><div class="highlight"><pre><span></span><span class="c">#Minecraft server properties</span>
+<span class="c">#(File modification datestamp)</span>
+<span class="na">spawn-protection</span><span class="o">=</span><span class="s">16</span>
+<span class="na">max-tick-time</span><span class="o">=</span><span class="s">60000</span>
+<span class="na">generator-settings</span><span class="o">=</span>
+<span class="na">force-gamemode</span><span class="o">=</span><span class="s">false</span>
+<span class="na">allow-nether</span><span class="o">=</span><span class="s">true</span>
+<span class="na">gamemode</span><span class="o">=</span><span class="s">0</span>
+<span class="na">enable-query</span><span class="o">=</span><span class="s">false</span>
+<span class="na">player-idle-timeout</span><span class="o">=</span><span class="s">0</span>
+<span class="na">difficulty</span><span class="o">=</span><span class="s">1</span>
+<span class="na">spawn-monsters</span><span class="o">=</span><span class="s">true</span>
+<span class="na">op-permission-level</span><span class="o">=</span><span class="s">4</span>
+<span class="na">resource-pack-hash</span><span class="o">=</span>
+<span class="na">announce-player-achievements</span><span class="o">=</span><span class="s">true</span>
+<span class="na">pvp</span><span class="o">=</span><span class="s">true</span>
+<span class="na">snooper-enabled</span><span class="o">=</span><span class="s">true</span>
+<span class="na">level-type</span><span class="o">=</span><span class="s">DEFAULT</span>
+<span class="na">hardcore</span><span class="o">=</span><span class="s">false</span>
+<span class="na">enable-command-block</span><span class="o">=</span><span class="s">false</span>
+<span class="na">max-players</span><span class="o">=</span><span class="s">20</span>
+<span class="na">network-compression-threshold</span><span class="o">=</span><span class="s">256</span>
+<span class="na">max-world-size</span><span class="o">=</span><span class="s">29999984</span>
+<span class="na">server-port</span><span class="o">=</span><span class="s">25565</span>
+<span class="na">server-ip</span><span class="o">=</span>
+<span class="na">spawn-npcs</span><span class="o">=</span><span class="s">true</span>
+<span class="na">allow-flight</span><span class="o">=</span><span class="s">false</span>
+<span class="na">level-name</span><span class="o">=</span><span class="s">world</span>
+<span class="na">view-distance</span><span class="o">=</span><span class="s">10</span>
+<span class="na">resource-pack</span><span class="o">=</span>
+<span class="na">spawn-animals</span><span class="o">=</span><span class="s">true</span>
+<span class="na">white-list</span><span class="o">=</span><span class="s">false</span>
+<span class="na">generate-structures</span><span class="o">=</span><span class="s">true</span>
+<span class="na">online-mode</span><span class="o">=</span><span class="s">true</span>
+<span class="na">max-build-height</span><span class="o">=</span><span class="s">256</span>
+<span class="na">level-seed</span><span class="o">=</span>
+<span class="na">use-native-transport</span><span class="o">=</span><span class="s">true</span>
+<span class="na">motd</span><span class="o">=</span><span class="s">A Minecraft Server</span>
+<span class="na">enable-rcon</span><span class="o">=</span><span class="s">false</span>
+</pre></div>
+</div>
+<div class="section" id="property-explanation">
+<h3>Explicação de Propriedades<a class="headerlink" href="#property-explanation" title="Link permanente para este título">¶</a></h3>
+<p>O mérito destas explicações é dos editores da <a class="reference external" href="http://minecraft.gamepedia.com">Minecraft Wiki</a>.</p>
+<p>As propriedades <strong>booleano</strong> só têm dois valores válidos, <em>true</em> e <em>false</em>. As propriedades <strong>inteiro</strong> devem ser números inteiros. Quando é definido um intervalo, o número deve pertencer ao intervalo. Propriedades <strong>string</strong> podem conter qualquer símbolo.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="26%" />
+<col width="11%" />
+<col width="11%" />
+<col width="51%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Key</th>
+<th class="head"><p class="first last">Tipo</p>
+</th>
+<th class="head"><p class="first last">Valor Pré-definido</p>
+</th>
+<th class="head"><p class="first last">Descrição</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>allow-flight</td>
+<td><p class="first last">booleano</p>
+</td>
+<td>false</td>
+<td><p class="first">Permite que os utilizadores voem no teu servidor enquanto estão no modo de Sobrevivência, se tiverem um mod que o permita.</p>
+<p>Com a key allow-flight ativa, os <em>griefers</em> poderão tornar-se mais comuns, porque o trabalho deles fica facilitado. No modo Criativo esta definição não tem efeito.</p>
+<blockquote class="last">
+<div><p><strong>false</strong> - Não é permitido voar (Jogadores que voem durante 5 segundos serão kickados)</p>
+<p><strong>true</strong> - É permitido voar.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-odd"><td>allow-nether</td>
+<td><p class="first last">booleano</p>
+</td>
+<td>true</td>
+<td><p class="first">Permite que os jogadores viagem para o Nether.</p>
+<blockquote class="last">
+<div><p><strong>false</strong> - Os portais para o Nether não funcionarão.</p>
+<p><strong>true</strong> - O servidor permitirá que os portais enviem jogadores para o Nether.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-even"><td>announce-player-achievements</td>
+<td><p class="first last">booleano</p>
+</td>
+<td>true</td>
+<td><p class="first last">Permite que o servidor anuncie quando um jogador desbloqueia uma proeza.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last">dificuldade</p>
+</td>
+<td><p class="first last">inteiro (0-3)</p>
+</td>
+<td>1</td>
+<td><p class="first">Define a dificuldade (tal como o dano infligido pelos mobs e a forma como a fome a as poções afetam os jogadores) do servidor.</p>
+<blockquote class="last">
+<div><p><strong>0</strong> - Pacífico</p>
+<p><strong>1</strong> - Fácil</p>
+<p><strong>2</strong> - Normal</p>
+<p><strong>3</strong> - Difícil</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-even"><td>enable-query</td>
+<td><p class="first last">booleano</p>
+</td>
+<td>false</td>
+<td><p class="first last">Ativa o <em>GameSpy4 protocol server listener</em>. Utilizado para obter informação sobre o servidor.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>enable-rcon</td>
+<td><p class="first last">booleano</p>
+</td>
+<td>false</td>
+<td><p class="first last">Permite o acesso remoto à consola do servidor.</p>
+</td>
+</tr>
+<tr class="row-even"><td>enable-command-block</td>
+<td><p class="first last">booleano</p>
+</td>
+<td>false</td>
+<td><p class="first last">Ativa os blocos de comandos.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>force-gamemode</td>
+<td><p class="first last">booleano</p>
+</td>
+<td>false</td>
+<td><p class="first">Força os jogadores a juntarem-se no modo de jogo pré-definido.</p>
+<blockquote class="last">
+<div><p><strong>false</strong> -  Os jogadores juntar-se-ão com o modo de jogo que tinham quando saíram do servidor.</p>
+<p><strong>true</strong> - Os jogadores juntar-se-ão sempre com o modo de jogo pré-definido.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-even"><td>gamemode</td>
+<td><p class="first last">inteiro (0-3)</p>
+</td>
+<td>0</td>
+<td><p class="first">Define o modo de jogo</p>
+<blockquote class="last">
+<div><p><strong>0</strong> - Sobrevivência</p>
+<p><strong>1</strong> - Criativo</p>
+<p><strong>2</strong> - Aventura</p>
+<p><strong>3</strong> - Espectador</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-odd"><td>generate-structures</td>
+<td><p class="first last">booleano</p>
+</td>
+<td>true</td>
+<td><p class="first">Define se as estruturas (tais como <em>villages</em>) serão geradas nos novos <em>chunks</em>.</p>
+<blockquote>
+<div><p><strong>false</strong> - As estruturas não serão geradas.</p>
+<p><strong>true</strong> - As estruturas serão geradas</p>
+</div></blockquote>
+<p class="last"><strong>Nota:</strong> As masmorras são geradas independentemente desta definição.</p>
+</td>
+</tr>
+<tr class="row-even"><td>generator-settings</td>
+<td>string</td>
+<td><p class="first last"><em>em branco</em></p>
+</td>
+<td><p class="first last">As definições utilizadas para personalizar o processo de criação do mundo. Vê <a class="reference external" href="http://minecraft.gamepedia.com/Superflat">Superflat</a> e <a class="reference external" href="http://minecraft.gamepedia.com/Customized">Customized</a> na Minecraft Wiki (links externos) para definições possíveis e exemplos.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>hardcore</td>
+<td><p class="first last">booleano</p>
+</td>
+<td>false</td>
+<td><p class="first last">Se definido como <strong>true</strong>, os jogadores serão permanentemente banidos se morrerem.</p>
+</td>
+</tr>
+<tr class="row-even"><td>level-name</td>
+<td>string</td>
+<td>world</td>
+<td><p class="first">O valor de &#8220;level-name&#8221; será utilizado como nome do mundo e também da pasta que o contém. Podes copiar a pasta do teu jogo para aqui, e mudares o seu nome para o nome do mundo que deve ser carregado.</p>
+<blockquote class="last">
+<div><p>Caracteres tais como &#8216; (apóstrofe) poderão precisar de ser <em>escaped</em> adicionando uma barra invertida (\) antes.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-odd"><td>level-seed</td>
+<td>string</td>
+<td><p class="first last"><em>em branco</em></p>
+</td>
+<td><p class="first">Adicionar uma <em>seed</em> ao teu mundo, como no <em>Singleplayer</em>.</p>
+<blockquote class="last">
+<div><p>Alguns exemplos são: minecraft, 404, 1a2b3c.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-even"><td>level-type</td>
+<td>string</td>
+<td>DEFAULT</td>
+<td><p class="first">Determina o tipo de mapa que é gerado.</p>
+<blockquote class="last">
+<div><p><strong>DEFAULT</strong> - Mundo comum com montanhas, vales, água, etc.</p>
+<p><strong>FLAT</strong> - Um mundo plano sem nada, para construtir.</p>
+<p><strong>LARGEBIOMES</strong> - O mesmo que o <em>default</em>, só que os biomas são maiores.</p>
+<p><strong>AMPLIFIED</strong> - O mesmo que o <em>default</em>, mas o limite em altura do gerador do mundo é aumentado.</p>
+<p><strong>CUSTOMIZED</strong> -  O mesmo que o <em>default</em> a menos que  generator-settings esteja definido.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-odd"><td>max-build-height</td>
+<td><p class="first last">inteiro</p>
+</td>
+<td>256</td>
+<td><p class="first last">A altura máxima a que é permitido construir. O terreno poderá ser criado normalmente acima de um limite baixo.</p>
+</td>
+</tr>
+<tr class="row-even"><td>max-players</td>
+<td><p class="first last">inteiro (0- 2147483647)</p>
+</td>
+<td>20</td>
+<td><p class="first last">O número máximo de jogadores que podem jogar no servidor ao mesmo tempo. Nota que, quanto mais jogadores estiverem no servidor ao mesmo tempo, mais recursos serão consumidos. Nota também que, não é suposto as ligações de jogadores OP contarem nesta contagem, mas estes jogadores não conseguem, atualmente, ligar-se a um servidor cheio. Valores extremamente grandes neste campo têm como consequência erros no lado do cliente em relação a este número.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>max-tick-time</td>
+<td><p class="first last">inteiro (0- (2^63-1))</p>
+</td>
+<td>60000</td>
+<td><p class="first">O número máximo de milissegundos que uma tick pode demorar antes de o <em>watchdog</em> do servidor o parar com a seguinte mensagem: &#8220;A single server tick took 60.00 seconds (should be max 0.05); Considering it to be crashed, server will forcibly shutdown&#8221;. Assim que isto acontece, ocorre System.exit(1).</p>
+<blockquote class="last">
+<div><p><strong>-1</strong> - desativa o <em>watchdog</em> completamente</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-even"><td>max-world-size</td>
+<td><p class="first last">inteiro (1- 29999984)</p>
+</td>
+<td>29999984</td>
+<td><p class="first">Isto define o tamanho máximo possível em blocos, expresso sob a forma de um raio, que os limites do mundo podem ser. Definir um limite maior faz com que o comandos seja completo com sucesso, mas o limite real nunca será superior ao limite. Definir o <em>max-world-size</em> maior do que o valor pré-definido não aparenta surtir quaisquer efeitos.</p>
+<p>Exemplos:</p>
+<blockquote class="last">
+<div><ul class="simple">
+<li><p class="first">Definir o <em>max-world-size</em> como 1000 permitir-te-á ter um mundo com 2000x2000 blocos.</p>
+</li>
+<li><p class="first">Definir o <em>max-world-size</em> como 4000 permitir-te-á ter um mundo com 8000x8000 blocos.</p>
+</li>
+</ul>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-odd"><td>motd</td>
+<td>string</td>
+<td><em>A</em>
+<em>Minecraft</em>
+<em>Server</em></td>
+<td><p class="first">Esta é a mensagem que é mostrada por baixo do nome do servidor, na lista de favoritos do cliente.</p>
+<blockquote class="last">
+<div><ul class="simple">
+<li><p class="first">A MOTD suporta códigos de cor e de formatação.</p>
+</li>
+<li><p class="first">Se a MOTD tiver mais de 59 caracteres, a lista de servidores provavelmente mostrará um erro de comunicação.</p>
+</li>
+</ul>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-even"><td>network-compression-threshold</td>
+<td><p class="first last">inteiro</p>
+</td>
+<td>256</td>
+<td><p class="first">Por pré-definição, permite que os pacotes de n-1 bytes sigam normalmente, mas um pacote que tenha n bytes ou mais é comprimido. Por isso, um valor mais baixo significa maior compressão mas comprimir número pequenos de bytes pode acabar com um resultado maior do que o pacote original.</p>
+<blockquote>
+<div><p><strong>-1</strong> - desativar completamente a compressão</p>
+<p><strong>0</strong> - comprimir tudo</p>
+</div></blockquote>
+<p class="last"><strong>Nota:</strong> <em>As especificações ethernet requerem que pacotes com menos de 64 bytes sejam arredondados para 64 bytes. Por isso, usar um valor inferior a 64 pode não ser benéfico. Também é recomendado que não se exceda o MTU (Maximum Transmission Unit), que geralmente é 1500 bytes.</em></p>
+</td>
+</tr>
+<tr class="row-odd"><td>online-mode</td>
+<td><p class="first last">booleano</p>
+</td>
+<td>true</td>
+<td><p class="first">O servidor verifica se jogadores que se vão juntando estão na base de dados de contas do Minecraft. Define isto para false somente se o teu servidor não estiver ligado à Internet. Hackers com contas falsificadas podem ligar-se se isto estiver definido para false! Se o site minecraft.net estiver em baixo ou inacessível, os jogadores não se poderão ligar se isto estiver definido para true. Definir esta variável para false propositadamente é chamdo &#8220;crackear&#8221; um servidor, e servidores que no momento se encontrem em modo offline são chamados servidores &#8220;crackeados&#8221;, permitindo que jogadores com uma cópia não-licenciada do Minecraft se liguem.</p>
+<blockquote class="last">
+<div><p><strong>false</strong> - Desativado. O servidor não verificará os jogadores que se ligarem.</p>
+<p><strong>true</strong> - Ativo. O servidor vai assumir que tem uma ligação à Internet e verificará todos os jogadores que se ligarem.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-even"><td>op-permission-level</td>
+<td><p class="first last">inteiro (1-4)</p>
+</td>
+<td>4</td>
+<td><p class="first">Define o nível de permissões para ops. Cada nível contém, para além das respetivas, as permissões dos níveis mais baixos.</p>
+<blockquote class="last">
+<div><p><strong>1</strong> - Os Ops podem ultrapassar a proteção do <em>spawn</em>.</p>
+<p><strong>2</strong> - Os Ops podem usar /clear, /difficulty, /effect, /gamemode, /gamerule, /give, e /tp, e podem editar blocos de comando.</p>
+<p><strong>3</strong> - Os Ops podem usar /ban, /deop, /kick, e /op.</p>
+<p><strong>4</strong> - Os Ops podem usar /stop.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-odd"><td>player-idle-timeout</td>
+<td><p class="first last">inteiro</p>
+</td>
+<td>0</td>
+<td><p class="first">Se diferente de zero, os jogadores são <em>kickados</em> se estiverem inativos durante o tempo especificado, em minutos.</p>
+<blockquote class="last">
+<div><p><strong>Nota:</strong> <em>O tempo de inatividade é reposto quando o servidor recebe um dos packets seguintes:</em></p>
+<blockquote>
+<div><ul class="simple">
+<li>102 (0x66) WindowClick</li>
+<li>108 (0x6c) ButtonClick</li>
+<li>130 (0x82) UpdateSign</li>
+<li>14 (0xe) BlockDig</li>
+<li>15 (0xf) Place</li>
+<li>16 (0x10) BlockItemSwitch</li>
+<li>18 (0x12) ArmAnimation</li>
+<li>19 (0x13) EntityAction</li>
+<li>205 (0xcd) ClientCommand</li>
+<li>3 (0x3) Chat</li>
+<li>7 (0x7) UseEntity</li>
+</ul>
+</div></blockquote>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-even"><td>pvp</td>
+<td><p class="first last">booleano</p>
+</td>
+<td>true</td>
+<td><p class="first">Ativar o PvP no servidor. Jogadores que disparem contra si mesmos com setas só receberão dano se o PvP estiver ativo.</p>
+<blockquote>
+<div><p><strong>false</strong> - Os jogadores não conseguem matar outros jogadores (também conhecido como <strong>Player versus Environment</strong> (<strong>PvE</strong>)).</p>
+<p><strong>true</strong> - Os jogadores podem matar-se uns aos outros.</p>
+</div></blockquote>
+<p class="last"><strong>Nota:</strong> <em>Fontes de dano indireto criadas por jogadores</em> <em>(tais como lava, fogo, TNT, e água nalguns casos, areia e gravilha) ainda provocarão dano a outros jogadores.</em></p>
+</td>
+</tr>
+<tr class="row-odd"><td>query.port</td>
+<td><p class="first last">inteiro (1- 65534)</p>
+</td>
+<td>25565</td>
+<td><p class="first last">Define a porta do <em>query server</em> (vê <strong>enable-query</strong>).</p>
+</td>
+</tr>
+<tr class="row-even"><td>rcon.password</td>
+<td>string</td>
+<td><p class="first last"><em>em branco</em></p>
+</td>
+<td><p class="first last">Define a password para a ligação remota.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>rcon.port</td>
+<td><p class="first last">inteiro (1- 65534)</p>
+</td>
+<td>25575</td>
+<td><p class="first last">Define a porta para a ligação remota.</p>
+</td>
+</tr>
+<tr class="row-even"><td>resource-pack</td>
+<td>string</td>
+<td><p class="first last"><em>em branco</em></p>
+</td>
+<td><p class="first last">URI opcional para um pacote de recurso. O jogador pode escolher utilizá-lo.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>resource-pack-hash</td>
+<td>string</td>
+<td><p class="first last"><em>em branco</em></p>
+</td>
+<td><p class="first last">Digest SHA-1 do pacote de recursos, opcional, em hexadecimal, em minúsculas. É recomendado que especifiques isto. Isto ainda não é utilizado para verificar a integridade do pacote de recursos mas ajuda à eficiência e à fiabilidade da cache.</p>
+</td>
+</tr>
+<tr class="row-even"><td>server-ip</td>
+<td>string</td>
+<td><p class="first last"><em>em branco</em></p>
+</td>
+<td><p class="first last">Define isto se queres que o teu servidor responda a um IP específico. Recomendamos seriamente que deixes isto em branco.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>server-port</td>
+<td><p class="first last">inteiro (1- 65534)</p>
+</td>
+<td>25565</td>
+<td><p class="first last">Muda a porta em que o servidor escuta. Esta porta tem de ser reencaminhada se o servidor estiver hospedado numa rede que utilize NAT (se teveres um router em casa ou uma firewall).</p>
+</td>
+</tr>
+<tr class="row-even"><td>snooper-enabled</td>
+<td><p class="first last">booleano</p>
+</td>
+<td>true</td>
+<td><p class="first">Define se o servidor enviará ou não dados de snooper regularmente para <a class="reference external" href="http://snoop.minecraft.net">http://snoop.minecraft.net</a>. (link externo)</p>
+<blockquote class="last">
+<div><p><strong>false</strong> - Desativar o envio dos dados.</p>
+<p><strong>true</strong> - Ativar o envio dos dados.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-odd"><td>spawn-animals</td>
+<td><p class="first last">booleano</p>
+</td>
+<td>true</td>
+<td><p class="first">Determina se os animais serão criados no mundo.</p>
+<blockquote>
+<div><p><strong>false</strong> - Todos os animais desaparecerão imediatamente, e nenhum será criado posteriormente.</p>
+<p><strong>true</strong> - Os animais são criados normalmente.</p>
+</div></blockquote>
+<p class="last"><em>DIca: se tiveres muita lag, define isto para false.</em></p>
+</td>
+</tr>
+<tr class="row-even"><td>spawn-monsters</td>
+<td><p class="first last">booleano</p>
+</td>
+<td>true</td>
+<td><p class="first">Determina se os mobs hostis serão criados no mundo.</p>
+<blockquote>
+<div><p><strong>false</strong> - Todos os mobs desaparecerão imediatamente, e nenhum será criado posteriormente.</p>
+<p><strong>true</strong> - Os mobs serão criados como de costume, na escuridão e à noite.</p>
+</div></blockquote>
+<p>Isto não terá efeito se a dificuldade estiver definida para Pacífico.</p>
+<p class="last"><em>DIca: se tiveres muita lag, define isto para false.</em></p>
+</td>
+</tr>
+<tr class="row-odd"><td>spawn-npcs</td>
+<td><p class="first last">booleano</p>
+</td>
+<td>true</td>
+<td><p class="first">Determina se os aldeões serão criados no mundo.</p>
+<blockquote class="last">
+<div><p><strong>true</strong> - Ativo. Os aldeões serão criados no mundo.</p>
+<p><strong>false</strong> - Desativado. Os aldeões não serão criados no mundo.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-even"><td>spawn-protection</td>
+<td><p class="first last">inteiro</p>
+</td>
+<td>16</td>
+<td><p class="first last">Determina o raio da proteção do spawn. Definir isto para 0 não esativa a proteção do spawn, antes protege o bloco de spawn. 1 protege uma área de 3x3, centrada no ponto de spwan. 2 protege 5x5, 3 protege 7x7, etc. Esta opção não é gerada no primeiro arranque do servidor e só aparece quando o promeiro jogador se liga. Se não houver ops definidos no servidor, a proteção do spawn é desativada automaticamente.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>use-native-transport</td>
+<td><p class="first last">booleano</p>
+</td>
+<td>true</td>
+<td><p class="first">Melhorias de performance em servidores Linux: otimização do envio/receção de pacotes em Linux.</p>
+<blockquote class="last">
+<div><p><strong>false</strong> - Desativado. Desativa a otimização de envio/receção de pacotes em Linux.</p>
+<p><strong>true</strong> - Ativo. Ativa a otimização de envio/receção de pacotes em Linux.</p>
+</div></blockquote>
+</td>
+</tr>
+<tr class="row-even"><td>view-distance</td>
+<td><p class="first">inteiro</p>
+<p class="last">(3-15)</p>
+</td>
+<td>10</td>
+<td><p class="first">Define a quantidade de dados do mundo que o servidor envia para o cliente., medidos em chunks em cada direção do jogador (raio, não diâmetro). Determina a distância de visualização no lado do servidor.</p>
+<p class="last"><em>10 é o valor pré-definido/recomendado. Se tens muita lag, reduz este valor.</em></p>
+</td>
+</tr>
+<tr class="row-odd"><td>white-list</td>
+<td><p class="first last">booleano</p>
+</td>
+<td>false</td>
+<td><p class="first">Ativa a whitelist no servidor. Vê <a class="reference internal" href="../../management/whitelist.html"><em>Gerir a Whitelist</em></a>. Com uma whitelist ativa, os utilizadores que não estiverem na whitelist não se conseguirão ligar. Visa os servidores privados, tais como aqueles dedicados a amigos de vida real ou estranhos selecionados por qualquer processo, por exemplo.</p>
+<blockquote>
+<div><p><strong>false</strong> - A <em>whitelist</em> não é utilizada.</p>
+<p><strong>true</strong> - O ficheiro <code class="docutils literal"><span class="pre">whitelist.json</span></code> é usado para gerar a <em>white list</em>.</p>
+</div></blockquote>
+<p class="last"><strong>Nota:</strong> <em>Os Ops são adicionados à white list automaticamente, pelo que não é necessário adicioná-los ao ficheiro.</em></p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          <div class="clearer"></div>
+        </div>
+        <div class="footer" role="contentinfo">
+              &copy; Copyright 2014-2016, Sponge Contributors.
+            Criado usando <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.3.
+        </div>
+    </div>
+  </body>
+</html>

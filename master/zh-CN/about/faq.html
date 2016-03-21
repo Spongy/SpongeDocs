@@ -1,0 +1,620 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+     <title>常见问题 &mdash; Sponge 4.0.3 文档</title>
+    
+  <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
+  <link href='//fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:400italic,700italic,700,400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../_static/tomorrow.css" type="text/css" />
+  <link id="syntax-highlighting-ref" rel="stylesheet" href="../_static/tomorrow_night.css" type="text/css" />
+      
+  <script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+      URL_ROOT:    '../',
+      VERSION:     '4.0.3',
+      COLLAPSE_INDEX: false,
+      FILE_SUFFIX: '.html',
+      HAS_SOURCE:  true
+    };
+  </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="../_static/translations.js"></script>
+    <script type="text/javascript" src="../_static/store.min.js"></script>
+    <script type="text/javascript" src="../_static/lights.js"></script>
+      <link rel="shortcut icon" href="../_static/favicon.ico"/>
+        <link rel="top" title="Sponge 4.0.3 文档" href="../index.html" />
+        <link rel="up" title="关于Sponge项目" href="index.html" />
+        <link rel="next" title="The Structure of the Sponge Project" href="structure.html" />
+        <link rel="prev" title="简介" href="introduction.html" />
+    
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-59476017-2', 'auto');
+    ga('send', 'pageview');
+
+  </script> 
+  </head>
+  <body role="document" id="top">
+    <div class="topbar">
+  <div role="navigation" aria-label="related navigation">
+    <div class="menu-left">
+      <a href="https://docs.spongepowered.org">
+        <img src="../_static/spongelogo.png" height="40px" style="vertical-align:middle"/>
+        <i class="icon-down-open-big lights-icon" style="vertical-align:middle"></i>
+      </a>
+      <ul class="dropdown" id="ddleft">
+        <a href="https://www.spongepowered.org"><li><i class="icon-home lights-icon"></i> Homepage</li></a>
+        <a href="https://forums.spongepowered.org"><li><i class="icon-pencil lights-icon"></i> Forums</li></a>
+        <a href="https://github.com/SpongePowered"><li><i class="icon-code lights-icon"></i> Code</li></a>
+        <a href="https://docs.spongepowered.org"><li class="active"><i class="icon-book-open lights-icon"></i> SpongeDocs</li></a>
+        <a href="https://jd.spongepowered.org"><li><i class="icon-graduation-cap lights-icon"></i> JavaDocs</li></a>
+        <a href="https://forums.spongepowered.org/c/plugins/plugin-releases"><li><i class="icon-tools lights-icon"></i> Plugins</li></a>
+        <a href="https://forums.spongepowered.org/t/sponge-downloads/11448"><li><i class="icon-download lights-icon"></i> Get Sponge</li></a>
+      </ul>
+    </div>
+    <div class="menu-right">
+      <div><i class="icon-language lights-icon"></i></div>
+        <ul class="dropdown" id="ddlang">
+          {§#curver§}
+          {|#langs|}
+          <li><a href="/test-repo/{§currentversion§}/{|crowdin_code|}/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/{|crowdin_code|}.png" alt="Flag for {|name|}"/></a></li>
+          {|/langs|}
+          {§/curver§}
+        </ul>
+    </div>
+    <div class="menu-right">
+      <div><i class="icon-tag lights-icon"></i><a>4.0.3</a></div>
+        <ul class="dropdown" id="ddvers">
+          <li><a href="/test-repo/master/en/"><i class="icon-tag lights-icon"></i> latest</a></li>
+          {[#vers]}
+          <li><a href="/test-repo/{[apiversion]}/en/"><i class="icon-tag lights-icon"></i> {[apiversion]}</a></li>
+          {[/vers]}
+        </ul>
+    </div>
+    <div class="menu-right">
+      <div title="Toggle syntax highlighting between light and dark" id="lights">
+        <i class="icon-lamp lights-icon"></i>
+      </div>
+    </div>
+    <div>
+      <ul class="controls">
+        <li>|</li>
+        
+        <li><a href="structure.html" title="Next Page"><i class="icon-right-open-big lights-icon"></i></a></li>
+        
+        <li><a href="#top" title="To the top"><i class="icon-up-open-big lights-icon"></i></a></li>
+        <li><a href="../index.html" title="Home"><i class="icon-home lights-icon"></i></a></li>
+        
+        <li><a href="introduction.html" title="Previous Page"><i class="icon-left-open-big lights-icon"></i></a></li>
+        
+        <li>|</li>
+        
+          <li><a href="https://github.com/SpongePowered/SpongeDocs/blob/master/source/about/faq.rst" title="Edit on GitHub"><i class="icon-github lights-icon"></i></a></li>
+        
+      </ul>
+    </div>
+    <h3>导航</h3>
+  </div>
+    </div>
+    <div class="container">
+
+      <div class="breadcrumbs">
+        <ul>
+        <li><a href="../index.html">Sponge 4.0.3 文档</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="index.html" accesskey="U">关于Sponge项目</a><i class="icon-right-open lights-icon"></i></li>
+        </ul>
+      </div> 
+    <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+    <form class="search" action="../search.html" method="get">
+      <div class="searchbox-inner">
+        <input class="field" type="text" name="q" autocomplete="off" />
+        <button class="submit" type="submit"><i class="icon-search"></i></button>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </div>
+    </form>
+    <p class="searchtip" style="font-size: 90%"></p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../index.html">內容目录</a></h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">创建服务器</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../server/getting-started/index.html">入门指南</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/jre.html">安装 Java</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/migrating.html">迁移到 Sponge</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/implementations/index.html">选择一个安装启动</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongeforge.html">Installing SpongeForge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongevanilla.html">安装SpongeVanilla</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/launch-script.html">创建启动脚本</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/port-forward.html">端口转发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/bungeecord.html">和BungeeCorge配合使用Sponge</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/configuration/index.html">配置Sponge</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/hocon.html">HOCON简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/json.html">JSON语法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/sponge-conf.html">global.conf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/server-properties.html">server.properties</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../server/management/index.html">服务器管理</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../server/management/whitelist.html">管理白名单</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server/management/bans.html">管理—封禁</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server/management/permissions.html">权限管理</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../server/management/plugins.html">安装插件</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../server/management/exploit-patches.html">Exploit Patches</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../server/spongineer/index.html">成为Sponge专家</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../server/spongineer/commands.html">命令</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../server/spongineer/troubleshooting.html">故障排查</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../server/spongineer/logs.html">日志文件</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../server/spongineer/debugging.html">Debugging</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../server/spongineer/bugreport.html">Reporting Bugs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../preparing/index.html">开发之前需要做的事情</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../preparing/jdk.html">安装JDK</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../preparing/ide.html">安装IDE</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../preparing/text.html">安装一个文本编辑器</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../preparing/git.html">安装Git</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../plugin/index.html">插件开发</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/workspace/index.html">建立工作目录</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/workspace/idea.html">架设Intellij IDEA</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/workspace/eclipse.html">安装和使用Eclipse</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/workspace/netbeans.html">安装NetBeans</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/workspace/dependencies.html">加入Sponge API依赖项</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/practices.html">最佳做法</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/templates.html">插件模板</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/main-class.html">创建你的插件主类</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/lifecycle.html">插件周期</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/optional/index.html">Optionals</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/optional/basic.html">Optionals Explained</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/optional/usage.html">Usage Examples</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/logging.html">日志记录和调试</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/text/index.html">使用文本</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/text/text.html">创建文本</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/text/representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../plugin/text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../plugin/text/representations/xml.html">TextXML Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../plugin/text/representations/json.html">JSON Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../plugin/text/representations/configurate.html">Configuration Format</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/text/pagination.html">分页服务</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/text/templates.html">Working with TextTemplates</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/commands/index.html">创建命令</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/commands/creating.html">创建一个命令</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/commands/arguments.html">参数分析</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/commands/childcommands.html">Child Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/commands/service.html">The Command Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/commands/commandcallable.html">低级命令API</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/event/index.html">事件处理</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/event/listeners.html">事件监听器</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/event/causes.html">Event Causes</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/event/filters.html">Event Filters</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/event/custom.html">创建自定义事件</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/configuration/index.html">Configuring Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/configuration/loaders.html">加载器的配置</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/configuration/nodes.html">Nodes的配置</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/configuration/serialization.html">Serializing Objects</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/data/index.html">数据API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/data/keys.html">使用键盘</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/data/datamanipulators.html">数据臂</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/data/transactions.html">Transactions</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/data/serialization.html">Serializing Data</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/blocks/index.html">处理方块</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/blocks/concepts.html">概念</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/blocks/accessing.html">访问方块</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/blocks/modifying.html">修改方块</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/blocks/tileentities.html">使用 Tile Entity</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/entities/index.html">使用实体</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/entities/spawning.html">生成一个实体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/entities/modifying.html">Modifying an Entity</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/items/index.html">处理项目</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/items/usage.html">Basic Item Usage</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/items/creating.html">Creating an ItemStack</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/injection.html">注入依赖项</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/scheduler.html">使用调度程序</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/database.html">使用数据库</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/permissions.html">使用权限API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/economy/index.html">The Economy API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/economy/basics.html">Basic Concepts</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/economy/using.html">Using the Economy API</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/economy/practices.html">Economy API Best Practices</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/economy/implementing.html">Implementing the Economy API</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/services.html">使用服务</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/wgen/index.html">World Generation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/wgen/modifiers.html">Working with WorldGeneratorModifiers</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/wgen/customwgen.html">Modifying World Generation</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/manager.html">使用插件管理器</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/debugging.html">Plugin Debugging</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/messagechannels.html">Message Channels</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/tutorials.html">教程</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">向 Sponge 贡献代码</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/guidelines.html">贡献指南</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/howtogit.html">How to Git(Hub)</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/implementation/index.html">Developing Sponge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/codestyle.html">代码规范</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/git-implementation.html">Git Workflow for API and Implementations</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/pr.html">Submitting a Pull-Request</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/debugging.html">在IDE中调试</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/mixins.html">Mixins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/datamanipulator.html">Implementing DataManipulators</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/spongedocs.html">SpongeDocs文稿</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/porting.html">将Sponge移植到其他平台</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/versioning.html">Versioning System and Repository Branch Layout</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">关于Sponge项目</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="introduction.html">简介</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">常见问题</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="structure.html">The Structure of the Sponge Project</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="future.html">未来计划</a></li>
+<li class="toctree-l2"><a class="reference internal" href="license.html">许可</a></li>
+<li class="toctree-l2"><a class="reference internal" href="posting.html">论坛发帖准则</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="rules.html">论坛及 IRC 准则</a></li>
+<li class="toctree-l2"><a class="reference internal" href="staff.html">工作人员</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="glossary.html">Sponge 词汇表</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="assets.html">艺术资源</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="history.html">Sponge的历史</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads.html">下载</a><ul class="simple">
+</ul>
+</li>
+</ul>
+<ul class="simple">
+</ul>
+
+      </div>
+    </div> 
+
+        <div class="document">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body" role="main">
+                  
+  <div class="section" id="frequently-asked-questions">
+<h1>常见问题<a class="headerlink" href="#frequently-asked-questions" title="永久链接至标题">¶</a></h1>
+<div class="contents local topic" id="contents">
+<ul class="simple">
+<li><a class="reference internal" href="#for-everyone" id="id1">给每个人</a><ul>
+<li><a class="reference internal" href="#what-is-sponge" id="id2">Sponge 是什么？</a></li>
+<li><a class="reference internal" href="#what-is-required-to-run-sponge" id="id3">运行 Sponge 需要什么？</a></li>
+<li><a class="reference internal" href="#where-do-i-get-sponge" id="id4">从哪里能得到 Sponge？</a></li>
+<li><a class="reference internal" href="#what-sponge-implementations-are-available" id="id5">哪些Sponge实现 是可用的？</a></li>
+<li><a class="reference internal" href="#where-do-i-get-plugins-for-sponge" id="id6">从哪里能得到Sponge的插件？</a></li>
+<li><a class="reference internal" href="#what-happened-to-bukkit" id="id7">What happened to Bukkit?</a></li>
+<li><a class="reference internal" href="#can-i-run-bukkit-plugins-with-this" id="id8">Can I run Bukkit Plugins with this?</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#for-server-owners" id="id9">至服主们</a><ul>
+<li><a class="reference internal" href="#i-m-a-server-owner-how-will-switching-to-sponge-affect-my-server" id="id10">作为一名服主，切换到Sponge会给我的服务器带来什么影响？</a></li>
+<li><a class="reference internal" href="#how-will-switching-to-sponge-affect-players-on-my-server" id="id11">切换到Sponge会影响我的玩家么？</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#for-developers" id="id12">给开发者</a><ul>
+<li><a class="reference internal" href="#what-can-i-do-with-sponge" id="id13">我能用Sponge做什么？</a></li>
+<li><a class="reference internal" href="#what-can-t-i-do-with-sponge-limitations-of-sponge" id="id14">我不能用Sponge做什么？/Sponge有什么限制？</a></li>
+<li><a class="reference internal" href="#i-m-a-bukkit-plugin-developer-why-can-t-sponge-use-bukkit-s-api" id="id15">我是Bukkit的插件开发者! 我为什么不能用Bukkit的API？</a></li>
+<li><a class="reference internal" href="#will-i-be-able-to-access-the-server-internals-in-my-plugins" id="id16">我可以用插件接入服务端内部吗？</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="section" id="for-everyone">
+<h2><a class="toc-backref" href="#id1">给每个人</a><a class="headerlink" href="#for-everyone" title="永久链接至标题">¶</a></h2>
+<div class="section" id="what-is-sponge">
+<h3><a class="toc-backref" href="#id2">Sponge 是什么？</a><a class="headerlink" href="#what-is-sponge" title="永久链接至标题">¶</a></h3>
+<p>Sponge是一个多样化的全新Minecraft API，Sponge的使命是使用插件来多样化Minecraft的游戏体验。关于Sponge的更多详细内容请阅读： :doc: <cite>简介</cite> 或者是Sponge的 :doc: <cite>发展历程</cite>。</p>
+</div>
+<div class="section" id="what-is-required-to-run-sponge">
+<h3><a class="toc-backref" href="#id3">运行 Sponge 需要什么？</a><a class="headerlink" href="#what-is-required-to-run-sponge" title="永久链接至标题">¶</a></h3>
+<p>Sponge（以及 Minecraft）需要 Java Runtime Environment 来正确运行。很明显，你同时需要一台计算机来运行服务端，除此之外你不需要任何东西。在这里了解更多如何选择正确的 Java 版本：<a class="reference internal" href="../server/getting-started/jre.html"><em>安装 Java</em></a></p>
+</div>
+<div class="section" id="where-do-i-get-sponge">
+<h3><a class="toc-backref" href="#id4">从哪里能得到 Sponge？</a><a class="headerlink" href="#where-do-i-get-sponge" title="永久链接至标题">¶</a></h3>
+<p>Sponge服务端尚未完工，但是已经有支持Sponge核心的开发版模组和插件放出了，点击下载：:doc:</p>
+</div>
+<div class="section" id="what-sponge-implementations-are-available">
+<h3><a class="toc-backref" href="#id5">哪些Sponge实现 是可用的？</a><a class="headerlink" href="#what-sponge-implementations-are-available" title="永久链接至标题">¶</a></h3>
+<p>The Sponge Project currently develops two implementations which both use the SpongeAPI:</p>
+<ol class="arabic simple">
+<li><strong>SpongeForge</strong>, a coremod for Minecraft Forge, which is an existing Minecraft modding framework famous for spurring
+the Minecraft modding scene. Forge lacks a cross-version API, and this is where Sponge steps in. Sponge allows
+server owners to deploy Sponge plugins with ease, making server management easier.
+(SpongeForge was formerly known as Sponge, until it was renamed to avoid confusion).</li>
+<li><p class="first"><a href="#id1"><span class="problematic" id="id2">**</span></a>SpongeVanilla**【独立版】，独立的Sponge API，运行于原版Minecraft服务器端上。（SpongeVanilla原名：Granite）</p>
+</li>
+</ol>
+</div>
+<div class="section" id="where-do-i-get-plugins-for-sponge">
+<h3><a class="toc-backref" href="#id6">从哪里能得到Sponge的插件？</a><a class="headerlink" href="#where-do-i-get-plugins-for-sponge" title="永久链接至标题">¶</a></h3>
+<p>On our official plugin repository, which is called Ore. Development has already started on GitHub. Temporarily, plugins
+are hosted on the <a class="reference external" href="https://forums.spongepowered.org/c/plugins/plugin-releases">SpongeForums</a>.</p>
+</div>
+<div class="section" id="what-happened-to-bukkit">
+<h3><a class="toc-backref" href="#id7">What happened to Bukkit?</a><a class="headerlink" href="#what-happened-to-bukkit" title="永久链接至标题">¶</a></h3>
+<p>The Bukkit project halted further development of their API and server modification. Shortly thereafter, one of the
+contributors to Bukkit sent a DMCA takedown notice to stop further distribution of CraftBukkit. He was within his legal
+right. Downloads, as well as source code, for CraftBukkit and its derivatives (such as Spigot and Cauldron) are no
+longer publicly available. If you want to know the reasons why this affected Sponge development, have a look at our
+history page: <a class="reference internal" href="history.html"><em>Sponge的历史</em></a></p>
+</div>
+<div class="section" id="can-i-run-bukkit-plugins-with-this">
+<h3><a class="toc-backref" href="#id8">Can I run Bukkit Plugins with this?</a><a class="headerlink" href="#can-i-run-bukkit-plugins-with-this" title="永久链接至标题">¶</a></h3>
+<p>Sadly no, not natively. Sponge is using its own API (Sponge API), while Bukkit is using the Bukkit API. However there is the
+possibility that a third-party plugin for Sponge implements the Bukkit API on top of Sponge API.</p>
+</div>
+</div>
+<div class="section" id="for-server-owners">
+<h2><a class="toc-backref" href="#id9">至服主们</a><a class="headerlink" href="#for-server-owners" title="永久链接至标题">¶</a></h2>
+<div class="section" id="i-m-a-server-owner-how-will-switching-to-sponge-affect-my-server">
+<h3><a class="toc-backref" href="#id10">作为一名服主，切换到Sponge会给我的服务器带来什么影响？</a><a class="headerlink" href="#i-m-a-server-owner-how-will-switching-to-sponge-affect-my-server" title="永久链接至标题">¶</a></h3>
+<p>对于现有的Forge服务器，你需要下载Sponge并将它放入mods文件夹。服务器可以像其他Forge服务器一样正常启动。</p>
+<p>对于非Forge服务器，也许需要选择Sponge原版&#8211;不依赖与Forge的实现版本。现在Sponge文档已经有一些从Bukkit或者Canary向Sponge迁移的指南。值得一提的是，很多来自Bukkit社区的开发者需要将他们的精力放在Sponge上使他们的插件可以运行在Sponge的服务器上。</p>
+<p>地图也可以迁移。但是相关的插件数据则取决于插件作者是否提供转换程序。有的插件作者也许不会提供。</p>
+<p>另外，我们不会提供对Bukkit插件的支持。但是可能有其他人使得在Sponge上运行Bukkit插件成为可能。</p>
+</div>
+<div class="section" id="how-will-switching-to-sponge-affect-players-on-my-server">
+<h3><a class="toc-backref" href="#id11">切换到Sponge会影响我的玩家么？</a><a class="headerlink" href="#how-will-switching-to-sponge-affect-players-on-my-server" title="永久链接至标题">¶</a></h3>
+<p>切换到Sponge不会影响你的玩家。如果你(服主)正确地迁移了数据，那么玩家就可以向往常那样进入服务器。他们不需要安装Forge，除非你的服务器也安装了Mod。</p>
+</div>
+</div>
+<div class="section" id="for-developers">
+<h2><a class="toc-backref" href="#id12">给开发者</a><a class="headerlink" href="#for-developers" title="永久链接至标题">¶</a></h2>
+<div class="section" id="what-can-i-do-with-sponge">
+<h3><a class="toc-backref" href="#id13">我能用Sponge做什么？</a><a class="headerlink" href="#what-can-i-do-with-sponge" title="永久链接至标题">¶</a></h3>
+<p>Sponge provides a Plugin API. This means that you can create new content and gamemodes on the go.
+Have a look at our plugin pages to get a quick-start: <a class="reference internal" href="../plugin/index.html"><em>插件开发</em></a></p>
+</div>
+<div class="section" id="what-can-t-i-do-with-sponge-limitations-of-sponge">
+<h3><a class="toc-backref" href="#id14">我不能用Sponge做什么？/Sponge有什么限制？</a><a class="headerlink" href="#what-can-t-i-do-with-sponge-limitations-of-sponge" title="永久链接至标题">¶</a></h3>
+<p>Sponge can&#8217;t be used to create new blocks, textures, mobs on the clientside or any other content which would need
+clientside modifications. The Sponge API wont support sending mods or plugins to the client for now due to security
+concerns. However you can make use of the ForgeAPI for clients and create Sponge plugins for the serverside.
+It is even possible to use Sponge on the client-side, but for several tasks mods are still required.</p>
+</div>
+<div class="section" id="i-m-a-bukkit-plugin-developer-why-can-t-sponge-use-bukkit-s-api">
+<h3><a class="toc-backref" href="#id15">我是Bukkit的插件开发者! 我为什么不能用Bukkit的API？</a><a class="headerlink" href="#i-m-a-bukkit-plugin-developer-why-can-t-sponge-use-bukkit-s-api" title="永久链接至标题">¶</a></h3>
+<p>BukkitAPI包含了使用GPL协议的代码。这也是导致Bukkit在九月份下线的原因。我们使用MIT协议，这样就可以避免像Bukkit那样的悲剧。虽然这样并不能使我们摆脱Mojang的控制，因为他们的代码是专有的。但是我们相信Mojang是支持Mod的并且会一如既往的支持下去。</p>
+</div>
+<div class="section" id="will-i-be-able-to-access-the-server-internals-in-my-plugins">
+<h3><a class="toc-backref" href="#id16">我可以用插件接入服务端内部吗？</a><a class="headerlink" href="#will-i-be-able-to-access-the-server-internals-in-my-plugins" title="永久链接至标题">¶</a></h3>
+<p>访问内部数据(CraftBukkit称其为&#8221;NMS&#8221;或&#8221;net.minecraft.server&#8221;)可以通过Forge来实现。Forge提供了大量的反混淆过的字段名称。但是，使用这种技巧增大了插件崩溃的机率，你需要自己注意。</p>
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          <div class="clearer"></div>
+        </div>
+        <div class="footer" role="contentinfo">
+              &copy; 版权所有 2014-2016, Sponge Contributors.
+            由 <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.3 创建。
+        </div>
+    </div>
+  </body>
+</html>

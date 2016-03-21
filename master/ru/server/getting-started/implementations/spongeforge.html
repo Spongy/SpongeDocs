@@ -1,0 +1,640 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+     <title>Установка SpongeForge &mdash; Документация Sponge 4.0.3</title>
+    
+  <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/sponge.css" type="text/css" />
+  <link href='//fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:400italic,700italic,700,400' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="../../../_static/tomorrow.css" type="text/css" />
+  <link id="syntax-highlighting-ref" rel="stylesheet" href="../../../_static/tomorrow_night.css" type="text/css" />
+      
+  <script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+      URL_ROOT:    '../../../',
+      VERSION:     '4.0.3',
+      COLLAPSE_INDEX: false,
+      FILE_SUFFIX: '.html',
+      HAS_SOURCE:  true
+    };
+  </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/store.min.js"></script>
+    <script type="text/javascript" src="../../../_static/lights.js"></script>
+      <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+        <link rel="top" title="Документация Sponge 4.0.3" href="../../../index.html" />
+        <link rel="up" title="Выбор реализации" href="index.html" />
+        <link rel="next" title="Установка SpongeVanilla" href="spongevanilla.html" />
+        <link rel="prev" title="Выбор реализации" href="index.html" />
+    
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-59476017-2', 'auto');
+    ga('send', 'pageview');
+
+  </script> 
+  </head>
+  <body role="document" id="top">
+    <div class="topbar">
+  <div role="navigation" aria-label="related navigation">
+    <div class="menu-left">
+      <a href="https://docs.spongepowered.org">
+        <img src="../../../_static/spongelogo.png" height="40px" style="vertical-align:middle"/>
+        <i class="icon-down-open-big lights-icon" style="vertical-align:middle"></i>
+      </a>
+      <ul class="dropdown" id="ddleft">
+        <a href="https://www.spongepowered.org"><li><i class="icon-home lights-icon"></i> Homepage</li></a>
+        <a href="https://forums.spongepowered.org"><li><i class="icon-pencil lights-icon"></i> Forums</li></a>
+        <a href="https://github.com/SpongePowered"><li><i class="icon-code lights-icon"></i> Code</li></a>
+        <a href="https://docs.spongepowered.org"><li class="active"><i class="icon-book-open lights-icon"></i> SpongeDocs</li></a>
+        <a href="https://jd.spongepowered.org"><li><i class="icon-graduation-cap lights-icon"></i> JavaDocs</li></a>
+        <a href="https://forums.spongepowered.org/c/plugins/plugin-releases"><li><i class="icon-tools lights-icon"></i> Plugins</li></a>
+        <a href="https://forums.spongepowered.org/t/sponge-downloads/11448"><li><i class="icon-download lights-icon"></i> Get Sponge</li></a>
+      </ul>
+    </div>
+    <div class="menu-right">
+      <div><i class="icon-language lights-icon"></i></div>
+        <ul class="dropdown" id="ddlang">
+          {§#curver§}
+          {|#langs|}
+          <li><a href="/test-repo/{§currentversion§}/{|crowdin_code|}/" class="lang"><img src="http://d1ztvzf22lmr1j.cloudfront.net/images/flags/{|crowdin_code|}.png" alt="Flag for {|name|}"/></a></li>
+          {|/langs|}
+          {§/curver§}
+        </ul>
+    </div>
+    <div class="menu-right">
+      <div><i class="icon-tag lights-icon"></i><a>4.0.3</a></div>
+        <ul class="dropdown" id="ddvers">
+          <li><a href="/test-repo/master/en/"><i class="icon-tag lights-icon"></i> latest</a></li>
+          {[#vers]}
+          <li><a href="/test-repo/{[apiversion]}/en/"><i class="icon-tag lights-icon"></i> {[apiversion]}</a></li>
+          {[/vers]}
+        </ul>
+    </div>
+    <div class="menu-right">
+      <div title="Toggle syntax highlighting between light and dark" id="lights">
+        <i class="icon-lamp lights-icon"></i>
+      </div>
+    </div>
+    <div>
+      <ul class="controls">
+        <li>|</li>
+        
+        <li><a href="spongevanilla.html" title="Next Page"><i class="icon-right-open-big lights-icon"></i></a></li>
+        
+        <li><a href="#top" title="To the top"><i class="icon-up-open-big lights-icon"></i></a></li>
+        <li><a href="../../../index.html" title="Home"><i class="icon-home lights-icon"></i></a></li>
+        
+        <li><a href="index.html" title="Previous Page"><i class="icon-left-open-big lights-icon"></i></a></li>
+        
+        <li>|</li>
+        
+          <li><a href="https://github.com/SpongePowered/SpongeDocs/blob/master/source/server/getting-started/implementations/spongeforge.rst" title="Edit on GitHub"><i class="icon-github lights-icon"></i></a></li>
+        
+      </ul>
+    </div>
+    <h3>Навигация</h3>
+  </div>
+    </div>
+    <div class="container">
+
+      <div class="breadcrumbs">
+        <ul>
+        <li><a href="../../../index.html">Документация Sponge 4.0.3</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="../../index.html" >Создание сервера</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="../index.html" >Начало работы</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="index.html" accesskey="U">Выбор реализации</a><i class="icon-right-open lights-icon"></i></li>
+        </ul>
+      </div> 
+    <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+    <form class="search" action="../../../search.html" method="get">
+      <div class="searchbox-inner">
+        <input class="field" type="text" name="q" autocomplete="off" />
+        <button class="submit" type="submit"><i class="icon-search"></i></button>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </div>
+    </form>
+    <p class="searchtip" style="font-size: 90%"></p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../../index.html">Оглавление</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Создание сервера</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Начало работы</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jre.html">Установка Java</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../migrating.html">Переход на Sponge</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Выбор реализации</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="">Установка SpongeForge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spongevanilla.html">Установка SpongeVanilla</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../launch-script.html">Создание сценария (скрипта) запуска</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../port-forward.html">Перенаправление портов</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bungeecord.html">Sponge и BungeeCord</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration/index.html">Настройка Sponge</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../configuration/hocon.html">Основы HOCON</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../configuration/json.html">Синтаксис JSON</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../configuration/sponge-conf.html">global.conf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../configuration/server-properties.html">server.properties</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../management/index.html">Управление сервером</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../management/whitelist.html">Управление WhiteList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../management/bans.html">Управление Банами.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../management/permissions.html">Управление правами игроков</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../management/plugins.html">Установка плагинов</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../management/exploit-patches.html">Патчи уязвимостей</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../spongineer/index.html">Станьте экспертом по серверам Sponge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../spongineer/commands.html">Команды</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../spongineer/troubleshooting.html">Устранение неполадок</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../spongineer/logs.html">Лог-файлы</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../spongineer/debugging.html">Отладка</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../spongineer/bugreport.html">Сообщение о проблемах</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../preparing/index.html">Подготовка к разработке</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../preparing/jdk.html">Установка JDK</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preparing/ide.html">Установка IDE</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preparing/text.html">Установка текстового редактора</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preparing/git.html">Установка Git</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../plugin/index.html">Создание плагина</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/workspace/index.html">Подготовка рабочего пространства</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/workspace/idea.html">Настройка IntelliJ IDEA</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/workspace/eclipse.html">Установка среды Eclipse</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/workspace/netbeans.html">Настройка NetBeans</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/workspace/dependencies.html">Adding Sponge API Dependencies</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/practices.html">Практические рекомендации</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/templates.html">Шаблоны плагинов</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/main-class.html">Создание главного класса плагина</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/lifecycle.html">Жизненный цикл плагина</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/optional/index.html">Optionals</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/optional/basic.html">Optionals Explained</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/optional/usage.html">Usage Examples</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/logging.html">Ведение логов (журналов) и отладка</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/text/index.html">Работа с текстом</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/text.html">Creating Text</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../plugin/text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../plugin/text/representations/xml.html">TextXML Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../plugin/text/representations/json.html">JSON Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../plugin/text/representations/configurate.html">Configuration Format</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/pagination.html">The Pagination Service</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/templates.html">Working with TextTemplates</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/commands/index.html">Создание команд</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/creating.html">Building a Command</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/arguments.html">Парсинг аргументов</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/childcommands.html">Дочерние Команды</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/service.html">Командный менеджер</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/commandcallable.html">Low-Level Command API</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/event/index.html">Работа с событиями</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/listeners.html">Event Listeners</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/causes.html">Event Causes</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/filters.html">Event Filters</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/custom.html">Создание собственных событий</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/configuration/index.html">Configuring Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/configuration/loaders.html">Configuration Loaders</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/configuration/nodes.html">Configuration Nodes</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/configuration/serialization.html">Serializing Objects</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/data/index.html">The Data API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/data/keys.html">Using Keys</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/data/datamanipulators.html">Data Manipulators</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/data/transactions.html">Транзакции</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/data/serialization.html">Serializing Data</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/blocks/index.html">Работа с блоками</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/blocks/concepts.html">Концепты</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/blocks/accessing.html">Доступ к блокам</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/blocks/modifying.html">Изменение блоков</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/blocks/tileentities.html">Работа с Tile Entity</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/entities/index.html">Работа с Entity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/entities/spawning.html">Спавн Entity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/entities/modifying.html">Modifying an Entity</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/items/index.html">Working with Items</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/items/usage.html">Basic Item Usage</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/items/creating.html">Creating an ItemStack</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/injection.html">Внедрение зависимостей</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/scheduler.html">Using the Scheduler</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/database.html">Работа с базами данных</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/permissions.html">Работа с Permissions API</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/economy/index.html">The Economy API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/economy/basics.html">Basic Concepts</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/economy/using.html">Using the Economy API</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/economy/practices.html">Economy API Best Practices</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/economy/implementing.html">Implementing the Economy API</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/services.html">Работа с сервисами</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/wgen/index.html">World Generation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/wgen/modifiers.html">Working with WorldGeneratorModifiers</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/wgen/customwgen.html">Модифицирование генерации мира</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/manager.html">Использование Менеджера плагинов (Plugin Manager)</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/debugging.html">Plugin Debugging</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/messagechannels.html">Message Channels</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/tutorials.html">Обучение</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing/index.html">Участие в разработке Sponge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/guidelines.html">Указания по содействию</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/howtogit.html">How to Git(Hub)</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/implementation/index.html">Разработка Sponge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/codestyle.html">Стиль кода</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/git-implementation.html">Рабочий поток данных Git-a для самого API и выполнения API</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/pr.html">Submitting a Pull-Request</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/debugging.html">Отладка Sponge В IDE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/mixins.html">Mixins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/datamanipulator.html">Implementing DataManipulators</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/spongedocs.html">Написание англоязычной документации SpongeDocs</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/porting.html">Перенос Sponge на другие платформы</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/versioning.html">Versioning System and Repository Branch Layout</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">О проекте Sponge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/introduction.html">Введение</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html">Часто задаваемые вопросы</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/structure.html">Структура Sponge</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/future.html">Планы на будущее</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/license.html">Лицензия</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/posting.html">Советы по отправке постов на форуме</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/rules.html">Правила форума &amp; IRC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/staff.html">Коллектив</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/glossary.html">Словарь Sponge</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/assets.html">Арты</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/history.html">История Sponge</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../downloads.html">Скачать</a><ul class="simple">
+</ul>
+</li>
+</ul>
+<ul class="simple">
+</ul>
+
+      </div>
+    </div> 
+
+        <div class="document">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body" role="main">
+                  
+  <div class="section" id="installing-spongeforge">
+<h1>Установка SpongeForge<a class="headerlink" href="#installing-spongeforge" title="Ссылка на этот заголовок">¶</a></h1>
+<p>SpongeForge внедряется в <a class="reference external" href="http://www.minecraftforge.net/">Minecraft Forge</a> так что вы сможете запустить модификации для Forge. Вообще будет правильнее сказать, что Sponge это модификация для Forge, которая способна загружать плагины для Sponge, но это просто технические детали.</p>
+<p>Пользователям, которым не требуется функционал Minecraft Forge, лучше обратить внимание на <a class="reference internal" href="spongevanilla.html"><em>Установка SpongeVanilla</em></a>.</p>
+<div class="section" id="download">
+<h2>Скачать<a class="headerlink" href="#download" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Посмотрите на странице <a class="reference internal" href="../../../downloads.html"><em>Скачать</em></a>.</p>
+</div>
+<div class="section" id="reading-the-download-filename">
+<h2>Название загруженного файла<a class="headerlink" href="#reading-the-download-filename" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Когда вы скачаете SpongeForge название файла будет содержать некоторую важную информацию о версях. Оно содержит номер сборки Forge, с которой совместима эта версия SpongeForge. Другие сборки не будут работать, даже если они отличаются всего на несколько цифр.</p>
+<p>Хотя обычно SpongeForge быстро обновляется до новой версии Forge, так что вам не стоит волноваться об актуальности версии Forge для работы со SpongeForge.</p>
+<p>Формат названия файла будет таким: <code class="docutils literal"><span class="pre">spongeforge-{MCVersion}-{ForgeVersion}-{SpongeAPIVersion}-{SpongeBuildId}</span></code></p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="19%" />
+<col width="81%" />
+</colgroup>
+<tbody valign="top">
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">MCVersion</span></code></td>
+<td><p class="first last">Версия Minecraft. Смогут подключиться только те клиенты, которые совместимы с этой версией.</p>
+</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">ForgeVersion</span></code></td>
+<td><p class="first last">Версия Forge, для которой собран этот файл. Предпочтительнее будет использовать конкретно эту версию Forge.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">SpongeAPIVersion</span></code></td>
+<td><p class="first last">Используемая этим файлом версия SpongeAPI. Это необходимо для Sponge плагинов.</p>
+</td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">SpongeBuildId</span></code></td>
+<td><p class="first last">Номер сборки Sponge. Это вам потребуется предоставить при сообщении об ошибках или при обращении в поддержку.</p>
+</td>
+</tr>
+</tbody>
+</table>
+<div class="section" id="example">
+<h3>Пример<a class="headerlink" href="#example" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Название файла <code class="docutils literal"><span class="pre">spongeforge-1.8-1577-3.0.0-BETA-1000.jar</span></code> говорит нам, что он совместим с версией Minecraft <code class="docutils literal"><span class="pre">1.8</span></code>, требует сборку Forge <code class="docutils literal"><span class="pre">1.8-11.14.4.1577</span></code>, обеспечивает SpongeAPI версии <code class="docutils literal"><span class="pre">3.0.0</span></code> и был собран SpongeForge <code class="docutils literal"><span class="pre">1000</span></code>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Примечание</p>
+<p class="last">Обычные моды Forge могут запускаться на любой сборке Forge для этой версии Minecraft (например 1.8.0) без каких-либо проблем. Однако SpongeForge, помимо всего прочего, требуется доступ во внутренние части Forge, которых не касается большинство модов, не говоря уже о модифицировании, как делает Sponge. Так как Forge может спокойно менять свой внутренний код когда захочет, то его нормальная гарантия обеспечения обратной совместимости не относится к SpongeForge.</p>
+</div>
+</div>
+</div>
+<div class="section" id="id1">
+<h2>Установка SpongeForge<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="admonition note">
+<p class="first admonition-title">Примечание</p>
+<p class="last">Если Вы используете панель управления игровыми серверами, то, возможно там уже есть Sponge.</p>
+</div>
+<div class="admonition warning">
+<p class="first admonition-title">Предупреждение</p>
+<p class="last">When using the Mojang installer, Mojang makes use of their own Java version and not the one you installed on your
+system. The installer currently ships with Java <code class="docutils literal"><span class="pre">1.8.0_25</span></code> for Windows and <code class="docutils literal"><span class="pre">1.8.0_60</span></code> for OSX. Note that Sponge
+requires <strong>at least</strong> <code class="docutils literal"><span class="pre">1.8.0_40</span></code> or above to run properly. You can grab the Launcher without included Java here:
+<a class="reference external" href="https://minecraft.net/download">official Minecraft Launcher</a></p>
+</div>
+<div class="section" id="single-player-in-game-lan-servers">
+<h3>Одиночная игра / Внутриигровой сервер<a class="headerlink" href="#single-player-in-game-lan-servers" title="Ссылка на этот заголовок">¶</a></h3>
+<ol class="arabic simple">
+<li>Download the Minecraft Forge installer from the <a class="reference external" href="http://files.minecraftforge.net/">Minecraft Forge website</a>. Make
+sure to use <strong>exactly the same build number</strong> as <a class="reference internal" href=""><em>the one listed in the filename of the Sponge download</em></a>.</li>
+<li><p class="first">Установите Forge.</p>
+</li>
+<li><p class="first">Откройте лаунчер игры и выберите новый профиль.</p>
+</li>
+<li><p class="first">Нажмите на &#8220;Options&#8221; и нажмите на &#8220;Open Game Dir&#8221;.</p>
+</li>
+<li><p class="first">Загрузите SpongeForge с сайта Sponge и переместите его в папку <code class="docutils literal"><span class="pre">mods</span></code>. Если папка отсутствует — создайте её.</p>
+</li>
+<li><p class="first">Sponge должен работать как и в одиночном режиме, так и если вы откроете доступ к игре.</p>
+</li>
+</ol>
+<p>Next, learn how you can <a class="reference internal" href="../configuration/index.html"><em>configure Sponge</em></a> and how to
+<a class="reference internal" href="../../management/index.html"><em>manage your instance of Sponge</em></a> (including installing plugins).</p>
+</div>
+<div class="section" id="dedicated-servers">
+<h3>Выделенный сервер<a class="headerlink" href="#dedicated-servers" title="Ссылка на этот заголовок">¶</a></h3>
+<div class="admonition note">
+<p class="first admonition-title">Примечание</p>
+<p class="last">If you already have a Forge server, just put the Sponge mod into your <code class="docutils literal"><span class="pre">mods</span></code> folder. Remember to update your Forge
+version to match the one that <a class="reference internal" href=""><em>sponge requires</em></a>.</p>
+</div>
+<div class="section" id="installing-forge-via-commandline">
+<h4>Установка Forge через командную строку<a class="headerlink" href="#installing-forge-via-commandline" title="Ссылка на этот заголовок">¶</a></h4>
+<ol class="arabic simple">
+<li>Visit the <a class="reference external" href="http://files.minecraftforge.net/">Minecraft Forge website</a> and click &#8220;Show all downloads&#8221; to view the full
+set of available options. Identify the version matching the one listed <a class="reference internal" href=""><em>in the filename of the SpongeForge download</em></a>, and hover over the (i) next to &#8220;Installer&#8221; to get the direct download link.</li>
+<li>Use your favorite download method to download the jar to its destination.
+Example: <code class="docutils literal"><span class="pre">wget</span> <span class="pre">http://url.to/forge-version-installer.jar</span></code></li>
+<li>From the folder in which you wish to install Forge, execute the jar with the <code class="docutils literal"><span class="pre">--installServer</span></code> option. Example:
+<code class="docutils literal"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">forge-version-installer.jar</span> <span class="pre">--installServer</span></code></li>
+<li>Continue to Adding SpongeForge to Forge below.</li>
+</ol>
+</div>
+<div class="section" id="installing-forge-via-gui">
+<h4>Установка Forge через GUI<a class="headerlink" href="#installing-forge-via-gui" title="Ссылка на этот заголовок">¶</a></h4>
+<ol class="arabic simple">
+<li>Download the Minecraft Forge installer from the <a class="reference external" href="http://files.minecraftforge.net/">Minecraft Forge website</a> for the version
+matching the one listed <a class="reference internal" href=""><em>in the filename of the SpongeForge download</em></a>.</li>
+<li><p class="first">Запустите установщик Forge, выбирите любую пустую папку для сервера и нажмите OK.</p>
+</li>
+<li>Continue to Adding SpongeForge to Forge below.</li>
+</ol>
+</div>
+<div class="section" id="adding-spongeforge-to-forge">
+<h4>Adding SpongeForge to Forge<a class="headerlink" href="#adding-spongeforge-to-forge" title="Ссылка на этот заголовок">¶</a></h4>
+<ol class="arabic simple">
+<li><p class="first">Загрузите Sponge и установите его как обычный мод.</p>
+</li>
+<li><p class="first">Установка завершена.</p>
+</li>
+<li>If operating from home, set up <a class="reference internal" href="../port-forward.html"><em>Перенаправление портов</em></a> to ensure others can connect.</li>
+</ol>
+<p>Next, learn how you can create and use a <a class="reference internal" href="../launch-script.html"><em>launch-script</em></a>,
+<a class="reference internal" href="../configuration/index.html"><em>configure Sponge</em></a> and <a class="reference internal" href="../../management/index.html"><em>manage your server</em></a> (including installing plugins).</p>
+</div>
+</div>
+</div>
+<div class="section" id="links">
+<h2>Ссылки<a class="headerlink" href="#links" title="Ссылка на этот заголовок">¶</a></h2>
+<ul class="simple">
+<li><p class="first"><a class="reference external" href="http://spongepowered.org/">Домашняя страница</a></p>
+</li>
+<li><a class="reference external" href="https://github.com/SpongePowered/SpongeForge">GitHub</a></li>
+</ul>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          <div class="clearer"></div>
+        </div>
+        <div class="footer" role="contentinfo">
+              &copy; Copyright 2014-2016, Sponge Contributors.
+            Создано с помощью <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.3.
+        </div>
+    </div>
+  </body>
+</html>
