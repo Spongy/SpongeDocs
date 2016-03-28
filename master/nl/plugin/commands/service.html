@@ -168,7 +168,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../index.html">Inhoudsopgave</a></h3>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Een server aanmaken</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Creating a Server</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../server/getting-started/index.html">Beginnen</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/jre.html">Installing Java</a><ul class="simple">
 </ul>
@@ -320,7 +320,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Werken met Events</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Working with Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -330,7 +330,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Creëer een eigen gebeurtenis</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -446,7 +446,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Meehelpen met Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing to Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">Richtlijnen voor het bijdragen</a><ul class="simple">
 </ul>
 </li>
@@ -544,7 +544,9 @@ commands from the main plugin class, use <code class="docutils literal"><span cl
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Notitie</p>
-<p class="last">De argumenten na het nieuwe exemplaar van jouw commando zijn de aliassen die geregistreerd moeten worden voor jou commando. De primaire alias wordt de eerste alias die niet wordt gebruikt door een ander commando. Dit betekend dat aliassen die gebruikt worden door een ander commando genegeerd worden.</p>
+<p class="last">The arguments after the new instance of your command are the aliases to register for the command. You can add as
+many Strings as you want. The first alias that isn&#8217;t used by another command becomes the primary alias. This means
+aliases used by another command are ignored.</p>
 </div>
 <p>The <code class="docutils literal"><span class="pre">CommandManager</span></code> can also be used to call a command programatically:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">cmdManager</span><span class="o">.</span><span class="na">process</span><span class="o">(</span><span class="n">player</span><span class="o">,</span> <span class="s">&quot;msg Notch hi notch!&quot;</span><span class="o">);</span>

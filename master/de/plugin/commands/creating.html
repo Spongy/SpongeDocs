@@ -33,7 +33,7 @@
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 4.0.3 Dokumentation" href="../../index.html" />
         <link rel="up" title="Befehle erstellen" href="index.html" />
-        <link rel="next" title="Argument Parsing" href="arguments.html" />
+        <link rel="next" title="Das Parsen von Argumenten" href="arguments.html" />
         <link rel="prev" title="Befehle erstellen" href="index.html" />
     
   <script type="text/javascript">
@@ -178,7 +178,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/implementations/index.html">Auswählen einer Implementierung</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">SpongeForge installieren</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">SpongeVanilla Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/launch-script.html">Ein Start-Skript erstellen</a><ul class="simple">
@@ -231,7 +231,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Die Arbeitsumgebung einrichten</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Preparing for Development</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../preparing/jdk.html">Installieren des JDKs</a><ul class="simple">
 </ul>
 </li>
@@ -310,7 +310,7 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="">Einen Befehl erstellen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="arguments.html">Argument Parsing</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="arguments.html">Das Parsen von Argumenten</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="childcommands.html">Child Commands</a></li>
@@ -320,7 +320,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Mit Events arbeiten</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Working with Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -330,7 +330,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Erstellen eigener Events</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -454,7 +454,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/implementation/index.html">Developing Sponge</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/codestyle.html">Code Style</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/codestyle.html">Code Formatierung</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/git-implementation.html">Git Workflow for API and Implementations</a><ul class="simple">
@@ -490,7 +490,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html">Häufig gestellte Fragen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/structure.html">Die Struktur des Sponge Projekts</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../about/structure.html">The Structure of the Sponge Project</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/future.html">Zukunftspläne</a></li>
@@ -559,8 +559,7 @@
 <thead valign="bottom">
 <tr class="row-odd"><th class="head"><p class="first last">Methode</p>
 </th>
-<th class="head"><p class="first last">Beschreibung</p>
-</th>
+<th class="head">Description</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -570,7 +569,7 @@
 </td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">arguments</span></code></td>
-<td>Sets the argument specification for this command (See <a class="reference internal" href="arguments.html"><em>Argument Parsing</em></a>).</td>
+<td>Sets the argument specification for this command (See <a class="reference internal" href="arguments.html"><em>Das Parsen von Argumenten</em></a>).</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">permission</span></code></td>
 <td><p class="first last">Legt die Berechtigung fest die überprüft wird, befor diese Kommando genutzt wird.</p>
@@ -608,7 +607,7 @@ command.</p>
 on command execution and has two arguments:</p>
 <ul class="simple">
 <li>The source of the command call (e.g. the console, a command block or a player)</li>
-<li>The command context object, which contains the parsed arguments (See <a class="reference internal" href="arguments.html"><em>Argument Parsing</em></a>)</li>
+<li>The command context object, which contains the parsed arguments (See <a class="reference internal" href="arguments.html"><em>Das Parsen von Argumenten</em></a>)</li>
 </ul>
 </div>
 </div>
@@ -633,7 +632,7 @@ on command execution and has two arguments:</p>
 <div class="admonition tip">
 <p class="first admonition-title">Tipp</p>
 <p class="last">You can use <a class="reference external" href="https://docs.oracle.com/javase/tutorial/java/javaOO/anonymousclasses.html">anonymous classes</a> to
-define the command executor in the command build process (See the example in the <a class="reference internal" href="arguments.html"><em>Argument Parsing</em></a> page).</p>
+define the command executor in the command build process (See the example in the <a class="reference internal" href="arguments.html"><em>Das Parsen von Argumenten</em></a> page).</p>
 </div>
 </div>
 <div class="section" id="player-only-commands">
@@ -662,7 +661,7 @@ define the command executor in the command build process (See the example in the
 <p class="first admonition-title">Bemerkung</p>
 <p>We recommend you to add an optional <code class="docutils literal"><span class="pre">[player]</span></code> argument to make the command <strong>console-friendly</strong> (e.g. <code class="docutils literal"><span class="pre">/suicide</span>
 <span class="pre">[player]</span></code>).</p>
-<p class="last">The easiest solution for this is to append a <code class="docutils literal"><span class="pre">playerOrSource</span></code> command element (See <a class="reference internal" href="arguments.html"><em>Argument Parsing</em></a>).</p>
+<p class="last">The easiest solution for this is to append a <code class="docutils literal"><span class="pre">playerOrSource</span></code> command element (See <a class="reference internal" href="arguments.html"><em>Das Parsen von Argumenten</em></a>).</p>
 </div>
 <div class="section" id="command-results">
 <h3>Command Results<a class="headerlink" href="#command-results" title="Link zu dieser Überschrift">¶</a></h3>

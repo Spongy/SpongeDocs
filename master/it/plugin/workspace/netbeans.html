@@ -168,7 +168,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../index.html">Tabella dei contenuti</a></h3>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Creare un Server</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Creating a Server</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../server/getting-started/index.html">Guida iniziale</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/jre.html">Installing Java</a><ul class="simple">
 </ul>
@@ -231,7 +231,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Preparazione allo Sviluppo</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Preparing for Development</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../preparing/jdk.html">Installare il JDK</a><ul class="simple">
 </ul>
 </li>
@@ -320,7 +320,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Lavorando con gli Eventi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Working with Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -330,7 +330,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Creare Eventi Personalizzati</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -446,7 +446,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contribuire a Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing to Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">Contribution Guidelines</a><ul class="simple">
 </ul>
 </li>
@@ -484,7 +484,7 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../about/index.html">A proposito del progetto Sponge...</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">Introduzione</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">Introduction</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html">Domande frequenti</a><ul class="simple">
@@ -532,11 +532,13 @@
 <h1>Setting Up NetBeans<a class="headerlink" href="#setting-up-netbeans" title="Link a questa intestazione">¶</a></h1>
 <p>This article describes how to configure your <strong>NetBeans</strong> workspace for plugin development with the Sponge API.</p>
 <div class="section" id="starting-your-project">
-<h2>Avvia il Progetto<a class="headerlink" href="#starting-your-project" title="Link a questa intestazione">¶</a></h2>
-<p>Noi raccomandamo l&#8217;uso di Gradle o Maven quando si sviluppano i plugin con l&#8217;API Sponge. Gradle and Mave aiutano significamente quando si gestiscono le dipendenze, come Sponge Api, per il tuo progetto. E&#8217; Preferibile includere il <code class="docutils literal"><span class="pre">.jar</span></code> file nel tuo progetto.</p>
+<h2>Starting Your Project<a class="headerlink" href="#starting-your-project" title="Link a questa intestazione">¶</a></h2>
+<p>We recommend using Gradle or Maven when developing plugins with the Sponge API. Gradle and Maven help significantly
+when managing dependencies, such as the Sponge API, for your project. This is preferable to including the <code class="docutils literal"><span class="pre">.jar</span></code>
+file in your project.</p>
 <div class="section" id="gradle">
 <h3>Gradle<a class="headerlink" href="#gradle" title="Link a questa intestazione">¶</a></h3>
-<p><strong>Per Creare il tuo Progetto</strong></p>
+<p><strong>To create your project:</strong></p>
 <p>You must first install the <strong>Gradle Support</strong> plugin before using Gradle in NetBeans. This only needs to be done upon
 the creation of your first project.</p>
 <ul class="simple">
@@ -545,12 +547,11 @@ the creation of your first project.</p>
 <li>Select <code class="docutils literal"><span class="pre">Available</span> <span class="pre">Plugins</span></code> in the popup, and search for <code class="docutils literal"><span class="pre">Gradle</span> <span class="pre">Support</span></code>.</li>
 <li>Install the <strong>Gradle Support</strong> plugin.</li>
 </ul>
-<p>Ora tu puoi procedere alla creazione del tuo progetto.</p>
+<p>You may then proceed to create your project.</p>
 <ul class="simple">
 <li>Click <code class="docutils literal"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">New</span> <span class="pre">Project</span></code>.</li>
 <li>Select <code class="docutils literal"><span class="pre">Gradle</span></code> on the left side of the popup, and select <code class="docutils literal"><span class="pre">Gradle</span> <span class="pre">Root</span> <span class="pre">Project</span></code> on the right side.</li>
-<li><p class="first">Clicca <code class="docutils literal"><span class="pre">Next</span></code>.</p>
-</li>
+<li>Click <code class="docutils literal"><span class="pre">Next</span></code>.</li>
 <li>Name your project.</li>
 <li>Enter your <strong>Group ID</strong> and <strong>Version</strong>.<ul>
 <li>Your <strong>Group ID</strong> should correspond to your organization name, or something similar.</li>
@@ -570,7 +571,7 @@ on the aforementioned Artifacts article.</li>
 </div>
 <div class="section" id="maven">
 <h3>Maven<a class="headerlink" href="#maven" title="Link a questa intestazione">¶</a></h3>
-<p><strong>Per Creare il tuo Progetto</strong></p>
+<p><strong>To create your project:</strong></p>
 <ul class="simple">
 <li>Open <strong>NetBeans</strong>.</li>
 <li>Click <code class="docutils literal"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">New</span> <span class="pre">Project</span></code>.</li>

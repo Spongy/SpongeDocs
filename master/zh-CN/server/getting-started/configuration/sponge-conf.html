@@ -180,7 +180,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../implementations/index.html">选择一个安装启动</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../implementations/spongeforge.html">Installing SpongeForge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../implementations/spongevanilla.html">安装SpongeVanilla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../launch-script.html">创建启动脚本</a><ul class="simple">
@@ -233,7 +233,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../preparing/index.html">开发之前需要做的事情</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../preparing/index.html">Preparing for Development</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../preparing/jdk.html">安装JDK</a><ul class="simple">
 </ul>
 </li>
@@ -322,8 +322,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/event/index.html">事件处理</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/listeners.html">事件监听器</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/event/index.html">Working with Events</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/causes.html">Event Causes</a><ul class="simple">
@@ -332,7 +332,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/custom.html">创建自定义事件</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -386,7 +386,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/items/index.html">处理项目</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/items/index.html">Working with Items</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/items/usage.html">Basic Item Usage</a><ul class="simple">
 </ul>
 </li>
@@ -448,7 +448,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../contributing/index.html">向 Sponge 贡献代码</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing/index.html">Contributing to Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../contributing/guidelines.html">贡献指南</a><ul class="simple">
 </ul>
 </li>
@@ -486,7 +486,7 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于Sponge项目</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../about/introduction.html">简介</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../about/introduction.html">Introduction</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html">常见问题</a><ul class="simple">
@@ -751,12 +751,10 @@ sponge {
 <thead valign="bottom">
 <tr class="row-odd"><th class="head"><p class="first last">属性</p>
 </th>
-<th class="head"><p class="first last">类型</p>
-</th>
+<th class="head">Type</th>
 <th class="head"><p class="first last">默认</p>
 </th>
-<th class="head"><p class="first last">说明</p>
-</th>
+<th class="head">Description</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -855,50 +853,43 @@ thread dumps.</td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>collision-warn-size</td>
-<td><p class="first last">整数</p>
-</td>
+<td>integer</td>
 <td>200</td>
 <td>Number of colliding entities in one spot before
 logging a warning. Set to 0 to disable.</td>
 </tr>
 <tr class="row-even"><td>count-warn-size</td>
-<td><p class="first last">整数</p>
-</td>
+<td>integer</td>
 <td>0</td>
 <td>Number of entities allowed in one dimension
 before logging a warning. Set to 0 to disable.</td>
 </tr>
 <tr class="row-odd"><td>entity-painting-respawn-delay</td>
-<td><p class="first last">整数</p>
-</td>
+<td>integer</td>
 <td>2</td>
 <td>Number of ticks before a painting is respawned
 on the client when their art is changed.</td>
 </tr>
 <tr class="row-even"><td>human-player-list-remove-delay</td>
-<td><p class="first last">整数</p>
-</td>
+<td>integer</td>
 <td>10</td>
 <td>Number of ticks before the fake player entry of
 a human is removed from the tab list. The
 allowed range is 0 - 100.</td>
 </tr>
 <tr class="row-odd"><td>item-despawn-rate</td>
-<td><p class="first last">整数</p>
-</td>
+<td>integer</td>
 <td>6000</td>
 <td>The time in ticks before an item despawns.</td>
 </tr>
 <tr class="row-even"><td>max-bounding-box-size</td>
-<td><p class="first last">整数</p>
-</td>
+<td>integer</td>
 <td>1000</td>
 <td>Maximum size of an entity&#8217;s bounding box before
 it is removed. Set to 0 to disable.</td>
 </tr>
 <tr class="row-odd"><td>max-speed</td>
-<td><p class="first last">整数</p>
-</td>
+<td>integer</td>
 <td>100</td>
 <td>Square of the maximum speed of an entity before
 it is removed. Set to 0 to disable</td>
@@ -911,22 +902,19 @@ it is removed. Set to 0 to disable</td>
 </td>
 </tr>
 <tr class="row-odd"><td>ambient-activation-range</td>
-<td><p class="first last">整数</p>
-</td>
+<td>integer</td>
 <td>32</td>
 <td><p class="first last">环境实体开始活动的范围。</p>
 </td>
 </tr>
 <tr class="row-even"><td>aquatic-activation-range</td>
-<td><p class="first last">整数</p>
-</td>
+<td>integer</td>
 <td>32</td>
 <td><p class="first last">水生实体开始活动的范围。</p>
 </td>
 </tr>
 <tr class="row-odd"><td>creature-activation-range</td>
-<td><p class="first last">整数</p>
-</td>
+<td>integer</td>
 <td>32</td>
 <td><p class="first last">生物开始活动的范围。</p>
 </td>
@@ -999,15 +987,13 @@ pigzombie, silverfish, skeleton, slime,
 snowman, spider, witch, zombie.</td>
 </tr>
 <tr class="row-odd"><td>misc-activation-range</td>
-<td><p class="first last">整数</p>
-</td>
+<td>integer</td>
 <td>16</td>
 <td><p class="first last">Misc 实体开始活动的范围。</p>
 </td>
 </tr>
 <tr class="row-even"><td>monster-activation-range</td>
-<td><p class="first last">整数</p>
-</td>
+<td>integer</td>
 <td>32</td>
 <td><p class="first last">怪物被激活距离</p>
 </td>
@@ -1241,15 +1227,13 @@ permission.</td>
 </td>
 </tr>
 <tr class="row-even"><td>history-interval</td>
-<td><p class="first last">整数</p>
-</td>
+<td>integer</td>
 <td>300</td>
 <td>The interval between timing history report
 generation.</td>
 </tr>
 <tr class="row-odd"><td>history-length</td>
-<td><p class="first last">整数</p>
-</td>
+<td>integer</td>
 <td>3600</td>
 <td>How long, in ticks, that the timing history
 will be kept for the server.</td>

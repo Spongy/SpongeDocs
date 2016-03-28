@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Å lage tilpassede hendelser &mdash; Sponge 4.0.3 documentation</title>
+     <title>Creating Custom Events &mdash; Sponge 4.0.3 documentation</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -33,7 +33,7 @@
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 4.0.3 documentation" href="../../index.html" />
-        <link rel="up" title="Å jobbe med hendelser" href="index.html" />
+        <link rel="up" title="Working with Events" href="index.html" />
         <link rel="next" title="Configuring Plugins" href="../configuration/index.html" />
         <link rel="prev" title="Event Filters" href="filters.html" />
     
@@ -151,7 +151,7 @@
         <ul>
         <li><a href="../../index.html">Sponge 4.0.3 documentation</a><i class="icon-right-open lights-icon"></i></li>
         <li><a href="../index.html" >Creating a Plugin</a><i class="icon-right-open lights-icon"></i></li>
-        <li><a href="index.html" accesskey="U">Å jobbe med hendelser</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="index.html" accesskey="U">Working with Events</a><i class="icon-right-open lights-icon"></i></li>
         </ul>
       </div> 
     <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -169,7 +169,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../index.html">Innholdsfortegnelse</a></h3>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Å lage en server</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Creating a Server</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../server/getting-started/index.html">Getting Started</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/jre.html">Installing Java</a><ul class="simple">
 </ul>
@@ -232,7 +232,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Å gjøre seg klar til utvikling</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Preparing for Development</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../preparing/jdk.html">Installing the JDK</a><ul class="simple">
 </ul>
 </li>
@@ -321,7 +321,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Å jobbe med hendelser</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Working with Events</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -331,7 +331,7 @@
 <li class="toctree-l3"><a class="reference internal" href="filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Å lage tilpassede hendelser</a><ul class="simple">
+<li class="toctree-l3 current"><a class="current reference internal" href="">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -447,7 +447,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Å medvirke til Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing to Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">Rettningslinjer for bidrag</a><ul class="simple">
 </ul>
 </li>
@@ -530,7 +530,7 @@
                 <div class="body" role="main">
                   
   <div class="section" id="creating-custom-events">
-<h1>Å lage tilpassede hendelser<a class="headerlink" href="#creating-custom-events" title="Permalink til denne oversikten">¶</a></h1>
+<h1>Creating Custom Events<a class="headerlink" href="#creating-custom-events" title="Permalink til denne oversikten">¶</a></h1>
 <p>You can write your own event classes and dispatch those events using the method described above. An event class must
 either implement the <code class="docutils literal"><span class="pre">Event</span></code> interface and, if it should be possible to cancel the event, <code class="docutils literal"><span class="pre">Cancellable</span></code>.</p>
 <div class="admonition tip">
@@ -540,7 +540,7 @@ either implement the <code class="docutils literal"><span class="pre">Event</spa
 Event class implement <code class="docutils literal"><span class="pre">TargetPlayerEvent</span></code>.</p>
 </div>
 <div class="section" id="example-custom-event-class">
-<h2>Ekempel: Egendefinert Eventklasse<a class="headerlink" href="#example-custom-event-class" title="Permalink til denne oversikten">¶</a></h2>
+<h2>Example: Custom Event Class<a class="headerlink" href="#example-custom-event-class" title="Permalink til denne oversikten">¶</a></h2>
 <p>The following class describes an event indicating a <code class="docutils literal"><span class="pre">Player</span></code> has come in contact with FLARD and is now about to
 mutate in a way specified by the event. Since the event targets a player and can be cancelled by listeners, it
 implements both the <code class="docutils literal"><span class="pre">TargetPlayerEvent</span></code> and <code class="docutils literal"><span class="pre">Cancellable</span></code> interfaces.</p>
@@ -600,7 +600,7 @@ probably be mentioned that the root cause is generally an object of the fictitio
 </div>
 </div>
 <div class="section" id="example-fire-custom-event">
-<h2>Eksempel: Trigging av egendefinerte eventer<a class="headerlink" href="#example-fire-custom-event" title="Permalink til denne oversikten">¶</a></h2>
+<h2>Example: Fire Custom Event<a class="headerlink" href="#example-fire-custom-event" title="Permalink til denne oversikten">¶</a></h2>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.Sponge</span><span class="o">;</span>
 
 <span class="n">PlayerMutationEvent</span> <span class="n">event</span> <span class="o">=</span> <span class="k">new</span> <span class="n">PlayerMutationEvent</span><span class="o">(</span><span class="n">victim</span><span class="o">,</span> <span class="n">PlayerMutationEvent</span><span class="o">.</span><span class="na">Mutation</span><span class="o">.</span><span class="na">ROTTED_SOCKS</span><span class="o">,</span>
@@ -615,7 +615,7 @@ probably be mentioned that the root cause is generally an object of the fictitio
 cancelled before performing the action described by the event.</p>
 </div>
 <div class="section" id="example-listen-for-custom-event">
-<h2>Eksempel: Lytting av egendefinert event<a class="headerlink" href="#example-listen-for-custom-event" title="Permalink til denne oversikten">¶</a></h2>
+<h2>Example: Listen for Custom Event<a class="headerlink" href="#example-listen-for-custom-event" title="Permalink til denne oversikten">¶</a></h2>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.event.Listener</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.text.Text</span><span class="o">;</span>
 

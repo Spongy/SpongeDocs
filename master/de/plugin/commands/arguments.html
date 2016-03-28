@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Argument Parsing &mdash; Sponge 4.0.3 Dokumentation</title>
+     <title>Das Parsen von Argumenten &mdash; Sponge 4.0.3 Dokumentation</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -178,7 +178,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/implementations/index.html">Auswählen einer Implementierung</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">SpongeForge installieren</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">SpongeVanilla Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/launch-script.html">Ein Start-Skript erstellen</a><ul class="simple">
@@ -231,7 +231,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Die Arbeitsumgebung einrichten</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Preparing for Development</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../preparing/jdk.html">Installieren des JDKs</a><ul class="simple">
 </ul>
 </li>
@@ -310,7 +310,7 @@
 <li class="toctree-l3"><a class="reference internal" href="creating.html">Einen Befehl erstellen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Argument Parsing</a><ul class="simple">
+<li class="toctree-l3 current"><a class="current reference internal" href="">Das Parsen von Argumenten</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="childcommands.html">Child Commands</a></li>
@@ -320,7 +320,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Mit Events arbeiten</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Working with Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -330,7 +330,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Erstellen eigener Events</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -454,7 +454,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/implementation/index.html">Developing Sponge</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/codestyle.html">Code Style</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/codestyle.html">Code Formatierung</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/git-implementation.html">Git Workflow for API and Implementations</a><ul class="simple">
@@ -490,7 +490,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html">Häufig gestellte Fragen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/structure.html">Die Struktur des Sponge Projekts</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../about/structure.html">The Structure of the Sponge Project</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/future.html">Zukunftspläne</a></li>
@@ -529,10 +529,8 @@
                 <div class="body" role="main">
                   
   <div class="section" id="argument-parsing">
-<h1>Argument Parsing<a class="headerlink" href="#argument-parsing" title="Link zu dieser Überschrift">¶</a></h1>
-<p>The Command Builder API comes with a powerful argument parser. It converts the string input to java base types
-(integers, booleans, strings) or game objects (players, worlds, block types , ...). The parser supports optional
-arguments and flags. It also handles TAB completion of arguments.</p>
+<h1>Das Parsen von Argumenten<a class="headerlink" href="#argument-parsing" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Der Befehl-Builder-API verfügt über einen schlagkräftigen Argument-Parser. Er konvertiert die Zeichenfolgeneingabe für Java Basistypen (ganze Zahlen, boolesche Werte, Zeichenfolgen) oder Spielobjekte (Spieler, Welten, block Typen,...). Der Parser unterstützt optionale Argumente und Flags. Er behandelt auch befehlszeilenergänzende Argumente.</p>
 <p>The parsed arguments are stored in the <code class="docutils literal"><span class="pre">CommandContext</span></code> object. If the parser returns a single object, obtain it with
 <code class="docutils literal"><span class="pre">args.&lt;T&gt;getOne(String</span> <span class="pre">key)</span></code> (<code class="docutils literal"><span class="pre">T</span></code> is the value type). Optional and weak arguments may return <code class="docutils literal"><span class="pre">Optional.empty()</span></code>.</p>
 <p>Many of the parsers may return more than one object (e.g. multiple players with a matching username). In that case, you
@@ -597,8 +595,7 @@ effect as wrapping the <code class="docutils literal"><span class="pre">CommandE
 </colgroup>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Command Element</th>
-<th class="head"><p class="first last">Beschreibung</p>
-</th>
+<th class="head">Description</th>
 <th class="head">Value Type &amp; Amount</th>
 </tr>
 </thead>

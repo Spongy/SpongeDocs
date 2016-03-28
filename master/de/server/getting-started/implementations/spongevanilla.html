@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>SpongeVanilla Installation &mdash; Sponge 4.0.3 Dokumentation</title>
+     <title>Installing SpongeVanilla &mdash; Sponge 4.0.3 Dokumentation</title>
     
   <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/sponge.css" type="text/css" />
@@ -179,7 +179,7 @@
 </li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">Auswählen einer Implementierung</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="spongeforge.html">SpongeForge installieren</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">SpongeVanilla Installation</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">Installing SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../launch-script.html">Ein Start-Skript erstellen</a><ul class="simple">
@@ -232,7 +232,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../preparing/index.html">Die Arbeitsumgebung einrichten</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../preparing/index.html">Preparing for Development</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../preparing/jdk.html">Installieren des JDKs</a><ul class="simple">
 </ul>
 </li>
@@ -311,7 +311,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/creating.html">Einen Befehl erstellen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/arguments.html">Argument Parsing</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/arguments.html">Das Parsen von Argumenten</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/childcommands.html">Child Commands</a></li>
@@ -321,7 +321,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/event/index.html">Mit Events arbeiten</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/event/index.html">Working with Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -331,7 +331,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/custom.html">Erstellen eigener Events</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -455,7 +455,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../contributing/implementation/index.html">Developing Sponge</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/codestyle.html">Code Style</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/codestyle.html">Code Formatierung</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/git-implementation.html">Git Workflow for API and Implementations</a><ul class="simple">
@@ -491,7 +491,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html">Häufig gestellte Fragen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../about/structure.html">Die Struktur des Sponge Projekts</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../about/structure.html">The Structure of the Sponge Project</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/future.html">Zukunftspläne</a></li>
@@ -530,7 +530,7 @@
                 <div class="body" role="main">
                   
   <div class="section" id="installing-spongevanilla">
-<h1>SpongeVanilla Installation<a class="headerlink" href="#installing-spongevanilla" title="Link zu dieser Überschrift">¶</a></h1>
+<h1>Installing SpongeVanilla<a class="headerlink" href="#installing-spongevanilla" title="Link zu dieser Überschrift">¶</a></h1>
 <p>SpongeVanilla ist eine Implementierung der Sponge-API als ein eigenständiger Server.</p>
 <div class="section" id="overview">
 <h2>Übersicht<a class="headerlink" href="#overview" title="Link zu dieser Überschrift">¶</a></h2>
@@ -541,19 +541,17 @@
 <p>Sehe unter <a class="reference internal" href="../../../downloads.html"><em>Download</em></a> für weitere Informationen nach.</p>
 </div>
 <div class="section" id="id1">
-<h2>SpongeVanilla Installation<a class="headerlink" href="#id1" title="Link zu dieser Überschrift">¶</a></h2>
-<p>SpongeVanilla funktioniert nur als eigenständiger Server.</p>
+<h2>Installing SpongeVanilla<a class="headerlink" href="#id1" title="Link zu dieser Überschrift">¶</a></h2>
+<p>SpongeVanilla only works as a dedicated server.</p>
 <ol class="arabic simple">
-<li><p class="first">Lade die SpongeVanilla .jar von der Sponge Internetseite.</p>
-</li>
-<li><p class="first">Starte es über die Kommandozeile: <code class="docutils literal"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">spongevanilla-wasauchimmer.jar</span></code></p>
-</li>
+<li>Download the SpongeVanilla .jar from the Sponge website.</li>
+<li>Run it via command line: <code class="docutils literal"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">spongevanilla-whatever.jar</span></code></li>
 <li><p class="first">Konfiguriere <a class="reference internal" href="../port-forward.html"><em>Portweiterleitung</em></a> damit andere sich mit dem Server verbinden können.</p>
 </li>
 </ol>
 <div class="admonition warning">
 <p class="first admonition-title">Warnung</p>
-<p class="last">Klicke nicht doppelt auf die <code class="docutils literal"><span class="pre">.jar</span></code> Datei!</p>
+<p class="last">Don&#8217;t double-click the <code class="docutils literal"><span class="pre">.jar</span></code> file!</p>
 </div>
 </div>
 <div class="section" id="links">

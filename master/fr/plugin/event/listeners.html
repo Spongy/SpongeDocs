@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Les Event Listeners &mdash; documentation Sponge 4.0.3</title>
+     <title>Event Listeners &mdash; documentation Sponge 4.0.3</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -32,9 +32,9 @@
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="documentation Sponge 4.0.3" href="../../index.html" />
-        <link rel="up" title="Utilisation des événements" href="index.html" />
+        <link rel="up" title="Working with Events" href="index.html" />
         <link rel="next" title="Event Causes" href="causes.html" />
-        <link rel="prev" title="Utilisation des événements" href="index.html" />
+        <link rel="prev" title="Working with Events" href="index.html" />
     
   <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -150,7 +150,7 @@
         <ul>
         <li><a href="../../index.html">documentation Sponge 4.0.3</a><i class="icon-right-open lights-icon"></i></li>
         <li><a href="../index.html" >Création d&#8217;un Plugin</a><i class="icon-right-open lights-icon"></i></li>
-        <li><a href="index.html" accesskey="U">Utilisation des événements</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="index.html" accesskey="U">Working with Events</a><i class="icon-right-open lights-icon"></i></li>
         </ul>
       </div> 
     <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -168,7 +168,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../index.html">Table des Matières</a></h3>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Création d&#8217;un serveur</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Créer un serveur</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../server/getting-started/index.html">Premiers pas</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/jre.html">Installation de Java</a><ul class="simple">
 </ul>
@@ -178,7 +178,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/implementations/index.html">Choisir une implémentation</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">Installer SpongeForge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">Installation de SpongeVanilla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">Installer SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/launch-script.html">Création d&#8217;un script de lancement</a><ul class="simple">
@@ -320,8 +320,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Utilisation des événements</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="">Les Event Listeners</a><ul class="simple">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Working with Events</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="">Event Listeners</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="causes.html">Event Causes</a><ul class="simple">
@@ -330,7 +330,7 @@
 <li class="toctree-l3"><a class="reference internal" href="filters.html">Filtres d&#8217;événement</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="custom.html">Création d&#8217;Événements Personnalisés</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -384,7 +384,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../items/index.html">Travailler avec les objets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../items/index.html">Working with Items</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../items/usage.html">Basic Item Usage</a><ul class="simple">
 </ul>
 </li>
@@ -446,7 +446,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contribuer à Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing to Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">Lignes directrices des contributions</a><ul class="simple">
 </ul>
 </li>
@@ -529,7 +529,7 @@
                 <div class="body" role="main">
                   
   <div class="section" id="event-listeners">
-<h1>Les Event Listeners<a class="headerlink" href="#event-listeners" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>Event Listeners<a class="headerlink" href="#event-listeners" title="Lien permanent vers ce titre">¶</a></h1>
 <p>In order to listen for an event, an event listener must be registered. This is done by making a method with any name,
 defining the first parameter to be the desired event type, and then affixing <code class="docutils literal"><span class="pre">&#64;Listener</span></code> to the method,
 as illustrated below.</p>
@@ -541,19 +541,24 @@ as illustrated below.</p>
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>En plus, la classe contenant ces méthodes doit être inscrite auprès du gestionnaire d&#8217;événements:</p>
+<p>In addition, the class containing these methods must be registered with the event manager:</p>
 <div class="admonition tip">
 <p class="first admonition-title">Astuce</p>
-<p class="last">Pour les event listeners présents dans la classe principale de votre plugin (annotée de <code class="docutils literal"><span class="pre">&#64;Plugin</span></code>), vous n&#8217;avez pas besoin d&#8217;inscrire son instance car Sponge le fera déjà automatiquement.</p>
+<p class="last">For event listeners on your main plugin class (annotated by <code class="docutils literal"><span class="pre">&#64;Plugin</span></code>), you do not need to register the object for
+events because Sponge will do it automatically.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Le bus d&#8217;événements <strong>supporte le supertypes</strong>. Par exemple la classe <code class="docutils literal"><span class="pre">ChangeBlockEvent.Break</span></code> hérite de la classe <code class="docutils literal"><span class="pre">ChangeBlockEvent</span></code>. Donc un plugin pourrait écouter l&#8217;événement <code class="docutils literal"><span class="pre">ChangeBlockEvent</span></code> et toujours recevoir des événements <code class="docutils literal"><span class="pre">ChangeBlockEvent.Break</span></code>. Toutefois, un plugin n&#8217;écoutant que l&#8217;événement <code class="docutils literal"><span class="pre">ChangeBlockEvent.Break</span></code> ne sera pas averti des autres types de l&#8217;événement <code class="docutils literal"><span class="pre">ChangeBlockEvent</span></code>.</p>
+<p class="last">The event bus <strong>supports supertypes</strong>. For example, <code class="docutils literal"><span class="pre">ChangeBlockEvent.Break</span></code> extends <code class="docutils literal"><span class="pre">ChangeBlockEvent</span></code>.
+Therefore, a plugin could listen to <code class="docutils literal"><span class="pre">ChangeBlockEvent</span></code> and still receive <code class="docutils literal"><span class="pre">ChangeBlockEvent.Break</span></code>s. However,
+a plugin listening to just <code class="docutils literal"><span class="pre">ChangeBlockEvent.Break</span></code> would not be notified of other types of <code class="docutils literal"><span class="pre">ChangeBlockEvent</span></code>.</p>
 </div>
 <div class="section" id="registering-and-unregistering-event-listeners">
-<h2>Inscription et Désinscription des Event Listeners<a class="headerlink" href="#registering-and-unregistering-event-listeners" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour enregistrer les event listeners annotés de <code class="docutils literal"><span class="pre">&#64;Listener</span></code> qui ne sont pas dans la classe principale de votre plugin, vous pouvez utiliser la méthode <code class="docutils literal"><span class="pre">EventManager#registerListeners</span></code>, qui pend en paramètres une instance du plugin et une instance de la classe contenant les events listeners.</p>
-<p><strong>Exemple: Inscription des Event Listeners dans d&#8217;autres classes</strong></p>
+<h2>Registering and Unregistering Event Listeners<a class="headerlink" href="#registering-and-unregistering-event-listeners" title="Lien permanent vers ce titre">¶</a></h2>
+<p>To register event listeners annotated by <code class="docutils literal"><span class="pre">&#64;Listener</span></code> that are not in the main plugin class, you can use
+<code class="docutils literal"><span class="pre">EventManager#registerListeners</span></code>, which accepts a reference to the plugin and an instance
+of the class containing the event listeners.</p>
+<p><strong>Example: Registering Event Listeners in Other Classes</strong></p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.Sponge</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kd">class</span> <span class="nc">ExampleListener</span> <span class="o">{</span>
@@ -568,9 +573,15 @@ as illustrated below.</p>
 </pre></div>
 </div>
 <div class="section" id="dynamically-registering-event-listeners">
-<h3>Inscription dynamique des Event Listeners<a class="headerlink" href="#dynamically-registering-event-listeners" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Certains plugins (comme les plugins de scripting) peuvent avoir besoin d&#8217;inscrire un event listener dynamiquement. Dans ce cas, l&#8217;event listener n&#8217;est pas une méthode annotée de <code class="docutils literal"><span class="pre">&#64;Listener</span></code>, mais une classe implémentant l&#8217;interface <code class="docutils literal"><span class="pre">EventListener</span></code>. Cet event listener peut ensuite être inscrit avec la méthode <code class="docutils literal"><span class="pre">EventManager#registerListener</span></code>, qui prend en paramètres, dans l&#8217;ordre: une référence au plugin, sa <code class="docutils literal"><span class="pre">Class`,</span> <span class="pre">et</span> <span class="pre">le</span> <span class="pre">listener</span> <span class="pre">lui-même.</span> <span class="pre">Optionnellement,</span> <span class="pre">vous</span> <span class="pre">pouvez</span> <span class="pre">spécifier</span> <span class="pre">un</span> <span class="pre">ordre</span> <span class="pre">``Order</span></code> d&#8217;exécution en troisième paramètre (avant l&#8217;instance du listener), ou un booléen en quatrième argument qui déterminera s&#8217;il faut appeler le listener avant ou bien après toute modification effectuée par le serveur.</p>
-<p><strong>Exemple: Implémenter l&#8217;interface EventListerner</strong></p>
+<h3>Dynamically Registering Event Listeners<a class="headerlink" href="#dynamically-registering-event-listeners" title="Lien permanent vers ce titre">¶</a></h3>
+<p>Some plugins (such as scripting plugins) may wish to dynamically register an event listener. In that case the event
+listener is not a method annotated with <code class="docutils literal"><span class="pre">&#64;Listener</span></code>, but rather a class implementing the <code class="docutils literal"><span class="pre">EventListener</span></code> interface.
+This event listener can then be registered by calling <code class="docutils literal"><span class="pre">EventManager#registerListener</span></code>, which accepts a reference to the
+plugin as the first argument, the <code class="docutils literal"><span class="pre">Class</span></code> of events handled as the second argument, and the listener itself as the
+final argument. Optionally, you can specify an <code class="docutils literal"><span class="pre">Order</span></code> to run the event listener in as the third argument or a
+boolean value as the fourth argument (before the instance of the listener) which determines whether to call the listener
+before other server modifications.</p>
+<p><strong>Example: Implementing EventListener</strong></p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.event.EventListener</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.event.block.ChangeBlockEvent</span><span class="o">;</span>
 
@@ -583,53 +594,60 @@ as illustrated below.</p>
 <span class="o">}</span>
 </pre></div>
 </div>
-<p><strong>Exemple: Inscription dynamique de l&#8217;Event Listener</strong></p>
+<p><strong>Example: Dynamically Registering the Event Listener</strong></p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">EventListener</span><span class="o">&lt;</span><span class="n">ChangeBlockEvent</span><span class="o">.</span><span class="na">Break</span><span class="o">&gt;</span> <span class="n">listener</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ExampleListener</span><span class="o">();</span>
 <span class="n">Sponge</span><span class="o">.</span><span class="na">getEventManager</span><span class="o">().</span><span class="na">registerListener</span><span class="o">(</span><span class="k">this</span><span class="o">,</span> <span class="n">ChangeBlockEvent</span><span class="o">.</span><span class="na">Break</span><span class="o">.</span><span class="na">class</span><span class="o">,</span> <span class="n">listener</span><span class="o">);</span>
 </pre></div>
 </div>
 <div class="admonition tip">
 <p class="first admonition-title">Astuce</p>
-<p class="last">Pour les event listeners créés via l&#8217;annotation <code class="docutils literal"><span class="pre">&#64;Listener</span></code>, l&#8217;ordre d&#8217;exécution peut être configuré (voir aussi <a class="reference internal" href="#about-listener">About &#64;Listener</a>). Pour les listeners inscrits dynamiquement cela est possible en passant à la méthode <code class="docutils literal"><span class="pre">EventManager#registerListener</span></code> un <code class="docutils literal"><span class="pre">Order</span></code> en troisième paramètre.</p>
+<p class="last">For event listeners created with the <code class="docutils literal"><span class="pre">&#64;Listener</span></code> annotation, the order of the execution can be configured
+(see also <a class="reference internal" href="#about-listener">About &#64;Listener</a>). For dynamically registered listeners this is possible by passing an <code class="docutils literal"><span class="pre">Order</span></code>
+to the third argument the <code class="docutils literal"><span class="pre">EventManager#registerListener</span></code> method.</p>
 </div>
 </div>
 <div class="section" id="unregistering-event-listeners">
-<h3>Désinscription des Event Listeners<a class="headerlink" href="#unregistering-event-listeners" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Pour désinscrire un seul event listener, vous pouvez utiliser la méthode <code class="docutils literal"><span class="pre">EventManager#unregisterListeners</span></code>, qui prend en paramètre une instance de la classe contenant les event listeners.</p>
+<h3>Unregistering Event Listeners<a class="headerlink" href="#unregistering-event-listeners" title="Lien permanent vers ce titre">¶</a></h3>
+<p>To unregister a single event listener, you can use the <code class="docutils literal"><span class="pre">EventManager#unregisterListeners</span></code> method, which accepts
+an instance of the class containing the event listeners.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">EventListener</span> <span class="n">listener</span> <span class="o">=</span> <span class="o">...</span>
 <span class="n">Sponge</span><span class="o">.</span><span class="na">getEventManager</span><span class="o">().</span><span class="na">unregisterListeners</span><span class="o">(</span><span class="n">listener</span><span class="o">);</span>
 </pre></div>
 </div>
-<p>Alternativement, vous pouvez utiliser la méthode <code class="docutils literal"><span class="pre">EventManager#unregisterPluginListeners</span></code>, en passant en paramètre une instance du plugin, pour désinscrire tous les events listeners qui lui sont associés. Notez que cela inclue ceux inscrits via les annotations <code class="docutils literal"><span class="pre">&#64;Listener</span></code>.</p>
+<p>Alternatively, you can use <code class="docutils literal"><span class="pre">EventManager#unregisterPluginListeners</span></code>, passing in a reference to the plugin, to
+unregister all event listeners associated with that plugin. Note that this will remove <em>all</em> of the plugin&#8217;s event
+listeners, including those registered with <code class="docutils literal"><span class="pre">&#64;Listener</span></code> annotations.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">MyPlugin</span> <span class="n">plugin</span> <span class="o">=</span> <span class="o">...</span>
 <span class="n">Sponge</span><span class="o">.</span><span class="na">getEventManager</span><span class="o">().</span><span class="na">unregisterPluginListeners</span><span class="o">(</span><span class="n">plugin</span><span class="o">);</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="about-listener">
-<h3>A propos de &#64;Listener<a class="headerlink" href="#about-listener" title="Lien permanent vers ce titre">¶</a></h3>
-<p>L&#8217;annotation <code class="docutils literal"><span class="pre">&#64;Listener</span></code> a quelques champs configurables:</p>
+<h3>About &#64;Listener<a class="headerlink" href="#about-listener" title="Lien permanent vers ce titre">¶</a></h3>
+<p>The <code class="docutils literal"><span class="pre">&#64;Listener</span></code> annotation has a few configurable fields:</p>
 <ul class="simple">
-<li><p class="first">Le champ <code class="docutils literal"><span class="pre">order</span></code> est l&#8217;ordre dans lequel l&#8217;event listener sera exécuté. Voir l&#8217;enum <code class="docutils literal"><span class="pre">org.spongepowered.api.event.Order</span></code> de Sponge pour connaître les options disponibles.</p>
-</li>
+<li><code class="docutils literal"><span class="pre">order</span></code> is the order in which the event listener is to be run. See the <code class="docutils literal"><span class="pre">org.spongepowered.api.event.Order</span></code> enum
+in Sponge to see the available options.</li>
 </ul>
-<p>Par défaut, l&#8217;annotation <code class="docutils literal"><span class="pre">&#64;Listener</span></code> est configurée de manière à ce que l&#8217;event listener <em>ne</em> soit <em>pas</em> appelé si l&#8217;événement en question est annulable et a été annulé (par un autre plugin, par exemple).</p>
+<p>By default, <code class="docutils literal"><span class="pre">&#64;Listener</span></code> is configured so that your event listener will <em>not</em> be called if the event in question is
+cancellable and has been cancelled (such as by another plugin).</p>
 </div>
 </div>
 <div class="section" id="firing-events">
 <h2>Déclenchement d&#8217;Événements<a class="headerlink" href="#firing-events" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour envoyer un événement, vous avez besoin d&#8217;un objet qui implémente l&#8217;interface <code class="docutils literal"><span class="pre">org.spongepowered.api.event.Event</span></code>.</p>
-<p>Vous pouvez déclencher des événements en utilisant le bus d&#8217;événements (<code class="docutils literal"><span class="pre">org.spongepowered.api.service.event.EventManager</span></code>) :</p>
+<p>To dispatch an event, you need an object that implements the <code class="docutils literal"><span class="pre">org.spongepowered.api.event.Event</span></code> interface.</p>
+<p>You can fire events using the event bus (<code class="docutils literal"><span class="pre">org.spongepowered.api.service.event.EventManager</span></code>):</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kt">boolean</span> <span class="n">cancelled</span> <span class="o">=</span> <span class="n">Sponge</span><span class="o">.</span><span class="na">getEventManager</span><span class="o">().</span><span class="na">post</span><span class="o">(</span><span class="n">theEventObject</span><span class="o">);</span>
 </pre></div>
 </div>
-<p>La méthode retourne <code class="docutils literal"><span class="pre">true</span></code> si l&#8217;événement a été annulé, <code class="docutils literal"><span class="pre">false</span></code> sinon.</p>
+<p>The method returns <code class="docutils literal"><span class="pre">true</span></code> if the event was cancelled, <code class="docutils literal"><span class="pre">false</span></code> if not.</p>
 <div class="section" id="firing-sponge-events">
-<h3>Déclenchement d&#8217;Événements Sponge<a class="headerlink" href="#firing-sponge-events" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Il est possible de générer des instances d&#8217;événements intégrés avec la statique <code class="docutils literal"><span class="pre">SpongeEventFactory</span></code>. Les événements créés par le <code class="docutils literal"><span class="pre">SpongeEventFactory</span></code> sont ensuite transmis à <code class="docutils literal"><span class="pre">EventManager#post</span></code>.</p>
+<h3>Firing Sponge Events<a class="headerlink" href="#firing-sponge-events" title="Lien permanent vers ce titre">¶</a></h3>
+<p>It is possible to generate instances of built-in events with the static <code class="docutils literal"><span class="pre">SpongeEventFactory</span></code>. The events created by
+the <code class="docutils literal"><span class="pre">SpongeEventFactory</span></code> are then passed to <code class="docutils literal"><span class="pre">EventManager#post</span></code>.</p>
 </div>
 <div class="section" id="example-firing-lightningevent">
-<h3>Example: Le LightningEvent<a class="headerlink" href="#example-firing-lightningevent" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Example: Firing LightningEvent<a class="headerlink" href="#example-firing-lightningevent" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.event.SpongeEventFactory</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.event.action.LightningEvent</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.event.cause.Cause</span><span class="o">;</span>

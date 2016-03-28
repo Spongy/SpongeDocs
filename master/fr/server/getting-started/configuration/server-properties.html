@@ -149,7 +149,7 @@
       <div class="breadcrumbs">
         <ul>
         <li><a href="../../../index.html">documentation Sponge 4.0.3</a><i class="icon-right-open lights-icon"></i></li>
-        <li><a href="../../index.html" >Création d&#8217;un serveur</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="../../index.html" >Créer un serveur</a><i class="icon-right-open lights-icon"></i></li>
         <li><a href="../index.html" >Premiers pas</a><i class="icon-right-open lights-icon"></i></li>
         <li><a href="index.html" accesskey="U">Configurer Sponge</a><i class="icon-right-open lights-icon"></i></li>
         </ul>
@@ -169,7 +169,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../../index.html">Table des Matières</a></h3>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Création d&#8217;un serveur</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Créer un serveur</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">Premiers pas</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../jre.html">Installation de Java</a><ul class="simple">
 </ul>
@@ -179,7 +179,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../implementations/index.html">Choisir une implémentation</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../implementations/spongeforge.html">Installer SpongeForge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../implementations/spongevanilla.html">Installation de SpongeVanilla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../implementations/spongevanilla.html">Installer SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../launch-script.html">Création d&#8217;un script de lancement</a><ul class="simple">
@@ -321,8 +321,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/event/index.html">Utilisation des événements</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/listeners.html">Les Event Listeners</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/event/index.html">Working with Events</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/causes.html">Event Causes</a><ul class="simple">
@@ -331,7 +331,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/filters.html">Filtres d&#8217;événement</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/custom.html">Création d&#8217;Événements Personnalisés</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -385,7 +385,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/items/index.html">Travailler avec les objets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/items/index.html">Working with Items</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/items/usage.html">Basic Item Usage</a><ul class="simple">
 </ul>
 </li>
@@ -447,7 +447,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../contributing/index.html">Contribuer à Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing/index.html">Contributing to Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../contributing/guidelines.html">Lignes directrices des contributions</a><ul class="simple">
 </ul>
 </li>
@@ -753,7 +753,7 @@ Depuis la version 1.7 de Minecraft, le nombre de joueurs maximum n&#8217;est plu
 <td><p class="first last">entier (0-(2^63-1))</p>
 </td>
 <td>60000</td>
-<td><p class="first">Ce paramêtre defini le temps maximum en miliseconde que peut prendre un tick avant que &#8220;l&#8217;horloge&#8221; du serveur coupe celui-ci avec le message d&#8217;alerte. Un seul tick du serveur dure 60.00 secondes ( il peut être au maximum de 0.05 secondes ); Si on considère que le serveur crash, le serveur se forcera à s&#8217;éteindre. si ce critère est rencontré, il appellera le System.exit(1).</p>
+<td><p class="first">Le temps maximum en millisecondes qu&#8217;un seul tick doit prendre avant que le watchdog arrête le serveur avec le message: &#8220;A single server tick loop took 60.00 seconds (should be max 0.05): Considering it to be crashed, server will forcibly shutdown&#8221;. Une fois que ce critère est rempli, il fait appel à la méthode System.exit(1).</p>
 <blockquote class="last">
 <div><p><strong>-1</strong> - désactive le suivi des ticks</p>
 </div></blockquote>

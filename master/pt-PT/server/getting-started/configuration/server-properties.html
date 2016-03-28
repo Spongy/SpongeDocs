@@ -150,7 +150,7 @@
       <div class="breadcrumbs">
         <ul>
         <li><a href="../../../index.html">Documentação Sponge 4.0.3</a><i class="icon-right-open lights-icon"></i></li>
-        <li><a href="../../index.html" >Criar um Servidor</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="../../index.html" >Creating a Server</a><i class="icon-right-open lights-icon"></i></li>
         <li><a href="../index.html" >Guia de Início</a><i class="icon-right-open lights-icon"></i></li>
         <li><a href="index.html" accesskey="U">Configurar o Sponge</a><i class="icon-right-open lights-icon"></i></li>
         </ul>
@@ -170,7 +170,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../../index.html">Tabela de Conteúdos</a></h3>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Criar um Servidor</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Creating a Server</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">Guia de Início</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../jre.html">Instalar o Java</a><ul class="simple">
 </ul>
@@ -179,8 +179,8 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../implementations/index.html">Escolher uma Implementação</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../implementations/spongeforge.html">Instalar o SpongeForge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../implementations/spongevanilla.html">Instalar o SpongeVanilla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../implementations/spongeforge.html">Installing SpongeForge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../launch-script.html">Criar um <em>Launch Script</em></a><ul class="simple">
@@ -322,7 +322,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/event/index.html">Trabalhar com Eventos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/event/index.html">Working with Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -448,7 +448,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../contributing/index.html">Contribuir para o Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing/index.html">Contributing to Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../contributing/guidelines.html">Diretrizes de Contribuição</a><ul class="simple">
 </ul>
 </li>
@@ -763,7 +763,12 @@
 <td><p class="first last">inteiro (0- (2^63-1))</p>
 </td>
 <td>60000</td>
-<td><p class="first">O número máximo de milissegundos que uma tick pode demorar antes de o <em>watchdog</em> do servidor o parar com a seguinte mensagem: &#8220;A single server tick took 60.00 seconds (should be max 0.05); Considering it to be crashed, server will forcibly shutdown&#8221;. Assim que isto acontece, ocorre System.exit(1).</p>
+<td><p class="first">The maximum number of milliseconds a single tick may take
+before the server watchdog stops the server with the
+message: &#8220;A single server tick took 60.00 seconds (should
+be max 0.05); Considering it to be crashed, server will
+forcibly shutdown&#8221;. Once this criteria is met, it calls
+System.exit(1).</p>
 <blockquote class="last">
 <div><p><strong>-1</strong> - desativa o <em>watchdog</em> completamente</p>
 </div></blockquote>

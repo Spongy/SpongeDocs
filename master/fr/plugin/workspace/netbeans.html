@@ -168,7 +168,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../index.html">Table des Matières</a></h3>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Création d&#8217;un serveur</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Créer un serveur</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../server/getting-started/index.html">Premiers pas</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/jre.html">Installation de Java</a><ul class="simple">
 </ul>
@@ -178,7 +178,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/implementations/index.html">Choisir une implémentation</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">Installer SpongeForge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">Installation de SpongeVanilla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">Installer SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/launch-script.html">Création d&#8217;un script de lancement</a><ul class="simple">
@@ -320,8 +320,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Utilisation des événements</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Les Event Listeners</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Working with Events</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../event/causes.html">Event Causes</a><ul class="simple">
@@ -330,7 +330,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Filtres d&#8217;événement</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Création d&#8217;Événements Personnalisés</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -384,7 +384,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../items/index.html">Travailler avec les objets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../items/index.html">Working with Items</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../items/usage.html">Basic Item Usage</a><ul class="simple">
 </ul>
 </li>
@@ -446,7 +446,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contribuer à Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing to Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">Lignes directrices des contributions</a><ul class="simple">
 </ul>
 </li>
@@ -532,11 +532,11 @@
 <h1>Configuration de NetBeans<a class="headerlink" href="#setting-up-netbeans" title="Lien permanent vers ce titre">¶</a></h1>
 <p>Cet article décrit comment configurer votre espace de travail <strong>NetBeans</strong> pour développer un plugin avec l&#8217;API Sponge.</p>
 <div class="section" id="starting-your-project">
-<h2>Débutez votre projet<a class="headerlink" href="#starting-your-project" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Starting Your Project<a class="headerlink" href="#starting-your-project" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Nous recommandons d&#8217;utiliser Gradle ou Maven pour le développement de plugins avec l&#8217;API Sponge. Gradle et Maven aident de façon significative dans la gestion des dépendances, telle que l&#8217;API Sponge, pour votre projet. Il est préférable d&#8217;inclure le fichier <code class="docutils literal"><span class="pre">.jar</span></code> dans votre projet.</p>
 <div class="section" id="gradle">
 <h3>Gradle<a class="headerlink" href="#gradle" title="Lien permanent vers ce titre">¶</a></h3>
-<p><strong>Pour créer votre projet:</strong></p>
+<p><strong>To create your project:</strong></p>
 <p>Vous devez tout d&#8217;abord installer le plugin <strong>Gradle Support</strong> avant d&#8217;utiliser Gradle dans NetBeans. Cela doit être fait seulement lors de la création de votre premier projet.</p>
 <ul class="simple">
 <li><p class="first">Ouvrez <strong>NetBeams</strong>.</p>
@@ -548,28 +548,24 @@
 <li><p class="first">Installez le plugin <strong>Gradle Support</strong>.</p>
 </li>
 </ul>
-<p>Vous devez ensuite créer votre projet.</p>
+<p>You may then proceed to create your project.</p>
 <ul class="simple">
 <li><p class="first">Cliquez sur <code class="docutils literal"><span class="pre">Fichier</span> <span class="pre">&gt;</span> <span class="pre">Nouveau</span> <span class="pre">projet</span></code>.</p>
 </li>
 <li><p class="first">Sélectionnez <code class="docutils literal"><span class="pre">Gradle</span></code> à gauche de la fenêtre, puis sélectionner <code class="docutils literal"><span class="pre">Gradle</span> <span class="pre">Root</span> <span class="pre">Project</span></code> à droite.</p>
 </li>
-<li><p class="first">Cliquez sur <code class="docutils literal"><span class="pre">Next</span></code>.</p>
-</li>
+<li>Click <code class="docutils literal"><span class="pre">Next</span></code>.</li>
 <li><p class="first">Nommez votre projet.</p>
 </li>
 <li><p class="first">Entrez votre <strong>Group ID</strong> et la <strong>Version</strong>.</p>
 <ul>
-<li><p class="first">Votre <strong>Group ID</strong> doit correspondre au nom de votre organisation, ou à quelque chose de similaire.</p>
-</li>
+<li>Your <strong>Group ID</strong> should correspond to your organization name, or something similar.</li>
 <li><p class="first">Votre <strong>Artifact ID</strong> va automatiquement être généré sur la base de votre nom de projet.</p>
 </li>
-<li><p class="first">Libre à vous de choisir votre <strong>Version</strong>.</p>
-</li>
+<li>Your <strong>Version</strong> is up to you.</li>
 </ul>
 </li>
-<li><p class="first">Cliquez sur <code class="docutils literal"><span class="pre">Finish</span></code>.</p>
-</li>
+<li>Click <code class="docutils literal"><span class="pre">Finish</span></code>.</li>
 </ul>
 <p><strong>Pour importer l&#8217;API Sponge comme dépendance:</strong></p>
 <ul class="simple">
@@ -583,7 +579,7 @@
 </div>
 <div class="section" id="maven">
 <h3>Maven<a class="headerlink" href="#maven" title="Lien permanent vers ce titre">¶</a></h3>
-<p><strong>Pour créer votre projet:</strong></p>
+<p><strong>To create your project:</strong></p>
 <ul class="simple">
 <li><p class="first">Ouvrez <strong>NetBeams</strong>.</p>
 </li>
@@ -593,14 +589,11 @@
 </li>
 <li><p class="first">Entrez le <strong>nom</strong> de votre projet.</p>
 </li>
-<li><p class="first">Entrez votre <strong>Group ID</strong>, <strong>Artifact ID</strong>, et <strong>Version</strong>.</p>
-<ul>
-<li><p class="first">Votre <strong>Group ID</strong> doit correspondre au nom de votre organisation, ou à quelque chose de similaire.</p>
-</li>
+<li>Enter your <strong>Group ID</strong>, <strong>Artifact ID</strong>, and <strong>Version</strong>.<ul>
+<li>Your <strong>Group ID</strong> should correspond to your organization name, or something similar.</li>
 <li><p class="first">Votre <strong>Artifact ID</strong> doit correspondre au nom de votre projet.</p>
 </li>
-<li><p class="first">Libre à vous de choisir votre <strong>Version</strong>.</p>
-</li>
+<li>Your <strong>Version</strong> is up to you.</li>
 </ul>
 </li>
 <li><p class="first">Entrez un <strong>package</strong>, si vous le souhaitez. Ceci est optionnel.</p>
@@ -622,7 +615,7 @@
 </div>
 </div>
 <div class="section" id="git-integration">
-<h2>Intégration de Git<a class="headerlink" href="#git-integration" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Git Integration<a class="headerlink" href="#git-integration" title="Lien permanent vers ce titre">¶</a></h2>
 <p>NetBeans donne une documentation sur l&#8217;intégration de Git:</p>
 <p><a class="reference external" href="https://netbeans.org/kb/docs/ide/git.html">https://netbeans.org/kb/docs/ide/git.html</a></p>
 </div>

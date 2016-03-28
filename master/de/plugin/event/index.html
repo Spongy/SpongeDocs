@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Mit Events arbeiten &mdash; Sponge 4.0.3 Dokumentation</title>
+     <title>Working with Events &mdash; Sponge 4.0.3 Dokumentation</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -177,7 +177,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/implementations/index.html">Auswählen einer Implementierung</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">SpongeForge installieren</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">SpongeVanilla Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/launch-script.html">Ein Start-Skript erstellen</a><ul class="simple">
@@ -230,7 +230,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Die Arbeitsumgebung einrichten</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Preparing for Development</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../preparing/jdk.html">Installieren des JDKs</a><ul class="simple">
 </ul>
 </li>
@@ -309,7 +309,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../commands/creating.html">Einen Befehl erstellen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/arguments.html">Argument Parsing</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../commands/arguments.html">Das Parsen von Argumenten</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/childcommands.html">Child Commands</a></li>
@@ -319,7 +319,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Mit Events arbeiten</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Working with Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -329,7 +329,7 @@
 <li class="toctree-l3"><a class="reference internal" href="filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="custom.html">Erstellen eigener Events</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -453,7 +453,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/implementation/index.html">Developing Sponge</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/codestyle.html">Code Style</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/codestyle.html">Code Formatierung</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/git-implementation.html">Git Workflow for API and Implementations</a><ul class="simple">
@@ -489,7 +489,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html">Häufig gestellte Fragen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/structure.html">Die Struktur des Sponge Projekts</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../about/structure.html">The Structure of the Sponge Project</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/future.html">Zukunftspläne</a></li>
@@ -528,8 +528,9 @@
                 <div class="body" role="main">
                   
   <div class="section" id="working-with-events">
-<h1>Mit Events arbeiten<a class="headerlink" href="#working-with-events" title="Link zu dieser Überschrift">¶</a></h1>
-<p>Events werden genutzt um Plugins über bestimmte Vorgänge zu informieren. Viele Events können <em>abgebrochen</em> werden. Dies heißt, dass die Aktion die durch das Event ausgeführt werden würde, verhindert wird. Abbrechbare Events implementieren das Interface <code class="docutils literal"><span class="pre">Cancellable</span></code>.</p>
+<h1>Working with Events<a class="headerlink" href="#working-with-events" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Events are used to inform plugins of certain happenings. Many events can also be <em>cancelled</em> &#8211; that is, the action that
+the event refers to can be prevented from occurring. Cancellable events implement the <code class="docutils literal"><span class="pre">Cancellable</span></code> interface.</p>
 <p>Sponge itself contains many events; however, plugins can create their own events which other plugins can listen to.</p>
 <p>Event listeners are assigned a priority that determines the order in which the event listener is run in context of other
 event listeners (such as those from other plugins). For example, an event listener with <code class="docutils literal"><span class="pre">EARLY</span></code> priority will return
@@ -538,7 +539,7 @@ before most other event listeners.</p>
 <p>The event bus or event manager is the class that keeps track of which plugins are listening to which event,
 and is also responsible for distributing events to event listeners.</p>
 <div class="section" id="contents">
-<h2>Inhalt<a class="headerlink" href="#contents" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>Contents<a class="headerlink" href="#contents" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="listeners.html">Event Listeners</a><ul class="simple">
@@ -550,7 +551,7 @@ and is also responsible for distributing events to event listeners.</p>
 <li class="toctree-l1"><a class="reference internal" href="filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="custom.html">Erstellen eigener Events</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>

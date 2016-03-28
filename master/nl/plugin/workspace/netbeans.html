@@ -168,7 +168,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../index.html">Inhoudsopgave</a></h3>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Een server aanmaken</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Creating a Server</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../server/getting-started/index.html">Beginnen</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/jre.html">Installing Java</a><ul class="simple">
 </ul>
@@ -320,7 +320,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Werken met Events</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Working with Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -330,7 +330,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Creëer een eigen gebeurtenis</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -446,7 +446,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Meehelpen met Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing to Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">Richtlijnen voor het bijdragen</a><ul class="simple">
 </ul>
 </li>
@@ -532,11 +532,13 @@
 <h1>NetBeans instellen<a class="headerlink" href="#setting-up-netbeans" title="Permalink naar deze titel">¶</a></h1>
 <p>In dit artikel wordt uitgelegd hoe u uw <strong>NetBeans</strong> werkruimte moet configureren om plugins te kunnen ontwikkelen met behulp van de Sponge API.</p>
 <div class="section" id="starting-your-project">
-<h2>Je Project Starten<a class="headerlink" href="#starting-your-project" title="Permalink naar deze titel">¶</a></h2>
-<p>We raden aan om Gradle of Maven te gebruiken tijdens het ontwikkelen van plugins met de Sponge API. Gradle en Maven helpen enorm bij het beheren van dependencies, zoals de Sponge API, voor je project. Deze manier wordt verkozen boven het bijvoegen van de <code class="docutils literal"><span class="pre">.jar</span></code> in je project.</p>
+<h2>Starting Your Project<a class="headerlink" href="#starting-your-project" title="Permalink naar deze titel">¶</a></h2>
+<p>We recommend using Gradle or Maven when developing plugins with the Sponge API. Gradle and Maven help significantly
+when managing dependencies, such as the Sponge API, for your project. This is preferable to including the <code class="docutils literal"><span class="pre">.jar</span></code>
+file in your project.</p>
 <div class="section" id="gradle">
 <h3>Gradle<a class="headerlink" href="#gradle" title="Permalink naar deze titel">¶</a></h3>
-<p><strong>Om je project aan te maken</strong></p>
+<p><strong>To create your project:</strong></p>
 <p>Je moet eerst de <strong>Gradle Support</strong> plugin installeren in NetBeans voordat je Gradle gebruikt. Dit moet enkel gebeuren tijdens het aanmaken van je eerste project.</p>
 <ul class="simple">
 <li>Open <strong>NetBeans</strong>.</li>
@@ -547,42 +549,38 @@
 <li><p class="first">Installeer de <strong>Gradle Support</strong> plugin.</p>
 </li>
 </ul>
-<p>Je mag nu verdergaan met het aanmaken van je project.</p>
+<p>You may then proceed to create your project.</p>
 <ul class="simple">
 <li><p class="first">Klik op <code class="docutils literal"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">New</span> <span class="pre">Project</span></code>.</p>
 </li>
 <li><p class="first">Selecteer <code class="docutils literal"><span class="pre">Gradle</span></code> aan de linkerkant van de popup en selecteer <code class="docutils literal"><span class="pre">Gradle</span> <span class="pre">Root</span> <span class="pre">Project</span></code> aan de rechterkant.</p>
 </li>
-<li><p class="first">Klik op <code class="docutils literal"><span class="pre">Next</span></code>.</p>
-</li>
+<li>Click <code class="docutils literal"><span class="pre">Next</span></code>.</li>
 <li><p class="first">Geef een naam aan je project.</p>
 </li>
 <li><p class="first">Vul je <strong>Group ID</strong> en <strong>Version</strong> in.</p>
 <ul>
-<li><p class="first">Je <strong>Group ID</strong> zou overeen moeten komen met de naam van je organisatie of iets vergelijkbaar.</p>
-</li>
+<li>Your <strong>Group ID</strong> should correspond to your organization name, or something similar.</li>
 <li><p class="first">Je <strong>Artifact ID</strong> wordt automatisch gegenereerd gebaseerd op je projectnaam.</p>
 </li>
-<li><p class="first">Je <strong>Versie</strong> hangt van jou af.</p>
-</li>
+<li>Your <strong>Version</strong> is up to you.</li>
 </ul>
 </li>
-<li><p class="first">Klik op <code class="docutils literal"><span class="pre">Finish</span></code>.</p>
-</li>
+<li>Click <code class="docutils literal"><span class="pre">Finish</span></code>.</li>
 </ul>
-<p><strong>De Sponge API importeren als dependency:</strong></p>
+<p><strong>To import the Sponge API as a dependency:</strong></p>
 <ul class="simple">
 <li><p class="first">Open <code class="docutils literal"><span class="pre">common.gradle</span></code> in de <code class="docutils literal"><span class="pre">Projects</span></code> tab.</p>
 </li>
-<li><p class="first">Voeg handmatig de <a class="reference internal" href="dependencies.html"><em>officiële Sponge API Maven artefact</em></a> als dependency toe. Een voorbeeld kan worden gevonden op bovengenoemde Artefacten artikel.</p>
-</li>
+<li>Manually add the <a class="reference internal" href="dependencies.html"><em>official Sponge API Maven artifact</em></a> as a dependency. An example can be found
+on the aforementioned Artifacts article.</li>
 <li><p class="first">Rechtsklik op je primaire project knoop onder de <strong>Projects</strong> tab en klik op <code class="docutils literal"><span class="pre">Reload</span> <span class="pre">Project</span></code>.</p>
 </li>
 </ul>
 </div>
 <div class="section" id="maven">
 <h3>Maven<a class="headerlink" href="#maven" title="Permalink naar deze titel">¶</a></h3>
-<p><strong>Om je project aan te maken</strong></p>
+<p><strong>To create your project:</strong></p>
 <ul class="simple">
 <li>Open <strong>NetBeans</strong>.</li>
 <li><p class="first">Klik op <code class="docutils literal"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">New</span> <span class="pre">Project</span></code>.</p>
@@ -591,14 +589,11 @@
 </li>
 <li><p class="first">Vul de <strong>naam</strong> van je project in.</p>
 </li>
-<li><p class="first">Vul de <strong>Group ID</strong>, <strong>Artifact ID</strong> en <strong>Version</strong> in.</p>
-<ul>
-<li><p class="first">Je <strong>Group ID</strong> zou overeen moeten komen met de naam van je organisatie of iets vergelijkbaar.</p>
-</li>
+<li>Enter your <strong>Group ID</strong>, <strong>Artifact ID</strong>, and <strong>Version</strong>.<ul>
+<li>Your <strong>Group ID</strong> should correspond to your organization name, or something similar.</li>
 <li><p class="first">Je <strong>Artifact ID</strong> zou moeten overeenkomen met de naam van je project.</p>
 </li>
-<li><p class="first">Je <strong>Versie</strong> hangt van jou af.</p>
-</li>
+<li>Your <strong>Version</strong> is up to you.</li>
 </ul>
 </li>
 <li><p class="first">Vul een <strong>package</strong> in indien gewenst. Dit is optioneel.</p>
@@ -606,21 +601,20 @@
 <li><p class="first">Klik op <code class="docutils literal"><span class="pre">Finish</span></code> na het invullen van de tekstvelden.</p>
 </li>
 </ul>
-<p><strong>De Sponge API importeren als dependency:</strong></p>
+<p><strong>To import the Sponge API as a dependency:</strong></p>
 <ul class="simple">
 <li><p class="first">Rechtsklik op de <code class="docutils literal"><span class="pre">Dependencies</span></code> knoop onder de <strong>Projects</strong> tab, welke standaard te vinden is aan de linkerkant.</p>
 </li>
 <li><p class="first">Klik op <code class="docutils literal"><span class="pre">Add</span> <span class="pre">Dependency</span></code>.</p>
 </li>
-<li><p class="first">Voer de <strong>Group ID</strong>, <strong>Artifact ID</strong>, en <strong>Version</strong> van de <a class="reference internal" href="dependencies.html"><em>officiële Sponge API Maven artefact</em></a>.</p>
-</li>
+<li>Enter the <strong>Group ID</strong>, <strong>Artifact ID</strong>, and <strong>Version</strong> of the <a class="reference internal" href="dependencies.html"><em>official Sponge API Maven artifact</em></a>.</li>
 <li><p class="first">Klik op <code class="docutils literal"><span class="pre">Add</span></code>.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="section" id="git-integration">
-<h2>Git Integratie<a class="headerlink" href="#git-integration" title="Permalink naar deze titel">¶</a></h2>
+<h2>Git Integration<a class="headerlink" href="#git-integration" title="Permalink naar deze titel">¶</a></h2>
 <p>NetBeans biedt zelf documentatie aan voor Git integratie:</p>
 <p><a class="reference external" href="https://netbeans.org/kb/docs/ide/git.html">https://netbeans.org/kb/docs/ide/git.html</a></p>
 </div>

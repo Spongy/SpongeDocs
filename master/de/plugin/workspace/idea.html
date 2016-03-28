@@ -178,7 +178,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/implementations/index.html">Auswählen einer Implementierung</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">SpongeForge installieren</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">SpongeVanilla Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/launch-script.html">Ein Start-Skript erstellen</a><ul class="simple">
@@ -231,7 +231,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Die Arbeitsumgebung einrichten</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Preparing for Development</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../preparing/jdk.html">Installieren des JDKs</a><ul class="simple">
 </ul>
 </li>
@@ -310,7 +310,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../commands/creating.html">Einen Befehl erstellen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/arguments.html">Argument Parsing</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../commands/arguments.html">Das Parsen von Argumenten</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/childcommands.html">Child Commands</a></li>
@@ -320,7 +320,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Mit Events arbeiten</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Working with Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -330,7 +330,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Erstellen eigener Events</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -454,7 +454,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/implementation/index.html">Developing Sponge</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/codestyle.html">Code Style</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/codestyle.html">Code Formatierung</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/git-implementation.html">Git Workflow for API and Implementations</a><ul class="simple">
@@ -490,7 +490,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html">Häufig gestellte Fragen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/structure.html">Die Struktur des Sponge Projekts</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../about/structure.html">The Structure of the Sponge Project</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/future.html">Zukunftspläne</a></li>
@@ -532,11 +532,13 @@
 <h1>IntelliJ IDEA einrichten<a class="headerlink" href="#setting-up-intellij-idea" title="Link zu dieser Überschrift">¶</a></h1>
 <p>Dieser Artikel beschreibt das Konfigurieren Ihres <strong>IntelliJ IDEA</strong> Arbeitsbereich für die Plugin-Entwicklung mit der Sponge-API.</p>
 <div class="section" id="starting-your-project">
-<h2>Mit deinem Projekt beginnen<a class="headerlink" href="#starting-your-project" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Wir empfehlen das Nutzen von Gradle oder Maven, wenn du Plugins mit der Sponge-API entwickeln willst. Gradle und Maven helfen beim Managen von Abhängigkeiten, wie zum Beispiel der Sponge-API, in deinem Projekt. Dies wird dem mitliefern von <code class="docutils literal"><span class="pre">.jar</span></code> Dateien in deinem Projekt vorgezogen.</p>
+<h2>Starting Your Project<a class="headerlink" href="#starting-your-project" title="Link zu dieser Überschrift">¶</a></h2>
+<p>We recommend using Gradle or Maven when developing plugins with the Sponge API. Gradle and Maven help significantly when
+managing dependencies, such as the Sponge API, for your project. This is preferable to including the <code class="docutils literal"><span class="pre">.jar</span></code> file in
+your project.</p>
 <div class="section" id="gradle">
 <h3>Gradle<a class="headerlink" href="#gradle" title="Link zu dieser Überschrift">¶</a></h3>
-<p><strong>Ein Projekt erstellen:</strong></p>
+<p><strong>To create your project:</strong></p>
 <ul class="simple">
 <li><p class="first">Starte <strong>IntelliJ IDEA</strong>.</p>
 </li>
@@ -546,18 +548,15 @@
 </li>
 <li><p class="first">Trage deine <strong>Group ID</strong>, <strong>Artifact ID</strong> und <strong>Version</strong> ein.</p>
 <ul>
-<li><p class="first">Deine <strong>Group ID</strong> sollte dem Namen deiner Organisation or ähnlichem entsprechen.</p>
-</li>
-<li><p class="first">Deine <strong>Artifact ID</strong> entspricht dem Namen deines Projektes.</p>
-</li>
-<li><p class="first">Die <strong>Version</strong> kannst du selbst nach Belieben festlegen.</p>
-</li>
+<li>Your <strong>Group ID</strong> should correspond to your organization name, or something similar.</li>
+<li>Your <strong>Artifact ID</strong> should correspond to your project name.</li>
+<li>Your <strong>Version</strong> is up to you.</li>
 </ul>
 </li>
 <li><p class="first">Klicke zweimal <code class="docutils literal"><span class="pre">Next</span></code>, gebe deinen Projekt einen Namen und klicke <code class="docutils literal"><span class="pre">Finish</span></code>.</p>
 </li>
 </ul>
-<p><strong>Die Sponge-API als Abhängigkeit importieren</strong></p>
+<p><strong>To import the Sponge API as a dependency:</strong></p>
 <ul class="simple">
 <li><p class="first">Öffne die Datei <code class="docutils literal"><span class="pre">build.gradle</span></code> im Navigator und füge die Abhängigkeiten hinzu.</p>
 </li>
@@ -570,7 +569,7 @@
 </div>
 <div class="section" id="maven">
 <h3>Maven<a class="headerlink" href="#maven" title="Link zu dieser Überschrift">¶</a></h3>
-<p><strong>Ein Projekt erstellen:</strong></p>
+<p><strong>To create your project:</strong></p>
 <ul class="simple">
 <li><p class="first">Starte <strong>IntelliJ IDEA</strong>.</p>
 </li>
@@ -580,12 +579,9 @@
 </li>
 <li><p class="first">Trage deine <strong>Group ID</strong>, <strong>Artifact ID</strong> und <strong>Version</strong> ein.</p>
 <ul>
-<li><p class="first">Deine <strong>Group ID</strong> sollte dem Namen deiner Organisation or ähnlichem entsprechen.</p>
-</li>
-<li><p class="first">Deine <strong>Artifact ID</strong> entspricht dem Namen deines Projektes.</p>
-</li>
-<li><p class="first">Die <strong>Version</strong> kannst du selbst nach Belieben festlegen.</p>
-</li>
+<li>Your <strong>Group ID</strong> should correspond to your organization name, or something similar.</li>
+<li>Your <strong>Artifact ID</strong> should correspond to your project name.</li>
+<li>Your <strong>Version</strong> is up to you.</li>
 </ul>
 </li>
 <li><p class="first">Klicke <code class="docutils literal"><span class="pre">Next</span></code>.</p>
@@ -593,10 +589,9 @@
 <li><p class="first">Trage deinen Projektnamen ein und klicke auf``Finish``.</p>
 </li>
 </ul>
-<p><strong>Die Sponge-API als Abhängigkeit importieren</strong></p>
+<p><strong>To import the Sponge API as a dependency:</strong></p>
 <ul class="simple">
-<li><p class="first">Öffne die <code class="docutils literal"><span class="pre">pom.xml</span></code> im Navigator.</p>
-</li>
+<li>Open <code class="docutils literal"><span class="pre">pom.xml</span></code> in the navigator.</li>
 <li><p class="first">Wähle (mit aktivem Editor-Tab) <code class="docutils literal"><span class="pre">Code</span> <span class="pre">&gt;</span> <span class="pre">Generate</span></code> aus.</p>
 </li>
 <li><p class="first">Wähle <code class="docutils literal"><span class="pre">Dependency</span></code> im Menü aus.</p>

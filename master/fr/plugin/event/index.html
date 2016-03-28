@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Utilisation des événements &mdash; documentation Sponge 4.0.3</title>
+     <title>Working with Events &mdash; documentation Sponge 4.0.3</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -33,7 +33,7 @@
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="documentation Sponge 4.0.3" href="../../index.html" />
         <link rel="up" title="Création d’un Plugin" href="../index.html" />
-        <link rel="next" title="Les Event Listeners" href="listeners.html" />
+        <link rel="next" title="Event Listeners" href="listeners.html" />
         <link rel="prev" title="API pour Commandes de Bas Niveau" href="../commands/commandcallable.html" />
     
   <script type="text/javascript">
@@ -167,7 +167,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../index.html">Table des Matières</a></h3>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Création d&#8217;un serveur</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Créer un serveur</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../server/getting-started/index.html">Premiers pas</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/jre.html">Installation de Java</a><ul class="simple">
 </ul>
@@ -177,7 +177,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/implementations/index.html">Choisir une implémentation</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">Installer SpongeForge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">Installation de SpongeVanilla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">Installer SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/launch-script.html">Création d&#8217;un script de lancement</a><ul class="simple">
@@ -319,8 +319,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Utilisation des événements</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="listeners.html">Les Event Listeners</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="">Working with Events</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="causes.html">Event Causes</a><ul class="simple">
@@ -329,7 +329,7 @@
 <li class="toctree-l3"><a class="reference internal" href="filters.html">Filtres d&#8217;événement</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="custom.html">Création d&#8217;Événements Personnalisés</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -383,7 +383,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../items/index.html">Travailler avec les objets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../items/index.html">Working with Items</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../items/usage.html">Basic Item Usage</a><ul class="simple">
 </ul>
 </li>
@@ -445,7 +445,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contribuer à Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing to Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">Lignes directrices des contributions</a><ul class="simple">
 </ul>
 </li>
@@ -528,17 +528,21 @@
                 <div class="body" role="main">
                   
   <div class="section" id="working-with-events">
-<h1>Utilisation des événements<a class="headerlink" href="#working-with-events" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Les événements sont utilisés pour informer le plugin de certains faits qui se produisent. Beaucoup d&#8217;événements peuvent également être <em>annulés</em> &#8211; c&#8217;est à dire que l&#8217;action à laquelle fait référence l&#8217;événement peut être empêchée. Les événements annulables implémentent l&#8217;interface <code class="docutils literal"><span class="pre">Cancellable</span></code>.</p>
-<p>Sponge lui-même contient plusieurs événements; Toutefois, les plugins peuvent créer leurs propres événements que les autres plugins peuvent écouter.</p>
-<p>Les event listeners ont une priorité qui leur est assignée dans le but de déterminer l&#8217;ordre dans lequel ils sont exécutés par rapport à d&#8217;autres event listeners (comme ceux d&#8217;autres plugins). Par exemple, un event listener ayant une priorité <code class="docutils literal"><span class="pre">EARLY</span></code> reviendra avant la plupart des autres event listeners.</p>
-<p>Les événements ne peuvent pas être envoyés qu&#8217;à un groupe spécifique de plugins. Tous les plugins qui écoutent un événement seront notifiés quand celui-ci se produit.</p>
-<p>Le bus d&#8217;événements ou gestionnaire d&#8217;événements est une classe qui garde une trace de quels plugins écoutent quels événements, et est également chargé de l&#8217;envoi des événements aux event listeners.</p>
+<h1>Working with Events<a class="headerlink" href="#working-with-events" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Events are used to inform plugins of certain happenings. Many events can also be <em>cancelled</em> &#8211; that is, the action that
+the event refers to can be prevented from occurring. Cancellable events implement the <code class="docutils literal"><span class="pre">Cancellable</span></code> interface.</p>
+<p>Sponge itself contains many events; however, plugins can create their own events which other plugins can listen to.</p>
+<p>Event listeners are assigned a priority that determines the order in which the event listener is run in context of other
+event listeners (such as those from other plugins). For example, an event listener with <code class="docutils literal"><span class="pre">EARLY</span></code> priority will return
+before most other event listeners.</p>
+<p>Events cannot be sent to a specific set of plugins. All plugins that listen to an event will be notified of the event.</p>
+<p>The event bus or event manager is the class that keeps track of which plugins are listening to which event,
+and is also responsible for distributing events to event listeners.</p>
 <div class="section" id="contents">
-<h2>Contenu<a class="headerlink" href="#contents" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Contents<a class="headerlink" href="#contents" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="listeners.html">Les Event Listeners</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="causes.html">Event Causes</a><ul class="simple">
@@ -547,7 +551,7 @@
 <li class="toctree-l1"><a class="reference internal" href="filters.html">Filtres d&#8217;événement</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="custom.html">Création d&#8217;Événements Personnalisés</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>

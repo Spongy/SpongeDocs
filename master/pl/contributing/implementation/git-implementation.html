@@ -149,7 +149,7 @@
       <div class="breadcrumbs">
         <ul>
         <li><a href="../../index.html">Sponge 4.0.3 - dokumentacja</a><i class="icon-right-open lights-icon"></i></li>
-        <li><a href="../index.html" >Twój wkład w Sponge</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="../index.html" >Contributing to Sponge</a><i class="icon-right-open lights-icon"></i></li>
         <li><a href="index.html" accesskey="U">Praca nad rozwojem Sponge</a><i class="icon-right-open lights-icon"></i></li>
         </ul>
       </div> 
@@ -168,7 +168,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../index.html">Spis treści</a></h3>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Tworzenie serwera</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Creating a Server</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../server/getting-started/index.html">Wprowadzenie</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/jre.html">Instalacja Java</a><ul class="simple">
 </ul>
@@ -320,7 +320,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/event/index.html">Praca ze zdarzeniami</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/event/index.html">Working with Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -330,7 +330,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/event/filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/custom.html">Tworzenie zdarzeń niestandardowych:</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -446,7 +446,7 @@
 </li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Twój wkład w Sponge</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Contributing to Sponge</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../guidelines.html">Zasady współpracy</a><ul class="simple">
 </ul>
 </li>
@@ -539,7 +539,10 @@
 <h2>Rozwijanie wdrożeń<a class="headerlink" href="#developing-the-implementation" title="Stały odnośnik do tego nagłówka">¶</a></h2>
 <p>Proces implementacji jest prawie taki sam jak dla interfejsu API. Musisz dodać swoje zmiany zgodne z opisem w <a class="reference internal" href="../howtogit.html"><em>Praca z Git(Hub)</em></a>. Należy pamiętaż, że musisz nadać swojej gałęzi wyrazistą nazwę. Nowy model rozgałęzienia musi wiedzieć, o które rozgałęzienie trzeba oprzeć swoje PRs i gdzie powinien później połączone. Przeczytaj o nowych rozgałęzieniach i wersji modelu tutaj <a class="reference internal" href="../versioning.html"><em>System wersji i układu repozytorium Branch</em></a></p>
 <p>Rozpocznij <code class="docutils literal"><span class="pre">gradle</span> <span class="pre">compileJava</span></code>, aby sprawdzić czy wszystko kompiluje się bez błędów.</p>
-<p>Odkąd pracujesz nad realizacją, to istnieje możliwość że twoje zmiany zostaną wdrożone do interfejsu API. To jest w porządku. Wystarczy pamiętać, aby być pewnym dla jakiej wersji SpongeAPI aktualnie pracuje i przed zatwierdzeniem należy dodać do zatwierdzanych modułów (użyć <code class="docutils literal"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">SpongeAPI</span></code> lub/i <code class="docutils literal"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">Mixin</span></code>) przed zatwierdzeniem wykonania pracy.</p>
+<p>Since you are working on the implementation, there is a possibility that your work included changes in the API. This is
+okay. Just remember to ensure the pointers for the version of the SpongeAPI match the version of your branch prior to
+committing and pushing. To do this, you may need to add the submodules to the commit (with <code class="docutils literal"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">SpongeAPI</span></code> and/or
+<code class="docutils literal"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">Mixin</span></code>) prior to committing on your implementation work.</p>
 <p>Możesz otworzyć żądanie replikacji którą pobrałeś, skoro zatwierdzenie jest wepchnięte w twoje widelce lub repozytorium.</p>
 </div>
 </div>

@@ -168,7 +168,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../index.html">Table des Matières</a></h3>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Création d&#8217;un serveur</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Créer un serveur</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../server/getting-started/index.html">Premiers pas</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/jre.html">Installation de Java</a><ul class="simple">
 </ul>
@@ -178,7 +178,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/implementations/index.html">Choisir une implémentation</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">Installer SpongeForge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">Installation de SpongeVanilla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">Installer SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/launch-script.html">Création d&#8217;un script de lancement</a><ul class="simple">
@@ -320,8 +320,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Utilisation des événements</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Les Event Listeners</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Working with Events</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../event/causes.html">Event Causes</a><ul class="simple">
@@ -330,7 +330,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Filtres d&#8217;événement</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Création d&#8217;Événements Personnalisés</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -384,7 +384,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../items/index.html">Travailler avec les objets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../items/index.html">Working with Items</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../items/usage.html">Basic Item Usage</a><ul class="simple">
 </ul>
 </li>
@@ -446,7 +446,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contribuer à Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing to Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">Lignes directrices des contributions</a><ul class="simple">
 </ul>
 </li>
@@ -543,7 +543,9 @@ an instance of the command, and any needed aliases as parameters.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Les paramètres qui suivent la nouvelle instance de votre commande sont les alias pour enregistrer la commande. Vous pouvez ajouter autant de chaînes de caractères (String) que vous le souhaitez. Le premier alias qui n&#8217;est pas utilisé par une autre commande devient l&#8217;alias primaire. Cela signifie que les alias utilisés par une autre commande seront ignorés.</p>
+<p class="last">The arguments after the new instance of your command are the aliases to register for the command. You can add as
+many Strings as you want. The first alias that isn&#8217;t used by another command becomes the primary alias. This means
+aliases used by another command are ignored.</p>
 </div>
 <p>The <code class="docutils literal"><span class="pre">CommandManager</span></code> can also be used to call a command programatically:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">cmdManager</span><span class="o">.</span><span class="na">process</span><span class="o">(</span><span class="n">player</span><span class="o">,</span> <span class="s">&quot;msg Notch hi notch!&quot;</span><span class="o">);</span>

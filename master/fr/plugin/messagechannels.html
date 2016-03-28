@@ -167,7 +167,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../index.html">Table des Matières</a></h3>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Création d&#8217;un serveur</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Créer un serveur</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../server/getting-started/index.html">Premiers pas</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/jre.html">Installation de Java</a><ul class="simple">
 </ul>
@@ -177,7 +177,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/implementations/index.html">Choisir une implémentation</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongeforge.html">Installer SpongeForge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongevanilla.html">Installation de SpongeVanilla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongevanilla.html">Installer SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/launch-script.html">Création d&#8217;un script de lancement</a><ul class="simple">
@@ -319,8 +319,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="event/index.html">Utilisation des événements</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="event/listeners.html">Les Event Listeners</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="event/index.html">Working with Events</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="event/causes.html">Event Causes</a><ul class="simple">
@@ -329,7 +329,7 @@
 <li class="toctree-l3"><a class="reference internal" href="event/filters.html">Filtres d&#8217;événement</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="event/custom.html">Création d&#8217;Événements Personnalisés</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="event/custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -383,7 +383,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="items/index.html">Travailler avec les objets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="items/index.html">Working with Items</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="items/usage.html">Basic Item Usage</a><ul class="simple">
 </ul>
 </li>
@@ -445,7 +445,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contribuer à Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../contributing/guidelines.html">Lignes directrices des contributions</a><ul class="simple">
 </ul>
 </li>
@@ -539,7 +539,7 @@ commonly used channels. There are also other classes and interfaces that can be 
 such as <code class="docutils literal"><span class="pre">AbstractMutableMessageChannel</span></code> and <code class="docutils literal"><span class="pre">MutableMessageChannel</span></code>. A complete list of these can be found at
 <code class="docutils literal"><span class="pre">org.spongepowered.api.text.channel</span></code> and its sub-packages.</p>
 <div class="section" id="broadcasting">
-<h3>Diffusion<a class="headerlink" href="#broadcasting" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Broadcasting<a class="headerlink" href="#broadcasting" title="Lien permanent vers ce titre">¶</a></h3>
 <p>The most common channel will be the broadcasting channel. It can be obtained either from the <code class="docutils literal"><span class="pre">Server</span></code> via the
 <code class="docutils literal"><span class="pre">getBroadcastChannel()</span></code> method or from either the <code class="docutils literal"><span class="pre">MessageChannel.TO_PLAYERS</span></code> or <code class="docutils literal"><span class="pre">MessageChannel.TO_ALL</span></code>
 constant. The only difference is that <code class="docutils literal"><span class="pre">TO_ALL</span></code> includes not only every player connected to the server but also the
@@ -557,7 +557,7 @@ This means that if for example a player disconnects and the corresponding <code 
 <em>garbage collector</em>, that player will also vanish from the channels recipient list.</p>
 </div>
 <div class="section" id="permission-based-selection">
-<h3>Sélection basée sur les Permissions<a class="headerlink" href="#permission-based-selection" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Permission-based Selection<a class="headerlink" href="#permission-based-selection" title="Lien permanent vers ce titre">¶</a></h3>
 <p>It is also possible to create a channel sending to all recipients that hold a specific permission. The channel is
 obtained from the <code class="docutils literal"><span class="pre">MessageChannel.permission(String</span> <span class="pre">permission)</span></code> method with the permission to check for as an
 argument. When a message is then sent through this channel, it will obtain all subjects from the <code class="docutils literal"><span class="pre">PermissionManager</span></code>
@@ -578,7 +578,7 @@ used for identification or for performing other various actions. Alternatively, 
 where the message will be sent to. Using the <code class="docutils literal"><span class="pre">send(Object</span> <span class="pre">sender,</span> <span class="pre">Text</span> <span class="pre">message,</span> <span class="pre">ChatType</span> <span class="pre">type)</span></code> method will allow you
 to accomplish this. The channel will then transform the message for every recipient and send the transformed message.</p>
 <div class="section" id="extended-application-chat-channels">
-<h3>Application étendue: Canaux de discussion<a class="headerlink" href="#extended-application-chat-channels" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Extended Application: Chat Channels<a class="headerlink" href="#extended-application-chat-channels" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Message channels have a very useful application as they can be used to establish chat channels. For example, you could
 establish a message channel for every chat channel you wish to have. Then, when a <code class="docutils literal"><span class="pre">MessageReceiver</span></code> joins a channel,
 such as with <code class="docutils literal"><span class="pre">/join</span> <span class="pre">&lt;channel</span> <span class="pre">name&gt;</span></code>, simply set the <code class="docutils literal"><span class="pre">MessageReceiver</span></code>&#8216;s <code class="docutils literal"><span class="pre">MessageChannel</span></code> to the appropriate

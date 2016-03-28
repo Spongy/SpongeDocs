@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>SpongeVanillaのインストール &mdash; Sponge 4.0.3 ドキュメント</title>
+     <title>Installing SpongeVanilla &mdash; Sponge 4.0.3 ドキュメント</title>
     
   <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/sponge.css" type="text/css" />
@@ -149,7 +149,7 @@
       <div class="breadcrumbs">
         <ul>
         <li><a href="../../../index.html">Sponge 4.0.3 ドキュメント</a><i class="icon-right-open lights-icon"></i></li>
-        <li><a href="../../index.html" >サーバーの作成</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="../../index.html" >Creating a Server</a><i class="icon-right-open lights-icon"></i></li>
         <li><a href="../index.html" >はじめに</a><i class="icon-right-open lights-icon"></i></li>
         <li><a href="index.html" accesskey="U">実装の選択</a><i class="icon-right-open lights-icon"></i></li>
         </ul>
@@ -169,7 +169,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../../index.html">目次</a></h3>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">サーバーの作成</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Creating a Server</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">はじめに</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../jre.html">Java のインストール</a><ul class="simple">
 </ul>
@@ -179,7 +179,7 @@
 </li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">実装の選択</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="spongeforge.html">Installing SpongeForge</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">SpongeVanillaのインストール</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">Installing SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../launch-script.html">起動スクリプトの作成</a><ul class="simple">
@@ -321,7 +321,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/event/index.html">イベント操作</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/event/index.html">Working with Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -331,7 +331,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/custom.html">カスタムイベントを作成</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -447,7 +447,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../contributing/index.html">Spongeに貢献</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing/index.html">Contributing to Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../contributing/guidelines.html">コントリビューション ガイドライン</a><ul class="simple">
 </ul>
 </li>
@@ -485,7 +485,7 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">Sponge Projectについて</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../about/introduction.html">はじめに</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../about/introduction.html">Introduction</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html">よくある質問</a><ul class="simple">
@@ -530,33 +530,31 @@
                 <div class="body" role="main">
                   
   <div class="section" id="installing-spongevanilla">
-<h1>SpongeVanillaのインストール<a class="headerlink" href="#installing-spongevanilla" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<h1>Installing SpongeVanilla<a class="headerlink" href="#installing-spongevanilla" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>SpongeVanilla は、スタンドアローンサーバーとしての、 Sponge API のバニラ実装です。</p>
 <div class="section" id="overview">
 <h2>概要<a class="headerlink" href="#overview" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>SpongeVanilla は Sponge API の Minecraft バニラサーバーにパッチを適用することにとって作成された実装です。 これはスタンドアローンサーバーを意味しており、 Minecraft Forge や Forge mod loader(FML) を必要としません。SpongeVanilla は Forge サーバーを実行したくないユーザーのための、代替プラットフォームをして、Sponge の Forge バージョンと平行して開発されています。もともとは、<strong>AzureusNation</strong> と <strong>VoltaSalt</strong> により、独立した Granite という名前のプロジェクトとしてスタートしており、  SpongeVanilla チームは2015年3月に、公式に開発チームに参加しました。</p>
 </div>
 <div class="section" id="download">
-<h2>ダウンロード<a class="headerlink" href="#download" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Download<a class="headerlink" href="#download" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Check <a class="reference internal" href="../../../downloads.html"><em>ダウンロード</em></a> for further information.</p>
 </div>
 <div class="section" id="id1">
-<h2>SpongeVanillaのインストール<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Installing SpongeVanilla<a class="headerlink" href="#id1" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>SpongeVanilla only works as a dedicated server.</p>
 <ol class="arabic simple">
-<li><p class="first">SpongeVanilla .jar をSpongeのウェブサイトからダウンロードします。</p>
-</li>
-<li><p class="first">コマンドラインから実行します: <code class="docutils literal"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">spongevanilla-whatever.jar</span></code></p>
-</li>
+<li>Download the SpongeVanilla .jar from the Sponge website.</li>
+<li>Run it via command line: <code class="docutils literal"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">spongevanilla-whatever.jar</span></code></li>
 <li>Set up <a class="reference internal" href="../port-forward.html"><em>ポートフォワーディング (ポート開放)</em></a> to ensure others can connect.</li>
 </ol>
 <div class="admonition warning">
 <p class="first admonition-title">警告</p>
-<p class="last"><code class="docutils literal"><span class="pre">.jar</span></code> ファイルをダブルクリックしないでください！</p>
+<p class="last">Don&#8217;t double-click the <code class="docutils literal"><span class="pre">.jar</span></code> file!</p>
 </div>
 </div>
 <div class="section" id="links">
-<h2>リンク<a class="headerlink" href="#links" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Links<a class="headerlink" href="#links" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="https://github.com/SpongePowered/SpongeVanilla">GitHub</a></li>
 </ul>

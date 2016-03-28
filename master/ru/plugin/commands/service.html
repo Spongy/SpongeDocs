@@ -168,7 +168,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../index.html">Оглавление</a></h3>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Создание сервера</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Creating a Server</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../server/getting-started/index.html">Начало работы</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/jre.html">Установка Java</a><ul class="simple">
 </ul>
@@ -177,8 +177,8 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/implementations/index.html">Выбор реализации</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">Установка SpongeForge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">Установка SpongeVanilla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">Installing SpongeForge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/launch-script.html">Создание сценария (скрипта) запуска</a><ul class="simple">
@@ -231,7 +231,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Подготовка к разработке</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Preparing for Development</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../preparing/jdk.html">Установка JDK</a><ul class="simple">
 </ul>
 </li>
@@ -320,7 +320,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Работа с событиями</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Working with Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -330,7 +330,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Создание собственных событий</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -446,7 +446,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Участие в разработке Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing to Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">Указания по содействию</a><ul class="simple">
 </ul>
 </li>
@@ -490,7 +490,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html">Часто задаваемые вопросы</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/structure.html">Структура Sponge</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../about/structure.html">The Structure of the Sponge Project</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/future.html">Планы на будущее</a></li>
@@ -544,7 +544,9 @@ commands from the main plugin class, use <code class="docutils literal"><span cl
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Примечание</p>
-<p class="last">Аргументы после указания экземпляра команды являются дополнительными вариантами для регистрации команды. Вы можете добавить столько, сколько вы хотите. Первый вариант, который не используется другой командой становится основным. Это означает, что варианты используемые другой командой игнорируются.</p>
+<p class="last">The arguments after the new instance of your command are the aliases to register for the command. You can add as
+many Strings as you want. The first alias that isn&#8217;t used by another command becomes the primary alias. This means
+aliases used by another command are ignored.</p>
 </div>
 <p>The <code class="docutils literal"><span class="pre">CommandManager</span></code> can also be used to call a command programatically:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">cmdManager</span><span class="o">.</span><span class="na">process</span><span class="o">(</span><span class="n">player</span><span class="o">,</span> <span class="s">&quot;msg Notch hi notch!&quot;</span><span class="o">);</span>

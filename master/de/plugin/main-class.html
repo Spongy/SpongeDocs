@@ -177,7 +177,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/implementations/index.html">Auswählen einer Implementierung</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongeforge.html">SpongeForge installieren</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongevanilla.html">SpongeVanilla Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/launch-script.html">Ein Start-Skript erstellen</a><ul class="simple">
@@ -230,7 +230,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../preparing/index.html">Die Arbeitsumgebung einrichten</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../preparing/index.html">Preparing for Development</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../preparing/jdk.html">Installieren des JDKs</a><ul class="simple">
 </ul>
 </li>
@@ -309,7 +309,7 @@
 <li class="toctree-l3"><a class="reference internal" href="commands/creating.html">Einen Befehl erstellen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="commands/arguments.html">Argument Parsing</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="commands/arguments.html">Das Parsen von Argumenten</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="commands/childcommands.html">Child Commands</a></li>
@@ -319,7 +319,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="event/index.html">Mit Events arbeiten</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="event/index.html">Working with Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -329,7 +329,7 @@
 <li class="toctree-l3"><a class="reference internal" href="event/filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="event/custom.html">Erstellen eigener Events</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="event/custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -453,7 +453,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../contributing/implementation/index.html">Developing Sponge</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/codestyle.html">Code Style</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/codestyle.html">Code Formatierung</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/git-implementation.html">Git Workflow for API and Implementations</a><ul class="simple">
@@ -489,7 +489,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../about/faq.html">Häufig gestellte Fragen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../about/structure.html">Die Struktur des Sponge Projekts</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../about/structure.html">The Structure of the Sponge Project</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../about/future.html">Zukunftspläne</a></li>
@@ -577,12 +577,12 @@ game. In the example below, <code class="docutils literal"><span class="pre">onS
 </div>
 <div class="admonition tip">
 <p class="first admonition-title">Tipp</p>
-<p class="last">The Sponge documentation provides a guide with more information on events (see <a class="reference internal" href="event/index.html"><em>Mit Events arbeiten</em></a>). Normally, in addition
+<p class="last">The Sponge documentation provides a guide with more information on events (see <a class="reference internal" href="event/index.html"><em>Working with Events</em></a>). Normally, in addition
 to prefixing event-handler methods with <code class="docutils literal"><span class="pre">&#64;Listener</span></code>, you must also register your object with Sponge&#8217;s event bus.
 However, your main plugin class is registered automatically.</p>
 </div>
 <div class="section" id="state-events">
-<h3>Status Events<a class="headerlink" href="#state-events" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>State Events<a class="headerlink" href="#state-events" title="Link zu dieser Überschrift">¶</a></h3>
 <p>It may also be desirable to listen for other state events, particularly the <code class="docutils literal"><span class="pre">GameStoppingServerEvent</span></code>. There are two
 categories of state events:</p>
 <ul class="simple">

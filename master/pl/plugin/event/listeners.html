@@ -32,9 +32,9 @@
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 4.0.3 - dokumentacja" href="../../index.html" />
-        <link rel="up" title="Praca ze zdarzeniami" href="index.html" />
+        <link rel="up" title="Working with Events" href="index.html" />
         <link rel="next" title="Event Causes" href="causes.html" />
-        <link rel="prev" title="Praca ze zdarzeniami" href="index.html" />
+        <link rel="prev" title="Working with Events" href="index.html" />
     
   <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -150,7 +150,7 @@
         <ul>
         <li><a href="../../index.html">Sponge 4.0.3 - dokumentacja</a><i class="icon-right-open lights-icon"></i></li>
         <li><a href="../index.html" >Tworzenie pluginu</a><i class="icon-right-open lights-icon"></i></li>
-        <li><a href="index.html" accesskey="U">Praca ze zdarzeniami</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="index.html" accesskey="U">Working with Events</a><i class="icon-right-open lights-icon"></i></li>
         </ul>
       </div> 
     <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -168,7 +168,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../index.html">Spis treści</a></h3>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Tworzenie serwera</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Creating a Server</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../server/getting-started/index.html">Wprowadzenie</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/jre.html">Instalacja Java</a><ul class="simple">
 </ul>
@@ -320,7 +320,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Praca ze zdarzeniami</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Working with Events</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -330,7 +330,7 @@
 <li class="toctree-l3"><a class="reference internal" href="filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="custom.html">Tworzenie zdarzeń niestandardowych:</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -446,7 +446,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Twój wkład w Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing to Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">Zasady współpracy</a><ul class="simple">
 </ul>
 </li>
@@ -634,7 +634,7 @@ cancellable and has been cancelled (such as by another plugin).</p>
 </div>
 </div>
 <div class="section" id="firing-events">
-<h2>Wywoływanie zdarzeń<a class="headerlink" href="#firing-events" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<h2>Firing Events<a class="headerlink" href="#firing-events" title="Stały odnośnik do tego nagłówka">¶</a></h2>
 <p>To dispatch an event, you need an object that implements the <code class="docutils literal"><span class="pre">org.spongepowered.api.event.Event</span></code> interface.</p>
 <p>You can fire events using the event bus (<code class="docutils literal"><span class="pre">org.spongepowered.api.service.event.EventManager</span></code>):</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kt">boolean</span> <span class="n">cancelled</span> <span class="o">=</span> <span class="n">Sponge</span><span class="o">.</span><span class="na">getEventManager</span><span class="o">().</span><span class="na">post</span><span class="o">(</span><span class="n">theEventObject</span><span class="o">);</span>
@@ -642,7 +642,7 @@ cancellable and has been cancelled (such as by another plugin).</p>
 </div>
 <p>The method returns <code class="docutils literal"><span class="pre">true</span></code> if the event was cancelled, <code class="docutils literal"><span class="pre">false</span></code> if not.</p>
 <div class="section" id="firing-sponge-events">
-<h3>Wywoływanie zdarzeń Sponge<a class="headerlink" href="#firing-sponge-events" title="Stały odnośnik do tego nagłówka">¶</a></h3>
+<h3>Firing Sponge Events<a class="headerlink" href="#firing-sponge-events" title="Stały odnośnik do tego nagłówka">¶</a></h3>
 <p>It is possible to generate instances of built-in events with the static <code class="docutils literal"><span class="pre">SpongeEventFactory</span></code>. The events created by
 the <code class="docutils literal"><span class="pre">SpongeEventFactory</span></code> are then passed to <code class="docutils literal"><span class="pre">EventManager#post</span></code>.</p>
 </div>

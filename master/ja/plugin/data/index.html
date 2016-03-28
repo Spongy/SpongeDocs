@@ -167,7 +167,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../index.html">目次</a></h3>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">サーバーの作成</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Creating a Server</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../server/getting-started/index.html">はじめに</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/jre.html">Java のインストール</a><ul class="simple">
 </ul>
@@ -177,7 +177,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/implementations/index.html">実装の選択</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">Installing SpongeForge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">SpongeVanillaのインストール</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/launch-script.html">起動スクリプトの作成</a><ul class="simple">
@@ -319,7 +319,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../event/index.html">イベント操作</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Working with Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -329,7 +329,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">カスタムイベントを作成</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -445,7 +445,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Spongeに貢献</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing to Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">コントリビューション ガイドライン</a><ul class="simple">
 </ul>
 </li>
@@ -483,7 +483,7 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../about/index.html">Sponge Projectについて</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">はじめに</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">Introduction</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html">よくある質問</a><ul class="simple">
@@ -544,7 +544,7 @@ specific values is no less straightforward.</p>
 <a class="reference external" href="https://forums.spongepowered.org">Forums</a> to find out if the data you need to work with is available yet.</p>
 </div>
 <div class="section" id="concepts">
-<h2>コンセプト<a class="headerlink" href="#concepts" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Concepts<a class="headerlink" href="#concepts" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>On first glance at the API docs, the data API threatens to overwhelm you with lots of interfaces and packages. But
 to simply use the data API, you will not have to deal with many of them, as most interfaces found there are just
 specific data manipulators.</p>
@@ -557,7 +557,7 @@ cannot use. In those cases, the return values of the methods will provide the in
 available (via <code class="docutils literal"><span class="pre">Optional.empty()</span></code>) or not accepted (via the <a class="reference internal" href="transactions.html"><em>DataTransactionResult</em></a>).</p>
 </div>
 <div class="section" id="property">
-<h3>プロパティ<a class="headerlink" href="#property" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>Property<a class="headerlink" href="#property" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>A property too is data, but not synchronized between server and clients. Therefore, it can only be
 changed by modifications present on both client and server. Since Sponge is not intended to require a
 client-side counterpart, properties are not modifiable.
@@ -573,7 +573,7 @@ the re-use of such components over the API and prevents duplication of accessor 
 glass blocks and leather armor all can share the <code class="docutils literal"><span class="pre">DyeableData</span></code> holding the color they are dyed in.</p>
 </div>
 <div class="section" id="key">
-<h3>キー<a class="headerlink" href="#key" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>Key<a class="headerlink" href="#key" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>A <code class="docutils literal"><span class="pre">Key</span></code> is a unique identifier for a single point of data and can be used to directly read or set that point of
 data without worrying about data manipulators. It was designed to provide a convenient way of accessing data
 similar to direct getter/setter methods. All keys used within Sponge are listed as constants in the
@@ -588,7 +588,7 @@ which the value is identified.</p>
 </div>
 </div>
 <div class="section" id="contents">
-<h2>コンテンツ<a class="headerlink" href="#contents" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Contents<a class="headerlink" href="#contents" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="keys.html">Using Keys</a><ul class="simple">

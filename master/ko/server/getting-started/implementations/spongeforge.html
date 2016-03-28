@@ -33,7 +33,7 @@
       <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 4.0.3 documentation" href="../../../index.html" />
         <link rel="up" title="구현물 선택하기" href="index.html" />
-        <link rel="next" title="Sponge 바닐라 설치하기" href="spongevanilla.html" />
+        <link rel="next" title="Installing SpongeVanilla" href="spongevanilla.html" />
         <link rel="prev" title="구현물 선택하기" href="index.html" />
     
   <script type="text/javascript">
@@ -149,7 +149,7 @@
       <div class="breadcrumbs">
         <ul>
         <li><a href="../../../index.html">Sponge 4.0.3 documentation</a><i class="icon-right-open lights-icon"></i></li>
-        <li><a href="../../index.html" >서버 만들기</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="../../index.html" >Creating a Server</a><i class="icon-right-open lights-icon"></i></li>
         <li><a href="../index.html" >시작하기</a><i class="icon-right-open lights-icon"></i></li>
         <li><a href="index.html" accesskey="U">구현물 선택하기</a><i class="icon-right-open lights-icon"></i></li>
         </ul>
@@ -169,7 +169,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../../index.html">목차</a></h3>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">서버 만들기</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Creating a Server</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">시작하기</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../jre.html">Installing Java</a><ul class="simple">
 </ul>
@@ -179,7 +179,7 @@
 </li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">구현물 선택하기</a><ul class="current">
 <li class="toctree-l4 current"><a class="current reference internal" href="">Installing SpongeForge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="spongevanilla.html">Sponge 바닐라 설치하기</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spongevanilla.html">Installing SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../launch-script.html">시작 스크립트 만들기</a><ul class="simple">
@@ -485,7 +485,7 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">Sponge 프로젝트에 대하여</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../about/introduction.html">소개</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../about/introduction.html">Introduction</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html">자주 묻는 질문</a><ul class="simple">
@@ -533,9 +533,9 @@
 <h1>Installing SpongeForge<a class="headerlink" href="#installing-spongeforge" title="제목 주소">¶</a></h1>
 <p>SpongeForge integrates <a class="reference external" href="http://www.minecraftforge.net/">Minecraft Forge</a> so you can also run Minecraft Forge mods.
 In fact, it&#8217;s more like Sponge itself is a Forge mod that then loads Sponge plugins, but this is a technical detail.</p>
-<p>Users who do not want to use Minecraft Forge can consider <a class="reference internal" href="spongevanilla.html"><em>Sponge 바닐라 설치하기</em></a>.</p>
+<p>Users who do not want to use Minecraft Forge can consider <a class="reference internal" href="spongevanilla.html"><em>Installing SpongeVanilla</em></a>.</p>
 <div class="section" id="download">
-<h2>다운로드<a class="headerlink" href="#download" title="제목 주소">¶</a></h2>
+<h2>Download<a class="headerlink" href="#download" title="제목 주소">¶</a></h2>
 <p>Check <a class="reference internal" href="../../../downloads.html"><em>다운로드</em></a> for further information.</p>
 </div>
 <div class="section" id="reading-the-download-filename">
@@ -585,7 +585,7 @@ code whenever they want to, its normal guarantee of backwards-compatibility does
 <h2>Installing SpongeForge<a class="headerlink" href="#id1" title="제목 주소">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">주석</p>
-<p class="last">당신이 게임 서버 호스팅을 사용한다면 (또는 할 것이라면), 그쪽에서 제공하는 컨트롤 패널로 Sponge 를 자동으로 설치할 수 있을 것입니다.</p>
+<p class="last">If you use (or are planning to use) a game server host, they may have a control panel that can install Sponge for you.</p>
 </div>
 <div class="admonition warning">
 <p class="first admonition-title">경고</p>
@@ -595,26 +595,22 @@ requires <strong>at least</strong> <code class="docutils literal"><span class="p
 <a class="reference external" href="https://minecraft.net/download">official Minecraft Launcher</a></p>
 </div>
 <div class="section" id="single-player-in-game-lan-servers">
-<h3>싱글 플레이어 / 게임 내 LAN 서버<a class="headerlink" href="#single-player-in-game-lan-servers" title="제목 주소">¶</a></h3>
+<h3>Single Player / In-Game LAN Servers<a class="headerlink" href="#single-player-in-game-lan-servers" title="제목 주소">¶</a></h3>
 <ol class="arabic simple">
 <li>Download the Minecraft Forge installer from the <a class="reference external" href="http://files.minecraftforge.net/">Minecraft Forge website</a>. Make
 sure to use <strong>exactly the same build number</strong> as <a class="reference internal" href=""><em>the one listed in the filename of the Sponge download</em></a>.</li>
-<li><p class="first">다운받은 Forge 설치기를 실행하세요. 설치가 끝나면, 마인크래프트 런처에 새로운 Forge 프로파일이 생성될 것입니다.</p>
-</li>
-<li><p class="first">마인크래프트 런처를 켜고, 생성된 Forge 프로파일을 선택하세요.</p>
-</li>
-<li><p class="first">&#8220;Options&#8221; 을 클릭하고 &#8220;Open Game Dir&#8221; 를 클릭하세요.</p>
-</li>
+<li>Run the provided Forge installer. A new Forge profile will be created in the Minecraft launcher.</li>
+<li>Open the Minecraft launcher, and select the new Forge profile.</li>
+<li>Click &#8220;Options&#8221; and click &#8220;Open Game Dir&#8221;.</li>
 <li>Download SpongeForge from the Sponge website and put it into the <code class="docutils literal"><span class="pre">mods</span></code> folder. Create the folder if it does
 not yet exist.</li>
-<li><p class="first">Sponge 는 싱글 플레이와 LAN 서버에서 모두 작동합니다.</p>
-</li>
+<li>Sponge should work in both in single player and if you open your world to LAN.</li>
 </ol>
 <p>Next, learn how you can <a class="reference internal" href="../configuration/index.html"><em>configure Sponge</em></a> and how to
 <a class="reference internal" href="../../management/index.html"><em>manage your instance of Sponge</em></a> (including installing plugins).</p>
 </div>
 <div class="section" id="dedicated-servers">
-<h3>멀티플레이 서버<a class="headerlink" href="#dedicated-servers" title="제목 주소">¶</a></h3>
+<h3>Dedicated Servers<a class="headerlink" href="#dedicated-servers" title="제목 주소">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">주석</p>
 <p class="last">If you already have a Forge server, just put the Sponge mod into your <code class="docutils literal"><span class="pre">mods</span></code> folder. Remember to update your Forge
@@ -637,8 +633,8 @@ Example: <code class="docutils literal"><span class="pre">wget</span> <span clas
 <ol class="arabic simple">
 <li>Download the Minecraft Forge installer from the <a class="reference external" href="http://files.minecraftforge.net/">Minecraft Forge website</a> for the version
 matching the one listed <a class="reference internal" href=""><em>in the filename of the SpongeForge download</em></a>.</li>
-<li><p class="first">다운받은 Forge 설치기를 실행하세요. &#8220;Install Server&#8221; 를 선택한 뒤, 서버 파일이 저장될 빈 폴더를 선택하세요. 그리고 OK 를 누르세요.</p>
-</li>
+<li>Run the provided Forge installer, select &#8220;Install Server&#8221;, choose an empty folder to place the server&#8217;s files,
+and then click OK.</li>
 <li>Continue to Adding SpongeForge to Forge below.</li>
 </ol>
 </div>
@@ -647,8 +643,7 @@ matching the one listed <a class="reference internal" href=""><em>in the filenam
 <ol class="arabic simple">
 <li>Download SpongeForge from the Sponge website and put it into the <code class="docutils literal"><span class="pre">mods</span></code> folder in your server directory.
 Create the folder if it does not yet exist.</li>
-<li><p class="first">이제 준비한 서버를 커맨드 또는 실행 스크립트 <code class="docutils literal"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">forge-버전.jar</span></code> 로 동작시키면 됩니다.</p>
-</li>
+<li>You may now launch the server via command or launch script <code class="docutils literal"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">forge-version-XYZ.jar</span></code>.</li>
 <li>If operating from home, set up <a class="reference internal" href="../port-forward.html"><em>포트 포워딩</em></a> to ensure others can connect.</li>
 </ol>
 <p>Next, learn how you can create and use a <a class="reference internal" href="../launch-script.html"><em>launch-script</em></a>,
@@ -657,7 +652,7 @@ Create the folder if it does not yet exist.</li>
 </div>
 </div>
 <div class="section" id="links">
-<h2>링크<a class="headerlink" href="#links" title="제목 주소">¶</a></h2>
+<h2>Links<a class="headerlink" href="#links" title="제목 주소">¶</a></h2>
 <ul class="simple">
 <li><a class="reference external" href="http://spongepowered.org/">Homepage</a></li>
 <li><a class="reference external" href="https://github.com/SpongePowered/SpongeForge">GitHub</a></li>

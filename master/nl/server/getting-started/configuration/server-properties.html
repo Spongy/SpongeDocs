@@ -149,7 +149,7 @@
       <div class="breadcrumbs">
         <ul>
         <li><a href="../../../index.html">Sponge 4.0.3 documentatie</a><i class="icon-right-open lights-icon"></i></li>
-        <li><a href="../../index.html" >Een server aanmaken</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="../../index.html" >Creating a Server</a><i class="icon-right-open lights-icon"></i></li>
         <li><a href="../index.html" >Beginnen</a><i class="icon-right-open lights-icon"></i></li>
         <li><a href="index.html" accesskey="U">Sponge configureren</a><i class="icon-right-open lights-icon"></i></li>
         </ul>
@@ -169,7 +169,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../../index.html">Inhoudsopgave</a></h3>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Een server aanmaken</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Creating a Server</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">Beginnen</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../jre.html">Installing Java</a><ul class="simple">
 </ul>
@@ -321,7 +321,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/event/index.html">Werken met Events</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/event/index.html">Working with Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -331,7 +331,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/custom.html">Creëer een eigen gebeurtenis</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -447,7 +447,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../contributing/index.html">Meehelpen met Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing/index.html">Contributing to Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../contributing/guidelines.html">Richtlijnen voor het bijdragen</a><ul class="simple">
 </ul>
 </li>
@@ -752,7 +752,12 @@
 <td>integer (0-
 (2^63-1))</td>
 <td>60000</td>
-<td><p class="first">Het maximum aantal milliseconden dat een enkele tick in beslag mag nemen voordat de server waakhond de server stopt met het bericht:  &#8220;A single server tick took 60.00 seconds (should be max 0.05); Considering it to be crashed, server will forcibly shutdown&#8221;. Eens dit criteria wordt bereikt wordt System.exit(1) aangeroepen.</p>
+<td><p class="first">The maximum number of milliseconds a single tick may take
+before the server watchdog stops the server with the
+message: &#8220;A single server tick took 60.00 seconds (should
+be max 0.05); Considering it to be crashed, server will
+forcibly shutdown&#8221;. Once this criteria is met, it calls
+System.exit(1).</p>
 <blockquote class="last">
 <div><p><strong>-1</strong> - schakel waakhond volledig uit</p>
 </div></blockquote>

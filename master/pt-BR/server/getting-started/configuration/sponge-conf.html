@@ -150,7 +150,7 @@
       <div class="breadcrumbs">
         <ul>
         <li><a href="../../../index.html">Sponge 4.0.3 documentação</a><i class="icon-right-open lights-icon"></i></li>
-        <li><a href="../../index.html" >Criando um servidor</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="../../index.html" >Creating a Server</a><i class="icon-right-open lights-icon"></i></li>
         <li><a href="../index.html" >Guia de Início</a><i class="icon-right-open lights-icon"></i></li>
         <li><a href="index.html" accesskey="U">Configurando o Sponge</a><i class="icon-right-open lights-icon"></i></li>
         </ul>
@@ -170,7 +170,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../../index.html">Tabela de Conteúdo</a></h3>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Criando um servidor</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Creating a Server</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">Guia de Início</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../jre.html">Instalar o Java</a><ul class="simple">
 </ul>
@@ -179,8 +179,8 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../implementations/index.html">Escolher uma Implementação</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../implementations/spongeforge.html">Instalar o SpongeForge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../implementations/spongevanilla.html">Instalar o SpongeVanilla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../implementations/spongeforge.html">Installing SpongeForge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../launch-script.html">Criar um <em>Launch Script</em></a><ul class="simple">
@@ -233,7 +233,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../preparing/index.html">Preparando-se para o desenvolvimento</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../preparing/index.html">Preparação para Desenvolvimento</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../preparing/jdk.html">Instalar o JDK</a><ul class="simple">
 </ul>
 </li>
@@ -322,7 +322,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/event/index.html">Trabalhar com Eventos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/event/index.html">Working with Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -386,7 +386,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/items/index.html">Trabalhando com itens</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/items/index.html">Working with Items</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/items/usage.html">Basic Item Usage</a><ul class="simple">
 </ul>
 </li>
@@ -448,7 +448,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../contributing/index.html">Contribuindo para o Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing/index.html">Contributing to Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../contributing/guidelines.html">Diretrizes de Contribuição</a><ul class="simple">
 </ul>
 </li>
@@ -492,7 +492,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html">Dúvidas frequentes</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../about/structure.html">The Structure of the Sponge Project</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../about/structure.html">Estrutura do Projeto Sponge</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/future.html">Planos para o Futuro</a></li>
@@ -751,8 +751,7 @@ sponge {
 </th>
 <th class="head"><p class="first last">Predefinição</p>
 </th>
-<th class="head"><p class="first last">Descrição</p>
-</th>
+<th class="head">Description</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -768,8 +767,7 @@ sponge {
 </td>
 </tr>
 <tr class="row-even"><td>enabled</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>true</td>
 <td><p class="first last">Adiciona suporte à monitorização de posições de blocos.</p>
 </td>
@@ -780,8 +778,7 @@ sponge {
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>ip-forwarding</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>false</td>
 <td><p class="first last">Permite que o bungeecord encaminhe o endereço ip, UUID e perfil de jogo para o servidor.</p>
 </td>
@@ -810,29 +807,25 @@ sponge {
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>dump-chunks-on-deadlock</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>false</td>
 <td><p class="first last">Fazer dump das chuncks na eventualidade de haver um <em>deadlock</em>.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>dump-heap-on-deadlock</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>false</td>
 <td><p class="first last">Fazer dump do <em>heap</em> na eventualidade de haver um <em>deadlock</em>.</p>
 </td>
 </tr>
 <tr class="row-even"><td>dump-threads-on-warn</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>false</td>
 <td><p class="first last">Fazer dump do servidor na eventualidade de haver um aviso de <em>deadlock</em>.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>thread-contention-monitoring</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>false</td>
 <td><p class="first last">Ativar a <em>thread contention monitoring</em> do Java para <em>thread dumps</em>.</p>
 </td>
@@ -844,50 +837,43 @@ sponge {
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>collision-warn-size</td>
-<td><p class="first last">inteiro</p>
-</td>
+<td>integer</td>
 <td>200</td>
 <td><p class="first last">Número de entidades a colidir num sítio permitido antes de registar um aviso. O valor 0 desativa esta opção.</p>
 </td>
 </tr>
 <tr class="row-even"><td>count-warn-size</td>
-<td><p class="first last">inteiro</p>
-</td>
+<td>integer</td>
 <td>0</td>
 <td><p class="first last">Número de entidades permitidas numa dimensão antes de registar um aviso. O valor 0 desativa esta opção.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>entity-painting-respawn-delay</td>
-<td><p class="first last">inteiro</p>
-</td>
+<td>integer</td>
 <td>2</td>
 <td><p class="first last">Número de ticks antes de um quadro (painting) ser respwanado no cliente quando o conteúdo é alterado.</p>
 </td>
 </tr>
 <tr class="row-even"><td>human-player-list-remove-delay</td>
-<td><p class="first last">inteiro</p>
-</td>
+<td>integer</td>
 <td>10</td>
 <td><p class="first last">Número de ticks antes de um <em>player</em> fantasma de um jogador ser removido da lista tab. O intervalo permitido é 0 - 100.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>item-despawn-rate</td>
-<td><p class="first last">inteiro</p>
-</td>
+<td>integer</td>
 <td>6000</td>
 <td><p class="first last">O tempo em ticks antes de um item desaparecer (<em>despawn</em>).</p>
 </td>
 </tr>
 <tr class="row-even"><td>max-bounding-box-size</td>
-<td><p class="first last">inteiro</p>
-</td>
+<td>integer</td>
 <td>1000</td>
 <td><p class="first last">Tamanho máximo da caixa que contém uma entidade antes de esta ser removida. O valor 0 desativa esta opção.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>max-speed</td>
-<td><p class="first last">inteiro</p>
-</td>
+<td>integer</td>
 <td>100</td>
 <td><p class="first last">Quadrado da velocidade máxima que uma entidade pode assumir antes de ser removida. Definir para 0 para desativar</p>
 </td>
@@ -900,22 +886,19 @@ sponge {
 </td>
 </tr>
 <tr class="row-odd"><td>ambient-activation-range</td>
-<td><p class="first last">inteiro</p>
-</td>
+<td>integer</td>
 <td>32</td>
 <td><p class="first last">Raio de deteção necessário para ativar as entidades de ambiente.</p>
 </td>
 </tr>
 <tr class="row-even"><td>aquatic-activation-range</td>
-<td><p class="first last">inteiro</p>
-</td>
+<td>integer</td>
 <td>32</td>
 <td><p class="first last">Raio de deteção necessário para ativar as entidades aquáticas.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>creature-activation-range</td>
-<td><p class="first last">inteiro</p>
-</td>
+<td>integer</td>
 <td>32</td>
 <td><p class="first last">Raio de deteção necessário para ativar as criaturas.</p>
 </td>
@@ -927,30 +910,26 @@ sponge {
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>ambient (bat)</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>true</td>
 <td><p class="first last">Utilizar o raio de ativação nos morcegos.</p>
 </td>
 </tr>
 <tr class="row-even"><td>aquatic (squid)</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>true</td>
 <td><p class="first last">Utilizar o raio de ativação nas lulas.</p>
 </td>
 </tr>
 <tr class="row-odd"><td><p class="first last">creature &lt;criatura&gt;</p>
 </td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>true</td>
 <td><p class="first last">Utilizar o raio de deteção em &lt;criatura&gt;. Os valores permitidos são: chicken, cow, entityhorse, mushroomcow, ocelot, pig, rabbit, sheep, wolf.</p>
 </td>
 </tr>
 <tr class="row-even"><td>enabled</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>true</td>
 <td><p class="first last">Utilizar o raio de deteção em entidades do Minecraft.</p>
 </td>
@@ -962,8 +941,7 @@ sponge {
 </tr>
 <tr class="row-even"><td><p class="first last">misc &lt;entidade&gt;</p>
 </td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>true</td>
 <td><p class="first last">Usar o raio de ativação na &lt;entidade&gt;. Valores permitidos: armorstand, arrow, boat, fallingsand, item, itemframe, leashknot, minecartchest, minecartfurnace, minecarthopper, minecartrideable, minecarttnt, villager, villagergolem, xporb.</p>
 </td>
@@ -975,22 +953,19 @@ sponge {
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>monster &lt;monster&gt;</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>true</td>
 <td><p class="first last">Usar o raio de ativação no &lt;monster&gt;. Permitidos valores: blaze, cavespider, trepadeira, enderman, endermite, ghast, gigante, guardião, lavaslime, pigzombie, silverfish, esqueleto, lodo, boneco de neve, aranha, bruxa, zumbi.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>misc-activation-range</td>
-<td><p class="first last">inteiro</p>
-</td>
+<td>integer</td>
 <td>16</td>
 <td><p class="first last">Raio de deteção necessário para ativar as entidades misc.</p>
 </td>
 </tr>
 <tr class="row-even"><td>monster-activation-range</td>
-<td><p class="first last">inteiro</p>
-</td>
+<td>integer</td>
 <td>32</td>
 <td><p class="first last">Raio de ativação dos monstros.</p>
 </td>
@@ -1001,15 +976,13 @@ sponge {
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>prevent-creative-itemstack-name-exploit</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>true</td>
 <td><p class="first last">Impede um explot em que o cliente envia um pacote com o nome do <em>itemstack</em> a exceder o limite de uma <em>string</em>.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>prevent-sign-command-exploit</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>true</td>
 <td><p class="first last">Impede um exploit em que o cliente envia um pacote para atualizar uma <em>sign</em> contendo comandos de um jogador sem permissão.</p>
 </td>
@@ -1022,15 +995,13 @@ sponge {
 </tr>
 <tr class="row-odd"><td><p class="first last"><strong>Configurações Gerais</strong></p>
 </td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>false</td>
 <td><p class="first last">Força o carregamento de chunks em <em>provide requests</em>. Isto acelera mods que não verificam se uma chunk está carregada.</p>
 </td>
 </tr>
 <tr class="row-even"><td>disable-warnings</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>false</td>
 <td><p class="first last">Desativar mensagens de aviso aos Admins do servidor.</p>
 </td>
@@ -1052,113 +1023,97 @@ sponge {
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>block-break</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>false</td>
 <td><p class="first last">Regista quando um bloco é partido.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>block-modify</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>false</td>
 <td><p class="first last">Regista quando um bloco é modificado.</p>
 </td>
 </tr>
 <tr class="row-even"><td>block-place</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>false</td>
 <td><p class="first last">Regista quando um bloco é colocado.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>block-populate</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>false</td>
 <td><p class="first last">Regista quando um bloco é populado numa chunk.</p>
 </td>
 </tr>
 <tr class="row-even"><td>block-tracking</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>false</td>
 <td><p class="first last">Regista quando blocos são colocados pelos jogadores e controlados.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>chunk-load</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>false</td>
 <td><p class="first last">Regista quando as chunks são carregadas.</p>
 </td>
 </tr>
 <tr class="row-even"><td>chunk-unload</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>false</td>
 <td><p class="first last">Regista quando as chunks são descarregadas.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>entity-collision-checks</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>false</td>
 <td><p class="first last">Regista as verificações/contagens de entidades.</p>
 </td>
 </tr>
 <tr class="row-even"><td>entity-death</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>false</td>
 <td><p class="first last">Regista a destruição de uma entidade viva.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>entity-despawn</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>false</td>
 <td><p class="first last">Regista o despawn de uma entidade viva.</p>
 </td>
 </tr>
 <tr class="row-even"><td>entity-spawn</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>false</td>
 <td><p class="first last">Regista o spawn de uma entidade viva.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>entity-speed-removal</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>false</td>
 <td><p class="first last">Registar a remoção de entidades devido à velocidade.</p>
 </td>
 </tr>
 <tr class="row-even"><td>exploit-itemstack-name-overflow</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>false</td>
 <td><p class="first last">Regista quando o servidor recebe pacotes forjados com o nome do <em>itemstack</em> a exceder o limite de uma <em>string</em>.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>exploit-respawn-invisibility</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>false</td>
 <td><p class="first last">Regista quando um jogador tenta respawnar invisível aos olhos dos outros jogadores.</p>
 </td>
 </tr>
 <tr class="row-even"><td>exploit-sign-command-updates</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>false</td>
 <td><p class="first last">Regista quando o servidor recebe pacotes do jogador com comandos para os quais não tem permissões.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>log-stacktraces</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>false</td>
 <td><p class="first last">Adiciona <em>stack traces</em> ao registo <em>dev</em>.</p>
 </td>
@@ -1170,29 +1125,25 @@ sponge {
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>bungeecord</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>false</td>
 <td><p class="first last">Habilita o suporte ao bungeecord.</p>
 </td>
 </tr>
 <tr class="row-even"><td>entity-activation-range</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>true</td>
 <td><p class="first last">Ativa as definições de deteção de entidades num raio.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>exploits</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>true</td>
 <td><p class="first last">Ativa o módulo de prevenção de exploits.</p>
 </td>
 </tr>
 <tr class="row-even"><td>timings</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>true</td>
 <td><p class="first last">Ativa as definições de temporização.</p>
 </td>
@@ -1214,8 +1165,7 @@ sponge {
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>enabled</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>true</td>
 <td><p class="first last">Se temporizações são habilitadas.</p>
 </td>
@@ -1227,29 +1177,25 @@ sponge {
 </td>
 </tr>
 <tr class="row-even"><td>history-interval</td>
-<td><p class="first last">inteiro</p>
-</td>
+<td>integer</td>
 <td>300</td>
 <td><p class="first last">O intervalo entre o tempo de geração de relatórios de histórico.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>history-length</td>
-<td><p class="first last">inteiro</p>
-</td>
+<td>integer</td>
 <td>3600</td>
 <td><p class="first last">Quanto tempo, em ticks, que o histórico de temporização será mantida para o servidor.</p>
 </td>
 </tr>
 <tr class="row-even"><td>server-name-privacy</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>false</td>
 <td><p class="first last">Se se devem incluir informações como o ícone do servidor, o nome, a motd e o modo on-line no relatório.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>verbose</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>false</td>
 <td><p class="first last">Se os timings devem dar relatórios detalhados (verbose level).</p>
 </td>
@@ -1261,50 +1207,43 @@ sponge {
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>flowing-lava-decay</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>false</td>
 <td><p class="first last">A lava comporta-se como água nos servidores vanilla quando o bloco fluente é removido, quando definido para <code class="docutils literal"><span class="pre">true</span></code>.</p>
 </td>
 </tr>
 <tr class="row-even"><td>generate-spawn-on-load</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>true</td>
 <td><p class="first last">Se o mundo deve gerar o spwan quando o mundo é carregado.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>infinite-water-source</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>false</td>
 <td><p class="first last">False = comportamento padrão da água do vanilla.</p>
 </td>
 </tr>
 <tr class="row-even"><td>keep-spawn-loaded</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>true</td>
 <td><p class="first last">Se o spawn deve ficar carregado mesmo quando não tem jogadores.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>load-on-startup</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>true</td>
 <td><p class="first last">Se o mundo deve carrega no arranque do servidor.</p>
 </td>
 </tr>
 <tr class="row-even"><td>pvp-enabled</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>true</td>
 <td><p class="first last">Se o PVP está ativo.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>world-enabled</td>
-<td><p class="first last">booleano</p>
-</td>
+<td>boolean</td>
 <td>true</td>
 <td><p class="first last">Se o mundo pode ser carregado.</p>
 </td>

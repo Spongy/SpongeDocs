@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Die Struktur des Sponge Projekts &mdash; Sponge 4.0.3 Dokumentation</title>
+     <title>The Structure of the Sponge Project &mdash; Sponge 4.0.3 Dokumentation</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -177,7 +177,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/implementations/index.html">Auswählen einer Implementierung</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongeforge.html">SpongeForge installieren</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongevanilla.html">SpongeVanilla Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/launch-script.html">Ein Start-Skript erstellen</a><ul class="simple">
@@ -230,7 +230,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../preparing/index.html">Die Arbeitsumgebung einrichten</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../preparing/index.html">Preparing for Development</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../preparing/jdk.html">Installieren des JDKs</a><ul class="simple">
 </ul>
 </li>
@@ -309,7 +309,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../plugin/commands/creating.html">Einen Befehl erstellen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/commands/arguments.html">Argument Parsing</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../plugin/commands/arguments.html">Das Parsen von Argumenten</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../plugin/commands/childcommands.html">Child Commands</a></li>
@@ -319,7 +319,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/event/index.html">Mit Events arbeiten</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/event/index.html">Working with Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../plugin/event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -329,7 +329,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../plugin/event/filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/event/custom.html">Erstellen eigener Events</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../plugin/event/custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -453,7 +453,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../contributing/implementation/index.html">Developing Sponge</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/codestyle.html">Code Style</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/codestyle.html">Code Formatierung</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/git-implementation.html">Git Workflow for API and Implementations</a><ul class="simple">
@@ -489,7 +489,7 @@
 <li class="toctree-l2"><a class="reference internal" href="faq.html">Häufig gestellte Fragen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Die Struktur des Sponge Projekts</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="">The Structure of the Sponge Project</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="future.html">Zukunftspläne</a></li>
@@ -528,8 +528,9 @@
                 <div class="body" role="main">
                   
   <div class="section" id="the-structure-of-the-sponge-project">
-<h1>Die Struktur des Sponge Projekts<a class="headerlink" href="#the-structure-of-the-sponge-project" title="Link zu dieser Überschrift">¶</a></h1>
-<p>Das Sponge Projekt besteht aus verschiedenen Teilprojekten, die in verschiedenen Repositories auf GitHub gehostet werden. Ein kurzer Überblick bevor wir ins Detail gehen:</p>
+<h1>The Structure of the Sponge Project<a class="headerlink" href="#the-structure-of-the-sponge-project" title="Link zu dieser Überschrift">¶</a></h1>
+<p>The Sponge Project consists of different subprojects, hosted in various repositories on Github. Here&#8217;s a short overview
+before going into detail:</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="33%" />
@@ -537,61 +538,46 @@
 <col width="40%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head"><p class="first last">Projekt</p>
-</th>
-<th class="head"><p class="first last">Beschreibung</p>
-</th>
-<th class="head"><p class="first last">Was wird hier gehostet?</p>
-</th>
+<tr class="row-odd"><th class="head">Project</th>
+<th class="head">Description</th>
+<th class="head">What is done in the repository?</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td><a class="reference external" href="https://github.com/Spongepowered/SpongeAPI">SpongeAPI</a></td>
-<td><p class="first last">Die SpongeAPI</p>
-</td>
-<td><p class="first last">Entwicklung der API</p>
-</td>
+<td>The API itself</td>
+<td>Development of the API itself</td>
 </tr>
 <tr class="row-odd"><td><a class="reference external" href="https://github.com/Spongepowered/SpongeForge">SpongeForge</a></td>
-<td><p class="first last">Eine Implementierung der SpongeAPI auf Basis von Minecraft Forge</p>
-</td>
-<td><p class="first last">Entwicklung der Teile von SpongeForge, die auf Forge basieren</p>
-</td>
+<td>A SpongeAPI implementation built on top of Forge</td>
+<td>Development of the parts of SpongeForge which rely on Forge</td>
 </tr>
 <tr class="row-even"><td><a class="reference external" href="https://github.com/Spongepowered/SpongeVanilla">SpongeVanilla</a></td>
-<td><p class="first last">Eine Implementierung der SpongeAPI auf Basis von Vanilla Minecraft</p>
-</td>
-<td><p class="first last">Entwicklung der Teile von SpongeVanilla, die auf dem Vanilla Server basieren</p>
-</td>
+<td>A SpongeAPI implementation built directly on top
+of Vanilla Minecraft</td>
+<td>Development of the Vanilla Counterpart of the SpongeForge repository</td>
 </tr>
 <tr class="row-odd"><td><a class="reference external" href="https://github.com/Spongepowered/SpongeCommon">SpongeCommon</a></td>
-<td><p class="first last">Der von SpongeForge und SpongeVanilla gemeinsam genutzte Code</p>
-</td>
-<td><p class="first last">Entwicklung des geteilten Codes</p>
-</td>
+<td>The shared code between SpongeForge and SpongeVanilla</td>
+<td>Development of all code which is shared between SpongeForge and SpongeVanilla</td>
 </tr>
 <tr class="row-even"><td><a class="reference external" href="https://github.com/Spongepowered/Mixin">Mixin</a></td>
 <td><p class="first last">Das Werkzeug das wir nutzen um unsere Implementierungen mit der darunter liegenden Struktur zu verknüpfen</p>
 </td>
-<td><p class="first last">Entwicklung unserer Lösung um SpongeForge in den Minecraft Server einzubinden</p>
-</td>
+<td>Development of our solution to hook Sponge into the Minecraft server</td>
 </tr>
 <tr class="row-odd"><td><a class="reference external" href="https://github.com/Spongepowered/SpongeDocs">SpongeDocs</a></td>
-<td><p class="first last">Die offizielle SpongeProjekt Dokumentation</p>
-</td>
-<td><p class="first last">Erweitern und Schreiben der SpongeDocs</p>
-</td>
+<td>The official SpongeProject Documentation</td>
+<td>Expanding, fixing and writing the SpongeDocs</td>
 </tr>
 <tr class="row-even"><td><a class="reference external" href="https://github.com/Spongepowered/Ore">Ore</a></td>
-<td><p class="first last">Plugin Hosting Lösung</p>
-</td>
-<td><p class="first last">Entwicklung unserer Plugin Hosting Website</p>
-</td>
+<td>Plugin hosting solution</td>
+<td>Development of our plugin hosting solution</td>
 </tr>
 </tbody>
 </table>
 <div class="section" id="spongecommon-spongeforge-and-spongevanilla">
-<h2>SpongeCommon, SpongeForge und SpongeVanilla<a class="headerlink" href="#spongecommon-spongeforge-and-spongevanilla" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>SpongeCommon, SpongeForge and SpongeVanilla<a class="headerlink" href="#spongecommon-spongeforge-and-spongevanilla" title="Link zu dieser Überschrift">¶</a></h2>
 <p>SpongeCommon ist die Basis unserer Implementierungen. Es enthält alles Code, der von SpongeForge und SpongeVanilla geteilt wird. Das SpongeForge und SpongeVanilla Repository dagegen enthalten jeweils den Code, der nicht geteilt werden kann, da Forge einige spezielle Anpassungen erfordert, die nicht auf Vanilla Minecraft funktionieren und umgekehrt.</p>
 <p>Wenn man auf SpongeForge (die Implementierung) verweist, so ist immer alles gemeint, das in den SpongeCommon und SpongeForge Repositories enthalten ist. Das Gleiche trifft auch auch SpongeVanilla und SpongeCommon zu. Das ist der Grund weshalb das Komplilieren von SpongeForge oder SpongeVanilla <em>ohne</em> SpongeCommen mit einzubeziehen nicht funktioniert.</p>
 </div>

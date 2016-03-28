@@ -168,7 +168,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../index.html">目次</a></h3>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">サーバーの作成</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Creating a Server</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../server/getting-started/index.html">はじめに</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/jre.html">Java のインストール</a><ul class="simple">
 </ul>
@@ -178,7 +178,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/implementations/index.html">実装の選択</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">Installing SpongeForge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">SpongeVanillaのインストール</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/launch-script.html">起動スクリプトの作成</a><ul class="simple">
@@ -320,7 +320,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../event/index.html">イベント操作</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Working with Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -330,7 +330,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">カスタムイベントを作成</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -446,7 +446,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Spongeに貢献</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing to Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">コントリビューション ガイドライン</a><ul class="simple">
 </ul>
 </li>
@@ -484,7 +484,7 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../about/index.html">Sponge Projectについて</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">はじめに</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">Introduction</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html">よくある質問</a><ul class="simple">
@@ -532,11 +532,13 @@
 <h1>NetBeans のセットアップ<a class="headerlink" href="#setting-up-netbeans" title="このヘッドラインへのパーマリンク">¶</a></h1>
 <p>この記事は、 Sponge API でのプラグイン開発のためのワークスペースを、 <strong>NetBeans</strong> で設定する方法を説明しています。</p>
 <div class="section" id="starting-your-project">
-<h2>プロジェクトの開始<a class="headerlink" href="#starting-your-project" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Sponge API でのプラグイン開発に、 Gradle もしくは Maven を使用するのを推奨します。 Gradle や Maven は、プロジェクトの Gradle API などといった依存関係の管理に、非常に便利です。これは、プロジェクトに <code class="docutils literal"><span class="pre">.jar</span></code> ファイルを含めるのに最適です。</p>
+<h2>Starting Your Project<a class="headerlink" href="#starting-your-project" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<p>We recommend using Gradle or Maven when developing plugins with the Sponge API. Gradle and Maven help significantly
+when managing dependencies, such as the Sponge API, for your project. This is preferable to including the <code class="docutils literal"><span class="pre">.jar</span></code>
+file in your project.</p>
 <div class="section" id="gradle">
 <h3>Gradle<a class="headerlink" href="#gradle" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p><strong>プロジェクトの作成</strong></p>
+<p><strong>To create your project:</strong></p>
 <p>NetBeans で Gradle を使用する前に、 <strong>Gradle Support</strong> プラグインをインストールする必要があります。これは、最初にプロジェクトを作る時にのみ必要です。</p>
 <ul class="simple">
 <li><p class="first"><strong>NetBeans</strong> を開きます。</p>
@@ -548,30 +550,26 @@
 <li><p class="first"><strong>Gradle Support</strong> プラグインをインストールします。</p>
 </li>
 </ul>
-<p>プロジェクトを作成する作業に進めるようになります。</p>
+<p>You may then proceed to create your project.</p>
 <ul class="simple">
 <li><p class="first"><code class="docutils literal"><span class="pre">ファイル</span> <span class="pre">&gt;</span> <span class="pre">新規プロジェクト</span></code> をクリック。</p>
 </li>
 <li><p class="first">ポップアップ中の左側で <code class="docutils literal"><span class="pre">Gradle</span></code> を選択し、 右側の <code class="docutils literal"><span class="pre">Gradle</span> <span class="pre">Root</span> <span class="pre">Project</span></code> を選択します。</p>
 </li>
-<li><p class="first"><code class="docutils literal"><span class="pre">次へ</span></code> をクリック。</p>
-</li>
+<li>Click <code class="docutils literal"><span class="pre">Next</span></code>.</li>
 <li><p class="first">プロジェクト名</p>
 </li>
 <li><p class="first"><strong>Group ID</strong> と <strong>Version</strong> を入力します。</p>
 <ul>
-<li><p class="first"><strong>Group ID</strong> は組織名もしくはそれに準ずる何かであるべきです。</p>
-</li>
+<li>Your <strong>Group ID</strong> should correspond to your organization name, or something similar.</li>
 <li><p class="first"><strong>Artifact ID</strong> はプロジェクト名をベースに、自動生成されます。</p>
 </li>
-<li><p class="first"><strong>Version</strong> を入力します。</p>
-</li>
+<li>Your <strong>Version</strong> is up to you.</li>
 </ul>
 </li>
-<li><p class="first"><code class="docutils literal"><span class="pre">完了</span></code> をクリック。</p>
-</li>
+<li>Click <code class="docutils literal"><span class="pre">Finish</span></code>.</li>
 </ul>
-<p><strong>依存関係に Sponge API をインポート</strong></p>
+<p><strong>To import the Sponge API as a dependency:</strong></p>
 <ul class="simple">
 <li><p class="first"><code class="docutils literal"><span class="pre">プロジェクト</span></code> タブの <code class="docutils literal"><span class="pre">common.gradle</span></code> を開きます。</p>
 </li>
@@ -583,7 +581,7 @@ on the aforementioned Artifacts article.</li>
 </div>
 <div class="section" id="maven">
 <h3>Maven<a class="headerlink" href="#maven" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p><strong>プロジェクトの作成</strong></p>
+<p><strong>To create your project:</strong></p>
 <ul class="simple">
 <li><p class="first"><strong>NetBeans</strong> を開きます。</p>
 </li>
@@ -593,14 +591,11 @@ on the aforementioned Artifacts article.</li>
 </li>
 <li><p class="first"><strong>プロジェクト名</strong> を入力します。</p>
 </li>
-<li><p class="first"><strong>Group ID</strong>, <strong>Artifact ID</strong>, <strong>Version</strong> を入力します。</p>
-<ul>
-<li><p class="first"><strong>Group ID</strong> は組織名もしくはそれに準ずる何かであるべきです。</p>
-</li>
+<li>Enter your <strong>Group ID</strong>, <strong>Artifact ID</strong>, and <strong>Version</strong>.<ul>
+<li>Your <strong>Group ID</strong> should correspond to your organization name, or something similar.</li>
 <li><p class="first"><strong>Artifact ID</strong> はプロジェクトの名前に準ずる必要があります。</p>
 </li>
-<li><p class="first"><strong>Version</strong> を入力します。</p>
-</li>
+<li>Your <strong>Version</strong> is up to you.</li>
 </ul>
 </li>
 <li><p class="first"><strong>package</strong> を入力します。これは任意です。</p>
@@ -608,7 +603,7 @@ on the aforementioned Artifacts article.</li>
 <li><p class="first">テキストフィールドを埋めたら、 <code class="docutils literal"><span class="pre">終了</span></code> をクリックします。</p>
 </li>
 </ul>
-<p><strong>依存関係に Sponge API をインポート</strong></p>
+<p><strong>To import the Sponge API as a dependency:</strong></p>
 <ul class="simple">
 <li><p class="first">デフォルトでは左側にある、 <strong>プロジェクト</strong> タブの <code class="docutils literal"><span class="pre">依存性</span></code> ノードを右クリックします。</p>
 </li>

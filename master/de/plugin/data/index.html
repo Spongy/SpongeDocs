@@ -177,7 +177,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/implementations/index.html">Auswählen einer Implementierung</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">SpongeForge installieren</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">SpongeVanilla Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/launch-script.html">Ein Start-Skript erstellen</a><ul class="simple">
@@ -230,7 +230,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Die Arbeitsumgebung einrichten</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Preparing for Development</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../preparing/jdk.html">Installieren des JDKs</a><ul class="simple">
 </ul>
 </li>
@@ -309,7 +309,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../commands/creating.html">Einen Befehl erstellen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/arguments.html">Argument Parsing</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../commands/arguments.html">Das Parsen von Argumenten</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/childcommands.html">Child Commands</a></li>
@@ -319,7 +319,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Mit Events arbeiten</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Working with Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -329,7 +329,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Erstellen eigener Events</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -453,7 +453,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/implementation/index.html">Developing Sponge</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/codestyle.html">Code Style</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/codestyle.html">Code Formatierung</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/git-implementation.html">Git Workflow for API and Implementations</a><ul class="simple">
@@ -489,7 +489,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html">Häufig gestellte Fragen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/structure.html">Die Struktur des Sponge Projekts</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../about/structure.html">The Structure of the Sponge Project</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/future.html">Zukunftspläne</a></li>
@@ -544,7 +544,7 @@ specific values is no less straightforward.</p>
 <a class="reference external" href="https://forums.spongepowered.org">Forums</a> to find out if the data you need to work with is available yet.</p>
 </div>
 <div class="section" id="concepts">
-<h2>Konzept<a class="headerlink" href="#concepts" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>Concepts<a class="headerlink" href="#concepts" title="Link zu dieser Überschrift">¶</a></h2>
 <p>On first glance at the API docs, the data API threatens to overwhelm you with lots of interfaces and packages. But
 to simply use the data API, you will not have to deal with many of them, as most interfaces found there are just
 specific data manipulators.</p>
@@ -557,7 +557,7 @@ cannot use. In those cases, the return values of the methods will provide the in
 available (via <code class="docutils literal"><span class="pre">Optional.empty()</span></code>) or not accepted (via the <a class="reference internal" href="transactions.html"><em>DataTransactionResult</em></a>).</p>
 </div>
 <div class="section" id="property">
-<h3>Eigenschaft<a class="headerlink" href="#property" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>Property<a class="headerlink" href="#property" title="Link zu dieser Überschrift">¶</a></h3>
 <p>A property too is data, but not synchronized between server and clients. Therefore, it can only be
 changed by modifications present on both client and server. Since Sponge is not intended to require a
 client-side counterpart, properties are not modifiable.
@@ -573,7 +573,7 @@ the re-use of such components over the API and prevents duplication of accessor 
 glass blocks and leather armor all can share the <code class="docutils literal"><span class="pre">DyeableData</span></code> holding the color they are dyed in.</p>
 </div>
 <div class="section" id="key">
-<h3>Eigenschaft (englisch <em>key</em>)<a class="headerlink" href="#key" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>Key<a class="headerlink" href="#key" title="Link zu dieser Überschrift">¶</a></h3>
 <p>A <code class="docutils literal"><span class="pre">Key</span></code> is a unique identifier for a single point of data and can be used to directly read or set that point of
 data without worrying about data manipulators. It was designed to provide a convenient way of accessing data
 similar to direct getter/setter methods. All keys used within Sponge are listed as constants in the
@@ -588,7 +588,7 @@ which the value is identified.</p>
 </div>
 </div>
 <div class="section" id="contents">
-<h2>Inhalt<a class="headerlink" href="#contents" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>Contents<a class="headerlink" href="#contents" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="keys.html">Using Keys</a><ul class="simple">

@@ -768,7 +768,12 @@
 <td><p class="first last">numeroarvo (0- (2^63-1))</p>
 </td>
 <td>60000</td>
-<td><p class="first">Maksimi aika millisekunteina, kuinka kauan yksi tick saa kestää, ennen kuin monitoriprosessi lopettaa palvelimen seuraavalla viestillä: &#8220;A single server tick took 60.00 seconds (should be max 0.05); Considering it to be crashed, server will forcibly shutdown&#8221;. Kun tämä yhtälö on tosi, annetaan palvelimelle System.exit(1) komento.</p>
+<td><p class="first">The maximum number of milliseconds a single tick may take
+before the server watchdog stops the server with the
+message: &#8220;A single server tick took 60.00 seconds (should
+be max 0.05); Considering it to be crashed, server will
+forcibly shutdown&#8221;. Once this criteria is met, it calls
+System.exit(1).</p>
 <blockquote class="last">
 <div><p><strong>-1</strong> - poista monitoriprosessi käytöstä</p>
 </div></blockquote>

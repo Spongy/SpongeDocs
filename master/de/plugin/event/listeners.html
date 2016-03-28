@@ -32,9 +32,9 @@
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 4.0.3 Dokumentation" href="../../index.html" />
-        <link rel="up" title="Mit Events arbeiten" href="index.html" />
+        <link rel="up" title="Working with Events" href="index.html" />
         <link rel="next" title="Event Causes" href="causes.html" />
-        <link rel="prev" title="Mit Events arbeiten" href="index.html" />
+        <link rel="prev" title="Working with Events" href="index.html" />
     
   <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -150,7 +150,7 @@
         <ul>
         <li><a href="../../index.html">Sponge 4.0.3 Dokumentation</a><i class="icon-right-open lights-icon"></i></li>
         <li><a href="../index.html" >Plugins erstellen</a><i class="icon-right-open lights-icon"></i></li>
-        <li><a href="index.html" accesskey="U">Mit Events arbeiten</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="index.html" accesskey="U">Working with Events</a><i class="icon-right-open lights-icon"></i></li>
         </ul>
       </div> 
     <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -178,7 +178,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/implementations/index.html">Auswählen einer Implementierung</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">SpongeForge installieren</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">SpongeVanilla Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/launch-script.html">Ein Start-Skript erstellen</a><ul class="simple">
@@ -231,7 +231,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Die Arbeitsumgebung einrichten</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Preparing for Development</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../preparing/jdk.html">Installieren des JDKs</a><ul class="simple">
 </ul>
 </li>
@@ -310,7 +310,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../commands/creating.html">Einen Befehl erstellen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/arguments.html">Argument Parsing</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../commands/arguments.html">Das Parsen von Argumenten</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/childcommands.html">Child Commands</a></li>
@@ -320,7 +320,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Mit Events arbeiten</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Working with Events</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -330,7 +330,7 @@
 <li class="toctree-l3"><a class="reference internal" href="filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="custom.html">Erstellen eigener Events</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -454,7 +454,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/implementation/index.html">Developing Sponge</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/codestyle.html">Code Style</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/codestyle.html">Code Formatierung</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/git-implementation.html">Git Workflow for API and Implementations</a><ul class="simple">
@@ -490,7 +490,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html">Häufig gestellte Fragen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/structure.html">Die Struktur des Sponge Projekts</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../about/structure.html">The Structure of the Sponge Project</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/future.html">Zukunftspläne</a></li>
@@ -634,15 +634,15 @@ cancellable and has been cancelled (such as by another plugin).</p>
 </div>
 </div>
 <div class="section" id="firing-events">
-<h2>Auslösen von Events<a class="headerlink" href="#firing-events" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>Firing Events<a class="headerlink" href="#firing-events" title="Link zu dieser Überschrift">¶</a></h2>
 <p>To dispatch an event, you need an object that implements the <code class="docutils literal"><span class="pre">org.spongepowered.api.event.Event</span></code> interface.</p>
-<p>Events können ausgelöst werden, indem der Event Bus (<code class="docutils literal"><span class="pre">org.spongepowered.api.service.event.EventManager</span></code>) genutzt wird:</p>
+<p>You can fire events using the event bus (<code class="docutils literal"><span class="pre">org.spongepowered.api.service.event.EventManager</span></code>):</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kt">boolean</span> <span class="n">cancelled</span> <span class="o">=</span> <span class="n">Sponge</span><span class="o">.</span><span class="na">getEventManager</span><span class="o">().</span><span class="na">post</span><span class="o">(</span><span class="n">theEventObject</span><span class="o">);</span>
 </pre></div>
 </div>
-<p>Diese Methode gibt <code class="docutils literal"><span class="pre">true</span></code> zurück, wenn das Event abgebrochen wurde und <code class="docutils literal"><span class="pre">false</span></code> falls nicht.</p>
+<p>The method returns <code class="docutils literal"><span class="pre">true</span></code> if the event was cancelled, <code class="docutils literal"><span class="pre">false</span></code> if not.</p>
 <div class="section" id="firing-sponge-events">
-<h3>Auslösen von Sponge Events<a class="headerlink" href="#firing-sponge-events" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>Firing Sponge Events<a class="headerlink" href="#firing-sponge-events" title="Link zu dieser Überschrift">¶</a></h3>
 <p>It is possible to generate instances of built-in events with the static <code class="docutils literal"><span class="pre">SpongeEventFactory</span></code>. The events created by
 the <code class="docutils literal"><span class="pre">SpongeEventFactory</span></code> are then passed to <code class="docutils literal"><span class="pre">EventManager#post</span></code>.</p>
 </div>

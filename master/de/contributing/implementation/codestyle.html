@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Code Style &mdash; Sponge 4.0.3 Dokumentation</title>
+     <title>Code Formatierung &mdash; Sponge 4.0.3 Dokumentation</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -178,7 +178,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/implementations/index.html">Auswählen einer Implementierung</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">SpongeForge installieren</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">SpongeVanilla Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/launch-script.html">Ein Start-Skript erstellen</a><ul class="simple">
@@ -231,7 +231,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Die Arbeitsumgebung einrichten</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Preparing for Development</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../preparing/jdk.html">Installieren des JDKs</a><ul class="simple">
 </ul>
 </li>
@@ -310,7 +310,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/creating.html">Einen Befehl erstellen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/arguments.html">Argument Parsing</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/arguments.html">Das Parsen von Argumenten</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/childcommands.html">Child Commands</a></li>
@@ -320,7 +320,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/event/index.html">Mit Events arbeiten</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/event/index.html">Working with Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -330,7 +330,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/event/filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/custom.html">Erstellen eigener Events</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -454,7 +454,7 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Developing Sponge</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="">Code Style</a><ul class="simple">
+<li class="toctree-l3 current"><a class="current reference internal" href="">Code Formatierung</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="git-implementation.html">Git Workflow for API and Implementations</a><ul class="simple">
@@ -490,7 +490,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html">Häufig gestellte Fragen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/structure.html">Die Struktur des Sponge Projekts</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../about/structure.html">The Structure of the Sponge Project</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/future.html">Zukunftspläne</a></li>
@@ -529,84 +529,105 @@
                 <div class="body" role="main">
                   
   <div class="section" id="code-style">
-<h1>Code Style<a class="headerlink" href="#code-style" title="Link zu dieser Überschrift">¶</a></h1>
-<p>We follow <a class="reference external" href="https://google.github.io/styleguide/javaguide.html">Google&#8217;s Java Style Guidelines</a> with a
-few additions and modifications, which are described herein.</p>
+<h1>Code Formatierung<a class="headerlink" href="#code-style" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Wir folgen den &#8220;Google&#8217;s Java Style Guidelines &lt;<a class="reference external" href="https://google.github.io/styleguide/javaguide.html">https://google.github.io/styleguide/javaguide.html</a>&gt;&#8221; mit ein paar Änderungen und Modifikationen, die in diesem Artikel beschrieben werden.</p>
 <div class="admonition tip">
 <p class="first admonition-title">Tipp</p>
-<p class="last">You can use our code styles for Eclipse or IntelliJ IDEA to let your IDE format the code correctly for you. See
-<a class="reference internal" href="../../preparing/index.html"><em>Die Arbeitsumgebung einrichten</em></a> for more information.</p>
+<p class="last">Du kannst unsere Code Formatierungsvorlagen für Eclipse oder IntelliJ IDEA benutzen, um den Code durch deine Entwicklungsumgebung(IDE) korrekt Formatieren zu lassen. Unter <a class="reference internal" href="../../preparing/index.html"><em>Preparing for Development</em></a> findest du weitere Informationen.</p>
 </div>
 <ul class="simple">
-<li>Line endings<ul>
-<li>Use Unix line endings when committing (\n)<ul>
-<li>Windows users of Git can do <code class="docutils literal"><span class="pre">git</span> <span class="pre">config</span> <span class="pre">--global</span> <span class="pre">core.autocrlf</span> <span class="pre">true</span></code> to let Git convert them automatically</li>
-</ul>
+<li><p class="first">Zeilenenden</p>
+<ul>
+<li><p class="first">Bei der Benutzung von committing (\n), verwende die UNIX Zeilenende</p>
+<ul>
+<li><p class="first">Windows Benutzer von Git können &#8220;git config &#8211;global core.autocrlf true&#8221; ausführen, um diese automatisch von Git konvertieren zu lassen.</p>
 </li>
 </ul>
 </li>
-<li>Column width<ul>
-<li>80 for Javadocs</li>
-<li>150 for code</li>
-<li>Feel free to wrap when it will help with readability</li>
 </ul>
 </li>
-<li>Indentation<ul>
-<li>Use 4 spaces for indentations, do not use 2 spaces</li>
+<li><p class="first">Spaltenbreite</p>
+<ul>
+<li><p class="first">80 für Javadocs</p>
+</li>
+<li><p class="first">150 für Code</p>
+</li>
+<li><p class="first">Zögern Sie nicht dies Anzupassen, wenn es die Lesbarkeit verbessert.</p>
+</li>
 </ul>
 </li>
-<li>Vertical whitespace<ul>
-<li>Place a blank line before the first member of a class, interface, enum, etc. (i.e. after <code class="docutils literal"><span class="pre">class</span> <span class="pre">Example</span> <span class="pre">{</span></code>) as
-well as after the last member</li>
+<li><p class="first">Einzug</p>
+<ul>
+<li><p class="first">Verwende 4 Leerzeichen zum Einrücken, nicht 2</p>
+</li>
 </ul>
 </li>
-<li>File headers<ul>
-<li>File headers must contain the license headers for the project. Use the <code class="docutils literal"><span class="pre">licenseFormat</span></code> Gradle task to add them
-automatically.</li>
+<li><p class="first">Leerzeilen</p>
+<ul>
+<li><p class="first">Erstelle eine Leerzeile vor dem ersten Eintrag einer Klasse, Interface, Enum, usw. (in der Regel nach <code class="docutils literal"><span class="pre">class</span> <span class="pre">Example</span> <span class="pre">{</span></code>) genauso nach dem letzten Eintrag</p>
+</li>
 </ul>
 </li>
-<li>Imports<ul>
-<li>Imports must be grouped in the following order, where each group is separated by an empty line<ul>
-<li>Static imports</li>
-<li>All other imports</li>
-<li><code class="docutils literal"><span class="pre">java</span></code> imports</li>
-<li><code class="docutils literal"><span class="pre">javax</span></code> imports</li>
+<li><p class="first">Datei Kopf</p>
+<ul>
+<li><p class="first">Der Datei Kopf muss den Lizenztext vom Projekt enthalten. Verwende den <code class="docutils literal"><span class="pre">licenseFormat</span></code> Gradle Befehl um dies automatisch durchführen zu lassen.</p>
+</li>
 </ul>
 </li>
-<li>This differs from Google&#8217;s style in that imports are not grouped by top-level package, they are all grouped as one.</li>
+<li><p class="first">Importiert</p>
+<ul>
+<li><p class="first">Imports müssen in der folgenden Reihenfolge gruppiert werden, wobei die Gruppen durch eine Leerzeile getrennt werden</p>
+<ul>
+<li><p class="first">Statische Imports</p>
+</li>
+<li><p class="first">Alle anderen Imports</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">java</span></code> Imports</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">javax</span></code> Imports</p>
+</li>
 </ul>
 </li>
-<li>Exceptions<ul>
-<li>For exceptions that are to be ignored, name the exception variable <code class="docutils literal"><span class="pre">ignored</span></code></li>
+<li><p class="first">Dies unterscheidet sich von Googles Stil, bei dem die Imports nicht nach der obersten Gruppe, sondern alle gemeinsam zusammengefasst werden.</p>
+</li>
 </ul>
 </li>
-<li>Field accesses<ul>
-<li>Qualify <strong>all</strong> field accesses with <code class="docutils literal"><span class="pre">this</span></code></li>
+<li><p class="first">Ausnahmen</p>
+<ul>
+<li><p class="first">Wenn &#8220;Exceptions&#8221; ignoriert werden soll, nenne die Variable &#8220;ignored&#8221;</p>
+</li>
+</ul>
+</li>
+<li><p class="first">Zugriff auf Felder</p>
+<ul>
+<li><p class="first">Befehle registrieren</p>
+</li>
 </ul>
 </li>
 <li>Javadocs<ul>
-<li>Do not use <code class="docutils literal"><span class="pre">&#64;author</span></code></li>
-<li>Wrap additional paragraphs in <code class="docutils literal"><span class="pre">&lt;p&gt;</span></code> and <code class="docutils literal"><span class="pre">&lt;/p&gt;</span></code></li>
-<li>Capitalize the first letter in the descriptions within each &#8220;at clause&#8221;, i.e. <code class="docutils literal"><span class="pre">&#64;param</span> <span class="pre">name</span> <span class="pre">Player</span> <span class="pre">to</span> <span class="pre">affect</span></code>, no
-periods</li>
+<li><p class="first">Verwende kein <code class="docutils literal"><span class="pre">&#64;author</span></code></p>
+</li>
+<li><p class="first">Umklammere zusätzliche Paragraphen mit <code class="docutils literal"><span class="pre">&lt;p&gt;</span></code> und <code class="docutils literal"><span class="pre">&lt;/p&gt;</span></code></p>
+</li>
+<li><p class="first">Schreibe das erste Zeichen in jeder Beschreibung. In der Regel <code class="docutils literal"><span class="pre">&#64;param</span> <span class="pre">name</span> <span class="pre">Player</span> <span class="pre">to</span> <span class="pre">affect</span></code>. Verwende keine Punkte</p>
+</li>
 </ul>
 </li>
 </ul>
 <div class="section" id="code-conventions">
-<h2>Code Conventions<a class="headerlink" href="#code-conventions" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>Code Konventionen<a class="headerlink" href="#code-conventions" title="Link zu dieser Überschrift">¶</a></h2>
 <ul class="simple">
-<li>Use <a class="reference internal" href="../../plugin/optional/index.html"><em>Optionals</em></a> instead of returning
-<code class="docutils literal"><span class="pre">null</span></code> in the API</li>
-<li>Method parameters accepting <code class="docutils literal"><span class="pre">null</span></code> must be annotated with <code class="docutils literal"><span class="pre">&#64;Nullable</span></code> (from javax.*), all methods and parameters
-are <code class="docutils literal"><span class="pre">&#64;Nonnull</span></code> by default.</li>
-<li>Use <a class="reference external" href="https://code.google.com/p/guava-libraries/wiki/PreconditionsExplained">Google Preconditions</a> for null- and
-argument checking.</li>
+<li><p class="first">Verwenden Sie :doc: &#8216;/ Plugin/optional/Index&#8217; statt in der API Rückgabe &#8216;&#8217; null cm</p>
+</li>
+<li><p class="first">Methoden die <code class="docutils literal"><span class="pre">null</span></code> akzeptieren müssen mit <code class="docutils literal"><span class="pre">&#64;Nullable</span></code> ( javax.*) kommentiert werden. Alle Methoden und Parameter sind normalerweise standardmäßig <code class="docutils literal"><span class="pre">&#64;Nunnull</span></code>.</p>
+</li>
+<li><p class="first">Verwende <a class="reference external" href="https://code.google.com/p/guava-libraries/wiki/PreconditionsExplained">Google Preconditions</a> um Argumente und &#8220;null&#8221; zu überprüfen.</p>
+</li>
 </ul>
 </div>
 <div class="section" id="the-gist">
-<h2>The Gist<a class="headerlink" href="#the-gist" title="Link zu dieser Überschrift">¶</a></h2>
-<p>While we urge that you read Google&#8217;s Java conventions particularly, the two are fairly long documents. To get you
-started quickly, here is an example of properly formatted code:</p>
+<h2>Der Kern<a class="headerlink" href="#the-gist" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Obwohl wir empfehlen, dass du die Google Java Conventions gelesen hast, sind es trotzdem zwei sehr lange Dokumente. Damit du schneller beginnen kannst, haben wir dir hier ein Beispiel für die Formatierung angegeben:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="cm">/*</span>
 <span class="cm"> * This file is part of Sponge, licensed under the MIT License (MIT).</span>
 <span class="cm"> *</span>

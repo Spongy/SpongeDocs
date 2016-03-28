@@ -33,9 +33,9 @@
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 4.0.3 documentação" href="../../index.html" />
-        <link rel="up" title="Trabalhando com itens" href="index.html" />
+        <link rel="up" title="Working with Items" href="index.html" />
         <link rel="next" title="Creating an ItemStack" href="creating.html" />
-        <link rel="prev" title="Trabalhando com itens" href="index.html" />
+        <link rel="prev" title="Working with Items" href="index.html" />
     
   <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -151,7 +151,7 @@
         <ul>
         <li><a href="../../index.html">Sponge 4.0.3 documentação</a><i class="icon-right-open lights-icon"></i></li>
         <li><a href="../index.html" >Criando um plugin</a><i class="icon-right-open lights-icon"></i></li>
-        <li><a href="index.html" accesskey="U">Trabalhando com itens</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="index.html" accesskey="U">Working with Items</a><i class="icon-right-open lights-icon"></i></li>
         </ul>
       </div> 
     <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -169,7 +169,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../index.html">Tabela de Conteúdo</a></h3>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Criando um servidor</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Creating a Server</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../server/getting-started/index.html">Guia de Início</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/jre.html">Instalar o Java</a><ul class="simple">
 </ul>
@@ -178,8 +178,8 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/implementations/index.html">Escolher uma Implementação</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">Instalar o SpongeForge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">Instalar o SpongeVanilla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">Installing SpongeForge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/launch-script.html">Criar um <em>Launch Script</em></a><ul class="simple">
@@ -232,7 +232,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Preparando-se para o desenvolvimento</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Preparação para Desenvolvimento</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../preparing/jdk.html">Instalar o JDK</a><ul class="simple">
 </ul>
 </li>
@@ -321,7 +321,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Trabalhar com Eventos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Working with Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -385,7 +385,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Trabalhando com itens</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Working with Items</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="">Basic Item Usage</a><ul class="simple">
 </ul>
 </li>
@@ -447,7 +447,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contribuindo para o Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing to Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">Diretrizes de Contribuição</a><ul class="simple">
 </ul>
 </li>
@@ -491,7 +491,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html">Dúvidas frequentes</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/structure.html">The Structure of the Sponge Project</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../about/structure.html">Estrutura do Projeto Sponge</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/future.html">Planos para o Futuro</a></li>
@@ -536,8 +536,8 @@ amount of the item in the stack, the type of the item, and extra data such as du
 graphical representation of an <code class="docutils literal"><span class="pre">ItemStack</span></code> as an entity. Be aware that you&#8217;ll always get a copy and <em>not</em> the actual
 <code class="docutils literal"><span class="pre">ItemStack</span></code> and thus, you will need to set it back into an inventory if desired.</p>
 <div class="section" id="checking-an-item-s-type">
-<h2>Verificando o tipo do item<a class="headerlink" href="#checking-an-item-s-type" title="Link permanente para este título">¶</a></h2>
-<p>Verifica o tipo do item é muito simples. Você precisa simplesmente chamar o método <code class="docutils literal"><span class="pre">getItem()</span></code> do <code class="docutils literal"><span class="pre">ItemStack</span></code>.</p>
+<h2>Checking an Item&#8217;s Type<a class="headerlink" href="#checking-an-item-s-type" title="Link permanente para este título">¶</a></h2>
+<p>Checking the type of the item is very simple. You just need to call the <code class="docutils literal"><span class="pre">getItem()</span></code> method in the <code class="docutils literal"><span class="pre">ItemStack</span></code>.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.item.ItemType</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.item.ItemTypes</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.item.inventory.ItemStack</span><span class="o">;</span>
@@ -548,12 +548,14 @@ graphical representation of an <code class="docutils literal"><span class="pre">
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>Veja como isto é simples! Como os gravetos podem ser empilhados, nós podemos descobrir quantos estão presentes.</p>
-<p>Obtendo a quantidade de itens em uma <code class="docutils literal"><span class="pre">ItemStack</span></code> é relativamente fácil. O método <code class="docutils literal"><span class="pre">getQuantity()</span></code> fornecido pelo <code class="docutils literal"><span class="pre">ItemStack</span></code> irá lidar com isto para nós.</p>
+<p>See how simple that is? Because sticks can stack, we can also find out how many are present.</p>
+<p>Getting the amount of items in an <code class="docutils literal"><span class="pre">ItemStack</span></code> is relatively easy. The <code class="docutils literal"><span class="pre">getQuantity()</span></code> method provided by
+<code class="docutils literal"><span class="pre">ItemStack</span></code> will handle this for us.</p>
 </div>
 <div class="section" id="modifying-itemstack-data">
-<h2>Modificando dados da ItemStack<a class="headerlink" href="#modifying-itemstack-data" title="Link permanente para este título">¶</a></h2>
-<p>Manipular dados como a durabilidade ou a descrição do item é feito usando simplesmente &#8220;keys&#8221; (chaves). Você precisa somente especificar a chave a ser modificada:</p>
+<h2>Modifying ItemStack Data<a class="headerlink" href="#modifying-itemstack-data" title="Link permanente para este título">¶</a></h2>
+<p>Manipulating data such as durability or the lore of an item is accomplished by simply using keys. You just need to
+specify the key that needs to be changed:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.data.key.Keys</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">setUnbreakable</span><span class="o">(</span><span class="n">ItemStack</span> <span class="n">stack</span><span class="o">)</span> <span class="o">{</span>
@@ -561,8 +563,13 @@ graphical representation of an <code class="docutils literal"><span class="pre">
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>Neste, nós especificamos que a chave <code class="docutils literal"><span class="pre">UNBREAKABLE</span></code> é qual gostaríamos de mudar. Em seguida nós definimos isto para <code class="docutils literal"><span class="pre">true</span></code> para definir que este item não irá quebrar. Tudo isto deve está contido dentro do método <code class="docutils literal"><span class="pre">offer()</span></code> da <code class="docutils literal"><span class="pre">ItemStack</span></code> para enviar as mudanças para a mesma.</p>
-<p>Diferente chaves irão exigir diferentes valores baseados no que elas fazem. Por exemplo, para mudar a descrição de um item, seria necessário especificar uma <code class="docutils literal"><span class="pre">List</span></code> de <code class="docutils literal"><span class="pre">Text</span></code> ao invés de um valor booleano ou outro valor. Também é importante verificar se a chave pode ser aplicada ao item. Por exemplo, muitos itens podem não haver uma durabilidade ou já terem uma descrição aplicada.</p>
+<p>In this, we specified that the <code class="docutils literal"><span class="pre">UNBREAKABLE</span></code> key is the key that we would like to change. We then set its value to
+<code class="docutils literal"><span class="pre">true</span></code> to imply that the item will never break. All of this is enclosed within the <code class="docutils literal"><span class="pre">offer()</span></code> method of the
+<code class="docutils literal"><span class="pre">ItemStack</span></code> to return our changes back to the <code class="docutils literal"><span class="pre">ItemStack</span></code>.</p>
+<p>Different keys will require different values based on their job. For example, to change the lore of an item, one would
+need to specify a <code class="docutils literal"><span class="pre">List</span></code> of <code class="docutils literal"><span class="pre">Text</span></code> rather than an boolean or other value. It is also important to perform checks to
+see if the key can actually apply to the item. For example, some items might not have durability or may already have
+lore applied to the item.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.text.Text</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>
@@ -576,7 +583,7 @@ graphical representation of an <code class="docutils literal"><span class="pre">
 </div>
 </div>
 <div class="section" id="item-properties">
-<h2>Propriedades do Item<a class="headerlink" href="#item-properties" title="Link permanente para este título">¶</a></h2>
+<h2>Item Properties<a class="headerlink" href="#item-properties" title="Link permanente para este título">¶</a></h2>
 <p>Certain items may hold specific properties. For example, certain items can mine specific blocks, such as a diamond
 pickaxe to obsidian. Properties are used for determining if an item can cause an action without actually checking up
 the type of the item. We can check if a block can mine obsidian by using the <code class="docutils literal"><span class="pre">HarvestingProperty</span></code> of that item.</p>

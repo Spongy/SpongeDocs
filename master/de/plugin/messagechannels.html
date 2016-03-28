@@ -177,7 +177,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/implementations/index.html">Auswählen einer Implementierung</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongeforge.html">SpongeForge installieren</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongevanilla.html">SpongeVanilla Installation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/launch-script.html">Ein Start-Skript erstellen</a><ul class="simple">
@@ -230,7 +230,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../preparing/index.html">Die Arbeitsumgebung einrichten</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../preparing/index.html">Preparing for Development</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../preparing/jdk.html">Installieren des JDKs</a><ul class="simple">
 </ul>
 </li>
@@ -309,7 +309,7 @@
 <li class="toctree-l3"><a class="reference internal" href="commands/creating.html">Einen Befehl erstellen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="commands/arguments.html">Argument Parsing</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="commands/arguments.html">Das Parsen von Argumenten</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="commands/childcommands.html">Child Commands</a></li>
@@ -319,7 +319,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="event/index.html">Mit Events arbeiten</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="event/index.html">Working with Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -329,7 +329,7 @@
 <li class="toctree-l3"><a class="reference internal" href="event/filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="event/custom.html">Erstellen eigener Events</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="event/custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -453,7 +453,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../contributing/implementation/index.html">Developing Sponge</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/codestyle.html">Code Style</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/codestyle.html">Code Formatierung</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/git-implementation.html">Git Workflow for API and Implementations</a><ul class="simple">
@@ -489,7 +489,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../about/faq.html">Häufig gestellte Fragen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../about/structure.html">Die Struktur des Sponge Projekts</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../about/structure.html">The Structure of the Sponge Project</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../about/future.html">Zukunftspläne</a></li>
@@ -539,7 +539,7 @@ commonly used channels. There are also other classes and interfaces that can be 
 such as <code class="docutils literal"><span class="pre">AbstractMutableMessageChannel</span></code> and <code class="docutils literal"><span class="pre">MutableMessageChannel</span></code>. A complete list of these can be found at
 <code class="docutils literal"><span class="pre">org.spongepowered.api.text.channel</span></code> and its sub-packages.</p>
 <div class="section" id="broadcasting">
-<h3>Rundfunk<a class="headerlink" href="#broadcasting" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>Broadcasting<a class="headerlink" href="#broadcasting" title="Link zu dieser Überschrift">¶</a></h3>
 <p>The most common channel will be the broadcasting channel. It can be obtained either from the <code class="docutils literal"><span class="pre">Server</span></code> via the
 <code class="docutils literal"><span class="pre">getBroadcastChannel()</span></code> method or from either the <code class="docutils literal"><span class="pre">MessageChannel.TO_PLAYERS</span></code> or <code class="docutils literal"><span class="pre">MessageChannel.TO_ALL</span></code>
 constant. The only difference is that <code class="docutils literal"><span class="pre">TO_ALL</span></code> includes not only every player connected to the server but also the
@@ -557,7 +557,7 @@ This means that if for example a player disconnects and the corresponding <code 
 <em>garbage collector</em>, that player will also vanish from the channels recipient list.</p>
 </div>
 <div class="section" id="permission-based-selection">
-<h3>Rechte-basiertes Auswählen<a class="headerlink" href="#permission-based-selection" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>Permission-based Selection<a class="headerlink" href="#permission-based-selection" title="Link zu dieser Überschrift">¶</a></h3>
 <p>It is also possible to create a channel sending to all recipients that hold a specific permission. The channel is
 obtained from the <code class="docutils literal"><span class="pre">MessageChannel.permission(String</span> <span class="pre">permission)</span></code> method with the permission to check for as an
 argument. When a message is then sent through this channel, it will obtain all subjects from the <code class="docutils literal"><span class="pre">PermissionManager</span></code>
@@ -578,7 +578,7 @@ used for identification or for performing other various actions. Alternatively, 
 where the message will be sent to. Using the <code class="docutils literal"><span class="pre">send(Object</span> <span class="pre">sender,</span> <span class="pre">Text</span> <span class="pre">message,</span> <span class="pre">ChatType</span> <span class="pre">type)</span></code> method will allow you
 to accomplish this. The channel will then transform the message for every recipient and send the transformed message.</p>
 <div class="section" id="extended-application-chat-channels">
-<h3>Erweiterte Einsatzmöglichkeit: Chaträume<a class="headerlink" href="#extended-application-chat-channels" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>Extended Application: Chat Channels<a class="headerlink" href="#extended-application-chat-channels" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Message channels have a very useful application as they can be used to establish chat channels. For example, you could
 establish a message channel for every chat channel you wish to have. Then, when a <code class="docutils literal"><span class="pre">MessageReceiver</span></code> joins a channel,
 such as with <code class="docutils literal"><span class="pre">/join</span> <span class="pre">&lt;channel</span> <span class="pre">name&gt;</span></code>, simply set the <code class="docutils literal"><span class="pre">MessageReceiver</span></code>&#8216;s <code class="docutils literal"><span class="pre">MessageChannel</span></code> to the appropriate

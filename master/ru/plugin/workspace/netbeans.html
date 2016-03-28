@@ -168,7 +168,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../index.html">Оглавление</a></h3>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Создание сервера</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Creating a Server</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../server/getting-started/index.html">Начало работы</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/jre.html">Установка Java</a><ul class="simple">
 </ul>
@@ -177,8 +177,8 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/implementations/index.html">Выбор реализации</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">Установка SpongeForge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">Установка SpongeVanilla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">Installing SpongeForge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/launch-script.html">Создание сценария (скрипта) запуска</a><ul class="simple">
@@ -231,7 +231,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Подготовка к разработке</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Preparing for Development</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../preparing/jdk.html">Установка JDK</a><ul class="simple">
 </ul>
 </li>
@@ -320,7 +320,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Работа с событиями</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Working with Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -330,7 +330,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Создание собственных событий</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -446,7 +446,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Участие в разработке Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing to Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">Указания по содействию</a><ul class="simple">
 </ul>
 </li>
@@ -490,7 +490,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html">Часто задаваемые вопросы</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/structure.html">Структура Sponge</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../about/structure.html">The Structure of the Sponge Project</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/future.html">Планы на будущее</a></li>
@@ -532,11 +532,13 @@
 <h1>Настройка NetBeans<a class="headerlink" href="#setting-up-netbeans" title="Ссылка на этот заголовок">¶</a></h1>
 <p>This article describes how to configure your <strong>NetBeans</strong> workspace for plugin development with the Sponge API.</p>
 <div class="section" id="starting-your-project">
-<h2>Начиная Свой Проект<a class="headerlink" href="#starting-your-project" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Мы рекомендуем использовать Gradle или Maven при разработке плагинов Sponge API. Gradle и Maven существенно помогают при управлении зависимостями в Вашем проекте, такими как Sponge API. Желательно, добавить файл <code class="docutils literal"><span class="pre">.jar</span></code> в Ваш проект.</p>
+<h2>Starting Your Project<a class="headerlink" href="#starting-your-project" title="Ссылка на этот заголовок">¶</a></h2>
+<p>We recommend using Gradle or Maven when developing plugins with the Sponge API. Gradle and Maven help significantly
+when managing dependencies, such as the Sponge API, for your project. This is preferable to including the <code class="docutils literal"><span class="pre">.jar</span></code>
+file in your project.</p>
 <div class="section" id="gradle">
 <h3>Gradle<a class="headerlink" href="#gradle" title="Ссылка на этот заголовок">¶</a></h3>
-<p><strong>Чтобы создать проект:</strong></p>
+<p><strong>To create your project:</strong></p>
 <p>Перед использованием Gradle, необходимо установить плагин <strong>Gradle Support</strong> в среде NetBeans. Это нужно будет сделать только один раз, при настройке первого проекта.</p>
 <ul class="simple">
 <li><p class="first">Откройте <strong>NetBeans</strong>.</p>
@@ -548,30 +550,26 @@
 <li><p class="first">Установите плагин <strong>Gradle Support</strong>.</p>
 </li>
 </ul>
-<p>Затем, Вы можете перейти к созданию вашего проекта.</p>
+<p>You may then proceed to create your project.</p>
 <ul class="simple">
 <li><p class="first">Нажмите <code class="docutils literal"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">New</span> <span class="pre">Project</span></code> (<code class="docutils literal"><span class="pre">Файл</span> <span class="pre">&gt;</span> <span class="pre">Создать</span> <span class="pre">проект</span></code>).</p>
 </li>
 <li><p class="first">Выберите <code class="docutils literal"><span class="pre">Gradle</span></code> в левой части окна и <code class="docutils literal"><span class="pre">Gradle</span> <span class="pre">Root</span> <span class="pre">Project</span></code> в правой части.</p>
 </li>
-<li><p class="first">Нажмите  <code class="docutils literal"><span class="pre">Next</span></code>.</p>
-</li>
+<li>Click <code class="docutils literal"><span class="pre">Next</span></code>.</li>
 <li><p class="first">Назовите Ваш проект.</p>
 </li>
 <li><p class="first">Введите Ваши <strong>Group ID</strong> и <strong>Version</strong>.</p>
 <ul>
-<li><p class="first"><strong>Group ID</strong> должен соответствовать названию вашей организации, или что-то подобное.</p>
-</li>
+<li>Your <strong>Group ID</strong> should correspond to your organization name, or something similar.</li>
 <li><p class="first">Ваш <strong>Artifact ID</strong> будет автоматически сгенерирован на основе имени проекта.</p>
 </li>
-<li><p class="first"><strong>Version</strong> - версия проекта, зависит только от Вас.</p>
-</li>
+<li>Your <strong>Version</strong> is up to you.</li>
 </ul>
 </li>
-<li><p class="first">Нажмите  <code class="docutils literal"><span class="pre">Finish</span></code>.</p>
-</li>
+<li>Click <code class="docutils literal"><span class="pre">Finish</span></code>.</li>
 </ul>
-<p><strong>Для импорта Sponge API как зависимости:</strong></p>
+<p><strong>To import the Sponge API as a dependency:</strong></p>
 <ul class="simple">
 <li><p class="first">Откройте <code class="docutils literal"><span class="pre">common.gradle</span></code> во вкладке <code class="docutils literal"><span class="pre">Projects</span></code>.</p>
 </li>
@@ -583,7 +581,7 @@ on the aforementioned Artifacts article.</li>
 </div>
 <div class="section" id="maven">
 <h3>Maven<a class="headerlink" href="#maven" title="Ссылка на этот заголовок">¶</a></h3>
-<p><strong>Чтобы создать проект:</strong></p>
+<p><strong>To create your project:</strong></p>
 <ul class="simple">
 <li><p class="first">Откройте <strong>NetBeans</strong>.</p>
 </li>
@@ -593,14 +591,11 @@ on the aforementioned Artifacts article.</li>
 </li>
 <li><p class="first">Введите <strong>имя</strong> Вашего проекта.</p>
 </li>
-<li><p class="first">Введите ваши <strong>Group ID</strong>, <strong>Artifact ID</strong>, и <strong>Version</strong>.</p>
-<ul>
-<li><p class="first"><strong>Group ID</strong> должен соответствовать названию вашей организации, или что-то подобное.</p>
-</li>
+<li>Enter your <strong>Group ID</strong>, <strong>Artifact ID</strong>, and <strong>Version</strong>.<ul>
+<li>Your <strong>Group ID</strong> should correspond to your organization name, or something similar.</li>
 <li><p class="first">Ваш <strong>Artifact ID</strong> должен соответствовать имени проекта.</p>
 </li>
-<li><p class="first"><strong>Version</strong> - версия проекта, зависит только от Вас.</p>
-</li>
+<li>Your <strong>Version</strong> is up to you.</li>
 </ul>
 </li>
 <li><p class="first">Введите <strong>package</strong>, если хотите. Это не является обязательным.</p>
@@ -608,7 +603,7 @@ on the aforementioned Artifacts article.</li>
 <li><p class="first">После завершения заполнения текстовых полей нажмите кнопку <code class="docutils literal"><span class="pre">Готово</span></code>.</p>
 </li>
 </ul>
-<p><strong>Для импорта Sponge API как зависимости:</strong></p>
+<p><strong>To import the Sponge API as a dependency:</strong></p>
 <ul class="simple">
 <li><p class="first">Нажмите <code class="docutils literal"><span class="pre">Dependency</span></code> во вкладке <strong>Projects</strong>, которая находится слева по умолчанию.</p>
 </li>
@@ -621,7 +616,7 @@ on the aforementioned Artifacts article.</li>
 </div>
 </div>
 <div class="section" id="git-integration">
-<h2>Git Интеграция<a class="headerlink" href="#git-integration" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Git Integration<a class="headerlink" href="#git-integration" title="Ссылка на этот заголовок">¶</a></h2>
 <p>NetBeans предоставляет документацию по интеграции Git:</p>
 <p><a class="reference external" href="https://netbeans.org/kb/docs/ide/git_ru.html">https://netbeans.org/kb/docs/ide/git_ru.html</a></p>
 </div>

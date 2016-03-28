@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Werken met Events &mdash; Sponge 4.0.3 documentatie</title>
+     <title>Working with Events &mdash; Sponge 4.0.3 documentatie</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -167,7 +167,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../index.html">Inhoudsopgave</a></h3>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Een server aanmaken</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Creating a Server</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../server/getting-started/index.html">Beginnen</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/jre.html">Installing Java</a><ul class="simple">
 </ul>
@@ -319,7 +319,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Werken met Events</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Working with Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -329,7 +329,7 @@
 <li class="toctree-l3"><a class="reference internal" href="filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="custom.html">Creëer een eigen gebeurtenis</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -445,7 +445,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Meehelpen met Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing to Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">Richtlijnen voor het bijdragen</a><ul class="simple">
 </ul>
 </li>
@@ -528,8 +528,9 @@
                 <div class="body" role="main">
                   
   <div class="section" id="working-with-events">
-<h1>Werken met Events<a class="headerlink" href="#working-with-events" title="Permalink naar deze titel">¶</a></h1>
-<p>Events worden gebruikt om plugins duidelijk te maken dat er bepaalde zaken gebeuren. Veel events kunnen ook &#8220;geannuleerd&#8221; worden &#8211; dit houdt in dat de actie naar welke de event refereert voorkomen kan worden. Events die geannuleerd kunnen worden implementeren de <code class="docutils literal"><span class="pre">Cancellable</span></code> interface.</p>
+<h1>Working with Events<a class="headerlink" href="#working-with-events" title="Permalink naar deze titel">¶</a></h1>
+<p>Events are used to inform plugins of certain happenings. Many events can also be <em>cancelled</em> &#8211; that is, the action that
+the event refers to can be prevented from occurring. Cancellable events implement the <code class="docutils literal"><span class="pre">Cancellable</span></code> interface.</p>
 <p>Sponge itself contains many events; however, plugins can create their own events which other plugins can listen to.</p>
 <p>Event listeners are assigned a priority that determines the order in which the event listener is run in context of other
 event listeners (such as those from other plugins). For example, an event listener with <code class="docutils literal"><span class="pre">EARLY</span></code> priority will return
@@ -538,7 +539,7 @@ before most other event listeners.</p>
 <p>The event bus or event manager is the class that keeps track of which plugins are listening to which event,
 and is also responsible for distributing events to event listeners.</p>
 <div class="section" id="contents">
-<h2>Inhoud<a class="headerlink" href="#contents" title="Permalink naar deze titel">¶</a></h2>
+<h2>Contents<a class="headerlink" href="#contents" title="Permalink naar deze titel">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="listeners.html">Event Listeners</a><ul class="simple">
@@ -550,7 +551,7 @@ and is also responsible for distributing events to event listeners.</p>
 <li class="toctree-l1"><a class="reference internal" href="filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="custom.html">Creëer een eigen gebeurtenis</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>

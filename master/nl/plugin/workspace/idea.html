@@ -168,7 +168,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../index.html">Inhoudsopgave</a></h3>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Een server aanmaken</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Creating a Server</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../server/getting-started/index.html">Beginnen</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/jre.html">Installing Java</a><ul class="simple">
 </ul>
@@ -320,7 +320,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Werken met Events</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Working with Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -330,7 +330,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Creëer een eigen gebeurtenis</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Creating Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -446,7 +446,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Meehelpen met Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing to Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">Richtlijnen voor het bijdragen</a><ul class="simple">
 </ul>
 </li>
@@ -532,11 +532,13 @@
 <h1>IntelliJ IDEA Instellen<a class="headerlink" href="#setting-up-intellij-idea" title="Permalink naar deze titel">¶</a></h1>
 <p>In dit artikel wordt uigeled hoe u uw <strong>IntelliJ IDEA</strong> werkruimte moet configureren om plugins te kunnen ontwikkelen met behulp van de Sponge API.</p>
 <div class="section" id="starting-your-project">
-<h2>Je Project Starten<a class="headerlink" href="#starting-your-project" title="Permalink naar deze titel">¶</a></h2>
-<p>We raden aan om Gradle of Maven te gebruiken tijdens het ontwikkelen van plugins met de Sponge API. Gradle en Maven helpen enorm bij het beheren van dependencies, zoals de Sponge API, voor je project. Deze manier wordt verkozen boven het bijvoegen van de <code class="docutils literal"><span class="pre">.jar</span></code> in je project.</p>
+<h2>Starting Your Project<a class="headerlink" href="#starting-your-project" title="Permalink naar deze titel">¶</a></h2>
+<p>We recommend using Gradle or Maven when developing plugins with the Sponge API. Gradle and Maven help significantly when
+managing dependencies, such as the Sponge API, for your project. This is preferable to including the <code class="docutils literal"><span class="pre">.jar</span></code> file in
+your project.</p>
 <div class="section" id="gradle">
 <h3>Gradle<a class="headerlink" href="#gradle" title="Permalink naar deze titel">¶</a></h3>
-<p><strong>Om je project aan te maken</strong></p>
+<p><strong>To create your project:</strong></p>
 <ul class="simple">
 <li>Open <strong>IntelliJ IDEA</strong>.</li>
 <li><p class="first">Klik op <code class="docutils literal"><span class="pre">Create</span> <span class="pre">New</span> <span class="pre">Project</span></code>.</p>
@@ -545,18 +547,15 @@
 </li>
 <li><p class="first">Vul de <strong>Group ID</strong>, <strong>Artifact ID</strong> en <strong>Version</strong> in.</p>
 <ul>
-<li><p class="first">Je <strong>Group ID</strong> zou overeen moeten komen met de naam van je organisatie of iets vergelijkbaar.</p>
-</li>
-<li><p class="first">Je <strong>Artifact ID</strong> zou moeten overeenkomen met de naam van je project.</p>
-</li>
-<li><p class="first">Je <strong>Versie</strong> hangt van jou af.</p>
-</li>
+<li>Your <strong>Group ID</strong> should correspond to your organization name, or something similar.</li>
+<li>Your <strong>Artifact ID</strong> should correspond to your project name.</li>
+<li>Your <strong>Version</strong> is up to you.</li>
 </ul>
 </li>
 <li><p class="first">Klik tweemaal op <code class="docutils literal"><span class="pre">Next</span></code>, geef uw project een naam en klik op <code class="docutils literal"><span class="pre">Finish</span></code>.</p>
 </li>
 </ul>
-<p><strong>De Sponge API importeren als dependency:</strong></p>
+<p><strong>To import the Sponge API as a dependency:</strong></p>
 <ul class="simple">
 <li><p class="first">Open <code class="docutils literal"><span class="pre">build.gradle</span></code> in de navigator en voeg de dependencies toe.</p>
 </li>
@@ -570,7 +569,7 @@
 </div>
 <div class="section" id="maven">
 <h3>Maven<a class="headerlink" href="#maven" title="Permalink naar deze titel">¶</a></h3>
-<p><strong>Om je project aan te maken</strong></p>
+<p><strong>To create your project:</strong></p>
 <ul class="simple">
 <li>Open <strong>IntelliJ IDEA</strong>.</li>
 <li><p class="first">Klik op <code class="docutils literal"><span class="pre">Create</span> <span class="pre">New</span> <span class="pre">Project</span></code>.</p>
@@ -579,23 +578,18 @@
 </li>
 <li><p class="first">Vul de <strong>Group ID</strong>, <strong>Artifact ID</strong> en <strong>Version</strong> in.</p>
 <ul>
-<li><p class="first">Je <strong>Group ID</strong> zou overeen moeten komen met de naam van je organisatie of iets vergelijkbaar.</p>
-</li>
-<li><p class="first">Je <strong>Artifact ID</strong> zou moeten overeenkomen met de naam van je project.</p>
-</li>
-<li><p class="first">Je <strong>Versie</strong> hangt van jou af.</p>
-</li>
+<li>Your <strong>Group ID</strong> should correspond to your organization name, or something similar.</li>
+<li>Your <strong>Artifact ID</strong> should correspond to your project name.</li>
+<li>Your <strong>Version</strong> is up to you.</li>
 </ul>
 </li>
-<li><p class="first">Klik op <code class="docutils literal"><span class="pre">Next</span></code>.</p>
-</li>
+<li>Click <code class="docutils literal"><span class="pre">Next</span></code>.</li>
 <li><p class="first">Vul de <strong>naam</strong> van je project in en klik op <code class="docutils literal"><span class="pre">Finish</span></code>.</p>
 </li>
 </ul>
-<p><strong>De Sponge API importeren als dependency:</strong></p>
+<p><strong>To import the Sponge API as a dependency:</strong></p>
 <ul class="simple">
-<li><p class="first">Open <code class="docutils literal"><span class="pre">pom.xml</span></code> in de navigator.</p>
-</li>
+<li>Open <code class="docutils literal"><span class="pre">pom.xml</span></code> in the navigator.</li>
 <li><p class="first">Wanneer de editor tab gefocust is, kies <code class="docutils literal"><span class="pre">Code</span> <span class="pre">&gt;</span> <span class="pre">Generate</span></code>.</p>
 </li>
 <li><p class="first">Klik op <code class="docutils literal"><span class="pre">Depenency</span></code> in de popup.</p>
@@ -608,7 +602,7 @@
 </div>
 </div>
 <div class="section" id="git-integration">
-<h2>Git Integratie<a class="headerlink" href="#git-integration" title="Permalink naar deze titel">¶</a></h2>
+<h2>Git Integration<a class="headerlink" href="#git-integration" title="Permalink naar deze titel">¶</a></h2>
 <p>JetBrains biedt documentatie aan voor Git integratie:</p>
 <p><a class="reference external" href="https://www.jetbrains.com/idea/help/using-git-integration.html">https://www.jetbrains.com/idea/help/using-git-integration.html</a></p>
 </div>
