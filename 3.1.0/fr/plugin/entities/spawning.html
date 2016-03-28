@@ -168,7 +168,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../index.html">Table des Matières</a></h3>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Creating a Server</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Créer un serveur</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../server/getting-started/index.html">Premiers pas</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/jre.html">Installation de Java</a><ul class="simple">
 </ul>
@@ -177,8 +177,8 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/implementations/index.html">Choisir une implémentation</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">Installing SpongeForge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">Installer SpongeForge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">Installer SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/launch-script.html">Création d&#8217;un script de lancement</a><ul class="simple">
@@ -231,7 +231,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Preparing for Development</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Préparation pour le développement</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../preparing/jdk.html">Installer le JDK</a><ul class="simple">
 </ul>
 </li>
@@ -567,11 +567,9 @@ use <code class="docutils literal"><span class="pre">EntitySpawnCause</span></co
 any cause that best describes why we are spawning this in, such as a mob spawner, or spawn egg.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Avertissement</p>
-<p>Note that as of API 3.0, <code class="docutils literal"><span class="pre">SpawnCause</span></code> is NOT implemented. Until then, you will need to specify some other cause,
-such as a <code class="docutils literal"><span class="pre">CommandSource</span></code> or a <code class="docutils literal"><span class="pre">Player</span></code>. If you cannot find one that would suit your needs, simply specify your
-main plugin instance as the <code class="docutils literal"><span class="pre">Cause</span></code>. Here is an example of specifying a <code class="docutils literal"><span class="pre">CommandSource</span></code> as the <code class="docutils literal"><span class="pre">Cause</span></code>:</p>
+<p>Notez qu&#8217;à partir de l&#8217;API 3.0, <code class="docutils literal"><span class="pre">SpawnCause</span></code> n&#8217;est pas implémenté. D&#8217;ici là, vous devrez spécifier une autre cause, comme un <code class="docutils literal"><span class="pre">CommandSource</span></code> ou <code class="docutils literal"><span class="pre">Player</span></code>. Si vous ne trouvez pas celui qui pourrait convenir à vos besoins, spécifiez simplement l&#8217;instance principale du plugin comme la <code class="docutils literal"><span class="pre">Cause</span></code>. Voici un exemple de spécification d&#8217;un <code class="docutils literal"><span class="pre">CommandSource</span></code> en tant que <code class="docutils literal"><span class="pre">Cause</span></code>:</p>
 <p><code class="docutils literal"><span class="pre">extent.spawnEntity(item,</span> <span class="pre">Cause.of(src));</span></code></p>
-<p class="last">Take a look at the <a class="reference internal" href="../event/causes.html"><em>cause documentation</em></a> for more information.</p>
+<p class="last">Jetez un œil à la <a class="reference internal" href="../event/causes.html"><em>documentation des causes</em></a> pour plus d&#8217;informations.</p>
 </div>
 </div>
 

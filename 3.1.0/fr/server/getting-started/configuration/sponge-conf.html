@@ -149,7 +149,7 @@
       <div class="breadcrumbs">
         <ul>
         <li><a href="../../../index.html">documentation Sponge 3.1.0</a><i class="icon-right-open lights-icon"></i></li>
-        <li><a href="../../index.html" >Creating a Server</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="../../index.html" >Créer un serveur</a><i class="icon-right-open lights-icon"></i></li>
         <li><a href="../index.html" >Premiers pas</a><i class="icon-right-open lights-icon"></i></li>
         <li><a href="index.html" accesskey="U">Configurer Sponge</a><i class="icon-right-open lights-icon"></i></li>
         </ul>
@@ -169,7 +169,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../../index.html">Table des Matières</a></h3>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Creating a Server</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Créer un serveur</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">Premiers pas</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../jre.html">Installation de Java</a><ul class="simple">
 </ul>
@@ -178,8 +178,8 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../implementations/index.html">Choisir une implémentation</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../implementations/spongeforge.html">Installing SpongeForge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../implementations/spongeforge.html">Installer SpongeForge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../implementations/spongevanilla.html">Installer SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../launch-script.html">Création d&#8217;un script de lancement</a><ul class="simple">
@@ -232,7 +232,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../preparing/index.html">Preparing for Development</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../preparing/index.html">Préparation pour le développement</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../preparing/jdk.html">Installer le JDK</a><ul class="simple">
 </ul>
 </li>
@@ -533,12 +533,8 @@
 <h1>global.conf<a class="headerlink" href="#global-conf" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="global-configuration">
 <h2>Configuration globale<a class="headerlink" href="#global-configuration" title="Lien permanent vers ce titre">¶</a></h2>
-<p>The global.conf file contains the global configuration settings for Sponge. This file is created in the config/sponge
-directory in your server folder. Many of these properties can be also overridden per-world or per-dimension type by
-using the config files in the subfolders of config/worlds.</p>
-<p>Below is a complete global.conf file with all possible nodes that may be present on a server. Note that certain
-sections will not be present immediately, and will be added to the file when the server encounters them. This config
-was generated using SpongeForge build 1181, SpongeAPI version 3.1.0:</p>
+<p>Le fichier global.file contient les paramètres de configuration globale de Sponge. Ce fichier est créé dans le dossier config/sponge du répertoire de votre serveur. Beaucoup de ces paramètres peuvent être remplacés par une configuration par monde ou par dimension en utilisant le fichier de configuration du dossier config/worlds.</p>
+<p>Voici un fichier global.comf complet avec toutes les nodes présentes sur un serveur. Notez que certaines sections ne sont pas présentes immédiatement, et seront ajoutées au fichier quand le serveur en aura besoin. Cette configuration a été générée en utilisant SpongeForge build 1181 SpongeAPI version 3.1.0:</p>
 <div class="highlight-none"><div class="highlight"><pre><span></span># 1.0
 #
 # # If you need help with the configuration or have any questions related
@@ -764,10 +760,11 @@ sponge {
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>block-blacklist</td>
-<td>string</td>
+<td><p class="first last">string (chaîne de caractères)</p>
+</td>
 <td>null</td>
-<td>Adds block ids you wish to blacklist for player
-block placement tracking.</td>
+<td><p class="first last">Ajoute l&#8217;ID d&#8217;un block que vous souhaitez ajouter à la liste noire du suivi des blocks placés par un joueur.</p>
+</td>
 </tr>
 <tr class="row-even"><td>enabled</td>
 <td>boolean</td>
@@ -794,13 +791,10 @@ block placement tracking.</td>
 </tr>
 <tr class="row-even"><td><p class="first last">alias</p>
 </td>
-<td>string</td>
+<td><p class="first last">string (chaîne de caractères)</p>
+</td>
 <td>null</td>
-<td><p class="first">Alias will resolve conflicts when multiple
-plugins request a specific command. Correct
-syntax is
-<code class="docutils literal"><span class="pre">&lt;unqualified</span> <span class="pre">command&gt;=&lt;plugin</span> <span class="pre">name&gt;</span></code>
-Example:</p>
+<td><p class="first">L&#8217;alias résoudra les conflits lorsque plusieurs plugins utilisent une même commande. La syntaxe correcte est <code class="docutils literal"><span class="pre">&lt;unqualified</span> <span class="pre">command&gt;:</span> <span class="pre">&lt;plugin</span> <span class="pre">name&gt;</span></code> Exemple:</p>
 <div class="last highlight-python"><div class="highlight"><pre><span></span>aliases = {
     title=myPlugin
 }
@@ -920,7 +914,8 @@ Example:</p>
 <tr class="row-odd"><td>ambient (bat)</td>
 <td>boolean</td>
 <td>true</td>
-<td>Use activation range on bats.</td>
+<td><p class="first last">Utilise le rayon d&#8217;activation sur les bats.</p>
+</td>
 </tr>
 <tr class="row-even"><td>aquatic (squid)</td>
 <td>boolean</td>
@@ -931,9 +926,8 @@ Example:</p>
 <tr class="row-odd"><td>creature &lt;creature&gt;</td>
 <td>boolean</td>
 <td>true</td>
-<td>Use activation range on &lt;creature&gt;. Permitted
-values: chicken, cow, entityhorse, mushroomcow,
-ocelot, pig, rabbit, sheep, wolf.</td>
+<td><p class="first last">Utilise le rayon d&#8217;activation sur &lt;creature&gt;. Valeurs autorisées: chicken, cow, entityhorse, mushroomcow, ocelot, pig, rabbit, sheep, wolf.</p>
+</td>
 </tr>
 <tr class="row-even"><td>enabled</td>
 <td>boolean</td>
@@ -950,12 +944,8 @@ ocelot, pig, rabbit, sheep, wolf.</td>
 <tr class="row-even"><td>misc &lt;entity&gt;</td>
 <td>boolean</td>
 <td>true</td>
-<td>Use activation range on &lt;entity&gt;. Permitted
-values: armorstand, arrow, boat, fallingsand,
-item, itemframe, leashknot, minecartchest,
-minecartfurnace, minecarthopper,
-minecartrideable, minecarttnt, villager,
-villagergolem, xporb.</td>
+<td><p class="first last">Utiliser le rayon d&#8217;activation sur &lt;entity&gt;. Valeurs autorisées: armorstand, arrow, boat, fallingsand, item, itemframe, leashknot, minecartchest, minecartfurnace, minecarthopper, minecartrideable, minecarttnt, villager, villagergolem, xporb.</p>
+</td>
 </tr>
 <tr class="row-odd"><td><p class="first last"><strong>Monstres de Minecraft</strong></p>
 </td>
@@ -966,11 +956,8 @@ villagergolem, xporb.</td>
 <tr class="row-even"><td>monster &lt;monster&gt;</td>
 <td>boolean</td>
 <td>true</td>
-<td>Use activation range on &lt;monster&gt;. Permitted
-values: blaze, cavespider, creeper, enderman,
-endermite, ghast, giant, guardian, lavaslime,
-pigzombie, silverfish, skeleton, slime,
-snowman, spider, witch, zombie.</td>
+<td><p class="first last">Utiliser le rayon d&#8217;activation sur &lt;monster&gt;. Valeurs autorisées: blaze, cavespider, creeper, enderman, endermite, ghast, giant, guardian, lavaslime, pigzombie, silverfish, skeleton, slime, snowman, spider, witch, zombie.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>misc-activation-range</td>
 <td>integer</td>
@@ -992,16 +979,14 @@ snowman, spider, witch, zombie.</td>
 <tr class="row-even"><td>prevent-creative-itemstack-name-exploit</td>
 <td>boolean</td>
 <td>true</td>
-<td>Prevents an exploit in which the client sends a
-packet with the itemstack name exceeding the
-string limit.</td>
+<td><p class="first last">Empêche qu&#8217;une faille dans laquelle le client envoie un packet portant le nom d&#8217;un itemstack, dépassant la limite de la chaîne de caractères.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>prevent-sign-command-exploit</td>
 <td>boolean</td>
 <td>true</td>
-<td>Prevents an exploit in which the client sends a
-packet to update a sign containing commands from
-a player without permission.</td>
+<td><p class="first last">Empêche une faille dans laquelle le client envoie un packet pouvant à mettre à jour un panneau contenant des commandes provenant d&#8217;un joueur sans permission.</p>
+</td>
 </tr>
 <tr class="row-even"><td><p class="first last"><strong>Paramètres Généraux</strong></p>
 </td>
@@ -1153,7 +1138,8 @@ a player without permission.</td>
 <tr class="row-odd"><td>exploits</td>
 <td>boolean</td>
 <td>true</td>
-<td>Enables the exploit prevention module.</td>
+<td><p class="first last">Active le module de prévention d&#8217;exploit.</p>
+</td>
 </tr>
 <tr class="row-even"><td>timings</td>
 <td>boolean</td>
@@ -1168,7 +1154,8 @@ a player without permission.</td>
 </tr>
 <tr class="row-even"><td><p class="first last">alias</p>
 </td>
-<td>string</td>
+<td><p class="first last">string (chaîne de caractères)</p>
+</td>
 <td>null</td>
 <td><p class="first last">Alias pour les connections SQL. Cela se fait dans le format <code class="docutils literal"><span class="pre">jdbc:protocol://[username[:password]&#64;]host/database</span></code></p>
 </td>
@@ -1185,7 +1172,8 @@ a player without permission.</td>
 </td>
 </tr>
 <tr class="row-odd"><td>hidden-config-entries</td>
-<td>string</td>
+<td><p class="first last">string (chaîne de caractères)</p>
+</td>
 <td>sponge.sql</td>
 <td><p class="first last">Les entrées cachées de la configuration.</p>
 </td>
@@ -1211,8 +1199,8 @@ a player without permission.</td>
 <tr class="row-odd"><td>verbose</td>
 <td>boolean</td>
 <td>false</td>
-<td>Whether or not for timings to monitor at
-the verbose level.</td>
+<td><p class="first last">Si oui ou non les timings sont surveillés à un niveau verbal élevé.</p>
+</td>
 </tr>
 <tr class="row-even"><td><p class="first last"><strong>Paramètres du Monde</strong></p>
 </td>
@@ -1229,8 +1217,8 @@ the verbose level.</td>
 <tr class="row-even"><td>generate-spawn-on-load</td>
 <td>boolean</td>
 <td>true</td>
-<td>If the world should generate spawn when the
-world is loaded.</td>
+<td><p class="first last">Si le monde doit générer le spawn quand le monde est chargé.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>infinite-water-source</td>
 <td>boolean</td>

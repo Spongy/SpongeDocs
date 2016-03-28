@@ -149,7 +149,7 @@
       <div class="breadcrumbs">
         <ul>
         <li><a href="../../../index.html">documentation Sponge 3.1.0</a><i class="icon-right-open lights-icon"></i></li>
-        <li><a href="../../index.html" >Creating a Server</a><i class="icon-right-open lights-icon"></i></li>
+        <li><a href="../../index.html" >Créer un serveur</a><i class="icon-right-open lights-icon"></i></li>
         <li><a href="../index.html" >Premiers pas</a><i class="icon-right-open lights-icon"></i></li>
         <li><a href="index.html" accesskey="U">Configurer Sponge</a><i class="icon-right-open lights-icon"></i></li>
         </ul>
@@ -169,7 +169,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../../index.html">Table des Matières</a></h3>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Creating a Server</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Créer un serveur</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">Premiers pas</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../jre.html">Installation de Java</a><ul class="simple">
 </ul>
@@ -178,8 +178,8 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../implementations/index.html">Choisir une implémentation</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../implementations/spongeforge.html">Installing SpongeForge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../implementations/spongeforge.html">Installer SpongeForge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../implementations/spongevanilla.html">Installer SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../launch-script.html">Création d&#8217;un script de lancement</a><ul class="simple">
@@ -232,7 +232,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../preparing/index.html">Preparing for Development</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../preparing/index.html">Préparation pour le développement</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../preparing/jdk.html">Installer le JDK</a><ul class="simple">
 </ul>
 </li>
@@ -753,12 +753,7 @@ Depuis la version 1.7 de Minecraft, le nombre de joueurs maximum n&#8217;est plu
 <td><p class="first last">entier (0-(2^63-1))</p>
 </td>
 <td>60000</td>
-<td><p class="first">The maximum number of milliseconds a single tick may take
-before the server watchdog stops the server with the
-message: &#8220;A single server tick took 60.00 seconds (should
-be max 0.05); Considering it to be crashed, server will
-forcibly shutdown&#8221;. Once this criteria is met, it calls
-System.exit(1).</p>
+<td><p class="first">Le temps maximum en millisecondes qu&#8217;un seul tick doit prendre avant que le watchdog arrête le serveur avec le message: &#8220;A single server tick loop took 60.00 seconds (should be max 0.05): Considering it to be crashed, server will forcibly shutdown&#8221;. Une fois que ce critère est rempli, il fait appel à la méthode System.exit(1).</p>
 <blockquote class="last">
 <div><p><strong>-1</strong> - désactive le suivi des ticks</p>
 </div></blockquote>
