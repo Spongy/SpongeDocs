@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>The Structure of the Sponge Project &mdash; Документация Sponge 3.1.0</title>
+     <title>Структура Sponge &mdash; Документация Sponge 3.1.0</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -489,7 +489,7 @@
 <li class="toctree-l2"><a class="reference internal" href="faq.html">Часто задаваемые вопросы</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">The Structure of the Sponge Project</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="">Структура Sponge</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="future.html">Планы на будущее</a></li>
@@ -528,9 +528,8 @@
                 <div class="body" role="main">
                   
   <div class="section" id="the-structure-of-the-sponge-project">
-<h1>The Structure of the Sponge Project<a class="headerlink" href="#the-structure-of-the-sponge-project" title="Ссылка на этот заголовок">¶</a></h1>
-<p>The Sponge Project consists of different subprojects, hosted in various repositories on Github. Here&#8217;s a short overview
-before going into detail:</p>
+<h1>Структура Sponge<a class="headerlink" href="#the-structure-of-the-sponge-project" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Проект Sponge состоит из нескольких проектов меньшего уровня, расположенных в репозиториях на GitHub. До того, как перейти к подробностям, ознакомьтесь с кратким обзором:</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="33%" />
@@ -538,52 +537,65 @@ before going into detail:</p>
 <col width="40%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">Project</th>
-<th class="head">Description</th>
-<th class="head">What is done in the repository?</th>
+<tr class="row-odd"><th class="head"><p class="first last">Проект</p>
+</th>
+<th class="head"><p class="first last">Описание</p>
+</th>
+<th class="head"><p class="first last">Что является завершённым в репозитории?</p>
+</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td><a class="reference external" href="https://github.com/Spongepowered/SpongeAPI">SpongeAPI</a></td>
-<td>The API itself</td>
-<td>Development of the API itself</td>
+<td><p class="first last">Программный интерфейс (API)</p>
+</td>
+<td><p class="first last">Разработка API</p>
+</td>
 </tr>
 <tr class="row-odd"><td><a class="reference external" href="https://github.com/Spongepowered/SpongeForge">SpongeForge</a></td>
-<td>A SpongeAPI implementation built on top of Forge</td>
-<td>Development of the parts of SpongeForge which rely on Forge</td>
+<td><p class="first last">Реализация SpongeAPI, построенная на основе Forge</p>
+</td>
+<td><p class="first last">Разработка частей SpongeForge, полагающегося на Forge</p>
+</td>
 </tr>
-<tr class="row-even"><td><a class="reference external" href="https://github.com/Spongepowered/SpongeVanilla">SpongeVanilla</a></td>
-<td>A SpongeAPI implementation built directly on top
-of Vanilla Minecraft</td>
-<td>Development of the Vanilla Counterpart of the SpongeForge repository</td>
+<tr class="row-even"><td><p class="first last"><a class="reference external" href="https://github.com/spongepowered/spongevanilla">SpongeVanilla</a></p>
+</td>
+<td><p class="first last">Реализация SpongeAPI, построенная на базе оригинальной игры</p>
+</td>
+<td><p class="first last">Разработки SpongeVanilla и SpongeForge во многом аналогичны</p>
+</td>
 </tr>
 <tr class="row-odd"><td><a class="reference external" href="https://github.com/Spongepowered/SpongeCommon">SpongeCommon</a></td>
-<td>The shared code between SpongeForge and SpongeVanilla</td>
-<td>Development of all code which is shared between SpongeForge and SpongeVanilla</td>
+<td><p class="first last">Общий код между SpongeForge и SpongeVanilla</p>
+</td>
+<td><p class="first last">Разработка всего кода, который является общим между SpongeForge и SpongeVanilla</p>
+</td>
 </tr>
 <tr class="row-even"><td><a class="reference external" href="https://github.com/Spongepowered/Mixin">Mixin</a></td>
-<td>The tool used to inject the implementations into
-the underlying code structure</td>
-<td>Development of our solution to hook Sponge into the Minecraft server</td>
+<td><p class="first last">Инструмент, используемый для совмещения реализаций и нижележащего программного кода</p>
+</td>
+<td><p class="first last">Разработка нашего решения для интеграции Sponge в сервер Minecraft</p>
+</td>
 </tr>
-<tr class="row-odd"><td><a class="reference external" href="https://github.com/Spongepowered/SpongeDocs">SpongeDocs</a></td>
-<td>The official SpongeProject Documentation</td>
-<td>Expanding, fixing and writing the SpongeDocs</td>
+<tr class="row-odd"><td><p class="first last"><a class="reference external" href="https://github.com/spongepowered/spongedocs">SpongeDocs</a></p>
+</td>
+<td><p class="first last">Официальная документация SpongeProject</p>
+</td>
+<td><p class="first last">Расширение, правка и написание SpongeDocs</p>
+</td>
 </tr>
 <tr class="row-even"><td><a class="reference external" href="https://github.com/Spongepowered/Ore">Ore</a></td>
-<td>Plugin hosting solution</td>
-<td>Development of our plugin hosting solution</td>
+<td><p class="first last">Приложение для облачной публикации плагинов</p>
+</td>
+<td><p class="first last">Разработка нашего решения для публикации плагинов</p>
+</td>
 </tr>
 </tbody>
 </table>
 <div class="section" id="spongecommon-spongeforge-and-spongevanilla">
-<h2>SpongeCommon, SpongeForge and SpongeVanilla<a class="headerlink" href="#spongecommon-spongeforge-and-spongevanilla" title="Ссылка на этот заголовок">¶</a></h2>
-<p>The SpongeCommon repository is the base which contains all code which is shared between the SpongeForge and SpongeVanilla
-implementation. The SpongeForge and SpongeVanilla repositories contain all code which can&#8217;t be shared between them, as
-Forge requires some Forge specific things which won&#8217;t work on Vanilla and vice versa.</p>
-<p>When you refer to the SpongeForge implementation, you&#8217;re basically talking about everything contained in the
-SpongeCommon and SpongeForge repositories. The same applies for SpongeVanilla and SpongeCommon. This is the reason why
-building SpongeForge or SpongeVanilla from the repository <em>without</em> including SpongeCommon won&#8217;t work.</p>
+<h2>SpongeCommon, SpongeForge и SpongeVanilla<a class="headerlink" href="#spongecommon-spongeforge-and-spongevanilla" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Репозиторий SpongeCommon является хранилищем кода, который одновременно используется в обеих реализациях — и в SpongeForge, и в SpongeVanilla. Сами репозитории SpongeForge и SpongeVanilla содержат только тот код, который не может быть использован ими вместе, так как Forge требует некоторых особых вещей, которые не работают с ванильным сервером, и наоборот.</p>
+<p>При работе с реализацией SpongeForge Вы должны понимать, что на самом деле речь идёт едином коде, образованном репозиториями SpongeCommon и SpongeForge. Ситуация со связкой SpongeCommon + SpongeVanilla аналогична. Это является причиной невозможности получить рабочий вариант SpongeForge или SpongeVanilla <em>без</em> включения в них SpongeCommon.</p>
 </div>
 <div class="section" id="id1">
 <h2>Ore<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h2>
