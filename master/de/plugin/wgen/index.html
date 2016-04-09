@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>World Generation &mdash; Sponge 4.0.3 Dokumentation</title>
+     <title>Weltgenerierung &mdash; Sponge 4.0.3 Dokumentation</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -72,20 +72,23 @@
   <body role="document" id="top">
     <div class="topbar">
   <div role="navigation" aria-label="related navigation">
-    <div class="menu-left">
-      <a href="https://docs.spongepowered.org">
-        <img src="../../_static/spongelogo.png" height="40px" style="vertical-align:middle"/>
-        <i class="icon-down-open-big lights-icon" style="vertical-align:middle"></i>
+    <div class="sp-logo-container sp-not-mobileview sp-mobileview">
+      <a class="sp-logo-link" data-auto-route="true" href="/">
+        <img height="40px" id="site-logo" class="logo-big" alt="Sponge Forums" src="../../_static/spongelogo.png">
       </a>
-      <ul class="dropdown" id="ddleft">
-        <a href="https://www.spongepowered.org"><li><i class="icon-home lights-icon"></i> Homepage</li></a>
-        <a href="https://forums.spongepowered.org"><li><i class="icon-pencil lights-icon"></i> Forums</li></a>
-        <a href="https://github.com/SpongePowered"><li><i class="icon-code lights-icon"></i> Code</li></a>
-        <a href="https://docs.spongepowered.org"><li class="active"><i class="icon-book-open lights-icon"></i> SpongeDocs</li></a>
-        <a href="https://jd.spongepowered.org"><li><i class="icon-graduation-cap lights-icon"></i> JavaDocs</li></a>
-        <a href="https://forums.spongepowered.org/c/plugins/plugin-releases"><li><i class="icon-tools lights-icon"></i> Plugins</li></a>
-        <a href="https://forums.spongepowered.org/t/sponge-downloads/11448"><li><i class="icon-download lights-icon"></i> Get Sponge</li></a>
-      </ul>
+      <div class="sp-logo-bg"></div>
+      <div class="sp-logo-chevron"><i style="vertical-align:middle" class="icon-down-open-big lights-icon"></i></div>
+      <div class="sp-logo-menu sp-skip-handler">
+        <ul class="sp-logo-dropdown" id="ddleft">
+          <a href="https://www.spongepowered.org"><li><i class="icon-home lights-icon"></i> Homepage</li></a>
+          <a href="https://forums.spongepowered.org"><li><i class="icon-pencil lights-icon"></i> Forums</li></a>
+          <a href="https://github.com/SpongePowered"><li><i class="icon-code lights-icon"></i> Code</li></a>
+          <a class="sp-forums-home" href="https://docs.spongepowered.org"><li class="active"><i class="icon-book-open lights-icon"></i> SpongeDocs</li></a>
+          <a href="https://jd.spongepowered.org"><li><i class="icon-graduation-cap lights-icon"></i> JavaDocs</li></a>
+          <a href="https://forums.spongepowered.org/c/plugins/plugin-releases"><li><i class="icon-tools lights-icon"></i> Plugins</li></a>
+          <a href="https://forums.spongepowered.org/t/sponge-downloads/11448"><li><i class="icon-download lights-icon"></i> Get Sponge</li></a>
+        </ul>
+      </div>
     </div>
     <div class="menu-right">
       <div><i class="icon-language lights-icon"></i></div>
@@ -230,7 +233,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Preparing for Development</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Vorbereitung für die Entwicklung</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../preparing/jdk.html">Installieren des JDKs</a><ul class="simple">
 </ul>
 </li>
@@ -315,7 +318,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../commands/flags.html">Command Flags</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/childcommands.html">Child Commands</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commands/childcommands.html">Untergeordnete Befehle</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/service.html">The Command Manager</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/commandcallable.html">Unterste Ebene der Command API</a><ul class="simple">
 </ul>
@@ -423,7 +426,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../services.html">Arbeiten mit Services</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">World Generation</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Weltgenerierung</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="modifiers.html">Working with WorldGeneratorModifiers</a><ul class="simple">
 </ul>
 </li>
@@ -534,10 +537,8 @@
                 <div class="body" role="main">
                   
   <div class="section" id="world-generation">
-<h1>World Generation<a class="headerlink" href="#world-generation" title="Link zu dieser Überschrift">¶</a></h1>
-<p>World Generation in Minecraft is a complicated process, and Sponge adds its own complications too.
-Here we provide a basic overview of how it works for the interested reader.
-You may choose to skip this and move directly to the API details at:</p>
+<h1>Weltgenerierung<a class="headerlink" href="#world-generation" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Das erstellen einer Welt in Minecraft ist ein komplizierter Prozess und Sponge macht es nicht einfacher. Für alle interessierten Leser möchten wir hier eine grundlegende Übersicht anbieten. Du kannst diesen Teil auslassen wenn du möchtest und direkt zu den API Informationen springen:</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="modifiers.html">Working with WorldGeneratorModifiers</a><ul class="simple">
@@ -549,7 +550,7 @@ You may choose to skip this and move directly to the API details at:</p>
 </ul>
 </div>
 <div class="section" id="an-overview-of-world-generation-in-minecraft">
-<h2>An Overview of World Generation in Minecraft<a class="headerlink" href="#an-overview-of-world-generation-in-minecraft" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>Eine Übersicht über das erstellen von Welten in Minecraft<a class="headerlink" href="#an-overview-of-world-generation-in-minecraft" title="Link zu dieser Überschrift">¶</a></h2>
 <p>World generation in Minecraft is based on <em>chunks</em>. Whenever the game calls for a chunk which does not yet exist,
 a request is made to the world generator to provide that chunk. The process to provide this
 chunk is split into two distinct phases, named <strong>Generation</strong> and <strong>Population</strong>.</p>
