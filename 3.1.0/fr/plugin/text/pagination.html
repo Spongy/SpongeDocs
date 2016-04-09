@@ -72,20 +72,23 @@
   <body role="document" id="top">
     <div class="topbar">
   <div role="navigation" aria-label="related navigation">
-    <div class="menu-left">
-      <a href="https://docs.spongepowered.org">
-        <img src="../../_static/spongelogo.png" height="40px" style="vertical-align:middle"/>
-        <i class="icon-down-open-big lights-icon" style="vertical-align:middle"></i>
+    <div class="sp-logo-container sp-not-mobileview sp-mobileview">
+      <a class="sp-logo-link" data-auto-route="true" href="/">
+        <img height="40px" id="site-logo" class="logo-big" alt="Sponge Forums" src="../../_static/spongelogo.png">
       </a>
-      <ul class="dropdown" id="ddleft">
-        <a href="https://www.spongepowered.org"><li><i class="icon-home lights-icon"></i> Homepage</li></a>
-        <a href="https://forums.spongepowered.org"><li><i class="icon-pencil lights-icon"></i> Forums</li></a>
-        <a href="https://github.com/SpongePowered"><li><i class="icon-code lights-icon"></i> Code</li></a>
-        <a href="https://docs.spongepowered.org"><li class="active"><i class="icon-book-open lights-icon"></i> SpongeDocs</li></a>
-        <a href="https://jd.spongepowered.org"><li><i class="icon-graduation-cap lights-icon"></i> JavaDocs</li></a>
-        <a href="https://forums.spongepowered.org/c/plugins/plugin-releases"><li><i class="icon-tools lights-icon"></i> Plugins</li></a>
-        <a href="https://forums.spongepowered.org/t/sponge-downloads/11448"><li><i class="icon-download lights-icon"></i> Get Sponge</li></a>
-      </ul>
+      <div class="sp-logo-bg"></div>
+      <div class="sp-logo-chevron"><i style="vertical-align:middle" class="icon-down-open-big lights-icon"></i></div>
+      <div class="sp-logo-menu sp-skip-handler">
+        <ul class="sp-logo-dropdown" id="ddleft">
+          <a href="https://www.spongepowered.org"><li><i class="icon-home lights-icon"></i> Homepage</li></a>
+          <a href="https://forums.spongepowered.org"><li><i class="icon-pencil lights-icon"></i> Forums</li></a>
+          <a href="https://github.com/SpongePowered"><li><i class="icon-code lights-icon"></i> Code</li></a>
+          <a class="sp-forums-home" href="https://docs.spongepowered.org"><li class="active"><i class="icon-book-open lights-icon"></i> SpongeDocs</li></a>
+          <a href="https://jd.spongepowered.org"><li><i class="icon-graduation-cap lights-icon"></i> JavaDocs</li></a>
+          <a href="https://forums.spongepowered.org/c/plugins/plugin-releases"><li><i class="icon-tools lights-icon"></i> Plugins</li></a>
+          <a href="https://forums.spongepowered.org/t/sponge-downloads/11448"><li><i class="icon-download lights-icon"></i> Get Sponge</li></a>
+        </ul>
+      </div>
     </div>
     <div class="menu-right">
       <div><i class="icon-language lights-icon"></i></div>
@@ -537,12 +540,10 @@
 <p class="first admonition-title">Astuce</p>
 <p class="last">Pour une compréhension simple des services, assurez-vous de lire <a class="reference internal" href="../services.html"><em>Travailler avec des Services</em></a> tout d&#8217;abord.</p>
 </div>
-<p>The <code class="docutils literal"><span class="pre">PaginationService</span></code> acts as a way to split up content into discrete pages.
-The service provides a <code class="docutils literal"><span class="pre">PaginationBuilder</span></code> with which you can specify attributes such as title, contents, header,
-and padding.</p>
+<p>Le <code class="docutils literal"><span class="pre">PaginationService</span></code> agit de manière à séparer un contenu en pages discrètes. Le service fournit une classe <code class="docutils literal"><span class="pre">PaginationBuilder</span></code> avec laquelle vous pouvez spécifier des attributs tels qu&#8217;un titre, des contenus, des entêtes, et des marges.</p>
 <div class="section" id="working-with-the-paginationbuilder">
-<h2>Working With the PaginationBuilder<a class="headerlink" href="#working-with-the-paginationbuilder" title="Lien permanent vers ce titre">¶</a></h2>
-<p>First obtain an instance of the <code class="docutils literal"><span class="pre">PaginationService</span></code>, and create a new <code class="docutils literal"><span class="pre">PaginationBuilder</span></code>:</p>
+<h2>Travailler avec le PaginationBuilder<a class="headerlink" href="#working-with-the-paginationbuilder" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Récupérez d&#8217;abord une instance de la classe <code class="docutils literal"><span class="pre">PaginationService</span></code>, et créez un nouveau <code class="docutils literal"><span class="pre">PaginationBuilder</span></code>:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.Sponge</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.service.pagination.PaginationBuilder</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.service.pagination.PaginationService</span><span class="o">;</span>
@@ -605,12 +606,10 @@ Footer
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">With the exception of contents, all components of the paginated list are optional. However, a title is strongly
-recommended</p>
+<p class="last">A l&#8217;exception des contenus, toutes les composants d&#8217;une liste paginée sont optionnels. Néanmoins, il est fortement recommandé de donner un titre</p>
 </div>
-<p>Finally, to send the paginated list to a <code class="docutils literal"><span class="pre">CommandSource</span></code>, use <code class="docutils literal"><span class="pre">PaginationBuilder#sendTo(CommandSource</span> <span class="pre">source)</span></code>.</p>
-<p>And thats it! To recap, a fully functional paginated list could be generated and sent to a previously defined
-<code class="docutils literal"><span class="pre">cmdSource</span></code> using the following code:</p>
+<p>Enfin, pour envoyer la liste paginée à une <code class="docutils literal"><span class="pre">CommandSource</span></code>, utilisez la méthode <code class="docutils literal"><span class="pre">PaginationBuilder#sendTo(CommandSource</span> <span class="pre">source)</span></code>.</p>
+<p>Et c&#8217;est tout! Pour récapituler, une liste paginée pleinement fonctionnelle pourrait être générée et envoyée à une <code class="docutils literal"><span class="pre">CommandSource</span></code> précédemment définie en utilisant le code suivant:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">PaginationService</span> <span class="n">paginationService</span> <span class="o">=</span> <span class="n">Sponge</span><span class="o">.</span><span class="na">getServiceManager</span><span class="o">().</span><span class="na">provide</span><span class="o">(</span><span class="n">PaginationService</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">get</span><span class="o">();</span>
 
 <span class="n">paginationService</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
