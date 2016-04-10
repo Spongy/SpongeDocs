@@ -545,8 +545,14 @@
 <p>Les plugins ne devraient pas vérifier si un compte a assez d&#8217;argent avant d&#8217;essayer d&#8217;en retirer. Même si cela ne semble pas intuitif, cela permet de laisser les plugins d&#8217;économie gérer les soldes négatifs.</p>
 <p>En vérifiant vous même si le compte a assez d&#8217;argent, vous empêchez (potentiellement) le plugin d’économie de gérer un solde négatif. Par exemple, un plugin d&#8217;économie porrait autorises des soldes négatifs aux administrateurs, ou aux joueurs avec une certaine permission. En effectuant le contrôle vous même, vous retirez cette possibilité au plugin d&#8217;économie.</p>
 <p>Ce code illustre ce qu&#8217;il ne faut <strong>pas</strong> faire:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">EconomyService</span> <span class="n">service</span> <span class="o">=</span> <span class="o">...</span>
-<span class="n">Account</span> <span class="n">account</span> <span class="o">=</span> <span class="o">...</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.math.BigDecimal</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">org.spongepowered.api.event.cause.Cause</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.spongepowered.api.service.economy.EconomyService</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.spongepowered.api.service.economy.account.Account</span><span class="o">;</span>
+
+<span class="n">EconomyService</span> <span class="n">service</span> <span class="o">=</span> <span class="o">...;</span>
+<span class="n">Account</span> <span class="n">account</span> <span class="o">=</span> <span class="o">...;</span>
 <span class="n">BigDecimal</span> <span class="n">requiredAmount</span> <span class="o">=</span> <span class="n">BigDecimal</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="mi">20</span><span class="o">);</span>
 
 <span class="c1">// BAD: Don&#39;t perform this check</span>
@@ -555,18 +561,21 @@
 <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
     <span class="c1">// The account has enough, let&#39;s withdraw some cash!</span>
     <span class="n">account</span><span class="o">.</span><span class="na">withdraw</span><span class="o">(</span><span class="n">service</span><span class="o">.</span><span class="na">getDefaultCurrency</span><span class="o">(),</span> <span class="n">requiredAmount</span><span class="o">,</span>
-        <span class="n">Cause</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">NamedCause</span><span class="o">.</span><span class="na">source</span><span class="o">(</span><span class="k">this</span><span class="o">)));</span>
+        <span class="n">Cause</span><span class="o">.</span><span class="na">source</span><span class="o">(</span><span class="k">this</span><span class="o">).</span><span class="na">build</span><span class="o">());</span>
 <span class="o">}</span>
 </pre></div>
 </div>
 <p>Au lieu de cela, la meilleure chose à faire est de simplement retirer la somme d&#8217;argent dont vous avez besoin et de vérifier le &#8216;&#8217;ResultType&#8217;&#8217; du &#8216;&#8217;TransactionResult&#8217;&#8216;. Un plugin d&#8217;économie qui ne veut pas accepter de soldes négatifs doit simplement retourner &#8216;&#8217;ResultType.ACCOUNT_NO_FUNDS&#8217;&#8216;, ou &#8216;&#8217;ResultType.FAILED&#8217;&#8217; en ce cas.</p>
 <p>Voici comment vous <strong>devez</strong> retirer de l&#8217;argent:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">EconomyService</span> <span class="n">service</span> <span class="o">=</span> <span class="o">...</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.service.economy.transaction.ResultType</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.spongepowered.api.service.economy.transaction.TransactionResult</span><span class="o">;</span>
+
+<span class="n">EconomyService</span> <span class="n">service</span> <span class="o">=</span> <span class="o">...</span>
 <span class="n">Account</span> <span class="n">account</span> <span class="o">=</span> <span class="o">...</span>
 <span class="n">BigDecimal</span> <span class="n">requiredAmount</span> <span class="o">=</span> <span class="n">BigDecimal</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="mi">20</span><span class="o">);</span>
 
 <span class="n">TransactionResult</span> <span class="n">result</span> <span class="o">=</span> <span class="n">account</span><span class="o">.</span><span class="na">withdraw</span><span class="o">(</span><span class="n">service</span><span class="o">.</span><span class="na">getDefaultCurrency</span><span class="o">(),</span>
-    <span class="n">requiredAmount</span><span class="o">,</span> <span class="n">Cause</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">NamedCause</span><span class="o">.</span><span class="na">source</span><span class="o">(</span><span class="k">this</span><span class="o">)));</span>
+    <span class="n">requiredAmount</span><span class="o">,</span> <span class="n">Cause</span><span class="o">.</span><span class="na">source</span><span class="o">(</span><span class="k">this</span><span class="o">).</span><span class="na">build</span><span class="o">());</span>
 <span class="k">if</span> <span class="o">(</span><span class="n">result</span><span class="o">.</span><span class="na">getResult</span><span class="o">()</span> <span class="o">==</span> <span class="n">ResultType</span><span class="o">.</span><span class="na">SUCCESS</span><span class="o">))</span> <span class="o">{</span>
     <span class="c1">// Success!</span>
 <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">result</span><span class="o">.</span><span class="na">getResult</span><span class="o">()</span> <span class="o">==</span> <span class="n">ResultType</span><span class="o">.</span><span class="na">FAILED</span> <span class="o">||</span> <span class="n">result</span><span class="o">.</span><span class="na">getResult</span><span class="o">()</span> <span class="o">==</span> <span class="n">ResultType</span><span class="o">.</span><span class="na">ACCOUNT_NO_FUNDS</span><span class="o">)</span> <span class="o">{</span>

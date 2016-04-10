@@ -663,7 +663,7 @@ the <code class="docutils literal"><span class="pre">SpongeEventFactory</span></
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.event.action.LightningEvent</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.event.cause.Cause</span><span class="o">;</span>
 
-<span class="n">LightningEvent</span> <span class="n">lightningEvent</span> <span class="o">=</span> <span class="n">SpongeEventFactory</span><span class="o">.</span><span class="na">createLightningEvent</span><span class="o">(</span><span class="n">Cause</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">NamedCause</span><span class="o">.</span><span class="na">source</span><span class="o">(</span><span class="n">plugin</span><span class="o">)));</span>
+<span class="n">LightningEvent</span> <span class="n">lightningEvent</span> <span class="o">=</span> <span class="n">SpongeEventFactory</span><span class="o">.</span><span class="na">createLightningEvent</span><span class="o">(</span><span class="n">Cause</span><span class="o">.</span><span class="na">source</span><span class="o">(</span><span class="n">plugin</span><span class="o">).</span><span class="na">build</span><span class="o">());</span>
 <span class="n">Sponge</span><span class="o">.</span><span class="na">getEventManager</span><span class="o">().</span><span class="na">post</span><span class="o">(</span><span class="n">lightningEvent</span><span class="o">);</span>
 </pre></div>
 </div>

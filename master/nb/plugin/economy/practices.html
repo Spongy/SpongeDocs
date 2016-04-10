@@ -551,8 +551,14 @@ sound counter-intuitive, it allows economy plugins to fully control how they han
 allowing a negative balance. For example, one economy plugin might want to allow negative balances to admins,
 or players with a certain permission. By performing the check yourself, you take this power away from the economy plugin.</p>
 <p>This code illustrates what <strong>not</strong> to do:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">EconomyService</span> <span class="n">service</span> <span class="o">=</span> <span class="o">...</span>
-<span class="n">Account</span> <span class="n">account</span> <span class="o">=</span> <span class="o">...</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.math.BigDecimal</span><span class="o">;</span>
+
+<span class="kn">import</span> <span class="nn">org.spongepowered.api.event.cause.Cause</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.spongepowered.api.service.economy.EconomyService</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.spongepowered.api.service.economy.account.Account</span><span class="o">;</span>
+
+<span class="n">EconomyService</span> <span class="n">service</span> <span class="o">=</span> <span class="o">...;</span>
+<span class="n">Account</span> <span class="n">account</span> <span class="o">=</span> <span class="o">...;</span>
 <span class="n">BigDecimal</span> <span class="n">requiredAmount</span> <span class="o">=</span> <span class="n">BigDecimal</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="mi">20</span><span class="o">);</span>
 
 <span class="c1">// BAD: Don&#39;t perform this check</span>
@@ -561,7 +567,7 @@ or players with a certain permission. By performing the check yourself, you take
 <span class="o">}</span> <span class="k">else</span> <span class="o">{</span>
     <span class="c1">// The account has enough, let&#39;s withdraw some cash!</span>
     <span class="n">account</span><span class="o">.</span><span class="na">withdraw</span><span class="o">(</span><span class="n">service</span><span class="o">.</span><span class="na">getDefaultCurrency</span><span class="o">(),</span> <span class="n">requiredAmount</span><span class="o">,</span>
-        <span class="n">Cause</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">NamedCause</span><span class="o">.</span><span class="na">source</span><span class="o">(</span><span class="k">this</span><span class="o">)));</span>
+        <span class="n">Cause</span><span class="o">.</span><span class="na">source</span><span class="o">(</span><span class="k">this</span><span class="o">).</span><span class="na">build</span><span class="o">());</span>
 <span class="o">}</span>
 </pre></div>
 </div>
@@ -569,12 +575,15 @@ or players with a certain permission. By performing the check yourself, you take
 of the returned <code class="docutils literal"><span class="pre">TransactionResult</span></code>. An economy plugin which doesn&#8217;t want to allow negative balances will
 simply return <code class="docutils literal"><span class="pre">ResultType.ACCOUNT_NO_FUNDS</span></code>, or <code class="docutils literal"><span class="pre">ResultType.FAILED</span></code> in this case.</p>
 <p>Here&#8217;s how you <strong>should</strong> withdraw money:</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">EconomyService</span> <span class="n">service</span> <span class="o">=</span> <span class="o">...</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.service.economy.transaction.ResultType</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.spongepowered.api.service.economy.transaction.TransactionResult</span><span class="o">;</span>
+
+<span class="n">EconomyService</span> <span class="n">service</span> <span class="o">=</span> <span class="o">...</span>
 <span class="n">Account</span> <span class="n">account</span> <span class="o">=</span> <span class="o">...</span>
 <span class="n">BigDecimal</span> <span class="n">requiredAmount</span> <span class="o">=</span> <span class="n">BigDecimal</span><span class="o">.</span><span class="na">valueOf</span><span class="o">(</span><span class="mi">20</span><span class="o">);</span>
 
 <span class="n">TransactionResult</span> <span class="n">result</span> <span class="o">=</span> <span class="n">account</span><span class="o">.</span><span class="na">withdraw</span><span class="o">(</span><span class="n">service</span><span class="o">.</span><span class="na">getDefaultCurrency</span><span class="o">(),</span>
-    <span class="n">requiredAmount</span><span class="o">,</span> <span class="n">Cause</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">NamedCause</span><span class="o">.</span><span class="na">source</span><span class="o">(</span><span class="k">this</span><span class="o">)));</span>
+    <span class="n">requiredAmount</span><span class="o">,</span> <span class="n">Cause</span><span class="o">.</span><span class="na">source</span><span class="o">(</span><span class="k">this</span><span class="o">).</span><span class="na">build</span><span class="o">());</span>
 <span class="k">if</span> <span class="o">(</span><span class="n">result</span><span class="o">.</span><span class="na">getResult</span><span class="o">()</span> <span class="o">==</span> <span class="n">ResultType</span><span class="o">.</span><span class="na">SUCCESS</span><span class="o">))</span> <span class="o">{</span>
     <span class="c1">// Success!</span>
 <span class="o">}</span> <span class="k">else</span> <span class="k">if</span> <span class="o">(</span><span class="n">result</span><span class="o">.</span><span class="na">getResult</span><span class="o">()</span> <span class="o">==</span> <span class="n">ResultType</span><span class="o">.</span><span class="na">FAILED</span> <span class="o">||</span> <span class="n">result</span><span class="o">.</span><span class="na">getResult</span><span class="o">()</span> <span class="o">==</span> <span class="n">ResultType</span><span class="o">.</span><span class="na">ACCOUNT_NO_FUNDS</span><span class="o">)</span> <span class="o">{</span>
