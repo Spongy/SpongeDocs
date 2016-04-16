@@ -33,7 +33,7 @@
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Документация Sponge 4.0.3" href="../../index.html" />
         <link rel="up" title="Подготовка рабочего пространства" href="index.html" />
-        <link rel="next" title="Настройка NetBeans" href="netbeans.html" />
+        <link rel="next" title="Setting Up Your Project" href="../project/index.html" />
         <link rel="prev" title="Настройка IntelliJ IDEA" href="idea.html" />
     
   <script type="text/javascript">
@@ -131,7 +131,7 @@
       <ul class="controls">
         <li>|</li>
         
-        <li><a href="netbeans.html" title="Next Page"><i class="icon-right-open-big lights-icon"></i></a></li>
+        <li><a href="../project/index.html" title="Next Page"><i class="icon-right-open-big lights-icon"></i></a></li>
         
         <li><a href="#top" title="To the top"><i class="icon-up-open-big lights-icon"></i></a></li>
         <li><a href="../../index.html" title="Home"><i class="icon-home lights-icon"></i></a></li>
@@ -252,6 +252,9 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Создание плагина</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../buildsystem.html">Choosing a Build System</a><ul class="simple">
+</ul>
+</li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Подготовка рабочего пространства</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="idea.html">Настройка IntelliJ IDEA</a><ul class="simple">
 </ul>
@@ -259,25 +262,28 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="">Установка среды Eclipse</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="netbeans.html">Настройка NetBeans</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="dependencies.html">Adding Sponge API Dependencies</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../project/index.html">Setting Up Your Project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../project/gradle.html">Setting Up Gradle</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../project/maven.html">Setting Up Maven</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../practices.html">Практические рекомендации</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../templates.html">Шаблоны плагинов</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../main-class.html">Создание главного класса плагина</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">Choosing a Plugin Identifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Creating Your Plugin Class</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../lifecycle.html">Жизненный цикл плагина</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../injection.html">Внедрение зависимостей</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../practices.html">Практические рекомендации</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../optional/index.html">Optionals</a><ul>
@@ -290,23 +296,6 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../logging.html">Ведение логов (журналов) и отладка</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../text/index.html">Работа с текстом</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../text/text.html">Creating Text</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../text/representations/index.html">Text Serializers</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../text/representations/xml.html">TextXML Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../text/representations/json.html">JSON Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Configuration Format</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">The Pagination Service</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Working with TextTemplates</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Создание команд</a><ul>
@@ -351,6 +340,26 @@
 <li class="toctree-l3"><a class="reference internal" href="../configuration/serialization.html">Serializing Objects</a><ul class="simple">
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../text/index.html">Работа с текстом</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../text/text.html">Creating Text</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../text/representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../text/representations/xml.html">TextXML Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../text/representations/json.html">JSON Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Configuration Format</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">The Pagination Service</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../text/messagechannels.html">Message Channels</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Working with TextTemplates</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../data/index.html">The Data API</a><ul>
@@ -399,10 +408,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../injection.html">Внедрение зависимостей</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Using the Scheduler</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Using the Scheduler</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../services.html">Работа с сервисами</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../database.html">Работа с базами данных</a><ul class="simple">
@@ -424,9 +433,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../services.html">Работа с сервисами</a><ul class="simple">
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="../wgen/index.html">World Generation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../wgen/modifiers.html">Working with WorldGeneratorModifiers</a><ul class="simple">
 </ul>
@@ -442,12 +448,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../debugging.html">Plugin Debugging</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../messagechannels.html">Message Channels</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin-meta.html">Plugin Metadata</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../ray-tracing.html">Ray Tracing</a><ul class="simple">
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials.html">Обучение</a><ul class="simple">
 </ul>
 </li>
@@ -539,13 +546,17 @@
                   
   <div class="section" id="setting-up-eclipse">
 <h1>Установка среды Eclipse<a class="headerlink" href="#setting-up-eclipse" title="Ссылка на этот заголовок">¶</a></h1>
-<p>This article describes how to configure your <strong>Eclipse</strong> workspace for plugin development with the Sponge API.</p>
-<div class="section" id="starting-your-project">
-<h2>Начиная Свой Проект<a class="headerlink" href="#starting-your-project" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Мы рекомендуем использовать Gradle или Maven при разработке плагинов Sponge API. Gradle и Maven существенно помогают при управлении зависимостями в Вашем проекте, такими как Sponge API. Желательно, добавить файл <code class="docutils literal"><span class="pre">.jar</span></code> в Ваш проект.</p>
+<p>This article describes how to configure your <strong>Eclipse</strong> workspace for plugin development with SpongeAPI and <a class="reference internal" href="../buildsystem.html"><em>a
+build system such as Maven or Gradle</em></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Примечание</p>
+<p class="last">A tutorial by Mumfrey showing the setup of a Sponge workspace in Eclipse, using the new features in Buildship and ForgeGradle,
+can be viewed <a class="reference external" href="https://www.youtube.com/watch?v=R8NcakQtHVI">Here.</a></p>
+</div>
 <div class="section" id="gradle">
-<h3>Gradle<a class="headerlink" href="#gradle" title="Ссылка на этот заголовок">¶</a></h3>
-<p><strong>Чтобы создать проект:</strong></p>
+<h2>Gradle<a class="headerlink" href="#gradle" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="creating-your-project">
+<h3>Creating your project<a class="headerlink" href="#creating-your-project" title="Ссылка на этот заголовок">¶</a></h3>
 <p>Необходимо сначала установить <strong>Gradle Integration Plugin</strong> перед использованием Gradle в Eclipse. Это необходимо сделать перед созданием вашего первого проекта.</p>
 <div class="admonition note">
 <p class="first admonition-title">Примечание</p>
@@ -572,19 +583,33 @@
 <li><p class="first">Введите имя проекта, а затем нажмите кнопку <code class="docutils literal"><span class="pre">Finish</span></code>.</p>
 </li>
 </ul>
-<p><strong>Для импорта Sponge API как зависимости:</strong></p>
+</div>
+<div class="section" id="editing-the-build-script">
+<h3>Editing the build script<a class="headerlink" href="#editing-the-build-script" title="Ссылка на этот заголовок">¶</a></h3>
 <ul class="simple">
 <li><p class="first">Откройте <code class="docutils literal"><span class="pre">build.gradle</span></code> в навигаторе.</p>
 </li>
-<li>Manually add the <a class="reference internal" href="dependencies.html"><em>official Sponge API Maven artifact</em></a> as a dependency. An example can be found
-on the aforementioned Artifacts article.</li>
+<li>Edit the build script according to the instructions at <a class="reference internal" href="../project/gradle.html"><em>Setting Up Gradle</em></a>.</li>
 <li><p class="first">Щелкните правой кнопкой мыши проект и выберите <code class="docutils literal"><span class="pre">Gradle</span> <span class="pre">&gt;</span> <span class="pre">Refresh</span> <span class="pre">Dependencies</span></code>.</p>
 </li>
 </ul>
 </div>
+<div class="section" id="importing-your-project">
+<h3>Importing your project<a class="headerlink" href="#importing-your-project" title="Ссылка на этот заголовок">¶</a></h3>
+<p>If you&#8217;ve already started with your project and want to import it again at a later point you need to import it instead
+of re-creating it inside your IDE:</p>
+<ul class="simple">
+<li>Click <code class="docutils literal"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Import</span></code></li>
+<li>Select <code class="docutils literal"><span class="pre">Gradle</span> <span class="pre">&gt;</span> <span class="pre">Gradle</span> <span class="pre">Project</span></code></li>
+<li>Navigate to the root folder of the project</li>
+<li>Click Finish</li>
+</ul>
+</div>
+</div>
 <div class="section" id="maven">
-<h3>Maven<a class="headerlink" href="#maven" title="Ссылка на этот заголовок">¶</a></h3>
-<p><strong>Чтобы создать проект:</strong></p>
+<h2>Maven<a class="headerlink" href="#maven" title="Ссылка на этот заголовок">¶</a></h2>
+<div class="section" id="id1">
+<h3>Creating your project<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h3>
 <ul class="simple">
 <li><p class="first">Откройте <strong>Eclipse</strong>.</p>
 </li>
@@ -598,10 +623,8 @@ on the aforementioned Artifacts article.</li>
 </li>
 <li><p class="first">Введите данные <strong>Group ID</strong>, <strong>Artifact ID</strong>, <strong>Version</strong>, project name, и project description.</p>
 <ul>
-<li><p class="first"><strong>Group ID</strong> должен соответствовать названию вашей организации, или что-то подобное.</p>
-</li>
-<li><p class="first"><strong>Artifact ID</strong> должно содержать имя Вашего проекта.</p>
-</li>
+<li>Your <strong>Group ID</strong> should usually correspond to your Java package name. See <a class="reference internal" href="../plugin-class.html"><em>Creating Your Plugin Class</em></a> for details.</li>
+<li>Your <strong>Artifact ID</strong> should usually correspond to your <strong>plugin ID</strong> you chose earlier, e.g. <code class="docutils literal"><span class="pre">myplugin</span></code>.</li>
 <li><p class="first"><strong>Version</strong> - версия проекта, зависит только от Вас.</p>
 </li>
 </ul>
@@ -613,15 +636,25 @@ on the aforementioned Artifacts article.</li>
 <p class="first admonition-title">Совет</p>
 <p class="last">Eclipse часто не открывает новые проекты сразу после их создания. Если так и происходит, попробуйте закрыть окно приветствия Eclipse; Ваш проект должен быть открыт за ним.</p>
 </div>
-<p><strong>Для импорта Sponge API как зависимости:</strong></p>
+</div>
+<div class="section" id="editing-the-project-configuration">
+<h3>Editing the project configuration<a class="headerlink" href="#editing-the-project-configuration" title="Ссылка на этот заголовок">¶</a></h3>
 <ul class="simple">
 <li><p class="first">Откройте <code class="docutils literal"><span class="pre">pom.xml</span></code> в навигаторе.</p>
 </li>
-<li><p class="first">Перейдите на вкладку <code class="docutils literal"><span class="pre">Dependencies</span></code> в самом низу, и нажмите кнопку <code class="docutils literal"><span class="pre">Add</span></code>.</p>
-</li>
-<li>Enter the <strong>Group ID</strong>, <strong>Artifact ID</strong>, and <strong>Version</strong> of the <a class="reference internal" href="dependencies.html"><em>official Sponge API Maven artifact</em></a>.</li>
-<li><p class="first">Нажмите  <code class="docutils literal"><span class="pre">OK</span></code>.</p>
-</li>
+<li>Edit the build configuration according to the instructions at <a class="reference internal" href="../project/maven.html"><em>Setting Up Maven</em></a>.</li>
+<li>Refresh your Maven project.</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h3>Importing your project<a class="headerlink" href="#id2" title="Ссылка на этот заголовок">¶</a></h3>
+<p>If you&#8217;ve already started with your project and want to import it again at a later point you need to import it instead
+of re-creating it inside your IDE:</p>
+<ul class="simple">
+<li>Click <code class="docutils literal"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Import</span></code></li>
+<li>Select <code class="docutils literal"><span class="pre">Maven</span> <span class="pre">&gt;</span> <span class="pre">Existing</span> <span class="pre">Maven</span> <span class="pre">Projects</span></code></li>
+<li>Navigate to the root folder of the project</li>
+<li>Click Finish</li>
 </ul>
 </div>
 </div>

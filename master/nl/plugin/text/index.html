@@ -34,7 +34,7 @@
         <link rel="top" title="Sponge 4.0.3 documentatie" href="../../index.html" />
         <link rel="up" title="Creating a Plugin" href="../index.html" />
         <link rel="next" title="Creating Text" href="text.html" />
-        <link rel="prev" title="Logging en Debugging" href="../logging.html" />
+        <link rel="prev" title="Serializing Objects" href="../configuration/serialization.html" />
     
   <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -136,7 +136,7 @@
         <li><a href="#top" title="To the top"><i class="icon-up-open-big lights-icon"></i></a></li>
         <li><a href="../../index.html" title="Home"><i class="icon-home lights-icon"></i></a></li>
         
-        <li><a href="../logging.html" title="Previous Page"><i class="icon-left-open-big lights-icon"></i></a></li>
+        <li><a href="../configuration/serialization.html" title="Previous Page"><i class="icon-left-open-big lights-icon"></i></a></li>
         
         <li>|</li>
         
@@ -251,6 +251,9 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Creating a Plugin</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../buildsystem.html">Choosing a Build System</a><ul class="simple">
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../workspace/index.html">Setting Up Your Workspace</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../workspace/idea.html">IntelliJ IDEA Instellen</a><ul class="simple">
 </ul>
@@ -258,25 +261,28 @@
 <li class="toctree-l3"><a class="reference internal" href="../workspace/eclipse.html">Eclipse Instellen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../workspace/netbeans.html">NetBeans instellen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../workspace/dependencies.html">Sponge API dependencies toevoegen</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../project/index.html">Setting Up Your Project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../project/gradle.html">Setting Up Gradle</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../project/maven.html">Setting Up Maven</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../practices.html">Best Practices</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../templates.html">Plugin Templates</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../main-class.html">Creating Your Main Plugin Class</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">Choosing a Plugin Identifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Creating Your Plugin Class</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../lifecycle.html">De levensloop van een plugin</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../injection.html">Dependency Injection</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../practices.html">Best Practices</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../optional/index.html">Optionals</a><ul>
@@ -289,23 +295,6 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../logging.html">Logging en Debugging</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Working with Text</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="text.html">Creating Text</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="representations/index.html">Text Serializers</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="representations/xml.html">TextXML Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="representations/json.html">JSON Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="representations/configurate.html">Configuration Format</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="pagination.html">The Pagination Service</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="templates.html">Working with TextTemplates</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Commando&#8217;s aanmaken</a><ul>
@@ -350,6 +339,26 @@
 <li class="toctree-l3"><a class="reference internal" href="../configuration/serialization.html">Serializing Objects</a><ul class="simple">
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Working with Text</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="text.html">Creating Text</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="representations/xml.html">TextXML Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="representations/json.html">JSON Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="representations/configurate.html">Configuration Format</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="pagination.html">The Pagination Service</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="messagechannels.html">Message Channels</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="templates.html">Working with TextTemplates</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../data/index.html">The Data API</a><ul>
@@ -398,10 +407,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../injection.html">Dependency Injection</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Using the Scheduler</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Using the Scheduler</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../services.html">Werken met Services</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../database.html">Working with Databases</a><ul class="simple">
@@ -423,9 +432,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../services.html">Werken met Services</a><ul class="simple">
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="../wgen/index.html">World Generation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../wgen/modifiers.html">Working with WorldGeneratorModifiers</a><ul class="simple">
 </ul>
@@ -441,12 +447,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../debugging.html">Plugin Debugging</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../messagechannels.html">Message Channels</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin-meta.html">Plugin Metadata</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../ray-tracing.html">Ray Tracing</a><ul class="simple">
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials.html">Tutorials</a><ul class="simple">
 </ul>
 </li>
@@ -557,6 +564,9 @@ this section.</p>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="pagination.html">The Pagination Service</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="messagechannels.html">Message Channels</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="templates.html">Working with TextTemplates</a></li>

@@ -252,6 +252,9 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Creating a Plugin</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../buildsystem.html">Choosing a Build System</a><ul class="simple">
+</ul>
+</li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Setting Up Your Workspace</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="">IntelliJ IDEA Instellen</a><ul class="simple">
 </ul>
@@ -259,25 +262,28 @@
 <li class="toctree-l3"><a class="reference internal" href="eclipse.html">Eclipse Instellen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="netbeans.html">NetBeans instellen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="dependencies.html">Sponge API dependencies toevoegen</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../project/index.html">Setting Up Your Project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../project/gradle.html">Setting Up Gradle</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../project/maven.html">Setting Up Maven</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../practices.html">Best Practices</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../templates.html">Plugin Templates</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../main-class.html">Creating Your Main Plugin Class</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">Choosing a Plugin Identifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Creating Your Plugin Class</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../lifecycle.html">De levensloop van een plugin</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../injection.html">Dependency Injection</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../practices.html">Best Practices</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../optional/index.html">Optionals</a><ul>
@@ -290,23 +296,6 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../logging.html">Logging en Debugging</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../text/index.html">Working with Text</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../text/text.html">Creating Text</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../text/representations/index.html">Text Serializers</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../text/representations/xml.html">TextXML Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../text/representations/json.html">JSON Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Configuration Format</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">The Pagination Service</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Working with TextTemplates</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Commando&#8217;s aanmaken</a><ul>
@@ -351,6 +340,26 @@
 <li class="toctree-l3"><a class="reference internal" href="../configuration/serialization.html">Serializing Objects</a><ul class="simple">
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../text/index.html">Working with Text</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../text/text.html">Creating Text</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../text/representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../text/representations/xml.html">TextXML Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../text/representations/json.html">JSON Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Configuration Format</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">The Pagination Service</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../text/messagechannels.html">Message Channels</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Working with TextTemplates</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../data/index.html">The Data API</a><ul>
@@ -399,10 +408,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../injection.html">Dependency Injection</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Using the Scheduler</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Using the Scheduler</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../services.html">Werken met Services</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../database.html">Working with Databases</a><ul class="simple">
@@ -424,9 +433,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../services.html">Werken met Services</a><ul class="simple">
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="../wgen/index.html">World Generation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../wgen/modifiers.html">Working with WorldGeneratorModifiers</a><ul class="simple">
 </ul>
@@ -442,12 +448,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../debugging.html">Plugin Debugging</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../messagechannels.html">Message Channels</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin-meta.html">Plugin Metadata</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../ray-tracing.html">Ray Tracing</a><ul class="simple">
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials.html">Tutorials</a><ul class="simple">
 </ul>
 </li>
@@ -539,15 +546,12 @@
                   
   <div class="section" id="setting-up-intellij-idea">
 <h1>IntelliJ IDEA Instellen<a class="headerlink" href="#setting-up-intellij-idea" title="Permalink naar deze titel">¶</a></h1>
-<p>In dit artikel wordt uigeled hoe u uw <strong>IntelliJ IDEA</strong> werkruimte moet configureren om plugins te kunnen ontwikkelen met behulp van de Sponge API.</p>
-<div class="section" id="starting-your-project">
-<h2>Starting Your Project<a class="headerlink" href="#starting-your-project" title="Permalink naar deze titel">¶</a></h2>
-<p>We recommend using Gradle or Maven when developing plugins with the Sponge API. Gradle and Maven help significantly when
-managing dependencies, such as the Sponge API, for your project. This is preferable to including the <code class="docutils literal"><span class="pre">.jar</span></code> file in
-your project.</p>
+<p>This article describes how to configure your <strong>IntelliJ IDEA</strong> workspace for plugin development with SpongeAPI and
+<a class="reference internal" href="../buildsystem.html"><em>a build system such as Maven or Gradle</em></a>.</p>
 <div class="section" id="gradle">
-<h3>Gradle<a class="headerlink" href="#gradle" title="Permalink naar deze titel">¶</a></h3>
-<p><strong>To create your project:</strong></p>
+<h2>Gradle<a class="headerlink" href="#gradle" title="Permalink naar deze titel">¶</a></h2>
+<div class="section" id="creating-your-project">
+<h3>Creating your project<a class="headerlink" href="#creating-your-project" title="Permalink naar deze titel">¶</a></h3>
 <ul class="simple">
 <li>Open <strong>IntelliJ IDEA</strong>.</li>
 <li><p class="first">Klik op <code class="docutils literal"><span class="pre">Create</span> <span class="pre">New</span> <span class="pre">Project</span></code>.</p>
@@ -556,29 +560,42 @@ your project.</p>
 </li>
 <li><p class="first">Vul de <strong>Group ID</strong>, <strong>Artifact ID</strong> en <strong>Version</strong> in.</p>
 <ul>
-<li>Your <strong>Group ID</strong> should correspond to your organization name, or something similar.</li>
-<li>Your <strong>Artifact ID</strong> should correspond to your project name.</li>
+<li>Your <strong>Group ID</strong> should usually correspond to your Java package name. See <a class="reference internal" href="../plugin-class.html"><em>Creating Your Plugin Class</em></a> for details.</li>
+<li>Your <strong>Artifact ID</strong> should usually correspond to your <strong>plugin ID</strong> you chose earlier, e.g. <code class="docutils literal"><span class="pre">myplugin</span></code>.</li>
 <li>Your <strong>Version</strong> is up to you.</li>
 </ul>
 </li>
 <li><p class="first">Klik tweemaal op <code class="docutils literal"><span class="pre">Next</span></code>, geef uw project een naam en klik op <code class="docutils literal"><span class="pre">Finish</span></code>.</p>
 </li>
 </ul>
-<p><strong>To import the Sponge API as a dependency:</strong></p>
+</div>
+<div class="section" id="editing-the-build-script">
+<h3>Editing the build script<a class="headerlink" href="#editing-the-build-script" title="Permalink naar deze titel">¶</a></h3>
 <ul class="simple">
 <li><p class="first">Open <code class="docutils literal"><span class="pre">build.gradle</span></code> in de navigator en voeg de dependencies toe.</p>
 </li>
-<li><p class="first">Neem een kijkje op de <a class="reference internal" href="dependencies.html"><em>dependencies pagina</em></a> voor een voorbeeld Gradle bestand.</p>
-</li>
+<li>Edit the build script according to the instructions at <a class="reference internal" href="../project/gradle.html"><em>Setting Up Gradle</em></a>.</li>
 <li><p class="first">Open het <strong>Gradle tabblad</strong> aan de rechterkant van het IntelliJ venster en druk op de refresh knop.</p>
 </li>
 <li><p class="first">Gradle setup is voltooid! Nu kunt u beginnen met het ontwikkelen van uw plugin.</p>
 </li>
 </ul>
 </div>
+<div class="section" id="importing-your-project">
+<h3>Importing your project<a class="headerlink" href="#importing-your-project" title="Permalink naar deze titel">¶</a></h3>
+<p>If you&#8217;ve already started with your project and want to import it again at a later point you need to import it instead
+of re-creating it inside your IDE:</p>
+<ul class="simple">
+<li>Click <code class="docutils literal"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Open</span></code></li>
+<li>Navigate to the project&#8217;s <code class="docutils literal"><span class="pre">build.gradle</span></code> file</li>
+<li>Click Ok</li>
+</ul>
+</div>
+</div>
 <div class="section" id="maven">
-<h3>Maven<a class="headerlink" href="#maven" title="Permalink naar deze titel">¶</a></h3>
-<p><strong>To create your project:</strong></p>
+<h2>Maven<a class="headerlink" href="#maven" title="Permalink naar deze titel">¶</a></h2>
+<div class="section" id="id1">
+<h3>Creating your project<a class="headerlink" href="#id1" title="Permalink naar deze titel">¶</a></h3>
 <ul class="simple">
 <li>Open <strong>IntelliJ IDEA</strong>.</li>
 <li><p class="first">Klik op <code class="docutils literal"><span class="pre">Create</span> <span class="pre">New</span> <span class="pre">Project</span></code>.</p>
@@ -587,8 +604,8 @@ your project.</p>
 </li>
 <li><p class="first">Vul de <strong>Group ID</strong>, <strong>Artifact ID</strong> en <strong>Version</strong> in.</p>
 <ul>
-<li>Your <strong>Group ID</strong> should correspond to your organization name, or something similar.</li>
-<li>Your <strong>Artifact ID</strong> should correspond to your project name.</li>
+<li>Your <strong>Group ID</strong> should usually correspond to your Java package name. See <a class="reference internal" href="../plugin-class.html"><em>Creating Your Plugin Class</em></a> for details.</li>
+<li>Your <strong>Artifact ID</strong> should usually correspond to your <strong>plugin ID</strong> you chose earlier, e.g. <code class="docutils literal"><span class="pre">myplugin</span></code>.</li>
 <li>Your <strong>Version</strong> is up to you.</li>
 </ul>
 </li>
@@ -596,17 +613,25 @@ your project.</p>
 <li><p class="first">Vul de <strong>naam</strong> van je project in en klik op <code class="docutils literal"><span class="pre">Finish</span></code>.</p>
 </li>
 </ul>
-<p><strong>To import the Sponge API as a dependency:</strong></p>
+</div>
+<div class="section" id="editing-the-project-configuration">
+<h3>Editing the project configuration<a class="headerlink" href="#editing-the-project-configuration" title="Permalink naar deze titel">¶</a></h3>
 <ul class="simple">
 <li>Open <code class="docutils literal"><span class="pre">pom.xml</span></code> in the navigator.</li>
-<li><p class="first">Wanneer de editor tab gefocust is, kies <code class="docutils literal"><span class="pre">Code</span> <span class="pre">&gt;</span> <span class="pre">Generate</span></code>.</p>
-</li>
-<li><p class="first">Klik op <code class="docutils literal"><span class="pre">Depenency</span></code> in de popup.</p>
-</li>
-<li><p class="first">Zoek naar de <a class="reference internal" href="dependencies.html"><em>officiële Sponge API Maven artefact</em></a> onder <strong>Search by artifact</strong> en klik <code class="docutils literal"><span class="pre">Add</span></code>.</p>
-</li>
+<li>Edit the build configuration according to the instructions at <a class="reference internal" href="../project/maven.html"><em>Setting Up Maven</em></a>.</li>
+<li>Refresh your Maven project.</li>
 <li><p class="first">Importeer de veranderingen van Maven wanneer dit wordt gevraagd.</p>
 </li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h3>Importing your project<a class="headerlink" href="#id2" title="Permalink naar deze titel">¶</a></h3>
+<p>If you&#8217;ve already started with your project and want to import it again at a later point you need to import it instead
+of re-creating it inside your IDE:</p>
+<ul class="simple">
+<li>Click <code class="docutils literal"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Open</span></code></li>
+<li>Navigate to the project&#8217;s <code class="docutils literal"><span class="pre">pom.xml</span></code> file</li>
+<li>Click Ok</li>
 </ul>
 </div>
 </div>

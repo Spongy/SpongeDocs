@@ -252,6 +252,9 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">플러그인 만들기</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../buildsystem.html">Choosing a Build System</a><ul class="simple">
+</ul>
+</li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Setting Up Your Workspace</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="">IntelliJ IDEA 설정하기</a><ul class="simple">
 </ul>
@@ -259,25 +262,28 @@
 <li class="toctree-l3"><a class="reference internal" href="eclipse.html">Eclipse 설정하기</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="netbeans.html">Setting Up NetBeans</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="dependencies.html">Adding Sponge API Dependencies</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../project/index.html">Setting Up Your Project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../project/gradle.html">Setting Up Gradle</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../project/maven.html">Setting Up Maven</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../practices.html">Best Practices</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../templates.html">Plugin Templates</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../main-class.html">Creating Your Main Plugin Class</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">Choosing a Plugin Identifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Creating Your Plugin Class</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../lifecycle.html">Plugin Lifecycle</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../injection.html">Dependency Injection</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../practices.html">Best Practices</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../optional/index.html">Optionals</a><ul>
@@ -290,23 +296,6 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../logging.html">Logging and Debugging</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../text/index.html">Working with Text</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../text/text.html">Creating Text</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../text/representations/index.html">Text Serializers</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../text/representations/xml.html">TextXML Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../text/representations/json.html">JSON Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Configuration Format</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">The Pagination Service</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Working with TextTemplates</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Creating Commands</a><ul>
@@ -351,6 +340,26 @@
 <li class="toctree-l3"><a class="reference internal" href="../configuration/serialization.html">Serializing Objects</a><ul class="simple">
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../text/index.html">Working with Text</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../text/text.html">Creating Text</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../text/representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../text/representations/xml.html">TextXML Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../text/representations/json.html">JSON Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Configuration Format</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">The Pagination Service</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../text/messagechannels.html">Message Channels</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Working with TextTemplates</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../data/index.html">The Data API</a><ul>
@@ -399,10 +408,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../injection.html">Dependency Injection</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Using the Scheduler</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Using the Scheduler</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../services.html">Working with Services</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../database.html">Working with Databases</a><ul class="simple">
@@ -424,9 +433,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../services.html">Working with Services</a><ul class="simple">
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="../wgen/index.html">World Generation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../wgen/modifiers.html">Working with WorldGeneratorModifiers</a><ul class="simple">
 </ul>
@@ -442,12 +448,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../debugging.html">Plugin Debugging</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../messagechannels.html">Message Channels</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin-meta.html">Plugin Metadata</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../ray-tracing.html">Ray Tracing</a><ul class="simple">
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials.html">Tutorials</a><ul class="simple">
 </ul>
 </li>
@@ -539,14 +546,12 @@
                   
   <div class="section" id="setting-up-intellij-idea">
 <h1>IntelliJ IDEA 설정하기<a class="headerlink" href="#setting-up-intellij-idea" title="제목 주소">¶</a></h1>
-<p>이 문서에서는 Sponge API로 플러그인 개발을 위한 <strong>IntelliJ IDEA</strong> 작업 공간을 구성하는 방법에 대해 설명합니다.</p>
-<div class="section" id="starting-your-project">
-<h2>프로젝트 시작하기<a class="headerlink" href="#starting-your-project" title="제목 주소">¶</a></h2>
-<p>Sponge API 플러그인를 개발할 때 Gradle 이나 Maven을 사용하는것이 좋습니다. Gradle과 Maven은 Sponge API의 종속성을 관리 할 때 크게 도움이 됩니다.
-이 프로젝트에는 <a href="#id1"><span class="problematic" id="id2">``</span></a>. jar``파일을 포함시키는 것이 좋습니다.</p>
+<p>This article describes how to configure your <strong>IntelliJ IDEA</strong> workspace for plugin development with SpongeAPI and
+<a class="reference internal" href="../buildsystem.html"><em>a build system such as Maven or Gradle</em></a>.</p>
 <div class="section" id="gradle">
-<h3>Gradle<a class="headerlink" href="#gradle" title="제목 주소">¶</a></h3>
-<p><strong>프로젝트 생성하기:</strong></p>
+<h2>Gradle<a class="headerlink" href="#gradle" title="제목 주소">¶</a></h2>
+<div class="section" id="creating-your-project">
+<h3>Creating your project<a class="headerlink" href="#creating-your-project" title="제목 주소">¶</a></h3>
 <ul class="simple">
 <li><p class="first"><a href="#id1"><span class="problematic" id="id2">**</span></a>IntelliJ IDEA**를 실행 합니다.</p>
 </li>
@@ -556,10 +561,8 @@
 </li>
 <li><p class="first"><strong>Group ID</strong>, <strong>Artifact ID</strong> 그리고 <strong>Version</strong> 을 입력합니다.</p>
 <ul>
-<li><p class="first"><strong>Group ID</strong> 는 조직 이름 혹은 비슷한 것 이어야 합니다.</p>
-</li>
-<li><p class="first"><strong>Artifact ID</strong> 는 프로젝트 이름에 해당합니다.</p>
-</li>
+<li>Your <strong>Group ID</strong> should usually correspond to your Java package name. See <a class="reference internal" href="../plugin-class.html"><em>Creating Your Plugin Class</em></a> for details.</li>
+<li>Your <strong>Artifact ID</strong> should usually correspond to your <strong>plugin ID</strong> you chose earlier, e.g. <code class="docutils literal"><span class="pre">myplugin</span></code>.</li>
 <li><p class="first"><a href="#id1"><span class="problematic" id="id2">**</span></a>Version**은 자신이 알맞게 설정하시면 됨니다.</p>
 </li>
 </ul>
@@ -567,21 +570,34 @@
 <li><p class="first"><a href="#id1"><span class="problematic" id="id2">``</span></a>Next``를 두번 클릭하고 프로젝트 이름을 입력하고 <a href="#id3"><span class="problematic" id="id4">``</span></a>Finish``를 클릭하세요.</p>
 </li>
 </ul>
-<p><strong>Sponge API의 종속성을 가져올려면:</strong></p>
+</div>
+<div class="section" id="editing-the-build-script">
+<h3>Editing the build script<a class="headerlink" href="#editing-the-build-script" title="제목 주소">¶</a></h3>
 <ul class="simple">
 <li><p class="first">탐색기에서 <a href="#id1"><span class="problematic" id="id2">``</span></a>build. gradle``파일에 종속성을 추가합니다.</p>
 </li>
-<li><p class="first">:doc:<a href="#id1"><span class="problematic" id="id2">`</span></a>dependencies page&lt;dependencies&gt;`에서 gradle파일의 예제를 참조하세요</p>
-</li>
+<li>Edit the build script according to the instructions at <a class="reference internal" href="../project/gradle.html"><em>Setting Up Gradle</em></a>.</li>
 <li><p class="first">IntelliJ의 창 오른쪽에 있는 <a href="#id1"><span class="problematic" id="id2">**</span></a>Gradle 탭**을 열어 새로고침 버튼을 누르세요.</p>
 </li>
 <li><p class="first">Gradle설정이 완료되었습니다. 지금부터 당신의 플러그인을 코딩 하실 수 있습니다.</p>
 </li>
 </ul>
 </div>
+<div class="section" id="importing-your-project">
+<h3>Importing your project<a class="headerlink" href="#importing-your-project" title="제목 주소">¶</a></h3>
+<p>If you&#8217;ve already started with your project and want to import it again at a later point you need to import it instead
+of re-creating it inside your IDE:</p>
+<ul class="simple">
+<li>Click <code class="docutils literal"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Open</span></code></li>
+<li>Navigate to the project&#8217;s <code class="docutils literal"><span class="pre">build.gradle</span></code> file</li>
+<li>Click Ok</li>
+</ul>
+</div>
+</div>
 <div class="section" id="maven">
-<h3>Maven<a class="headerlink" href="#maven" title="제목 주소">¶</a></h3>
-<p><strong>프로젝트 생성하기:</strong></p>
+<h2>Maven<a class="headerlink" href="#maven" title="제목 주소">¶</a></h2>
+<div class="section" id="id1">
+<h3>Creating your project<a class="headerlink" href="#id1" title="제목 주소">¶</a></h3>
 <ul class="simple">
 <li><p class="first"><a href="#id1"><span class="problematic" id="id2">**</span></a>IntelliJ IDEA**를 실행 합니다.</p>
 </li>
@@ -591,10 +607,8 @@
 </li>
 <li><p class="first"><strong>Group ID</strong>, <strong>Artifact ID</strong> 그리고 <strong>Version</strong> 을 입력합니다.</p>
 <ul>
-<li><p class="first"><strong>Group ID</strong> 는 조직 이름 혹은 비슷한 것 이어야 합니다.</p>
-</li>
-<li><p class="first"><strong>Artifact ID</strong> 는 프로젝트 이름에 해당합니다.</p>
-</li>
+<li>Your <strong>Group ID</strong> should usually correspond to your Java package name. See <a class="reference internal" href="../plugin-class.html"><em>Creating Your Plugin Class</em></a> for details.</li>
+<li>Your <strong>Artifact ID</strong> should usually correspond to your <strong>plugin ID</strong> you chose earlier, e.g. <code class="docutils literal"><span class="pre">myplugin</span></code>.</li>
 <li><p class="first"><a href="#id1"><span class="problematic" id="id2">**</span></a>Version**은 자신이 알맞게 설정하시면 됨니다.</p>
 </li>
 </ul>
@@ -604,18 +618,26 @@
 <li><p class="first">프로젝트 이름을 입력하고 <a href="#id1"><span class="problematic" id="id2">``</span></a>Finsh``를 클릭합니다.</p>
 </li>
 </ul>
-<p><strong>Sponge API의 종속성을 가져올려면:</strong></p>
+</div>
+<div class="section" id="editing-the-project-configuration">
+<h3>Editing the project configuration<a class="headerlink" href="#editing-the-project-configuration" title="제목 주소">¶</a></h3>
 <ul class="simple">
 <li><p class="first">탐색기에서 <a href="#id1"><span class="problematic" id="id2">``</span></a>pom.xml``를 여세요.</p>
 </li>
-<li><p class="first">편집기 탬에서 <a href="#id1"><span class="problematic" id="id2">``</span></a>Code &gt; Generate``를 선택합니다.</p>
-</li>
-<li><p class="first"><a href="#id1"><span class="problematic" id="id2">``</span></a>Dependency``를 팝업에서 클릭합니다.</p>
-</li>
-<li><p class="first">:doc:<a href="#id1"><span class="problematic" id="id2">`</span></a>official Sponge API Maven artifact &lt;dependencies&gt;`에서 <a href="#id3"><span class="problematic" id="id4">**</span></a>Search by artifact**를 검색하고 <a href="#id5"><span class="problematic" id="id6">``</span></a>Add``를 클릭합니다.</p>
-</li>
+<li>Edit the build configuration according to the instructions at <a class="reference internal" href="../project/maven.html"><em>Setting Up Maven</em></a>.</li>
+<li>Refresh your Maven project.</li>
 <li><p class="first">메세지가 표시되면, Maven에서 종속성을 추가합니다.</p>
 </li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h3>Importing your project<a class="headerlink" href="#id2" title="제목 주소">¶</a></h3>
+<p>If you&#8217;ve already started with your project and want to import it again at a later point you need to import it instead
+of re-creating it inside your IDE:</p>
+<ul class="simple">
+<li>Click <code class="docutils literal"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Open</span></code></li>
+<li>Navigate to the project&#8217;s <code class="docutils literal"><span class="pre">pom.xml</span></code> file</li>
+<li>Click Ok</li>
 </ul>
 </div>
 </div>

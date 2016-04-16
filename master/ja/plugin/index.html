@@ -32,7 +32,7 @@
     <script type="text/javascript" src="../_static/lights.js"></script>
       <link rel="shortcut icon" href="../_static/favicon.ico"/>
         <link rel="top" title="Sponge 4.0.3 ドキュメント" href="../index.html" />
-        <link rel="next" title="ワークスペースのセットアップ" href="workspace/index.html" />
+        <link rel="next" title="Choosing a Build System" href="buildsystem.html" />
         <link rel="prev" title="Git のインストール" href="../preparing/git.html" />
     
   <script type="text/javascript">
@@ -130,7 +130,7 @@
       <ul class="controls">
         <li>|</li>
         
-        <li><a href="workspace/index.html" title="Next Page"><i class="icon-right-open-big lights-icon"></i></a></li>
+        <li><a href="buildsystem.html" title="Next Page"><i class="icon-right-open-big lights-icon"></i></a></li>
         
         <li><a href="#top" title="To the top"><i class="icon-up-open-big lights-icon"></i></a></li>
         <li><a href="../index.html" title="Home"><i class="icon-home lights-icon"></i></a></li>
@@ -249,6 +249,9 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="">プラグインの作成</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="buildsystem.html">Choosing a Build System</a><ul class="simple">
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="workspace/index.html">ワークスペースのセットアップ</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="workspace/idea.html">IntelliJ IDEA のセットアップ</a><ul class="simple">
 </ul>
@@ -256,25 +259,28 @@
 <li class="toctree-l3"><a class="reference internal" href="workspace/eclipse.html">Eclipse のセットアップ</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="workspace/netbeans.html">NetBeans のセットアップ</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="workspace/dependencies.html">Sponge API の依存関係の追加</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="project/index.html">Setting Up Your Project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="project/gradle.html">Setting Up Gradle</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="project/maven.html">Setting Up Maven</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="practices.html">ベストプラクティス</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="templates.html">プラグインのテンプレート</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="main-class.html">プラグインのメインクラスの作成</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="plugin-identifier.html">Choosing a Plugin Identifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin-class.html">Creating Your Plugin Class</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="lifecycle.html">プラグインのライフサイクル</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="injection.html">Dependency Injection</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="practices.html">ベストプラクティス</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="optional/index.html">Optionals</a><ul>
@@ -287,23 +293,6 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="logging.html">ロギングとデバッグ</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="text/index.html">Working with Text</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="text/text.html">Creating Text</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="text/representations/index.html">Text Serializers</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="text/representations/xml.html">TextXML Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="text/representations/json.html">JSON Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="text/representations/configurate.html">Configuration Format</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="text/pagination.html">ページネーションサービス</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="text/templates.html">Working with TextTemplates</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="commands/index.html">コマンドの作成</a><ul>
@@ -348,6 +337,26 @@
 <li class="toctree-l3"><a class="reference internal" href="configuration/serialization.html">Serializing Objects</a><ul class="simple">
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="text/index.html">Working with Text</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="text/text.html">Creating Text</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="text/representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="text/representations/xml.html">TextXML Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="text/representations/json.html">JSON Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="text/representations/configurate.html">Configuration Format</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="text/pagination.html">ページネーションサービス</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="text/messagechannels.html">Message Channels</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="text/templates.html">Working with TextTemplates</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="data/index.html">The Data API</a><ul>
@@ -396,10 +405,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="injection.html">Dependency Injection</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="scheduler.html">Using the Scheduler</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="scheduler.html">Using the Scheduler</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="services.html">Working with Services</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="database.html">Working with Databases</a><ul class="simple">
@@ -421,9 +430,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="services.html">Working with Services</a><ul class="simple">
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="wgen/index.html">World Generation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="wgen/modifiers.html">Working with WorldGeneratorModifiers</a><ul class="simple">
 </ul>
@@ -439,12 +445,13 @@
 <li class="toctree-l2"><a class="reference internal" href="debugging.html">Plugin Debugging</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="messagechannels.html">Message Channels</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="plugin-meta.html">Plugin Metadata</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ray-tracing.html">Ray Tracing</a><ul class="simple">
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html">チュートリアル</a><ul class="simple">
 </ul>
 </li>
@@ -555,24 +562,30 @@ or Maven. Some of them demonstrate how to create plugins using other JVM languag
 <h2>Contents<a class="headerlink" href="#contents" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="buildsystem.html">Choosing a Build System</a><ul class="simple">
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="workspace/index.html">ワークスペースのセットアップ</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="workspace/idea.html">IntelliJ IDEA のセットアップ</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workspace/eclipse.html">Eclipse のセットアップ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="workspace/netbeans.html">NetBeans のセットアップ</a></li>
-<li class="toctree-l2"><a class="reference internal" href="workspace/dependencies.html">Sponge API の依存関係の追加</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="practices.html">ベストプラクティス</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="project/index.html">Setting Up Your Project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="project/gradle.html">Setting Up Gradle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project/maven.html">Setting Up Maven</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="templates.html">プラグインのテンプレート</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="main-class.html">プラグインのメインクラスの作成</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="plugin-identifier.html">Choosing a Plugin Identifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-class.html">Creating Your Plugin Class</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="lifecycle.html">プラグインのライフサイクル</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="injection.html">Dependency Injection</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="practices.html">ベストプラクティス</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="optional/index.html">Optionals</a><ul>
@@ -581,13 +594,6 @@ or Maven. Some of them demonstrate how to create plugins using other JVM languag
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="logging.html">ロギングとデバッグ</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="text/index.html">Working with Text</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="text/text.html">Creating Text</a></li>
-<li class="toctree-l2"><a class="reference internal" href="text/representations/index.html">Text Serializers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="text/pagination.html">ページネーションサービス</a></li>
-<li class="toctree-l2"><a class="reference internal" href="text/templates.html">Working with TextTemplates</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="commands/index.html">コマンドの作成</a><ul>
@@ -610,6 +616,14 @@ or Maven. Some of them demonstrate how to create plugins using other JVM languag
 <li class="toctree-l2"><a class="reference internal" href="configuration/loaders.html">Configuration Loaders</a></li>
 <li class="toctree-l2"><a class="reference internal" href="configuration/nodes.html">Configuration Nodes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="configuration/serialization.html">Serializing Objects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="text/index.html">Working with Text</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="text/text.html">Creating Text</a></li>
+<li class="toctree-l2"><a class="reference internal" href="text/representations/index.html">Text Serializers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="text/pagination.html">ページネーションサービス</a></li>
+<li class="toctree-l2"><a class="reference internal" href="text/messagechannels.html">Message Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="text/templates.html">Working with TextTemplates</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="data/index.html">The Data API</a><ul>
@@ -636,10 +650,10 @@ or Maven. Some of them demonstrate how to create plugins using other JVM languag
 <li class="toctree-l2"><a class="reference internal" href="items/creating.html">Creating an ItemStack</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="injection.html">Dependency Injection</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="scheduler.html">Using the Scheduler</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="scheduler.html">Using the Scheduler</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="services.html">Working with Services</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="database.html">Working with Databases</a><ul class="simple">
@@ -653,9 +667,6 @@ or Maven. Some of them demonstrate how to create plugins using other JVM languag
 <li class="toctree-l2"><a class="reference internal" href="economy/implementing.html">Implementing the Economy API</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="services.html">Working with Services</a><ul class="simple">
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="wgen/index.html">World Generation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="wgen/modifiers.html">Working with WorldGeneratorModifiers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="wgen/customwgen.html">Modifying World Generation</a></li>
@@ -667,12 +678,13 @@ or Maven. Some of them demonstrate how to create plugins using other JVM languag
 <li class="toctree-l1"><a class="reference internal" href="debugging.html">Plugin Debugging</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="messagechannels.html">Message Channels</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="plugin-meta.html">Plugin Metadata</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ray-tracing.html">Ray Tracing</a><ul class="simple">
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials.html">チュートリアル</a><ul class="simple">
 </ul>
 </li>

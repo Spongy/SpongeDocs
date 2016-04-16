@@ -33,7 +33,7 @@
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="documentation Sponge 4.0.3" href="../../index.html" />
         <link rel="up" title="Mise en Place de votre Espace de Travail" href="index.html" />
-        <link rel="next" title="Configuration de NetBeans" href="netbeans.html" />
+        <link rel="next" title="Setting Up Your Project" href="../project/index.html" />
         <link rel="prev" title="Configurer IntelliJ IDEA" href="idea.html" />
     
   <script type="text/javascript">
@@ -131,7 +131,7 @@
       <ul class="controls">
         <li>|</li>
         
-        <li><a href="netbeans.html" title="Next Page"><i class="icon-right-open-big lights-icon"></i></a></li>
+        <li><a href="../project/index.html" title="Next Page"><i class="icon-right-open-big lights-icon"></i></a></li>
         
         <li><a href="#top" title="To the top"><i class="icon-up-open-big lights-icon"></i></a></li>
         <li><a href="../../index.html" title="Home"><i class="icon-home lights-icon"></i></a></li>
@@ -252,6 +252,9 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Création d&#8217;un Plugin</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../buildsystem.html">Choosing a Build System</a><ul class="simple">
+</ul>
+</li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Mise en Place de votre Espace de Travail</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="idea.html">Configurer IntelliJ IDEA</a><ul class="simple">
 </ul>
@@ -259,25 +262,28 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="">Préparation d&#8217;Eclipse</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="netbeans.html">Configuration de NetBeans</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="dependencies.html">Ajout des Dépendances de Sponge</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../project/index.html">Setting Up Your Project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../project/gradle.html">Setting Up Gradle</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../project/maven.html">Setting Up Maven</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../practices.html">Meilleures Pratiques</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../templates.html">Modèles de Plugin</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../main-class.html">Créer la Classe Principale de votre Plugin</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">Choosing a Plugin Identifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Creating Your Plugin Class</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../lifecycle.html">Cycle de vie des Plugins</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../injection.html">Injection de Dépendances</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../practices.html">Meilleures Pratiques</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../optional/index.html">Optionnels</a><ul>
@@ -290,23 +296,6 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../logging.html">Journalisation (Logging) et Débogage</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../text/index.html">Travailler avec du Texte</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../text/text.html">Création de texte</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../text/representations/index.html">Text Serializers</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../text/representations/xml.html">Format TextXML</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../text/representations/json.html">Format JSON</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Configuration Format</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">Le Service de Pagination</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Working with TextTemplates</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Création de commandes</a><ul>
@@ -351,6 +340,26 @@
 <li class="toctree-l3"><a class="reference internal" href="../configuration/serialization.html">Sérialisation d&#8217;objets</a><ul class="simple">
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../text/index.html">Travailler avec du Texte</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../text/text.html">Création de texte</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../text/representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../text/representations/xml.html">Format TextXML</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../text/representations/json.html">Format JSON</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Configuration Format</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">Le Service de Pagination</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../text/messagechannels.html">Message Channels</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Working with TextTemplates</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../data/index.html">La Data API</a><ul>
@@ -399,10 +408,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../injection.html">Injection de Dépendances</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Utiliser le Scheduler</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Utiliser le Scheduler</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../services.html">Travailler avec des Services</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../database.html">Travailler avec des Bases de Données</a><ul class="simple">
@@ -424,9 +433,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../services.html">Travailler avec des Services</a><ul class="simple">
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="../wgen/index.html">Génération du monde</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../wgen/modifiers.html">Travailler avec WorldGeneratorModifiers</a><ul class="simple">
 </ul>
@@ -442,12 +448,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../debugging.html">Debugging d&#8217;un plugin</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../messagechannels.html">Message Channels</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin-meta.html">Plugin Metadata</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../ray-tracing.html">Ray Tracing</a><ul class="simple">
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../bukkit-sponge-compare.html">Comparaison de Bukkit et SpongeAPI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials.html">Tutoriels</a><ul class="simple">
 </ul>
 </li>
@@ -539,13 +546,17 @@
                   
   <div class="section" id="setting-up-eclipse">
 <h1>Préparation d&#8217;Eclipse<a class="headerlink" href="#setting-up-eclipse" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Cette article décrit comment configurer votre espace de travail d&#8217;<strong>Eclipse</strong> pour le développement de plugin avec l&#8217;API Sponge.</p>
-<div class="section" id="starting-your-project">
-<h2>Débutez votre projet<a class="headerlink" href="#starting-your-project" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Nous recommandons d&#8217;utiliser Gradle ou Maven pour le développement de plugins avec l&#8217;API Sponge. Gradle et Maven aident de façon significative dans la gestion des dépendances, telle que l&#8217;API Sponge, pour votre projet. Il est préférable d&#8217;inclure le fichier &#8221;.jar&#8221; dans votre projet.</p>
+<p>This article describes how to configure your <strong>Eclipse</strong> workspace for plugin development with SpongeAPI and <a class="reference internal" href="../buildsystem.html"><em>a
+build system such as Maven or Gradle</em></a>.</p>
+<div class="admonition note">
+<p class="first admonition-title">Note</p>
+<p class="last">A tutorial by Mumfrey showing the setup of a Sponge workspace in Eclipse, using the new features in Buildship and ForgeGradle,
+can be viewed <a class="reference external" href="https://www.youtube.com/watch?v=R8NcakQtHVI">Here.</a></p>
+</div>
 <div class="section" id="gradle">
-<h3>Gradle<a class="headerlink" href="#gradle" title="Lien permanent vers ce titre">¶</a></h3>
-<p><strong>Pour créer votre projet:</strong></p>
+<h2>Gradle<a class="headerlink" href="#gradle" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="creating-your-project">
+<h3>Creating your project<a class="headerlink" href="#creating-your-project" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Vous devez d&#8217;abord installer <strong>Gradle Integration Plugin</strong> avant d&#8217;utiliser Gradle dans Eclipse. Cela ne doit être fait qu&#8217;à la création de votre premier projet.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
@@ -572,19 +583,33 @@
 <li><p class="first">Choisissez un nom de projet, puis cliquez sur <code class="docutils literal"><span class="pre">Terminé</span></code>.</p>
 </li>
 </ul>
-<p><strong>Pour importer de l&#8217;API de Sponge en tant que dépendance:</strong></p>
+</div>
+<div class="section" id="editing-the-build-script">
+<h3>Editing the build script<a class="headerlink" href="#editing-the-build-script" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><p class="first">Ouvrez <code class="docutils literal"><span class="pre">build.gradle</span></code> dans le navigateur.</p>
 </li>
-<li><p class="first">Ajoutez manuellement la documentation <a class="reference internal" href="dependencies.html"><em>official Sponge API Maven artifact</em></a> comme dépendance. Un exemple peut être trouvé dans les articles précités d&#8217;artefacts.</p>
-</li>
+<li>Edit the build script according to the instructions at <a class="reference internal" href="../project/gradle.html"><em>Setting Up Gradle</em></a>.</li>
 <li><p class="first">Faites un clique-droit sur votre projet, ensuite sélectionnez <code class="docutils literal"><span class="pre">Gradle</span> <span class="pre">&gt;</span> <span class="pre">Refresh</span> <span class="pre">Dependencies</span></code>.</p>
 </li>
 </ul>
 </div>
+<div class="section" id="importing-your-project">
+<h3>Importing your project<a class="headerlink" href="#importing-your-project" title="Lien permanent vers ce titre">¶</a></h3>
+<p>If you&#8217;ve already started with your project and want to import it again at a later point you need to import it instead
+of re-creating it inside your IDE:</p>
+<ul class="simple">
+<li>Click <code class="docutils literal"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Import</span></code></li>
+<li>Select <code class="docutils literal"><span class="pre">Gradle</span> <span class="pre">&gt;</span> <span class="pre">Gradle</span> <span class="pre">Project</span></code></li>
+<li>Navigate to the root folder of the project</li>
+<li>Click Finish</li>
+</ul>
+</div>
+</div>
 <div class="section" id="maven">
-<h3>Maven<a class="headerlink" href="#maven" title="Lien permanent vers ce titre">¶</a></h3>
-<p><strong>Pour créer votre projet:</strong></p>
+<h2>Maven<a class="headerlink" href="#maven" title="Lien permanent vers ce titre">¶</a></h2>
+<div class="section" id="id1">
+<h3>Creating your project<a class="headerlink" href="#id1" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><p class="first">Ouvrez <strong>Eclipse</strong>.</p>
 </li>
@@ -598,10 +623,8 @@
 </li>
 <li><p class="first">Entrez votre <strong>Group ID</strong>, <strong>Artifact ID</strong>, <strong>Version</strong>, votre nom de projet et votre description du projet.</p>
 <ul>
-<li><p class="first">Votre <strong>Group ID</strong> doit correspondre au nom de votre organisation, ou à quelque chose de similaire.</p>
-</li>
-<li><p class="first">Votre <strong>ArtifactID</strong> doit correspondre au nom de votre projet.</p>
-</li>
+<li>Your <strong>Group ID</strong> should usually correspond to your Java package name. See <a class="reference internal" href="../plugin-class.html"><em>Creating Your Plugin Class</em></a> for details.</li>
+<li>Your <strong>Artifact ID</strong> should usually correspond to your <strong>plugin ID</strong> you chose earlier, e.g. <code class="docutils literal"><span class="pre">myplugin</span></code>.</li>
 <li><p class="first">Libre à vous de choisir votre <strong>Version</strong>.</p>
 </li>
 </ul>
@@ -613,16 +636,25 @@
 <p class="first admonition-title">Astuce</p>
 <p class="last">Souvent Éclipse n&#8217;ouvre pas nouveaux projets après leur création. Dans ce cas, essayez de fermer l&#8217;écran de bienvenue d&#8217;Eclipse .Votre projet devrait être ouvert derrière celle-ci.</p>
 </div>
-<p><strong>Pour importer de l&#8217;API de Sponge en tant que dépendance:</strong></p>
+</div>
+<div class="section" id="editing-the-project-configuration">
+<h3>Editing the project configuration<a class="headerlink" href="#editing-the-project-configuration" title="Lien permanent vers ce titre">¶</a></h3>
 <ul class="simple">
 <li><p class="first">Ouvrez <code class="docutils literal"><span class="pre">pom.xml</span></code> dans le navigateur.</p>
 </li>
-<li><p class="first">Cliquez l&#8217;onglet <code class="docutils literal"><span class="pre">Dependencies</span></code> en bas ,  puis sur <code class="docutils literal"><span class="pre">Add</span></code>.</p>
-</li>
-<li><p class="first">Entrez le <strong>Group ID</strong>, <strong>Artifact ID</strong>, et la <strong>Version</strong> de la documentation <a class="reference internal" href="dependencies.html"><em>official Sponge API Maven artifact</em></a>.</p>
-</li>
-<li><p class="first">Cliquez sur <code class="docutils literal"><span class="pre">Ok</span></code>.</p>
-</li>
+<li>Edit the build configuration according to the instructions at <a class="reference internal" href="../project/maven.html"><em>Setting Up Maven</em></a>.</li>
+<li>Refresh your Maven project.</li>
+</ul>
+</div>
+<div class="section" id="id2">
+<h3>Importing your project<a class="headerlink" href="#id2" title="Lien permanent vers ce titre">¶</a></h3>
+<p>If you&#8217;ve already started with your project and want to import it again at a later point you need to import it instead
+of re-creating it inside your IDE:</p>
+<ul class="simple">
+<li>Click <code class="docutils literal"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">Import</span></code></li>
+<li>Select <code class="docutils literal"><span class="pre">Maven</span> <span class="pre">&gt;</span> <span class="pre">Existing</span> <span class="pre">Maven</span> <span class="pre">Projects</span></code></li>
+<li>Navigate to the root folder of the project</li>
+<li>Click Finish</li>
 </ul>
 </div>
 </div>

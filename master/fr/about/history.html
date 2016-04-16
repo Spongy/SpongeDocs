@@ -251,6 +251,9 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../plugin/index.html">Création d&#8217;un Plugin</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/buildsystem.html">Choosing a Build System</a><ul class="simple">
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/workspace/index.html">Mise en Place de votre Espace de Travail</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../plugin/workspace/idea.html">Configurer IntelliJ IDEA</a><ul class="simple">
 </ul>
@@ -258,25 +261,28 @@
 <li class="toctree-l3"><a class="reference internal" href="../plugin/workspace/eclipse.html">Préparation d&#8217;Eclipse</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/workspace/netbeans.html">Configuration de NetBeans</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/workspace/dependencies.html">Ajout des Dépendances de Sponge</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin/project/index.html">Setting Up Your Project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/project/gradle.html">Setting Up Gradle</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/project/maven.html">Setting Up Maven</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/practices.html">Meilleures Pratiques</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/templates.html">Modèles de Plugin</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/main-class.html">Créer la Classe Principale de votre Plugin</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin/plugin-identifier.html">Choosing a Plugin Identifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/plugin-class.html">Creating Your Plugin Class</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/lifecycle.html">Cycle de vie des Plugins</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/injection.html">Injection de Dépendances</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/practices.html">Meilleures Pratiques</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/optional/index.html">Optionnels</a><ul>
@@ -289,23 +295,6 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/logging.html">Journalisation (Logging) et Débogage</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/text/index.html">Travailler avec du Texte</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/text/text.html">Création de texte</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/text/representations/index.html">Text Serializers</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../plugin/text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../plugin/text/representations/xml.html">Format TextXML</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../plugin/text/representations/json.html">Format JSON</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../plugin/text/representations/configurate.html">Configuration Format</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/text/pagination.html">Le Service de Pagination</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/text/templates.html">Working with TextTemplates</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/commands/index.html">Création de commandes</a><ul>
@@ -350,6 +339,26 @@
 <li class="toctree-l3"><a class="reference internal" href="../plugin/configuration/serialization.html">Sérialisation d&#8217;objets</a><ul class="simple">
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/text/index.html">Travailler avec du Texte</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/text/text.html">Création de texte</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/text/representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../plugin/text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../plugin/text/representations/xml.html">Format TextXML</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../plugin/text/representations/json.html">Format JSON</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../plugin/text/representations/configurate.html">Configuration Format</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/text/pagination.html">Le Service de Pagination</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/text/messagechannels.html">Message Channels</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/text/templates.html">Working with TextTemplates</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/data/index.html">La Data API</a><ul>
@@ -398,10 +407,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/injection.html">Injection de Dépendances</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin/scheduler.html">Utiliser le Scheduler</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/scheduler.html">Utiliser le Scheduler</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin/services.html">Travailler avec des Services</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/database.html">Travailler avec des Bases de Données</a><ul class="simple">
@@ -423,9 +432,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/services.html">Travailler avec des Services</a><ul class="simple">
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/wgen/index.html">Génération du monde</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../plugin/wgen/modifiers.html">Travailler avec WorldGeneratorModifiers</a><ul class="simple">
 </ul>
@@ -441,12 +447,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../plugin/debugging.html">Debugging d&#8217;un plugin</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/messagechannels.html">Message Channels</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin/plugin-meta.html">Plugin Metadata</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/ray-tracing.html">Ray Tracing</a><ul class="simple">
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/bukkit-sponge-compare.html">Comparaison de Bukkit et SpongeAPI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/tutorials.html">Tutoriels</a><ul class="simple">
 </ul>
 </li>

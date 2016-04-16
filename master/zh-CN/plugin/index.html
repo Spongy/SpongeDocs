@@ -33,7 +33,7 @@
     <script type="text/javascript" src="../_static/lights.js"></script>
       <link rel="shortcut icon" href="../_static/favicon.ico"/>
         <link rel="top" title="Sponge 4.0.3 文档" href="../index.html" />
-        <link rel="next" title="建立工作目录" href="workspace/index.html" />
+        <link rel="next" title="Choosing a Build System" href="buildsystem.html" />
         <link rel="prev" title="安装Git" href="../preparing/git.html" />
     
   <script type="text/javascript">
@@ -131,7 +131,7 @@
       <ul class="controls">
         <li>|</li>
         
-        <li><a href="workspace/index.html" title="Next Page"><i class="icon-right-open-big lights-icon"></i></a></li>
+        <li><a href="buildsystem.html" title="Next Page"><i class="icon-right-open-big lights-icon"></i></a></li>
         
         <li><a href="#top" title="To the top"><i class="icon-up-open-big lights-icon"></i></a></li>
         <li><a href="../index.html" title="Home"><i class="icon-home lights-icon"></i></a></li>
@@ -250,6 +250,9 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="">插件开发</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="buildsystem.html">Choosing a Build System</a><ul class="simple">
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="workspace/index.html">建立工作目录</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="workspace/idea.html">架设Intellij IDEA</a><ul class="simple">
 </ul>
@@ -257,25 +260,28 @@
 <li class="toctree-l3"><a class="reference internal" href="workspace/eclipse.html">安装和使用Eclipse</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="workspace/netbeans.html">安装NetBeans</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="workspace/dependencies.html">加入Sponge API依赖项</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="project/index.html">Setting Up Your Project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="project/gradle.html">Setting Up Gradle</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="project/maven.html">Setting Up Maven</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="practices.html">最佳做法</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="templates.html">插件模板</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
-<li class="toctree-l2"><a class="reference internal" href="main-class.html">创建你的插件主类</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="plugin-identifier.html">Choosing a Plugin Identifier</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin-class.html">Creating Your Plugin Class</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="lifecycle.html">插件周期</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="injection.html">注入依赖项</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="practices.html">最佳做法</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="optional/index.html">Optionals</a><ul>
@@ -288,23 +294,6 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="logging.html">日志记录和调试</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="text/index.html">使用文本</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="text/text.html">创建文本</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="text/representations/index.html">Text Serializers</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="text/representations/xml.html">TextXML Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="text/representations/json.html">JSON Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="text/representations/configurate.html">Configuration Format</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="text/pagination.html">分页服务</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="text/templates.html">Working with TextTemplates</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="commands/index.html">创建命令</a><ul>
@@ -349,6 +338,26 @@
 <li class="toctree-l3"><a class="reference internal" href="configuration/serialization.html">Serializing Objects</a><ul class="simple">
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="text/index.html">使用文本</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="text/text.html">创建文本</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="text/representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="text/representations/xml.html">TextXML Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="text/representations/json.html">JSON Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="text/representations/configurate.html">Configuration Format</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="text/pagination.html">分页服务</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="text/messagechannels.html">Message Channels</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="text/templates.html">Working with TextTemplates</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="data/index.html">数据API</a><ul>
@@ -397,10 +406,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="injection.html">注入依赖项</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="scheduler.html">使用调度程序</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="scheduler.html">使用调度程序</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="services.html">使用服务</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="database.html">使用数据库</a><ul class="simple">
@@ -422,9 +431,6 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="services.html">使用服务</a><ul class="simple">
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="wgen/index.html">World Generation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="wgen/modifiers.html">Working with WorldGeneratorModifiers</a><ul class="simple">
 </ul>
@@ -440,12 +446,13 @@
 <li class="toctree-l2"><a class="reference internal" href="debugging.html">Plugin Debugging</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="messagechannels.html">Message Channels</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="plugin-meta.html">Plugin Metadata</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ray-tracing.html">Ray Tracing</a><ul class="simple">
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html">教程</a><ul class="simple">
 </ul>
 </li>
@@ -555,24 +562,30 @@ or Maven. Some of them demonstrate how to create plugins using other JVM languag
 <h2>目录<a class="headerlink" href="#contents" title="永久链接至标题">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="buildsystem.html">Choosing a Build System</a><ul class="simple">
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="workspace/index.html">建立工作目录</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="workspace/idea.html">架设Intellij IDEA</a></li>
 <li class="toctree-l2"><a class="reference internal" href="workspace/eclipse.html">安装和使用Eclipse</a></li>
-<li class="toctree-l2"><a class="reference internal" href="workspace/netbeans.html">安装NetBeans</a></li>
-<li class="toctree-l2"><a class="reference internal" href="workspace/dependencies.html">加入Sponge API依赖项</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="practices.html">最佳做法</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="project/index.html">Setting Up Your Project</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="project/gradle.html">Setting Up Gradle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project/maven.html">Setting Up Maven</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="templates.html">插件模板</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
-<li class="toctree-l1"><a class="reference internal" href="main-class.html">创建你的插件主类</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="plugin-identifier.html">Choosing a Plugin Identifier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="plugin-class.html">Creating Your Plugin Class</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="lifecycle.html">插件周期</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="injection.html">注入依赖项</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="practices.html">最佳做法</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="optional/index.html">Optionals</a><ul>
@@ -581,13 +594,6 @@ or Maven. Some of them demonstrate how to create plugins using other JVM languag
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="logging.html">日志记录和调试</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="text/index.html">使用文本</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="text/text.html">创建文本</a></li>
-<li class="toctree-l2"><a class="reference internal" href="text/representations/index.html">Text Serializers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="text/pagination.html">分页服务</a></li>
-<li class="toctree-l2"><a class="reference internal" href="text/templates.html">Working with TextTemplates</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="commands/index.html">创建命令</a><ul>
@@ -610,6 +616,14 @@ or Maven. Some of them demonstrate how to create plugins using other JVM languag
 <li class="toctree-l2"><a class="reference internal" href="configuration/loaders.html">加载器的配置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="configuration/nodes.html">Nodes的配置</a></li>
 <li class="toctree-l2"><a class="reference internal" href="configuration/serialization.html">Serializing Objects</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="text/index.html">使用文本</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="text/text.html">创建文本</a></li>
+<li class="toctree-l2"><a class="reference internal" href="text/representations/index.html">Text Serializers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="text/pagination.html">分页服务</a></li>
+<li class="toctree-l2"><a class="reference internal" href="text/messagechannels.html">Message Channels</a></li>
+<li class="toctree-l2"><a class="reference internal" href="text/templates.html">Working with TextTemplates</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="data/index.html">数据API</a><ul>
@@ -636,10 +650,10 @@ or Maven. Some of them demonstrate how to create plugins using other JVM languag
 <li class="toctree-l2"><a class="reference internal" href="items/creating.html">Creating an ItemStack</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="injection.html">注入依赖项</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="scheduler.html">使用调度程序</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="scheduler.html">使用调度程序</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="services.html">使用服务</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="database.html">使用数据库</a><ul class="simple">
@@ -653,9 +667,6 @@ or Maven. Some of them demonstrate how to create plugins using other JVM languag
 <li class="toctree-l2"><a class="reference internal" href="economy/implementing.html">Implementing the Economy API</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="services.html">使用服务</a><ul class="simple">
-</ul>
-</li>
 <li class="toctree-l1"><a class="reference internal" href="wgen/index.html">World Generation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="wgen/modifiers.html">Working with WorldGeneratorModifiers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="wgen/customwgen.html">Modifying World Generation</a></li>
@@ -667,12 +678,13 @@ or Maven. Some of them demonstrate how to create plugins using other JVM languag
 <li class="toctree-l1"><a class="reference internal" href="debugging.html">Plugin Debugging</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="messagechannels.html">Message Channels</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="plugin-meta.html">Plugin Metadata</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="ray-tracing.html">Ray Tracing</a><ul class="simple">
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
 <li class="toctree-l1"><a class="reference internal" href="tutorials.html">教程</a><ul class="simple">
 </ul>
 </li>
