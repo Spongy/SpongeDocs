@@ -417,6 +417,9 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="permissions.html">Travailler avec l&#8217;API de Permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bans.html">Working with the Ban API</a><ul class="simple">
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="economy/index.html">L&#8217;API Economie</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="economy/basics.html">Les concepts de base</a><ul class="simple">
 </ul>
@@ -549,8 +552,7 @@
 <div class="section" id="preparing-your-workspace">
 <h2>Préparer votre workspace<a class="headerlink" href="#preparing-your-workspace" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Puisque nous voulons faire fonctionner Sponge et votre plugin sur votre IDE, nous aurons besoin d&#8217;importer soit <a class="reference external" href="https://github.com/SpongePowered/Sponge">SpongeForge</a>, soit <a class="reference external" href="https://github.com/SpongePowered/SpongeVanilla">SpongeVanilla</a> (à vous de choisir celui que vous voulez utiliser) comme un projet dans votre workspace. Les instructions à suivre sont placées dans leur pages github respective. Suivez ces instructions avec beaucoup d&#8217;attention avant de continuer.</p>
-<p>Now you need to make sure your plugin project is visible to the <strong>SpongeForge/SpongeVanilla</strong> project you just created.
-The steps necessary depend on your IDE.</p>
+<p>Maintenant, nous devons nous assurer que le projet de votre plugin est visible depuis le projet <strong>SpongeForge/SpongeVanilla</strong> que vous venez juste de créer. Les étapes suivantes dépendent de votre IDE.</p>
 <div class="section" id="intellij-idea">
 <h3>IntelliJ IDEA<a class="headerlink" href="#intellij-idea" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Dans IntelliJ, chaque projet à son propre workspace. Pour rendre votre projet <strong>Sponge(Vanilla)</strong> visible, vous devez le définir en tant que <em>Module</em>. En supposant que vous avez déjà créé votre projet en ayant suivi les instructions de <a class="reference internal" href="workspace/idea.html"><em>Configurer IntelliJ IDEA</em></a>, importez le en suivant les étapes suivantes.</p>
@@ -601,13 +603,18 @@ The steps necessary depend on your IDE.</p>
 <li><p class="first">NE cochez PAS le module, après qu&#8217;il soit ajouté à la liste.</p>
 </li>
 </ul>
-<p>If you are using Gradle to build your plugin:</p>
+<p>Si vous utilisez Gradle pour construire votre plugin:</p>
 <ul class="simple">
-<li>Open the Gradle Pane on the right side of the IDE window.</li>
-<li>Click the Green <code class="docutils literal"><span class="pre">+</span></code> Symbol under <code class="docutils literal"><span class="pre">Gradle</span> <span class="pre">Projects</span></code>.</li>
-<li>Navigate to the your plugin&#8217;s folder on the file system.</li>
-<li>Double click the build.gradle file.</li>
-<li>Click the Blue refresh icon (two arrows in a circle) to load your plugin&#8217;s dependencies into the workspace.</li>
+<li><p class="first">Ouvrez le volet de Gradle sur le côté droit de la fenêtre de l&#8217;IDE.</p>
+</li>
+<li><p class="first">Cliquez sur le vert symbole <code class="docutils literal"><span class="pre">+</span></code> sous <code class="docutils literal"><span class="pre">Gradle</span> <span class="pre">Projects</span></code>.</p>
+</li>
+<li><p class="first">Naviguez vers le dossier de votre plugin sur le système de fichiers.</p>
+</li>
+<li><p class="first">Double-cliquez sur le fichier build.gradle.</p>
+</li>
+<li><p class="first">Cliquez sur l&#8217;icône de rafraîchissement bleu (deux flèches dans un cercle) pour charger les dépendances de votre plugin dans l&#8217;espace de travail.</p>
+</li>
 </ul>
 </div>
 <div class="section" id="id2">
@@ -638,21 +645,14 @@ The steps necessary depend on your IDE.</p>
 </div>
 <div class="section" id="running-the-configuration">
 <h2>Démarrer la Configuration<a class="headerlink" href="#running-the-configuration" title="Lien permanent vers ce titre">¶</a></h2>
-<p>After you&#8217;ve followed the previous steps, you should be ready to start debugging.
-If you start your server from your IDE, its working directory will be the <code class="docutils literal"><span class="pre">run</span></code> directory in your
-SpongeForge/SpongeVanilla project. All the files usually created by a server (worlds, configs etc) will be stored in
-that <code class="docutils literal"><span class="pre">run</span></code> directory and persist over multiple runs of your local test server, just as if you manually copied a
-server .jar to the <code class="docutils literal"><span class="pre">run</span></code> directory and started it from there.</p>
+<p>Après avoir suivi les étapes précédentes, vous devriez être prêt à démarrer le débogage. Si vous démarrez votre serveur depuis votre IDE, son répertoire de travail sera le répertoire <code class="docutils literal"><span class="pre">run</span></code> de votre projet SpongeForge/SpongeVanilla. Tous les fichiers généralement créés par un serveur (mondes, configs etc.) seront stockés dans ce répertoire <code class="docutils literal"><span class="pre">run</span></code> et persistent sur les exécutions successives de votre serveur de test local, comme si vous manuellement copier un serveur .jar dans le répertoire <code class="docutils literal"><span class="pre">run</span></code> et il a commencé de là.</p>
 <div class="section" id="id3">
 <h3>IntelliJ IDEA<a class="headerlink" href="#id3" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Plutôt que d&#8217;appuyer sur la flèche verte pour démarrer la configuration de Run/Debug, cliquez sur l&#8217;icône verte à sa droite, <code class="docutils literal"><span class="pre">Debug</span></code>.</p>
 </div>
 <div class="section" id="id4">
 <h3>Eclipse<a class="headerlink" href="#id4" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Rather than pressing the green right-pointing arrow to run your Run/Debug configuration, click the drop down arrow of
-the Debug icon (the one displaying a bug) and click your <code class="docutils literal"><span class="pre">Test</span> <span class="pre">(Server)</span></code> configuration. If it doesn&#8217;t appear in the
-drop-down menu, click <code class="docutils literal"><span class="pre">Debug</span> <span class="pre">Configurations</span></code>. Select <code class="docutils literal"><span class="pre">Test</span> <span class="pre">(Server)</span></code> configuration and hit the <code class="docutils literal"><span class="pre">Debug</span></code> button
-on the bottom left.</p>
+<p>Plutôt que de cliquer sur la flèche verte pour lancer la configuration Run/Debug, cliquez sur la flèche du menu déroulant de l&#8217;icône de Debug (celui affichant un insecte) et cliquer sur votre configuration <code class="docutils literal"><span class="pre">Test</span> <span class="pre">(Server)</span></code>. Si elle n&#8217;apparaît pas dans le menu déroulant, cliquez sur <code class="docutils literal"><span class="pre">Debug</span> <span class="pre">Configurations</span></code>. Sélectionnez la configuration <code class="docutils literal"><span class="pre">Test</span> <span class="pre">(Server)</span></code> puis sur le bouton <code class="docutils literal"><span class="pre">Debug</span></code> en bas à gauche.</p>
 </div>
 </div>
 <div class="section" id="using-the-debugger">
@@ -700,10 +700,7 @@ on the bottom left.</p>
 </div></blockquote>
 </li>
 </ul>
-<p>You can test this functionality: Introduce a simple command to your plugin that just writes a word, like <code class="docutils literal"><span class="pre">Sponge</span></code>
-Then save it and start the server as described above. Run the command. It will output <code class="docutils literal"><span class="pre">Sponge</span></code>. Now change the
-command to write a different word to console, save the file. After a change, do as follows to hotswap the changes to
-the running program:</p>
+<p>Vous pouvez tester cette fonctionnalité: mettez une simple commande dans votre plugin qui écris juste un mot comme <code class="docutils literal"><span class="pre">Sponge</span></code>. Sauvegardez-le puis démarrez le serveur comme décrit ci-dessus. Il va afficher``Sponge``. Maintenant, changez la commande pour qu&#8217;elle affiche un mot différent à la console, sauvegardez encore le fichier. Après le changement, suivez les étapes ci-dessous pour procéder au hotswap des changements du programme en cours d&#8217;exécution:</p>
 <div class="section" id="id7">
 <h4>IntelliJ IDEA<a class="headerlink" href="#id7" title="Lien permanent vers ce titre">¶</a></h4>
 <ul class="simple">
@@ -715,9 +712,7 @@ the running program:</p>
 </div>
 <div class="section" id="id8">
 <h4>Eclipse<a class="headerlink" href="#id8" title="Lien permanent vers ce titre">¶</a></h4>
-<p>No action needed. As soon as you save the file, it will be rebuilt and automatically hotswapped with the
-currently running debug. Unless you changed this particular default behavior, you will not have to trigger a manual
-hotswap.</p>
+<p>Aucune action n&#8217;est requise. Tant que vous avez sauvegardé le fichier, il sera restauré et remplacera automatiquement le debug actuel. Donc tant que vous n&#8217;avez pas modifié cet option par défaut, vous n&#8217;aurez pas à déclencher un hotswap manuellement.</p>
 </div>
 </div>
 </div>

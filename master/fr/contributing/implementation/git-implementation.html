@@ -418,6 +418,9 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/permissions.html">Travailler avec l&#8217;API de Permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/bans.html">Working with the Ban API</a><ul class="simple">
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/economy/index.html">L&#8217;API Economie</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/economy/basics.html">Les concepts de base</a><ul class="simple">
 </ul>
@@ -555,10 +558,7 @@
 <h2>Développer l&#8217;Implémentation<a class="headerlink" href="#developing-the-implementation" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Le processus pour les implémentations est presque le même que pour l&#8217;API. Vous ajoutez vos modifications comme décrit dans <a class="reference internal" href="../howtogit.html"><em>Comment utiliser Git(Hub)</em></a>. Notez que vous devriez donner un nom évocateur à vos branches. Avec le nouveau modèle de ramification, il faut savoir sur quelle branche vous devez baser votre PR et où elle devrait être fusionnée par la suite. Découvrez le nouveau modèle ramification et de versioning ici: <a class="reference internal" href="../versioning.html"><em>Versioning System and Repository Branch Layout</em></a></p>
 <p>Lancer <code class="docutils literal"><span class="pre">gradle</span> <span class="pre">compileJava</span></code> pour vérifier si tout se compile sans erreurs.</p>
-<p>Since you are working on the implementation, there is a possibility that your work included changes in the API. This is
-okay. Just remember to ensure the pointers for the version of the SpongeAPI match the version of your branch prior to
-committing and pushing. To do this, you may need to add the submodules to the commit (with <code class="docutils literal"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">SpongeAPI</span></code> and/or
-<code class="docutils literal"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">Mixin</span></code>) prior to committing on your implementation work.</p>
+<p>Etant donné que vous travaillez sur une implémentation, il y a des chances que votre travail inclue des changements dans l&#8217;API. Ce n&#8217;est pas grave. Assurez vous seulement que les pointeurs de la version de l&#8217;API Sponge correspondent à la version de votre branche avant de commit et de push. Pour faire cela, vous devez ajouter les sous-modules à l&#8217;envoie (avec <code class="docutils literal"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">SpongeAPI</span></code> et/ou <code class="docutils literal"><span class="pre">git</span> <span class="pre">add</span> <span class="pre">Mixin</span></code>) avant de commit sur votre dépôt.</p>
 <p>Vous devrez ouvrir une requête une fois que vous avez mis votre travaille sur votre fork ou dans le dépôt.</p>
 </div>
 </div>
