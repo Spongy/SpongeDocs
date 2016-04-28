@@ -252,7 +252,7 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Creare un plugin</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../workspace/index.html">Setting Up Your Workspace</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../workspace/index.html">Impostazione dell&#8217;area di lavoro</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../workspace/idea.html">Setting Up IntelliJ IDEA</a><ul class="simple">
 </ul>
 </li>
@@ -338,7 +338,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">Configuring Plugins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">Configurazione Plugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../configuration/loaders.html">Configuration Loaders</a><ul class="simple">
 </ul>
 </li>
@@ -573,11 +573,9 @@ use <code class="docutils literal"><span class="pre">EntitySpawnCause</span></co
 any cause that best describes why we are spawning this in, such as a mob spawner, or spawn egg.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Avvertimento</p>
-<p>Note that as of API 3.0, <code class="docutils literal"><span class="pre">SpawnCause</span></code> is NOT implemented. Until then, you will need to specify some other cause,
-such as a <code class="docutils literal"><span class="pre">CommandSource</span></code> or a <code class="docutils literal"><span class="pre">Player</span></code>. If you cannot find one that would suit your needs, simply specify your
-main plugin instance as the <code class="docutils literal"><span class="pre">Cause</span></code>. Here is an example of specifying a <code class="docutils literal"><span class="pre">CommandSource</span></code> as the <code class="docutils literal"><span class="pre">Cause</span></code>:</p>
+<p>Si noti che a partire dalla API 3.0, <code class="docutils literal"><span class="pre">SpawnCause</span></code> non è implementato. Fino ad allora, dovrai specificare qualche altra causa, come <code class="docutils literal"><span class="pre">CommandSource</span></code> o <code class="docutils literal"><span class="pre">Player</span></code>. Se non trovi quello adatto alle tue esigenze, semplicemente specifica l&#8217;istanza del tuo plugin principale a <code class="docutils literal"><span class="pre">Cause</span></code>. Qui un esempio della specifica di <code class="docutils literal"><span class="pre">CommandSource</span></code> a <code class="docutils literal"><span class="pre">Cause</span></code>:</p>
 <p><code class="docutils literal"><span class="pre">extent.spawnEntity(item,</span> <span class="pre">Cause.of(src));</span></code></p>
-<p class="last">Take a look at the <a class="reference internal" href="../event/causes.html"><em>cause documentation</em></a> for more information.</p>
+<p class="last">Dai un occhiata al <a class="reference internal" href="../event/causes.html"><em>cause documentation</em></a> per ulteriori informazioni.</p>
 </div>
 </div>
 

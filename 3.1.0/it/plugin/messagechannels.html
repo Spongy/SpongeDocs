@@ -251,7 +251,7 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Creare un plugin</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="workspace/index.html">Setting Up Your Workspace</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="workspace/index.html">Impostazione dell&#8217;area di lavoro</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="workspace/idea.html">Setting Up IntelliJ IDEA</a><ul class="simple">
 </ul>
 </li>
@@ -337,7 +337,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="configuration/index.html">Configuring Plugins</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="configuration/index.html">Configurazione Plugin</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="configuration/loaders.html">Configuration Loaders</a><ul class="simple">
 </ul>
 </li>
@@ -578,10 +578,7 @@ recipient that is targeted by at least one of the combined channels.</p>
 </div>
 <div class="section" id="sending-messages">
 <h2>Sending Messages<a class="headerlink" href="#sending-messages" title="Link a questa intestazione">¶</a></h2>
-<p>Once you have obtained a <code class="docutils literal"><span class="pre">MessageChannel</span></code> you can send a message through it via the <code class="docutils literal"><span class="pre">send(Object</span> <span class="pre">sender,</span> <span class="pre">Text</span>
-<span class="pre">message)</span></code> method. This method is preferred over the <code class="docutils literal"><span class="pre">send(Text</span> <span class="pre">message)</span></code> method, as the <code class="docutils literal"><span class="pre">Object</span></code> can be
-used for identification or for performing other various actions.
-The channel will then transform the message for every recipient and send the transformed message.</p>
+<p>Una volta ottenuto un <code class="docutils literal"><span class="pre">MessageChannel</span></code> puoi mandare un messaggio attraverso il <code class="docutils literal"><span class="pre">send(Object</span> <span class="pre">sender,</span> <span class="pre">Text</span> <span class="pre">message)</span></code>. Questo metodo è preferibile rispetto al metodo <code class="docutils literal"><span class="pre">send(Text</span> <span class="pre">message)</span></code> come il <code class="docutils literal"><span class="pre">Object</span></code> può essere usato per l&#8217;identificazione e per eseguire varie azione. Il canale quindi si trasformerà per ogni destinatario e manderà il messaggio trasformato.</p>
 <div class="section" id="extended-application-chat-channels">
 <h3>Extended Application: Chat Channels<a class="headerlink" href="#extended-application-chat-channels" title="Link a questa intestazione">¶</a></h3>
 <p>Message channels have a very useful application as they can be used to establish chat channels. For example, you could

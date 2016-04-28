@@ -272,7 +272,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../templates.html">Modèles de Plugin</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bukkit-sponge-compare.html">Comparaison de Bukkit et SpongeAPI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../main-class.html">Créer la Classe Principale de votre Plugin</a><ul class="simple">
 </ul>
 </li>
@@ -538,9 +538,7 @@
 <p>Events are used to inform plugins of certain happenings. Many events can also be <em>cancelled</em> &#8211; that is, the action that
 the event refers to can be prevented from occurring. Cancellable events implement the <code class="docutils literal"><span class="pre">Cancellable</span></code> interface.</p>
 <p>Sponge itself contains many events; however, plugins can create their own events which other plugins can listen to.</p>
-<p>Event listeners are assigned a priority that determines the order in which the event listener is run in context of other
-event listeners (such as those from other plugins). For example, an event listener with <code class="docutils literal"><span class="pre">EARLY</span></code> priority will return
-before most other event listeners.</p>
+<p>Les event listeners ont une priorité qui leur est assignée dans le but de déterminer l&#8217;ordre dans lequel ils sont exécutés par rapport à d&#8217;autres event listeners (comme ceux d&#8217;autres plugins). Par exemple, un event listener ayant une priorité <code class="docutils literal"><span class="pre">EARLY</span></code> reviendra avant la plupart des autres event listeners.</p>
 <p>Events cannot be sent to a specific set of plugins. All plugins that listen to an event will be notified of the event.</p>
 <p>The event bus or event manager is the class that keeps track of which plugins are listening to which event,
 and is also responsible for distributing events to event listeners.</p>

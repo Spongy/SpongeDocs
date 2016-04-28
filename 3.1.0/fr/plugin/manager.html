@@ -272,7 +272,7 @@
 <li class="toctree-l2"><a class="reference internal" href="templates.html">Modèles de Plugin</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bukkit-sponge-compare.html">Comparaison de Bukkit et SpongeAPI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="main-class.html">Créer la Classe Principale de votre Plugin</a><ul class="simple">
 </ul>
 </li>
@@ -540,8 +540,7 @@
 <h2>La Classe PluginManager<a class="headerlink" href="#the-pluginmanager-class" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="admonition tip">
 <p class="first admonition-title">Astuce</p>
-<p class="last">See the <a class="reference external" href="https://jd.spongepowered.org/3.0.0/org/spongepowered/api/plugin/PluginManager.html">Javadocs for PluginManager</a> for full information about the class, as well as its methods and their
-usage.</p>
+<p class="last">Voir les <a class="reference external" href="https://jd.spongepowered.org/3.0.0/org/spongepowered/api/plugin/PluginManager.html">Javadocs de PluginManager</a> pour une information plus complète sur la classe, ainsi que ses méthodes et leur utilisation.</p>
 </div>
 <p>Les méthodes publiques à l&#8217;intérieur du <code class="docutils literal"><span class="pre">PluginManager</span></code> sont utilisées pour récupérer des informations à propos de la collection actuelle des plugins chargés, par l&#8217;intermédiaire de leur instance. Les plugins sont stockés dans un <code class="docutils literal"><span class="pre">PluginContainer</span></code> (détaillé dans la section suivante) pour permettre une centralisation facile des informations sur le plugin spécifique. Par exemple, vous pouvez utiliser le <code class="docutils literal"><span class="pre">PluginManager</span></code> pour communiquer avec un autre plugin, récupérer son instance et utiliser les méthodes qu&#8217;il propose pour fournir une compatibilité ou des fonctionnalités étendues au moyen de votre plugin.</p>
 </div>
@@ -578,7 +577,7 @@ usage.</p>
 <h3>3. The Game Instance<a class="headerlink" href="#the-game-instance" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="admonition tip">
 <p class="first admonition-title">Astuce</p>
-<p class="last">See the <a class="reference external" href="https://jd.spongepowered.org/3.0.0/org/spongepowered/api/Game.html">Javadocs for Game</a> for full information about the class, as well as its methods and their usage.</p>
+<p class="last">Voir les <a class="reference external" href="https://jd.spongepowered.org/3.0.0/org/spongepowered/api/Game.html">Javadocs de Game</a> pour une information plus complète sur la classe, ainsi que ses méthodes et leur utilisation.</p>
 </div>
 <p>Une instance de jeu peut, elle aussi, fournir une référence du <code class="docutils literal"><span class="pre">PluginManager</span></code> du serveur pour plus de commodité.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">private</span> <span class="n">PluginManager</span> <span class="n">pluginManager</span> <span class="o">=</span> <span class="n">game</span><span class="o">.</span><span class="na">getPluginManager</span><span class="o">();</span>
@@ -617,8 +616,7 @@ usage.</p>
 <h2>La classe PluginContainer<a class="headerlink" href="#the-plugincontainer-class" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="admonition tip">
 <p class="first admonition-title">Astuce</p>
-<p class="last">See the <a class="reference external" href="https://jd.spongepowered.org/3.0.0/org/spongepowered/api/plugin/PluginContainer.html">Javadocs for PluginContainer</a> for full information about the class, as well as its methods and their
-usage.</p>
+<p class="last">Voir les <a class="reference external" href="https://jd.spongepowered.org/3.0.0/org/spongepowered/api/plugin/PluginContainer.html">Javadocs de PluginContainer</a> pour une information plus complète sur la classe, ainsi que ses méthodes et leur utilisation.</p>
 </div>
 <p>Lorsque vous récupérez un plugin depuis le <code class="docutils literal"><span class="pre">PluginManager</span></code>, vous remarquerez très vite qu&#8217;il ne vous est pas donné une instance immédiate du plugin demandé. Au lieu de cela, vous recevrez un <code class="docutils literal"><span class="pre">PluginContainer</span></code> contenant des informations sur le plugin obtenues par son annotation <code class="docutils literal"><span class="pre">&#64;Plugin</span></code> dans sa classe principale, ainsi que l&#8217;instance chargée.</p>
 <p>Le <code class="docutils literal"><span class="pre">PluginContainer</span></code> contiendra toutes les informations génériques sur le plugin définies par son développeur d&#8217;origine. Vous pouvez utiliser ses informations dans votre plugin secondaire, au lieu de coder en dur ce que vous savez à propos de lui. Un exemple de scénario serait que si le développeur d&#8217;origine change le nom du plugin, les références à ce dernier dans le plugin secondaire ne deviendraient pas fausses à la suite de ce changement, à condition que vous ayez utilisé la méthode <code class="docutils literal"><span class="pre">PluginContainer.getName()</span></code> pour obtenir son nom.</p>
