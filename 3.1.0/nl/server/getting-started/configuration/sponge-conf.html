@@ -538,10 +538,8 @@
   <div class="section" id="global-conf">
 <h1>global.conf<a class="headerlink" href="#global-conf" title="Permalink naar deze titel">¶</a></h1>
 <div class="section" id="global-configuration">
-<h2>Global Configuration<a class="headerlink" href="#global-configuration" title="Permalink naar deze titel">¶</a></h2>
-<p>The global.conf file contains the global configuration settings for Sponge. This file is created in the config/sponge
-directory in your server folder. Many of these properties can be also overridden per-world or per-dimension type by
-using the config files in the subfolders of config/worlds.</p>
+<h2>Globale Configuratie<a class="headerlink" href="#global-configuration" title="Permalink naar deze titel">¶</a></h2>
+<p>Het global.conf bestand bevat de globale configuraties voor Sponge. Dit bestand wordt aangemaakt in de config/sponge map in uw server map. Veel van deze eigenschappen kunnen ook overschreven worden per wereld of per dimensie door gebruik te maken van de configuratie bestanden in de submappen van config/worlds.</p>
 <p>Below is a complete global.conf file with all possible nodes that may be present on a server. Note that certain
 sections will not be present immediately, and will be added to the file when the server encounters them. This config
 was generated using SpongeForge build 1181, SpongeAPI version 3.1.0:</p>
@@ -745,7 +743,7 @@ sponge {
 </div>
 </div>
 <div class="section" id="global-properties-of-sponge">
-<h2>Global Properties of Sponge<a class="headerlink" href="#global-properties-of-sponge" title="Permalink naar deze titel">¶</a></h2>
+<h2>Globale Eigenschappen van Sponge<a class="headerlink" href="#global-properties-of-sponge" title="Permalink naar deze titel">¶</a></h2>
 <table border="1" class="docutils">
 <colgroup>
 <col width="35%" />
@@ -754,27 +752,35 @@ sponge {
 <col width="49%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">Property</th>
-<th class="head">Type</th>
-<th class="head">Default</th>
-<th class="head">Description</th>
+<tr class="row-odd"><th class="head"><p class="first last">Eigenschap</p>
+</th>
+<th class="head"><p class="first last">Soort</p>
+</th>
+<th class="head"><p class="first last">Standaard</p>
+</th>
+<th class="head"><p class="first last">Beschrijving</p>
+</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td><strong>Block Tracking</strong></td>
+<tr class="row-even"><td><p class="first last"><strong>Blok Volgen</strong></p>
+</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>block-blacklist</td>
-<td>string</td>
+<td><p class="first last">tekenreeks</p>
+</td>
 <td>null</td>
 <td>Adds block ids you wish to blacklist for player
 block placement tracking.</td>
 </tr>
-<tr class="row-even"><td>enabled</td>
+<tr class="row-even"><td><p class="first last">ingeschakeld</p>
+</td>
 <td>boolean</td>
-<td>true</td>
+<td><p class="first last">waar</p>
+</td>
 <td>Adds player tracking support for block
 positions.</td>
 </tr>
@@ -783,19 +789,24 @@ positions.</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>ip-forwarding</td>
+<tr class="row-even"><td><p class="first last">ip-doorsturen</p>
+</td>
 <td>boolean</td>
-<td>false</td>
+<td><p class="first last">niet waar</p>
+</td>
 <td>Allows bungeecord to forward ip address, UUID,
 and Game Profile to the server.</td>
 </tr>
-<tr class="row-odd"><td><strong>Commands</strong></td>
+<tr class="row-odd"><td><p class="first last"><strong>Commando&#8217;s</strong></p>
+</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>aliases</td>
-<td>string</td>
+<tr class="row-even"><td><p class="first last">aliassen</p>
+</td>
+<td><p class="first last">tekenreeks</p>
+</td>
 <td>null</td>
 <td><p class="first">Alias will resolve conflicts when multiple
 plugins request a specific command. Correct
@@ -809,75 +820,91 @@ Example:</p>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><strong>Debug Options</strong></td>
+<tr class="row-odd"><td><p class="first last"><strong>Debug Opties</strong></p>
+</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-even"><td>dump-chunks-on-deadlock</td>
 <td>boolean</td>
-<td>false</td>
-<td>Dumps chunks in the event of a deadlock.</td>
+<td><p class="first last">niet waar</p>
+</td>
+<td><p class="first last">Dumpt chunks in het geval van een impasse.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>dump-heap-on-deadlock</td>
 <td>boolean</td>
-<td>false</td>
-<td>Dump the heap in the event of a deadlock.</td>
+<td><p class="first last">niet waar</p>
+</td>
+<td><p class="first last">Dumpt de heap in het geval van een impasse.</p>
+</td>
 </tr>
 <tr class="row-even"><td>dump-threads-on-warn</td>
 <td>boolean</td>
-<td>false</td>
-<td>Dump the server thread on deadlock warning.</td>
+<td><p class="first last">niet waar</p>
+</td>
+<td><p class="first last">Dump de server thread in geval van een impasse waarschuwing.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>thread-contention-monitoring</td>
 <td>boolean</td>
-<td>false</td>
-<td>Enable Java&#8217;s thread contention monitoring for
-thread dumps.</td>
+<td><p class="first last">niet waar</p>
+</td>
+<td><p class="first last">Schakel Java&#8217;s thread contention monitoring in voor thread dumps.</p>
+</td>
 </tr>
-<tr class="row-even"><td><strong>Entity Options</strong></td>
+<tr class="row-even"><td><p class="first last"><strong>Entiteit Opties</strong></p>
+</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
 <tr class="row-odd"><td>collision-warn-size</td>
-<td>integer</td>
+<td><p class="first last">geheel getal</p>
+</td>
 <td>200</td>
 <td>Number of colliding entities in one spot before
 logging a warning. Set to 0 to disable.</td>
 </tr>
 <tr class="row-even"><td>count-warn-size</td>
-<td>integer</td>
+<td><p class="first last">geheel getal</p>
+</td>
 <td>0</td>
 <td>Number of entities allowed in one dimension
 before logging a warning. Set to 0 to disable.</td>
 </tr>
 <tr class="row-odd"><td>entity-painting-respawn-delay</td>
-<td>integer</td>
+<td><p class="first last">geheel getal</p>
+</td>
 <td>2</td>
 <td>Number of ticks before a painting is respawned
 on the client when their art is changed.</td>
 </tr>
 <tr class="row-even"><td>human-player-list-remove-delay</td>
-<td>integer</td>
+<td><p class="first last">geheel getal</p>
+</td>
 <td>10</td>
 <td>Number of ticks before the fake player entry of
 a human is removed from the tab list. The
 allowed range is 0 - 100.</td>
 </tr>
 <tr class="row-odd"><td>item-despawn-rate</td>
-<td>integer</td>
+<td><p class="first last">geheel getal</p>
+</td>
 <td>6000</td>
 <td>The time in ticks before an item despawns.</td>
 </tr>
 <tr class="row-even"><td>max-bounding-box-size</td>
-<td>integer</td>
+<td><p class="first last">geheel getal</p>
+</td>
 <td>1000</td>
 <td>Maximum size of an entity&#8217;s bounding box before
 it is removed. Set to 0 to disable.</td>
 </tr>
 <tr class="row-odd"><td>max-speed</td>
-<td>integer</td>
+<td><p class="first last">geheel getal</p>
+</td>
 <td>100</td>
 <td>Square of the maximum speed of an entity before
 it is removed. Set to 0 to disable</td>
@@ -889,17 +916,20 @@ it is removed. Set to 0 to disable</td>
 added to this list.</em></td>
 </tr>
 <tr class="row-odd"><td>ambient-activation-range</td>
-<td>integer</td>
+<td><p class="first last">geheel getal</p>
+</td>
 <td>32</td>
 <td>Range where ambient entities become active.</td>
 </tr>
 <tr class="row-even"><td>aquatic-activation-range</td>
-<td>integer</td>
+<td><p class="first last">geheel getal</p>
+</td>
 <td>32</td>
 <td>Range where aquatic entities become active.</td>
 </tr>
 <tr class="row-odd"><td>creature-activation-range</td>
-<td>integer</td>
+<td><p class="first last">geheel getal</p>
+</td>
 <td>32</td>
 <td>Range where creatures become active.</td>
 </tr>
@@ -910,24 +940,29 @@ added to this list.</em></td>
 </tr>
 <tr class="row-odd"><td>ambient (bat)</td>
 <td>boolean</td>
-<td>true</td>
+<td><p class="first last">waar</p>
+</td>
 <td>Use activation range on bats.</td>
 </tr>
 <tr class="row-even"><td>aquatic (squid)</td>
 <td>boolean</td>
-<td>true</td>
+<td><p class="first last">waar</p>
+</td>
 <td>Use activation range on squid.</td>
 </tr>
 <tr class="row-odd"><td>creature &lt;creature&gt;</td>
 <td>boolean</td>
-<td>true</td>
+<td><p class="first last">waar</p>
+</td>
 <td>Use activation range on &lt;creature&gt;. Permitted
 values: chicken, cow, entityhorse, mushroomcow,
 ocelot, pig, rabbit, sheep, wolf.</td>
 </tr>
-<tr class="row-even"><td>enabled</td>
+<tr class="row-even"><td><p class="first last">ingeschakeld</p>
+</td>
 <td>boolean</td>
-<td>true</td>
+<td><p class="first last">waar</p>
+</td>
 <td>Enable activation range on Minecraft entities.</td>
 </tr>
 <tr class="row-odd"><td><strong>Miscellaneous Entities</strong></td>
@@ -937,7 +972,8 @@ ocelot, pig, rabbit, sheep, wolf.</td>
 </tr>
 <tr class="row-even"><td>misc &lt;entity&gt;</td>
 <td>boolean</td>
-<td>true</td>
+<td><p class="first last">waar</p>
+</td>
 <td>Use activation range on &lt;entity&gt;. Permitted
 values: armorstand, arrow, boat, fallingsand,
 item, itemframe, leashknot, minecartchest,
@@ -952,7 +988,8 @@ villagergolem, xporb.</td>
 </tr>
 <tr class="row-even"><td>monster &lt;monster&gt;</td>
 <td>boolean</td>
-<td>true</td>
+<td><p class="first last">waar</p>
+</td>
 <td>Use activation range on &lt;monster&gt;. Permitted
 values: blaze, cavespider, creeper, enderman,
 endermite, ghast, giant, guardian, lavaslime,
@@ -960,12 +997,14 @@ pigzombie, silverfish, skeleton, slime,
 snowman, spider, witch, zombie.</td>
 </tr>
 <tr class="row-odd"><td>misc-activation-range</td>
-<td>integer</td>
+<td><p class="first last">geheel getal</p>
+</td>
 <td>16</td>
 <td>Range where misc entities become active.</td>
 </tr>
 <tr class="row-even"><td>monster-activation-range</td>
-<td>integer</td>
+<td><p class="first last">geheel getal</p>
+</td>
 <td>32</td>
 <td>Range where monsters are activated.</td>
 </tr>
@@ -976,14 +1015,16 @@ snowman, spider, witch, zombie.</td>
 </tr>
 <tr class="row-even"><td>prevent-creative-itemstack-name-exploit</td>
 <td>boolean</td>
-<td>true</td>
+<td><p class="first last">waar</p>
+</td>
 <td>Prevents an exploit in which the client sends a
 packet with the itemstack name exceeding the
 string limit.</td>
 </tr>
 <tr class="row-odd"><td>prevent-sign-command-exploit</td>
 <td>boolean</td>
-<td>true</td>
+<td><p class="first last">waar</p>
+</td>
 <td>Prevents an exploit in which the client sends a
 packet to update a sign containing commands from
 a player without permission.</td>
@@ -995,14 +1036,16 @@ a player without permission.</td>
 </tr>
 <tr class="row-odd"><td>chunk-load-override</td>
 <td>boolean</td>
-<td>false</td>
+<td><p class="first last">niet waar</p>
+</td>
 <td>Forces chunk loading on provide requests.
 This is a speed-up for mods that don&#8217;t check if
 a chunk is loaded.</td>
 </tr>
 <tr class="row-even"><td>disable-warnings</td>
 <td>boolean</td>
-<td>false</td>
+<td><p class="first last">niet waar</p>
+</td>
 <td>Disable warning messages to server Admins.</td>
 </tr>
 <tr class="row-odd"><td><strong>Ip Sets</strong></td>
@@ -1022,87 +1065,105 @@ a chunk is loaded.</td>
 </tr>
 <tr class="row-even"><td>block-break</td>
 <td>boolean</td>
-<td>false</td>
+<td><p class="first last">niet waar</p>
+</td>
 <td>Logs when a block is broken.</td>
 </tr>
 <tr class="row-odd"><td>block-modify</td>
 <td>boolean</td>
-<td>false</td>
-<td>Logs when blocks are modified.</td>
+<td><p class="first last">niet waar</p>
+</td>
+<td><p class="first last">Houd bij wanneer blokken gewijzigd worden.</p>
+</td>
 </tr>
 <tr class="row-even"><td>block-place</td>
 <td>boolean</td>
-<td>false</td>
-<td>Logs when blocks are placed.</td>
+<td><p class="first last">niet waar</p>
+</td>
+<td><p class="first last">Houd bij wanneer blokken geplaatst worden.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>block-populate</td>
 <td>boolean</td>
-<td>false</td>
+<td><p class="first last">niet waar</p>
+</td>
 <td>Logs when blocks are populated in a chunk.</td>
 </tr>
 <tr class="row-even"><td>block-tracking</td>
 <td>boolean</td>
-<td>false</td>
+<td><p class="first last">niet waar</p>
+</td>
 <td>Logs when blocks are placed by players and
 tracked.</td>
 </tr>
 <tr class="row-odd"><td>chunk-load</td>
 <td>boolean</td>
-<td>false</td>
+<td><p class="first last">niet waar</p>
+</td>
 <td>Log when chunks are loaded.</td>
 </tr>
 <tr class="row-even"><td>chunk-unload</td>
 <td>boolean</td>
-<td>false</td>
+<td><p class="first last">niet waar</p>
+</td>
 <td>Log when chunks are unloaded.</td>
 </tr>
 <tr class="row-odd"><td>entity-collision-checks</td>
 <td>boolean</td>
-<td>false</td>
+<td><p class="first last">niet waar</p>
+</td>
 <td>Whether to log entity collision/count checks.</td>
 </tr>
 <tr class="row-even"><td>entity-death</td>
 <td>boolean</td>
-<td>false</td>
+<td><p class="first last">niet waar</p>
+</td>
 <td>Log when living entities are destroyed.</td>
 </tr>
 <tr class="row-odd"><td>entity-despawn</td>
 <td>boolean</td>
-<td>false</td>
+<td><p class="first last">niet waar</p>
+</td>
 <td>Log when living entities are despawned.</td>
 </tr>
 <tr class="row-even"><td>entity-spawn</td>
 <td>boolean</td>
-<td>false</td>
+<td><p class="first last">niet waar</p>
+</td>
 <td>Log when living entities are spawned.</td>
 </tr>
 <tr class="row-odd"><td>entity-speed-removal</td>
 <td>boolean</td>
-<td>false</td>
+<td><p class="first last">niet waar</p>
+</td>
 <td>Whether to log entity removals due to speed.</td>
 </tr>
 <tr class="row-even"><td>exploit-itemstack-name-overflow</td>
 <td>boolean</td>
-<td>false</td>
+<td><p class="first last">niet waar</p>
+</td>
 <td>Logs when a server receives exploited packets
 with itemstack name exceeding string limit.</td>
 </tr>
 <tr class="row-odd"><td>exploit-respawn-invisibility</td>
 <td>boolean</td>
-<td>false</td>
+<td><p class="first last">niet waar</p>
+</td>
 <td>Logs when a player attempts to respawn
 invisible to surrounding players.</td>
 </tr>
 <tr class="row-even"><td>exploit-sign-command-updates</td>
 <td>boolean</td>
-<td>false</td>
+<td><p class="first last">niet waar</p>
+</td>
 <td>Logs when a server receives an exploited packet
 containing commands from a player with no
 permission.</td>
 </tr>
 <tr class="row-odd"><td>log-stacktraces</td>
 <td>boolean</td>
-<td>false</td>
+<td><p class="first last">niet waar</p>
+</td>
 <td>Add stack traces to dev logging.</td>
 </tr>
 <tr class="row-even"><td><strong>Modules</strong></td>
@@ -1112,22 +1173,27 @@ permission.</td>
 </tr>
 <tr class="row-odd"><td>bungeecord</td>
 <td>boolean</td>
-<td>false</td>
-<td>Enables bungeecord support.</td>
+<td><p class="first last">niet waar</p>
+</td>
+<td><p class="first last">Schakelt ondersteuning voor bungeecord in.</p>
+</td>
 </tr>
 <tr class="row-even"><td>entity-activation-range</td>
 <td>boolean</td>
-<td>true</td>
+<td><p class="first last">waar</p>
+</td>
 <td>Enables the entity activation range settings.</td>
 </tr>
 <tr class="row-odd"><td>exploits</td>
 <td>boolean</td>
-<td>true</td>
+<td><p class="first last">waar</p>
+</td>
 <td>Enables the exploit prevention module.</td>
 </tr>
 <tr class="row-even"><td>timings</td>
 <td>boolean</td>
-<td>true</td>
+<td><p class="first last">waar</p>
+</td>
 <td>Enables timing settings.</td>
 </tr>
 <tr class="row-odd"><td><strong>SQL</strong></td>
@@ -1135,8 +1201,10 @@ permission.</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>aliases</td>
-<td>string</td>
+<tr class="row-even"><td><p class="first last">aliassen</p>
+</td>
+<td><p class="first last">tekenreeks</p>
+</td>
 <td>null</td>
 <td>Aliases for SQL connections. This is done in
 the format
@@ -1147,38 +1215,45 @@ the format
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td>enabled</td>
+<tr class="row-even"><td><p class="first last">ingeschakeld</p>
+</td>
 <td>boolean</td>
-<td>true</td>
+<td><p class="first last">waar</p>
+</td>
 <td>If timings are enabled.</td>
 </tr>
 <tr class="row-odd"><td>hidden-config-entries</td>
-<td>string</td>
+<td><p class="first last">tekenreeks</p>
+</td>
 <td>sponge.sql</td>
 <td>The hidden config entries.</td>
 </tr>
 <tr class="row-even"><td>history-interval</td>
-<td>integer</td>
+<td><p class="first last">geheel getal</p>
+</td>
 <td>300</td>
 <td>The interval between timing history report
 generation.</td>
 </tr>
 <tr class="row-odd"><td>history-length</td>
-<td>integer</td>
+<td><p class="first last">geheel getal</p>
+</td>
 <td>3600</td>
 <td>How long, in ticks, that the timing history
 will be kept for the server.</td>
 </tr>
 <tr class="row-even"><td>server-name-privacy</td>
 <td>boolean</td>
-<td>false</td>
+<td><p class="first last">niet waar</p>
+</td>
 <td>Whether to include information such as the
 server name, motd, online-mode, and server
 icon in the report.</td>
 </tr>
 <tr class="row-odd"><td>verbose</td>
 <td>boolean</td>
-<td>false</td>
+<td><p class="first last">niet waar</p>
+</td>
 <td>Whether or not for timings to monitor at
 the verbose level.</td>
 </tr>
@@ -1189,39 +1264,46 @@ the verbose level.</td>
 </tr>
 <tr class="row-odd"><td>flowing-lava-decay</td>
 <td>boolean</td>
-<td>false</td>
+<td><p class="first last">niet waar</p>
+</td>
 <td>Lava behaves like vanilla water when the source
 block is removed, when set to true.</td>
 </tr>
 <tr class="row-even"><td>generate-spawn-on-load</td>
 <td>boolean</td>
-<td>true</td>
+<td><p class="first last">waar</p>
+</td>
 <td>If the world should generate spawn when the
 world is loaded.</td>
 </tr>
 <tr class="row-odd"><td>infinite-water-source</td>
 <td>boolean</td>
-<td>false</td>
+<td><p class="first last">niet waar</p>
+</td>
 <td>False = Default vanilla water source behaviour.</td>
 </tr>
 <tr class="row-even"><td>keep-spawn-loaded</td>
 <td>boolean</td>
-<td>true</td>
+<td><p class="first last">waar</p>
+</td>
 <td>If the spawn should stay loaded with no players.</td>
 </tr>
 <tr class="row-odd"><td>load-on-startup</td>
 <td>boolean</td>
-<td>true</td>
+<td><p class="first last">waar</p>
+</td>
 <td>If the world should load on startup.</td>
 </tr>
 <tr class="row-even"><td>pvp-enabled</td>
 <td>boolean</td>
-<td>true</td>
+<td><p class="first last">waar</p>
+</td>
 <td>If the would allows PVP combat.</td>
 </tr>
 <tr class="row-odd"><td>world-enabled</td>
 <td>boolean</td>
-<td>true</td>
+<td><p class="first last">waar</p>
+</td>
 <td>Enable if this world should be allowed to load.</td>
 </tr>
 </tbody>
