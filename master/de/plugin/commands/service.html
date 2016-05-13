@@ -265,11 +265,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../project/index.html">Setting Up Your Project</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../project/gradle.html">Setting Up Gradle</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../project/index.html">Das Projekt einrichten</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../project/gradle.html">Grable einrichten</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../project/maven.html">Setting Up Maven</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../project/maven.html">Maven einrichten</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -287,11 +287,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../practices.html">Bewährtes Vorgehen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../optional/index.html">Optionals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../optional/index.html">Extras</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../optional/basic.html">Optionals erklärt</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../optional/usage.html">Usage Examples</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../optional/usage.html">Beispiele für die Verwendung</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -351,7 +351,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/xml.html">TextXML Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/json.html">JSON Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Configuration Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Konfiguration-Format</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">Der Pagination-Service</a><ul class="simple">
@@ -360,7 +360,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../text/messagechannels.html">Message Channels</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Working with TextTemplates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Mit TextTemplates arbeiten</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../data/index.html">The Data API</a><ul>
@@ -404,7 +404,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../items/usage.html">Basic Item Usage</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../items/creating.html">Creating an ItemStack</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../items/creating.html">Ein ItemStack erstellen</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -450,6 +450,9 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../manager.html">Den Plugin-Manager benutzen</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Working with the GameProfileManager</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../debugging.html">Plugins Debuggen</a><ul class="simple">
@@ -575,7 +578,7 @@ aliases used by another command are ignored.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">cmdManager</span><span class="o">.</span><span class="na">process</span><span class="o">(</span><span class="n">player</span><span class="o">,</span> <span class="s">&quot;msg Notch hi notch!&quot;</span><span class="o">);</span>
 </pre></div>
 </div>
-<p>You can also send a command from the server console:</p>
+<p>Du kannst auch einen Befehl von der Server-Konsole aus ausführen:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">cmdManager</span><span class="o">.</span><span class="na">process</span><span class="o">(</span><span class="n">Sponge</span><span class="o">.</span><span class="na">getServer</span><span class="o">().</span><span class="na">getConsole</span><span class="o">(),</span> <span class="s">&quot;kill Notch&quot;</span><span class="o">);</span>
 </pre></div>
 </div>

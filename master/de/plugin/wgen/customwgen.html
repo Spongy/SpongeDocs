@@ -265,11 +265,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../project/index.html">Setting Up Your Project</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../project/gradle.html">Setting Up Gradle</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../project/index.html">Das Projekt einrichten</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../project/gradle.html">Grable einrichten</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../project/maven.html">Setting Up Maven</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../project/maven.html">Maven einrichten</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -287,11 +287,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../practices.html">Bewährtes Vorgehen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../optional/index.html">Optionals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../optional/index.html">Extras</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../optional/basic.html">Optionals erklärt</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../optional/usage.html">Usage Examples</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../optional/usage.html">Beispiele für die Verwendung</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -351,7 +351,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/xml.html">TextXML Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/json.html">JSON Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Configuration Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Konfiguration-Format</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">Der Pagination-Service</a><ul class="simple">
@@ -360,7 +360,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../text/messagechannels.html">Message Channels</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Working with TextTemplates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Mit TextTemplates arbeiten</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../data/index.html">The Data API</a><ul>
@@ -404,7 +404,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../items/usage.html">Basic Item Usage</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../items/creating.html">Creating an ItemStack</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../items/creating.html">Ein ItemStack erstellen</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -450,6 +450,9 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../manager.html">Den Plugin-Manager benutzen</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Working with the GameProfileManager</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../debugging.html">Plugins Debuggen</a><ul class="simple">
@@ -558,7 +561,8 @@
 <li>Creating Custom Base Terrain</li>
 <li>Creating Custom GenerationPopulators</li>
 <li>Creating Custom Populators</li>
-<li>Creating Custom Biomes</li>
+<li><p class="first">Benutzerdefinierte Biome erstellen</p>
+</li>
 </ul>
 <div class="section" id="modifying-vanilla-generation">
 <h2>Modifying Vanilla Generation<a class="headerlink" href="#modifying-vanilla-generation" title="Link zu dieser Überschrift">¶</a></h2>
@@ -677,7 +681,7 @@ biome, or to a world generator if you want it applied globally.</p>
 offset by 8 in both the x and z directions.</p>
 </div>
 <div class="section" id="creating-custom-biomes">
-<h2>Creating Custom Biomes<a class="headerlink" href="#creating-custom-biomes" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>Benutzerdefinierte Biome erstellen<a class="headerlink" href="#creating-custom-biomes" title="Link zu dieser Überschrift">¶</a></h2>
 <p>While it is currently not possible to create entirely new biomes from within sponge, you can replace the system
 by which they are arranged in the world be implementing the <code class="docutils literal"><span class="pre">BiomeGenerator</span></code> interface and setting your custom
 biome generator onto a WorldGenerator.</p>

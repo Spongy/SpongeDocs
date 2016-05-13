@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Creating an ItemStack &mdash; Sponge 4.0.3 Dokumentation</title>
+     <title>Ein ItemStack erstellen &mdash; Sponge 4.0.3 Dokumentation</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -265,11 +265,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../project/index.html">Setting Up Your Project</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../project/gradle.html">Setting Up Gradle</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../project/index.html">Das Projekt einrichten</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../project/gradle.html">Grable einrichten</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../project/maven.html">Setting Up Maven</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../project/maven.html">Maven einrichten</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -287,11 +287,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../practices.html">Bewährtes Vorgehen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../optional/index.html">Optionals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../optional/index.html">Extras</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../optional/basic.html">Optionals erklärt</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../optional/usage.html">Usage Examples</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../optional/usage.html">Beispiele für die Verwendung</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -351,7 +351,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/xml.html">TextXML Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/json.html">JSON Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Configuration Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Konfiguration-Format</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">Der Pagination-Service</a><ul class="simple">
@@ -360,7 +360,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../text/messagechannels.html">Message Channels</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Working with TextTemplates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Mit TextTemplates arbeiten</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../data/index.html">The Data API</a><ul>
@@ -404,7 +404,7 @@
 <li class="toctree-l3"><a class="reference internal" href="usage.html">Basic Item Usage</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Creating an ItemStack</a><ul class="simple">
+<li class="toctree-l3 current"><a class="current reference internal" href="">Ein ItemStack erstellen</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -450,6 +450,9 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../manager.html">Den Plugin-Manager benutzen</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Working with the GameProfileManager</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../debugging.html">Plugins Debuggen</a><ul class="simple">
@@ -552,7 +555,7 @@
                 <div class="body" role="main">
                   
   <div class="section" id="creating-an-itemstack">
-<h1>Creating an ItemStack<a class="headerlink" href="#creating-an-itemstack" title="Link zu dieser Überschrift">¶</a></h1>
+<h1>Ein ItemStack erstellen<a class="headerlink" href="#creating-an-itemstack" title="Link zu dieser Überschrift">¶</a></h1>
 <p>If you want to create your own items, you need to go through several steps. Let&#8217;s go through a basic example and create
 an enchanted diamond sword.</p>
 <p>To create an <code class="docutils literal"><span class="pre">ItemStack</span></code>, we need to first grab the builder from the <code class="docutils literal"><span class="pre">ItemStack</span></code>. This is done with the

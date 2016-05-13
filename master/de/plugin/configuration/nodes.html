@@ -265,11 +265,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../project/index.html">Setting Up Your Project</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../project/gradle.html">Setting Up Gradle</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../project/index.html">Das Projekt einrichten</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../project/gradle.html">Grable einrichten</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../project/maven.html">Setting Up Maven</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../project/maven.html">Maven einrichten</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -287,11 +287,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../practices.html">Bewährtes Vorgehen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../optional/index.html">Optionals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../optional/index.html">Extras</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../optional/basic.html">Optionals erklärt</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../optional/usage.html">Usage Examples</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../optional/usage.html">Beispiele für die Verwendung</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -351,7 +351,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/xml.html">TextXML Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/json.html">JSON Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Configuration Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Konfiguration-Format</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">Der Pagination-Service</a><ul class="simple">
@@ -360,7 +360,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../text/messagechannels.html">Message Channels</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Working with TextTemplates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Mit TextTemplates arbeiten</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../data/index.html">The Data API</a><ul>
@@ -404,7 +404,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../items/usage.html">Basic Item Usage</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../items/creating.html">Creating an ItemStack</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../items/creating.html">Ein ItemStack erstellen</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -450,6 +450,9 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../manager.html">Den Plugin-Manager benutzen</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Working with the GameProfileManager</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../debugging.html">Plugins Debuggen</a><ul class="simple">
@@ -597,9 +600,9 @@ acquired as follows.</p>
 </div>
 </div>
 <div class="section" id="values">
-<h2>Values<a class="headerlink" href="#values" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>Werte<a class="headerlink" href="#values" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="section" id="basic-values">
-<h3>Basic Values<a class="headerlink" href="#basic-values" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>Grundwerte<a class="headerlink" href="#basic-values" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Basic value types like <code class="docutils literal"><span class="pre">int</span></code>, <code class="docutils literal"><span class="pre">double</span></code>, <code class="docutils literal"><span class="pre">boolean</span></code> or <code class="docutils literal"><span class="pre">String</span></code> each have their own convenience getter method
 which will return the value or a default if the node does not contain a value of that type. Let&#8217;s check if the server
 administrator wants our plugin to enable its blockCheats module by checking the value at the
@@ -669,7 +672,7 @@ even generic types can conveniently be written and read.</p>
 </ul>
 </div>
 <div class="section" id="defaults">
-<h3>Defaults<a class="headerlink" href="#defaults" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>Standardwerte<a class="headerlink" href="#defaults" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Unlike the Sponge API, the Configurate library does not use <code class="docutils literal"><span class="pre">Optional</span></code> for values that might not be present but null.
 While the getters for primitive methods (like <code class="docutils literal"><span class="pre">getBoolean()</span></code> or <code class="docutils literal"><span class="pre">getInt()</span></code>) might return <code class="docutils literal"><span class="pre">false</span></code> or <code class="docutils literal"><span class="pre">0</span></code>, those
 that would return an object (like <code class="docutils literal"><span class="pre">getString()</span></code>) will return <code class="docutils literal"><span class="pre">null</span></code> if no value is present. If you do not want to

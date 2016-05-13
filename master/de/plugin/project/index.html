@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Setting Up Your Project &mdash; Sponge 4.0.3 Dokumentation</title>
+     <title>Das Projekt einrichten &mdash; Sponge 4.0.3 Dokumentation</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -34,7 +34,7 @@
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 4.0.3 Dokumentation" href="../../index.html" />
         <link rel="up" title="Plugins erstellen" href="../index.html" />
-        <link rel="next" title="Setting Up Gradle" href="gradle.html" />
+        <link rel="next" title="Grable einrichten" href="gradle.html" />
         <link rel="prev" title="Eclipse einrichten" href="../workspace/eclipse.html" />
     
   <script type="text/javascript">
@@ -264,11 +264,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Setting Up Your Project</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="gradle.html">Setting Up Gradle</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="">Das Projekt einrichten</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gradle.html">Grable einrichten</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="maven.html">Setting Up Maven</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="maven.html">Maven einrichten</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -286,11 +286,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../practices.html">Bewährtes Vorgehen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../optional/index.html">Optionals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../optional/index.html">Extras</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../optional/basic.html">Optionals erklärt</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../optional/usage.html">Usage Examples</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../optional/usage.html">Beispiele für die Verwendung</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -350,7 +350,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/xml.html">TextXML Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/json.html">JSON Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Configuration Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Konfiguration-Format</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">Der Pagination-Service</a><ul class="simple">
@@ -359,7 +359,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../text/messagechannels.html">Message Channels</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Working with TextTemplates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Mit TextTemplates arbeiten</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../data/index.html">The Data API</a><ul>
@@ -403,7 +403,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../items/usage.html">Basic Item Usage</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../items/creating.html">Creating an ItemStack</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../items/creating.html">Ein ItemStack erstellen</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -449,6 +449,9 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../manager.html">Den Plugin-Manager benutzen</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Working with the GameProfileManager</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../debugging.html">Plugins Debuggen</a><ul class="simple">
@@ -551,10 +554,8 @@
                 <div class="body" role="main">
                   
   <div class="section" id="setting-up-your-project">
-<h1>Setting Up Your Project<a class="headerlink" href="#setting-up-your-project" title="Link zu dieser Überschrift">¶</a></h1>
-<p>Before you can start developing your Sponge plugin, you need to set up the SpongeAPI dependency in your project. If
-you&#8217;re already experienced with your build system, below is the Maven dependency you need to add. Otherwise, there is a
-more detailed explanation at the <a class="reference internal" href="gradle.html"><em>Gradle</em></a> and <a class="reference internal" href="maven.html"><em>Maven</em></a> page.</p>
+<h1>Das Projekt einrichten<a class="headerlink" href="#setting-up-your-project" title="Link zu dieser Überschrift">¶</a></h1>
+<p>Bevor du ein Sponge-Plugin entwickeln kannst, müssen Abhängigkeiten (dependency ) mit der SpongeAPI in dein Projekt einrichten werden. Wenn du mit dem Build System bereits vertraut bist, findest du unter die Maven-Abhängigkeiten (dependency), die du hinzufügen kannst. Ansonsten gibt es eine ausführlichere Erklärung auf der <a class="reference internal" href="gradle.html"><em>Gradle</em></a> und <a class="reference internal" href="maven.html"><em>Maven</em></a> Seite.</p>
 <div class="section" id="spongeapi-dependency">
 <h2>SpongeAPI dependency<a class="headerlink" href="#spongeapi-dependency" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="section" id="maven-repository">
@@ -589,20 +590,21 @@ more detailed explanation at the <a class="reference internal" href="gradle.html
 <td><code class="docutils literal"><span class="pre">spongeapi</span></code></td>
 </tr>
 <tr class="row-odd"><td>Version</td>
-<td>For example: <code class="docutils literal"><span class="pre">4.0.3</span></code> (stable), or <code class="docutils literal"><span class="pre">5.0.0-SNAPSHOT</span></code> (dev build, unstable)</td>
+<td><p class="first last">Zum Beispiel: <code class="docutils literal"><span class="pre">4.0.3</span></code> (stable), or <code class="docutils literal"><span class="pre">5.0.0-SNAPSHOT</span></code> (dev build, unstable)</p>
+</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="section" id="id1">
-<h2>Setting Up Your Project<a class="headerlink" href="#id1" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>Das Projekt einrichten<a class="headerlink" href="#id1" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="gradle.html">Setting Up Gradle</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="gradle.html">Grable einrichten</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="maven.html">Setting Up Maven</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="maven.html">Maven einrichten</a><ul class="simple">
 </ul>
 </li>
 </ul>

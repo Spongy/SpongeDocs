@@ -265,11 +265,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../project/index.html">Setting Up Your Project</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../project/gradle.html">Setting Up Gradle</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../project/index.html">Das Projekt einrichten</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../project/gradle.html">Grable einrichten</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../project/maven.html">Setting Up Maven</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../project/maven.html">Maven einrichten</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -287,11 +287,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../practices.html">Bewährtes Vorgehen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../optional/index.html">Optionals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../optional/index.html">Extras</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../optional/basic.html">Optionals erklärt</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../optional/usage.html">Usage Examples</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../optional/usage.html">Beispiele für die Verwendung</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -351,7 +351,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/xml.html">TextXML Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/json.html">JSON Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Configuration Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Konfiguration-Format</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">Der Pagination-Service</a><ul class="simple">
@@ -360,7 +360,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../text/messagechannels.html">Message Channels</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Working with TextTemplates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Mit TextTemplates arbeiten</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../data/index.html">The Data API</a><ul>
@@ -404,7 +404,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../items/usage.html">Basic Item Usage</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../items/creating.html">Creating an ItemStack</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../items/creating.html">Ein ItemStack erstellen</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -450,6 +450,9 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../manager.html">Den Plugin-Manager benutzen</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Working with the GameProfileManager</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../debugging.html">Plugins Debuggen</a><ul class="simple">
@@ -560,7 +563,8 @@
 </li>
 <li><p class="first">Konten</p>
 </li>
-<li>Transactions</li>
+<li><p class="first">Transaktionen</p>
+</li>
 </ul>
 <div class="section" id="the-economyservice">
 <h2>Der &#8216;EconomyService&#8217;<a class="headerlink" href="#the-economyservice" title="Link zu dieser Überschrift">¶</a></h2>
@@ -583,18 +587,18 @@ can support multiple currencies.</p>
 <p>Accounts are used to store economy information about a specific player or other object (i.e. bank, business, entity).
 There are two account types in the Sponge Economy API:</p>
 <div class="section" id="virtual-accounts">
-<h3>Virtual Accounts<a class="headerlink" href="#virtual-accounts" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>Virtuelle Konten<a class="headerlink" href="#virtual-accounts" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Virtual accounts are tied to an identifier, which is stored as a string. Virtual accounts can be tied to almost
 anything, but are commonly used for things such as banks, or non-players. To get the id of a virtual account, use
 <code class="docutils literal"><span class="pre">getIdentifier()</span></code>.</p>
 </div>
 <div class="section" id="unique-accounts">
-<h3>Unique Accounts<a class="headerlink" href="#unique-accounts" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>Einzigartige Konten<a class="headerlink" href="#unique-accounts" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Unique accounts are tied to a UUID, usually a player. To get the UUID of an unique account, use <code class="docutils literal"><span class="pre">getUUID()</span></code>.</p>
 </div>
 </div>
 <div class="section" id="transactions">
-<h2>Transactions<a class="headerlink" href="#transactions" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>Transaktionen<a class="headerlink" href="#transactions" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Transactions represent an account&#8217;s change in balance. There are currently three types of transactions:</p>
 <ul class="simple">
 <li>Deposit: Occurs when an account has funds added to it</li>
@@ -607,8 +611,10 @@ The <code class="docutils literal"><span class="pre">TransactionResult</span></c
 <li>Account involved</li>
 <li>Currency involved</li>
 <li>Amount of currency involved</li>
-<li>Transaction type</li>
-<li>Result of the transaction</li>
+<li><p class="first">Art der Transaktion</p>
+</li>
+<li><p class="first">Ergebnis der Transaktion</p>
+</li>
 </ul>
 <p>You can view all possible transaction results at the
 <a class="reference external" href="https://jd.spongepowered.org/index.html?org/spongepowered/api/service/economy/transaction/ResultType.html">Sponge JavaDocs</a>.</p>

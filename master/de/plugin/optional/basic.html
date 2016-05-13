@@ -33,9 +33,9 @@
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 4.0.3 Dokumentation" href="../../index.html" />
-        <link rel="up" title="Optionals" href="index.html" />
-        <link rel="next" title="Usage Examples" href="usage.html" />
-        <link rel="prev" title="Optionals" href="index.html" />
+        <link rel="up" title="Extras" href="index.html" />
+        <link rel="next" title="Beispiele für die Verwendung" href="usage.html" />
+        <link rel="prev" title="Extras" href="index.html" />
     
   <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -154,7 +154,7 @@
         <ul>
         <li><a href="../../index.html">Sponge 4.0.3 Dokumentation</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >Plugins erstellen</a><i class="fa fa-fw fa-chevron-right"></i></li>
-        <li><a href="index.html" accesskey="U">Optionals</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="index.html" accesskey="U">Extras</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
     <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -265,11 +265,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../project/index.html">Setting Up Your Project</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../project/gradle.html">Setting Up Gradle</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../project/index.html">Das Projekt einrichten</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../project/gradle.html">Grable einrichten</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../project/maven.html">Setting Up Maven</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../project/maven.html">Maven einrichten</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -287,11 +287,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../practices.html">Bewährtes Vorgehen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Optionals</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Extras</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="">Optionals erklärt</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="usage.html">Usage Examples</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="usage.html">Beispiele für die Verwendung</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -351,7 +351,7 @@
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/xml.html">TextXML Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/json.html">JSON Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Configuration Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Konfiguration-Format</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">Der Pagination-Service</a><ul class="simple">
@@ -360,7 +360,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../text/messagechannels.html">Message Channels</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Working with TextTemplates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Mit TextTemplates arbeiten</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../data/index.html">The Data API</a><ul>
@@ -404,7 +404,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../items/usage.html">Basic Item Usage</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../items/creating.html">Creating an ItemStack</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../items/creating.html">Ein ItemStack erstellen</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -450,6 +450,9 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../manager.html">Den Plugin-Manager benutzen</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Working with the GameProfileManager</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../debugging.html">Plugins Debuggen</a><ul class="simple">
@@ -691,7 +694,7 @@ available:</p>
 </div>
 <p>This is merely the tip of the <code class="docutils literal"><span class="pre">Optional</span></code> iceberg. In java 8 <code class="docutils literal"><span class="pre">Optional</span></code> also supports the <code class="docutils literal"><span class="pre">Consumer</span></code> and
 <code class="docutils literal"><span class="pre">Supplier</span></code> interfaces, allowing lambas to be used for <em>absent</em> failover. Usage examples for those can be found on the
-<a class="reference internal" href="usage.html"><em>Usage Examples</em></a> page.</p>
+<a class="reference internal" href="usage.html"><em>Beispiele für die Verwendung</em></a> page.</p>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
 <p class="last">Another explanation on the rationale behind avoiding null references can be found on

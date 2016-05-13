@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Working with TextTemplates &mdash; Sponge 4.0.3 Dokumentation</title>
+     <title>Mit TextTemplates arbeiten &mdash; Sponge 4.0.3 Dokumentation</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -265,11 +265,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../project/index.html">Setting Up Your Project</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../project/gradle.html">Setting Up Gradle</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../project/index.html">Das Projekt einrichten</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../project/gradle.html">Grable einrichten</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../project/maven.html">Setting Up Maven</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../project/maven.html">Maven einrichten</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -287,11 +287,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../practices.html">Bewährtes Vorgehen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../optional/index.html">Optionals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../optional/index.html">Extras</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../optional/basic.html">Optionals erklärt</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../optional/usage.html">Usage Examples</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../optional/usage.html">Beispiele für die Verwendung</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -351,7 +351,7 @@
 <li class="toctree-l4"><a class="reference internal" href="representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="representations/xml.html">TextXML Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="representations/json.html">JSON Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="representations/configurate.html">Configuration Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="representations/configurate.html">Konfiguration-Format</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="pagination.html">Der Pagination-Service</a><ul class="simple">
@@ -360,7 +360,7 @@
 <li class="toctree-l3"><a class="reference internal" href="messagechannels.html">Message Channels</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Working with TextTemplates</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Mit TextTemplates arbeiten</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../data/index.html">The Data API</a><ul>
@@ -404,7 +404,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../items/usage.html">Basic Item Usage</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../items/creating.html">Creating an ItemStack</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../items/creating.html">Ein ItemStack erstellen</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -450,6 +450,9 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../manager.html">Den Plugin-Manager benutzen</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Working with the GameProfileManager</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../debugging.html">Plugins Debuggen</a><ul class="simple">
@@ -552,7 +555,7 @@
                 <div class="body" role="main">
                   
   <div class="section" id="working-with-texttemplates">
-<h1>Working with TextTemplates<a class="headerlink" href="#working-with-texttemplates" title="Link zu dieser Überschrift">¶</a></h1>
+<h1>Mit TextTemplates arbeiten<a class="headerlink" href="#working-with-texttemplates" title="Link zu dieser Überschrift">¶</a></h1>
 <p><code class="docutils literal"><span class="pre">TextTemplate</span></code>s are an easy and convenient way to store messages with variable elements. For instance, you may find
 yourself wanting to create a configurable message for players who have joined the server for the first time. This is
 easily attainable with <code class="docutils literal"><span class="pre">TextTemplate</span></code>s using the following strategy:</p>
@@ -602,7 +605,7 @@ their server.</p>
 <span class="n">loader</span><span class="o">.</span><span class="na">save</span><span class="o">(</span><span class="n">node</span><span class="o">);</span>
 </pre></div>
 </div>
-<p>This will produce the following output:</p>
+<p>Dies ergibt folgende Ausgabe:</p>
 <div class="highlight-guess"><div class="highlight"><pre><span></span>serverName=&quot;My Sponge Server&quot;
 mytemplate {
     arguments {
