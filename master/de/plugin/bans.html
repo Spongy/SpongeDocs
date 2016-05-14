@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Working with the Ban API &mdash; Sponge 4.0.3 Dokumentation</title>
+     <title>Bans &mdash; Sponge 4.0.3 Dokumentation</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -34,8 +34,8 @@
       <link rel="shortcut icon" href="../_static/favicon.ico"/>
         <link rel="top" title="Sponge 4.0.3 Dokumentation" href="../index.html" />
         <link rel="up" title="Plugins erstellen" href="index.html" />
-        <link rel="next" title="The Economy API" href="economy/index.html" />
-        <link rel="prev" title="Die Berechtigungs-API" href="permissions.html" />
+        <link rel="next" title="Economy" href="economy/index.html" />
+        <link rel="prev" title="Permissions" href="permissions.html" />
     
   <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -181,7 +181,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/implementations/index.html">Auswählen einer Implementierung</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongeforge.html">SpongeForge installieren</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongevanilla.html">SpongeVanilla Installation</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/launch-script.html">Ein Start-Skript erstellen</a><ul class="simple">
@@ -252,7 +252,7 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Plugins erstellen</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="buildsystem.html">Choosing a Build System</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="buildsystem.html">Build Systems</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="workspace/index.html">Den Arbeitsbereich einrichten</a><ul>
@@ -273,8 +273,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="plugin-identifier.html">Choosing a Plugin Identifier</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plugin-class.html">Creating Your Plugin Class</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="plugin-identifier.html">Plugin Identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin-class.html">Main Plugin Class</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="lifecycle.html">Der Plugin-Lebenszyklus</a><ul class="simple">
@@ -298,7 +298,7 @@
 <li class="toctree-l2"><a class="reference internal" href="logging.html">Loggen und Debugging</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="commands/index.html">Befehle erstellen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/index.html">Commands</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="commands/creating.html">Einen Befehl erstellen</a><ul class="simple">
 </ul>
 </li>
@@ -315,7 +315,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="event/index.html">Working with Events</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="event/index.html">Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -325,7 +325,7 @@
 <li class="toctree-l3"><a class="reference internal" href="event/filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="event/custom.html">Creating Custom Events</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="event/custom.html">Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -342,7 +342,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="text/index.html">Mit Text arbeiten</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="text/index.html">Text</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="text/text.html">Texte erstellen</a><ul class="simple">
 </ul>
 </li>
@@ -359,7 +359,7 @@
 <li class="toctree-l3"><a class="reference internal" href="text/messagechannels.html">Message Channels</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="text/templates.html">Mit TextTemplates arbeiten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="text/templates.html">TextTemplates</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="data/index.html">The Data API</a><ul>
@@ -377,7 +377,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="blocks/index.html">Mit Blöcken arbeiten</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="blocks/index.html">Blocks</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="blocks/concepts.html">Konzept</a><ul class="simple">
 </ul>
 </li>
@@ -387,19 +387,19 @@
 <li class="toctree-l3"><a class="reference internal" href="blocks/modifying.html">Blöcke verändern</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="blocks/tileentities.html">Mit Tile-Entities arbeiten</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="blocks/tileentities.html">Tile Entities</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="entities/index.html">Mit Entities arbeiten</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="entities/index.html">Entities</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="entities/spawning.html">Spawnen eines Entitys</a></li>
 <li class="toctree-l3"><a class="reference internal" href="entities/modifying.html">Modifying an Entity</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="items/index.html">Working with Items</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="items/index.html">Items</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="items/usage.html">Basic Item Usage</a><ul class="simple">
 </ul>
 </li>
@@ -408,23 +408,23 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="effects.html">Working with Effects</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="effects.html">Effects</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="scheduler.html">Using the Scheduler</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="scheduler.html">Scheduler</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="services.html">Arbeiten mit Services</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="services.html">Services</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="database.html">Arbeiten mit Datenbanken</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="database.html">Databases</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="permissions.html">Die Berechtigungs-API</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Working with the Ban API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="permissions.html">Permissions</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Bans</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="economy/index.html">The Economy API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="economy/index.html">Economy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="economy/basics.html">Grundlegende Konzepte</a><ul class="simple">
 </ul>
 </li>
@@ -440,7 +440,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="wgen/index.html">Weltgenerierung</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="wgen/modifiers.html">Working with WorldGeneratorModifiers</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="wgen/modifiers.html">WorldGeneratorModifiers</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="wgen/customwgen.html">Modifying World Generation</a><ul class="simple">
@@ -448,10 +448,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="manager.html">Den Plugin-Manager benutzen</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="manager.html">Plugin Manager</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="game-profile-manager.html">Working with the GameProfileManager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="game-profile-manager.html">Game Profile Manager</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="debugging.html">Plugins Debuggen</a><ul class="simple">
@@ -460,7 +460,7 @@
 <li class="toctree-l2"><a class="reference internal" href="plugin-meta.html">Plugin Metadata</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="ray-tracing.html">Ray Tracing</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="ray-tracing.html">Ray-Tracing</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
@@ -515,7 +515,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../about/faq.html">Häufig gestellte Fragen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../about/structure.html">The Structure of the Sponge Project</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../about/structure.html">Die Struktur des Sponge Projekts</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../about/future.html">Zukunftspläne</a></li>
@@ -553,14 +553,14 @@
               <div class="bodywrapper">
                 <div class="body" role="main">
                   
-  <div class="section" id="working-with-the-ban-api">
-<h1>Working with the Ban API<a class="headerlink" href="#working-with-the-ban-api" title="Link zu dieser Überschrift">¶</a></h1>
+  <div class="section" id="bans">
+<h1>Bans<a class="headerlink" href="#bans" title="Link zu dieser Überschrift">¶</a></h1>
 <p>The <code class="docutils literal"><span class="pre">BanService</span></code> is a service built into the SpongeAPI that adds the functionality for you to ban or pardon users in
 your plugin. The <code class="docutils literal"><span class="pre">BanService</span></code> provides several methods to do things such as banning users, pardoning users, or even
 getting a <code class="docutils literal"><span class="pre">Ban</span></code> and the information on the <code class="docutils literal"><span class="pre">Ban</span></code>.</p>
 <div class="admonition tip">
 <p class="first admonition-title">Tipp</p>
-<p class="last">For a basic understanding of services, make sure you read <a class="reference internal" href="services.html"><em>Arbeiten mit Services</em></a> first.</p>
+<p class="last">For a basic understanding of services, make sure you read <a class="reference internal" href="services.html"><em>Services</em></a> first.</p>
 </div>
 <div class="section" id="getting-the-banservice">
 <h2>Getting the BanService<a class="headerlink" href="#getting-the-banservice" title="Link zu dieser Überschrift">¶</a></h2>

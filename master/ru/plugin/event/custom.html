@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Creating Custom Events &mdash; Документация Sponge 4.0.3</title>
+     <title>Custom Events &mdash; Документация Sponge 4.0.3</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -33,7 +33,7 @@
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Документация Sponge 4.0.3" href="../../index.html" />
-        <link rel="up" title="Working with Events" href="index.html" />
+        <link rel="up" title="Events" href="index.html" />
         <link rel="next" title="Configuring Plugins" href="../configuration/index.html" />
         <link rel="prev" title="Event Filters" href="filters.html" />
     
@@ -154,7 +154,7 @@
         <ul>
         <li><a href="../../index.html">Документация Sponge 4.0.3</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >Создание плагина</a><i class="fa fa-fw fa-chevron-right"></i></li>
-        <li><a href="index.html" accesskey="U">Working with Events</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="index.html" accesskey="U">Events</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
     <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -253,7 +253,7 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Создание плагина</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../buildsystem.html">Choosing a Build System</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../buildsystem.html">Build Systems</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../workspace/index.html">Подготовка рабочего пространства</a><ul>
@@ -274,8 +274,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">Choosing a Plugin Identifier</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Creating Your Plugin Class</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">Plugin Identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Main Plugin Class</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../lifecycle.html">Жизненный цикл плагина</a><ul class="simple">
@@ -299,7 +299,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../logging.html">Ведение логов (журналов) и отладка</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Создание команд</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Commands</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../commands/creating.html">Building a Command</a><ul class="simple">
 </ul>
 </li>
@@ -316,7 +316,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Working with Events</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Events</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -326,7 +326,7 @@
 <li class="toctree-l3"><a class="reference internal" href="filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Creating Custom Events</a><ul class="simple">
+<li class="toctree-l3 current"><a class="current reference internal" href="">Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -343,7 +343,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../text/index.html">Работа с текстом</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../text/index.html">Text</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../text/text.html">Creating Text</a><ul class="simple">
 </ul>
 </li>
@@ -360,7 +360,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../text/messagechannels.html">Message Channels</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Working with TextTemplates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">TextTemplates</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../data/index.html">The Data API</a><ul>
@@ -378,7 +378,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../blocks/index.html">Работа с блоками</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../blocks/index.html">Blocks</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../blocks/concepts.html">Концепты</a><ul class="simple">
 </ul>
 </li>
@@ -388,19 +388,19 @@
 <li class="toctree-l3"><a class="reference internal" href="../blocks/modifying.html">Изменение блоков</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">Работа с Tile Entity</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">Tile Entities</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../entities/index.html">Работа с Entity</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../entities/index.html">Entities</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../entities/spawning.html">Спавн Entity</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../entities/modifying.html">Modifying an Entity</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../items/index.html">Working with Items</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../items/index.html">Items</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../items/usage.html">Basic Item Usage</a><ul class="simple">
 </ul>
 </li>
@@ -409,23 +409,23 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../effects.html">Working with Effects</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../effects.html">Effects</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Using the Scheduler</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Scheduler</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../services.html">Работа с сервисами</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../services.html">Services</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../database.html">Работа с базами данных</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../database.html">Databases</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../permissions.html">Работа с Permissions API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../bans.html">Working with the Ban API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../permissions.html">Permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bans.html">Bans</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../economy/index.html">The Economy API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../economy/index.html">Economy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../economy/basics.html">Basic Concepts</a><ul class="simple">
 </ul>
 </li>
@@ -441,7 +441,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../wgen/index.html">World Generation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../wgen/modifiers.html">Working with WorldGeneratorModifiers</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../wgen/modifiers.html">WorldGeneratorModifiers</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../wgen/customwgen.html">Модифицирование генерации мира</a><ul class="simple">
@@ -449,10 +449,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../manager.html">Использование Менеджера плагинов (Plugin Manager)</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../manager.html">Plugin Manager</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Working with the GameProfileManager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Game Profile Manager</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../debugging.html">Plugin Debugging</a><ul class="simple">
@@ -554,8 +554,8 @@
               <div class="bodywrapper">
                 <div class="body" role="main">
                   
-  <div class="section" id="creating-custom-events">
-<h1>Creating Custom Events<a class="headerlink" href="#creating-custom-events" title="Ссылка на этот заголовок">¶</a></h1>
+  <div class="section" id="custom-events">
+<h1>Custom Events<a class="headerlink" href="#custom-events" title="Ссылка на этот заголовок">¶</a></h1>
 <p>You can write your own event classes and dispatch those events using the method described above. An event class must
 either implement the <code class="docutils literal"><span class="pre">Event</span></code> interface and, if it should be possible to cancel the event, <code class="docutils literal"><span class="pre">Cancellable</span></code>.</p>
 <div class="admonition tip">

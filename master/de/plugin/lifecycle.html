@@ -35,7 +35,7 @@
         <link rel="top" title="Sponge 4.0.3 Dokumentation" href="../index.html" />
         <link rel="up" title="Plugins erstellen" href="index.html" />
         <link rel="next" title="Dependency Injection" href="injection.html" />
-        <link rel="prev" title="Creating Your Plugin Class" href="plugin-class.html" />
+        <link rel="prev" title="Main Plugin Class" href="plugin-class.html" />
     
   <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -181,7 +181,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/implementations/index.html">Auswählen einer Implementierung</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongeforge.html">SpongeForge installieren</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongevanilla.html">SpongeVanilla Installation</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/launch-script.html">Ein Start-Skript erstellen</a><ul class="simple">
@@ -252,7 +252,7 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Plugins erstellen</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="buildsystem.html">Choosing a Build System</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="buildsystem.html">Build Systems</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="workspace/index.html">Den Arbeitsbereich einrichten</a><ul>
@@ -273,8 +273,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="plugin-identifier.html">Choosing a Plugin Identifier</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plugin-class.html">Creating Your Plugin Class</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="plugin-identifier.html">Plugin Identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin-class.html">Main Plugin Class</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Der Plugin-Lebenszyklus</a><ul class="simple">
@@ -298,7 +298,7 @@
 <li class="toctree-l2"><a class="reference internal" href="logging.html">Loggen und Debugging</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="commands/index.html">Befehle erstellen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/index.html">Commands</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="commands/creating.html">Einen Befehl erstellen</a><ul class="simple">
 </ul>
 </li>
@@ -315,7 +315,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="event/index.html">Working with Events</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="event/index.html">Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -325,7 +325,7 @@
 <li class="toctree-l3"><a class="reference internal" href="event/filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="event/custom.html">Creating Custom Events</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="event/custom.html">Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -342,7 +342,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="text/index.html">Mit Text arbeiten</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="text/index.html">Text</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="text/text.html">Texte erstellen</a><ul class="simple">
 </ul>
 </li>
@@ -359,7 +359,7 @@
 <li class="toctree-l3"><a class="reference internal" href="text/messagechannels.html">Message Channels</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="text/templates.html">Mit TextTemplates arbeiten</a></li>
+<li class="toctree-l3"><a class="reference internal" href="text/templates.html">TextTemplates</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="data/index.html">The Data API</a><ul>
@@ -377,7 +377,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="blocks/index.html">Mit Blöcken arbeiten</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="blocks/index.html">Blocks</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="blocks/concepts.html">Konzept</a><ul class="simple">
 </ul>
 </li>
@@ -387,19 +387,19 @@
 <li class="toctree-l3"><a class="reference internal" href="blocks/modifying.html">Blöcke verändern</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="blocks/tileentities.html">Mit Tile-Entities arbeiten</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="blocks/tileentities.html">Tile Entities</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="entities/index.html">Mit Entities arbeiten</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="entities/index.html">Entities</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="entities/spawning.html">Spawnen eines Entitys</a></li>
 <li class="toctree-l3"><a class="reference internal" href="entities/modifying.html">Modifying an Entity</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="items/index.html">Working with Items</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="items/index.html">Items</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="items/usage.html">Basic Item Usage</a><ul class="simple">
 </ul>
 </li>
@@ -408,23 +408,23 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="effects.html">Working with Effects</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="effects.html">Effects</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="scheduler.html">Using the Scheduler</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="scheduler.html">Scheduler</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="services.html">Arbeiten mit Services</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="services.html">Services</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="database.html">Arbeiten mit Datenbanken</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="database.html">Databases</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="permissions.html">Die Berechtigungs-API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bans.html">Working with the Ban API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="permissions.html">Permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bans.html">Bans</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="economy/index.html">The Economy API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="economy/index.html">Economy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="economy/basics.html">Grundlegende Konzepte</a><ul class="simple">
 </ul>
 </li>
@@ -440,7 +440,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="wgen/index.html">Weltgenerierung</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="wgen/modifiers.html">Working with WorldGeneratorModifiers</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="wgen/modifiers.html">WorldGeneratorModifiers</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="wgen/customwgen.html">Modifying World Generation</a><ul class="simple">
@@ -448,10 +448,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="manager.html">Den Plugin-Manager benutzen</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="manager.html">Plugin Manager</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="game-profile-manager.html">Working with the GameProfileManager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="game-profile-manager.html">Game Profile Manager</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="debugging.html">Plugins Debuggen</a><ul class="simple">
@@ -460,7 +460,7 @@
 <li class="toctree-l2"><a class="reference internal" href="plugin-meta.html">Plugin Metadata</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="ray-tracing.html">Ray Tracing</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="ray-tracing.html">Ray-Tracing</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
@@ -515,7 +515,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../about/faq.html">Häufig gestellte Fragen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../about/structure.html">The Structure of the Sponge Project</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../about/structure.html">Die Struktur des Sponge Projekts</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../about/future.html">Zukunftspläne</a></li>
@@ -558,7 +558,7 @@
 <p>Bevor Plugins aktiviert werden liest der Plugin-Loader alle verfügbaren Plugins ein, stellt fest ob alle Abhängigkeiten erfüllt sind und sortiert die Plugins nach ihrer Abhängigkeitsreihenfolge. Lebenszyklus-Events werden den Plugins dann in dieser Reihenfolge gemeldet. Beispielsweise wird ein Plugin A welches &#8220;[required-]after:B&#8221; enthält jedes Event erst erhalten nachdem Plugin B meldet, dass das Event abgearbeitet wurde. Darüber hinaus sind Lebenszyklus Status global. Das heisst, dass alle Plugins die voneinander abhängig sind alle Status gemeinsam durchlaufen müssen.</p>
 <div class="section" id="state-events">
 <h2>Status Events<a class="headerlink" href="#state-events" title="Link zu dieser Überschrift">¶</a></h2>
-<p>There are three categories of state events:</p>
+<p>Es gibt drei Kategorien von State-Events:</p>
 <ol class="arabic simple">
 <li><p class="first"><strong>Initialisierungs-Status</strong> (englisch <em>initialization</em>): Wenn Sponge und Sponge-Plugins geladen werden, bevor das Spiel startet. Diese treten nur einmal auf.</p>
 </li>
@@ -571,23 +571,17 @@
 <h2>Initialisierungs-Status<a class="headerlink" href="#initialization-states" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Initialisierungs-Status treten nur einmalig während dem Ausführen der Servers auf.</p>
 <p><strong>CONSTRUCTION</strong></p>
-<p>The <code class="docutils literal"><span class="pre">GameConstructionEvent</span></code> is triggered.
-During this state, the <code class="docutils literal"><span class="pre">&#64;Plugin</span></code> class instance for each plugin is triggered.</p>
+<p>Das <code class="docutils literal"><span class="pre">GameConstructionEvent</span></code> wird ausgelöst. Während dieses Status wird die <code class="docutils literal"><span class="pre">&#64;Plugin</span></code> Klasse jedes Plugins aufgerufen.</p>
 <p><strong>PRE_INITIALIZATION</strong></p>
-<p>The <code class="docutils literal"><span class="pre">GamePreInitializationEvent</span></code> is triggered.
-During this state, the plugin gets ready for initialization. Access to a default logger instance and access to
-information regarding preferred configuration file locations is available.</p>
+<p><code class="docutils literal"><span class="pre">GamePreInitializationEvent</span></code> wird ausgelöst. Hier soll sich das Plugin auf die Initialisierung vorbereiten. Zugriff auf den Standardlogger und bevorzugte Speicherorte für Konfigurationsdateien ist verfügbar.</p>
 <p><strong>INITIALIZATION</strong></p>
 <p>The <code class="docutils literal"><span class="pre">GameInitializationEvent</span></code> is triggered.
 During this state, the plugin should finish any work needed in order to be functional. Global event handlers should get
 registered in this stage.</p>
 <p><strong>POST_INITIALIZATION</strong></p>
-<p>The <code class="docutils literal"><span class="pre">GamePostInitializationEvent</span></code> is triggered.
-By this state, inter-plugin communication should be ready to occur. Plugins providing an API should be ready to accept
-basic requests.</p>
+<p><code class="docutils literal"><span class="pre">GamePostInitializationEvent</span></code> wird ausgelöst. Die Plugins sind für die Kommunikation untereinander bereit. Plugins die eine API bereitstellen sollten bereit sein Anfragen zu bearbeiten.</p>
 <p><strong>LOAD_COMPLETE</strong></p>
-<p>The <code class="docutils literal"><span class="pre">GameLoadCompleteEvent</span></code> is triggered.
-By this state, all plugin initialization should be completed.</p>
+<p><code class="docutils literal"><span class="pre">GameLoadCompleteEvent</span></code> wird ausgelöst. Die Plugin Initialisierung sollte vollständig abgeschlossen sein.</p>
 </div>
 <div class="section" id="running-states">
 <h2>Laufzeit-Status<a class="headerlink" href="#running-states" title="Link zu dieser Überschrift">¶</a></h2>
@@ -602,14 +596,12 @@ The server instance exists, and worlds are loaded. Command registration is handl
 <p>The <code class="docutils literal"><span class="pre">GameStartedServerEvent</span></code> event is triggered.
 The server instance exists, and worlds are loaded.</p>
 <p><strong>SERVER_STOPPING</strong></p>
-<p>The <code class="docutils literal"><span class="pre">GameStoppingServerEvent</span></code> is triggered.
-This state occurs immediately before the final tick, before the worlds are saved.</p>
+<p><code class="docutils literal"><span class="pre">GameStoppingServerEvent</span></code> wird ausgelöst. Dieser Status tritt unmittelbar vor dem letzten Tick des Servers auf, bevor die Welten gespeichert werden.</p>
 <p><strong>SERVER_STOPPED</strong></p>
-<p>The <code class="docutils literal"><span class="pre">GameStoppedServerEvent</span></code> is triggered.
-During this state, no players are connected and no changes to worlds are saved.</p>
+<p>Das <code class="docutils literal"><span class="pre">GameStoppedServerEvent</span></code> wird ausgelöst. Während dieses Status sind keine Spieler mit dem Server verbunden und Änderungen an den Welten werden nicht gespeichert.</p>
 </div>
 <div class="section" id="stopping-states">
-<h2>Stopping States<a class="headerlink" href="#stopping-states" title="Link zu dieser Überschrift">¶</a></h2>
+<h2>Status stoppen<a class="headerlink" href="#stopping-states" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Stopping states never occur more than once during a single run. They occur when the game stops normally. (On Servers:
 the <code class="docutils literal"><span class="pre">/stop</span></code> command is typed. On Clients: The &#8220;Close&#8221; button or the &#8220;Quit Game&#8221; button are clicked)</p>
 <div class="admonition warning">

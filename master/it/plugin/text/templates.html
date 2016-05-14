@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Working with TextTemplates &mdash; Sponge 4.0.3 documentazione</title>
+     <title>TextTemplates &mdash; Sponge 4.0.3 documentazione</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -33,7 +33,7 @@
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 4.0.3 documentazione" href="../../index.html" />
-        <link rel="up" title="Working with Text" href="index.html" />
+        <link rel="up" title="Text" href="index.html" />
         <link rel="next" title="The Data API" href="../data/index.html" />
         <link rel="prev" title="Message Channels" href="messagechannels.html" />
     
@@ -154,7 +154,7 @@
         <ul>
         <li><a href="../../index.html">Sponge 4.0.3 documentazione</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >Creare un plugin</a><i class="fa fa-fw fa-chevron-right"></i></li>
-        <li><a href="index.html" accesskey="U">Working with Text</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="index.html" accesskey="U">Text</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
     <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -253,7 +253,7 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Creare un plugin</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../buildsystem.html">Choosing a Build System</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../buildsystem.html">Build Systems</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../workspace/index.html">Impostazione dell&#8217;area di lavoro</a><ul>
@@ -274,8 +274,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">Choosing a Plugin Identifier</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Creating Your Plugin Class</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">Plugin Identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Main Plugin Class</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../lifecycle.html">Ciclo Di Vita Dei Plugin</a><ul class="simple">
@@ -299,7 +299,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../logging.html">Logging and Debugging</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Creating Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Commands</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../commands/creating.html">Building a Command</a><ul class="simple">
 </ul>
 </li>
@@ -316,7 +316,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Working with Events</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -326,7 +326,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Creating Custom Events</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -343,7 +343,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Working with Text</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Text</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="text.html">Creating Text</a><ul class="simple">
 </ul>
 </li>
@@ -360,7 +360,7 @@
 <li class="toctree-l3"><a class="reference internal" href="messagechannels.html">Message Channels</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Working with TextTemplates</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">TextTemplates</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../data/index.html">The Data API</a><ul>
@@ -378,7 +378,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../blocks/index.html">Lavorando con i Blocchi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../blocks/index.html">Blocks</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../blocks/concepts.html">Concetti</a><ul class="simple">
 </ul>
 </li>
@@ -388,19 +388,19 @@
 <li class="toctree-l3"><a class="reference internal" href="../blocks/modifying.html">Modifying Blocks</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">Working with Tile Entities</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">Tile Entities</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../entities/index.html">Working with Entities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../entities/index.html">Entities</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../entities/spawning.html">Spawnare un&#8217;Entità</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../entities/modifying.html">Modifying an Entity</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../items/index.html">Working with Items</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../items/index.html">Items</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../items/usage.html">Basic Item Usage</a><ul class="simple">
 </ul>
 </li>
@@ -409,23 +409,23 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../effects.html">Working with Effects</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../effects.html">Effects</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Using the Scheduler</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Scheduler</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../services.html">Working with Services</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../services.html">Services</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../database.html">Working with Databases</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../database.html">Databases</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../permissions.html">Lavorando con i Permessi della API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../bans.html">Working with the Ban API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../permissions.html">Permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bans.html">Bans</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../economy/index.html">The Economy API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../economy/index.html">Economy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../economy/basics.html">Basic Concepts</a><ul class="simple">
 </ul>
 </li>
@@ -441,7 +441,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../wgen/index.html">World Generation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../wgen/modifiers.html">Working with WorldGeneratorModifiers</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../wgen/modifiers.html">WorldGeneratorModifiers</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../wgen/customwgen.html">Modifying World Generation</a><ul class="simple">
@@ -449,10 +449,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../manager.html">Using the Plugin Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../manager.html">Plugin Manager</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Working with the GameProfileManager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Game Profile Manager</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../debugging.html">Plugin Debugging</a><ul class="simple">
@@ -554,8 +554,8 @@
               <div class="bodywrapper">
                 <div class="body" role="main">
                   
-  <div class="section" id="working-with-texttemplates">
-<h1>Working with TextTemplates<a class="headerlink" href="#working-with-texttemplates" title="Link a questa intestazione">¶</a></h1>
+  <div class="section" id="texttemplates">
+<h1>TextTemplates<a class="headerlink" href="#texttemplates" title="Link a questa intestazione">¶</a></h1>
 <p><code class="docutils literal"><span class="pre">TextTemplate</span></code>s are an easy and convenient way to store messages with variable elements. For instance, you may find
 yourself wanting to create a configurable message for players who have joined the server for the first time. This is
 easily attainable with <code class="docutils literal"><span class="pre">TextTemplate</span></code>s using the following strategy:</p>
@@ -651,7 +651,7 @@ mytemplate {
 joins the server for the first time. We can achieve that using the following code:</p>
 <div class="admonition tip">
 <p class="first admonition-title">Suggerimento</p>
-<p class="last">To learn more about how to handle events, please refer to <a class="reference internal" href="../event/index.html"><em>Working with Events</em></a>.</p>
+<p class="last">To learn more about how to handle events, please refer to <a class="reference internal" href="../event/index.html"><em>Events</em></a>.</p>
 </div>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">com.google.common.collect.ImmutableMap</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.Sponge</span><span class="o">;</span>

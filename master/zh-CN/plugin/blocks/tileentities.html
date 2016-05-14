@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>使用 Tile Entity &mdash; Sponge 4.0.3 文档</title>
+     <title>Tile Entities &mdash; Sponge 4.0.3 文档</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -34,8 +34,8 @@
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 4.0.3 文档" href="../../index.html" />
-        <link rel="up" title="处理方块" href="index.html" />
-        <link rel="next" title="使用实体" href="../entities/index.html" />
+        <link rel="up" title="Blocks" href="index.html" />
+        <link rel="next" title="Entities" href="../entities/index.html" />
         <link rel="prev" title="修改方块" href="modifying.html" />
     
   <script type="text/javascript">
@@ -155,7 +155,7 @@
         <ul>
         <li><a href="../../index.html">Sponge 4.0.3 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >插件开发</a><i class="fa fa-fw fa-chevron-right"></i></li>
-        <li><a href="index.html" accesskey="U">处理方块</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="index.html" accesskey="U">Blocks</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
     <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -254,7 +254,7 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">插件开发</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../buildsystem.html">Choosing a Build System</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../buildsystem.html">Build Systems</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../workspace/index.html">建立工作目录</a><ul>
@@ -275,8 +275,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">Choosing a Plugin Identifier</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Creating Your Plugin Class</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">Plugin Identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Main Plugin Class</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../lifecycle.html">插件周期</a><ul class="simple">
@@ -300,7 +300,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../logging.html">日志记录和调试</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../commands/index.html">创建命令</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Commands</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../commands/creating.html">创建一个命令</a><ul class="simple">
 </ul>
 </li>
@@ -317,7 +317,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Working with Events</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -327,7 +327,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Creating Custom Events</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Custom Events</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -344,7 +344,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../text/index.html">使用文本</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../text/index.html">Text</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../text/text.html">创建文本</a><ul class="simple">
 </ul>
 </li>
@@ -361,7 +361,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../text/messagechannels.html">Message Channels</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Working with TextTemplates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">TextTemplates</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../data/index.html">数据API</a><ul>
@@ -379,7 +379,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">处理方块</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Blocks</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="concepts.html">概念</a><ul class="simple">
 </ul>
 </li>
@@ -389,19 +389,19 @@
 <li class="toctree-l3"><a class="reference internal" href="modifying.html">修改方块</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">使用 Tile Entity</a><ul class="simple">
+<li class="toctree-l3 current"><a class="current reference internal" href="">Tile Entities</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../entities/index.html">使用实体</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../entities/index.html">Entities</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../entities/spawning.html">生成一个实体</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../entities/modifying.html">Modifying an Entity</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../items/index.html">Working with Items</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../items/index.html">Items</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../items/usage.html">Basic Item Usage</a><ul class="simple">
 </ul>
 </li>
@@ -410,23 +410,23 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../effects.html">Working with Effects</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../effects.html">Effects</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../scheduler.html">使用调度程序</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Scheduler</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../services.html">使用服务</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../services.html">Services</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../database.html">使用数据库</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../database.html">Databases</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../permissions.html">使用权限API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../bans.html">Working with the Ban API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../permissions.html">Permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../bans.html">Bans</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../economy/index.html">The Economy API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../economy/index.html">Economy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../economy/basics.html">Basic Concepts</a><ul class="simple">
 </ul>
 </li>
@@ -442,7 +442,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../wgen/index.html">World Generation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../wgen/modifiers.html">Working with WorldGeneratorModifiers</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../wgen/modifiers.html">WorldGeneratorModifiers</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../wgen/customwgen.html">Modifying World Generation</a><ul class="simple">
@@ -450,10 +450,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../manager.html">使用插件管理器</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../manager.html">Plugin Manager</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Working with the GameProfileManager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Game Profile Manager</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../debugging.html">Plugin Debugging</a><ul class="simple">
@@ -555,8 +555,8 @@
               <div class="bodywrapper">
                 <div class="body" role="main">
                   
-  <div class="section" id="working-with-tile-entities">
-<h1>使用 Tile Entity<a class="headerlink" href="#working-with-tile-entities" title="永久链接至标题">¶</a></h1>
+  <div class="section" id="tile-entities">
+<h1>Tile Entities<a class="headerlink" href="#tile-entities" title="永久链接至标题">¶</a></h1>
 <p>Tile entity 是可以执行诸如自动合成一类的附加操作 (熔炉和炼药台)，或者提供特殊效果 (例如信标和音符盒) 的方块。它们也保存诸如物品栏或者文字一类的附加数据 (例如箱子、告示牌或命令方块)。</p>
 <div class="section" id="identifying-tile-entities-and-their-type">
 <h2>确定 Tile Entity 和它们的类型<a class="headerlink" href="#identifying-tile-entities-and-their-type" title="永久链接至标题">¶</a></h2>
