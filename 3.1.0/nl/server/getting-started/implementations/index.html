@@ -8,12 +8,12 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Choosing an Implementation &mdash; Sponge 3.1.0 documentatie</title>
+     <title>Het kiezen van een implementatie &mdash; Sponge 3.1.0 documentatie</title>
     
   <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/sponge.css" type="text/css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href='//fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:400italic,700italic,700,400' rel='stylesheet' type='text/css'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link href='//fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:400italic,700italic,700,400' rel='stylesheet' type='text/css' />
   <link rel="stylesheet" href="../../../_static/tomorrow.css" type="text/css" />
   <link id="syntax-highlighting-ref" rel="stylesheet" href="../../../_static/tomorrow_night.css" type="text/css" />
       
@@ -82,7 +82,7 @@
       <div class="sp-logo-menu sp-skip-handler">
         <ul class="sp-logo-dropdown" id="ddleft">
           <a href="https://www.spongepowered.org"><li><i class="fa-fw fa fa-home"></i>Homepage</li></a>
-          <a href="https://forums.spongepowered.org"><li><i class="fa-fw fa fa-pencil"></i>Forums</li></a>
+          <a href="https://forums.spongepowered.org"><li><i class="fa-fw fa fa-comment"></i>Forums</li></a>
           <a href="https://github.com/SpongePowered"><li><i class="fa-fw fa fa-code"></i>Code</li></a>
           <a class="sp-forums-home" href="https://docs.spongepowered.org"><li class="active"><i class="fa-fw fa fa-book"></i>SpongeDocs</li></a>
           <a href="https://jd.spongepowered.org"><li><i class="fa-fw fa fa-graduation-cap"></i>JavaDocs</li></a>
@@ -180,9 +180,9 @@
 <li class="toctree-l3"><a class="reference internal" href="../migrating.html">Migrating to Sponge</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Choosing an Implementation</a><ul>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Het kiezen van een implementatie</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="spongeforge.html">Installing SpongeForge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="spongevanilla.html">Installing SpongeVanilla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spongevanilla.html">SpongeVanilla installeren</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../launch-script.html">Creating a Launch Script</a><ul class="simple">
@@ -228,7 +228,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../spongineer/debugging.html">Debugging</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../spongineer/bugreport.html">Reporting Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../spongineer/bugreport.html">Problemen melden</a></li>
 </ul>
 </li>
 </ul>
@@ -536,27 +536,29 @@
                 <div class="body" role="main">
                   
   <div class="section" id="choosing-an-implementation">
-<h1>Choosing an Implementation<a class="headerlink" href="#choosing-an-implementation" title="Permalink naar deze titel">¶</a></h1>
-<p>Something that runs Sponge plugins is called an <em>implementation</em>. As long as a plugin is correctly made using the
-SpongeAPI, it should run correctly on any sufficiently-complete implementation.</p>
-<p>Minecraft can&#8217;t run Sponge plugins out of the box, but you can modify it to do so.</p>
-<p>The Sponge API itself is an <a class="reference external" href="https://github.com/SpongePowered/SpongeAPI">open standard</a>.</p>
+<h1>Het kiezen van een implementatie<a class="headerlink" href="#choosing-an-implementation" title="Permalink naar deze titel">¶</a></h1>
+<p>Iets waarop Sponge plugins worden uitgevoerd heet een <em>implementatie</em>. Zolang een een plugin correct is gemaakt met behulp van de SpongeAPI, moet deze werken op elke voldoende complete implementatie.</p>
+<p>Minecraft kan Sponge plugins niet uitvoeren, maar u kunt haar zo veranderen dat zij het wel kan.</p>
+<p>De SpongeAPI is zelf een <a class="reference external" href="https://github.com/SpongePowered/SpongeAPI">open standaard</a>.</p>
 <div class="section" id="available-implementations">
-<h2>Available Implementations<a class="headerlink" href="#available-implementations" title="Permalink naar deze titel">¶</a></h2>
-<p>There are currently two implementations:</p>
+<h2>Beschikbare Implementaties<a class="headerlink" href="#available-implementations" title="Permalink naar deze titel">¶</a></h2>
+<p>Er zijn momenteel twee implementaties:</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="43%" />
 <col width="57%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Based on</th>
+<tr class="row-odd"><th class="head"><p class="first last">Naam</p>
+</th>
+<th class="head"><p class="first last">Gebaseerd op</p>
+</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td><a class="reference internal" href="spongeforge.html"><em>SpongeForge</em></a></td>
-<td>Mojang&#8217;s &#8220;vanilla&#8221; Minecraft and Minecraft Forge</td>
+<td><p class="first last">Mojang&#8217;s &#8220;vanilla&#8221; Minecraft en Minecraft Forge</p>
+</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="spongevanilla.html"><em>SpongeVanilla</em></a></td>
 <td>Mojang&#8217;s &#8220;vanilla&#8221; Minecraft</td>
@@ -564,23 +566,20 @@ SpongeAPI, it should run correctly on any sufficiently-complete implementation.<
 </tbody>
 </table>
 <div class="section" id="which-do-i-choose">
-<h3>Which do I choose?<a class="headerlink" href="#which-do-i-choose" title="Permalink naar deze titel">¶</a></h3>
+<h3>Welke moet ik kiezen?<a class="headerlink" href="#which-do-i-choose" title="Permalink naar deze titel">¶</a></h3>
 <p>If you want to run MinecraftForge mods or you prefer to use Sponge in singleplayer, then choose <a class="reference internal" href="spongeforge.html"><em>Installing SpongeForge</em></a>.</p>
-<p>If you only want to run a Mincraft server with plugins on it (but no mods), then you can choose <a class="reference internal" href="spongeforge.html"><em>SpongeForge</em></a> or
-<a class="reference internal" href="spongevanilla.html"><em>SpongeVanilla</em></a>. SpongeForge supports vanilla clients, as long as you don&#8217;t install Forge mods which require
-clientside mods. If you prefer to run a server without Forge, then SpongeVanilla is your preferred option.</p>
-<p>SpongeVanilla and SpongeForge (without mods) behave the same, so the decision between the two is a matter of preference,
-not a choice of functionality or features.</p>
+<p>Als u een Minecraft server wilt met plugins (maar geen mods), dan kunt u kiezen voor <code class="xref doc docutils literal"><span class="pre">SpongeForge</span></code>. SpongeForge ondersteunt vanilla clients, zolang u geen Forge mods installeerd die een cliensite mod nodig hebben. Als u liever een server heeft zonder Forge, is SpongeVanilla uw beste keuze.</p>
+<p>SpongeVanilla en SpongeForge (zonder mods) gedragen zich hetzelfde, dus de beslissing tussen de twee is een kwestie van voorkeur, niet een keuze van functionaliteit of features.</p>
 </div>
 </div>
 <div class="section" id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="Permalink naar deze titel">¶</a></h2>
+<h2>Inhoud<a class="headerlink" href="#contents" title="Permalink naar deze titel">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="spongeforge.html">Installing SpongeForge</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="spongevanilla.html">Installing SpongeVanilla</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="spongevanilla.html">SpongeVanilla installeren</a><ul class="simple">
 </ul>
 </li>
 </ul>

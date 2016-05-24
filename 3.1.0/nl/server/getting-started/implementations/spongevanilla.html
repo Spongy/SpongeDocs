@@ -8,12 +8,12 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Installing SpongeVanilla &mdash; Sponge 3.1.0 documentatie</title>
+     <title>SpongeVanilla installeren &mdash; Sponge 3.1.0 documentatie</title>
     
   <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/sponge.css" type="text/css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href='//fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:400italic,700italic,700,400' rel='stylesheet' type='text/css'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link href='//fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:400italic,700italic,700,400' rel='stylesheet' type='text/css' />
   <link rel="stylesheet" href="../../../_static/tomorrow.css" type="text/css" />
   <link id="syntax-highlighting-ref" rel="stylesheet" href="../../../_static/tomorrow_night.css" type="text/css" />
       
@@ -33,7 +33,7 @@
     <script type="text/javascript" src="../../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 3.1.0 documentatie" href="../../../index.html" />
-        <link rel="up" title="Choosing an Implementation" href="index.html" />
+        <link rel="up" title="Het kiezen van een implementatie" href="index.html" />
         <link rel="next" title="Creating a Launch Script" href="../launch-script.html" />
         <link rel="prev" title="Installing SpongeForge" href="spongeforge.html" />
     
@@ -82,7 +82,7 @@
       <div class="sp-logo-menu sp-skip-handler">
         <ul class="sp-logo-dropdown" id="ddleft">
           <a href="https://www.spongepowered.org"><li><i class="fa-fw fa fa-home"></i>Homepage</li></a>
-          <a href="https://forums.spongepowered.org"><li><i class="fa-fw fa fa-pencil"></i>Forums</li></a>
+          <a href="https://forums.spongepowered.org"><li><i class="fa-fw fa fa-comment"></i>Forums</li></a>
           <a href="https://github.com/SpongePowered"><li><i class="fa-fw fa fa-code"></i>Code</li></a>
           <a class="sp-forums-home" href="https://docs.spongepowered.org"><li class="active"><i class="fa-fw fa fa-book"></i>SpongeDocs</li></a>
           <a href="https://jd.spongepowered.org"><li><i class="fa-fw fa fa-graduation-cap"></i>JavaDocs</li></a>
@@ -155,7 +155,7 @@
         <li><a href="../../../index.html">Sponge 3.1.0 documentatie</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../../index.html" >Creating a Server</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >Beginnen</a><i class="fa fa-fw fa-chevron-right"></i></li>
-        <li><a href="index.html" accesskey="U">Choosing an Implementation</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="index.html" accesskey="U">Het kiezen van een implementatie</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
     <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -181,9 +181,9 @@
 <li class="toctree-l3"><a class="reference internal" href="../migrating.html">Migrating to Sponge</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">Choosing an Implementation</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Het kiezen van een implementatie</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="spongeforge.html">Installing SpongeForge</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">Installing SpongeVanilla</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">SpongeVanilla installeren</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../launch-script.html">Creating a Launch Script</a><ul class="simple">
@@ -229,7 +229,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../spongineer/debugging.html">Debugging</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../spongineer/bugreport.html">Reporting Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../spongineer/bugreport.html">Problemen melden</a></li>
 </ul>
 </li>
 </ul>
@@ -537,31 +537,30 @@
                 <div class="body" role="main">
                   
   <div class="section" id="installing-spongevanilla">
-<h1>Installing SpongeVanilla<a class="headerlink" href="#installing-spongevanilla" title="Permalink naar deze titel">¶</a></h1>
-<p>SpongeVanilla is a vanilla implementation of the Sponge API as a stand-alone server.</p>
+<h1>SpongeVanilla installeren<a class="headerlink" href="#installing-spongevanilla" title="Permalink naar deze titel">¶</a></h1>
+<p>SpongeVanilla is een vanilla implementatie van de SpongeAPI als een zelfstandige server.</p>
 <div class="section" id="overview">
 <h2>Overzicht<a class="headerlink" href="#overview" title="Permalink naar deze titel">¶</a></h2>
-<p>SpongeVanilla is an implementation of the Sponge API that is created by patching the vanilla Minecraft server. This
-means it is a stand-alone server, and does not utilise nor require Minecraft Forge or Forge mod loader (FML).
-SpongeVanilla is being developed in parallel to the Forge version of Sponge, as an alternative platform for users who
-do not want to run a Forge server. Originally started as an independent project and named Granite, by developers
-<strong>AzureusNation</strong> and <strong>VoltaSalt</strong>, the SpongeVanilla team officially joined the Sponge development team in March 2015.</p>
+<p>SpongeVanilla is een implementatie van de SpongeAPI die gemaakt is door het patchen van de vanilla Minecraft server. Dit betekent dat het een zelfstandige server is en maakt dus niet gebruik van Minecraft Forge of Forge Mod Loader (FML). SpongeVanilla wordt parallel ontwikkeld aan de Forge versies van Sponge, als een alternatief voor gebruikers die niet een Forge server willen. Oorspronkelijk begonnen als een onafhankelijk project genaamt Granite, door ontwikkelaars <strong>AzureusNation</strong> en <strong>VoltaSalt</strong>, het SpongeVanilla team trad officiel toe tot het Sponge ontwikkel team in maart 2015.</p>
 </div>
 <div class="section" id="download">
 <h2>Download<a class="headerlink" href="#download" title="Permalink naar deze titel">¶</a></h2>
-<p>Check <a class="reference internal" href="../../../downloads.html"><em>Download</em></a> for further information.</p>
+<p>Check <a class="reference internal" href="../../../downloads.html"><em>Download</em></a> voor meer informatie.</p>
 </div>
 <div class="section" id="id1">
-<h2>Installing SpongeVanilla<a class="headerlink" href="#id1" title="Permalink naar deze titel">¶</a></h2>
-<p>SpongeVanilla only works as a dedicated server.</p>
+<h2>SpongeVanilla installeren<a class="headerlink" href="#id1" title="Permalink naar deze titel">¶</a></h2>
+<p>SpongeVanilla werkt alleens als zelfstandige server.</p>
 <ol class="arabic simple">
-<li>Download the SpongeVanilla .jar from the Sponge website.</li>
-<li>Run it via command line: <code class="docutils literal"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">spongevanilla-whatever.jar</span></code></li>
-<li>Set up <a class="reference internal" href="../port-forward.html"><em>Poort Doorsturen (Port Forwarding)</em></a> to ensure others can connect.</li>
+<li><p class="first">Download de SpongeVanilla .jar van de Sponge website.</p>
+</li>
+<li><p class="first">Voer het uit via de command line: <code class="docutils literal"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">spongevanilla-watdanook.jar</span></code></p>
+</li>
+<li><p class="first">Set up <a class="reference internal" href="../port-forward.html"><em>Poort Doorsturen (Port Forwarding)</em></a> om ervoor te zorgen dat anderen kunnen verbinden.</p>
+</li>
 </ol>
 <div class="admonition warning">
 <p class="first admonition-title">Waarschuwing</p>
-<p class="last">Don&#8217;t double-click the <code class="docutils literal"><span class="pre">.jar</span></code> file!</p>
+<p class="last">Niet dubbelklikken op het <code class="docutils literal"><span class="pre">.jar</span></code> bestand!</p>
 </div>
 </div>
 <div class="section" id="links">

@@ -12,8 +12,8 @@
     
   <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/sponge.css" type="text/css" />
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-  <link href='//fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:400italic,700italic,700,400' rel='stylesheet' type='text/css'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link href='//fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:400italic,700italic,700,400' rel='stylesheet' type='text/css' />
   <link rel="stylesheet" href="../../../_static/tomorrow.css" type="text/css" />
   <link id="syntax-highlighting-ref" rel="stylesheet" href="../../../_static/tomorrow_night.css" type="text/css" />
       
@@ -34,7 +34,7 @@
       <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 3.1.0 Dokumentation" href="../../../index.html" />
         <link rel="up" title="Auswählen einer Implementierung" href="index.html" />
-        <link rel="next" title="Installing SpongeVanilla" href="spongevanilla.html" />
+        <link rel="next" title="SpongeVanilla Installation" href="spongevanilla.html" />
         <link rel="prev" title="Auswählen einer Implementierung" href="index.html" />
     
   <script type="text/javascript">
@@ -82,7 +82,7 @@
       <div class="sp-logo-menu sp-skip-handler">
         <ul class="sp-logo-dropdown" id="ddleft">
           <a href="https://www.spongepowered.org"><li><i class="fa-fw fa fa-home"></i>Homepage</li></a>
-          <a href="https://forums.spongepowered.org"><li><i class="fa-fw fa fa-pencil"></i>Forums</li></a>
+          <a href="https://forums.spongepowered.org"><li><i class="fa-fw fa fa-comment"></i>Forums</li></a>
           <a href="https://github.com/SpongePowered"><li><i class="fa-fw fa fa-code"></i>Code</li></a>
           <a class="sp-forums-home" href="https://docs.spongepowered.org"><li class="active"><i class="fa-fw fa fa-book"></i>SpongeDocs</li></a>
           <a href="https://jd.spongepowered.org"><li><i class="fa-fw fa fa-graduation-cap"></i>JavaDocs</li></a>
@@ -183,7 +183,7 @@
 </li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">Auswählen einer Implementierung</a><ul class="current">
 <li class="toctree-l4 current"><a class="current reference internal" href="">SpongeForge installieren</a></li>
-<li class="toctree-l4"><a class="reference internal" href="spongevanilla.html">Installing SpongeVanilla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="spongevanilla.html">SpongeVanilla Installation</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../launch-script.html">Ein Start-Skript erstellen</a><ul class="simple">
@@ -282,11 +282,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../plugin/lifecycle.html">Der Plugin-Lebenszyklus</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/optional/index.html">Optionals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/optional/index.html">Extras</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/optional/basic.html">Optionals erklärt</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../plugin/optional/usage.html">Usage Examples</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/optional/usage.html">Beispiele für die Verwendung</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -302,13 +302,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../../../plugin/text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../plugin/text/representations/xml.html">TextXML Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../../plugin/text/representations/json.html">JSON Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../../plugin/text/representations/configurate.html">Configuration Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../plugin/text/representations/configurate.html">Konfiguration-Format</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/pagination.html">Der Pagination-Service</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/templates.html">Working with TextTemplates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/templates.html">Mit TextTemplates arbeiten</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../plugin/commands/index.html">Befehle erstellen</a><ul>
@@ -393,7 +393,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/items/usage.html">Basic Item Usage</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../plugin/items/creating.html">Creating an ItemStack</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/items/creating.html">Ein ItemStack erstellen</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -401,7 +401,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../plugin/injection.html">Dependency Injection</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/scheduler.html">Using the Scheduler</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/scheduler.html">Benutzung des Schedulers</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../plugin/database.html">Arbeiten mit Datenbanken</a><ul class="simple">
@@ -444,7 +444,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../plugin/messagechannels.html">Message Channels</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/ray-tracing.html">Ray Tracing</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/ray-tracing.html">Ray-Tracing</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../plugin/tutorials.html">Tutorials</a><ul class="simple">
@@ -498,7 +498,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html">Häufig gestellte Fragen</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../about/structure.html">The Structure of the Sponge Project</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../about/structure.html">Die Struktur des Sponge Projekts</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/future.html">Zukunftspläne</a></li>
@@ -539,10 +539,10 @@
   <div class="section" id="installing-spongeforge">
 <h1>SpongeForge installieren<a class="headerlink" href="#installing-spongeforge" title="Link zu dieser Überschrift">¶</a></h1>
 <p>SpongeForge basiert auf <a class="reference external" href="http://www.minecraftforge.net/">Minecraft Forge</a>. Das heißt, dass es auch möglich ist Forge-Mods zu installieren. In Wirklichkeit ist es so, dass Sponge selber eine Forge-Mod ist, welche die Sponge-Plugins lädt. Das ist aber nur ein technisches Detail.</p>
-<p>Users who do not want to use Minecraft Forge can consider <a class="reference internal" href="spongevanilla.html"><em>Installing SpongeVanilla</em></a>.</p>
+<p>Nutzer, die nicht Minecraft Forge verwenden wollen, sollten sich <a class="reference internal" href="spongevanilla.html"><em>SpongeVanilla Installation</em></a> ansehen.</p>
 <div class="section" id="download">
 <h2>Download<a class="headerlink" href="#download" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Check <a class="reference internal" href="../../../downloads.html"><em>Download</em></a> for further information.</p>
+<p>Sehe unter <a class="reference internal" href="../../../downloads.html"><em>Download</em></a> für weitere Informationen nach.</p>
 </div>
 <div class="section" id="reading-the-download-filename">
 <h2>Die Bedeutung des Dateinamens<a class="headerlink" href="#reading-the-download-filename" title="Link zu dieser Überschrift">¶</a></h2>
@@ -556,23 +556,25 @@
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">MCVersion</span></code></td>
-<td>The minecraft version. Only clients compatible with this version can connect.</td>
+<td><p class="first last">Die Minecraft-Version. Es können sich nur Clients, die mit dieser Version kompatibel sind verbinden.</p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">ForgeVersion</span></code></td>
-<td>The version of Forge this file is built for. Preferably your server should run this exact
-version of Forge.</td>
+<td><p class="first last">Die Version von Forge, für die der Sponge (coremod) erstellt wurde. Vorzugsweise nutzt du genau diese Forge-Version.</p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">SpongeAPIVersion</span></code></td>
-<td>The version of the SpongeAPI implemented by this file. This is what Sponge plugins depend on.</td>
+<td><p class="first last">Die Version der Sponge-API, die von diesem Coremod unterstützt wird. Hiervon hängt die korrekte Funktion der Sponge Plugins ab.</p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">SpongeBuildId</span></code></td>
-<td>The build number of Sponge. This is what you should supply when reporting bugs or seeking
-support.</td>
+<td><p class="first last">Die Versionsnummer von Sponge. Sie sollte angegeben werden, wenn du einen Fehler meldest oder nach Unterstützung bei der Fehlerbehebung fragst.</p>
+</td>
 </tr>
 </tbody>
 </table>
 <div class="section" id="example">
-<h3>Example<a class="headerlink" href="#example" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>Beispiel<a class="headerlink" href="#example" title="Link zu dieser Überschrift">¶</a></h3>
 <p>Der Dateiname <code class="docutils literal"><span class="pre">spongeforge-1.8-1577-3.0.0-BETA-1000.jar</span></code> zeigt, das SpongeForge kompatibel mit Minecraft version <code class="docutils literal"><span class="pre">1.8</span></code> ist, Forgebuild <code class="docutils literal"><span class="pre">1.8-11.14.4.1577</span></code> benötigt, SpongeAPI <code class="docutils literal"><span class="pre">3.0.0</span></code> bereitstellt and Build <code class="docutils literal"><span class="pre">1000</span></code> von SpongeForge ist.</p>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
@@ -584,28 +586,32 @@ support.</td>
 <h2>SpongeForge installieren<a class="headerlink" href="#id1" title="Link zu dieser Überschrift">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p class="last">If you use (or are planning to use) a game server host, they may have a control panel that can install Sponge for you.</p>
+<p class="last">Wenn du einen Spiel-Hoster verwendest, hast du vielleicht im Control Panel die Möglichkeit, Sponge zu installieren.</p>
 </div>
 <div class="admonition warning">
 <p class="first admonition-title">Warnung</p>
 <p class="last">Wenn du den Mojang-Installer nutzt, wird automatisch eine separate Java-Version auf deinem System installiert. Der Installer enthält derzeit Java <code class="docutils literal"><span class="pre">1.8.0_25</span></code> für Windows und Java <code class="docutils literal"><span class="pre">1.8.0_60</span></code> für OSX. Beachte das Sponge <strong>mindestens</strong> Java <code class="docutils literal"><span class="pre">1.8.0_40</span></code> oder neuer benötigt um zu laufen. Daher musst du unter Windows den offiziellen Launcher ohne Java einsetzen: <a class="reference external" href="https://minecraft.net/download">official Minecraft Launcher</a></p>
 </div>
 <div class="section" id="single-player-in-game-lan-servers">
-<h3>Single Player / In-Game LAN Servers<a class="headerlink" href="#single-player-in-game-lan-servers" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>Einzelspieler / In-Game-LAN-Server<a class="headerlink" href="#single-player-in-game-lan-servers" title="Link zu dieser Überschrift">¶</a></h3>
 <ol class="arabic simple">
 <li><p class="first">Lade den Minecraft Forge-Installer von der <a class="reference external" href="http://files.minecraftforge.net/">Minecraft Forge-Webseite</a> herunter. Stelle sicher, das du exakt die :doc:<a href="#id1"><span class="problematic" id="id2">`</span></a>im Dateinamen des Sponge-Downloads genannte Forge Version &lt;spongeforge&gt;`einsetzt.</p>
 </li>
-<li>Run the provided Forge installer. A new Forge profile will be created in the Minecraft launcher.</li>
-<li>Open the Minecraft launcher, and select the new Forge profile.</li>
-<li>Click &#8220;Options&#8221; and click &#8220;Open Game Dir&#8221;.</li>
+<li><p class="first">Starte den Forge Installer, welcher ein neues Profil in deinem Minecraft-Launcher erstellen wird.</p>
+</li>
+<li><p class="first">Öffne den Minecraft-Launcher und wähle das Forge-Profil aus.</p>
+</li>
+<li><p class="first">Klicke auf &#8220;Optionen&#8221; und anschließend auf &#8220;Open Game Dir&#8221;.</p>
+</li>
 <li><p class="first">Lade dir SpongeForge von der Sponge Webseite herunter und verschiebe die Datei in den Ordner namens &#8220;mods&#8221;. Erstelle ihn, falls er nicht existiert.</p>
 </li>
-<li>Sponge should work in both in single player and if you open your world to LAN.</li>
+<li><p class="first">Sponge funktioniert im Singleplayer und auch, wenn du deine Welt im LAN verfügbar machst.</p>
+</li>
 </ol>
 <p>Als Nächstes lerne <a class="reference internal" href="../configuration/index.html"><em>wie man Sponge konfigurieren kann</em></a> und wie man <a class="reference internal" href="../../management/index.html"><em>seinen Server verwaltet</em></a> (beinhaltet das Installieren von Plugins).</p>
 </div>
 <div class="section" id="dedicated-servers">
-<h3>Dedicated Servers<a class="headerlink" href="#dedicated-servers" title="Link zu dieser Überschrift">¶</a></h3>
+<h3>Dedizierte Server<a class="headerlink" href="#dedicated-servers" title="Link zu dieser Überschrift">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
 <p class="last">Wenn du bereits einen Forge-Server hast, kannst du einfach SpongeForge in den <code class="docutils literal"><span class="pre">mods</span></code>-Ordner packen. Vergiss nicht, dass du Sponge möglicherweise aktualisieren musst, wenn deine installierte Version nicht der <a class="reference internal" href=""><em>Mindestanforderung</em></a> entspricht.</p>
@@ -628,8 +634,8 @@ support.</td>
 <ol class="arabic simple">
 <li><p class="first">Lade den Minecraft Forge-Installer von der <a class="reference external" href="http://files.minecraftforge.net/">Minecraft Forge-Webseite</a> herunter. Wähle die Version, die im <a class="reference internal" href=""><em>Dateinamen von SpongeForge</em></a> genannt wird.</p>
 </li>
-<li>Run the provided Forge installer, select &#8220;Install Server&#8221;, choose an empty folder to place the server&#8217;s files,
-and then click OK.</li>
+<li><p class="first">Führe den Forge-Installer aus und klicke auf &#8220;Install Server&#8221;, wähle einen leeren Ordner aus, in dem die Server-Dateien platziert werden sollen, und klicke anschließend auf OK.</p>
+</li>
 <li><p class="first">Fahre mit dem Hinzufügen von SpongeForge zu Forge fort.</p>
 </li>
 </ol>
@@ -639,7 +645,8 @@ and then click OK.</li>
 <ol class="arabic simple">
 <li><p class="first">Lade die SpongeForge von der Sponge Homepage herunter und lege sie in den Ordner <code class="docutils literal"><span class="pre">mods</span></code> in deinem Serververzeichnis ab. Erstelle das Verzeichnis falls es noch nicht existiert.</p>
 </li>
-<li>You may now launch the server via command or launch script <code class="docutils literal"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">forge-version-XYZ.jar</span></code>.</li>
+<li><p class="first">Jetzt kannst du den Server mit dem Startscript oder dem Startbefehl <code class="docutils literal"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">forge-version-XYZ.jar</span></code> starten.</p>
+</li>
 <li><p class="first">Falls dein Server hinter einer Firewall steht, schau dir <a class="reference internal" href="../port-forward.html"><em>Portweiterleitung</em></a> an, um sicherzustellen das sich andere Spieler verbinden können.</p>
 </li>
 </ol>
