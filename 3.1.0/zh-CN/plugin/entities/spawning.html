@@ -164,7 +164,7 @@
     <form class="search" action="../../search.html" method="get">
       <div class="searchbox-inner">
         <input class="field" type="text" name="q" autocomplete="off" />
-        <button class="submit" type="submit"><i class="icon-search"></i></button>
+        <button class="submit" type="submit"><i class="fa fa-fw fa-search" aria-hidden="true"></i></button>
         <input type="hidden" name="check_keywords" value="yes" />
         <input type="hidden" name="area" value="default" />
       </div>
@@ -408,7 +408,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../permissions.html">使用权限API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../economy/index.html">The Economy API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../economy/index.html">经济API</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../economy/basics.html">Basic Concepts</a><ul class="simple">
 </ul>
 </li>
@@ -571,11 +571,9 @@ specify the type of <code class="docutils literal"><span class="pre">Entity</spa
 <p>&#8216;CreateEntity()&#8217; 方法返回 &#8216;Optional&#8217;，因为一个&#8217;Location&#8217; 可能不适合生成一个 &#8216;Entity&#8217;。我们只是从&#8217;Optional&#8217;中得到&#8217;Entity&#8217;实例，然后可以用&#8217;Extent&#8217;在世界中生成实体。我们要为生成实体指定一个 &#8216;Cause&#8217;。生成&#8217;Entity&#8217; 最好用 &#8216; EntitySpawnCause &#8216;。在此示例中，我们说过我们的实体是一个插件刷出来的，但是我们可以使用任何原因来最好地说明为什么我们刷实体，比如刷怪笼或刷怪蛋。</p>
 <div class="admonition warning">
 <p class="first admonition-title">警告</p>
-<p>Note that as of API 3.0, <code class="docutils literal"><span class="pre">SpawnCause</span></code> is NOT implemented. Until then, you will need to specify some other cause,
-such as a <code class="docutils literal"><span class="pre">CommandSource</span></code> or a <code class="docutils literal"><span class="pre">Player</span></code>. If you cannot find one that would suit your needs, simply specify your
-main plugin instance as the <code class="docutils literal"><span class="pre">Cause</span></code>. Here is an example of specifying a <code class="docutils literal"><span class="pre">CommandSource</span></code> as the <code class="docutils literal"><span class="pre">Cause</span></code>:</p>
+<p>请注意，“SpawnCause”截止至API 3.0仍未实现，你需要指定其他原因，比如一个“CommandSource”或者一个“Player”。如果没有适合你要求的，可以把插件实例当做“Cause”。这里是一个把“CommandSource”指定为“Cause”的例子：</p>
 <p><code class="docutils literal"><span class="pre">extent.spawnEntity(item,</span> <span class="pre">Cause.of(src));</span></code></p>
-<p class="last">Take a look at the <a class="reference internal" href="../event/causes.html"><em>cause documentation</em></a> for more information.</p>
+<p class="last">阅读 :doc: “有关cause 的文档 &lt;../event/causes&gt;” 获得更多信息。</p>
 </div>
 </div>
 
