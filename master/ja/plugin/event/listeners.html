@@ -394,6 +394,9 @@
 <li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">Tile Entities</a><ul class="simple">
 </ul>
 </li>
+<li class="toctree-l3"><a class="reference internal" href="../blocks/virtualblock.html">Virtual Block Changes</a><ul class="simple">
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../entities/index.html">Entities</a><ul>
@@ -428,6 +431,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../bans.html">Banリスト</a><ul class="simple">
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../bookview.html">Book Views</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../economy/index.html">Economy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../economy/basics.html">基本となるコンセプト</a><ul class="simple">
 </ul>
@@ -665,6 +669,22 @@ mods. By default, this is set to false.</li>
 </ul>
 <p>By default, <code class="docutils literal"><span class="pre">&#64;Listener</span></code> is configured so that your event listener will <em>not</em> be called if the event in question is
 cancellable and has been cancelled (such as by another plugin).</p>
+</div>
+<div class="section" id="gamereloadevent">
+<span id="game-reload"></span><h3>GameReloadEvent<a class="headerlink" href="#gamereloadevent" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p>To prevent all plugins providing their own reload commands, Sponge provides a built in callback for plugins to listen
+to, and when executed, perform any reloading actions. What constitutes as a &#8216;reloading action&#8217; is purely up to the
+plugin to decide. The event is not necessarily limited to reloading configuration.</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.event.game.GameReloadEvent</span><span class="o">;</span>
+
+<span class="nd">@Listener</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">reload</span><span class="o">(</span><span class="n">GameReloadEvent</span> <span class="n">event</span><span class="o">)</span> <span class="o">{</span>
+    <span class="c1">// Do reload stuff</span>
+<span class="o">}</span>
+</pre></div>
+</div>
+<p>Note that this is different for what generally is considered a &#8216;reload&#8217;, as the event is purely all callback for
+plugins and does not do any reloading on its own.</p>
 </div>
 </div>
 <div class="section" id="firing-events">
