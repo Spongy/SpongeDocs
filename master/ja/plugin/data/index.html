@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>データ API &mdash; Sponge 4.0.3 ドキュメント</title>
+     <title>データ API &mdash; Sponge 4.1.0 ドキュメント</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.0.3',
+      VERSION:     '4.1.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.0.3 ドキュメント" href="../../index.html" />
+        <link rel="top" title="Sponge 4.1.0 ドキュメント" href="../../index.html" />
         <link rel="up" title="プラグインの作成" href="../index.html" />
         <link rel="next" title="キーの使用" href="keys.html" />
         <link rel="prev" title="TextTemplates" href="../text/templates.html" />
@@ -117,7 +117,7 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.0.3</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
@@ -152,7 +152,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">Sponge 4.0.3 ドキュメント</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">Sponge 4.1.0 ドキュメント</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" accesskey="U">プラグインの作成</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
@@ -576,7 +576,7 @@ specific values is no less straightforward.</p>
 <a class="reference external" href="https://forums.spongepowered.org">Forums</a> to find out if the data you need to work with is available yet.</p>
 </div>
 <div class="section" id="concepts">
-<h2>Concepts<a class="headerlink" href="#concepts" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>コンセプト<a class="headerlink" href="#concepts" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>On first glance at the API docs, the data API threatens to overwhelm you with lots of interfaces and packages. But
 to simply use the data API, you will not have to deal with many of them, as most interfaces found there are just
 specific data manipulators.</p>
@@ -589,7 +589,7 @@ cannot use. In those cases, the return values of the methods will provide the in
 available (via <code class="docutils literal"><span class="pre">Optional.empty()</span></code>) or not accepted (via the <a class="reference internal" href="transactions.html"><em>DataTransactionResult</em></a>).</p>
 </div>
 <div class="section" id="property">
-<h3>Property<a class="headerlink" href="#property" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>プロパティ<a class="headerlink" href="#property" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>A property too is data, but not synchronized between server and clients. Therefore, it can only be
 changed by modifications present on both client and server. Since Sponge is not intended to require a
 client-side counterpart, properties are not modifiable.
@@ -605,14 +605,14 @@ the re-use of such components over the API and prevents duplication of accessor 
 glass blocks and leather armor all can share the <code class="docutils literal"><span class="pre">DyeableData</span></code> holding the color they are dyed in.</p>
 </div>
 <div class="section" id="key">
-<h3>Key<a class="headerlink" href="#key" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>キー<a class="headerlink" href="#key" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>A <code class="docutils literal"><span class="pre">Key</span></code> is a unique identifier for a single point of data and can be used to directly read or set that point of
 data without worrying about data manipulators. It was designed to provide a convenient way of accessing data
 similar to direct getter/setter methods. All keys used within Sponge are listed as constants in the
 <code class="docutils literal"><span class="pre">org.spongepowered.api.data.key.Keys</span></code> utility class.</p>
 </div>
 <div class="section" id="value">
-<h3>Value<a class="headerlink" href="#value" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>値<a class="headerlink" href="#value" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>Within the Data API, a value referred to by a <code class="docutils literal"><span class="pre">Key</span></code> is encoded in a container object. For this documentation,
 it is referred to as &#8216;keyed value&#8217; to avoid confusion with the actual value. A keyed value encapsulates the
 actual data value (if it is present), a default value (to be used if no direct value is present) and the Key by
@@ -620,7 +620,7 @@ which the value is identified.</p>
 </div>
 </div>
 <div class="section" id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>コンテンツ<a class="headerlink" href="#contents" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="keys.html">キーの使用</a><ul class="simple">

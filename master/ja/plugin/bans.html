@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Banリスト &mdash; Sponge 4.0.3 ドキュメント</title>
+     <title>Banリスト &mdash; Sponge 4.1.0 ドキュメント</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../',
-      VERSION:     '4.0.3',
+      VERSION:     '4.1.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="../_static/store.min.js"></script>
     <script type="text/javascript" src="../_static/lights.js"></script>
       <link rel="shortcut icon" href="../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.0.3 ドキュメント" href="../index.html" />
+        <link rel="top" title="Sponge 4.1.0 ドキュメント" href="../index.html" />
         <link rel="up" title="プラグインの作成" href="index.html" />
         <link rel="next" title="Economy" href="economy/index.html" />
         <link rel="prev" title="Permissions" href="permissions.html" />
@@ -117,7 +117,7 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.0.3</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
@@ -152,7 +152,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../index.html">Sponge 4.0.3 ドキュメント</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../index.html">Sponge 4.1.0 ドキュメント</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">プラグインの作成</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
@@ -569,7 +569,7 @@ getting a <code class="docutils literal"><span class="pre">Ban</span></code> and
 <p class="last">For a basic understanding of services, make sure you read <a class="reference internal" href="services.html"><em>Services</em></a> first.</p>
 </div>
 <div class="section" id="getting-the-banservice">
-<h2>Getting the BanService<a class="headerlink" href="#getting-the-banservice" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>BanService の取得<a class="headerlink" href="#getting-the-banservice" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>You will need to get the <code class="docutils literal"><span class="pre">BanService</span></code> to actually add bans to the server. Fortunately, this can be done similarly to
 other services in the Sponge API:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.Sponge</span><span class="o">;</span>
@@ -602,7 +602,7 @@ example of this is shown below:</p>
 </div>
 </div>
 <div class="section" id="creating-a-ban">
-<h2>Creating a Ban<a class="headerlink" href="#creating-a-ban" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>BAN の作成<a class="headerlink" href="#creating-a-ban" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>So now we can obtain the <code class="docutils literal"><span class="pre">BanService</span></code> and the information on a <code class="docutils literal"><span class="pre">Ban</span></code>, but what if we wanted to create our own bans?
 We can use a <code class="docutils literal"><span class="pre">Ban.Builder</span></code> to create our own <code class="docutils literal"><span class="pre">Ban</span></code>. To get a <code class="docutils literal"><span class="pre">Ban.Builder</span></code>, simply call the <code class="docutils literal"><span class="pre">builder()</span></code> method
 on <code class="docutils literal"><span class="pre">Ban</span></code>. Using our builder, we can specify things such as the type of the ban, the reason for the ban, or the

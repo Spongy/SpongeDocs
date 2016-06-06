@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>プラグインの設定 &mdash; Sponge 4.0.3 ドキュメント</title>
+     <title>プラグインの設定 &mdash; Sponge 4.1.0 ドキュメント</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.0.3',
+      VERSION:     '4.1.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.0.3 ドキュメント" href="../../index.html" />
+        <link rel="top" title="Sponge 4.1.0 ドキュメント" href="../../index.html" />
         <link rel="up" title="プラグインの作成" href="../index.html" />
         <link rel="next" title="設定ローダー" href="loaders.html" />
         <link rel="prev" title="アセット API" href="../assets/index.html" />
@@ -117,7 +117,7 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.0.3</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
@@ -152,7 +152,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">Sponge 4.0.3 ドキュメント</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">Sponge 4.1.0 ドキュメント</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" accesskey="U">プラグインの作成</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
@@ -610,10 +610,12 @@ will be <code class="docutils literal"><span class="pre">your_plugin_id.conf</sp
 <p class="last">See <a class="reference internal" href="../plugin-class.html"><em>主要なプラグインのクラス</em></a> for information on configuring your plugin ID.</p>
 </div>
 <p><code class="docutils literal"><span class="pre">sharedRoot</span></code> に <code class="docutils literal"><span class="pre">false</span></code> を設定した場合、返されるパス名はそのプラグイン専用のディレクトリ内の <code class="docutils literal"><span class="pre">{pluginname}.conf</span></code> というファイルを指します。</p>
-<p>If you are unsure of what to set the value of <code class="docutils literal"><span class="pre">sharedRoot</span></code> to, consider the following:</p>
+<p><code class="docutils literal"><span class="pre">sharedRoot</span></code> の値を何に設定すべきか確信が持てない場合は、次のことを考えてください。</p>
 <ul class="simple">
-<li>If you plan on having multiple configuration files (complex plugins) in the future, set the value to <code class="docutils literal"><span class="pre">false</span></code>.</li>
-<li>If you plan on having a single configuration file (less-complex plugins), set the value to <code class="docutils literal"><span class="pre">true</span></code>.</li>
+<li><p class="first">複数の設定ファイル (複雑なプラグイン) を将来使用するつもりであれば、 値を <code class="docutils literal"><span class="pre">false</span></code> にしてください。</p>
+</li>
+<li><p class="first">一つの設定ファイル (比較的簡素なプラグイン) を使用するつもりであれば、 値を <code class="docutils literal"><span class="pre">true</span></code> にしてください。</p>
+</li>
 </ul>
 <p>You can also obtain a <code class="docutils literal"><span class="pre">Path</span></code> instance pointing to the config directory instead of a particular file. Just
 have it injected using the <code class="docutils literal"><span class="pre">&#64;ConfigDir</span></code> annotation, either with <code class="docutils literal"><span class="pre">sharedRoot</span></code> set to <code class="docutils literal"><span class="pre">false</span></code> for a plugin specific
@@ -651,9 +653,7 @@ non-existant paths as the library will handle them appropriately.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
-<p class="last">The use of YAML format (<a class="reference external" href="http://yaml.org/spec/1.1/">http://yaml.org/spec/1.1/</a>) is also supported, but the preferred config format for Sponge
-plugins is HOCON. Conversion from YAML to HOCON can be automated by using a <code class="docutils literal"><span class="pre">YamlConfigurationLoader</span></code> to load
-the old config and then saving it using a <code class="docutils literal"><span class="pre">HoconConfigurationLoader</span></code>.</p>
+<p class="last">YAML (<a class="reference external" href="http://yaml.org/spec/1.1">http://yaml.org/spec/1.1</a>) の使用もサポートされていますが、 Sponge プラグインの設定ファイルフォーマットには HOCON を推奨します。 YAML から HOCON への変換は <code class="docutils literal"><span class="pre">YamlConfigurationLoader</span></code> で古い設定を読み込み、 <code class="docutils literal"><span class="pre">HoconConfigurationLoader</span></code> で保存することで自動化できます。</p>
 </div>
 </div>
 </div>

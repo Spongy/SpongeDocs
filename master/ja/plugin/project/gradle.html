@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Gradle の設定 &mdash; Sponge 4.0.3 ドキュメント</title>
+     <title>Gradle の設定 &mdash; Sponge 4.1.0 ドキュメント</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.0.3',
+      VERSION:     '4.1.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.0.3 ドキュメント" href="../../index.html" />
+        <link rel="top" title="Sponge 4.1.0 ドキュメント" href="../../index.html" />
         <link rel="up" title="プロジェクトの設定" href="index.html" />
         <link rel="next" title="Maven の設定" href="maven.html" />
         <link rel="prev" title="プロジェクトの設定" href="index.html" />
@@ -117,7 +117,7 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.0.3</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
@@ -152,7 +152,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">Sponge 4.0.3 ドキュメント</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">Sponge 4.1.0 ドキュメント</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >プラグインの作成</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">プロジェクトの設定</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
@@ -573,7 +573,7 @@ dependency to your project:</p>
 <span class="o">}</span>
 
 <span class="n">dependencies</span> <span class="o">{</span>
-    <span class="n">compile</span> <span class="s1">&#39;org.spongepowered:spongeapi:4.0.3&#39;</span>
+    <span class="n">compile</span> <span class="s1">&#39;org.spongepowered:spongeapi:4.1.0&#39;</span>
 <span class="o">}</span>
 </pre></div>
 </div>
@@ -581,7 +581,7 @@ dependency to your project:</p>
 plugin</strong> (called <a class="reference external" href="https://github.com/SpongePowered/SpongeGradle">SpongeGradle</a>) for Sponge plugins to use which allows you to minimize the necessary configuration for
 setting up a plugin project using Gradle.</p>
 <div class="section" id="using-spongegradle">
-<h2>Using SpongeGradle<a class="headerlink" href="#using-spongegradle" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>SpongeGradle の使用<a class="headerlink" href="#using-spongegradle" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
 <p class="last">We recommend using <strong>the latest Gradle version</strong> together with <a class="reference external" href="https://github.com/SpongePowered/SpongeGradle">SpongeGradle</a>. The Gradle plugin may not work
@@ -602,13 +602,14 @@ you have chosen before.</strong></p>
 <span class="n">description</span> <span class="o">=</span> <span class="s1">&#39;An example plugin&#39;</span>
 
 <span class="n">dependencies</span> <span class="o">{</span>
-    <span class="n">compile</span> <span class="s1">&#39;org.spongepowered:spongeapi:4.0.3&#39;</span>
+    <span class="n">compile</span> <span class="s1">&#39;org.spongepowered:spongeapi:4.1.0&#39;</span>
 <span class="o">}</span>
 </pre></div>
 </div>
 <p>These few lines handle most settings you would normally do manually:</p>
 <ul class="simple">
-<li>Basic Gradle Java setup</li>
+<li><p class="first">基本の Gradle Java セットアップ</p>
+</li>
 <li>Set your project to compile with Java 8</li>
 <li>Add Sponge&#8217;s Maven repository (and Maven Central)</li>
 <li>Set up a plugin with the project name in lower case as <strong>plugin ID</strong></li>
@@ -628,7 +629,7 @@ manually:</p>
 </div>
 </div>
 <div class="section" id="overriding-defaults">
-<h3>Overriding defaults<a class="headerlink" href="#overriding-defaults" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>デフォルトの書き換え<a class="headerlink" href="#overriding-defaults" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>By default the Gradle plugin will contribute the <strong>plugin name</strong>, <strong>plugin version</strong> and <strong>description</strong> automatically
 to <a class="reference internal" href="../plugin-meta.html"><em>プラグインメタデータ</em></a> with defaults defined in the project properties. It is also possible to override these if
 you want to specify them manually:</p>

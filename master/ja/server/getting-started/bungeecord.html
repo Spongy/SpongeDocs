@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>BungeeCord と Sponge の併用 &mdash; Sponge 4.0.3 ドキュメント</title>
+     <title>BungeeCord と Sponge の併用 &mdash; Sponge 4.1.0 ドキュメント</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.0.3',
+      VERSION:     '4.1.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.0.3 ドキュメント" href="../../index.html" />
+        <link rel="top" title="Sponge 4.1.0 ドキュメント" href="../../index.html" />
         <link rel="up" title="はじめに" href="index.html" />
         <link rel="next" title="Sponge の設定" href="configuration/index.html" />
         <link rel="prev" title="ポートフォワーディング (ポート開放)" href="port-forward.html" />
@@ -117,7 +117,7 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.0.3</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
@@ -152,7 +152,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">Sponge 4.0.3 ドキュメント</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">Sponge 4.1.0 ドキュメント</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >サーバーの作成</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">はじめに</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
@@ -583,7 +583,7 @@ your servers, consider consulting with someone who has more experience to ensure
 out of your server!</p>
 </div>
 <div class="section" id="ip-forwarding">
-<h2>IP Forwarding<a class="headerlink" href="#ip-forwarding" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>IP フォワーディング<a class="headerlink" href="#ip-forwarding" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>BungeeCord has a mode called IP Forwarding, which allows BungeeCord to pass the player&#8217;s UUID and IP address to any
 connected server, even though the servers are being run in offline mode. With current builds of BungeeCord, IP
 Forwarding works with SpongeVanilla, whilst IP Forwarding only supports SpongeForge when vanilla clients connect -
@@ -598,7 +598,7 @@ to be included in the main product:</p>
 </ul>
 </div>
 <div class="section" id="using-bungeecord-without-ip-forwarding">
-<h2>Using BungeeCord without IP Forwarding<a class="headerlink" href="#using-bungeecord-without-ip-forwarding" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>IP フォワーディングなしでの BungeeCord の使用<a class="headerlink" href="#using-bungeecord-without-ip-forwarding" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>While it is recommended that you use IP Forwarding wherever possible. If you do not wish to do so, simply ensure that
 <code class="docutils literal"><span class="pre">online-mode</span></code> is set to <code class="docutils literal"><span class="pre">false</span></code> in your <code class="docutils literal"><span class="pre">server.properties</span></code> file and add the server details to Bungee&#8217;s
 <code class="docutils literal"><span class="pre">config.yml</span></code> file. Bungee will then forward any connections to the server when required. It is a good precaution to
@@ -606,7 +606,7 @@ set the <code class="docutils literal"><span class="pre">server-port</span></cod
 <p>This will work with all implementations of Sponge, including with mods.</p>
 </div>
 <div class="section" id="using-bungeecord-with-ip-forwarding">
-<h2>Using BungeeCord with IP Forwarding<a class="headerlink" href="#using-bungeecord-with-ip-forwarding" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>IP フォワーディングを用いた BungeeCord の使用<a class="headerlink" href="#using-bungeecord-with-ip-forwarding" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>If you wish to use IP Forwarding:</p>
 <ul class="simple">
 <li>In the BungeeCord <code class="docutils literal"><span class="pre">config.yml</span></code>, set <code class="docutils literal"><span class="pre">ip_forward</span></code> to <code class="docutils literal"><span class="pre">true</span></code></li>

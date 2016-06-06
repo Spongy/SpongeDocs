@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>DataManipulators の実装 &mdash; Sponge 4.0.3 ドキュメント</title>
+     <title>DataManipulators の実装 &mdash; Sponge 4.1.0 ドキュメント</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.0.3',
+      VERSION:     '4.1.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.0.3 ドキュメント" href="../../index.html" />
+        <link rel="top" title="Sponge 4.1.0 ドキュメント" href="../../index.html" />
         <link rel="up" title="Sponge の開発" href="index.html" />
         <link rel="next" title="SpongeDocsの執筆" href="../spongedocs.html" />
         <link rel="prev" title="Mixin" href="mixins.html" />
@@ -117,7 +117,7 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.0.3</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
@@ -152,7 +152,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">Sponge 4.0.3 ドキュメント</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">Sponge 4.1.0 ドキュメント</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >Spongeに貢献</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">Sponge の開発</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
@@ -597,7 +597,7 @@ but there are also abstractions that reduce boilerplate code even more for some 
 <p>There are two type arguments to the AbstractData class. The first is the interface implemented by this class, the
 second is the interface implemented by the corresponding <code class="docutils literal"><span class="pre">ImmutableDataManipulator</span></code>.</p>
 <div class="section" id="the-constructor">
-<h3>The Constructor<a class="headerlink" href="#the-constructor" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>コンストラクタ<a class="headerlink" href="#the-constructor" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>In most cases while implementing an abstract Manipulator you want to have two constructors:</p>
 <ul class="simple">
 <li>One without arguments (no-args) which calls the second constructor with &#8220;default&#8221; values</li>

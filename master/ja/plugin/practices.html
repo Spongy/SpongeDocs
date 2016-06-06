@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>ベストプラクティス &mdash; Sponge 4.0.3 ドキュメント</title>
+     <title>ベストプラクティス &mdash; Sponge 4.1.0 ドキュメント</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../',
-      VERSION:     '4.0.3',
+      VERSION:     '4.1.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="../_static/store.min.js"></script>
     <script type="text/javascript" src="../_static/lights.js"></script>
       <link rel="shortcut icon" href="../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.0.3 ドキュメント" href="../index.html" />
+        <link rel="top" title="Sponge 4.1.0 ドキュメント" href="../index.html" />
         <link rel="up" title="プラグインの作成" href="index.html" />
         <link rel="next" title="Optional" href="optional/index.html" />
         <link rel="prev" title="依存性注入" href="injection.html" />
@@ -117,7 +117,7 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.0.3</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
@@ -152,7 +152,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../index.html">Sponge 4.0.3 ドキュメント</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../index.html">Sponge 4.1.0 ドキュメント</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">プラグインの作成</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
@@ -575,12 +575,12 @@ solutions.</p>
 about the Economy API <a class="reference internal" href="economy/index.html"><em>here</em></a>, which details everything you need to know about the API.</p>
 </div>
 <div class="section" id="mixins">
-<h3>Mixins<a class="headerlink" href="#mixins" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>Mixin<a class="headerlink" href="#mixins" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>Mixins are specifically for transforming classes before other mods/plugins start. ForgeModLoader calls these mods
 “Coremods”. SpongeForge is a Coremod, and deploys Mixins on startup. Mixins cannot be used by plugins.</p>
 </div>
 <div class="section" id="packets">
-<h3>Packets<a class="headerlink" href="#packets" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>パケット<a class="headerlink" href="#packets" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>Anything to do with intercepting packets, or introducing custom items/blocks/entities/etc, is <em>not</em> planned to be part
 of the Sponge API. Note that using packets may be looking at the problem the wrong way, as there may be a solution
 achievable with the existing Sponge API. In some cases it may be possible to add whatever is needed to the Sponge API;

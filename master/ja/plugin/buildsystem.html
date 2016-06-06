@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>ビルドシステム &mdash; Sponge 4.0.3 ドキュメント</title>
+     <title>ビルドシステム &mdash; Sponge 4.1.0 ドキュメント</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../',
-      VERSION:     '4.0.3',
+      VERSION:     '4.1.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="../_static/store.min.js"></script>
     <script type="text/javascript" src="../_static/lights.js"></script>
       <link rel="shortcut icon" href="../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.0.3 ドキュメント" href="../index.html" />
+        <link rel="top" title="Sponge 4.1.0 ドキュメント" href="../index.html" />
         <link rel="up" title="プラグインの作成" href="index.html" />
         <link rel="next" title="ワークスペースのセットアップ" href="workspace/index.html" />
         <link rel="prev" title="プラグインの作成" href="index.html" />
@@ -117,7 +117,7 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.0.3</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
@@ -152,7 +152,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../index.html">Sponge 4.0.3 ドキュメント</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../index.html">Sponge 4.1.0 ドキュメント</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">プラグインの作成</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
@@ -576,8 +576,7 @@ most common choices as build systems. If you&#8217;re unsure which one to use we
 for the Sponge projects and provides the best integration for Sponge plugins.</p>
 <div class="section" id="gradle">
 <h2>Gradle<a class="headerlink" href="#gradle" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p><a class="reference external" href="https://gradle.org/">Gradle</a> uses <a class="reference external" href="http://www.groovy-lang.org/">Groovy</a>-based scripts for configuring projects. A <a class="reference external" href="https://gradle.org/">Gradle</a> project typically consists of a <code class="docutils literal"><span class="pre">build.gradle</span></code>
-file in your project&#8217;s root directory, which tells <a class="reference external" href="https://gradle.org/">Gradle</a> how to build the project.</p>
+<p><a class="reference external" href="https://gradle.org/">Gradle</a> はプロジェクトを設定するために <a class="reference external" href="http://www.groovy-lang.org/">Groovy</a> ベースのスクリプトを使います。 Gradle プロジェクトは一般的に、 <a class="reference external" href="https://gradle.org/">Gradle</a> にプロジェクトのビルド方法を伝える <code class="docutils literal"><span class="pre">build.gradle</span></code> ファイルをルートディレクトリに含みます。</p>
 <div class="admonition tip">
 <p class="first admonition-title">ちなみに</p>
 <p class="last">Refer to the <a class="reference external" href="https://docs.gradle.org/current/userguide/userguide.html">Gradle User Guide</a> for the installation and a general introduction of concepts used in <a class="reference external" href="https://gradle.org/">Gradle</a>. If
@@ -600,7 +599,7 @@ Minutes</a>.</p>
 <p>Setup your workspace as explained in <a class="reference internal" href="workspace/index.html"><em>ワークスペースのセットアップ</em></a> then follow <a class="reference internal" href="project/maven.html"><em>Maven の設定</em></a>.</p>
 </div>
 <div class="section" id="creating-a-plugin-without-a-build-system">
-<h2>Creating a plugin without a build system<a class="headerlink" href="#creating-a-plugin-without-a-build-system" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>ビルドシステムなしでプラグインを作成<a class="headerlink" href="#creating-a-plugin-without-a-build-system" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>It is also possible to create Sponge plugins without the use of a build system, only with the included tools in your
 IDE.</p>
 <div class="admonition warning">

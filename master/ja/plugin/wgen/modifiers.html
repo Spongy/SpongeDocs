@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>WorldGeneratorModifiers &mdash; Sponge 4.0.3 ドキュメント</title>
+     <title>WorldGeneratorModifiers &mdash; Sponge 4.1.0 ドキュメント</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.0.3',
+      VERSION:     '4.1.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.0.3 ドキュメント" href="../../index.html" />
+        <link rel="top" title="Sponge 4.1.0 ドキュメント" href="../../index.html" />
         <link rel="up" title="World Generation" href="index.html" />
         <link rel="next" title="Modifying World Generation" href="customwgen.html" />
         <link rel="prev" title="World Generation" href="index.html" />
@@ -117,7 +117,7 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.0.3</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
@@ -152,7 +152,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">Sponge 4.0.3 ドキュメント</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">Sponge 4.1.0 ドキュメント</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >プラグインの作成</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">World Generation</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
@@ -569,7 +569,7 @@ These modifiers are registered globally with a unique id, which must be added to
 by a server admin. With the id specified in the world config, a <code class="docutils literal"><span class="pre">WorldGeneratorModifier</span></code> will be
 automatically called when the generator for that world is set up, allowing it to make changes to the generator.</p>
 <div class="section" id="creating-a-worldgeneratormodifier">
-<h2>Creating a WorldGeneratorModifier<a class="headerlink" href="#creating-a-worldgeneratormodifier" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>WorldGeneratorModifier の作成<a class="headerlink" href="#creating-a-worldgeneratormodifier" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Let&#8217;s start with the format of a <code class="docutils literal"><span class="pre">WorldGeneratorModifier</span></code>. First, you need a class which implements
 the <code class="docutils literal"><span class="pre">WorldGeneratorModifier</span></code> interface:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.world.gen.WorldGeneratorModifier</span><span class="o">;</span>
@@ -606,7 +606,7 @@ in order to give context for your changes. For instance, you can use the <code c
 generator changes to nether worlds.</p>
 </div>
 <div class="section" id="registering-a-worldgeneratormodifier">
-<h2>Registering a WorldGeneratorModifier<a class="headerlink" href="#registering-a-worldgeneratormodifier" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>WorldGeneratorModifier の登録<a class="headerlink" href="#registering-a-worldgeneratormodifier" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Now that you have created our modifier, you need to register it. A good time to do this is during the <code class="docutils literal"><span class="pre">INITIALIZATION</span></code>
 State. To register it, simply call <code class="docutils literal"><span class="pre">GameRegistry.register()</span></code> with <code class="docutils literal"><span class="pre">WorldGeneratorModifier.class</span></code>
 as the first argument and your modifier as the second.</p>

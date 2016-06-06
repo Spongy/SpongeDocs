@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>IntelliJ IDEA のセットアップ &mdash; Sponge 4.0.3 ドキュメント</title>
+     <title>IntelliJ IDEA のセットアップ &mdash; Sponge 4.1.0 ドキュメント</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.0.3',
+      VERSION:     '4.1.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.0.3 ドキュメント" href="../../index.html" />
+        <link rel="top" title="Sponge 4.1.0 ドキュメント" href="../../index.html" />
         <link rel="up" title="ワークスペースのセットアップ" href="index.html" />
         <link rel="next" title="Eclipse のセットアップ" href="eclipse.html" />
         <link rel="prev" title="ワークスペースのセットアップ" href="index.html" />
@@ -117,7 +117,7 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.0.3</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
@@ -152,7 +152,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">Sponge 4.0.3 ドキュメント</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">Sponge 4.1.0 ドキュメント</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >プラグインの作成</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">ワークスペースのセットアップ</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
@@ -579,19 +579,24 @@
 <ul>
 <li>Your <strong>Group ID</strong> should usually correspond to your Java package name. See <a class="reference internal" href="../plugin-class.html"><em>主要なプラグインのクラス</em></a> for details.</li>
 <li>Your <strong>Artifact ID</strong> should usually correspond to your <strong>plugin ID</strong> you chose earlier, e.g. <code class="docutils literal"><span class="pre">myplugin</span></code>.</li>
-<li>Your <strong>Version</strong> is up to you.</li>
+<li><p class="first"><strong>Version</strong> はあなたが決めます。</p>
+</li>
 </ul>
 </li>
-<li>Click <code class="docutils literal"><span class="pre">Next</span></code> twice, name your project, and click <code class="docutils literal"><span class="pre">Finish</span></code>.</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">Next</span></code> を二回押して、プロジェクトに名前をつけて、 <code class="docutils literal"><span class="pre">Finish</span></code> をクリックします。</p>
+</li>
 </ul>
 </div>
 <div class="section" id="editing-the-build-script">
 <h3>Editing the build script<a class="headerlink" href="#editing-the-build-script" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <ul class="simple">
-<li>Open <code class="docutils literal"><span class="pre">build.gradle</span></code> in the navigator and add the dependencies.</li>
+<li><p class="first">ナビゲーターの <code class="docutils literal"><span class="pre">build.gradle</span></code> を開き、依存関係を追加します。</p>
+</li>
 <li>Edit the build script according to the instructions at <a class="reference internal" href="../project/gradle.html"><em>Gradle の設定</em></a>.</li>
-<li>Open the <strong>Gradle tab</strong> on the right of the IntelliJ window and hit the refresh button.</li>
-<li>Gradle setup is done! Now you can start coding your plugin.</li>
+<li><p class="first">IntelliJ ウィンドウの右にある <strong>Gradle タブ</strong> を開き、更新ボタンを押します。</p>
+</li>
+<li><p class="first">Gradle のセットアップが完了しました! プラグインのコーディングを始められます。</p>
+</li>
 </ul>
 </div>
 <div class="section" id="importing-your-project">
@@ -620,10 +625,12 @@ of re-creating it inside your IDE:</p>
 <ul>
 <li>Your <strong>Group ID</strong> should usually correspond to your Java package name. See <a class="reference internal" href="../plugin-class.html"><em>主要なプラグインのクラス</em></a> for details.</li>
 <li>Your <strong>Artifact ID</strong> should usually correspond to your <strong>plugin ID</strong> you chose earlier, e.g. <code class="docutils literal"><span class="pre">myplugin</span></code>.</li>
-<li>Your <strong>Version</strong> is up to you.</li>
+<li><p class="first"><strong>Version</strong> はあなたが決めます。</p>
+</li>
 </ul>
 </li>
-<li>Click <code class="docutils literal"><span class="pre">Next</span></code>.</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">Next</span></code> をクリックします。</p>
+</li>
 <li><p class="first">プロジェクト名を入力し、 <code class="docutils literal"><span class="pre">Finish</span></code> をクリックします。</p>
 </li>
 </ul>
@@ -631,7 +638,8 @@ of re-creating it inside your IDE:</p>
 <div class="section" id="editing-the-project-configuration">
 <h3>Editing the project configuration<a class="headerlink" href="#editing-the-project-configuration" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <ul class="simple">
-<li>Open <code class="docutils literal"><span class="pre">pom.xml</span></code> in the navigator.</li>
+<li><p class="first">ナビゲーターで <code class="docutils literal"><span class="pre">pom.xml</span></code> を開きます。</p>
+</li>
 <li>Edit the build configuration according to the instructions at <a class="reference internal" href="../project/maven.html"><em>Maven の設定</em></a>.</li>
 <li>Refresh your Maven project.</li>
 <li><p class="first">求められれば、 Maven の変更をインポートします。</p>
@@ -650,7 +658,7 @@ of re-creating it inside your IDE:</p>
 </div>
 </div>
 <div class="section" id="git-integration">
-<h2>Git Integration<a class="headerlink" href="#git-integration" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Git インテグレーション<a class="headerlink" href="#git-integration" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>JetBrains は、 Git integration のドキュメントを提供しています：</p>
 <p><a class="reference external" href="https://www.jetbrains.com/idea/help/using-git-integration.html">https://www.jetbrains.com/idea/help/using-git-integration.html</a></p>
 </div>

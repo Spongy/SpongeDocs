@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>TextXML 形式 &mdash; Sponge 4.0.3 ドキュメント</title>
+     <title>TextXML 形式 &mdash; Sponge 4.1.0 ドキュメント</title>
     
   <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../../',
-      VERSION:     '4.0.3',
+      VERSION:     '4.1.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="../../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.0.3 ドキュメント" href="../../../index.html" />
+        <link rel="top" title="Sponge 4.1.0 ドキュメント" href="../../../index.html" />
         <link rel="up" title="テキストシリアライザー" href="index.html" />
         <link rel="next" title="JSON 形式" href="json.html" />
         <link rel="prev" title="コードの整形と古い書式" href="formatting-code-legacy.html" />
@@ -117,7 +117,7 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.0.3</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
@@ -152,7 +152,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../../index.html">Sponge 4.0.3 ドキュメント</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../../index.html">Sponge 4.1.0 ドキュメント</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../../index.html" >プラグインの作成</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >Text</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">テキストシリアライザー</a><i class="fa fa-fw fa-chevron-right"></i></li>
@@ -579,20 +579,24 @@ and styling of text. A description of the elements and attributes are as follows
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>a (anchor)</td>
+<tr class="row-even"><td><p class="first last">a (アンカー)</p>
+</td>
 <td>href</td>
 <td>anchor element; Indicates that this text will open the link in the <code class="docutils literal"><span class="pre">href</span></code> attribute
 when clicked.</td>
 </tr>
-<tr class="row-odd"><td>b (bold)</td>
+<tr class="row-odd"><td><p class="first last">b (太字)</p>
+</td>
 <td>&nbsp;</td>
 <td><strong>Bolds</strong> the text.</td>
 </tr>
-<tr class="row-even"><td>c (color)</td>
+<tr class="row-even"><td><p class="first last">c (色)</p>
+</td>
 <td>n</td>
 <td>Applies a color indicated by the <code class="docutils literal"><span class="pre">n</span></code> (name) attribute to the text.</td>
 </tr>
-<tr class="row-odd"><td>i (italics)</td>
+<tr class="row-odd"><td><p class="first last">i (イタリック体)</p>
+</td>
 <td>&nbsp;</td>
 <td><em>Italicizes</em> the text.</td>
 </tr>
@@ -601,7 +605,8 @@ when clicked.</td>
 <td>Obfuscates the text (replaces the characters with random characters that change
 continuously).</td>
 </tr>
-<tr class="row-odd"><td>s (strikethrough)</td>
+<tr class="row-odd"><td><p class="first last">s (取り消し線)</p>
+</td>
 <td>&nbsp;</td>
 <td>Strikes through the text.</td>
 </tr>
@@ -611,12 +616,14 @@ onHover</td>
 <td>Generic holder element that can have click and/or hover actions indicated by the
 <code class="docutils literal"><span class="pre">onClick</span></code> and <code class="docutils literal"><span class="pre">onHover</span></code> attributes, respectively</td>
 </tr>
-<tr class="row-odd"><td>tr (translation)</td>
+<tr class="row-odd"><td><p class="first last">tr (翻訳)</p>
+</td>
 <td><p class="first last">キー</p>
 </td>
 <td>Indicates a text translation</td>
 </tr>
-<tr class="row-even"><td>u (underline)</td>
+<tr class="row-even"><td><p class="first last">u (下線)</p>
+</td>
 <td>&nbsp;</td>
 <td>Underlines the text.</td>
 </tr>
