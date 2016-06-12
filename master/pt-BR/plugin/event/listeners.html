@@ -675,7 +675,8 @@ cancellable and has been cancelled (such as by another plugin).</p>
 <span id="game-reload"></span><h3>GameReloadEvent<a class="headerlink" href="#gamereloadevent" title="Link permanente para este título">¶</a></h3>
 <p>To prevent all plugins providing their own reload commands, Sponge provides a built in callback for plugins to listen
 to, and when executed, perform any reloading actions. What constitutes as a &#8216;reloading action&#8217; is purely up to the
-plugin to decide. The event is not necessarily limited to reloading configuration.</p>
+plugin to decide. The <code class="docutils literal"><span class="pre">GameReloadEvent</span></code> will fire when a player executes the <code class="docutils literal"><span class="pre">/sponge</span> <span class="pre">plugins</span> <span class="pre">reload</span></code> command. The
+event is not necessarily limited to reloading configuration.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.event.game.GameReloadEvent</span><span class="o">;</span>
 
 <span class="nd">@Listener</span>
