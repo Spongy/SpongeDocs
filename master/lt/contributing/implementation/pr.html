@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Submitting a Pull-Request &mdash; Sponge 4.1.0 documentation</title>
+     <title>Pull-Request pateikimas &mdash; Sponge 4.1.0 documentation</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -255,7 +255,7 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../plugin/index.html">Įskiepių kūrimas</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/buildsystem.html">Build Systems</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/buildsystem.html">Statynių sistemos</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/workspace/index.html">Darbo vietos nustatymas</a><ul>
@@ -267,17 +267,17 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/project/index.html">Setting Up Your Project</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/project/gradle.html">Setting Up Gradle</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/project/index.html">Savo projekto kūrimas</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/project/gradle.html">Gradle nustatymas</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/project/maven.html">Setting Up Maven</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/project/maven.html">Maven nustatymas</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/plugin-identifier.html">Plugin Identifiers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/plugin-class.html">Main Plugin Class</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/plugin-identifier.html">Įskiepių identifikatoriai</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/plugin-class.html">Pagrindinio įskiepio klasė</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/lifecycle.html">Įskiepio gyvenimo ciklas</a><ul class="simple">
@@ -308,7 +308,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/arguments.html">Argumento analizė</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/flags.html">Command Flags</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/flags.html">Komandinių eilučių žymės</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/childcommands.html">&#8220;Child&#8221; komandų eilutės</a></li>
@@ -333,7 +333,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/assets/index.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/assets/index.html">Asset API</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/configuration/index.html">Įsikiepių konfigūravimas</a><ul>
@@ -356,13 +356,13 @@
 <li class="toctree-l4"><a class="reference internal" href="../../plugin/text/representations/formatting-code-legacy.html">Kodo formatavimas ir senų versijų formatavimas</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../plugin/text/representations/xml.html">TextXML formatas</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../plugin/text/representations/json.html">JSON formatas</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../plugin/text/representations/configurate.html">Configuration Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../plugin/text/representations/configurate.html">Konfigūracijos formatas</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/text/pagination.html">The Pagination Service</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/messagechannels.html">Message Channels</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/messagechannels.html">Žinučių kanalai</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/text/templates.html">TextTemplates</a></li>
@@ -396,7 +396,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/tileentities.html">Tile Entities</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/virtualblock.html">Virtual Block Changes</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/virtualblock.html">Virtualaus bloko keitimai</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -409,10 +409,10 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/items/index.html">Items</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/items/usage.html">Basic Item Usage</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/items/usage.html">Pagrindinis daiktų naudojimas</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/items/creating.html">Creating an ItemStack</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/items/creating.html">ItemStack kūrimas</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -433,7 +433,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/bans.html">Užblokuoti vartotojai</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/bookview.html">Book Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/bookview.html">Knygų peržiūros</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/economy/index.html">Economy</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/economy/basics.html">Pagrindines sąvokos</a><ul class="simple">
 </ul>
@@ -461,22 +461,22 @@
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/manager.html">Plugin Manager</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/game-profile-manager.html">Game Profile Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/game-profile-manager.html">Žaidimo profilio tvarkytojas</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/debugging.html">Įskiepio derinimas</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/tab-lists.html">Tab Lists</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/tab-lists.html">Skirtuko sąrašas</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/plugin-meta.html">Plugin Metadata</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/plugin-meta.html">Įskiepių metaduomenys</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/ray-tracing.html">Ray Tracing</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/ray-tracing.html">Ray sekimas</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/bukkit-sponge-compare.html">Lyginant Bukkit su SpongeAPI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/tutorials.html">Pamokos</a><ul class="simple">
 </ul>
 </li>
@@ -498,7 +498,7 @@
 <li class="toctree-l3"><a class="reference internal" href="git-implementation.html">Git dargo eigos API ir diegimas</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Submitting a Pull-Request</a><ul class="simple">
+<li class="toctree-l3 current"><a class="current reference internal" href="">Pull-Request pateikimas</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="debugging.html">Sponge derinimas per IDE</a></li>
@@ -567,7 +567,7 @@
                 <div class="body" role="main">
                   
   <div class="section" id="submitting-a-pull-request">
-<h1>Submitting a Pull-Request<a class="headerlink" href="#submitting-a-pull-request" title="Nuoroda į šią antraštę">¶</a></h1>
+<h1>Pull-Request pateikimas<a class="headerlink" href="#submitting-a-pull-request" title="Nuoroda į šią antraštę">¶</a></h1>
 <div class="section" id="the-basics">
 <h2>The Basics<a class="headerlink" href="#the-basics" title="Nuoroda į šią antraštę">¶</a></h2>
 <p>First you need to setup your machine to be able to develop for and with Sponge:</p>

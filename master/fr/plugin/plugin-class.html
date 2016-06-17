@@ -601,12 +601,9 @@ easily find your main plugin class when your plugin is loaded. An example usage 
 </div>
 </div>
 <div class="section" id="initializing-your-plugin">
-<h2>Initializing Your Plugin<a class="headerlink" href="#initializing-your-plugin" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Plugins are loaded before the game and the world(s). This leaves a specific timeframe when your plugin should begin
-interacting with the game, such as registering commands or events.</p>
-<p>Your plugin can listen for particular events, called <strong>state events</strong>, to be notified about changes in the state of the
-game. In the example below, <code class="docutils literal"><span class="pre">onServerStart()</span></code> is called when the <code class="docutils literal"><span class="pre">GameStartedServerEvent</span></code> occurs; take note of the
-<code class="docutils literal"><span class="pre">&#64;Listener</span></code> annotation before the method.</p>
+<h2>Initialiser votre Plugin<a class="headerlink" href="#initializing-your-plugin" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Les plugins sont chargés avant le jeu et les mondes. Ce qui laisse un petit moment pendant lequel votre plugin peut interagir avec le jeu, en enregistrant des commandes ou des events par exemple.</p>
+<p>Votre plugin peut écouter un événement particulier, appelé <strong>state events</strong> (événements d&#8217;état), afin d&#8217;être informé des changements d&#8217;état du jeu. Dans l&#8217;exemple qui suit, la méthode <code class="docutils literal"><span class="pre">onServerStart()</span></code> est appelée quand l&#8217;événement <code class="docutils literal"><span class="pre">GameStartedServerEvent</span></code> se produit; Prenez note de l&#8217;annotation <code class="docutils literal"><span class="pre">&#64;Listener</span></code> se trouvant avant la méthode.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.event.Listener</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.event.game.state.GameStartedServerEvent</span><span class="o">;</span>
 

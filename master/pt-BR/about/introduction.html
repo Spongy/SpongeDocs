@@ -533,7 +533,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="future.html">Planos para o Futuro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="license.html">Licença</a></li>
-<li class="toctree-l2"><a class="reference internal" href="posting.html">Diretrizes para Publicação no Fórum</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="posting.html">Diretrizes para a publicação no fórum</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="rules.html">Regras do Fórum e IRC</a></li>
@@ -570,36 +570,36 @@
 <h1>Introdução<a class="headerlink" href="#introduction" title="Link permanente para este título">¶</a></h1>
 <div class="section" id="what-is-sponge">
 <h2>O que é o Sponge?<a class="headerlink" href="#what-is-sponge" title="Link permanente para este título">¶</a></h2>
-<p>O objetivo do projeto Sponge é criar uma framework de desenvolvimento de plugins para Minecraft. O Sponge está a ser criado por uma comunidade global, e sua natureza de código aberto significa que qualquer pessoa pode participar.</p>
-<p>O Sponge foi criado depois de vermos as falhas de outros projetos na comunidade de desenvolvimento de plugins de Minecraft. Estamos a tentar evitar cometer os mesmos erros que outros projetos; logo:</p>
+<p>O objetivo do projeto Sponge é criar uma framework de desenvolvimento de plugins para o Minecraft. O Sponge está sendo criado por uma comunidade global, e é código aberto oque significa que qualquer pessoa pode participar.</p>
+<p>O Sponge foi criado após ver as falhas de outros projetos na comunidade de desenvolvimento de plugins do Minecraft. Estamos tentando evitar cometer os mesmo erros que os outros projetos, logo:</p>
 <ul class="simple">
 <li><p class="first">O Sponge é um projeto extremamente aberto.</p>
 </li>
-<li><p class="first">O Sponge é licenciado sob a licença MIT - uma licença <em>open source</em> extremamente permissiva.</p>
+<li><p class="first">O Sponge é licenciado sob a licença MIT - uma licença de código aberto extremamente permissiva.</p>
 </li>
 <li><p class="first">Desempenho é uma alta prioridade.</p>
 </li>
 </ul>
-<p>A maioria dos plugins desenvolvidos com a SpongeAPI deve funcionar em várias versões do Minecraft sem precisar de ser atualizado. Isto significa que, na maior parte dos casos, os donos dos servidores não vão ter de se preocupar com incompatibilidades dos plugins.</p>
-<p>Temos dois projetos para além da Sponge API:</p>
+<p>A maioria dos plugins desenvolvidos com a Sponge API deve funcionar em várias versões do Minecraft sem precisar ser atualizada. Isso significa que, na maior parte dos casos, donos de servidores não precisam se preocupar com incompatibilidades dos plugins.</p>
+<p>Nós temos dois outros projetos além da Sponge API:</p>
 <ol class="arabic simple">
-<li><p class="first">O <strong>SpongeForge</strong>, um coremod para o Minecraft Forge, que é uma framework de modding existente, famosa por ter estimulado o panorama de modding do Minecraft. No entanto, o Forge não tem uma API multi-versão, e é aí que o Sponge entra. O Sponge permite que os donos de servidores utilizem plugins facilmente, tornando a gestão do servidor mais simples.</p>
+<li><p class="first"><strong>SpongeForge</strong>, um coremod para Minecraft Forge que é uma framework de modding para Minecraft famosa por ter estimulado o panorama de modding no Minecraft. O Forge não tem uma API multi-versão, e é aí que o Sponge entra. O Sponge permite que donos de servidores utilizem plugins facilmente, tornando a gestão do servidor mais simples.</p>
 </li>
-<li><p class="first">O <strong>SpongeVanilla</strong>, uma implementação independente da SpongeAPI, que corre num servidor de Minecraft. (O SpongeVanilla era conhecido como Granite até à fusão das equipas de desenvolvimento).</p>
+<li><p class="first"><strong>SpongeVanilla</strong>, uma implementação independente da Sponge API, executando por cima do servidor vanilla de Minecraft. (O SpongeVanilla era conhecido como Granite, até a fusão das equipes de desenvolvimento).</p>
 </li>
 </ol>
-<p>Os jogadores nos servidores que estiverem a utilizar o SpongeForge ou o SpongeVanilla não precisam de instalar quaisquer mods. Podem ligar-se normalmente, utilizando o Minecraft normal distribuído pela Mojang.</p>
-<p>A SpongeAPI não está vinculada a qualquer plataforma. Isto significa que os donos de servidor podem usar plugins do Sponge em qualquer implementação oficial da API. Alguns plugins deverão comportar-se de forma idêntica em qualquer implementação, devido à funcionalidade comum dos mixins.</p>
+<p>Os jogadores em servidores que usam SpongeForge ou SpongeVanilla não precisam instalar qualquer mod. Eles podem juntar-se aos servidores com Sponge utilizando o Minecraft vanilla providenciado pela Mojang.</p>
+<p>A Sponge API não está vinculada a nenhuma plataforma. Isso significa que os donos de servidor podem usar plugins do Sponge em qualquer implementação oficial da Sponge API. Os plugins deverão funcionar de forma idêntica em qualquer implementação, devido à funcionalidade comum dos mixins.</p>
 </div>
 <div class="section" id="where-can-i-download-sponge">
 <h2>Onde posso fazer o download do Sponge?<a class="headerlink" href="#where-can-i-download-sponge" title="Link permanente para este título">¶</a></h2>
-<p>Nem o SpongeForge nem o SpongeVanilla estão concluidos, mas podes encontrar <em>development builds</em> em: <a class="reference internal" href="../downloads.html"><em>Download</em></a>.</p>
+<p>Nem o SpongeForge nem o SpongeVanilla estão prontos ainda, mas <em>development builds</em> podem ser encontradas em <a class="reference internal" href="../downloads.html"><em>Download</em></a>.</p>
 </div>
 <div class="section" id="who-is-behind-sponge">
 <h2>Quem está por trás do Sponge?<a class="headerlink" href="#who-is-behind-sponge" title="Link permanente para este título">¶</a></h2>
-<p>Os líderes do projeto são o blood, o gabizou e o Zidane. Estamos a tentar ser muito abertos para com a equipa para garantir que os líderes do projeto não acabam com &#8220;as chaves todas na mão&#8221;. No entanto, estas três pessoas tomam as decisões finais para assegurar o funcionamento eficiente do projeto.</p>
-<p>Uma lista completa dos membros da equipa pode ser encontrada em <a class="reference internal" href="staff.html"><em>Equipe</em></a>.</p>
-<p>Os nossos desenvolvedores são bem versados com Java, e muitos deles trabalharam com o Minecraft durante anos e conhecem bem os seus pormenores. Há montes de desenvolvedores excelentes a trabalhar no projeto Sponge, e seria quase impossível identificá-los todos!</p>
+<p>Os líderes do projeto são o blood, o gabizou e o Zidane. Nós estamos tentando ser bem abertos com a equipe para garantir que os líderes do projeto não acabem &#8220;segurando todas as chaves&#8221;. No entanto, essas três pessoas tomam as decisões finais para assegurar o funcionamento do projeto.</p>
+<p>Uma lista completa dos membros da equipe pode ser econtrada em at <a class="reference internal" href="staff.html"><em>Equipe</em></a>.</p>
+<p>Os nossos desenvolvedores são bem experientes em Java, e muitos deles trabalharam com o Minecraft por anos e conhecem bem suas particularidades. Há uma grande quantidade de excelentes desenvolvedores trabalhando no projeto Sponge, e seria quase impossível listar todos!</p>
 </div>
 </div>
 
