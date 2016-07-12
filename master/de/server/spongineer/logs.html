@@ -301,7 +301,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/logging.html">Loggen und Debugging</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/commands/index.html">Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/commands/index.html">Befehle</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/creating.html">Einen Befehl erstellen</a><ul class="simple">
 </ul>
 </li>
@@ -318,7 +318,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/event/index.html">Events</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/event/index.html">Ereignisse</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -328,7 +328,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/event/filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/custom.html">Custom Events</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/custom.html">Benutzerdefinierte Ereignisse</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -383,7 +383,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/blocks/index.html">Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/blocks/index.html">Blöcke</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/concepts.html">Konzept</a><ul class="simple">
 </ul>
 </li>
@@ -401,7 +401,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/entities/index.html">Entities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/entities/index.html">Entitäten</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/entities/spawning.html">Spawnen eines Entitys</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/entities/modifying.html">Modifying an Entity</a><ul class="simple">
 </ul>
@@ -426,15 +426,15 @@
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/services.html">Services</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/database.html">Databases</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/database.html">Datenbanken</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/permissions.html">Permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/permissions.html">Rechte</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/bans.html">Bans</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/bookview.html">Book Views</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/economy/index.html">Economy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/economy/index.html">Wirtschaft</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/economy/basics.html">Grundlegende Konzepte</a><ul class="simple">
 </ul>
 </li>
@@ -458,7 +458,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/manager.html">Plugin Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/manager.html">Plugin-Manager</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/game-profile-manager.html">Game Profile Manager</a><ul class="simple">
@@ -629,8 +629,7 @@
 [main/INFO] [FML/]: Loading tweaker org.spongepowered.asm.launch.MixinTweaker from spongeforge-1.8-1521-2.1-DEV-750.jar
 </pre></div>
 </div>
-<p>This indicates that SpongeForge 750 was found and loaded by Forge. For further help regarding the SpongeForge
-naming scheme, have a look here: <a class="reference internal" href="../getting-started/implementations/spongeforge.html"><em>SpongeForge installieren</em></a>.</p>
+<p>Dies bedeutet, dass SpongeForge 750 gefunden und von Forge geladen wurde. Wenn du mehr über die Benennung von SpongeForge wissen möchtest, schau hier nach: <a class="reference internal" href="../getting-started/implementations/spongeforge.html"><em>SpongeForge installieren</em></a>.</p>
 </div>
 <div class="section" id="latest-log">
 <h3><a class="toc-backref" href="#id5">latest.log</a><a class="headerlink" href="#latest-log" title="Link zu dieser Überschrift">¶</a></h3>
@@ -654,9 +653,7 @@ naming scheme, have a look here: <a class="reference internal" href="../getting-
 </div>
 <div class="section" id="reading-logfiles">
 <h2><a class="toc-backref" href="#id8">Logdateien lesen</a><a class="headerlink" href="#reading-logfiles" title="Link zu dieser Überschrift">¶</a></h2>
-<p>If you&#8217;re unsure on how to read a common crashlog, you&#8217;ll find help here, but first we need a crashlog. For this short
-introduction we will just use an example crash from the <a class="reference internal" href="debugging.html"><em>Debuggen</em></a> page:
-<a class="reference download internal" href="../../_downloads/crashlog-sponge575-plugin750.txt"><code class="xref download docutils literal"><span class="pre">Example</span> <span class="pre">crashlog</span> <span class="pre">of</span> <span class="pre">an</span> <span class="pre">outdated</span> <span class="pre">SpongeForge</span> <span class="pre">build</span></code></a>.</p>
+<p>Wenn du dir nicht sicher bist, wie man einen Crashlog liest, wirst du hier Hilfe finden. Für diese kurze Einführung werden wir ein Beispiel von der <a class="reference internal" href="debugging.html"><em>Debuggen</em></a> Seite einsetzen: <a class="reference download internal" href="../../_downloads/crashlog-sponge575-plugin750.txt"><code class="xref download docutils literal"><span class="pre">Example</span> <span class="pre">crashlog</span> <span class="pre">of</span> <span class="pre">an</span> <span class="pre">outdated</span> <span class="pre">SpongeForge</span> <span class="pre">build</span></code></a>.</p>
 <div class="highlight-none"><div class="highlight"><pre><span></span>WARNING: coremods are present:
 SpongeCoremod (sponge-1.8-1499-2.1DEV-575.jar)
 Contact their authors BEFORE contacting forge

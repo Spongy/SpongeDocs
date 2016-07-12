@@ -35,7 +35,7 @@
       <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 4.1.0 documentação" href="../../../index.html" />
         <link rel="up" title="Configurando o Sponge" href="index.html" />
-        <link rel="next" title="Gestão do Servidor" href="../../management/index.html" />
+        <link rel="next" title="Administração do servidor" href="../../management/index.html" />
         <link rel="prev" title="global.conf" href="sponge-conf.html" />
     
   <script type="text/javascript">
@@ -205,7 +205,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../management/index.html">Gestão do Servidor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../management/index.html">Administração do servidor</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../management/whitelist.html">Gerir a Whitelist</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../management/bans.html">Gerir os Bans</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../management/permissions.html">Gerir Permissões</a><ul class="simple">
@@ -530,7 +530,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html">Dúvidas frequentes</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../about/structure.html">Estrutura do Projeto Sponge</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../about/structure.html">Estrutura do projeto Sponge</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/future.html">Planos para o Futuro</a></li>
@@ -545,7 +545,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../about/glossary.html">Glossário do Sponge</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../about/assets.html">Ativos Artísticos</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../about/assets.html">Recursos artísticos</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/history.html">A História do Sponge</a><ul class="simple">
@@ -801,12 +801,7 @@
 <td><p class="first last">inteiro (0- (2^63-1))</p>
 </td>
 <td>60000</td>
-<td><p class="first">The maximum number of milliseconds a single tick may take
-before the server watchdog stops the server with the
-message: &#8220;A single server tick took 60.00 seconds (should
-be max 0.05); Considering it to be crashed, server will
-forcibly shutdown&#8221;. Once this criteria is met, it calls
-System.exit(1).</p>
+<td><p class="first">O número máximo de milissegundos que uma tick pode demorar antes de o <em>watchdog</em> do servidor o parar com a seguinte mensagem: &#8220;A single server tick took 60.00 seconds (should be max 0.05); Considering it to be crashed, server will forcibly shutdown&#8221;. Assim que isto acontece, ocorre System.exit(1).</p>
 <blockquote class="last">
 <div><p><strong>-1</strong> - desativa o <em>watchdog</em> completamente</p>
 </div></blockquote>

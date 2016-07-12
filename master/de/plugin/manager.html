@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Plugin Manager &mdash; Sponge 4.1.0 Dokumentation</title>
+     <title>Plugin-Manager &mdash; Sponge 4.1.0 Dokumentation</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -300,7 +300,7 @@
 <li class="toctree-l2"><a class="reference internal" href="logging.html">Loggen und Debugging</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="commands/index.html">Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/index.html">Befehle</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="commands/creating.html">Einen Befehl erstellen</a><ul class="simple">
 </ul>
 </li>
@@ -317,7 +317,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="event/index.html">Events</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="event/index.html">Ereignisse</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -327,7 +327,7 @@
 <li class="toctree-l3"><a class="reference internal" href="event/filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="event/custom.html">Custom Events</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="event/custom.html">Benutzerdefinierte Ereignisse</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -382,7 +382,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="blocks/index.html">Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="blocks/index.html">Blöcke</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="blocks/concepts.html">Konzept</a><ul class="simple">
 </ul>
 </li>
@@ -400,7 +400,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="entities/index.html">Entities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="entities/index.html">Entitäten</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="entities/spawning.html">Spawnen eines Entitys</a></li>
 <li class="toctree-l3"><a class="reference internal" href="entities/modifying.html">Modifying an Entity</a><ul class="simple">
 </ul>
@@ -425,15 +425,15 @@
 <li class="toctree-l2"><a class="reference internal" href="services.html">Services</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="database.html">Databases</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="database.html">Datenbanken</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="permissions.html">Permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="permissions.html">Rechte</a></li>
 <li class="toctree-l2"><a class="reference internal" href="bans.html">Bans</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="bookview.html">Book Views</a></li>
-<li class="toctree-l2"><a class="reference internal" href="economy/index.html">Economy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="economy/index.html">Wirtschaft</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="economy/basics.html">Grundlegende Konzepte</a><ul class="simple">
 </ul>
 </li>
@@ -457,7 +457,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Plugin Manager</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="">Plugin-Manager</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="game-profile-manager.html">Game Profile Manager</a><ul class="simple">
@@ -566,7 +566,7 @@
                 <div class="body" role="main">
                   
   <div class="section" id="plugin-manager">
-<h1>Plugin Manager<a class="headerlink" href="#plugin-manager" title="Link zu dieser Überschrift">¶</a></h1>
+<h1>Plugin-Manager<a class="headerlink" href="#plugin-manager" title="Link zu dieser Überschrift">¶</a></h1>
 <p>Nachdem dein Plugin vom Server beim Startvorgang geladen wurde, wird es zum Plugin-Manager geschickt. Der Server lädt das Plugin, indem es dessen Hauptklasse, die durch die <code class="docutils literal"><span class="pre">&#64;Plugin</span></code>-Annotation markiert ist, welche die allgemeinen Informationen des Plugins enthält, und sendet eine neue Instanz des Plugins zum Manager. Der Manager hat seine eigene Sammlung von Plugins, in die deines auch eingefügt wird. So kannst du mithilfe dessen einfach auf jedes andere geladene Plugin zugreifen.</p>
 <div class="section" id="the-pluginmanager-class">
 <h2>Die PluginManager-Klasse<a class="headerlink" href="#the-pluginmanager-class" title="Link zu dieser Überschrift">¶</a></h2>

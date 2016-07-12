@@ -801,12 +801,7 @@
 <td><p class="first last">inteiro (0- (2^63-1))</p>
 </td>
 <td>60000</td>
-<td><p class="first">The maximum number of milliseconds a single tick may take
-before the server watchdog stops the server with the
-message: &#8220;A single server tick took 60.00 seconds (should
-be max 0.05); Considering it to be crashed, server will
-forcibly shutdown&#8221;. Once this criteria is met, it calls
-System.exit(1).</p>
+<td><p class="first">O número máximo de milissegundos que uma tick pode demorar antes de o <em>watchdog</em> do servidor o parar com a seguinte mensagem: &#8220;A single server tick took 60.00 seconds (should be max 0.05); Considering it to be crashed, server will forcibly shutdown&#8221;. Assim que isto acontece, ocorre System.exit(1).</p>
 <blockquote class="last">
 <div><p><strong>-1</strong> - desativa o <em>watchdog</em> completamente</p>
 </div></blockquote>

@@ -334,7 +334,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/assets/index.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/assets/index.html">La Ressource API</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../plugin/configuration/index.html">Configuration des plugins</a><ul>
@@ -384,7 +384,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/blocks/index.html">Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/blocks/index.html">Blocs</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/blocks/concepts.html">Concepts</a><ul class="simple">
 </ul>
 </li>
@@ -402,7 +402,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/entities/index.html">Entities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/entities/index.html">Entités</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/entities/spawning.html">Invoquer une entité</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/entities/modifying.html">Modification d&#8217;une entité</a><ul class="simple">
 </ul>
@@ -572,9 +572,7 @@
 <div class="section" id="global-configuration">
 <h2>Configuration globale<a class="headerlink" href="#global-configuration" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Le fichier global.file contient les paramètres de configuration globale de Sponge. Ce fichier est créé dans le dossier config/sponge du répertoire de votre serveur. Beaucoup de ces paramètres peuvent être remplacés par une configuration par monde ou par dimension en utilisant le fichier de configuration du dossier config/worlds.</p>
-<p>Below is a complete global.conf file with all possible nodes that may be present on a server. Note that certain
-sections will not be present immediately, and will be added to the file when the server encounters them. This config
-was generated using SpongeForge build 1399, SpongeAPI version 4.1:</p>
+<p>Voici un fichier global.comf complet avec toutes les nodes présentes sur un serveur. Notez que certaines sections ne sont pas présentes immédiatement, et seront ajoutées au fichier quand le serveur en aura besoin. Cette configuration a été générée en utilisant SpongeForge build 1399 SpongeAPI version 4.1:</p>
 <div class="highlight-none"><div class="highlight"><pre><span></span># 1.0
 #
 # # If you need help with the configuration or have any questions related to Sponge,
@@ -966,23 +964,26 @@ added to this config with a default value.</td>
 <tr class="row-odd"><td><strong>Defaults</strong></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td>Default activation ranges for all entities unless
-overridden.</td>
+<td><p class="first last">Portée d&#8217;activation par défaut pour toutes les entités sauf si outre passé.</p>
+</td>
 </tr>
 <tr class="row-even"><td>ambient</td>
 <td>integer</td>
 <td>32</td>
-<td>Default activation range for ambient entities.</td>
+<td><p class="first last">Portée d&#8217;activation par défaut pour les entités ambiantes.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>aquatic</td>
 <td>integer</td>
 <td>32</td>
-<td>Default activation range for aquatic entities.</td>
+<td><p class="first last">Portée d’activation par défaut pour les organismes aquatiques.</p>
+</td>
 </tr>
 <tr class="row-even"><td>creature</td>
 <td>integer</td>
 <td>16</td>
-<td>Default activation range for creatures.</td>
+<td><p class="first last">Portée d’activation par défaut pour les créatures.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>misc</td>
 <td>integer</td>
@@ -993,7 +994,8 @@ entities.</td>
 <tr class="row-even"><td>monster</td>
 <td>integer</td>
 <td>32</td>
-<td>Default activation range for monsters.</td>
+<td><p class="first last">Portée d’activation par défaut des monstres.</p>
+</td>
 </tr>
 <tr class="row-odd"><td><strong>Mods</strong></td>
 <td>&nbsp;</td>
@@ -1001,7 +1003,8 @@ entities.</td>
 <td>Per-mod overrides. Refer to the minecraft default
 mod for example.</td>
 </tr>
-<tr class="row-even"><td><strong>Entity Collisions</strong></td>
+<tr class="row-even"><td><p class="first last"><strong>Collisions des Entités</strong></p>
+</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -1086,7 +1089,8 @@ unless overridden.</td>
 <td>8</td>
 <td>Default max collisions for blocks.</td>
 </tr>
-<tr class="row-even"><td>entities</td>
+<tr class="row-even"><td><p class="first last">entités</p>
+</td>
 <td>integer</td>
 <td>8</td>
 <td>Default max collisions for entities.</td>
@@ -1097,7 +1101,8 @@ unless overridden.</td>
 <td>Set to false if you want mod to ignore entity
 collision rules.</td>
 </tr>
-<tr class="row-even"><td><strong>Entities</strong></td>
+<tr class="row-even"><td><p class="first last"><strong>Entités</strong></p>
+</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -1257,7 +1262,8 @@ collision rules.</td>
 <tr class="row-odd"><td>world-auto-save</td>
 <td>boolean</td>
 <td>false</td>
-<td>If true, logs when a world auto-saves its chunk data.</td>
+<td><p class="first last">Si activé, enregistre quand un monde auto-sauvegarde ses données de chunk.</p>
+</td>
 </tr>
 <tr class="row-even"><td><strong>Modules</strong></td>
 <td>&nbsp;</td>
@@ -1290,7 +1296,8 @@ collision rules.</td>
 <tr class="row-odd"><td>optimizations</td>
 <td>boolean</td>
 <td>true</td>
-<td>Enables the optimizations module.</td>
+<td><p class="first last">Active le module d&#8217;optimisations.</p>
+</td>
 </tr>
 <tr class="row-even"><td>timings</td>
 <td>boolean</td>
@@ -1398,32 +1405,33 @@ chunks in a world.</td>
 <tr class="row-odd"><td>load-on-startup</td>
 <td>boolean</td>
 <td>true</td>
-<td>If the world should be loaded on startup.</td>
+<td><p class="first last">Si le monde doit être chargé au démarrage.</p>
+</td>
 </tr>
 <tr class="row-even"><td>mob-spawn-range</td>
 <td>integer</td>
 <td>8</td>
-<td>Specifies the radius (in chunks) of where creatures
-will spawn. This value is capped to the current
-view distance setting in server.properties.</td>
+<td><p class="first last">Spécifie le rayon (en chunks) d’où les créatures apparaîtrons. Cette valeur est plafonnée à la valeur actuelle de la distance de vue dans server.properties.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><strong>Portal Agents</strong></td>
+<tr class="row-odd"><td><p class="first last"><strong>Agents de Portails</strong></p>
+</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td>A list of all detected portal agents used in this
-world. In order to override, change the target world
-name to any other valid world. If world is not found,
-it will fallback to default.</td>
+<td><p class="first last">Une liste de tous les agents de portails utilisés détectés dans ce monde. Afin de passer outre, changez le nom de monde ciblé pour n’importe quel autre monde valide. Si le monde n’est pas trouvé, il utilisera la valeur par défaut.</p>
+</td>
 </tr>
 <tr class="row-even"><td>&#8220;minecraft:default_nether&#8221;</td>
 <td>world</td>
 <td>DIM-1</td>
-<td>The default nether world.</td>
+<td><p class="first last">Le monde nether par défaut.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>&#8220;minecraft:default_the_end&#8221;</td>
 <td>world</td>
 <td>DIM1</td>
-<td>The default end world.</td>
+<td><p class="first last">Le monde de fin par défaut.</p>
+</td>
 </tr>
 <tr class="row-even"><td>pvp-enabled</td>
 <td>boolean</td>
@@ -1434,7 +1442,8 @@ it will fallback to default.</td>
 <tr class="row-odd"><td>world-enabled</td>
 <td>boolean</td>
 <td>true</td>
-<td>Enable if this world should be registered.</td>
+<td><p class="first last">Activez si ce monde devrait être enregistré.</p>
+</td>
 </tr>
 </tbody>
 </table>

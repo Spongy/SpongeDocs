@@ -790,7 +790,7 @@ Valori estremamente estesi per questo campo faranno avere problemi alla lista de
 <td><p class="first last">integer(0- (2^63-1))</p>
 </td>
 <td>60000</td>
-<td><p class="first">Il massimo numero dei millisecondi in un singolo tick può occupare prima che il server watchdog arresti il server col messaggio &#8220;A single server tick took 60.00 seconds (should be max 0.05); Considering it to be crashed, server will forcibly shutdown&#8221;. Una volta che il criterio viene raggiunto, esso chiama System.exit(1).</p>
+<td><p class="first">Il numero massimo di millisecondi in un singolo tick può occupare prima che il server watchdog arresti il server con il messaggio &#8220;Un singolo tick server ha occupato 60.00 secondi (dovrebbe essere massimo 0.05); Considerato in crash, il server verrà forzatamente spento&#8221;. Una volta che il criterio viene raggiunto, chiama System.exit(1).</p>
 <blockquote class="last">
 <div><p><strong>-1</strong> - disabilita il watchdog completamente</p>
 </div></blockquote>

@@ -334,7 +334,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/assets/index.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/assets/index.html">La Ressource API</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../plugin/configuration/index.html">Configuration des plugins</a><ul>
@@ -384,7 +384,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/blocks/index.html">Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/blocks/index.html">Blocs</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/blocks/concepts.html">Concepts</a><ul class="simple">
 </ul>
 </li>
@@ -402,7 +402,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/entities/index.html">Entities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/entities/index.html">Entités</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/entities/spawning.html">Invoquer une entité</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/entities/modifying.html">Modification d&#8217;une entité</a><ul class="simple">
 </ul>
@@ -791,7 +791,7 @@ Depuis la version 1.7 de Minecraft, le nombre de joueurs maximum n&#8217;est plu
 <td><p class="first last">entier (0-(2^63-1))</p>
 </td>
 <td>60000</td>
-<td><p class="first">Le temps maximum en millisecondes qu&#8217;un seul tick doit prendre avant que le watchdog arrête le serveur avec le message: &#8220;A single server tick loop took 60.00 seconds (should be max 0.05): Considering it to be crashed, server will forcibly shutdown&#8221;. Une fois que ce critère est rempli, il fait appel à la méthode System.exit(1).</p>
+<td><p class="first">Ce paramêtre defini le temps maximum en miliseconde que peut prendre un tick avant que &#8220;l&#8217;horloge&#8221; du serveur coupe celui-ci avec le message d&#8217;alerte. Un seul tick du serveur dure 60.00 secondes ( il peut être au maximum de 0.05 secondes ); Si on considère que le serveur crash, le serveur se forcera à s&#8217;éteindre. si ce critère est rencontré, il appellera le System.exit(1).</p>
 <blockquote class="last">
 <div><p><strong>-1</strong> - désactive le suivi des ticks</p>
 </div></blockquote>
@@ -1029,12 +1029,7 @@ etc...</p>
 <tr class="row-odd"><td>white-list</td>
 <td>boolean</td>
 <td>false</td>
-<td><p class="first">Enables a whitelist on the server.
-See <a class="reference internal" href="../../management/whitelist.html"><em>Gestion de la liste blanche (whitelist)</em></a>.
-With a whitelist enabled, users not on the whitelist will
-be unable to connect. Intended for private servers, such
-as those for real-life friends or strangers carefully
-selected via an application process, for example.</p>
+<td><p class="first">Active la whitelist ( = liste blanche ) sur le serveur. Regardez <a class="reference internal" href="../../management/whitelist.html"><em>Gestion de la liste blanche (whitelist)</em></a> . Avec la whitelist activée, les utilisateurs n&#8217;étant pas nommés dans le fichier.</p>
 <blockquote>
 <div><p><strong>false</strong> - Aucune whitelist n&#8217;est mise en place.</p>
 <p><strong>true</strong> - Un fichier white-list.json est utilisé pour établir une whitelist.</p>

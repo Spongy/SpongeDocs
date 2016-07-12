@@ -333,7 +333,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/assets/index.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/assets/index.html">La Ressource API</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/configuration/index.html">Configuration des plugins</a><ul>
@@ -383,7 +383,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/blocks/index.html">Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/blocks/index.html">Blocs</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/concepts.html">Concepts</a><ul class="simple">
 </ul>
 </li>
@@ -401,7 +401,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/entities/index.html">Entities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/entities/index.html">Entités</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/entities/spawning.html">Invoquer une entité</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/entities/modifying.html">Modification d&#8217;une entité</a><ul class="simple">
 </ul>
@@ -620,8 +620,8 @@
 <td>sponge.command.plugins</td>
 </tr>
 <tr class="row-odd"><td>/sponge plugins reload</td>
-<td>Asks plugins to perform their own reload
-procedures.</td>
+<td><p class="first last">Demande aux plugins de déclencher leur propre procédure de rechargement.</p>
+</td>
 <td>sponge.command.plugins.reload</td>
 </tr>
 <tr class="row-even"><td>/sponge reload</td>
@@ -901,13 +901,14 @@ procedures.</td>
 <div class="line-block">
 <div class="line"><br /></div>
 </div>
-<p>Sponge also creates a spawn-protection bypass permission, and two permissions for controlling the
-ability to edit commandblocks. Note that these permissions use the actual <em>name</em> of the commandblock,
-which is normally <code class="docutils literal"><span class="pre">&#64;</span></code> by default.</p>
+<p>Sponge crée également une permission permettant d&#8217;ignorer la protection du spawn, et deux permissions pour contrôler la capacité à éditer les commandblocks. Notez que ces permissions utilisent le <em>nom</em> actuel du commandblock, qui est <code class="docutils literal"><span class="pre">&#64;</span></code> par défaut.</p>
 <ul class="simple">
-<li>Allow player to bypass spawn-protection on all worlds: <code class="docutils literal"><span class="pre">minecraft.spawn-protection.override</span></code></li>
-<li>Allow editing an ordinary commandblock of the given name: <code class="docutils literal"><span class="pre">minecraft.commandblock.edit.block.&lt;name&gt;</span></code></li>
-<li>Allow editing a minecart commandblock of the given name: <code class="docutils literal"><span class="pre">minecraft.commandblock.edit.minecart.&lt;name&gt;</span></code></li>
+<li><p class="first">Permet au joueur d&#8217;ignorer la protection du spawn sur tous les mondes: <code class="docutils literal"><span class="pre">minecraft.spawn-protection.override</span></code></p>
+</li>
+<li><p class="first">Permet d&#8217;éditer un commandblock ordinaire avec un nom donné: <code class="docutils literal"><span class="pre">minecraft.commandblock.edit.block.&lt;name&gt;</span></code></p>
+</li>
+<li><p class="first">Permet d&#8217;éditer un minecart commandblock avec un nom donné: <code class="docutils literal"><span class="pre">minecraft.commandblock.edit.minecart.&lt;name&gt;</span></code></p>
+</li>
 </ul>
 </div>
 </div>
