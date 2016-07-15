@@ -206,7 +206,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../management/index.html">Управление сервером</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../management/whitelist.html">Управление WhiteList</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../management/bans.html">Управление Банами.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../management/bans.html">Управление банами</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../management/permissions.html">Управление правами игроков</a><ul class="simple">
 </ul>
 </li>
@@ -214,6 +214,9 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../management/exploit-patches.html">Патчи уязвимостей</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../management/performance-tweaks.html">Performance Tweaks</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -552,7 +555,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../downloads.html">Загрузить</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="../../../downloads.html">Загрузки</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -571,10 +574,8 @@
 <h1>global.conf<a class="headerlink" href="#global-conf" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="section" id="global-configuration">
 <h2>Главный файл конфигурации<a class="headerlink" href="#global-configuration" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Файл global.conf содержит глобальные настройки конфигурации для Sponge. Этот файл находится в папке config/sponge, котоыре находятся в папке вашего сервера. Многие из этих настроек могут быть переопределены для типов мира или измерений при помощи файлов конфигурации, находящихся в подпапках config/worlds.</p>
-<p>Below is a complete global.conf file with all possible nodes that may be present on a server. Note that certain
-sections will not be present immediately, and will be added to the file when the server encounters them. This config
-was generated using SpongeForge build 1399, SpongeAPI version 4.1:</p>
+<p>Файл global.conf содержит глобальные настройки конфигурации Sponge. Этот файл находится в папке config/sponge, которые находятся в папке вашего сервера. Многие из этих настроек могут быть переопределены для типов мира или измерений при помощи файлов конфигурации, находящихся в подпапках config/worlds.</p>
+<p>Ниже приведен полный файл global.conf с всеми возможными параметрами, которые могут присутствовать на сервере. Обратите внимание, что некоторые разделы будут добавлены в файл, когда сервер обнаружит их. Данный конфигурационный был создан с помощью SpongeForge сборки 1399, SpongeAPI версии 4.1:</p>
 <div class="highlight-none"><div class="highlight"><pre><span></span># 1.0
 #
 # # If you need help with the configuration or have any questions related to Sponge,
@@ -798,10 +799,12 @@ sponge {
 <thead valign="bottom">
 <tr class="row-odd"><th class="head"><p class="first last">Параметр</p>
 </th>
-<th class="head">Type</th>
-<th class="head"><p class="first last">По умолчанию</p>
+<th class="head"><p class="first last">Тип</p>
 </th>
-<th class="head">Description</th>
+<th class="head"><p class="first last">Значение по умолчанию</p>
+</th>
+<th class="head"><p class="first last">Описание параметра</p>
+</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -814,8 +817,8 @@ sponge {
 <tr class="row-odd"><td>block-blacklist</td>
 <td>string</td>
 <td>null</td>
-<td>Adds block ids you wish to blacklist for player
-block placement tracking.</td>
+<td><p class="first last">Добавляет идентификаторы блоков, какие вы хотите, в черный список отслеживания поставленных игроком блоков.</p>
+</td>
 </tr>
 <tr class="row-even"><td>enabled</td>
 <td>boolean</td>
@@ -855,7 +858,7 @@ Example:</p>
 </div>
 </td>
 </tr>
-<tr class="row-odd"><td><p class="first last"><strong>Настройки отладки</strong></p>
+<tr class="row-odd"><td><p class="first last"><strong>Параметры отладки</strong></p>
 </td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -882,10 +885,10 @@ Example:</p>
 <tr class="row-odd"><td>thread-contention-monitoring</td>
 <td>boolean</td>
 <td>false</td>
-<td>Enable Java&#8217;s thread contention monitoring for
-thread dumps.</td>
+<td><p class="first last">Включает мониторинг подключений Java-потоков, для того чтобы делать дампы потоков.</p>
+</td>
 </tr>
-<tr class="row-even"><td><p class="first last"><strong>Настройки энтитий</strong></p>
+<tr class="row-even"><td><p class="first last"><strong>Параметры сущностей</strong></p>
 </td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -894,20 +897,20 @@ thread dumps.</td>
 <tr class="row-odd"><td>collision-warn-size</td>
 <td>integer</td>
 <td>200</td>
-<td>Number of colliding entities in one spot before
-logging a warning. Set to 0 to disable.</td>
+<td><p class="first last">Количество сталкивающихся сущностей в одном месте до вывода предупреждения. 0 — отключить параметр.</p>
+</td>
 </tr>
 <tr class="row-even"><td>count-warn-size</td>
 <td>integer</td>
 <td>0</td>
-<td>Number of entities allowed in one dimension
-before logging a warning. Set to 0 to disable.</td>
+<td><p class="first last">Количество сущностей, разрешённым находиться в одном измерении до вывода предупреждения. 0 — отключить параметр.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>entity-painting-respawn-delay</td>
 <td>integer</td>
 <td>2</td>
-<td>Number of ticks before a painting is respawned
-on the client when their art is changed.</td>
+<td><p class="first last">Количество тиком, прежде чем картина возродится на клиенте, когда её изображение изменено.</p>
+</td>
 </tr>
 <tr class="row-even"><td>human-player-list-remove-delay</td>
 <td>integer</td>
@@ -925,35 +928,34 @@ allowed range is 0 - 100.</td>
 <tr class="row-even"><td>living-hard-despawn-range</td>
 <td>integer</td>
 <td>128</td>
-<td>The upper bounded range where living entities farther
-from a player will likely despawn</td>
+<td><p class="first last">Верхнее ограничение диапазона, в котором живые сущности, находящиеся далеко от игрока, будут, скорее всего, исчезать</p>
+</td>
 </tr>
 <tr class="row-odd"><td>living-soft-despawn-minimum-life</td>
 <td>integer</td>
 <td>30</td>
-<td>The amount of seconds before a living entity between
-the soft and hard despawn ranges from a player to be
-considered for despawning</td>
+<td><p class="first last">Количество секунд, после которых живая сущность, находящаяся между мягким и жестким радиусами исчезновения от игрока, исчезнет</p>
+</td>
 </tr>
 <tr class="row-even"><td>living-soft-despawn-range</td>
 <td>integer</td>
 <td>32</td>
-<td>The lower bounded range where living entities near a
-player may potentially despawn</td>
+<td><p class="first last">Нижнее ограничение диапазона, в котором живые сущности, находящиеся далеко от игрока, будут, скорее всего, исчезать</p>
+</td>
 </tr>
 <tr class="row-odd"><td>max-bounding-box-size</td>
 <td>integer</td>
 <td>1000</td>
-<td>Maximum size of an entity&#8217;s bounding box before
-it is removed. Set to 0 to disable.</td>
+<td><p class="first last">Максимальный размер хитбокса сущности. Превысив это значение, сущность будет удалена. 0 — отключить параметр.</p>
+</td>
 </tr>
 <tr class="row-even"><td>max-speed</td>
 <td>integer</td>
 <td>100</td>
-<td>Square of the maximum speed of an entity before
-it is removed. Set to 0 to disable</td>
+<td><p class="first last">Квадрат максимальной скорости сущности. Превысив это значение, сущность будет удалена. 0 — отключить параметр</p>
+</td>
 </tr>
-<tr class="row-odd"><td><p class="first last"><strong>Дальность активации энтитий</strong></p>
+<tr class="row-odd"><td><p class="first last"><strong>Диапазон активации сущностей</strong></p>
 </td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -962,48 +964,55 @@ it is removed. Set to 0 to disable</td>
 <tr class="row-even"><td>auto-populate</td>
 <td>boolean</td>
 <td>false</td>
-<td>If enabled, newly discovered entities will be
-added to this config with a default value.</td>
+<td><p class="first last">Если этот параметр включён, новые обнаруженные сущности будут добавлены в файл конфигурации со стандартным значением.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><strong>Defaults</strong></td>
+<tr class="row-odd"><td><p class="first last"><strong>По умолчанию</strong></p>
+</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td>Default activation ranges for all entities unless
-overridden.</td>
+<td><p class="first last">Стандартный радиус активации всех сущностей, если это не изменено.</p>
+</td>
 </tr>
 <tr class="row-even"><td>ambient</td>
 <td>integer</td>
 <td>32</td>
-<td>Default activation range for ambient entities.</td>
+<td><p class="first last">Стандартный радиус активации окружающих сущностей.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>aquatic</td>
 <td>integer</td>
 <td>32</td>
-<td>Default activation range for aquatic entities.</td>
+<td><p class="first last">Стандартный радиус активации подводных сущностей.</p>
+</td>
 </tr>
 <tr class="row-even"><td>creature</td>
 <td>integer</td>
 <td>16</td>
-<td>Default activation range for creatures.</td>
+<td><p class="first last">Стандартный радиус активации для существ.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>misc</td>
 <td>integer</td>
 <td>16</td>
-<td>Default activation range for miscellaneous
-entities.</td>
+<td><p class="first last">Стандартный радиус активации прочих сущностей.</p>
+</td>
 </tr>
 <tr class="row-even"><td>monster</td>
 <td>integer</td>
 <td>32</td>
-<td>Default activation range for monsters.</td>
+<td><p class="first last">Стандартный радиус активации для монстров.</p>
+</td>
 </tr>
-<tr class="row-odd"><td><strong>Mods</strong></td>
+<tr class="row-odd"><td><p class="first last"><strong>Модификации</strong></p>
+</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>Per-mod overrides. Refer to the minecraft default
 mod for example.</td>
 </tr>
-<tr class="row-even"><td><strong>Entity Collisions</strong></td>
+<tr class="row-even"><td><p class="first last"><strong>Коллизия сущностей</strong></p>
+</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -1011,14 +1020,15 @@ mod for example.</td>
 <tr class="row-odd"><td>auto-populate</td>
 <td>boolean</td>
 <td>false</td>
-<td>If enabled, newly discovered entities/blocks will
-be added to this config with a default value.</td>
+<td><p class="first last">Если этот параметр включён, новые обнаруженные сущности/блоки будут добавлены в файл конфигурации со стандартным значением.</p>
+</td>
 </tr>
-<tr class="row-even"><td><strong>Defaults</strong></td>
+<tr class="row-even"><td><p class="first last"><strong>По умолчанию</strong></p>
+</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td>Default max collisions used for all entities/blocks
-unless overridden.</td>
+<td><p class="first last">Стандартный радиус коллизии всех сущностей/блоков, если это не изменено.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>max-entities-within-aabb</td>
 <td>integer</td>
@@ -1026,7 +1036,8 @@ unless overridden.</td>
 <td>Max amount of entities any given entity or block
 can collide with. Set to 0 to disable.</td>
 </tr>
-<tr class="row-even"><td><strong>Mods</strong></td>
+<tr class="row-even"><td><p class="first last"><strong>Модификации</strong></p>
+</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>Per-mod overrides. Refer to the minecraft default
@@ -1037,7 +1048,8 @@ mod for example.</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td><strong>Blocks</strong></td>
+<tr class="row-even"><td><p class="first last"><strong>Блоки</strong></p>
+</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -1045,61 +1057,72 @@ mod for example.</td>
 <tr class="row-odd"><td>&#8220;detector_rail&#8221;</td>
 <td>integer</td>
 <td>1</td>
-<td>Max collisions for a &#8220;detector_rail&#8221;.</td>
+<td><p class="first last">Макс. столкновений для &#8220;detector_rail&#8221;.</p>
+</td>
 </tr>
 <tr class="row-even"><td>&#8220;heavy_weighted_pressure_plate&#8221;</td>
 <td>integer</td>
 <td>150</td>
-<td>Max collisions for a &#8220;heavy_weighted_pressure_plate&#8221;.</td>
+<td><p class="first last">Макс. столкновений для &#8220;heavy_weighted_pressure_plate&#8221;.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>&#8220;light_weighted_pressure_plate&#8221;</td>
 <td>integer</td>
 <td>15</td>
-<td>Max collisions for a &#8220;light_weighted_pressure_plate&#8221;.</td>
+<td><p class="first last">Макс. столкновений для &#8220;light_weighted_pressure_plate&#8221;.</p>
+</td>
 </tr>
 <tr class="row-even"><td>&#8220;mob_spawner&#8221;</td>
 <td>integer</td>
 <td>-1</td>
-<td>Max collisions for a &#8220;mob_spawner&#8221;.</td>
+<td><p class="first last">Макс. столкновений для &#8220;mob_spawner&#8221;.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>&#8220;stone_pressure_plate&#8221;</td>
 <td>integer</td>
 <td>1</td>
-<td>Max collisions for a &#8220;stone_pressure_plate&#8221;.</td>
+<td><p class="first last">Макс. столкновений для &#8220;stone_pressure_plate&#8221;.</p>
+</td>
 </tr>
 <tr class="row-even"><td>&#8220;wooden_button&#8221;</td>
 <td>integer</td>
 <td>1</td>
-<td>Max collisions for a &#8220;wooden_button&#8221;.</td>
+<td><p class="first last">Макс. столкновений для &#8220;wooden_button&#8221;.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>&#8220;wooden_pressure_plate&#8221;</td>
 <td>integer</td>
 <td>1</td>
-<td>Max collisions for a &#8220;wooden_pressure_plate&#8221;.</td>
+<td><p class="first last">Макс. столкновений для &#8220;wooden_pressure_plate&#8221;.</p>
+</td>
 </tr>
-<tr class="row-even"><td><strong>Defaults</strong></td>
+<tr class="row-even"><td><p class="first last"><strong>По умолчанию</strong></p>
+</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td>Default max collisions used for all entities/blocks
-unless overridden.</td>
+<td><p class="first last">Стандартный радиус коллизии всех сущностей/блоков, если это не изменено.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>blocks</td>
 <td>integer</td>
 <td>8</td>
-<td>Default max collisions for blocks.</td>
+<td><p class="first last">Макс. столкновений по умолчанию для блоков.</p>
+</td>
 </tr>
 <tr class="row-even"><td>entities</td>
 <td>integer</td>
 <td>8</td>
-<td>Default max collisions for entities.</td>
+<td><p class="first last">Макс. столкновений по умолчанию для сущностей.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>enabled</td>
 <td>boolean</td>
 <td>true</td>
-<td>Set to false if you want mod to ignore entity
-collision rules.</td>
+<td><p class="first last">Установите значение на false, если хотите игнорировать правила столкновения сущностей.</p>
+</td>
 </tr>
-<tr class="row-even"><td><strong>Entities</strong></td>
+<tr class="row-even"><td><p class="first last"><strong>Сущности</strong></p>
+</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -1107,9 +1130,11 @@ collision rules.</td>
 <tr class="row-odd"><td>thrownpotion</td>
 <td>integer</td>
 <td>-1</td>
-<td>Max collisions for a thrown potion.</td>
+<td><p class="first last">Макс. столкновений для выкинутого зелья.</p>
+</td>
 </tr>
-<tr class="row-even"><td><strong>Exploits</strong></td>
+<tr class="row-even"><td><p class="first last"><strong>Уязвимости</strong></p>
+</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -1117,16 +1142,14 @@ collision rules.</td>
 <tr class="row-odd"><td>prevent-creative-itemstack-name-exploit</td>
 <td>boolean</td>
 <td>true</td>
-<td>Prevents an exploit in which the client sends a
-packet with the itemstack name exceeding the
-string limit.</td>
+<td><p class="first last">Предотвращает уязвимость, когда клиент посылает пакет с именем itemstack, превышающий ограничение символов string.</p>
+</td>
 </tr>
 <tr class="row-even"><td>prevent-sign-command-exploit</td>
 <td>boolean</td>
 <td>true</td>
-<td>Prevents an exploit in which the client sends a
-packet to update a sign containing commands from
-a player without permission.</td>
+<td><p class="first last">Предотвращает уязвимость, когда клиент посылает пакет обновления таблички, содержащей команды, если у игрока нет разрешений.</p>
+</td>
 </tr>
 <tr class="row-odd"><td><p class="first last"><strong>Главные параметры</strong></p>
 </td>
@@ -1137,14 +1160,13 @@ a player without permission.</td>
 <tr class="row-even"><td>chunk-load-override</td>
 <td>boolean</td>
 <td>false</td>
-<td>Forces chunk loading on provide requests.
-This is a speed-up for mods that don&#8217;t check if
-a chunk is loaded.</td>
+<td><p class="first last">Заставляет загружаться чанки, если они запрашиваются. Этот параметр — ускорение для модификаций, которые не проверяют, загружен ли чанк.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>disable-warnings</td>
 <td>boolean</td>
 <td>false</td>
-<td><p class="first last">Отключить сообщения с предупреждениями для администраторов.</p>
+<td><p class="first last">Отключает сообщения с предупреждениями, отправляемых администраторам сервера.</p>
 </td>
 </tr>
 <tr class="row-even"><td><strong>Ip Sets</strong></td>
@@ -1166,49 +1188,49 @@ a chunk is loaded.</td>
 <tr class="row-odd"><td>block-break</td>
 <td>boolean</td>
 <td>false</td>
-<td><p class="first last">Регистрировать, если блок был сломан.</p>
+<td><p class="first last">Регистрирует, если блок был сломан.</p>
 </td>
 </tr>
 <tr class="row-even"><td>block-modify</td>
 <td>boolean</td>
 <td>false</td>
-<td><p class="first last">Регистрировать, если блок был модифицирован.</p>
+<td><p class="first last">Регистрирует, если блок был модифицирован.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>block-place</td>
 <td>boolean</td>
 <td>false</td>
-<td><p class="first last">Регистрировать, если блок был установлен.</p>
+<td><p class="first last">Регистрирует, если блок был установлен.</p>
 </td>
 </tr>
 <tr class="row-even"><td>block-populate</td>
 <td>boolean</td>
 <td>false</td>
-<td><p class="first last">Регистрировать, когда чанк заполняется блоками.</p>
+<td><p class="first last">Регистрирует, когда чанк заполняется блоками.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>block-tracking</td>
 <td>boolean</td>
 <td>false</td>
-<td><p class="first last">Регистрировать, если блок был установлен игроком и отслеживается.</p>
+<td><p class="first last">Регистрирует, если блок был установлен игроком и отслеживается.</p>
 </td>
 </tr>
 <tr class="row-even"><td>chunk-load</td>
 <td>boolean</td>
 <td>false</td>
-<td><p class="first last">Регистрировать загрузку чанков.</p>
+<td><p class="first last">Регистрирует загрузку чанков.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>chunk-unload</td>
 <td>boolean</td>
 <td>false</td>
-<td><p class="first last">Регистрировать отгрузку чанков.</p>
+<td><p class="first last">Регистрирует отгрузку чанков.</p>
 </td>
 </tr>
 <tr class="row-even"><td>entity-collision-checks</td>
 <td>boolean</td>
 <td>false</td>
-<td><p class="first last">Регистрировать проверки коллизий/количества объектов.</p>
+<td><p class="first last">Регистрирует проверку коллизий/количества объектов.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>entity-death</td>
@@ -1220,39 +1242,38 @@ a chunk is loaded.</td>
 <tr class="row-even"><td>entity-despawn</td>
 <td>boolean</td>
 <td>false</td>
-<td><p class="first last">Регистрировать, если живые существа исчезло.</p>
+<td><p class="first last">Регистрирует, если живые существа исчезло.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>entity-spawn</td>
 <td>boolean</td>
 <td>false</td>
-<td><p class="first last">Регистрировать, если живые существа были заспавнены.</p>
+<td><p class="first last">Регистрирует, если живые существа были заспавнены.</p>
 </td>
 </tr>
 <tr class="row-even"><td>entity-speed-removal</td>
 <td>boolean</td>
 <td>false</td>
-<td><p class="first last">Регистрировать объекты, удаленные из-за ускорения.</p>
+<td><p class="first last">Регистрирует объекты, удаленные из-за ускорения.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>exploit-itemstack-name-overflow</td>
 <td>boolean</td>
 <td>false</td>
-<td>Logs when a server receives exploited packets
-with itemstack name exceeding string limit.</td>
+<td><p class="first last">Регистрирует, когда сервер получает эксплуатируемые пакеты с именем itemstack, превышающих ограничение string.</p>
+</td>
 </tr>
 <tr class="row-even"><td>exploit-respawn-invisibility</td>
 <td>boolean</td>
 <td>false</td>
-<td>Logs when a player attempts to respawn
-invisible to surrounding players.</td>
+<td><p class="first last">Регистрирует, когда игрок пытается возродиться невидимым для окружающих игроков.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>exploit-sign-command-updates</td>
 <td>boolean</td>
 <td>false</td>
-<td>Logs when a server receives an exploited packet
-containing commands from a player with no
-permission.</td>
+<td><p class="first last">Регистрирует, когда сервер получает эксплуатируемые пакеты, содержащих команды от игрока, не имеющего разрешений.</p>
+</td>
 </tr>
 <tr class="row-even"><td>log-stacktraces</td>
 <td>boolean</td>
@@ -1263,7 +1284,8 @@ permission.</td>
 <tr class="row-odd"><td>world-auto-save</td>
 <td>boolean</td>
 <td>false</td>
-<td>If true, logs when a world auto-saves its chunk data.</td>
+<td><p class="first last">Если включено, регистрирует, когда мир автоматически сохраняет данные о своих чанках.</p>
+</td>
 </tr>
 <tr class="row-even"><td><p class="first last"><strong>Модули</strong></p>
 </td>
@@ -1280,23 +1302,26 @@ permission.</td>
 <tr class="row-even"><td>entity-activation-range</td>
 <td>boolean</td>
 <td>true</td>
-<td><p class="first last">Включает настройки радиуса активации мобов.</p>
+<td><p class="first last">Включает параметры радиуса активации сущностей.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>entity-collisions</td>
 <td>boolean</td>
 <td>true</td>
-<td>Enables entity collision settings.</td>
+<td><p class="first last">Включает параметры коллизии сущностей.</p>
+</td>
 </tr>
 <tr class="row-even"><td>exploits</td>
 <td>boolean</td>
 <td>true</td>
-<td>Enables the exploit prevention module.</td>
+<td><p class="first last">Включает модуль предупреждений эксплойтов.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>optimizations</td>
 <td>boolean</td>
 <td>true</td>
-<td>Enables the optimizations module.</td>
+<td><p class="first last">Включает модуль оптимизации.</p>
+</td>
 </tr>
 <tr class="row-even"><td>timings</td>
 <td>boolean</td>
@@ -1312,7 +1337,7 @@ permission.</td>
 <tr class="row-even"><td>aliases</td>
 <td>string</td>
 <td>null</td>
-<td><p class="first last">Псевдонимы для SQL соединений. Формат: <code class="docutils literal"><span class="pre">jdbc:protocol://[логин[:пароль]&#64;]хост/бд</span></code></p>
+<td><p class="first last">Псевдонимы для SQL соединений. Формат: <code class="docutils literal"><span class="pre">jdbc:protocol://[логин[:пароль]&#64;]хост/БД</span></code></p>
 </td>
 </tr>
 <tr class="row-odd"><td><p class="first last"><strong>Тайминги</strong></p>
@@ -1336,8 +1361,8 @@ permission.</td>
 <tr class="row-even"><td>history-interval</td>
 <td>integer</td>
 <td>300</td>
-<td>The interval between timing history report
-generation.</td>
+<td><p class="first last">Интервал между появлением сообщений с историей таймингов.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>history-length</td>
 <td>integer</td>
@@ -1348,9 +1373,8 @@ generation.</td>
 <tr class="row-even"><td>server-name-privacy</td>
 <td>boolean</td>
 <td>false</td>
-<td>Whether to include information such as the
-server name, motd, online-mode, and server
-icon in the report.</td>
+<td><p class="first last">Следует ли включать такие сведения, как название, motd, online-mode и иконку сервера в сообщение.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>verbose</td>
 <td>boolean</td>
@@ -1367,50 +1391,50 @@ the verbose level.</td>
 <tr class="row-odd"><td>auto-player-save-interval</td>
 <td>integer</td>
 <td>900</td>
-<td>The auto-save tick interval used when saving global
-player data.</td>
+<td><p class="first last">Интервал автоматического сохранения в тиках, используемый при сохранении данных о игроке.</p>
+</td>
 </tr>
 <tr class="row-even"><td>auto-save-interval</td>
 <td>integer</td>
 <td>900</td>
-<td>The auto-save tick interval used to save all loaded
-chunks in a world.</td>
+<td><p class="first last">Интервал автоматического сохранения в тиках, используемый для сохранения всех загруженных чанков в мире.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>flowing-lava-decay</td>
 <td>boolean</td>
 <td>false</td>
-<td><p class="first last">True = лава ведёт себя как вода на стандартном сервере, если удалён исходный блок.</p>
+<td><p class="first last">Когда задано true, лава принимает свойства стандартной воды, если удалён исходный блок.</p>
 </td>
 </tr>
 <tr class="row-even"><td>generate-spawn-on-load</td>
 <td>boolean</td>
 <td>true</td>
-<td>If the world should generate spawn when the
-world is loaded.</td>
+<td><p class="first last">Если задано true, мир должен генерировать спаун при загрузке мира.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>infinite-water-source</td>
 <td>boolean</td>
 <td>false</td>
-<td><p class="first last">False = вода ведёт себя как на стандартном сервере.</p>
+<td><p class="first last">False = стандартные свойства стандартной воды.</p>
 </td>
 </tr>
 <tr class="row-even"><td>keep-spawn-loaded</td>
 <td>boolean</td>
 <td>true</td>
-<td><p class="first last">Если spawn должен быть загружен даже без игроков.</p>
+<td><p class="first last">Если задано true, спаун должен быть загружен даже с отсутствием игроков.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>load-on-startup</td>
 <td>boolean</td>
 <td>true</td>
-<td>If the world should be loaded on startup.</td>
+<td><p class="first last">Если задано true, мир должен загружаться при запуске.</p>
+</td>
 </tr>
 <tr class="row-even"><td>mob-spawn-range</td>
 <td>integer</td>
 <td>8</td>
-<td>Specifies the radius (in chunks) of where creatures
-will spawn. This value is capped to the current
-view distance setting in server.properties.</td>
+<td><p class="first last">Указывает радиус (в чанках), где будут спавняться существа. Это значение ограничено текущим параметром видимой дистанции в server.properties.</p>
+</td>
 </tr>
 <tr class="row-odd"><td><strong>Portal Agents</strong></td>
 <td>&nbsp;</td>
@@ -1423,23 +1447,26 @@ it will fallback to default.</td>
 <tr class="row-even"><td>&#8220;minecraft:default_nether&#8221;</td>
 <td>world</td>
 <td>DIM-1</td>
-<td>The default nether world.</td>
+<td><p class="first last">Стандартный мир Незера.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>&#8220;minecraft:default_the_end&#8221;</td>
 <td>world</td>
 <td>DIM1</td>
-<td>The default end world.</td>
+<td><p class="first last">Стандартный мир Энда.</p>
+</td>
 </tr>
 <tr class="row-even"><td>pvp-enabled</td>
 <td>boolean</td>
 <td>true</td>
-<td><p class="first last">Этот параметр разрешит PVP.</p>
+<td><p class="first last">Если задано true, разрешает PVP бой.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>world-enabled</td>
 <td>boolean</td>
 <td>true</td>
-<td>Enable if this world should be registered.</td>
+<td><p class="first last">Включите, если данный мир должен быть зарегистрирован.</p>
+</td>
 </tr>
 </tbody>
 </table>

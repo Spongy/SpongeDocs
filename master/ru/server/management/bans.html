@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Управление Банами. &mdash; Документация Sponge 4.1.0</title>
+     <title>Управление банами &mdash; Документация Sponge 4.1.0</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -205,7 +205,7 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Управление сервером</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="whitelist.html">Управление WhiteList</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Управление Банами.</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Управление банами</a></li>
 <li class="toctree-l3"><a class="reference internal" href="permissions.html">Управление правами игроков</a><ul class="simple">
 </ul>
 </li>
@@ -213,6 +213,9 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="exploit-patches.html">Патчи уязвимостей</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="performance-tweaks.html">Performance Tweaks</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -551,7 +554,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../downloads.html">Загрузить</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="../../downloads.html">Загрузки</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -567,7 +570,7 @@
                 <div class="body" role="main">
                   
   <div class="section" id="managing-bans">
-<h1>Управление Банами.<a class="headerlink" href="#managing-bans" title="Ссылка на этот заголовок">¶</a></h1>
+<h1>Управление банами<a class="headerlink" href="#managing-bans" title="Ссылка на этот заголовок">¶</a></h1>
 <p>Minecraft, и, следовательно, Sponge, имеют простое управление банами, чтобы предотвратить подключение нежелательных пользователей к Вашему серверу.</p>
 <p><code class="docutils literal"><span class="pre">/ban</span> <span class="pre">&lt;name&gt;</span> <span class="pre">[reason]</span></code> родная команда сервера Minecraft, функция которой - забанить игрока. Полный список забаненых игроков доступен по команде: <code class="docutils literal"><span class="pre">/banlist</span> <span class="pre">players</span></code></p>
 <p>Кроме того, можно запретить все соединения из заданного IP командой: <code class="docutils literal"><span class="pre">/banip</span> <span class="pre">&lt;address|name&gt;</span> <span class="pre">[reason]</span></code>. Получить полный список запрещённых IP-адресов можно командой: <code class="docutils literal"><span class="pre">/banlist</span> <span class="pre">ips</span></code></p>

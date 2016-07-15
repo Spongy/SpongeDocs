@@ -34,7 +34,7 @@
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Документация Sponge 4.1.0" href="../../index.html" />
         <link rel="up" title="Управление сервером" href="index.html" />
-        <link rel="next" title="Управление Банами." href="bans.html" />
+        <link rel="next" title="Управление банами" href="bans.html" />
         <link rel="prev" title="Управление сервером" href="index.html" />
     
   <script type="text/javascript">
@@ -205,7 +205,7 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Управление сервером</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="">Управление WhiteList</a></li>
-<li class="toctree-l3"><a class="reference internal" href="bans.html">Управление Банами.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="bans.html">Управление банами</a></li>
 <li class="toctree-l3"><a class="reference internal" href="permissions.html">Управление правами игроков</a><ul class="simple">
 </ul>
 </li>
@@ -213,6 +213,9 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="exploit-patches.html">Патчи уязвимостей</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="performance-tweaks.html">Performance Tweaks</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -551,7 +554,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../downloads.html">Загрузить</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="../../downloads.html">Загрузки</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -568,7 +571,7 @@
                   
   <div class="section" id="managing-the-whitelist">
 <h1>Управление WhiteList<a class="headerlink" href="#managing-the-whitelist" title="Ссылка на этот заголовок">¶</a></h1>
-<p>WhiteList позволяет контролировать вход на сервер. Помните, что игроки с OP <em>всегда</em> смогут подключиться к серверу, независимо от того, в WhitList&#8217;е они или нет.</p>
+<p>WhiteList позволяет контролировать вход на сервер. Помните, что операторы <em>всегда</em> смогут подключиться к серверу, независимо от того, в WhitList&#8217;е они или нет.</p>
 <p>Когда белый список (whitelist) включён, только игроки, записанные в белом списке, смогут подключиться к серверу. Игроки могут быть добавлены в белый список с помощью внутриигровых команд или редактированием файла <code class="docutils literal"><span class="pre">whitelist.json</span></code>. Обратите внимание: если Вы вручную изменяете файл, нужно перезагрузить белый список или перезапустить сервер для того, чтобы изменения вступили в силу. Кроме того, обратите внимание на синтаксис, поскольку белый список не будет работать, если он записан неправильно. Пример правильно отформатированного файла белого списка есть в статье <a class="reference internal" href="../getting-started/configuration/json.html"><em>Синтаксис JSON</em></a>.</p>
 <ul class="simple">
 <li><p class="first">Для включения WhiteList используйте: <code class="docutils literal"><span class="pre">/whitelist</span> <span class="pre">on</span></code></p>

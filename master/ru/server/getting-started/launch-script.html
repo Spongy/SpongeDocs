@@ -205,7 +205,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../management/index.html">Управление сервером</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../management/whitelist.html">Управление WhiteList</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../management/bans.html">Управление Банами.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../management/bans.html">Управление банами</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../management/permissions.html">Управление правами игроков</a><ul class="simple">
 </ul>
 </li>
@@ -213,6 +213,9 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../management/exploit-patches.html">Патчи уязвимостей</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../management/performance-tweaks.html">Performance Tweaks</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -551,7 +554,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../downloads.html">Загрузить</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="../../downloads.html">Загрузки</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -570,14 +573,14 @@
 <h1>Создание сценария (скрипта) запуска<a class="headerlink" href="#creating-a-launch-script" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="admonition note">
 <p class="first admonition-title">Примечание</p>
-<p class="last">Эти инструкции подходят, если вы планируете запускать ваш Minecraft сервер на собственной машине. Большинство распространенный хостингов сделают это за вас.</p>
+<p class="last">Эти инструкции подойдут Вам, только если Вы планируете запускать сервер на собственной машине. Большинство распространенных хостингов сделают это за вас.</p>
 </div>
 <div class="section" id="writing-a-launch-script">
 <h2>Написание скрипта запуска<a class="headerlink" href="#writing-a-launch-script" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Сперва откройте текстовый редактор наподобие Atom, Sublime Text или же Notepad. Напишите (или вставьте) скрипт запуска для вашего сервера. Примеры простых скриптов для Windows, Mac OS X и Linux будут показаны ниже. Не забывайте про лимит ОЗУ вашей машины.</p>
 <div class="admonition note">
 <p class="first admonition-title">Примечание</p>
-<p class="last">Следующие примеры подходят для всех. Для серверов Forge, которые используют Sponge (coremod), замените <code class="docutils literal"><span class="pre">forge-1.8-XYZ-universal.jar</span></code> на то как файл Forge назван у вас в папке с сервером. Чтобы запустить SpongeVanilla сервер, замените <code class="docutils literal"><span class="pre">forge-1.8-XYZ-universal.jar</span></code> на название вашего SpongeVanilla.jar файла.</p>
+<p class="last">Следующие примеры универсальны. Для серверов Forge, которых используют Sponge (coremod), замените <code class="docutils literal"><span class="pre">forge-1.8-XYZ-universal.jar</span></code> на название Вашего файла Forge в папке с сервером. Чтобы запустить SpongeVanilla сервер, замените <code class="docutils literal"><span class="pre">forge-1.8-XYZ-universal.jar</span></code> на название файла SpongeVanilla.jar.</p>
 </div>
 <div class="section" id="windows">
 <h3>Windows<a class="headerlink" href="#windows" title="Ссылка на этот заголовок">¶</a></h3>
@@ -608,15 +611,15 @@ java -Xms1G -Xmx2G -jar forge-1.8-XYZ-universal.jar
 </div>
 <div class="section" id="running-a-launch-script">
 <h2>Запуск скрипта запуска<a class="headerlink" href="#running-a-launch-script" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Убедитесь что вы запускаете ваш скрипт в папке с сервером. Это для вашей безопасности. К сожалению, Sponge не сможет впитать ваши слезы если вы этого не сделайте.</p>
-<p>Вы можете запустить ваш скрипт запуска двойным нажатием кнопкой мыши. Если вы используйте консоль или терминал, перейдите в папку с скриптом и запустите его. Не забывайте вы подтвердить Mojang EULA для того чтобы запустить сервер.</p>
+<p>Убедитесь, что Вы запускаете скрипт в папке с сервером для Вашей же безопасности. К сожалению, Sponge (по-русски губка) не сможет впитать Ваши слезы, если Вы не сделаете этого.</p>
+<p>Вы можете запустить ваш скрипт запуска двойным нажатием кнопкой мыши. Если вы используйте консоль или терминал, перейдите в папку с скриптом и запустите его. Не забывайте, Вы должны подтвердить Mojang EULA, чтобы запустить сервер.</p>
 <div class="admonition note">
 <p class="first admonition-title">Примечание</p>
-<p class="last">По умолчанию, графическая консоль minecraft сервера отключена Sponge-ем, потому как она очень сильно нагружает процессор.</p>
+<p class="last">По умолчанию, графическая консоль Minecraft-сервера отключена, т. к. она очень сильно нагружает процессор.</p>
 </div>
 <div class="admonition warning">
 <p class="first admonition-title">Предупреждение</p>
-<p>Если вы получите ошибку про то что у вас нет прав, когда будете запускать ваш сервер на Mac, то попробуйте это:</p>
+<p>Если Вы получите ошибку, что у Вас нет прав запустить сервер на Mac, попробуйте следующее:</p>
 <ul class="last simple">
 <li><p class="first">Откройте терминал.</p>
 </li>

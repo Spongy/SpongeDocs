@@ -205,7 +205,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../management/index.html">Управление сервером</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../management/whitelist.html">Управление WhiteList</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../management/bans.html">Управление Банами.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../management/bans.html">Управление банами</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../management/permissions.html">Управление правами игроков</a><ul class="simple">
 </ul>
 </li>
@@ -213,6 +213,9 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../management/exploit-patches.html">Патчи уязвимостей</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../management/performance-tweaks.html">Performance Tweaks</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -551,7 +554,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../downloads.html">Загрузить</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="../../../downloads.html">Загрузки</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -568,7 +571,7 @@
                   
   <div class="section" id="choosing-an-implementation">
 <h1>Выбор реализации<a class="headerlink" href="#choosing-an-implementation" title="Ссылка на этот заголовок">¶</a></h1>
-<p>То, что запускает плагины Sponge называется <em>реализацией</em>. Если плагин написан правильно и при помощи SpongeAPI, он будет правильно работать на любой более-менее завершенной реализации.</p>
+<p>То, что запускает плагины Sponge, называется <em>реализацией</em>. Если плагин написан правильно и при помощи SpongeAPI, он должен правильно работать на любой более-менее завершенной реализации.</p>
 <p>Minecraft не может запускать плагины Sponge &#8220;из коробки&#8221;, но вы можете изменить его, чтобы это было возможно.</p>
 <p>Sponge API является проектом с <a class="reference external" href="https://github.com/SpongePowered/SpongeAPI">открытым исходным кодом</a>.</p>
 <div class="section" id="available-implementations">
@@ -588,11 +591,11 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td><a class="reference internal" href="spongeforge.html"><em>SpongeForge</em></a></td>
-<td><p class="first last">&#8220;Ванильном&#8221; Minecraft от Mojang и Minecraft Forge</p>
+<td><p class="first last">Minecraft от Mojang и Minecraft Forge</p>
 </td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="spongevanilla.html"><em>SpongeVanilla</em></a></td>
-<td><p class="first last">&#8220;Ванильном&#8221; Minecraft от Mojang</p>
+<td><p class="first last">Minecraft от Mojang</p>
 </td>
 </tr>
 </tbody>
@@ -600,8 +603,8 @@
 <div class="section" id="which-do-i-choose">
 <h3>Что мне выбрать?<a class="headerlink" href="#which-do-i-choose" title="Ссылка на этот заголовок">¶</a></h3>
 <p>Если Вы хотите запускать модификации MinecraftForge или желаете использовать Sponge для одиночной игры, Вам следует выбрать <a class="reference internal" href="spongeforge.html"><em>SpongeForge</em></a>.</p>
-<p>Если Вы желаете запустить Майнкрафт-сервер с плагинами (но без модов), то Вам подойдёт как <a class="reference internal" href="spongeforge.html"><em>SpongeForge</em></a>, так и <a class="reference internal" href="spongevanilla.html"><em>SpongeVanilla</em></a>. SpongeForge поддерживает клиент стандартного (vanilla) майнкрафта, до тех пор, пока Вы не установите Forge-мод, который требует наличия мода на стороне игрока. Если Вы всё же не собираетесь использовать Forge и Forge-моды на сервере, то мы рекомендуем Вам всё же использовать SpongeVanilla.</p>
-<p>SpongeVanilla и SpongeForge (без модов) ведут себя одинаково. Выбор между ними — дело вкуса, но никак не выбор между функциональностью или новизной.</p>
+<p>Если Вы желаете запустить сервер Minecraft с плагинами (но без модификаций), то Вам подойдёт как <a class="reference internal" href="spongeforge.html"><em>SpongeForge</em></a>, так и <a class="reference internal" href="spongevanilla.html"><em>SpongeVanilla</em></a>. SpongeForge поддерживает клиент стандартного Minecraft, до тех пор, пока Вы не установите модификации, которые потребует наличия модификаций с клиентской стороны. Если Вы всё же не собираетесь использовать Forge и Forge-модификации на сервере, мы рекомендуем Вам всё же использовать SpongeVanilla.</p>
+<p>SpongeVanilla и SpongeForge (без модификаций) ведут себя одинаково. Выбор между ними — дело вкуса, но никак не между функциональностью или новизной.</p>
 </div>
 </div>
 <div class="section" id="contents">

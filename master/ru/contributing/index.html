@@ -202,7 +202,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../server/management/index.html">Управление сервером</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../server/management/whitelist.html">Управление WhiteList</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../server/management/bans.html">Управление Банами.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server/management/bans.html">Управление банами</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../server/management/permissions.html">Управление правами игроков</a><ul class="simple">
 </ul>
 </li>
@@ -210,6 +210,9 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/management/exploit-patches.html">Патчи уязвимостей</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../server/management/performance-tweaks.html">Performance Tweaks</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -548,7 +551,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../downloads.html">Загрузить</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="../downloads.html">Загрузки</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -568,9 +571,7 @@
 <p>В этом разделе намеревается показать вам способы, чтобы получить Sponge.</p>
 <div class="section" id="what-are-the-projects-i-can-help-with">
 <h2>Какие проекты, я могу помочь?<a class="headerlink" href="#what-are-the-projects-i-can-help-with" title="Ссылка на этот заголовок">¶</a></h2>
-<p>The Sponge Project and its parts are maintained on <a class="reference external" href="https://github.com/spongepowered">GitHub</a>. If you&#8217;re unfamiliar
-with GitHub and the tool git, then take a look at <a class="reference internal" href="howtogit.html"><em>How to Git(Hub)</em></a> first. A read of our <a class="reference internal" href="guidelines.html"><em>Указания по содействию</em></a> is strongly
-advised before starting any work. There are several projects we&#8217;re currently maintaining:</p>
+<p>Проект Sponge и его составляющие есть на <a class="reference external" href="https://github.com/spongepowered">GitHub</a>. Если вы не знакомы с GitHub и инструментом git, посмотрите статью :doc: <cite>howtogit</cite> для начала. Настоятельно рекомендуется прочитать :doc: <cite>guidelines</cite> перед началом любой работы. Список проектов, который вы поддерживаем в данный момент:</p>
 <ul class="simple">
 <li>SpongeAPI</li>
 <li>SpongeForge</li>
@@ -580,51 +581,53 @@ advised before starting any work. There are several projects we&#8217;re current
 <li>SpongeDocs</li>
 <li>Ore</li>
 </ul>
-<p>If you want to know more about the structure of the project and how everything is tied together, head over to
-<a class="reference internal" href="../about/structure.html"><em>Структура Sponge</em></a>.</p>
+<p>Если Вы хотите знать больше о структуре проекта и как всё взаимосвязано, перейдите сюда: <a class="reference internal" href="../about/structure.html"><em>Структура Sponge</em></a>.</p>
 </div>
 <div class="section" id="what-kind-of-help-is-needed">
-<h2>What kind of help is needed?<a class="headerlink" href="#what-kind-of-help-is-needed" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Какого вида необходима помощь?<a class="headerlink" href="#what-kind-of-help-is-needed" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="section" id="basic-contributions">
-<h3>Basic contributions<a class="headerlink" href="#basic-contributions" title="Ссылка на этот заголовок">¶</a></h3>
-<p>This can be done by almost everyone. You don&#8217;t need to know a programming language like Java or Python to:</p>
+<h3>Основное участие в разработке<a class="headerlink" href="#basic-contributions" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Это может почти каждый. Вам не нужно знать языки программирования, такие как Java и Python. Виды помощи:</p>
 <ul class="simple">
-<li>test SpongeForge or SpongeVanilla and report bugs or usage quirks</li>
-<li>report or suggest any errors, faults or bugs you encounter</li>
-<li>post suggestions or idea you have which would make Sponge better</li>
+<li><p class="first">тестировать SpongeForge или SpongeVanilla и сообщать об ошибках или других причудах использования</p>
+</li>
+<li><p class="first">сообщать о любых ошибках, неисправностях или багах, которые могут возникнуть</p>
+</li>
+<li><p class="first">отправить предложения или идеи, которые могут сделать Sponge лучше</p>
+</li>
 </ul>
-<p>Reporting bugs best via our <a class="reference external" href="https://github.com/spongepowered/">GitHub repositories</a>, suggestions fit onto our
-<a class="reference external" href="https://forums.spongepowered.org/">forums</a>. Just have a look at our
-<a class="reference internal" href="../server/spongineer/bugreport.html"><em>Bug Reporting page</em></a> for further instructions.</p>
+<p>Сообщать об ошибках лучше всего в <a class="reference external" href="https://github.com/spongepowered/">репозитории Github</a>, а оставлять предложения на наших <a class="reference external" href="https://forums.spongepowered.org/">форумах</a>. Смотрите страницу <a class="reference internal" href="../server/spongineer/bugreport.html"><em>Сообщение о проблемах</em></a> для дальнейших инструкций.</p>
 </div>
 <div class="section" id="intermediate-contributions">
-<h3>Intermediate Contributions<a class="headerlink" href="#intermediate-contributions" title="Ссылка на этот заголовок">¶</a></h3>
-<p>You should at least have basic knowledge of Java, Python or reST to help out on the following tasks:</p>
+<h3>Средний уровень участия в разработке<a class="headerlink" href="#intermediate-contributions" title="Ссылка на этот заголовок">¶</a></h3>
+<p>По крайней мере, вы должны иметь базовые знания Java, Python или reST, чтобы помочь со следующими задачи:</p>
 <ul class="simple">
-<li>help fixing bugs</li>
-<li>finish the implementation of the API (SpongeForge and SpongeVanilla)</li>
-<li><a class="reference internal" href="spongedocs.html"><em>help writing the SpongeDocs</em></a></li>
-<li>help <a class="reference external" href="https://crowdin.com/project/sponge-docs">translate the Docs on Crowdin</a></li>
-<li>help out developing Ore</li>
+<li><p class="first">помогать исправлять ошибки</p>
+</li>
+<li><p class="first">закончить реализацию API (SpongeForge и SpongeVanilla)</p>
+</li>
+<li><p class="first"><a class="reference internal" href="spongedocs.html"><em>помочь с написанием SpongeDocs</em></a></p>
+</li>
+<li><p class="first">помочь <a class="reference external" href="https://crowdin.com/project/sponge-docs">перевести Docs на Crowdin</a></p>
+</li>
+<li><p class="first">помочь в разработке Ore</p>
+</li>
 </ul>
-<p>The development of the <a class="reference external" href="https://github.com/spongepowered/SpongeAPI">Sponge API</a>,
-<a class="reference external" href="https://github.com/spongepowered/SpongeForge">SpongeForge</a>,
-<a class="reference external" href="https://github.com/spongepowered/SpongeVanilla">SpongeVanilla</a> and <a class="reference external" href="https://github.com/spongepowered/Ore">Ore</a> as
-well as the <a class="reference external" href="https://github.com/spongepowered/SpongeDocs">SpongeDocs</a> is done in several repositories hosted on GitHub.</p>
+<p>За разработкой <a class="reference external" href="https://github.com/spongepowered/SpongeAPI">Sponge API</a>, <a class="reference external" href="https://github.com/spongepowered/SpongeForge">SpongeForge</a>, <a class="reference external" href="https://github.com/spongepowered/SpongeVanilla">SpongeVanilla</a> и <a class="reference external" href="https://github.com/spongepowered/Ore">Ore</a>, а также <a class="reference external" href="https://github.com/spongepowered/SpongeDocs">SpongeDocs</a> можно посмотреть на Github.</p>
 </div>
 <div class="section" id="advanced-contributions">
-<h3>Advanced Contributions<a class="headerlink" href="#advanced-contributions" title="Ссылка на этот заголовок">¶</a></h3>
-<p>And finally these are the most difficult things you can help out with. Advanced knowledge of Java, Minecraft and at
-least basic knowledge of the <a class="reference external" href="https://github.com/spongepowered/SpongeAPI">Sponge API</a> and its
-<a class="reference external" href="https://jd.spongepowered.org">structure</a> is strongly advised before attempting to help out with:</p>
+<h3>Дополнительное участие в разработке<a class="headerlink" href="#advanced-contributions" title="Ссылка на этот заголовок">¶</a></h3>
+<p>И наконец, наиболее сложные вещи, с которыми Вы можете помочь. Углублённые познания Java, Minecraft и, по крайней мере, основные знания о <a class="reference external" href="https://github.com/spongepowered/SpongeAPI">Sponge API</a> и его <a class="reference external" href="https://jd.spongepowered.org">структуре</a> настоятельно рекомендуется знать перед тем, как помочь со следующим:</p>
 <ul class="simple">
-<li>adding functionality to the API (<a class="reference internal" href="implementation/pr.html"><em>Submitting a Pull-Request</em></a>)</li>
-<li>implementing advanced API functionality in the implementations</li>
+<li><p class="first">добавить функционал в API (<a class="reference internal" href="implementation/pr.html"><em>Submitting a Pull-Request</em></a>)</p>
+</li>
+<li><p class="first">реализовывать расширенный функционал API в реализации</p>
+</li>
 </ul>
 </div>
 </div>
 <div class="section" id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Содержание<a class="headerlink" href="#contents" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="guidelines.html">Указания по содействию</a><ul class="simple">

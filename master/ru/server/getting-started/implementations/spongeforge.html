@@ -206,7 +206,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../management/index.html">Управление сервером</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../management/whitelist.html">Управление WhiteList</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../management/bans.html">Управление Банами.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../management/bans.html">Управление банами</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../management/permissions.html">Управление правами игроков</a><ul class="simple">
 </ul>
 </li>
@@ -214,6 +214,9 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../management/exploit-patches.html">Патчи уязвимостей</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../management/performance-tweaks.html">Performance Tweaks</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -552,7 +555,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../../downloads.html">Загрузить</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="../../../downloads.html">Загрузки</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -569,17 +572,17 @@
                   
   <div class="section" id="installing-spongeforge">
 <h1>Установка SpongeForge<a class="headerlink" href="#installing-spongeforge" title="Ссылка на этот заголовок">¶</a></h1>
-<p>SpongeForge внедряется в <a class="reference external" href="http://www.minecraftforge.net/">Minecraft Forge</a> так что вы сможете запустить модификации для Forge. Вообще будет правильнее сказать, что Sponge это модификация для Forge, которая способна загружать плагины для Sponge, но это просто технические детали.</p>
+<p>SpongeForge внедряется в <a class="reference external" href="http://www.minecraftforge.net/">Minecraft Forge</a>, из-за чего Вы сможете запустить Forge-модификации. Вообще будет правильнее сказать, что Sponge это модификация для Forge, которая способна загружать Sponge-плагины, но это уже просто технические детали.</p>
 <p>Пользователям, не хотящим использовать Minecraft Forge, лучше обратить внимание на <a class="reference internal" href="spongevanilla.html"><em>SpongeVanilla</em></a>.</p>
 <div class="section" id="download">
 <h2>Загрузка<a class="headerlink" href="#download" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Посмотрите <a class="reference internal" href="../../../downloads.html"><em>Загрузить</em></a> для дальнейшей информации.</p>
+<p>Посмотрите на странице <a class="reference internal" href="../../../downloads.html"><em>Загрузки</em></a>.</p>
 </div>
 <div class="section" id="reading-the-download-filename">
 <h2>Название загруженного файла<a class="headerlink" href="#reading-the-download-filename" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Когда вы скачаете SpongeForge название файла будет содержать некоторую важную информацию о версях. Оно содержит номер сборки Forge, с которой совместима эта версия SpongeForge. Другие сборки не будут работать, даже если они отличаются всего на несколько цифр.</p>
+<p>Когда вы скачаете SpongeForge название файла будет содержать некоторую важную информацию о версиях. Название содержит номер сборки Forge, с которой совместима эта версия SpongeForge. Другие сборки не будут работать, даже если они отличаются всего на несколько цифр.</p>
 <p>Хотя обычно SpongeForge быстро обновляется до новой версии Forge, так что вам не стоит волноваться об актуальности версии Forge для работы со SpongeForge.</p>
-<p>Формат названия файла будет таким: <code class="docutils literal"><span class="pre">spongeforge-{MCVersion}-{ForgeVersion}-{SpongeAPIVersion}-{SpongeBuildId}</span></code></p>
+<p>Формат названия файла такой: <code class="docutils literal"><span class="pre">spongeforge-{MCVersion}-{ForgeVersion}-{SpongeAPIVersion}-{SpongeBuildId}</span></code></p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="19%" />
@@ -587,11 +590,13 @@
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">MCVersion</span></code></td>
-<td><p class="first last">Версия Minecraft. Смогут подключиться только те клиенты, которые совместимы с этой версией.</p>
+<td><p class="first last">Версия Minecraft.
+Смогут подключиться только те клиенты, которые совместимы с этой версией.</p>
 </td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">ForgeVersion</span></code></td>
-<td><p class="first last">Версия Forge, для которой собран этот файл. Предпочтительнее будет использовать конкретно эту версию Forge.</p>
+<td><p class="first last">Версия Forge, для которой собран этот файл.
+Предпочтительнее будет использовать конкретно эту версию Forge.</p>
 </td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">SpongeAPIVersion</span></code></td>
@@ -599,17 +604,18 @@
 </td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">SpongeBuildId</span></code></td>
-<td><p class="first last">Номер сборки Sponge. Это вам потребуется предоставить при сообщении об ошибках или при обращении в поддержку.</p>
+<td><p class="first last">Номер сборки Sponge.
+Потребуется при сообщении об ошибках или обращении в поддержку.</p>
 </td>
 </tr>
 </tbody>
 </table>
 <div class="section" id="example">
 <h3>Пример<a class="headerlink" href="#example" title="Ссылка на этот заголовок">¶</a></h3>
-<p>Название файла <code class="docutils literal"><span class="pre">spongeforge-1.8-1577-3.0.0-BETA-1000.jar</span></code> говорит нам, что он совместим с версией Minecraft <code class="docutils literal"><span class="pre">1.8</span></code>, требует сборку Forge <code class="docutils literal"><span class="pre">1.8-11.14.4.1577</span></code>, обеспечивает SpongeAPI версии <code class="docutils literal"><span class="pre">3.0.0</span></code> и был собран SpongeForge <code class="docutils literal"><span class="pre">1000</span></code>.</p>
+<p>Название <code class="docutils literal"><span class="pre">spongeforge-1.8-1577-3.0.0-BETA-1000.jar</span></code> говорит нам, что файл совместим с Minecraft <code class="docutils literal"><span class="pre">1.8</span></code>, требует Forge <code class="docutils literal"><span class="pre">1.8-11.14.4.1577</span></code>, обеспечивает SpongeAPI версии <code class="docutils literal"><span class="pre">3.0.0</span></code> и то, что была собрана SpongeForge-сборка с номером <code class="docutils literal"><span class="pre">1000</span></code>.</p>
 <div class="admonition note">
 <p class="first admonition-title">Примечание</p>
-<p class="last">Обычные моды Forge могут запускаться на любой сборке Forge для этой версии Minecraft (например 1.8.0) без каких-либо проблем. Однако SpongeForge, помимо всего прочего, требуется доступ во внутренние части Forge, которых не касается большинство модов, не говоря уже о модифицировании, как делает Sponge. Так как Forge может спокойно менять свой внутренний код когда захочет, то его нормальная гарантия обеспечения обратной совместимости не относится к SpongeForge.</p>
+<p class="last">Нормальные Forge-модификации для какой-либо версии Minecraft могут запускаться на любой сборке Forge для данной версии (например, 1.8.0) без каких-либо проблем. Однако SpongeForge, помимо всего прочего, требуется доступ ко внутренностям Forge, которых не касается большинство модификаций, не говоря уже о модифицировании, как делает Sponge. Так как Forge может спокойно менять свой внутренний код, когда захочет, гарантия обеспечения обратной совместимости не относится к SpongeForge.</p>
 </div>
 </div>
 </div>
@@ -617,58 +623,58 @@
 <h2>Установка SpongeForge<a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">Примечание</p>
-<p class="last">If you use (or are planning to use) a game server host, they may have a control panel that can install Sponge for you.</p>
+<p class="last">Если Вы используете (или планируете использовать) хостинг игровых серверов, то, возможно, там уже установлен Sponge.</p>
 </div>
 <div class="admonition warning">
 <p class="first admonition-title">Предупреждение</p>
-<p class="last">When using the Mojang installer, Mojang makes use of their own Java version and not the one you installed on your
-system. The installer currently ships with Java <code class="docutils literal"><span class="pre">1.8.0_25</span></code> for Windows and <code class="docutils literal"><span class="pre">1.8.0_60</span></code> for OSX. Note that Sponge
-requires <strong>at least</strong> <code class="docutils literal"><span class="pre">1.8.0_40</span></code> or above to run properly. You can grab the Launcher without included Java here:
-<a class="reference external" href="https://minecraft.net/download">official Minecraft Launcher</a></p>
+<p class="last">При использовании установщика Mojang, Mojang используют собственные версии Java, а не те, которые установлены в систему. В настоящее время установщик использует Java <code class="docutils literal"><span class="pre">1.8.0_25</span></code> для Windows и <code class="docutils literal"><span class="pre">1.8.0_60</span></code> для OSX. Обратите внимание, Sponge использует Java <code class="docutils literal"><span class="pre">1.8.0_40</span></code> или выше для нормального запуска. Вы можете скачать Лаунчер без встроенной Java здесь: <a class="reference external" href="https://minecraft.net/download">официальный лаунчер Minecraft</a></p>
 </div>
 <div class="section" id="single-player-in-game-lan-servers">
-<h3>Single Player / In-Game LAN Servers<a class="headerlink" href="#single-player-in-game-lan-servers" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Одиночная игра / Внутриигровой сервер<a class="headerlink" href="#single-player-in-game-lan-servers" title="Ссылка на этот заголовок">¶</a></h3>
 <ol class="arabic simple">
-<li>Download the Minecraft Forge installer from the <a class="reference external" href="http://files.minecraftforge.net/">Minecraft Forge website</a>. Make
-sure to use <strong>exactly the same build number</strong> as <a class="reference internal" href=""><em>the one listed in the filename of the Sponge download</em></a>.</li>
-<li>Run the provided Forge installer. A new Forge profile will be created in the Minecraft launcher.</li>
-<li><p class="first">Откройте лаунчер Minecraft и выберите новый профиль Forge.</p>
+<li><p class="first">Загрузите установщик Minecraft Forge с <a class="reference external" href="http://files.minecraftforge.net/">веб-сайта Minecraft Forge</a>. Убедитесь в том, что Вы используете <strong>точно такой же номер сборки</strong>, который <a class="reference internal" href=""><em>указан в названии скачанного файла Sponge</em></a>.</p>
 </li>
-<li>Click &#8220;Options&#8221; and click &#8220;Open Game Dir&#8221;.</li>
+<li><p class="first">Установите Forge. Будет создан новый профиль Forge в лаунчере Minecraft.</p>
+</li>
+<li><p class="first">Откройте лаунчер Minecraft и выберите новый профиль Forge, который был ранее создан.</p>
+</li>
+<li><p class="first">Нажмите на &#8220;Options&#8221;, затем на &#8220;Open Game Dir&#8221;.</p>
+</li>
 <li><p class="first">Загрузите SpongeForge с сайта Sponge и переместите его в папку <code class="docutils literal"><span class="pre">mods</span></code>. Если папка отсутствует — создайте её.</p>
 </li>
-<li>Sponge should work in both in single player and if you open your world to LAN.</li>
+<li><p class="first">Sponge должен работать как и в одиночном режиме, так и если Вы откроете мир для сети.</p>
+</li>
 </ol>
-<p>Next, learn how you can <a class="reference internal" href="../configuration/index.html"><em>configure Sponge</em></a> and how to
-<a class="reference internal" href="../../management/index.html"><em>manage your instance of Sponge</em></a> (including installing plugins).</p>
+<p>Дальше узнайте, как Вы можете <a class="reference internal" href="../configuration/index.html"><em>настроить Sponge</em></a> и <a class="reference internal" href="../../management/index.html"><em>управлять сервером</em></a> (в том числе установкой плагинов).</p>
 </div>
 <div class="section" id="dedicated-servers">
 <h3>Выделенные серверы<a class="headerlink" href="#dedicated-servers" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Примечание</p>
-<p class="last">If you already have a Forge server, just put the Sponge mod into your <code class="docutils literal"><span class="pre">mods</span></code> folder. Remember to update your Forge
-version to match the one that <a class="reference internal" href=""><em>Sponge requires</em></a>.</p>
+<p class="last">Если у Вас уже есть Forge-сервер, просто закиньте Sponge в папку <code class="docutils literal"><span class="pre">mods</span></code>. Не забудьте обновить версию Forge до той, что <a class="reference internal" href=""><em>требует Sponge</em></a>.</p>
 </div>
 <div class="section" id="installing-forge-via-commandline">
 <h4>Установка Forge через командную строку<a class="headerlink" href="#installing-forge-via-commandline" title="Ссылка на этот заголовок">¶</a></h4>
 <ol class="arabic simple">
-<li>Visit the <a class="reference external" href="http://files.minecraftforge.net/">Minecraft Forge website</a> and click &#8220;Show all downloads&#8221; to view the full
-set of available options. Identify the version matching the one listed <a class="reference internal" href=""><em>in the filename of the SpongeForge download</em></a>, and hover over the (i) next to &#8220;Installer&#8221; to get the direct download link.</li>
-<li>Use your favorite download method to download the jar to its destination.
-Example: <code class="docutils literal"><span class="pre">wget</span> <span class="pre">http://url.to/forge-version-installer.jar</span></code></li>
-<li>From the folder in which you wish to install Forge, execute the jar with the <code class="docutils literal"><span class="pre">--installServer</span></code> option. Example:
-<code class="docutils literal"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">forge-version-installer.jar</span> <span class="pre">--installServer</span></code></li>
-<li>Continue to Adding SpongeForge to Forge below.</li>
+<li><p class="first">Посетите <a class="reference external" href="http://files.minecraftforge.net/">сайт Minecraft Forge</a> и кликните на &#8220;Show all downloads&#8221;, что просмотреть все доступные варианты. Найдите версию, соответствующую той, что <a class="reference internal" href=""><em>указана в названии файла SpongeForge</em></a>, и наведите на (i) после &#8220;Installer&#8221; для получения прямой ссылки на загрузку.</p>
+</li>
+<li><p class="first">Используйте любимый способ загрузки файла jar. Например: <code class="docutils literal"><span class="pre">wget</span> <span class="pre">http://url.to/forge-version-installer.jar</span></code></p>
+</li>
+<li><p class="first">Из папки, где Вы хотите установить Forge, запустите скачанный jar с параметром``&#8211;installServer``. Например: <code class="docutils literal"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">forge-version-installer.jar</span> <span class="pre">--installServer</span></code></p>
+</li>
+<li><p class="first">Продолжение в &#8220;Добавление SpongeForge к Forge&#8221; ниже.</p>
+</li>
 </ol>
 </div>
 <div class="section" id="installing-forge-via-gui">
 <h4>Установка Forge через GUI<a class="headerlink" href="#installing-forge-via-gui" title="Ссылка на этот заголовок">¶</a></h4>
 <ol class="arabic simple">
-<li>Download the Minecraft Forge installer from the <a class="reference external" href="http://files.minecraftforge.net/">Minecraft Forge website</a> for the version
-matching the one listed <a class="reference internal" href=""><em>in the filename of the SpongeForge download</em></a>.</li>
-<li>Run the provided Forge installer, select &#8220;Install Server&#8221;, choose an empty folder to place the server&#8217;s files,
-and then click OK.</li>
-<li>Continue to Adding SpongeForge to Forge below.</li>
+<li><p class="first">Загрузите установщик Minecraft Forge с <a class="reference external" href="http://files.minecraftforge.net/">веб-сайта Minecraft Forge</a> для соответствующей версии, указанной в <a class="reference internal" href=""><em>названии скачанного файла Sponge</em></a>.</p>
+</li>
+<li><p class="first">Запустите установщик Forge, выберите пункт &#8220;Instal Server&#8221;, поменяйте папку на любую пустую папку для файлов сервера, затем нажмите OK.</p>
+</li>
+<li><p class="first">Продолжение в &#8220;Добавление SpongeForge к Forge&#8221; ниже.</p>
+</li>
 </ol>
 </div>
 <div class="section" id="adding-spongeforge-to-forge">
@@ -676,19 +682,20 @@ and then click OK.</li>
 <ol class="arabic simple">
 <li><p class="first">Загрузите SpongeForge с сайта Sponge и переместите его в папку <code class="docutils literal"><span class="pre">mods</span></code> в каталоге вашего сервера. Если папка отсутствует — создайте её.</p>
 </li>
-<li><p class="first">Теперь Вы можете запустить сервер с помощью команды или запуска скрипта <code class="docutils literal"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">forge-version-XYZ.jar</span></code>.</p>
+<li><p class="first">Теперь Вы можете запустить сервер с помощью команды или запуска скрипта:
+<code class="docutils literal"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">forge-version-XYZ.jar</span></code>.</p>
 </li>
-<li>If operating from home, set up <a class="reference internal" href="../port-forward.html"><em>Перенаправление портов</em></a> to ensure others can connect.</li>
+<li><p class="first">Если Вы запускаете сервер дома, настройте <a class="reference internal" href="../port-forward.html"><em>Перенаправление портов</em></a> для того, чтобы другие смогли подключиться.</p>
+</li>
 </ol>
-<p>Next, learn how you can create and use a <a class="reference internal" href="../launch-script.html"><em>launch-script</em></a>,
-<a class="reference internal" href="../configuration/index.html"><em>configure Sponge</em></a> and <a class="reference internal" href="../../management/index.html"><em>manage your server</em></a> (including installing plugins).</p>
+<p>Дальше узнайте, как <a class="reference internal" href="../launch-script.html"><em>создать и использовать скрипты запуска</em></a>, <a class="reference internal" href="../configuration/index.html"><em>настроить Sponge</em></a> и <a class="reference internal" href="../../management/index.html"><em>управлять сервером</em></a>.</p>
 </div>
 </div>
 </div>
 <div class="section" id="links">
 <h2>Ссылки<a class="headerlink" href="#links" title="Ссылка на этот заголовок">¶</a></h2>
 <ul class="simple">
-<li><p class="first"><a class="reference external" href="http://spongepowered.org/">Главная страница</a></p>
+<li><p class="first"><a href="#id4"><span class="problematic" id="id5">`Главная страница Sponge&lt;http://spongepowered.org/&gt;`__</span></a></p>
 </li>
 <li><a class="reference external" href="https://github.com/SpongePowered/SpongeForge">GitHub</a></li>
 </ul>

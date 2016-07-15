@@ -204,7 +204,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../server/management/index.html">Управление сервером</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../server/management/whitelist.html">Управление WhiteList</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../server/management/bans.html">Управление Банами.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server/management/bans.html">Управление банами</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../server/management/permissions.html">Управление правами игроков</a><ul class="simple">
 </ul>
 </li>
@@ -212,6 +212,9 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/management/exploit-patches.html">Патчи уязвимостей</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../server/management/performance-tweaks.html">Performance Tweaks</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -550,7 +553,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../downloads.html">Загрузить</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="../downloads.html">Загрузки</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -569,20 +572,18 @@
 <h1>Установка Git<a class="headerlink" href="#installing-git" title="Ссылка на этот заголовок">¶</a></h1>
 <p>Git — система управления версиями с открытым исходным кодом, которая очень сильно помогает в разработке проектов многими людьми.</p>
 <p>Проект Sponge, наряду с тысячами других проектов с открытым кодом, размещает свои Git репозитории на GitHub. Таким образом, Git является важным инструментом в разработке Sponge и Sponge API.</p>
-<p>The <a class="reference external" href="https://www.git-scm.com/">Git website</a> has substantial documentation, and their downloads page offers a range
-of options for GUI clients suitable for various operating systems.</p>
+<p>На сайте <a class="reference external" href="https://www.git-scm.com/">Git</a> есть документация и на странице с загрузками есть различные клиенты с пользовательским интерфейсом.</p>
 <div class="section" id="download">
-<h2>Download<a class="headerlink" href="#download" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Загрузить<a class="headerlink" href="#download" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="section" id="windows">
 <h3>Windows<a class="headerlink" href="#windows" title="Ссылка на этот заголовок">¶</a></h3>
-<p><a class="reference external" href="https://desktop.github.com/">GitHub Desktop</a> is an easy method of installing Git on Windows, because Git is
-included as a part of the software.</p>
+<p><a class="reference external" href="https://desktop.github.com/">GitHub Desktop</a> — самый простой метод установки Git для Windows, т. к. Git идёт в комплекте с программой.</p>
 <p>Рекомендуется перезагрузить компьютер после установки Git.</p>
 </div>
 <div class="section" id="mac">
 <h3>Mac<a class="headerlink" href="#mac" title="Ссылка на этот заголовок">¶</a></h3>
 <p>Есть несколько способов установить Git на Mac OS X.</p>
-<p>Самым простым способом является установка Xcode Command Line Tools.</p>
+<p>Самый простой способ — установка Xcode Command Line Tools.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Предупреждение</p>
 <p class="last">Эти инструкции не работают на компьютерах Mac под управлением версии старше Mavericks. Если вы используете версию OS X старше Mavericks, установите клиент GitHub.</p>
@@ -597,8 +598,7 @@ included as a part of the software.</p>
 <li><p class="first">Выполните <code class="docutils literal"><span class="pre">git</span></code> в терминале.</p>
 </li>
 </ol>
-<p>Alternatively, you can install <a class="reference external" href="https://desktop.github.com/">GitHub Desktop</a>. Git is available as a part of the GitHub
-Desktop installation.</p>
+<p>Альтернативный вариант — установить <a class="reference external" href="https://desktop.github.com/">GitHub Desktop</a>. Git идёт в комплекте с программой.</p>
 <p>Рекомендуется перезагрузить компьютер после установки Git.</p>
 </div>
 <div class="section" id="linux-and-unix">
@@ -614,28 +614,26 @@ Desktop installation.</p>
 <li><p class="first">Выполните <code class="docutils literal"><span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">git</span></code>, если Вы работаете на Ubuntu или Debian (или производных от них системах). Выполните <code class="docutils literal"><span class="pre">yum</span> <span class="pre">install</span> <span class="pre">git</span></code>, если вы работаете на Fedora.</p>
 </li>
 </ol>
-<p>GitHub Desktop is currently not available for Linux, unlike Windows and Mac.</p>
+<p>GitHub Desktop на данный момент недоступен для Linux, в отличие от Windows и Mac.</p>
 <p>Рекомендуется перезагрузить компьютер после установки Git.</p>
 </div>
 </div>
 <div class="section" id="setup">
-<h2>Setup<a class="headerlink" href="#setup" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Установка<a class="headerlink" href="#setup" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="section" id="who-are-you">
-<h3>Who Are You?<a class="headerlink" href="#who-are-you" title="Ссылка на этот заголовок">¶</a></h3>
-<p>Before you even start to work with git and the repository, make sure your
-git configuration has your identity set up. Open up your CLI and enter:</p>
+<h3>Кто Вы такой?<a class="headerlink" href="#who-are-you" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Прежде чем Вы начнете работу с git и репозиторием, убедитесь, что ваша конфигурация git авторизованна. Откройте CLI и введите:</p>
 <div class="highlight-none"><div class="highlight"><pre><span></span>git config --list
 </pre></div>
 </div>
-<p>Look for <code class="docutils literal"><span class="pre">user.name</span></code> and <code class="docutils literal"><span class="pre">user.email</span></code>. If they are not the same username and email as your GitHub account
-then set them:</p>
+<p>Ищите <code class="docutils literal"><span class="pre">user.name</span></code> и <code class="docutils literal"><span class="pre">user.email</span></code>. Если их значения не совпадают с именем пользователя и адресом электронной почты как в GitHub, установите их:</p>
 <div class="highlight-none"><div class="highlight"><pre><span></span>git config --global user.name &quot;John Doe&quot;
 git config --global user.email johndoe@example.com
 </pre></div>
 </div>
 <div class="admonition tip">
 <p class="first admonition-title">Совет</p>
-<p class="last">Do not proceed with any contribution in any Sponge repository until you establish your <code class="docutils literal"><span class="pre">user.name</span></code> and <code class="docutils literal"><span class="pre">user.email</span></code>.</p>
+<p class="last">Не проводите никаких правок в любом из репозиториев Sponge, до тех пор, пока вы не укажете правильно значения &#8216;&#8217;user.name&#8217;&#8217; и &#8216;&#8217;user.email&#8217;&#8216;.</p>
 </div>
 </div>
 </div>
