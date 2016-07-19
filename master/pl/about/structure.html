@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Struktura subsekcji Projektu Sponge &mdash; Sponge 4.1.0 - dokumentacja</title>
+     <title>Struktura Projektu Sponge &mdash; Sponge 4.1.0 - dokumentacja</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -173,7 +173,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../index.html">Spis treści</a></h3>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Creating a Server</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Tworzenie serwera</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../server/getting-started/index.html">Wprowadzenie</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/jre.html">Instalacja Java</a><ul class="simple">
 </ul>
@@ -530,7 +530,7 @@
 <li class="toctree-l2"><a class="reference internal" href="faq.html">(FAQ) Najczęściej Zadawane Pytania</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Struktura subsekcji Projektu Sponge</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="">Struktura Projektu Sponge</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="future.html">Plany na przyszłość</a></li>
@@ -569,9 +569,8 @@
                 <div class="body" role="main">
                   
   <div class="section" id="the-structure-of-the-sponge-project">
-<h1>Struktura subsekcji Projektu Sponge<a class="headerlink" href="#the-structure-of-the-sponge-project" title="Stały odnośnik do tego nagłówka">¶</a></h1>
-<p>The Sponge Project consists of different subprojects, hosted in various repositories on GitHub. Here&#8217;s a short overview
-before going into detail:</p>
+<h1>Struktura Projektu Sponge<a class="headerlink" href="#the-structure-of-the-sponge-project" title="Stały odnośnik do tego nagłówka">¶</a></h1>
+<p>Projekt Sponge składa się z różnych podprojektów, wszystkie mają swoje repozytoria na GitHub. Krótki przegląd:</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="33%" />
@@ -579,9 +578,9 @@ before going into detail:</p>
 <col width="40%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head"><p class="first last">Nazwa subProjektu</p>
+<tr class="row-odd"><th class="head"><p class="first last">Projekt</p>
 </th>
-<th class="head"><p class="first last">Co wykorzystuje?</p>
+<th class="head"><p class="first last">Opis</p>
 </th>
 <th class="head"><p class="first last">Co zostało dodane do repozytorium?</p>
 </th>
@@ -625,8 +624,10 @@ before going into detail:</p>
 </td>
 </tr>
 <tr class="row-even"><td><a class="reference external" href="https://github.com/Spongepowered/SpongeHome">SpongeHome</a></td>
-<td>The website for the SpongeProject</td>
-<td>Development of our website</td>
+<td><p class="first last">Strona internetowa Projektu Sponge</p>
+</td>
+<td><p class="first last">Rozwój naszej strony internetowej</p>
+</td>
 </tr>
 <tr class="row-odd"><td><a class="reference external" href="https://github.com/Spongepowered/Ore">Ore</a></td>
 <td><p class="first last">Rozwiązanie wspierające dokumentacje i publikacji wtyczek.</p>
@@ -643,12 +644,11 @@ before going into detail:</p>
 </div>
 <div class="section" id="id1">
 <h2>SpongeHome<a class="headerlink" href="#id1" title="Stały odnośnik do tego nagłówka">¶</a></h2>
-<p>SpongeHome is the SpongeProject&#8217;s website. It&#8217;s written in Golang, using the go-macaron library. It uses SCSS as it&#8217;s
-CSS preprocessor.</p>
+<p>SpongeHome to strona internetowa Projektu Sponge. Jest napisana w Golang, przy użyciu biblioteki go-macaron. Wykorzystuje SCSS jako preprocesor CSS.</p>
 </div>
 <div class="section" id="id2">
 <h2>Ore<a class="headerlink" href="#id2" title="Stały odnośnik do tego nagłówka">¶</a></h2>
-<p>Ore is our very own plugin hosting solution. It&#8217;s written in Scala, based on the Play Framework and of course open-source!</p>
+<p>Ore to repozytorium wtyczek (pluginów). Jest napisane w Scala, przy użyciu Play Framework i oczywiście jest open-source!</p>
 </div>
 <div class="section" id="how-everything-is-tied-together">
 <h2>Jak wszystko jest ze sobą powiązane?<a class="headerlink" href="#how-everything-is-tied-together" title="Stały odnośnik do tego nagłówka">¶</a></h2>

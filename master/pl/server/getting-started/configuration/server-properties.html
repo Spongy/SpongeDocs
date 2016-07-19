@@ -155,7 +155,7 @@
       <div class="breadcrumbs">
         <ul>
         <li><a href="../../../index.html">Sponge 4.1.0 - dokumentacja</a><i class="fa fa-fw fa-chevron-right"></i></li>
-        <li><a href="../../index.html" >Creating a Server</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html" >Tworzenie serwera</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >Wprowadzenie</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">Konfiguracja Sponge</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
@@ -175,7 +175,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../../index.html">Spis treści</a></h3>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Creating a Server</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Tworzenie serwera</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">Wprowadzenie</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../jre.html">Instalacja Java</a><ul class="simple">
 </ul>
@@ -532,7 +532,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html">(FAQ) Najczęściej Zadawane Pytania</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../about/structure.html">Struktura subsekcji Projektu Sponge</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../about/structure.html">Struktura Projektu Sponge</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/future.html">Plany na przyszłość</a></li>
@@ -730,14 +730,12 @@ gamemode.</p>
 <tr class="row-odd"><td>generate-structures</td>
 <td>boolean</td>
 <td>true</td>
-<td><p class="first">Defines whether structures (such as villages) will be
-generated in new chunks.</p>
+<td><p class="first">Określa czy struktury (takie jak wioski) będą generowane na nowych chunkach.</p>
 <blockquote>
-<div><p><strong>false</strong> - Structures will not be generated.</p>
-<p><strong>true</strong> - Structures will be generated.</p>
+<div><p><strong>false</strong> - Struktury nie będą generowane.</p>
+<p><strong>true</strong> - Struktury będą generowane.</p>
 </div></blockquote>
-<p class="last"><strong>Note:</strong> Dungeons will still generate if this is set to
-false.</p>
+<p class="last"><strong>Uwaga:</strong> Lochy będą generowane nawet jeśli generowanie struktur jest wyłączone.</p>
 </td>
 </tr>
 <tr class="row-even"><td>generator-settings</td>
@@ -753,8 +751,8 @@ settings and examples.</td>
 <tr class="row-odd"><td>hardcore</td>
 <td>boolean</td>
 <td>false</td>
-<td>If set to <strong>true</strong>, players will be permanently banned if
-they die.</td>
+<td><p class="first last">Jeśli ustawione na <strong>true</strong>, gracze będą automatycznie banowani po śmierci.</p>
+</td>
 </tr>
 <tr class="row-even"><td>level-name</td>
 <td>string</td>
@@ -779,14 +777,11 @@ by adding a backslash (\) before them.</div></blockquote>
 <tr class="row-even"><td>level-type</td>
 <td>string</td>
 <td>DEFAULT</td>
-<td><p class="first">Determines the type of map that is generated.</p>
+<td><p class="first">Określa typ generowanej mapy.</p>
 <blockquote class="last">
-<div><p><strong>DEFAULT</strong> - Standard world with hills, valleys, water,
-etc.</p>
-<p><strong>FLAT</strong> - A flat world with no features, meant for
-building.</p>
-<p><strong>LARGEBIOMES</strong> - Same as default, but all biomes are
-larger.</p>
+<div><p><strong>DEFAULT</strong> - Zwykły świat z górami, dolinami, wodą itp.</p>
+<p><strong>FLAT</strong> - Płaski świat przeznaczony do budowania.</p>
+<p><strong>LARGEBIOMES</strong> - Taki sam jak DEFAULT tylko z większymi biomami.</p>
 <p><strong>AMPLIFIED</strong> - Same as default, but world-generation
 height limit is increased.</p>
 <p><strong>CUSTOMIZED</strong> - Same as default unless
@@ -836,7 +831,7 @@ world border bigger causes the commands to complete
 successfully, but the actual border will not move past
 this block limit. Setting the max-world-size higher than
 the default doesn&#8217;t appear to do anything.</p>
-<p>Examples:</p>
+<p>Przykłady:</p>
 <blockquote class="last">
 <div><ul class="simple">
 <li>Setting max-world-size to 1000 will allow you to have a

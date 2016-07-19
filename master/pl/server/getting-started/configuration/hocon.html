@@ -155,7 +155,7 @@
       <div class="breadcrumbs">
         <ul>
         <li><a href="../../../index.html">Sponge 4.1.0 - dokumentacja</a><i class="fa fa-fw fa-chevron-right"></i></li>
-        <li><a href="../../index.html" >Creating a Server</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html" >Tworzenie serwera</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >Wprowadzenie</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">Konfiguracja Sponge</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
@@ -175,7 +175,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../../index.html">Spis treści</a></h3>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Creating a Server</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Tworzenie serwera</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">Wprowadzenie</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../jre.html">Instalacja Java</a><ul class="simple">
 </ul>
@@ -532,7 +532,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html">(FAQ) Najczęściej Zadawane Pytania</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../about/structure.html">Struktura subsekcji Projektu Sponge</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../about/structure.html">Struktura Projektu Sponge</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/future.html">Plany na przyszłość</a></li>
@@ -576,16 +576,20 @@
 <div class="section" id="components">
 <h2>Elementy<a class="headerlink" href="#components" title="Stały odnośnik do tego nagłówka">¶</a></h2>
 <ul class="simple">
-<li>a <code class="docutils literal"><span class="pre">key</span></code> is a string preceding a value</li>
-<li>a <code class="docutils literal"><span class="pre">value</span></code> is a string, number, object, array, or boolean following a <code class="docutils literal"><span class="pre">key</span></code></li>
-<li>a <code class="docutils literal"><span class="pre">key-value</span> <span class="pre">separator</span></code> separates keys from values, and can be either <code class="docutils literal"><span class="pre">:</span></code> or <code class="docutils literal"><span class="pre">=</span></code></li>
-<li>a <code class="docutils literal"><span class="pre">comment</span></code> is prefixed with <code class="docutils literal"><span class="pre">#</span></code> or <code class="docutils literal"><span class="pre">//</span></code>, typically serving to provide feedback or instructions</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">klucz</span></code> to string (ciąg znaków) identyfikujący wartość</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">wartość</span></code> to string, liczba, obiekt, tablica albo boolean przypisany do <code class="docutils literal"><span class="pre">klucza</span></code></p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">separator</span></code> oddziela klucze od ich wartości, może nim być <code class="docutils literal"><span class="pre">:</span></code> lub <code class="docutils literal"><span class="pre">=</span></code></p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">komentarz</span></code> zaczyna się od <code class="docutils literal"><span class="pre">#</span></code> lub <code class="docutils literal"><span class="pre">//</span></code>, zwykle wykorzystywany jest do umieszczenia dodatkowych informacji lub instrukcji</p>
+</li>
 </ul>
 <p><strong>Przykład:</strong></p>
 <div class="highlight-json"><div class="highlight"><pre><span></span>yellow-thing: &quot;Sponge&quot;
 </pre></div>
 </div>
-<p>In this example, the <code class="docutils literal"><span class="pre">key</span></code> is <code class="docutils literal"><span class="pre">yellow-thing</span></code>, the <code class="docutils literal"><span class="pre">value</span></code> is <code class="docutils literal"><span class="pre">Sponge</span></code>, and the <code class="docutils literal"><span class="pre">key-value</span> <span class="pre">separator</span></code> is <code class="docutils literal"><span class="pre">:</span></code>.</p>
+<p>W tym przykładzie <code class="docutils literal"><span class="pre">kluczem</span></code> jest <code class="docutils literal"><span class="pre">yellow-thing</span></code>, <code class="docutils literal"><span class="pre">wartością</span></code> jest <code class="docutils literal"><span class="pre">Sponge</span></code>, a <code class="docutils literal"><span class="pre">separatorem</span></code> jest <code class="docutils literal"><span class="pre">:</span></code>.</p>
 </div>
 <div class="section" id="working-with-hocon">
 <h2>Praca z HOCON<a class="headerlink" href="#working-with-hocon" title="Stały odnośnik do tego nagłówka">¶</a></h2>
@@ -604,16 +608,17 @@
 }
 </pre></div>
 </div>
-<p>In practice, it is best to follow the formatting conventions of the HOCON configuration you are editing. When editing
-a HOCON configuration for Sponge or an individual plugin utilizing the Sponge API, the values are likely the only thing
-you will be changing unless otherwise specified.</p>
+<p>W praktyce najlepiej jest dostosować się do konwencji przyjętej w konkretnej konfiguracji HOCON, którą edytujesz. Podczas edycji konfiguracji Sponge albo pojedynczych pluginów korzystających z Sponge API prawdopodobnie będziesz zmieniał tylko wartości.</p>
 <div class="section" id="debugging-your-configuration">
 <h3>Debugowanie konfiguracji<a class="headerlink" href="#debugging-your-configuration" title="Stały odnośnik do tego nagłówka">¶</a></h3>
 <p>Jeżeli konfiguracja HOCON zdaje się nie działać, zobacz poniższe wskazówki.</p>
 <ul class="simple">
-<li>Curly braces must be balanced</li>
-<li>Quotation marks must be balanced</li>
-<li>Duplicate keys that appear later take precedence</li>
+<li><p class="first">Wszystkie nawiasy klamrowe muszą być domknięte</p>
+</li>
+<li><p class="first">Wszystkie cudzysłowy muszą być domknięte</p>
+</li>
+<li><p class="first">Jeśli klucze się powtarzają to pod uwagę barany jest ten występujący najpóźniej</p>
+</li>
 </ul>
 </div>
 </div>

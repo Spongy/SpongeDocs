@@ -193,7 +193,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/bungeecord.html">Using Sponge with BungeeCord</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/configuration/index.html">Configuring Sponge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/configuration/index.html">Configurando Sponge</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/hocon.html">Introducción a HOCON</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/json.html">JSON Syntax</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/sponge-conf.html">global.conf</a></li>
@@ -246,10 +246,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../preparing/ide.html">Instalación de un IDE</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../preparing/text.html">Installing a Text Editor</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../preparing/text.html">Instalando un Editor de Texto</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../preparing/git.html">Installing Git</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../preparing/git.html">Instalando Git</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -577,7 +577,7 @@
 <li><a class="reference internal" href="#what-is-required-to-run-sponge" id="id3">¿Que se requiere para ejecutar Sponge?</a></li>
 <li><a class="reference internal" href="#where-do-i-get-sponge" id="id4">¿Donde puedo conseguir Sponge?</a></li>
 <li><a class="reference internal" href="#what-sponge-implementations-are-available" id="id5">What Sponge implementations are available?</a></li>
-<li><a class="reference internal" href="#where-do-i-get-plugins-for-sponge" id="id6">Where do I get Plugins for Sponge?</a></li>
+<li><a class="reference internal" href="#where-do-i-get-plugins-for-sponge" id="id6">¿Donde consigo Plugins para Sponge?</a></li>
 <li><a class="reference internal" href="#what-happened-to-bukkit" id="id7">¿Qué pasó con Bukkit?</a></li>
 <li><a class="reference internal" href="#can-i-run-bukkit-plugins-with-this" id="id8">¿Puedo usar Plugins de Bukkit con esto?</a></li>
 </ul>
@@ -600,9 +600,7 @@
 <h2><a class="toc-backref" href="#id1">Para todo el mundo</a><a class="headerlink" href="#for-everyone" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="section" id="what-is-sponge">
 <h3><a class="toc-backref" href="#id2">¿Qué es Sponge?</a><a class="headerlink" href="#what-is-sponge" title="Enlazar permanentemente con este título">¶</a></h3>
-<p>Sponge is a new versatile Minecraft API. It was made to enrich your Minecraft experience by allowing plugins to add
-functionality to Minecraft. Read more about Sponge here: <a class="reference internal" href="introduction.html"><em>Introducción</em></a> and about the history of Sponge here:
-<a class="reference internal" href="history.html"><em>La Historia de Sponge</em></a></p>
+<p>Sponge es una nueva y versátil API de Minecraft. Fue creado para enriquecer tu experiencia de juego permitiendo que plugins añadan funcionalidad a Minecraft. Lee más sobre Sponge en: :doc: <cite>introducción</cite> y sobre su historia en: :doc: <cite>historia</cite></p>
 </div>
 <div class="section" id="what-is-required-to-run-sponge">
 <h3><a class="toc-backref" href="#id3">¿Que se requiere para ejecutar Sponge?</a><a class="headerlink" href="#what-is-required-to-run-sponge" title="Enlazar permanentemente con este título">¶</a></h3>
@@ -628,9 +626,8 @@ server owners to deploy Sponge plugins with ease, making server management easie
 </ol>
 </div>
 <div class="section" id="where-do-i-get-plugins-for-sponge">
-<h3><a class="toc-backref" href="#id6">Where do I get Plugins for Sponge?</a><a class="headerlink" href="#where-do-i-get-plugins-for-sponge" title="Enlazar permanentemente con este título">¶</a></h3>
-<p>On our official plugin repository, which is called Ore. Development has already started on GitHub. Temporarily, plugins
-are hosted on the <a class="reference external" href="https://forums.spongepowered.org/c/plugins/plugin-releases">SpongeForums</a>.</p>
+<h3><a class="toc-backref" href="#id6">¿Donde consigo Plugins para Sponge?</a><a class="headerlink" href="#where-do-i-get-plugins-for-sponge" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>En nuestro repositorio oficial de plugins, que se llama Ore. Su desarrollo ya ha empezado en GitHub. Temporalmente, los plugins están alojados en los <a class="reference external" href="https://forums.spongepowered.org/c/plugins/plugin-releases">Foros de Sponge</a>.</p>
 </div>
 <div class="section" id="what-happened-to-bukkit">
 <h3><a class="toc-backref" href="#id7">¿Qué pasó con Bukkit?</a><a class="headerlink" href="#what-happened-to-bukkit" title="Enlazar permanentemente con este título">¶</a></h3>
@@ -642,20 +639,15 @@ history page: <a class="reference internal" href="history.html"><em>La Historia 
 </div>
 <div class="section" id="can-i-run-bukkit-plugins-with-this">
 <h3><a class="toc-backref" href="#id8">¿Puedo usar Plugins de Bukkit con esto?</a><a class="headerlink" href="#can-i-run-bukkit-plugins-with-this" title="Enlazar permanentemente con este título">¶</a></h3>
-<p>Sadly no, not natively. Sponge is using its own API (Sponge API), while Bukkit is using the Bukkit API. However there is the
-possibility that a third-party plugin for Sponge implements the Bukkit API on top of Sponge API.</p>
+<p>Lamentablemente no, no de forma nativa. Sponge está utilizando su propio API (el API de Sponge), mientras que Bukkit utiliza el API de Bukkit. Sin embargo existe la posibilidad de que un plugin de terceros para Sponge implemente el API de Bukkit sobre el API de Sponge.</p>
 </div>
 </div>
 <div class="section" id="for-server-owners">
 <h2><a class="toc-backref" href="#id9">Para los dueños de servidores</a><a class="headerlink" href="#for-server-owners" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="section" id="i-m-a-server-owner-how-will-switching-to-sponge-affect-my-server">
 <h3><a class="toc-backref" href="#id10">¡Soy El dueño de mi servidor!, ¿Como va a afectar Sponge a mi servidor?</a><a class="headerlink" href="#i-m-a-server-owner-how-will-switching-to-sponge-affect-my-server" title="Enlazar permanentemente con este título">¶</a></h3>
-<p>For an existing Forge server, you will need to download Sponge and place it into the mods folder. The server can then
-be started like any other Forge server.</p>
-<p>Non-Forge servers may elect to use SpongeVanilla instead, an implementation that does not rely on Forge. There are
-guides for migrating from Bukkit and/or Canary elsewhere on SpongeDocs. It is worth noting that many plugin developers
-from the Bukkit community have thrown their weight behind Sponge, and are planning to make their plugins available for
-Sponge-powered servers.</p>
+<p>Para un servidor ya existente de Forge tendrás que descargar Sponge y colocarlo en la carpeta de mods. El servidor puede entonces iniciarse como cualquier otro servidor de Forge.</p>
+<p>Los servidores que no sean de Forge pueden optar por utilizar SpongeVanilla, una implementación que no depende de Forge. Hay guías sobre como migrar desde Bukkit y/o Canary en la documentación de Sponge. Vale la pena señalar que muchos desarrolladores de plugins de la comunidad de Bukkit están apoyando el proyecto Sponge y están planeando hacer sus plugins disponibles para los servidores que funcionan con Sponge.</p>
 <p>Los mundos podrán ser portados. Es trabajo de los desarrolladores de plugins crear procesos de conversión que permitan conservar los datos del plugin si es que los hay. Algunos desarrolladores podrían no hacerlo.</p>
 <p>No vamos a ofrecer soporte para plugins de Bukkit en Sponge. De todas formas es posible que algún tercero pueda crear alguna manera de que los plugins de Bukkit funcionen en Sponge.</p>
 </div>
@@ -668,15 +660,11 @@ Sponge-powered servers.</p>
 <h2><a class="toc-backref" href="#id12">Para los desarrolladores</a><a class="headerlink" href="#for-developers" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="section" id="what-can-i-do-with-sponge">
 <h3><a class="toc-backref" href="#id13">¿Qué puedo hacer con Sponge?</a><a class="headerlink" href="#what-can-i-do-with-sponge" title="Enlazar permanentemente con este título">¶</a></h3>
-<p>Sponge provides a Plugin API. This means that you can create new content and gamemodes on the go.
-Have a look at our plugin pages to get a quick-start: <a class="reference internal" href="../plugin/index.html"><em>Creando un Plugin</em></a></p>
+<p>Sponge proporciona un API para Plugins. Esto significa que puedes crear nuevo contenido y modos de juego sobre la marcha. Echa un vistazo a nuestras páginas de plugins para empezar rápido: :doc: <cite>../plugin/index</cite></p>
 </div>
 <div class="section" id="what-can-t-i-do-with-sponge-limitations-of-sponge">
 <h3><a class="toc-backref" href="#id14">¿Qué no puedo hacer con Sponge? / ¿Limitaciones de Sponge?</a><a class="headerlink" href="#what-can-t-i-do-with-sponge-limitations-of-sponge" title="Enlazar permanentemente con este título">¶</a></h3>
-<p>Sponge can&#8217;t be used to create new blocks, textures, mobs on the clientside or any other content which would need
-clientside modifications. The Sponge API wont support sending mods or plugins to the client for now due to security
-concerns. However you can make use of the ForgeAPI for clients and create Sponge plugins for the serverside.
-It is even possible to use Sponge on the client-side, but for several tasks mods are still required.</p>
+<p>Sponge no se puede utilizar para crear nuevos bloques, texturas, monstruos o cualquier otro contenido que necesite modificaciones en el cliente. El API de Sponge de momento no permite enviar mods o plugins al cliente por razones de seguridad. Sin embargo, puedes usarel API de Forge para clientes y crear plugins de Sponge para el servidor. Incluso es posible usar Sponge por parte del cliente, pero para ciertas tareas siguien necesitándose mods.</p>
 </div>
 <div class="section" id="i-m-a-bukkit-plugin-developer-why-can-t-sponge-use-bukkit-s-api">
 <h3><a class="toc-backref" href="#id15">¡Soy desarrollador de plugins para Bukkit! ¿Por que Sponge no puede usar la API de Bukkit?</a><a class="headerlink" href="#i-m-a-bukkit-plugin-developer-why-can-t-sponge-use-bukkit-s-api" title="Enlazar permanentemente con este título">¶</a></h3>

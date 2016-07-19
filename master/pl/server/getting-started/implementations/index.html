@@ -155,7 +155,7 @@
       <div class="breadcrumbs">
         <ul>
         <li><a href="../../../index.html">Sponge 4.1.0 - dokumentacja</a><i class="fa fa-fw fa-chevron-right"></i></li>
-        <li><a href="../../index.html" >Creating a Server</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html" >Tworzenie serwera</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" accesskey="U">Wprowadzenie</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
@@ -174,7 +174,7 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../../index.html">Spis treści</a></h3>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Creating a Server</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Tworzenie serwera</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="../index.html">Wprowadzenie</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="../jre.html">Instalacja Java</a><ul class="simple">
 </ul>
@@ -531,7 +531,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html">(FAQ) Najczęściej Zadawane Pytania</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../about/structure.html">Struktura subsekcji Projektu Sponge</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../about/structure.html">Struktura Projektu Sponge</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/future.html">Plany na przyszłość</a></li>
@@ -571,40 +571,40 @@
                   
   <div class="section" id="choosing-an-implementation">
 <h1>Wybór implementacji<a class="headerlink" href="#choosing-an-implementation" title="Stały odnośnik do tego nagłówka">¶</a></h1>
-<p>Something that runs Sponge plugins is called an <em>implementation</em>. As long as a plugin is correctly made using the
-SpongeAPI, it should run correctly on any sufficiently-complete implementation.</p>
-<p>Minecraft can&#8217;t run Sponge plugins out of the box, but you can modify it to do so.</p>
-<p>The Sponge API itself is an <a class="reference external" href="https://github.com/SpongePowered/SpongeAPI">open standard</a>.</p>
+<p>Coś co potrafi uruchamiać pluginy Sponge jest nazywane <em>implementacją</em>. Dopóki plugin jest poprawnie napisany wykorzystując Sponge API, dopóki powinien poprawnie działać na dowolnej w dostatecznie kompletnej implementacji.</p>
+<p>Minecraft domyślnie nie jest w stanie uruchamiać pluginów Sponge, ale da się go zmodyfikować tak, aby mógł.</p>
+<p>Sponge API jest <a class="reference external" href="https://github.com/SpongePowered/SpongeAPI">otwartym standardem</a>.</p>
 <div class="section" id="available-implementations">
-<h2>Available Implementations<a class="headerlink" href="#available-implementations" title="Stały odnośnik do tego nagłówka">¶</a></h2>
-<p>There are currently two implementations:</p>
+<h2>Dostępne implementacje<a class="headerlink" href="#available-implementations" title="Stały odnośnik do tego nagłówka">¶</a></h2>
+<p>Aktualnie istnieją dwie implementacje:</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="43%" />
 <col width="57%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">Name</th>
-<th class="head">Based on</th>
+<tr class="row-odd"><th class="head"><p class="first last">Nazwa</p>
+</th>
+<th class="head"><p class="first last">W oparciu o</p>
+</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td><a class="reference internal" href="spongeforge.html"><em>SpongeForge</em></a></td>
-<td>Mojang&#8217;s &#8220;vanilla&#8221; Minecraft and Minecraft Forge</td>
+<td><p class="first last">Domyślny serwer Minecraft (&#8220;vanilla&#8221;) i Minecraft Forge</p>
+</td>
 </tr>
 <tr class="row-odd"><td><a class="reference internal" href="spongevanilla.html"><em>SpongeVanilla</em></a></td>
-<td>Mojang&#8217;s &#8220;vanilla&#8221; Minecraft</td>
+<td><p class="first last">Domyślny serwer Minecraft (&#8220;vanilla&#8221;)</p>
+</td>
 </tr>
 </tbody>
 </table>
 <div class="section" id="which-do-i-choose">
-<h3>Which do I choose?<a class="headerlink" href="#which-do-i-choose" title="Stały odnośnik do tego nagłówka">¶</a></h3>
-<p>If you want to run MinecraftForge mods or you prefer to use Sponge in singleplayer, then choose <a class="reference internal" href="spongeforge.html"><em>SpongeForge</em></a>.</p>
-<p>If you only want to run a Mincraft server with plugins on it (but no mods), then you can choose <a class="reference internal" href="spongeforge.html"><em>SpongeForge</em></a> or
-<a class="reference internal" href="spongevanilla.html"><em>SpongeVanilla</em></a>. SpongeForge supports vanilla clients, as long as you don&#8217;t install Forge mods which require
-clientside mods. If you prefer to run a server without Forge, then SpongeVanilla is your preferred option.</p>
-<p>SpongeVanilla and SpongeForge (without mods) behave the same, so the decision between the two is a matter of preference,
-not a choice of functionality or features.</p>
+<h3>Którą implementację wybrać?<a class="headerlink" href="#which-do-i-choose" title="Stały odnośnik do tego nagłówka">¶</a></h3>
+<p>Jeśli chcesz grać z modami Forge albo chcesz korzystać ze Sponge w singleplayer, wybierz <a class="reference internal" href="spongeforge.html"><em>SpongeForge</em></a>.</p>
+<p>Jeśli chcesz uruchomić serwer tylko z pluginami (bez modów) to możesz wybrać <a class="reference internal" href="spongeforge.html"><em>SpongeForge</em></a> lub <a class="reference internal" href="spongevanilla.html"><em>SpongeVanilla</em></a>. SpongeForge obsługuje niezmodyfikowane clienty, dopóki nie zainstalujesz modów, które takich modyfikacji wymagają. Jeśli wolisz uruchomić serwer bez Forge, to wybierz SpongeVanilla.</p>
+<p>SpongeVanilla i SpongeForge (bez modów) działają tak samo, więc wybór między nimi jest tylko kwestią preferencji.</p>
 </div>
 </div>
 <div class="section" id="contents">
