@@ -59,6 +59,7 @@
   <link rel="alternate" hreflang="it" href="/3.1.0/it/">
   <link rel="alternate" hreflang="ja" href="/3.1.0/ja/">
   <link rel="alternate" hreflang="ko" href="/3.1.0/ko/">
+  <link rel="alternate" hreflang="lt" href="/3.1.0/lt/">
   <link rel="alternate" hreflang="nb" href="/3.1.0/nb/">
   <link rel="alternate" hreflang="nl" href="/3.1.0/nl/">
   <link rel="alternate" hreflang="pl" href="/3.1.0/pl/">
@@ -105,6 +106,7 @@
           <li><a href="/3.1.0/it/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/it.png" alt="Flag for Italian"/></a></li>
           <li><a href="/3.1.0/ja/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ja.png" alt="Flag for Japanese"/></a></li>
           <li><a href="/3.1.0/ko/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ko.png" alt="Flag for Korean"/></a></li>
+          <li><a href="/3.1.0/lt/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/lt.png" alt="Flag for Lithuanian"/></a></li>
           <li><a href="/3.1.0/nb/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nb.png" alt="Flag for Norwegian Bokmal"/></a></li>
           <li><a href="/3.1.0/nl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nl.png" alt="Flag for Dutch"/></a></li>
           <li><a href="/3.1.0/pl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pl.png" alt="Flag for Polish"/></a></li>
@@ -694,11 +696,7 @@ access the task. The below example will schedule a task that will count down fro
 </div>
 <div class="section" id="compatibility-with-other-libraries">
 <h2>Compatibility with other libraries<a class="headerlink" href="#compatibility-with-other-libraries" title="Lien permanent vers ce titre">¶</a></h2>
-<p>As your plugin grows in size and scope you might want to start using one of the many concurrency libraries available
-for Java and the JVM.
-These libraries do tend to support Java&#8217;s
-<cite>ExecutorService &lt;https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html&gt;</cite> as a means
-of directing on which thread the task is executed.</p>
+<p>Pour que votre plugin augmente en taille et en possibilité, vous pouvez commencer à utiliser une des nombreuse librairies en concurrences, valable pour Java et sa JVM. Ces librairies ont tendances à s&#8217;appuyer sur l&#8217;<cite>ExecutorService &lt;https://docs.oracle.com/javase/8/docs/api/java/util/concurrent/ExecutorService.html&gt;</cite> de Java afin de mieux diriger sur quel Thread il faut exécuté la tache correspondante.</p>
 <p>To allow these libraries to work with Sponge&#8217;s <code class="docutils literal"><span class="pre">Scheduler</span></code> the following methods can be used:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">Scheduler#createSyncExecutor(Object</span> <span class="pre">plugin)</span></code> creates a <code class="docutils literal"><span class="pre">ScheduledExecutorService</span></code> which executes tasks

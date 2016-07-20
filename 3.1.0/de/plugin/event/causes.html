@@ -33,7 +33,7 @@
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 3.1.0 Dokumentation" href="../../index.html" />
-        <link rel="up" title="Working with Events" href="index.html" />
+        <link rel="up" title="Arbeiten mit Events" href="index.html" />
         <link rel="next" title="Event Filters" href="filters.html" />
         <link rel="prev" title="Event Listeners" href="listeners.html" />
     
@@ -59,6 +59,7 @@
   <link rel="alternate" hreflang="it" href="/3.1.0/it/">
   <link rel="alternate" hreflang="ja" href="/3.1.0/ja/">
   <link rel="alternate" hreflang="ko" href="/3.1.0/ko/">
+  <link rel="alternate" hreflang="lt" href="/3.1.0/lt/">
   <link rel="alternate" hreflang="nb" href="/3.1.0/nb/">
   <link rel="alternate" hreflang="nl" href="/3.1.0/nl/">
   <link rel="alternate" hreflang="pl" href="/3.1.0/pl/">
@@ -105,6 +106,7 @@
           <li><a href="/3.1.0/it/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/it.png" alt="Flag for Italian"/></a></li>
           <li><a href="/3.1.0/ja/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ja.png" alt="Flag for Japanese"/></a></li>
           <li><a href="/3.1.0/ko/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ko.png" alt="Flag for Korean"/></a></li>
+          <li><a href="/3.1.0/lt/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/lt.png" alt="Flag for Lithuanian"/></a></li>
           <li><a href="/3.1.0/nb/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nb.png" alt="Flag for Norwegian Bokmal"/></a></li>
           <li><a href="/3.1.0/nl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nl.png" alt="Flag for Dutch"/></a></li>
           <li><a href="/3.1.0/pl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pl.png" alt="Flag for Polish"/></a></li>
@@ -154,7 +156,7 @@
         <ul>
         <li><a href="../../index.html">Sponge 3.1.0 Dokumentation</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >Plugins erstellen</a><i class="fa fa-fw fa-chevron-right"></i></li>
-        <li><a href="index.html" accesskey="U">Working with Events</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="index.html" accesskey="U">Arbeiten mit Events</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
     <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -324,7 +326,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Working with Events</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Arbeiten mit Events</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -334,7 +336,7 @@
 <li class="toctree-l3"><a class="reference internal" href="filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="custom.html">Creating Custom Events</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="custom.html">Eigene Events Erstellen</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -388,7 +390,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../items/index.html">Working with Items</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../items/index.html">Arbeiten mit Items</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../items/usage.html">Basic Item Usage</a><ul class="simple">
 </ul>
 </li>
@@ -585,11 +587,7 @@ contains any object matching the provided type.</p>
 </div>
 <div class="section" id="named-causes">
 <h2>Named Causes<a class="headerlink" href="#named-causes" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Sometimes the ordering of objects within the cause isn&#8217;t enough to get the proper idea of what
-an object represents in relation to the event. This is where <code class="docutils literal"><span class="pre">NamedCause</span></code> comes in. Named
-causes provide a method for tagging objects within a cause with a <strong>unique</strong> name allowing them
-to be easily identified and requested. Some examples of use cases for named causes is the
-<cite>Notifier</cite> of a GrowBlockEvent or the <cite>Source</cite> of a DamageEntityEvent.</p>
+<p>Manchmal ist die Anordnung von Objekten innerhalb der Ursache nicht genug, um eine richtige Idee davon zu bekommen, welches Objekt was (in Zusammenhang mit dem Event) repräsentiert. Hier kommt <code class="docutils literal"><span class="pre">NamedCause</span></code> ins Spiel. Benannte Ursachen erlauben das Assoziieren von Objekten mit einen einzigartigen Namen. Einige Beispiele für die Verwendung von <code class="docutils literal"><span class="pre">NamedCause</span></code>-Objekten ist der <cite>Notifier</cite> von einem GrowBlockEvent oder die <cite>Source</cite> von einem DamageEntityEvent.</p>
 <p><strong>Retrieving a named entry from a cause</strong></p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="nd">@Listener</span>
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onGrow</span><span class="o">(</span><span class="n">GrowBlockEvent</span> <span class="n">event</span><span class="o">)</span> <span class="o">{</span>
@@ -597,10 +595,7 @@ to be easily identified and requested. Some examples of use cases for named caus
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>This example makes use of <code class="docutils literal"><span class="pre">Cause.get(String</span> <span class="pre">name)</span></code> which can be used to retrive the object
-associated with a name if it is present within the cause chain. Additionally
-<code class="docutils literal"><span class="pre">Cause.getNamedCauses()</span></code> provides a <code class="docutils literal"><span class="pre">Map&lt;String,</span> <span class="pre">Object&gt;</span></code> which can be used to find all
-present names and their associated objects.</p>
+<p>Dieses Beispiel benutzt die Methode <code class="docutils literal"><span class="pre">Cause.get(String</span> <span class="pre">name)</span></code>, welche dazu genutzt werden kann, das Objekt, welches mit dem Namen (falls dieser in der Ursachenkette vorhanden ist) verbunden ist, abzurufen. Außerdem gibt <code class="docutils literal"><span class="pre">Cause.getNamedCauses()</span></code> eine <code class="docutils literal"><span class="pre">Map&lt;String,</span> <span class="pre">Object&gt;</span></code> zurück, welche dazu genutzt werden kann, alle existierenden Namen zu finden, zusammen mit den mit ihnen assoziierten Objekten.</p>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
 <p class="last">Some common identifying names for <code class="docutils literal"><span class="pre">NamedCause</span></code>s are present as static fields in the
@@ -620,19 +615,9 @@ the cause.</p>
 <p class="first admonition-title">Bemerkung</p>
 <p class="last">Cause objects are immutable therefore cannot be modified once created.</p>
 </div>
-<p>Using <code class="docutils literal"><span class="pre">Cause.of(Object,</span> <span class="pre">Object...)</span></code> or <code class="docutils literal"><span class="pre">Cause.ofNullable(Object,</span> <span class="pre">Object...)</span></code> you can construct a cause
-from a series of objects. The objects will be added to the cause chain in the order that they
-are passed to the method, so the first object parameter will become the root cause.
-Remember that a <code class="docutils literal"><span class="pre">Cause</span></code> may not be empty, so at least one non-null parameter is always required.</p>
-<p>If you already have a cause object and would like to append some more objects to the
-chain you can use <code class="docutils literal"><span class="pre">Cause.with(Object...)</span></code>. This constructs a new Cause object containing
-first the objects already present in the original cause, then followed by the additional
-objects that you provided.</p>
-<p>Finally if you wish to add an object to a cause with a defined named first call
-<code class="docutils literal"><span class="pre">NamedCause.of(String</span> <span class="pre">name,</span> <span class="pre">Object</span> <span class="pre">object)</span></code> and then pass the returned <code class="docutils literal"><span class="pre">NamedCause</span></code> instance
-to the cause chain as you would a normal object. Simply calling <code class="docutils literal"><span class="pre">Cause.of(name,</span> <span class="pre">object)</span></code>
-will result in a cause chain containing two objects (the String name, and then the object),
-rather than one object with an attached name.</p>
+<p>Mithilfe von <code class="docutils literal"><span class="pre">Cause.of(Object,</span> <span class="pre">Object...)</span></code> oder <code class="docutils literal"><span class="pre">Cause.ofNullable(Object,</span> <span class="pre">Object...)</span></code> kann eine Ursache aus einer Reihe von Objekten erstellt werden. Die Objekte werden der Ursachenkette in derselben Reihenfolge hinzugefügt, wie sie in der Methode angegeben wurden, folglich wird das erste Objekt die Grund-Ursache sein. Achtung: ein <code class="docutils literal"><span class="pre">Cause</span></code> darf nicht leer sein, also muss wenigstens einer der Parameter nicht null sein.</p>
+<p>Falls du schon ein <code class="docutils literal"><span class="pre">Cause</span></code>-Objekt hast und du mehr Objekte der Ursachenkette hinzufügen willst, kannst du <code class="docutils literal"><span class="pre">Cause.with(Object...)</span></code> benutzen. Dies konstruiert ein neues <code class="docutils literal"><span class="pre">Cause</span></code>-Objekt, welches die Objekte, die schon in dem originalen <code class="docutils literal"><span class="pre">Cause</span></code>-Objekt waren, und die Objekte, die du angegeben hast, beinhaltet.</p>
+<p>Falls du ein Objekt mit einem bestimmten Namen zu einem <code class="docutils literal"><span class="pre">Cause</span></code>-Objekt hinzufügen möchtest, nutze zuerst <code class="docutils literal"><span class="pre">NamedCause.of(String</span> <span class="pre">name,</span> <span class="pre">Object</span> <span class="pre">object)</span></code> und gib den zurückgegebenen Wert an eine der schon kennengelernten Methoden weiter, welche das Objekt zu dem <code class="docutils literal"><span class="pre">Cause</span></code>-Objekt hinzufügt. Solltest du <code class="docutils literal"><span class="pre">Cause.of(name,</span> <span class="pre">object)</span></code> nutzen, werden dem <code class="docutils literal"><span class="pre">Cause</span></code>-Objekt der Name und das Objekt als zwei unterschiedliche Objekte hinzugefügt, anstatt dem einen Objekt mit einem assoziierten Namen.</p>
 </div>
 </div>
 

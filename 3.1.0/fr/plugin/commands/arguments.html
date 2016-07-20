@@ -59,6 +59,7 @@
   <link rel="alternate" hreflang="it" href="/3.1.0/it/">
   <link rel="alternate" hreflang="ja" href="/3.1.0/ja/">
   <link rel="alternate" hreflang="ko" href="/3.1.0/ko/">
+  <link rel="alternate" hreflang="lt" href="/3.1.0/lt/">
   <link rel="alternate" hreflang="nb" href="/3.1.0/nb/">
   <link rel="alternate" hreflang="nl" href="/3.1.0/nl/">
   <link rel="alternate" hreflang="pl" href="/3.1.0/pl/">
@@ -105,6 +106,7 @@
           <li><a href="/3.1.0/it/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/it.png" alt="Flag for Italian"/></a></li>
           <li><a href="/3.1.0/ja/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ja.png" alt="Flag for Japanese"/></a></li>
           <li><a href="/3.1.0/ko/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ko.png" alt="Flag for Korean"/></a></li>
+          <li><a href="/3.1.0/lt/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/lt.png" alt="Flag for Lithuanian"/></a></li>
           <li><a href="/3.1.0/nb/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nb.png" alt="Flag for Norwegian Bokmal"/></a></li>
           <li><a href="/3.1.0/nl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nl.png" alt="Flag for Dutch"/></a></li>
           <li><a href="/3.1.0/pl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pl.png" alt="Flag for Polish"/></a></li>
@@ -591,7 +593,7 @@ a short text key, which is displayed in error and help messages.</p>
 </div>
 </div>
 <div class="section" id="overview-of-the-genericarguments-command-elements">
-<h2>Overview of the <code class="docutils literal"><span class="pre">GenericArguments</span></code> command elements<a class="headerlink" href="#overview-of-the-genericarguments-command-elements" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Vue d’ensemble des éléments de commande du <code class="docutils literal"><span class="pre">GenericArguments</span></code><a class="headerlink" href="#overview-of-the-genericarguments-command-elements" title="Lien permanent vers ce titre">¶</a></h2>
 <table border="1" class="docutils">
 <colgroup>
 <col width="19%" />
@@ -601,7 +603,8 @@ a short text key, which is displayed in error and help messages.</p>
 <thead valign="bottom">
 <tr class="row-odd"><th class="head">Command Element</th>
 <th class="head">Description</th>
-<th class="head">Value Type &amp; Amount</th>
+<th class="head"><p class="first last">Type de Valeur &amp; Quantité</p>
+</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -610,7 +613,7 @@ a short text key, which is displayed in error and help messages.</p>
 </td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td colspan="3"><p class="first last">** Types de Base Java **</p>
+<tr class="row-odd"><td colspan="3"><p class="first last"><strong>Types de Base Java</strong></p>
 </td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">string</span></code></td>
@@ -632,25 +635,30 @@ a short text key, which is displayed in error and help messages.</p>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">integer</span></code></td>
 <td>Require an argument to be an integer.</td>
-<td>one <code class="docutils literal"><span class="pre">Integer</span></code></td>
+<td><p class="first last">un <code class="docutils literal"><span class="pre">Integer</span></code></p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">doubleNum</span></code></td>
 <td>Require an argument to be a double.</td>
-<td>one <code class="docutils literal"><span class="pre">Double</span></code></td>
+<td><p class="first last">un <code class="docutils literal"><span class="pre">Double</span></code></p>
+</td>
 </tr>
 <tr class="row-odd"><td colspan="3"><strong>Game Objects</strong></td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">player</span></code></td>
 <td>Expect an argument to represent an online player. <strong>May return multiple players!</strong></td>
-<td>multiple <code class="docutils literal"><span class="pre">Player</span></code> instances</td>
+<td><p class="first last">plusieurs instances de <code class="docutils literal"><span class="pre">Player</span></code></p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">playerOrSource</span></code></td>
 <td>Like <code class="docutils literal"><span class="pre">player</span></code>, but returns the sender of the command if no matching player was found.</td>
-<td>multiple <code class="docutils literal"><span class="pre">Player</span></code> instances</td>
+<td><p class="first last">plusieurs instances de <code class="docutils literal"><span class="pre">Player</span></code></p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">world</span></code></td>
 <td>Expect an argument to represent a world (also includes unloaded worlds).</td>
-<td>multiple <code class="docutils literal"><span class="pre">WorldProperties</span></code></td>
+<td><p class="first last">plusieurs <code class="docutils literal"><span class="pre">WorldProperties</span></code></p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">dimension</span></code></td>
 <td>Expect an argument to represent a dimension (<code class="docutils literal"><span class="pre">END</span></code>, <code class="docutils literal"><span class="pre">NETHER</span></code>, <code class="docutils literal"><span class="pre">OVERWORLD</span></code>).</td>
@@ -659,11 +667,13 @@ instances</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">location</span></code></td>
 <td>Expect an argument to represent a <code class="docutils literal"><span class="pre">Location</span></code>.</td>
-<td>one <code class="docutils literal"><span class="pre">Location</span></code></td>
+<td><p class="first last">une <code class="docutils literal"><span class="pre">Location</span></code></p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">vector3d</span></code></td>
 <td>Expect an argument to represent a <code class="docutils literal"><span class="pre">Vector3d</span></code>.</td>
-<td>one <code class="docutils literal"><span class="pre">Vector3d</span></code></td>
+<td><p class="first last">un <code class="docutils literal"><span class="pre">Vector3d</span></code></p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">catalogedElement</span></code></td>
 <td>Expect an argument that is a member of the specified <a class="reference external" href="https://jd.spongepowered.org/3.0.0/org/spongepowered/api/CatalogType.html">catalog type</a>.</td>
@@ -674,12 +684,14 @@ of the specified catalog type</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">choices</span></code></td>
 <td>Return an argument that allows selecting from a limited set of values.</td>
-<td>one specified value</td>
+<td><p class="first last">une valeur spécifiée</p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">literal</span></code></td>
 <td>Expect a literal sequence of arguments (e.g. <code class="docutils literal"><span class="pre">&quot;i&quot;,</span> <span class="pre">&quot;luv&quot;,</span> <span class="pre">&quot;u&quot;</span></code>: <code class="docutils literal"><span class="pre">/cmd</span> <span class="pre">i</span> <span class="pre">luv</span> <span class="pre">u</span></code>).
 Throws an error if the arguments do not match.</td>
-<td>one specified value</td>
+<td><p class="first last">une valeur spécifiée</p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">enumValue</span></code></td>
 <td>Require the argument to be a key under the provided enum.</td>

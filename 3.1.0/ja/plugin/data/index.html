@@ -59,6 +59,7 @@
   <link rel="alternate" hreflang="it" href="/3.1.0/it/">
   <link rel="alternate" hreflang="ja" href="/3.1.0/ja/">
   <link rel="alternate" hreflang="ko" href="/3.1.0/ko/">
+  <link rel="alternate" hreflang="lt" href="/3.1.0/lt/">
   <link rel="alternate" hreflang="nb" href="/3.1.0/nb/">
   <link rel="alternate" hreflang="nl" href="/3.1.0/nl/">
   <link rel="alternate" hreflang="pl" href="/3.1.0/pl/">
@@ -105,6 +106,7 @@
           <li><a href="/3.1.0/it/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/it.png" alt="Flag for Italian"/></a></li>
           <li><a href="/3.1.0/ja/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ja.png" alt="Flag for Japanese"/></a></li>
           <li><a href="/3.1.0/ko/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ko.png" alt="Flag for Korean"/></a></li>
+          <li><a href="/3.1.0/lt/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/lt.png" alt="Flag for Lithuanian"/></a></li>
           <li><a href="/3.1.0/nb/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nb.png" alt="Flag for Norwegian Bokmal"/></a></li>
           <li><a href="/3.1.0/nl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nl.png" alt="Flag for Dutch"/></a></li>
           <li><a href="/3.1.0/pl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pl.png" alt="Flag for Polish"/></a></li>
@@ -375,7 +377,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../blocks/modifying.html">ブロックの改変</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">Working with Tile Entities</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">タイルエンティティの操作</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -551,7 +553,7 @@ specific values is no less straightforward.</p>
 <a class="reference external" href="https://forums.spongepowered.org">Forums</a> to find out if the data you need to work with is available yet.</p>
 </div>
 <div class="section" id="concepts">
-<h2>Concepts<a class="headerlink" href="#concepts" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>コンセプト<a class="headerlink" href="#concepts" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>On first glance at the API docs, the data API threatens to overwhelm you with lots of interfaces and packages. But
 to simply use the data API, you will not have to deal with many of them, as most interfaces found there are just
 specific data manipulators.</p>
@@ -564,7 +566,7 @@ cannot use. In those cases, the return values of the methods will provide the in
 available (via <code class="docutils literal"><span class="pre">Optional.empty()</span></code>) or not accepted (via the <a class="reference internal" href="transactions.html"><em>DataTransactionResult</em></a>).</p>
 </div>
 <div class="section" id="property">
-<h3>Property<a class="headerlink" href="#property" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>プロパティ<a class="headerlink" href="#property" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>A property too is data, but not synchronized between server and clients. Therefore, it can only be
 changed by modifications present on both client and server. Since Sponge is not intended to require a
 client-side counterpart, properties are not modifiable.
@@ -580,14 +582,14 @@ the re-use of such components over the API and prevents duplication of accessor 
 glass blocks and leather armor all can share the <code class="docutils literal"><span class="pre">DyeableData</span></code> holding the color they are dyed in.</p>
 </div>
 <div class="section" id="key">
-<h3>Key<a class="headerlink" href="#key" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>キー<a class="headerlink" href="#key" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>A <code class="docutils literal"><span class="pre">Key</span></code> is a unique identifier for a single point of data and can be used to directly read or set that point of
 data without worrying about data manipulators. It was designed to provide a convenient way of accessing data
 similar to direct getter/setter methods. All keys used within Sponge are listed as constants in the
 <code class="docutils literal"><span class="pre">org.spongepowered.api.data.key.Keys</span></code> utility class.</p>
 </div>
 <div class="section" id="value">
-<h3>Value<a class="headerlink" href="#value" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>値<a class="headerlink" href="#value" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>Within the Data API, a value referred to by a <code class="docutils literal"><span class="pre">Key</span></code> is encoded in a container object. For this documentation,
 it is referred to as &#8216;keyed value&#8217; to avoid confusion with the actual value. A keyed value encapsulates the
 actual data value (if it is present), a default value (to be used if no direct value is present) and the Key by
@@ -595,7 +597,7 @@ which the value is identified.</p>
 </div>
 </div>
 <div class="section" id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>コンテンツ<a class="headerlink" href="#contents" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="keys.html">キーの使用</a><ul class="simple">

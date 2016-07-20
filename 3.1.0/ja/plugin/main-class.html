@@ -59,6 +59,7 @@
   <link rel="alternate" hreflang="it" href="/3.1.0/it/">
   <link rel="alternate" hreflang="ja" href="/3.1.0/ja/">
   <link rel="alternate" hreflang="ko" href="/3.1.0/ko/">
+  <link rel="alternate" hreflang="lt" href="/3.1.0/lt/">
   <link rel="alternate" hreflang="nb" href="/3.1.0/nb/">
   <link rel="alternate" hreflang="nl" href="/3.1.0/nl/">
   <link rel="alternate" hreflang="pl" href="/3.1.0/pl/">
@@ -105,6 +106,7 @@
           <li><a href="/3.1.0/it/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/it.png" alt="Flag for Italian"/></a></li>
           <li><a href="/3.1.0/ja/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ja.png" alt="Flag for Japanese"/></a></li>
           <li><a href="/3.1.0/ko/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ko.png" alt="Flag for Korean"/></a></li>
+          <li><a href="/3.1.0/lt/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/lt.png" alt="Flag for Lithuanian"/></a></li>
           <li><a href="/3.1.0/nb/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nb.png" alt="Flag for Norwegian Bokmal"/></a></li>
           <li><a href="/3.1.0/nl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nl.png" alt="Flag for Dutch"/></a></li>
           <li><a href="/3.1.0/pl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pl.png" alt="Flag for Polish"/></a></li>
@@ -375,7 +377,7 @@
 <li class="toctree-l3"><a class="reference internal" href="blocks/modifying.html">ブロックの改変</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="blocks/tileentities.html">Working with Tile Entities</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="blocks/tileentities.html">タイルエンティティの操作</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -548,7 +550,7 @@ up to you to be creative and make your code work! There are several free Java co
 experience with Java.</p>
 </div>
 <div class="section" id="starting-your-class">
-<h2>Starting Your Class<a class="headerlink" href="#starting-your-class" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>クラスを書き始める<a class="headerlink" href="#starting-your-class" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>The next step after adding the Sponge API as a dependency is creating a new class. The class can be named however you&#8217;d
 like, and can be in any package that does <strong>not</strong> begin with <code class="docutils literal"><span class="pre">org.spongepowered</span></code>. By convention, class names should be
 in title case.</p>
@@ -595,7 +597,7 @@ to prefixing event-handler methods with <code class="docutils literal"><span cla
 However, your main plugin class is registered automatically.</p>
 </div>
 <div class="section" id="state-events">
-<h3>State Events<a class="headerlink" href="#state-events" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>ステートイベント<a class="headerlink" href="#state-events" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>It may also be desirable to listen for other state events, particularly the <code class="docutils literal"><span class="pre">GameStoppingServerEvent</span></code>. There are two
 categories of state events:</p>
 <ul class="simple">

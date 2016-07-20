@@ -59,6 +59,7 @@
   <link rel="alternate" hreflang="it" href="/3.1.0/it/">
   <link rel="alternate" hreflang="ja" href="/3.1.0/ja/">
   <link rel="alternate" hreflang="ko" href="/3.1.0/ko/">
+  <link rel="alternate" hreflang="lt" href="/3.1.0/lt/">
   <link rel="alternate" hreflang="nb" href="/3.1.0/nb/">
   <link rel="alternate" hreflang="nl" href="/3.1.0/nl/">
   <link rel="alternate" hreflang="pl" href="/3.1.0/pl/">
@@ -105,6 +106,7 @@
           <li><a href="/3.1.0/it/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/it.png" alt="Flag for Italian"/></a></li>
           <li><a href="/3.1.0/ja/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ja.png" alt="Flag for Japanese"/></a></li>
           <li><a href="/3.1.0/ko/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ko.png" alt="Flag for Korean"/></a></li>
+          <li><a href="/3.1.0/lt/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/lt.png" alt="Flag for Lithuanian"/></a></li>
           <li><a href="/3.1.0/nb/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nb.png" alt="Flag for Norwegian Bokmal"/></a></li>
           <li><a href="/3.1.0/nl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nl.png" alt="Flag for Dutch"/></a></li>
           <li><a href="/3.1.0/pl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pl.png" alt="Flag for Polish"/></a></li>
@@ -376,7 +378,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../blocks/modifying.html">ブロックの改変</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">Working with Tile Entities</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">タイルエンティティの操作</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -554,7 +556,7 @@ will throw a <code class="docutils literal"><span class="pre">NoSuchElementExcep
 <p>The purpose of the <code class="docutils literal"><span class="pre">Optional</span></code> type is representing a value that might or might not be there. As such, many use cases
 revolve around handling absent values.</p>
 <div class="section" id="presence-check">
-<h3>Presence Check<a class="headerlink" href="#presence-check" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>存在チェック<a class="headerlink" href="#presence-check" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>The <code class="docutils literal"><span class="pre">isPresent()</span></code> method returns true if a value is present on the <code class="docutils literal"><span class="pre">Optional</span></code>. It can provide the most basic
 verification and is an equivalent to a classic <code class="docutils literal"><span class="pre">null</span></code> check.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">Optional</span><span class="o">&lt;</span><span class="n">String</span><span class="o">&gt;</span> <span class="n">opt</span> <span class="o">=</span> <span class="n">getOptionalString</span><span class="o">();</span>
@@ -566,7 +568,7 @@ verification and is an equivalent to a classic <code class="docutils literal"><s
 </div>
 </div>
 <div class="section" id="using-default-values">
-<h3>Using default Values<a class="headerlink" href="#using-default-values" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>デフォルト値の使用<a class="headerlink" href="#using-default-values" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>A common pattern is falling back to a default value if none is present. The <code class="docutils literal"><span class="pre">orElse()</span></code> method allows for a single
 line statement that will return either the value present on the <code class="docutils literal"><span class="pre">Optional</span></code> or the supplied default value.</p>
 <p>Instead of</p>
@@ -682,7 +684,7 @@ returns an optional, it allows for chaining with other methods.</p>
 </div>
 </div>
 <div class="section" id="mapping">
-<h3>Mapping<a class="headerlink" href="#mapping" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>マッピング<a class="headerlink" href="#mapping" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>Another chainable operation is mapping the potential value to a different one. If no value is present, nothing will
 change. But if it is present, the <code class="docutils literal"><span class="pre">map()</span></code> method will return an <code class="docutils literal"><span class="pre">Optional</span></code> of the value returned by the provided
 <code class="docutils literal"><span class="pre">Function</span></code> (or an empty <code class="docutils literal"><span class="pre">Optional</span></code> if that return value is <code class="docutils literal"><span class="pre">null</span></code>).</p>
@@ -742,7 +744,7 @@ reducing the boilerplate and indentation levels and thus leaving the code much m
 </div>
 </div>
 <div class="section" id="creating-optionals">
-<h2>Creating Optionals<a class="headerlink" href="#creating-optionals" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>Optional の作成<a class="headerlink" href="#creating-optionals" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Should you choose to provide an API following the same contract of using <code class="docutils literal"><span class="pre">Optional</span></code> instead of returning <code class="docutils literal"><span class="pre">null</span></code>
 values, you will have to create <code class="docutils literal"><span class="pre">Optional</span></code>s in order to be able to return them. This is done by calling one of the
 three static constructor methods.</p>

@@ -59,6 +59,7 @@
   <link rel="alternate" hreflang="it" href="/3.1.0/it/">
   <link rel="alternate" hreflang="ja" href="/3.1.0/ja/">
   <link rel="alternate" hreflang="ko" href="/3.1.0/ko/">
+  <link rel="alternate" hreflang="lt" href="/3.1.0/lt/">
   <link rel="alternate" hreflang="nb" href="/3.1.0/nb/">
   <link rel="alternate" hreflang="nl" href="/3.1.0/nl/">
   <link rel="alternate" hreflang="pl" href="/3.1.0/pl/">
@@ -105,6 +106,7 @@
           <li><a href="/3.1.0/it/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/it.png" alt="Flag for Italian"/></a></li>
           <li><a href="/3.1.0/ja/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ja.png" alt="Flag for Japanese"/></a></li>
           <li><a href="/3.1.0/ko/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ko.png" alt="Flag for Korean"/></a></li>
+          <li><a href="/3.1.0/lt/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/lt.png" alt="Flag for Lithuanian"/></a></li>
           <li><a href="/3.1.0/nb/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nb.png" alt="Flag for Norwegian Bokmal"/></a></li>
           <li><a href="/3.1.0/nl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nl.png" alt="Flag for Dutch"/></a></li>
           <li><a href="/3.1.0/pl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pl.png" alt="Flag for Polish"/></a></li>
@@ -376,7 +378,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../blocks/modifying.html">ブロックの改変</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">Working with Tile Entities</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">タイルエンティティの操作</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -537,14 +539,13 @@
                   
   <div class="section" id="creating-text">
 <h1>Text の作成<a class="headerlink" href="#creating-text" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>The Text API is used to create formatted text, which can be sent to players in chat messages, and can also be used in
-places such as books and signs.</p>
+<p>Text API はチャットメッセージでプレイヤーに送信したり、本や看板などに使ったりできる、整形されたテキストを作成するのに使われます。</p>
 <div class="section" id="unformatted-text">
-<h2>Unformatted Text<a class="headerlink" href="#unformatted-text" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>書式なしテキスト<a class="headerlink" href="#unformatted-text" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Oftentimes, all you need is unformatted text. Unformatted text does not require the use of a text builder, and is the
 simplest form of text to create.</p>
 <div class="section" id="example">
-<h3>例：<a class="headerlink" href="#example" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>例:<a class="headerlink" href="#example" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.text.Text</span><span class="o">;</span>
 
 <span class="n">Text</span> <span class="n">unformattedText</span> <span class="o">=</span> <span class="n">Text</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">&quot;Hey! This is unformatted text!&quot;</span><span class="o">);</span>
@@ -559,15 +560,14 @@ configured.</p>
 <p>The text builder interface allows for the creation of formatted text in a &#8220;building-block&#8221; style.</p>
 <div class="admonition tip">
 <p class="first admonition-title">ちなみに</p>
-<p class="last">Read this <a class="reference external" href="http://en.wikipedia.org/wiki/Builder_pattern">Wikipedia article</a> for help understanding the purpose
-of the builder pattern in software design.</p>
+<p class="last">ソフトウェア設計における Builder パターンの目的を理解するために、この <cite>ウィキペディアの記事&lt;http://en.wikipedia.org/wiki/Builder_pattern&gt;</cite> をお読みください。</p>
 </div>
 <div class="section" id="colors">
 <h3>色<a class="headerlink" href="#colors" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>One usage of the text builder is the addition of colors to text, as illustrated below.</p>
 </div>
 <div class="section" id="example-colored-text">
-<h3>Example: Colored Text<a class="headerlink" href="#example-colored-text" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>例: 色付きテキスト<a class="headerlink" href="#example-colored-text" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.text.format.TextColors</span><span class="o">;</span>
 
 <span class="n">Text</span> <span class="n">coloredText</span> <span class="o">=</span> <span class="n">Text</span><span class="o">.</span><span class="na">builder</span><span class="o">(</span><span class="s">&quot;Woot! Golden text is golden.&quot;</span><span class="o">).</span><span class="na">color</span><span class="o">(</span><span class="n">TextColors</span><span class="o">.</span><span class="na">GOLD</span><span class="o">).</span><span class="na">build</span><span class="o">();</span>
@@ -577,18 +577,18 @@ of the builder pattern in software design.</p>
 Multiple colors can be used in text by appending additional texts with different colors:</p>
 </div>
 <div class="section" id="example-multi-colored-text">
-<h3>Example: Multi-colored Text<a class="headerlink" href="#example-multi-colored-text" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>例: 複数色のテキスト<a class="headerlink" href="#example-multi-colored-text" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">Text</span> <span class="n">multiColoredText</span> <span class="o">=</span> <span class="n">Text</span><span class="o">.</span><span class="na">builder</span><span class="o">(</span><span class="s">&quot;Sponges are &quot;</span><span class="o">).</span><span class="na">color</span><span class="o">(</span><span class="n">TextColors</span><span class="o">.</span><span class="na">YELLOW</span><span class="o">).</span><span class="na">append</span><span class="o">(</span>
         <span class="n">Text</span><span class="o">.</span><span class="na">builder</span><span class="o">(</span><span class="s">&quot;invincible!&quot;</span><span class="o">).</span><span class="na">color</span><span class="o">(</span><span class="n">TextColors</span><span class="o">.</span><span class="na">RED</span><span class="o">).</span><span class="na">build</span><span class="o">()).</span><span class="na">build</span><span class="o">();</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="styling">
-<h3>スタイリング<a class="headerlink" href="#styling" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>スタイル<a class="headerlink" href="#styling" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>The builder can also be used to style text, including underlining, italicizing, etc.</p>
 </div>
 <div class="section" id="example-styled-text">
-<h3>Example: Styled Text<a class="headerlink" href="#example-styled-text" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>例: スタイルテキスト<a class="headerlink" href="#example-styled-text" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.text.format.TextStyles</span><span class="o">;</span>
 
 <span class="n">Text</span> <span class="n">styledText</span> <span class="o">=</span> <span class="n">Text</span><span class="o">.</span><span class="na">builder</span><span class="o">(</span><span class="s">&quot;Yay! Styled text!&quot;</span><span class="o">).</span><span class="na">style</span><span class="o">(</span><span class="n">TextStyles</span><span class="o">.</span><span class="na">ITALIC</span><span class="o">).</span><span class="na">build</span><span class="o">();</span>
@@ -597,19 +597,18 @@ Multiple colors can be used in text by appending additional texts with different
 <p>Just like with colors, multiple styles can be used by chaining together separately styled texts.</p>
 </div>
 <div class="section" id="example-multi-styled-text">
-<h3>Example: Multi-styled Text<a class="headerlink" href="#example-multi-styled-text" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>例: 複数のスタイルが適用されたテキスト<a class="headerlink" href="#example-multi-styled-text" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">Text</span> <span class="n">multiStyledText</span> <span class="o">=</span> <span class="n">Text</span><span class="o">.</span><span class="na">builder</span><span class="o">(</span><span class="s">&quot;I&#39;m italicized! &quot;</span><span class="o">).</span><span class="na">style</span><span class="o">(</span><span class="n">TextStyles</span><span class="o">.</span><span class="na">ITALIC</span><span class="o">)</span>
         <span class="o">.</span><span class="na">append</span><span class="o">(</span><span class="n">Text</span><span class="o">.</span><span class="na">builder</span><span class="o">(</span><span class="s">&quot;I&#39;m bold!&quot;</span><span class="o">).</span><span class="na">style</span><span class="o">(</span><span class="n">TextStyles</span><span class="o">.</span><span class="na">BOLD</span><span class="o">).</span><span class="na">build</span><span class="o">()).</span><span class="na">build</span><span class="o">();</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="coloring-styling-shortcut">
-<h3>Coloring &amp; Styling Shortcut<a class="headerlink" href="#coloring-styling-shortcut" title="このヘッドラインへのパーマリンク">¶</a></h3>
-<p>The <code class="docutils literal"><span class="pre">org.spongepowered.api.text.Text#of(Object...</span> <span class="pre">objects)</span></code> method provides a simple way to add color and styling to
-your text in a much more concise way.</p>
+<h3>文字色 &amp; スタイルショートカット<a class="headerlink" href="#coloring-styling-shortcut" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<p><code class="docutils literal"><span class="pre">org.spongepowered.api.text.Text#of(Object...</span> <span class="pre">objects)</span></code> メソッドはテキストに色とスタイルを追加する、より簡潔な方法を提供します。</p>
 </div>
 <div class="section" id="example-color-style-shortcut">
-<h3>Example: Color &amp; Style Shortcut<a class="headerlink" href="#example-color-style-shortcut" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>例: 色 &amp; スタイルショートカット<a class="headerlink" href="#example-color-style-shortcut" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">Text</span> <span class="n">colorAndStyleText</span> <span class="o">=</span> <span class="n">Text</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">TextColors</span><span class="o">.</span><span class="na">RED</span><span class="o">,</span> <span class="n">TextStyles</span><span class="o">.</span><span class="na">ITALIC</span><span class="o">,</span> <span class="s">&quot;Shortcuts for the win!&quot;</span><span class="o">);</span>
 </pre></div>
 </div>
@@ -621,7 +620,7 @@ your text in a much more concise way.</p>
 below is a small example of what text actions can do.</p>
 </div>
 <div class="section" id="example-text-with-an-action">
-<h3>Example: Text with an Action<a class="headerlink" href="#example-text-with-an-action" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>例: アクションが設定されたテキスト<a class="headerlink" href="#example-text-with-an-action" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.text.action.TextActions</span><span class="o">;</span>
 
 <span class="n">Text</span> <span class="n">clickableText</span> <span class="o">=</span> <span class="n">Text</span><span class="o">.</span><span class="na">builder</span><span class="o">(</span><span class="s">&quot;Click here!&quot;</span><span class="o">).</span><span class="na">onClick</span><span class="o">(</span><span class="n">TextActions</span><span class="o">.</span><span class="na">runCommand</span><span class="o">(</span><span class="s">&quot;tell Spongesquad I&#39;m ready!&quot;</span><span class="o">)).</span><span class="na">build</span><span class="o">();</span>

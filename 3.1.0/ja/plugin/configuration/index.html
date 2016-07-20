@@ -59,6 +59,7 @@
   <link rel="alternate" hreflang="it" href="/3.1.0/it/">
   <link rel="alternate" hreflang="ja" href="/3.1.0/ja/">
   <link rel="alternate" hreflang="ko" href="/3.1.0/ko/">
+  <link rel="alternate" hreflang="lt" href="/3.1.0/lt/">
   <link rel="alternate" hreflang="nb" href="/3.1.0/nb/">
   <link rel="alternate" hreflang="nl" href="/3.1.0/nl/">
   <link rel="alternate" hreflang="pl" href="/3.1.0/pl/">
@@ -105,6 +106,7 @@
           <li><a href="/3.1.0/it/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/it.png" alt="Flag for Italian"/></a></li>
           <li><a href="/3.1.0/ja/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ja.png" alt="Flag for Japanese"/></a></li>
           <li><a href="/3.1.0/ko/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ko.png" alt="Flag for Korean"/></a></li>
+          <li><a href="/3.1.0/lt/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/lt.png" alt="Flag for Lithuanian"/></a></li>
           <li><a href="/3.1.0/nb/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nb.png" alt="Flag for Norwegian Bokmal"/></a></li>
           <li><a href="/3.1.0/nl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nl.png" alt="Flag for Dutch"/></a></li>
           <li><a href="/3.1.0/pl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pl.png" alt="Flag for Polish"/></a></li>
@@ -375,7 +377,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../blocks/modifying.html">ブロックの改変</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">Working with Tile Entities</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">タイルエンティティの操作</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -582,13 +584,15 @@ returned pathname will be in a shared configuration directory. In that case, the
 will be <code class="docutils literal"><span class="pre">your_plugin_id.conf</span></code> (with &#8220;your_plugin_id&#8221; replaced with your plugin&#8217;s specified ID).</p>
 <div class="admonition tip">
 <p class="first admonition-title">ちなみに</p>
-<p class="last">See <a class="reference internal" href="../main-class.html"><em>プラグインのメインクラスの作成</em></a> for information on configuring your plugin ID.</p>
+<p class="last">プラグイン ID の設定については <a class="reference internal" href="../main-class.html"><em>プラグインのメインクラスの作成</em></a> を参照してください。</p>
 </div>
 <p><code class="docutils literal"><span class="pre">sharedRoot</span></code> に <code class="docutils literal"><span class="pre">false</span></code> を設定した場合、返されるパス名はそのプラグイン専用のディレクトリ内の <code class="docutils literal"><span class="pre">{pluginname}.conf</span></code> というファイルを指します。</p>
-<p>If you are unsure of what to set the value of <code class="docutils literal"><span class="pre">sharedRoot</span></code> to, consider the following:</p>
+<p><code class="docutils literal"><span class="pre">sharedRoot</span></code> の値を何に設定すべきか確信が持てない場合は、次のことを考えてください。</p>
 <ul class="simple">
-<li>If you plan on having multiple configuration files (complex plugins) in the future, set the value to <code class="docutils literal"><span class="pre">false</span></code>.</li>
-<li>If you plan on having a single configuration file (less-complex plugins), set the value to <code class="docutils literal"><span class="pre">true</span></code>.</li>
+<li><p class="first">複数の設定ファイル (複雑なプラグイン) を将来使用するつもりであれば、 値を <code class="docutils literal"><span class="pre">false</span></code> にしてください。</p>
+</li>
+<li><p class="first">一つの設定ファイル (比較的簡素なプラグイン) を使用するつもりであれば、 値を <code class="docutils literal"><span class="pre">true</span></code> にしてください。</p>
+</li>
 </ul>
 <p>You can also obtain a <code class="docutils literal"><span class="pre">Path</span></code> instance pointing to the config directory instead of a particular file. Just
 have it injected using the <code class="docutils literal"><span class="pre">&#64;ConfigDir</span></code> annotation, either with <code class="docutils literal"><span class="pre">sharedRoot</span></code> set to <code class="docutils literal"><span class="pre">false</span></code> for a plugin specific
@@ -626,9 +630,7 @@ non-existant paths as the library will handle them appropriately.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
-<p class="last">The use of YAML format (<a class="reference external" href="http://yaml.org/spec/1.1/">http://yaml.org/spec/1.1/</a>) is also supported, but the preferred config format for Sponge
-plugins is HOCON. Conversion from YAML to HOCON can be automated by using a <code class="docutils literal"><span class="pre">YamlConfigurationLoader</span></code> to load
-the old config and then saving it using a <code class="docutils literal"><span class="pre">HoconConfigurationLoader</span></code>.</p>
+<p class="last">YAML (<a class="reference external" href="http://yaml.org/spec/1.1">http://yaml.org/spec/1.1</a>) の使用もサポートされていますが、 Sponge プラグインの設定ファイルフォーマットには HOCON を推奨します。 YAML から HOCON への変換は <code class="docutils literal"><span class="pre">YamlConfigurationLoader</span></code> で古い設定を読み込み、 <code class="docutils literal"><span class="pre">HoconConfigurationLoader</span></code> で保存することで自動化できます。</p>
 </div>
 </div>
 </div>

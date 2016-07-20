@@ -59,6 +59,7 @@
   <link rel="alternate" hreflang="it" href="/3.1.0/it/">
   <link rel="alternate" hreflang="ja" href="/3.1.0/ja/">
   <link rel="alternate" hreflang="ko" href="/3.1.0/ko/">
+  <link rel="alternate" hreflang="lt" href="/3.1.0/lt/">
   <link rel="alternate" hreflang="nb" href="/3.1.0/nb/">
   <link rel="alternate" hreflang="nl" href="/3.1.0/nl/">
   <link rel="alternate" hreflang="pl" href="/3.1.0/pl/">
@@ -105,6 +106,7 @@
           <li><a href="/3.1.0/it/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/it.png" alt="Flag for Italian"/></a></li>
           <li><a href="/3.1.0/ja/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ja.png" alt="Flag for Japanese"/></a></li>
           <li><a href="/3.1.0/ko/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ko.png" alt="Flag for Korean"/></a></li>
+          <li><a href="/3.1.0/lt/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/lt.png" alt="Flag for Lithuanian"/></a></li>
           <li><a href="/3.1.0/nb/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nb.png" alt="Flag for Norwegian Bokmal"/></a></li>
           <li><a href="/3.1.0/nl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nl.png" alt="Flag for Dutch"/></a></li>
           <li><a href="/3.1.0/pl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pl.png" alt="Flag for Polish"/></a></li>
@@ -543,9 +545,8 @@
 <p>The global.conf file contains the global configuration settings for Sponge. This file is created in the config/sponge
 directory in your server folder. Many of these properties can be also overridden per-world or per-dimension type by
 using the config files in the subfolders of config/worlds.</p>
-<p>Below is a complete global.conf file with all possible nodes that may be present on a server. Note that certain
-sections will not be present immediately, and will be added to the file when the server encounters them. This config
-was generated using SpongeForge build 1181, SpongeAPI version 3.1.0:</p>
+<p>Di seguito vi è un file completo global.conf con tutti i possibili nodi che potrebbero essere presenti in un server.
+Nota che alcune sezioni non saranno presenti immediatamente, e saranno aggiunte al file quando il server le incontra. Questa configurazione è stata generata usando SpongeForge build 1181, SpongeAPI version 3.1.0:</p>
 <div class="highlight-none"><div class="highlight"><pre><span></span># 1.0
 #
 # # If you need help with the configuration or have any questions related
@@ -886,8 +887,8 @@ it is removed. Set to 0 to disable</td>
 <tr class="row-even"><td><strong>Entity Activation Range</strong></td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
-<td><em>Note that entities from Mods are automatically
-added to this list.</em></td>
+<td><p class="first last"><em>Nota che le entità provenienti dalle Mod sono aggiunte automaticamente alla lista.</em></p>
+</td>
 </tr>
 <tr class="row-odd"><td>ambient-activation-range</td>
 <td>integer</td>
@@ -1213,7 +1214,8 @@ world is loaded.</td>
 <tr class="row-odd"><td>load-on-startup</td>
 <td>boolean</td>
 <td>true</td>
-<td>If the world should load on startup.</td>
+<td><p class="first last">Se il mondo deve caricarsi all&#8217;avvio.</p>
+</td>
 </tr>
 <tr class="row-even"><td>pvp-enabled</td>
 <td>boolean</td>

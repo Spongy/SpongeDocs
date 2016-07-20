@@ -58,6 +58,7 @@
   <link rel="alternate" hreflang="it" href="/3.1.0/it/">
   <link rel="alternate" hreflang="ja" href="/3.1.0/ja/">
   <link rel="alternate" hreflang="ko" href="/3.1.0/ko/">
+  <link rel="alternate" hreflang="lt" href="/3.1.0/lt/">
   <link rel="alternate" hreflang="nb" href="/3.1.0/nb/">
   <link rel="alternate" hreflang="nl" href="/3.1.0/nl/">
   <link rel="alternate" hreflang="pl" href="/3.1.0/pl/">
@@ -104,6 +105,7 @@
           <li><a href="/3.1.0/it/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/it.png" alt="Flag for Italian"/></a></li>
           <li><a href="/3.1.0/ja/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ja.png" alt="Flag for Japanese"/></a></li>
           <li><a href="/3.1.0/ko/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ko.png" alt="Flag for Korean"/></a></li>
+          <li><a href="/3.1.0/lt/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/lt.png" alt="Flag for Lithuanian"/></a></li>
           <li><a href="/3.1.0/nb/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nb.png" alt="Flag for Norwegian Bokmal"/></a></li>
           <li><a href="/3.1.0/nl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nl.png" alt="Flag for Dutch"/></a></li>
           <li><a href="/3.1.0/pl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pl.png" alt="Flag for Polish"/></a></li>
@@ -486,7 +488,7 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="about/index.html">关于Sponge项目</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="about/introduction.html">Introduction</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="about/introduction.html">简介</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="about/faq.html">常见问题</a><ul class="simple">
@@ -537,19 +539,14 @@
 <p>欢迎访问 SpongeDocs，这里是开源项目 <a class="reference external" href="http://spongepowered.org">Sponge</a> 的官方文档。</p>
 <p>The SpongeAPI is your all new plugin API for Minecraft. You can run it on a plain vanilla server (as SpongeVanilla) or
 on your fully modded MinecraftForge server (as SpongeForge). Grab your copy <a class="reference internal" href="downloads.html"><em>here</em></a>.</p>
-<p>Not sure what you&#8217;re looking for? Try our <a class="reference internal" href="about/index.html"><em>关于Sponge项目</em></a> section, which contains a short <a class="reference internal" href="about/introduction.html"><em>Introduction</em></a>,
+<p>Not sure what you&#8217;re looking for? Try our <a class="reference internal" href="about/index.html"><em>关于Sponge项目</em></a> section, which contains a short <a class="reference internal" href="about/introduction.html"><em>简介</em></a>,
 our <a class="reference internal" href="about/faq.html"><em>常见问题</em></a> and an article about <a class="reference internal" href="about/structure.html"><em>The Structure of the Sponge Project</em></a>.</p>
 <p>Server owners should read our tips and instructions in <a class="reference internal" href="server/index.html"><em>创建服务器</em></a> on how to install, run and maintain a Sponge
 based server.</p>
-<p>The Sponge project has several main components currently, visit their repositories on GitHub or learn more about them
-<a class="reference internal" href="about/structure.html"><em>here</em></a>: <a class="reference external" href="https://github.com/spongepowered/spongeforge">SpongeForge</a> |
-<a class="reference external" href="https://github.com/spongepowered/spongevanilla">SpongeVanilla</a> | <a class="reference external" href="https://github.com/spongepowered/spongeapi">SpongeAPI</a> |
-<a class="reference external" href="https://github.com/spongepowered/spongedocs">SpongeDocs</a> | <a class="reference external" href="https://github.com/SpongePowered/Mixin">Mixin</a> |
-<a class="reference external" href="https://github.com/SpongePowered/Ore">Ore</a></p>
+<p>Sponge计划目前由多个主要的组成，你可以通过访问GitHub上的Repo来了解更多关于它们的信息。 <a class="reference internal" href="about/structure.html"><em>包括</em></a>: <a class="reference external" href="https://github.com/spongepowered/spongeforge">SpongeForge</a> | <a class="reference external" href="https://github.com/spongepowered/spongevanilla">SpongeVanilla</a> | <a class="reference external" href="https://github.com/spongepowered/spongeapi">SpongeAPI</a> | <a class="reference external" href="https://github.com/spongepowered/spongedocs">SpongeDocs</a> | <a class="reference external" href="https://github.com/SpongePowered/Mixin">Mixin</a> | <a class="reference external" href="https://github.com/SpongePowered/Ore">Ore</a></p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">Sponge is still in development. Beta builds of SpongeForge and alpha builds of SpongeVanilla are currently
-available for <a class="reference internal" href="downloads.html"><em>下载</em></a>, but an official release will not be available until later in 2016.</p>
+<p class="last">Sponge仍然在其开发阶段中，目前SpongeForge的Beta版本和SpongeVanilla的Alpha版本可供:doc:<cite>下载</cite>，但正式版本在2016年下旬前不会被发布。</p>
 </div>
 </div>
 <div class="section" id="contents">
@@ -642,12 +639,11 @@ available for <a class="reference internal" href="downloads.html"><em>下载</em
 </div>
 <div class="section" id="about-sponge">
 <h3>关于 Sponge<a class="headerlink" href="#about-sponge" title="永久链接至标题">¶</a></h3>
-<p>This section contains basic information about the project, read this if you&#8217;re confused about Sponge, its parts and our
-goals.</p>
+<p>这个部分包含着Sponge的一些基本信息，这一部分可以解释你对于Sponge计划、它的以及我们的目标的困惑。</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="about/index.html">关于Sponge项目</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="about/introduction.html">Introduction</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="about/introduction.html">简介</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="about/faq.html">常见问题</a><ul class="simple">

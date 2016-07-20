@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Estrutura do Projeto Sponge &mdash; Sponge 3.1.0 documentação</title>
+     <title>Estrutura do projeto Sponge &mdash; Sponge 3.1.0 documentação</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -60,6 +60,7 @@
   <link rel="alternate" hreflang="it" href="/3.1.0/it/">
   <link rel="alternate" hreflang="ja" href="/3.1.0/ja/">
   <link rel="alternate" hreflang="ko" href="/3.1.0/ko/">
+  <link rel="alternate" hreflang="lt" href="/3.1.0/lt/">
   <link rel="alternate" hreflang="nb" href="/3.1.0/nb/">
   <link rel="alternate" hreflang="nl" href="/3.1.0/nl/">
   <link rel="alternate" hreflang="pl" href="/3.1.0/pl/">
@@ -106,6 +107,7 @@
           <li><a href="/3.1.0/it/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/it.png" alt="Flag for Italian"/></a></li>
           <li><a href="/3.1.0/ja/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ja.png" alt="Flag for Japanese"/></a></li>
           <li><a href="/3.1.0/ko/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ko.png" alt="Flag for Korean"/></a></li>
+          <li><a href="/3.1.0/lt/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/lt.png" alt="Flag for Lithuanian"/></a></li>
           <li><a href="/3.1.0/nb/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nb.png" alt="Flag for Norwegian Bokmal"/></a></li>
           <li><a href="/3.1.0/nl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nl.png" alt="Flag for Dutch"/></a></li>
           <li><a href="/3.1.0/pl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pl.png" alt="Flag for Polish"/></a></li>
@@ -201,7 +203,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../server/management/index.html">Gestão do Servidor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../server/management/index.html">Administração do servidor</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../server/management/whitelist.html">Gerir a Whitelist</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../server/management/bans.html">Gerir os Bans</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../server/management/permissions.html">Gerir Permissões</a><ul class="simple">
@@ -497,12 +499,12 @@
 <li class="toctree-l2"><a class="reference internal" href="faq.html">Dúvidas frequentes</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Estrutura do Projeto Sponge</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="">Estrutura do projeto Sponge</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="future.html">Planos para o Futuro</a></li>
 <li class="toctree-l2"><a class="reference internal" href="license.html">Licença</a></li>
-<li class="toctree-l2"><a class="reference internal" href="posting.html">Diretrizes para Publicação no Fórum</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="posting.html">Diretrizes para a publicação no fórum</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="rules.html">Regras do Fórum e IRC</a></li>
@@ -512,7 +514,7 @@
 <li class="toctree-l2"><a class="reference internal" href="glossary.html">Glossário do Sponge</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="assets.html">Ativos Artísticos</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="assets.html">Recursos artísticos</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="history.html">A História do Sponge</a><ul class="simple">
@@ -536,7 +538,7 @@
                 <div class="body" role="main">
                   
   <div class="section" id="the-structure-of-the-sponge-project">
-<h1>Estrutura do Projeto Sponge<a class="headerlink" href="#the-structure-of-the-sponge-project" title="Link permanente para este título">¶</a></h1>
+<h1>Estrutura do projeto Sponge<a class="headerlink" href="#the-structure-of-the-sponge-project" title="Link permanente para este título">¶</a></h1>
 <p>O Projeto Sponge é composto por vários sub-projetos, hospedados em vários repositórios no GitHub. Segue-se um breve resumo antes de irmos a detalhes:</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -549,7 +551,7 @@
 </th>
 <th class="head"><p class="first last">Descrição</p>
 </th>
-<th class="head"><p class="first last">O que é que se faz no repositório?</p>
+<th class="head"><p class="first last">O que é feito no repositório?</p>
 </th>
 </tr>
 </thead>
@@ -557,7 +559,7 @@
 <tr class="row-even"><td><a class="reference external" href="https://github.com/Spongepowered/SpongeAPI">SpongeAPI</a></td>
 <td><p class="first last">A própria API</p>
 </td>
-<td><p class="first last">O dsenvolvimento da própria API</p>
+<td><p class="first last">O desenvolvimento da própria API</p>
 </td>
 </tr>
 <tr class="row-odd"><td><a class="reference external" href="https://github.com/Spongepowered/SpongeForge">SpongeForge</a></td>

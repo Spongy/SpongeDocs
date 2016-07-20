@@ -59,6 +59,7 @@
   <link rel="alternate" hreflang="it" href="/3.1.0/it/">
   <link rel="alternate" hreflang="ja" href="/3.1.0/ja/">
   <link rel="alternate" hreflang="ko" href="/3.1.0/ko/">
+  <link rel="alternate" hreflang="lt" href="/3.1.0/lt/">
   <link rel="alternate" hreflang="nb" href="/3.1.0/nb/">
   <link rel="alternate" hreflang="nl" href="/3.1.0/nl/">
   <link rel="alternate" hreflang="pl" href="/3.1.0/pl/">
@@ -105,6 +106,7 @@
           <li><a href="/3.1.0/it/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/it.png" alt="Flag for Italian"/></a></li>
           <li><a href="/3.1.0/ja/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ja.png" alt="Flag for Japanese"/></a></li>
           <li><a href="/3.1.0/ko/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ko.png" alt="Flag for Korean"/></a></li>
+          <li><a href="/3.1.0/lt/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/lt.png" alt="Flag for Lithuanian"/></a></li>
           <li><a href="/3.1.0/nb/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nb.png" alt="Flag for Norwegian Bokmal"/></a></li>
           <li><a href="/3.1.0/nl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nl.png" alt="Flag for Dutch"/></a></li>
           <li><a href="/3.1.0/pl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pl.png" alt="Flag for Polish"/></a></li>
@@ -375,7 +377,7 @@
 <li class="toctree-l3"><a class="reference internal" href="blocks/modifying.html">ブロックの改変</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="blocks/tileentities.html">Working with Tile Entities</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="blocks/tileentities.html">タイルエンティティの操作</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -578,13 +580,13 @@ recipient that is targeted by at least one of the combined channels.</p>
 </div>
 </div>
 <div class="section" id="sending-messages">
-<h2>Sending Messages<a class="headerlink" href="#sending-messages" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>メッセージの送信<a class="headerlink" href="#sending-messages" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Once you have obtained a <code class="docutils literal"><span class="pre">MessageChannel</span></code> you can send a message through it via the <code class="docutils literal"><span class="pre">send(Object</span> <span class="pre">sender,</span> <span class="pre">Text</span>
 <span class="pre">message)</span></code> method. This method is preferred over the <code class="docutils literal"><span class="pre">send(Text</span> <span class="pre">message)</span></code> method, as the <code class="docutils literal"><span class="pre">Object</span></code> can be
 used for identification or for performing other various actions.
 The channel will then transform the message for every recipient and send the transformed message.</p>
 <div class="section" id="extended-application-chat-channels">
-<h3>Extended Application: Chat Channels<a class="headerlink" href="#extended-application-chat-channels" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>拡張アプリケーション: チャットチャンネル<a class="headerlink" href="#extended-application-chat-channels" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>Message channels have a very useful application as they can be used to establish chat channels. For example, you could
 establish a message channel for every chat channel you wish to have. Then, when a <code class="docutils literal"><span class="pre">MessageReceiver</span></code> joins a channel,
 such as with <code class="docutils literal"><span class="pre">/join</span> <span class="pre">&lt;channel</span> <span class="pre">name&gt;</span></code>, simply set the <code class="docutils literal"><span class="pre">MessageReceiver</span></code>&#8216;s <code class="docutils literal"><span class="pre">MessageChannel</span></code> to the appropriate

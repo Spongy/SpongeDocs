@@ -59,6 +59,7 @@
   <link rel="alternate" hreflang="it" href="/3.1.0/it/">
   <link rel="alternate" hreflang="ja" href="/3.1.0/ja/">
   <link rel="alternate" hreflang="ko" href="/3.1.0/ko/">
+  <link rel="alternate" hreflang="lt" href="/3.1.0/lt/">
   <link rel="alternate" hreflang="nb" href="/3.1.0/nb/">
   <link rel="alternate" hreflang="nl" href="/3.1.0/nl/">
   <link rel="alternate" hreflang="pl" href="/3.1.0/pl/">
@@ -105,6 +106,7 @@
           <li><a href="/3.1.0/it/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/it.png" alt="Flag for Italian"/></a></li>
           <li><a href="/3.1.0/ja/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ja.png" alt="Flag for Japanese"/></a></li>
           <li><a href="/3.1.0/ko/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ko.png" alt="Flag for Korean"/></a></li>
+          <li><a href="/3.1.0/lt/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/lt.png" alt="Flag for Lithuanian"/></a></li>
           <li><a href="/3.1.0/nb/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nb.png" alt="Flag for Norwegian Bokmal"/></a></li>
           <li><a href="/3.1.0/nl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nl.png" alt="Flag for Dutch"/></a></li>
           <li><a href="/3.1.0/pl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pl.png" alt="Flag for Polish"/></a></li>
@@ -537,28 +539,28 @@
                   
   <div class="section" id="setting-up-intellij-idea">
 <h1>Setting Up IntelliJ IDEA<a class="headerlink" href="#setting-up-intellij-idea" title="Link a questa intestazione">¶</a></h1>
-<p>This article describes how to configure your <strong>IntelliJ IDEA</strong> workspace for plugin development with the Sponge API.</p>
+<p>Questo articolo descrive come configurare la tua area di lavoro <strong>Intellij IDEA</strong> per lo sviluppo di plugin con le API di Sponge.</p>
 <div class="section" id="starting-your-project">
 <h2>Starting Your Project<a class="headerlink" href="#starting-your-project" title="Link a questa intestazione">¶</a></h2>
-<p>We recommend using Gradle or Maven when developing plugins with the Sponge API. Gradle and Maven help significantly when
-managing dependencies, such as the Sponge API, for your project. This is preferable to including the <code class="docutils literal"><span class="pre">.jar</span></code> file in
-your project.</p>
+<p>Noi raccomandamo l&#8217;uso di Gradle o Maven quando si sviluppano i plugin con l&#8217;API Sponge. Gradle and Mave aiutano significamente quando si gestiscono le dipendenze, come Sponge Api, per il tuo progetto. E&#8217; preferibile includere il <code class="docutils literal"><span class="pre">.jar</span></code> file nel tuo progetto.</p>
 <div class="section" id="gradle">
 <h3>Gradle<a class="headerlink" href="#gradle" title="Link a questa intestazione">¶</a></h3>
-<p><strong>To create your project:</strong></p>
+<p><strong>Per creare il tuo progetto:</strong></p>
 <ul class="simple">
 <li>Open <strong>IntelliJ IDEA</strong>.</li>
 <li>Click <code class="docutils literal"><span class="pre">Create</span> <span class="pre">New</span> <span class="pre">Project</span></code>.</li>
 <li>Select <code class="docutils literal"><span class="pre">Gradle</span></code> in the popup, and click <code class="docutils literal"><span class="pre">Next</span></code>.</li>
 <li>Enter your <strong>Group ID</strong>, <strong>Artifact ID</strong>, and <strong>Version</strong>.<ul>
-<li>Your <strong>Group ID</strong> should correspond to your organization name, or something similar.</li>
-<li>Your <strong>Artifact ID</strong> should correspond to your project name.</li>
+<li><p class="first">Il tuo <strong>Group ID</strong> deve corrispondere al nome della tua organizzazione, o qualcosa di simile.</p>
+</li>
+<li><p class="first">Il tuo <strong>Artifact ID</strong> deve corrispondere al nome del tuo progetto.</p>
+</li>
 <li>Your <strong>Version</strong> is up to you.</li>
 </ul>
 </li>
 <li>Click <code class="docutils literal"><span class="pre">Next</span></code> twice, name your project, and click <code class="docutils literal"><span class="pre">Finish</span></code>.</li>
 </ul>
-<p><strong>To import the Sponge API as a dependency:</strong></p>
+<p><strong>Per importare le API di Sponge come dipendenza</strong></p>
 <ul class="simple">
 <li>Open <code class="docutils literal"><span class="pre">build.gradle</span></code> in the navigator and add the dependencies.</li>
 <li>Have a look at the <a class="reference internal" href="dependencies.html"><em>dependencies page</em></a> for an example Gradle file.</li>
@@ -568,21 +570,23 @@ your project.</p>
 </div>
 <div class="section" id="maven">
 <h3>Maven<a class="headerlink" href="#maven" title="Link a questa intestazione">¶</a></h3>
-<p><strong>To create your project:</strong></p>
+<p><strong>Per creare il tuo progetto:</strong></p>
 <ul class="simple">
 <li>Open <strong>IntelliJ IDEA</strong>.</li>
 <li>Click <code class="docutils literal"><span class="pre">Create</span> <span class="pre">New</span> <span class="pre">Project</span></code>.</li>
 <li>Select <code class="docutils literal"><span class="pre">Maven</span></code> in the popup, and click <code class="docutils literal"><span class="pre">Next</span></code>.</li>
 <li>Enter your <strong>Group ID</strong>, <strong>Artifact ID</strong>, and <strong>Version</strong>.<ul>
-<li>Your <strong>Group ID</strong> should correspond to your organization name, or something similar.</li>
-<li>Your <strong>Artifact ID</strong> should correspond to your project name.</li>
+<li><p class="first">Il tuo <strong>Group ID</strong> deve corrispondere al nome della tua organizzazione, o qualcosa di simile.</p>
+</li>
+<li><p class="first">Il tuo <strong>Artifact ID</strong> deve corrispondere al nome del tuo progetto.</p>
+</li>
 <li>Your <strong>Version</strong> is up to you.</li>
 </ul>
 </li>
 <li>Click <code class="docutils literal"><span class="pre">Next</span></code>.</li>
 <li>Enter your project&#8217;s name, and click <code class="docutils literal"><span class="pre">Finish</span></code>.</li>
 </ul>
-<p><strong>To import the Sponge API as a dependency:</strong></p>
+<p><strong>Per importare le API di Sponge come dipendenza</strong></p>
 <ul class="simple">
 <li>Open <code class="docutils literal"><span class="pre">pom.xml</span></code> in the navigator.</li>
 <li>With the editor tab in focus, choose <code class="docutils literal"><span class="pre">Code</span> <span class="pre">&gt;</span> <span class="pre">Generate</span></code>.</li>

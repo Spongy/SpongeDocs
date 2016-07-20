@@ -59,6 +59,7 @@
   <link rel="alternate" hreflang="it" href="/3.1.0/it/">
   <link rel="alternate" hreflang="ja" href="/3.1.0/ja/">
   <link rel="alternate" hreflang="ko" href="/3.1.0/ko/">
+  <link rel="alternate" hreflang="lt" href="/3.1.0/lt/">
   <link rel="alternate" hreflang="nb" href="/3.1.0/nb/">
   <link rel="alternate" hreflang="nl" href="/3.1.0/nl/">
   <link rel="alternate" hreflang="pl" href="/3.1.0/pl/">
@@ -105,6 +106,7 @@
           <li><a href="/3.1.0/it/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/it.png" alt="Flag for Italian"/></a></li>
           <li><a href="/3.1.0/ja/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ja.png" alt="Flag for Japanese"/></a></li>
           <li><a href="/3.1.0/ko/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ko.png" alt="Flag for Korean"/></a></li>
+          <li><a href="/3.1.0/lt/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/lt.png" alt="Flag for Lithuanian"/></a></li>
           <li><a href="/3.1.0/nb/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nb.png" alt="Flag for Norwegian Bokmal"/></a></li>
           <li><a href="/3.1.0/nl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nl.png" alt="Flag for Dutch"/></a></li>
           <li><a href="/3.1.0/pl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pl.png" alt="Flag for Polish"/></a></li>
@@ -376,7 +378,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../blocks/modifying.html">ブロックの改変</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">Working with Tile Entities</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">タイルエンティティの操作</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -546,7 +548,7 @@ it&#8217;s used throughout the Sponge API.</p>
 use of <code class="docutils literal"><span class="pre">Optional</span></code>.</p>
 <div class="section" id="implicit-nullable-contracts-and-why-they-suck">
 <h2>1. Implicit Nullable Contracts and Why They Suck<a class="headerlink" href="#implicit-nullable-contracts-and-why-they-suck" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Let&#8217;s say we have a simple API object <code class="docutils literal"><span class="pre">Entity</span></code> with a <code class="docutils literal"><span class="pre">getFoo()</span></code> method which returns the Entity&#8217;s <code class="docutils literal"><span class="pre">Foo</span></code>.</p>
+<p>自身の <code class="docutils literal"><span class="pre">Foo</span></code> を返す <code class="docutils literal"><span class="pre">getFoo()</span></code> メソッドを持つ <code class="docutils literal"><span class="pre">Entity</span></code> API オブジェクトがあるとします。</p>
 <img alt="../../_images/optionals1.png" src="../../_images/optionals1.png" />
 <p>In the olden times of yore, our plugin might fetch and use the <code class="docutils literal"><span class="pre">Foo</span></code> from the entity using the <code class="docutils literal"><span class="pre">getter</span></code> like this:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">someEventHandler</span><span class="o">(</span><span class="n">Entity</span> <span class="n">someEntity</span><span class="o">)</span> <span class="o">{</span>
@@ -625,7 +627,7 @@ any time for any reason in any way imaginable; up to and including being removed
 <img alt="../../_images/optionals3.png" src="../../_images/optionals3.png" />
 <p>By encoding the possibility of returning <code class="docutils literal"><span class="pre">null</span></code> into an explicit contract, we replace the concept of
 <em>null checking</em> with the more nuanced concept of <em>may not exist</em>. We also stipulate this contract <em>from day one</em>.</p>
-<p>So what does this mean?</p>
+<p>どういう意味ですか？</p>
 <p>In a nutshell, no longer do plugin authors have to worry about the possibility of <code class="docutils literal"><span class="pre">null</span></code> being returned. Instead the
 very possibility of a particular object not being available becomes encoded in the very fabric of their plugin code.
 This has the same level of inherent safety as constantly performing null-checks, but with the benefit of much more

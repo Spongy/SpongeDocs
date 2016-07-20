@@ -33,7 +33,7 @@
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 3.1.0 Dokumentation" href="../../index.html" />
-        <link rel="up" title="Working with Items" href="index.html" />
+        <link rel="up" title="Arbeiten mit Items" href="index.html" />
         <link rel="next" title="Dependency Injection" href="../injection.html" />
         <link rel="prev" title="Basic Item Usage" href="usage.html" />
     
@@ -59,6 +59,7 @@
   <link rel="alternate" hreflang="it" href="/3.1.0/it/">
   <link rel="alternate" hreflang="ja" href="/3.1.0/ja/">
   <link rel="alternate" hreflang="ko" href="/3.1.0/ko/">
+  <link rel="alternate" hreflang="lt" href="/3.1.0/lt/">
   <link rel="alternate" hreflang="nb" href="/3.1.0/nb/">
   <link rel="alternate" hreflang="nl" href="/3.1.0/nl/">
   <link rel="alternate" hreflang="pl" href="/3.1.0/pl/">
@@ -105,6 +106,7 @@
           <li><a href="/3.1.0/it/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/it.png" alt="Flag for Italian"/></a></li>
           <li><a href="/3.1.0/ja/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ja.png" alt="Flag for Japanese"/></a></li>
           <li><a href="/3.1.0/ko/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ko.png" alt="Flag for Korean"/></a></li>
+          <li><a href="/3.1.0/lt/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/lt.png" alt="Flag for Lithuanian"/></a></li>
           <li><a href="/3.1.0/nb/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nb.png" alt="Flag for Norwegian Bokmal"/></a></li>
           <li><a href="/3.1.0/nl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nl.png" alt="Flag for Dutch"/></a></li>
           <li><a href="/3.1.0/pl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pl.png" alt="Flag for Polish"/></a></li>
@@ -154,7 +156,7 @@
         <ul>
         <li><a href="../../index.html">Sponge 3.1.0 Dokumentation</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >Plugins erstellen</a><i class="fa fa-fw fa-chevron-right"></i></li>
-        <li><a href="index.html" accesskey="U">Working with Items</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="index.html" accesskey="U">Arbeiten mit Items</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
     <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -324,7 +326,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Working with Events</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Arbeiten mit Events</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -334,7 +336,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Event Filters</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Creating Custom Events</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Eigene Events Erstellen</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -388,7 +390,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Working with Items</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Arbeiten mit Items</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="usage.html">Basic Item Usage</a><ul class="simple">
 </ul>
 </li>
@@ -628,10 +630,8 @@ graphical representation of an <code class="docutils literal"><span class="pre">
 </div>
 <div class="admonition warning">
 <p class="first admonition-title">Warnung</p>
-<p>Note that as of API 3.0, <code class="docutils literal"><span class="pre">SpawnCause</span></code> is NOT implemented. Until then, you will need to specify some other cause,
-such as a <code class="docutils literal"><span class="pre">CommandSource</span></code> or a <code class="docutils literal"><span class="pre">Player</span></code>. If you cannot find one that would suit your needs, simply specify your
-main plugin instance as the <code class="docutils literal"><span class="pre">Cause</span></code>. Here is an example of specifying a <code class="docutils literal"><span class="pre">CommandSource</span></code> as the <code class="docutils literal"><span class="pre">Cause</span></code>:</p>
-<p><code class="docutils literal"><span class="pre">extent.spawnEntity(item,</span> <span class="pre">Cause.of(src));</span></code></p>
+<p>Beachte bitte, dass &#8220;SpawnCause&#8221; ab API 3.0 NICHT mehr implementiert ist. Du musst vorübergehend einen anderen Auslöser (&#8220;Trigger&#8221;) nutzen, wie zum Beispiel &#8220;CommandSource&#8221; oder &#8220;Player&#8221;. Wenn du keinen für deine Zwecke benötigten Auslöser (&#8220;Trigger&#8221;) findest, kannst du die Plugininstanz als Auslöser (&#8220;Trigger&#8221;) benutzen. Hier ist ein Beispiel, bei dem &#8220;CommandSource&#8221; als &#8220;Auslöser (&#8220;Trigger&#8221;)&#8221; genutzt wird:</p>
+<p>&#8220;extent.spawnEntity(item, Cause.of(src));&#8221;</p>
 <p class="last">Werfe einen Blick auf die <a class="reference internal" href="../event/causes.html"><em>Cause Dokumentation</em></a> für weitere Informationen.</p>
 </div>
 </div>

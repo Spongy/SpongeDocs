@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Установка среды Eclipse &mdash; Документация Sponge 3.1.0</title>
+     <title>Настройка Eclipse &mdash; Документация Sponge 3.1.0</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -59,6 +59,7 @@
   <link rel="alternate" hreflang="it" href="/3.1.0/it/">
   <link rel="alternate" hreflang="ja" href="/3.1.0/ja/">
   <link rel="alternate" hreflang="ko" href="/3.1.0/ko/">
+  <link rel="alternate" hreflang="lt" href="/3.1.0/lt/">
   <link rel="alternate" hreflang="nb" href="/3.1.0/nb/">
   <link rel="alternate" hreflang="nl" href="/3.1.0/nl/">
   <link rel="alternate" hreflang="pl" href="/3.1.0/pl/">
@@ -105,6 +106,7 @@
           <li><a href="/3.1.0/it/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/it.png" alt="Flag for Italian"/></a></li>
           <li><a href="/3.1.0/ja/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ja.png" alt="Flag for Japanese"/></a></li>
           <li><a href="/3.1.0/ko/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ko.png" alt="Flag for Korean"/></a></li>
+          <li><a href="/3.1.0/lt/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/lt.png" alt="Flag for Lithuanian"/></a></li>
           <li><a href="/3.1.0/nb/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nb.png" alt="Flag for Norwegian Bokmal"/></a></li>
           <li><a href="/3.1.0/nl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nl.png" alt="Flag for Dutch"/></a></li>
           <li><a href="/3.1.0/pl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pl.png" alt="Flag for Polish"/></a></li>
@@ -181,8 +183,8 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/implementations/index.html">Выбор реализации</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">Installing SpongeForge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">Установка SpongeForge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">Установка SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/launch-script.html">Создание сценария (скрипта) запуска</a><ul class="simple">
@@ -203,7 +205,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../server/management/index.html">Управление сервером</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../server/management/whitelist.html">Управление WhiteList</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../server/management/bans.html">Управление Банами.</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../server/management/bans.html">Управление банами</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/management/permissions.html">Управление правами игроков</a><ul class="simple">
 </ul>
 </li>
@@ -257,7 +259,7 @@
 <li class="toctree-l3"><a class="reference internal" href="idea.html">Настройка IntelliJ IDEA</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Установка среды Eclipse</a><ul class="simple">
+<li class="toctree-l3 current"><a class="current reference internal" href="">Настройка Eclipse</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="netbeans.html">Настройка NetBeans</a><ul class="simple">
@@ -281,11 +283,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../lifecycle.html">Жизненный цикл плагина</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../optional/index.html">Optionals</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../optional/index.html">Дополнительно</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../optional/basic.html">Optionals Explained</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../optional/usage.html">Usage Examples</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../optional/usage.html">Примеры использования</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -294,20 +296,20 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../text/index.html">Работа с текстом</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../text/text.html">Creating Text</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../text/text.html">Создание текста</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../text/representations/index.html">Text Serializers</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/xml.html">TextXML Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../text/representations/json.html">JSON Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../text/representations/json.html">Формат JSON</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Configuration Format</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">The Pagination Service</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Working with TextTemplates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Работа с TextTemplates</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Создание команд</a><ul>
@@ -324,7 +326,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Working with Events</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Работа с событиями</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -352,10 +354,10 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../data/index.html">The Data API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../data/keys.html">Using Keys</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../data/keys.html">Использование ключей</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../data/datamanipulators.html">Data Manipulators</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../data/datamanipulators.html">Манипуляторы данных</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../data/transactions.html">Транзакции</a><ul class="simple">
@@ -382,7 +384,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../entities/index.html">Работа с Entity</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../entities/spawning.html">Спавн Entity</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../entities/spawning.html">Спавн Сущности</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../entities/modifying.html">Modifying an Entity</a><ul class="simple">
 </ul>
 </li>
@@ -392,7 +394,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../items/usage.html">Basic Item Usage</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../items/creating.html">Creating an ItemStack</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../items/creating.html">Создание ItemStack</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -408,7 +410,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../permissions.html">Работа с Permissions API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../economy/index.html">The Economy API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../economy/basics.html">Basic Concepts</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../economy/basics.html">Основные понятия</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../economy/using.html">Using the Economy API</a><ul class="simple">
@@ -425,8 +427,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../services.html">Работа с сервисами</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../wgen/index.html">World Generation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../wgen/modifiers.html">Working with WorldGeneratorModifiers</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../wgen/index.html">Генерация мира</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../wgen/modifiers.html">Работа с WorldGeneratorModifiers</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../wgen/customwgen.html">Модифицирование генерации мира</a><ul class="simple">
@@ -446,7 +448,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../ray-tracing.html">Ray Tracing</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorials.html">Обучение</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../tutorials.html">Туториалы</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -520,7 +522,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../downloads.html">Скачать</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="../../downloads.html">Загрузки</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -536,18 +538,18 @@
                 <div class="body" role="main">
                   
   <div class="section" id="setting-up-eclipse">
-<h1>Установка среды Eclipse<a class="headerlink" href="#setting-up-eclipse" title="Ссылка на этот заголовок">¶</a></h1>
-<p>This article describes how to configure your <strong>Eclipse</strong> workspace for plugin development with the Sponge API.</p>
+<h1>Настройка Eclipse<a class="headerlink" href="#setting-up-eclipse" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Эта статья рассказывает о том, как настроить ваше рабочее пространство <strong>Eclipse</strong> для разработки плагинов со SpongeAPI.</p>
 <div class="section" id="starting-your-project">
 <h2>Начиная Свой Проект<a class="headerlink" href="#starting-your-project" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Мы рекомендуем использовать Gradle или Maven при разработке плагинов Sponge API. Gradle и Maven существенно помогают при управлении зависимостями в Вашем проекте, такими как Sponge API. Желательно, добавить файл <code class="docutils literal"><span class="pre">.jar</span></code> в Ваш проект.</p>
 <div class="section" id="gradle">
 <h3>Gradle<a class="headerlink" href="#gradle" title="Ссылка на этот заголовок">¶</a></h3>
 <p><strong>Чтобы создать проект:</strong></p>
-<p>Необходимо сначала установить <strong>Gradle Integration Plugin</strong> перед использованием Gradle в Eclipse. Это необходимо сделать перед созданием вашего первого проекта.</p>
+<p>Для начала Вы должны установить <strong>Gradle Integration Plugin</strong> перед использованием Gradle в Eclipse. Это необходимо сделать перед созданием Вашего первого проекта.</p>
 <div class="admonition note">
 <p class="first admonition-title">Примечание</p>
-<p class="last">Как правило, не требуется никаких дополнительных модулей, которые поставляются вместе с Gradle, так что вы можете снять флажки выбора плагинов во время установки.</p>
+<p class="last">Как правило, не требуется никаких дополнительных модулей, которые поставляются вместе с Gradle, так что Вы можете снять флажки выбора плагинов во время установки.</p>
 </div>
 <ul class="simple">
 <li><p class="first">Откройте <strong>Eclipse</strong>.</p>
@@ -559,7 +561,7 @@
 <li><p class="first">Установите <strong>Gradle Integration Plugin</strong>.</p>
 </li>
 </ul>
-<p>Затем, Вы можете перейти к созданию вашего проекта.</p>
+<p>Затем Вы можете перейти к созданию вашего проекта.</p>
 <ul class="simple">
 <li><p class="first">Нажмите  <code class="docutils literal"><span class="pre">File</span> <span class="pre">&gt;</span> <span class="pre">New</span> <span class="pre">&gt;</span> <span class="pre">Other</span></code>.</p>
 </li>

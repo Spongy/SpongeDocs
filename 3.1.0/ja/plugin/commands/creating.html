@@ -59,6 +59,7 @@
   <link rel="alternate" hreflang="it" href="/3.1.0/it/">
   <link rel="alternate" hreflang="ja" href="/3.1.0/ja/">
   <link rel="alternate" hreflang="ko" href="/3.1.0/ko/">
+  <link rel="alternate" hreflang="lt" href="/3.1.0/lt/">
   <link rel="alternate" hreflang="nb" href="/3.1.0/nb/">
   <link rel="alternate" hreflang="nl" href="/3.1.0/nl/">
   <link rel="alternate" hreflang="pl" href="/3.1.0/pl/">
@@ -105,6 +106,7 @@
           <li><a href="/3.1.0/it/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/it.png" alt="Flag for Italian"/></a></li>
           <li><a href="/3.1.0/ja/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ja.png" alt="Flag for Japanese"/></a></li>
           <li><a href="/3.1.0/ko/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ko.png" alt="Flag for Korean"/></a></li>
+          <li><a href="/3.1.0/lt/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/lt.png" alt="Flag for Lithuanian"/></a></li>
           <li><a href="/3.1.0/nb/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nb.png" alt="Flag for Norwegian Bokmal"/></a></li>
           <li><a href="/3.1.0/nl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nl.png" alt="Flag for Dutch"/></a></li>
           <li><a href="/3.1.0/pl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pl.png" alt="Flag for Polish"/></a></li>
@@ -376,7 +378,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../blocks/modifying.html">ブロックの改変</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">Working with Tile Entities</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">タイルエンティティの操作</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -557,7 +559,7 @@
 </div>
 </div>
 <div class="section" id="overview-of-the-commandspec-builder-methods">
-<h2>Overview of the CommandSpec builder methods<a class="headerlink" href="#overview-of-the-commandspec-builder-methods" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>CommandSpec ビルダーメソッドの概要<a class="headerlink" href="#overview-of-the-commandspec-builder-methods" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <table border="1" class="docutils">
 <colgroup>
 <col width="19%" />
@@ -577,7 +579,8 @@
 </td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">arguments</span></code></td>
-<td>Sets the argument specification for this command (See <a class="reference internal" href="arguments.html"><em>引数のパース</em></a>).</td>
+<td><p class="first last">このコマンドの引数の仕様を設定します(<a class="reference internal" href="arguments.html"><em>引数のパース</em></a> を参照してください)。</p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">permission</span></code></td>
 <td>Set the permission that will be checked before using this command.</td>
@@ -645,7 +648,7 @@ define the command executor in the command build process (See the example in the
 <div class="section" id="player-only-commands">
 <h2>プレイヤーオンリーコマンド<a class="headerlink" href="#player-only-commands" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>Sometimes it is neccessary that only players can execute a command (e.g. a <code class="docutils literal"><span class="pre">/suicide</span></code> command).</p>
-<p>Perform an <code class="docutils literal"><span class="pre">instanceof</span></code> check to determine the type of the <code class="docutils literal"><span class="pre">CommandSource</span></code>:</p>
+<p><code class="docutils literal"><span class="pre">CommandSource</span></code> の型を決定するために <code class="docutils literal"><span class="pre">instanceof</span></code> チェックを実行します。</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.entity.living.player.Player</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.command.source.CommandBlockSource</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.command.source.ConsoleSource</span><span class="o">;</span>
@@ -671,7 +674,7 @@ define the command executor in the command build process (See the example in the
 <p class="last">The easiest solution for this is to append a <code class="docutils literal"><span class="pre">playerOrSource</span></code> command element (See <a class="reference internal" href="arguments.html"><em>引数のパース</em></a>).</p>
 </div>
 <div class="section" id="command-results">
-<h3>Command Results<a class="headerlink" href="#command-results" title="このヘッドラインへのパーマリンク">¶</a></h3>
+<h3>コマンドの結果<a class="headerlink" href="#command-results" title="このヘッドラインへのパーマリンク">¶</a></h3>
 <p>The <code class="docutils literal"><span class="pre">CommandExecutor::execute()</span></code> method must always return a <code class="docutils literal"><span class="pre">CommandResult</span></code>. In most cases it is sufficient to
 return <code class="docutils literal"><span class="pre">CommandResult.success()</span></code> if the command was successful or <code class="docutils literal"><span class="pre">CommandResult.empty()</span></code> if it wasn&#8217;t. In cases
 where more information needs to be conveyed, a <code class="docutils literal"><span class="pre">CommandResult.builder()</span></code> should be used. It provides the methods
@@ -684,7 +687,7 @@ consisting of multiple command blocks. A tutorial how the data is accessed can b
 </div>
 </div>
 <div class="section" id="example-building-a-commandresult">
-<h2>Example: Building a CommandResult<a class="headerlink" href="#example-building-a-commandresult" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>CommandResult の作成<a class="headerlink" href="#example-building-a-commandresult" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">CommandResult</span> <span class="n">result</span> <span class="o">=</span> <span class="n">CommandResult</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
     <span class="o">.</span><span class="na">affectedEntities</span><span class="o">(</span><span class="mi">42</span><span class="o">)</span>
     <span class="o">.</span><span class="na">successCount</span><span class="o">(</span><span class="mi">1</span><span class="o">)</span>

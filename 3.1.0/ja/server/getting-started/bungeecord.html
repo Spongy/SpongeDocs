@@ -59,6 +59,7 @@
   <link rel="alternate" hreflang="it" href="/3.1.0/it/">
   <link rel="alternate" hreflang="ja" href="/3.1.0/ja/">
   <link rel="alternate" hreflang="ko" href="/3.1.0/ko/">
+  <link rel="alternate" hreflang="lt" href="/3.1.0/lt/">
   <link rel="alternate" hreflang="nb" href="/3.1.0/nb/">
   <link rel="alternate" hreflang="nl" href="/3.1.0/nl/">
   <link rel="alternate" hreflang="pl" href="/3.1.0/pl/">
@@ -105,6 +106,7 @@
           <li><a href="/3.1.0/it/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/it.png" alt="Flag for Italian"/></a></li>
           <li><a href="/3.1.0/ja/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ja.png" alt="Flag for Japanese"/></a></li>
           <li><a href="/3.1.0/ko/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ko.png" alt="Flag for Korean"/></a></li>
+          <li><a href="/3.1.0/lt/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/lt.png" alt="Flag for Lithuanian"/></a></li>
           <li><a href="/3.1.0/nb/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nb.png" alt="Flag for Norwegian Bokmal"/></a></li>
           <li><a href="/3.1.0/nl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nl.png" alt="Flag for Dutch"/></a></li>
           <li><a href="/3.1.0/pl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pl.png" alt="Flag for Polish"/></a></li>
@@ -376,7 +378,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/modifying.html">ブロックの改変</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/tileentities.html">Working with Tile Entities</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/tileentities.html">タイルエンティティの操作</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -558,7 +560,7 @@ your servers, consider consulting with someone who has more experience to ensure
 out of your server!</p>
 </div>
 <div class="section" id="ip-forwarding">
-<h2>IP Forwarding<a class="headerlink" href="#ip-forwarding" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>IP フォワーディング<a class="headerlink" href="#ip-forwarding" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>BungeeCord has a mode called IP Forwarding, which allows BungeeCord to pass the player&#8217;s UUID and IP address to any
 connected server, even though the servers are being run in offline mode. With current builds of BungeeCord, IP
 Forwarding works with SpongeVanilla, whilst IP Forwarding only supports SpongeForge when vanilla clients connect -
@@ -573,7 +575,7 @@ to be included in the main product:</p>
 </ul>
 </div>
 <div class="section" id="using-bungeecord-without-ip-forwarding">
-<h2>Using BungeeCord without IP Forwarding<a class="headerlink" href="#using-bungeecord-without-ip-forwarding" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>IP フォワーディングなしでの BungeeCord の使用<a class="headerlink" href="#using-bungeecord-without-ip-forwarding" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>While it is recommended that you use IP Forwarding wherever possible. If you do not wish to do so, simply ensure that
 <code class="docutils literal"><span class="pre">online-mode</span></code> is set to <code class="docutils literal"><span class="pre">false</span></code> in your <code class="docutils literal"><span class="pre">server.properties</span></code> file and add the server details to Bungee&#8217;s
 <code class="docutils literal"><span class="pre">config.yml</span></code> file. Bungee will then forward any connections to the server when required. It is a good precaution to
@@ -581,7 +583,7 @@ set the <code class="docutils literal"><span class="pre">server-port</span></cod
 <p>This will work with all implementations of Sponge, including with mods.</p>
 </div>
 <div class="section" id="using-bungeecord-with-ip-forwarding">
-<h2>Using BungeeCord with IP Forwarding<a class="headerlink" href="#using-bungeecord-with-ip-forwarding" title="このヘッドラインへのパーマリンク">¶</a></h2>
+<h2>IP フォワーディングを用いた BungeeCord の使用<a class="headerlink" href="#using-bungeecord-with-ip-forwarding" title="このヘッドラインへのパーマリンク">¶</a></h2>
 <p>If you wish to use IP Forwarding:</p>
 <ul class="simple">
 <li>In the BungeeCord <code class="docutils literal"><span class="pre">config.yml</span></code>, set <code class="docutils literal"><span class="pre">ip_forward</span></code> to <code class="docutils literal"><span class="pre">true</span></code></li>

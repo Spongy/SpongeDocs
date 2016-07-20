@@ -59,6 +59,7 @@
   <link rel="alternate" hreflang="it" href="/3.1.0/it/">
   <link rel="alternate" hreflang="ja" href="/3.1.0/ja/">
   <link rel="alternate" hreflang="ko" href="/3.1.0/ko/">
+  <link rel="alternate" hreflang="lt" href="/3.1.0/lt/">
   <link rel="alternate" hreflang="nb" href="/3.1.0/nb/">
   <link rel="alternate" hreflang="nl" href="/3.1.0/nl/">
   <link rel="alternate" hreflang="pl" href="/3.1.0/pl/">
@@ -105,6 +106,7 @@
           <li><a href="/3.1.0/it/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/it.png" alt="Flag for Italian"/></a></li>
           <li><a href="/3.1.0/ja/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ja.png" alt="Flag for Japanese"/></a></li>
           <li><a href="/3.1.0/ko/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ko.png" alt="Flag for Korean"/></a></li>
+          <li><a href="/3.1.0/lt/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/lt.png" alt="Flag for Lithuanian"/></a></li>
           <li><a href="/3.1.0/nb/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nb.png" alt="Flag for Norwegian Bokmal"/></a></li>
           <li><a href="/3.1.0/nl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nl.png" alt="Flag for Dutch"/></a></li>
           <li><a href="/3.1.0/pl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pl.png" alt="Flag for Polish"/></a></li>
@@ -537,12 +539,8 @@
                   
   <div class="section" id="creating-an-itemstack">
 <h1>Création d&#8217;un ItemStack<a class="headerlink" href="#creating-an-itemstack" title="Lien permanent vers ce titre">¶</a></h1>
-<p>If you want to create your own items, you need to go through several steps. Let&#8217;s go through a basic example and create
-an enchanted diamond sword.</p>
-<p>To create an <code class="docutils literal"><span class="pre">ItemStack</span></code>, we need to first grab the builder from the <code class="docutils literal"><span class="pre">ItemStack</span></code>. This is done with the
-<code class="docutils literal"><span class="pre">ItemStack.builder()</span></code> method. In the builder, we can specify things such as the <code class="docutils literal"><span class="pre">ItemType</span></code> or the quantity of the
-item. In our example, we will be creating a diamond sword that contains enchantments, a custom name, and is
-unbreakable. If you want a plain sword without any other data, then this is all you need to do:</p>
+<p>Si vous voulez créé vos propres items, vous avez besoin de passez par plusieurs étapes importantes. Voyons cela à travers un exemple basic et la création d&#8217;un épée en diamant enchantée.</p>
+<p>Pour créer un <code class="docutils literal"><span class="pre">ItemStack</span></code>, nous avons besoin dans un premier temps d&#8217;utiliser le builder lié à la méthode <code class="docutils literal"><span class="pre">ItemStack.builder()</span></code>. Dedans, on peux spécifié des donnés comme l&#8217;<code class="docutils literal"><span class="pre">ItemType</span></code> ou la quantité de celui ci. Dans notre exemple, nous allons créer une épée en diamant qui contient des enchantements, un nom custom, ainsi que la propriété d&#8217;être indestructible. Si vous voulez une épée simple sans aucune donnés supplémentaires, voici ci que vous avez besoin de faire :</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.item.ItemTypes</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.item.inventory.ItemStack</span><span class="o">;</span>
 

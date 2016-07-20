@@ -59,6 +59,7 @@
   <link rel="alternate" hreflang="it" href="/3.1.0/it/">
   <link rel="alternate" hreflang="ja" href="/3.1.0/ja/">
   <link rel="alternate" hreflang="ko" href="/3.1.0/ko/">
+  <link rel="alternate" hreflang="lt" href="/3.1.0/lt/">
   <link rel="alternate" hreflang="nb" href="/3.1.0/nb/">
   <link rel="alternate" hreflang="nl" href="/3.1.0/nl/">
   <link rel="alternate" hreflang="pl" href="/3.1.0/pl/">
@@ -105,6 +106,7 @@
           <li><a href="/3.1.0/it/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/it.png" alt="Flag for Italian"/></a></li>
           <li><a href="/3.1.0/ja/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ja.png" alt="Flag for Japanese"/></a></li>
           <li><a href="/3.1.0/ko/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ko.png" alt="Flag for Korean"/></a></li>
+          <li><a href="/3.1.0/lt/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/lt.png" alt="Flag for Lithuanian"/></a></li>
           <li><a href="/3.1.0/nb/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nb.png" alt="Flag for Norwegian Bokmal"/></a></li>
           <li><a href="/3.1.0/nl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nl.png" alt="Flag for Dutch"/></a></li>
           <li><a href="/3.1.0/pl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pl.png" alt="Flag for Polish"/></a></li>
@@ -376,7 +378,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/modifying.html">ブロックの改変</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/tileentities.html">Working with Tile Entities</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/tileentities.html">タイルエンティティの操作</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -552,14 +554,17 @@ few additions and modifications, which are described herein.</p>
 </li>
 </ul>
 </li>
-<li>Column width<ul>
+<li><p class="first">行の文字数</p>
+<ul>
 <li>80 for Javadocs</li>
 <li>150 for code</li>
 <li>Feel free to wrap when it will help with readability</li>
 </ul>
 </li>
-<li>Indentation<ul>
-<li>Use 4 spaces for indentations, do not use 2 spaces</li>
+<li><p class="first">インデント</p>
+<ul>
+<li><p class="first">インデントには2スペースではなく、4スペースを使用します。</p>
+</li>
 </ul>
 </li>
 <li>Vertical whitespace<ul>
@@ -567,12 +572,14 @@ few additions and modifications, which are described herein.</p>
 well as after the last member</li>
 </ul>
 </li>
-<li>File headers<ul>
+<li><p class="first">ファイルヘッダー</p>
+<ul>
 <li>File headers must contain the license headers for the project. Use the <code class="docutils literal"><span class="pre">licenseFormat</span></code> Gradle task to add them
 automatically.</li>
 </ul>
 </li>
-<li>Imports<ul>
+<li><p class="first">インポート</p>
+<ul>
 <li>Imports must be grouped in the following order, where each group is separated by an empty line<ul>
 <li>Static imports</li>
 <li>All other imports</li>
@@ -583,7 +590,8 @@ automatically.</li>
 <li>This differs from Google&#8217;s style in that imports are not grouped by top-level package, they are all grouped as one.</li>
 </ul>
 </li>
-<li>Exceptions<ul>
+<li><p class="first">例外</p>
+<ul>
 <li>For exceptions that are to be ignored, name the exception variable <code class="docutils literal"><span class="pre">ignored</span></code></li>
 </ul>
 </li>
@@ -592,7 +600,8 @@ automatically.</li>
 </ul>
 </li>
 <li>Javadocs<ul>
-<li>Do not use <code class="docutils literal"><span class="pre">&#64;author</span></code></li>
+<li><p class="first"><code class="docutils literal"><span class="pre">&#64;author</span></code> を使用しないでください。</p>
+</li>
 <li>Wrap additional paragraphs in <code class="docutils literal"><span class="pre">&lt;p&gt;</span></code> and <code class="docutils literal"><span class="pre">&lt;/p&gt;</span></code></li>
 <li>Capitalize the first letter in the descriptions within each &#8220;at clause&#8221;, i.e. <code class="docutils literal"><span class="pre">&#64;param</span> <span class="pre">name</span> <span class="pre">Player</span> <span class="pre">to</span> <span class="pre">affect</span></code>, no
 periods</li>
@@ -606,8 +615,8 @@ periods</li>
 <code class="docutils literal"><span class="pre">null</span></code> in the API</li>
 <li>Method parameters accepting <code class="docutils literal"><span class="pre">null</span></code> must be annotated with <code class="docutils literal"><span class="pre">&#64;Nullable</span></code> (from javax.*), all methods and parameters
 are <code class="docutils literal"><span class="pre">&#64;Nonnull</span></code> by default.</li>
-<li>Use <a class="reference external" href="https://code.google.com/p/guava-libraries/wiki/PreconditionsExplained">Google Preconditions</a> for null- and
-argument checking.</li>
+<li><p class="first">null と引数チェックには <a class="reference external" href="https://code.google.com/p/guava-libraries/wiki/PreconditionsExplained">Google Preconditions</a> を使用します。</p>
+</li>
 </ul>
 </div>
 <div class="section" id="the-gist">
