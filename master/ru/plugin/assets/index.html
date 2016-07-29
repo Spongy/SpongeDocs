@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>The Asset API &mdash; Документация Sponge 4.1.0</title>
+     <title>API ресурсов &mdash; Документация Sponge 4.1.0</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -257,7 +257,7 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Создание плагина</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../buildsystem.html">Build Systems</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../buildsystem.html">Система сборки</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../workspace/index.html">Подготовка рабочего пространства</a><ul>
@@ -304,7 +304,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Команды</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../commands/creating.html">Building a Command</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../commands/creating.html">Создание команды</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/arguments.html">Парсинг аргументов</a><ul class="simple">
@@ -314,7 +314,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/childcommands.html">Дочерние Команды</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/service.html">Командный менеджер</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commands/service.html">Менеджер команд</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/commandcallable.html">Low-Level Command API</a><ul class="simple">
 </ul>
 </li>
@@ -335,7 +335,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">The Asset API</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="">API ресурсов</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">Configuring Plugins</a><ul>
@@ -385,7 +385,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../blocks/index.html">Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../blocks/index.html">Блоки</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../blocks/concepts.html">Концепты</a><ul class="simple">
 </ul>
 </li>
@@ -422,7 +422,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../effects.html">Эффекты</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Scheduler</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Планировщик</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../services.html">Сервисы</a><ul class="simple">
@@ -432,7 +432,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../permissions.html">Разрешения</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../bans.html">Баны</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../bans.html">Блокировки</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../bookview.html">Book Views</a></li>
@@ -569,8 +569,8 @@
                 <div class="body" role="main">
                   
   <div class="section" id="the-asset-api">
-<h1>The Asset API<a class="headerlink" href="#the-asset-api" title="Ссылка на этот заголовок">¶</a></h1>
-<p>The <code class="docutils literal"><span class="pre">AssetManager</span></code> allows developers to retrieve resources from a plugin JAR.</p>
+<h1>API ресурсов<a class="headerlink" href="#the-asset-api" title="Ссылка на этот заголовок">¶</a></h1>
+<p><code class="docutils literal"><span class="pre">AssetManager</span></code> позволяет разработчикам извлекать ресурсы из JAR плагинов.</p>
 <p>By default, a plugin&#8217;s assets resides in a directory named <code class="docutils literal"><span class="pre">assets/com/example/myplugin</span></code> where
 <code class="docutils literal"><span class="pre">com.example.myplugin</span></code> is the plugin ID. In most cases this default directory should be used but if you <em>need</em> to
 change it, you may do so by setting the <code class="docutils literal"><span class="pre">assets</span></code> attribute in your <code class="docutils literal"><span class="pre">&#64;Plugin</span></code> annotation or <code class="docutils literal"><span class="pre">mcmod.info</span></code> file.</p>
@@ -592,7 +592,7 @@ change it, you may do so by setting the <code class="docutils literal"><span cla
 the plugin parameter.</p>
 </div>
 <div class="section" id="working-with-assets">
-<h2>Working with Assets<a class="headerlink" href="#working-with-assets" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Работа с ресурсами<a class="headerlink" href="#working-with-assets" title="Ссылка на этот заголовок">¶</a></h2>
 <p>The <code class="docutils literal"><span class="pre">Asset</span></code> class is essentially just a wrapper around a <code class="docutils literal"><span class="pre">URL</span></code> with some common I/O operations built in. The use
 cases of <code class="docutils literal"><span class="pre">Assets</span></code>s is essentially unbounded but one common use case is to generate a default configuration file if
 your plugin&#8217;s configuration file is not found. You can achieve this using a <cite>PluginContainer</cite> with the following code:</p>

@@ -35,7 +35,7 @@
         <link rel="top" title="Документация Sponge 4.1.0" href="../../index.html" />
         <link rel="up" title="Команды" href="index.html" />
         <link rel="next" title="Command Flags" href="flags.html" />
-        <link rel="prev" title="Building a Command" href="creating.html" />
+        <link rel="prev" title="Создание команды" href="creating.html" />
     
   <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -258,7 +258,7 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Создание плагина</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../buildsystem.html">Build Systems</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../buildsystem.html">Система сборки</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../workspace/index.html">Подготовка рабочего пространства</a><ul>
@@ -305,7 +305,7 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Команды</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="creating.html">Building a Command</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="creating.html">Создание команды</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3 current"><a class="current reference internal" href="">Парсинг аргументов</a><ul class="simple">
@@ -315,7 +315,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="childcommands.html">Дочерние Команды</a></li>
-<li class="toctree-l3"><a class="reference internal" href="service.html">Командный менеджер</a></li>
+<li class="toctree-l3"><a class="reference internal" href="service.html">Менеджер команд</a></li>
 <li class="toctree-l3"><a class="reference internal" href="commandcallable.html">Low-Level Command API</a><ul class="simple">
 </ul>
 </li>
@@ -336,7 +336,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../assets/index.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../assets/index.html">API ресурсов</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">Configuring Plugins</a><ul>
@@ -386,7 +386,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../blocks/index.html">Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../blocks/index.html">Блоки</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../blocks/concepts.html">Концепты</a><ul class="simple">
 </ul>
 </li>
@@ -423,7 +423,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../effects.html">Эффекты</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Scheduler</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Планировщик</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../services.html">Сервисы</a><ul class="simple">
@@ -433,7 +433,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../permissions.html">Разрешения</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../bans.html">Баны</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../bans.html">Блокировки</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../bookview.html">Book Views</a></li>
@@ -579,13 +579,12 @@
 <p class="last">You can use the <code class="docutils literal"><span class="pre">onlyOne</span></code> element to limit the amount of returned values to a single one, so you can safely use
 <code class="docutils literal"><span class="pre">args.&lt;T&gt;getOne(String</span> <span class="pre">key)</span></code>.</p>
 </div>
-<p>To create a new <code class="docutils literal"><span class="pre">CommandElement</span></code> (argument), use the <code class="docutils literal"><span class="pre">GenericArguments</span></code> factory class. Many command elements require
-a short text key, which is displayed in error and help messages.</p>
+<p>Для создания нового <code class="docutils literal"><span class="pre">CommandElement</span></code> (аргумент), используйте класс <code class="docutils literal"><span class="pre">GenericArguments</span></code>. Многие элементы команд требуют короткий текстовый ключ, который отображается в ошибках и в сообщениях помощи.</p>
 <p>Apply the <code class="docutils literal"><span class="pre">CommandElement</span></code> to the command builder with the <code class="docutils literal"><span class="pre">setArguments()</span></code> method. It is possible to pass more than
 one <code class="docutils literal"><span class="pre">CommandElement</span></code> to the method, thus chaining multiple arguments (e.g <code class="docutils literal"><span class="pre">/msg</span> <span class="pre">&lt;player&gt;</span> <span class="pre">&lt;msg&gt;</span></code>). This has the same
 effect as wrapping the <code class="docutils literal"><span class="pre">CommandElement</span></code> objects in a <code class="docutils literal"><span class="pre">GenericArguments.seq()</span></code> element.</p>
 <div class="section" id="example-building-a-command-with-multiple-arguments">
-<h2>Example: Building a Command with Multiple Arguments<a class="headerlink" href="#example-building-a-command-with-multiple-arguments" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Пример: Создание команды с несколькими аргументами<a class="headerlink" href="#example-building-a-command-with-multiple-arguments" title="Ссылка на этот заголовок">¶</a></h2>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.Sponge</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.text.Text</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.entity.living.player.Player</span><span class="o">;</span>
@@ -632,75 +631,105 @@ effect as wrapping the <code class="docutils literal"><span class="pre">CommandE
 <col width="21%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">Command Element</th>
-<th class="head">Description</th>
-<th class="head">Value Type &amp; Amount</th>
+<tr class="row-odd"><th class="head"><p class="first last">Элемент команды</p>
+</th>
+<th class="head"><p class="first last">Описание параметра</p>
+</th>
+<th class="head"><p class="first last">Количество и тип значения</p>
+</th>
 </tr>
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">none</span></code></td>
-<td>Expects no arguments. This is the default behavior of a <code class="docutils literal"><span class="pre">CommandSpec</span></code>.</td>
+<td><p class="first last">Не требует аргументов. Это обычное поведение <code class="docutils literal"><span class="pre">CommandSpec</span></code>.</p>
+</td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td colspan="3"><strong>Java Base Types</strong></td>
+<tr class="row-odd"><td colspan="3"><p class="first last"><strong>Базовые типы Java</strong></p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">string</span></code></td>
-<td>Require an argument to be a string.</td>
-<td>one <code class="docutils literal"><span class="pre">String</span></code></td>
+<td><p class="first last">Требует аргумент типа String.</p>
+</td>
+<td><p class="first last">один <code class="docutils literal"><span class="pre">String</span></code></p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">remainingJoinedStrings</span></code></td>
-<td>Concatenates all remaining arguments separated by spaces (useful for message commands).</td>
-<td>one <code class="docutils literal"><span class="pre">String</span></code></td>
+<td><p class="first last">Соединяет все оставшиеся аргументы разделенные пробелами (может быть использовано для команд-сообщений).</p>
+</td>
+<td><p class="first last">один <code class="docutils literal"><span class="pre">String</span></code></p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">bool</span></code></td>
-<td>Require an argument to be a boolean.</td>
-<td>one <code class="docutils literal"><span class="pre">Boolean</span></code></td>
+<td><p class="first last">Требует аргумент типа boolean.</p>
+</td>
+<td><p class="first last">один <code class="docutils literal"><span class="pre">Boolean</span></code></p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">integer</span></code></td>
-<td>Require an argument to be an integer.</td>
-<td>one <code class="docutils literal"><span class="pre">Integer</span></code></td>
+<td><p class="first last">Требует аргумент типа integer.</p>
+</td>
+<td><p class="first last">один <code class="docutils literal"><span class="pre">Integer</span></code></p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">doubleNum</span></code></td>
-<td>Require an argument to be a double.</td>
-<td>one <code class="docutils literal"><span class="pre">Double</span></code></td>
+<td><p class="first last">Требует аргумент типа double.</p>
+</td>
+<td><p class="first last">один <code class="docutils literal"><span class="pre">Double</span></code></p>
+</td>
 </tr>
-<tr class="row-odd"><td colspan="3"><strong>Game Objects</strong></td>
+<tr class="row-odd"><td colspan="3"><p class="first last"><strong>Игровые объекты</strong></p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">player</span></code></td>
-<td>Expect an argument to represent an online player. <strong>May return multiple players!</strong></td>
-<td>multiple <code class="docutils literal"><span class="pre">Player</span></code> instances</td>
+<td><p class="first last">Ожидает аргумент в виде онлайн-игрока. <strong>Может возвращать несколько игроков!</strong></p>
+</td>
+<td><p class="first last">несколько экземпляров <code class="docutils literal"><span class="pre">Player</span></code></p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">playerOrSource</span></code></td>
-<td>Like <code class="docutils literal"><span class="pre">player</span></code>, but returns the sender of the command if no matching player was found.</td>
-<td>multiple <code class="docutils literal"><span class="pre">Player</span></code> instances</td>
+<td><p class="first last">Как <code class="docutils literal"><span class="pre">player</span></code>, но возвращает отправителя команды, если соответствующий игрок не был найден.</p>
+</td>
+<td><p class="first last">несколько экземпляров <code class="docutils literal"><span class="pre">Player</span></code></p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">userOrSource</span></code></td>
-<td>Like <code class="docutils literal"><span class="pre">playerOrSource</span></code>, but returns a user instead of a player.</td>
-<td>multiple <code class="docutils literal"><span class="pre">User</span></code> instances</td>
+<td><p class="first last">Как <code class="docutils literal"><span class="pre">playerOrSource</span></code>, но возвращает пользователя, а не игрока.</p>
+</td>
+<td><p class="first last">несколько экземпляров <code class="docutils literal"><span class="pre">User</span></code></p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">world</span></code></td>
-<td>Expect an argument to represent a world (also includes unloaded worlds).</td>
-<td>multiple <code class="docutils literal"><span class="pre">WorldProperties</span></code></td>
+<td><p class="first last">Ожидает аргумент в виде мира (также включает выгруженные миры).</p>
+</td>
+<td><p class="first last">несколько <code class="docutils literal"><span class="pre">WorldProperties</span></code></p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">dimension</span></code></td>
-<td>Expect an argument to represent a dimension (<code class="docutils literal"><span class="pre">END</span></code>, <code class="docutils literal"><span class="pre">NETHER</span></code>, <code class="docutils literal"><span class="pre">OVERWORLD</span></code>).</td>
-<td>multiple <code class="docutils literal"><span class="pre">DimensionType</span></code>
-instances</td>
+<td><p class="first last">Ожидает аргумент в виде измерения (<code class="docutils literal"><span class="pre">END</span></code>, <code class="docutils literal"><span class="pre">NETHER</span></code>, <code class="docutils literal"><span class="pre">OVERWORLD</span></code>).</p>
+</td>
+<td><p class="first last">несколько экземпляров <code class="docutils literal"><span class="pre">DimensionType</span></code></p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">location</span></code></td>
-<td>Expect an argument to represent a <code class="docutils literal"><span class="pre">Location</span></code>.</td>
-<td>one <code class="docutils literal"><span class="pre">Location</span></code></td>
+<td><p class="first last">Ожидает аргумент в виде <code class="docutils literal"><span class="pre">Location</span></code>.</p>
+</td>
+<td><p class="first last">один <code class="docutils literal"><span class="pre">Location</span></code></p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">vector3d</span></code></td>
-<td>Expect an argument to represent a <code class="docutils literal"><span class="pre">Vector3d</span></code>.</td>
-<td>one <code class="docutils literal"><span class="pre">Vector3d</span></code></td>
+<td><p class="first last">Ожидает аргумент в виде <code class="docutils literal"><span class="pre">Vector3d</span></code>.</p>
+</td>
+<td><p class="first last">один <code class="docutils literal"><span class="pre">Vector3d</span></code></p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">catalogedElement</span></code></td>
 <td>Expect an argument that is a member of the specified <a class="reference external" href="https://jd.spongepowered.org/3.0.0/org/spongepowered/api/CatalogType.html">catalog type</a>.</td>
 <td>multiple matching elements
 of the specified catalog type</td>
 </tr>
-<tr class="row-even"><td colspan="3"><strong>Matchers</strong></td>
+<tr class="row-even"><td colspan="3"><p class="first last"><strong>Шаблоны</strong></p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">choices</span></code></td>
 <td>Return an argument that allows selecting from a limited set of values.</td>
@@ -716,45 +745,52 @@ Throws an error if the arguments do not match.</td>
 <td>multiple matching elements
 of the specified enum</td>
 </tr>
-<tr class="row-even"><td colspan="3"><p class="first"><strong>Utilities</strong></p>
+<tr class="row-even"><td colspan="3"><p class="first"><strong>Утилиты</strong></p>
 <p class="last">Can be wrapped around command elements. The value type is inherited from the wrapped element.</p>
 </td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">seq</span></code></td>
 <td>Builds a sequence of command elements (e.g. <code class="docutils literal"><span class="pre">/cmd</span> <span class="pre">&lt;arg1&gt;</span> <span class="pre">&lt;arg2&gt;</span> <span class="pre">&lt;arg3&gt;</span></code>).</td>
-<td>inherited</td>
+<td><p class="first last">унаследованное</p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">repeated</span></code></td>
 <td>Require a given command element to be provided a certain number of times.</td>
-<td>multiple inherited</td>
+<td><p class="first last">несколько унаследованных</p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">allOf</span></code></td>
 <td>Require all remaining args to match the provided command element.</td>
-<td>multiple inherited</td>
+<td><p class="first last">несколько унаследованных</p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">optional</span></code></td>
 <td>Make the provided command element optional. Throws an error if the argument
 is of invalid format and there are no more args.</td>
-<td>inherited</td>
+<td><p class="first last">унаследованное</p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">optionalWeak</span></code></td>
 <td>Make the provided command element optional. Does not throw an error if the argument
 is of invalid format and there are no more args.</td>
-<td>inherited</td>
+<td><p class="first last">унаследованное</p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">firstParsing</span></code></td>
 <td>Returns a command element that matches the first of the provided elements that parses
 (useful for command overloading, e.g. <code class="docutils literal"><span class="pre">/settime</span> <span class="pre">&lt;day|night|&lt;number&gt;&gt;</span></code>).</td>
-<td>inherited</td>
+<td><p class="first last">унаследованное</p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">onlyOne</span></code></td>
 <td>Restricts the given command element to only insert one value into the context at the
 provided key.</td>
-<td>inherited</td>
+<td><p class="first last">унаследованное</p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">flags</span></code></td>
 <td><p class="first">Returns a builder for command flags (e.g. <code class="docutils literal"><span class="pre">/cmd</span> <span class="pre">[-a]</span> <span class="pre">[-b</span> <span class="pre">&lt;value&gt;]</span></code>).</p>
-<p class="last">See <a class="reference internal" href="flags.html"><em>Command Flags</em></a></p>
+<p class="last">См. <a class="reference internal" href="flags.html"><em>Command Flags</em></a></p>
 </td>
 <td><p class="first">Short Flag: one <code class="docutils literal"><span class="pre">Boolean</span></code></p>
 <p>Long Flag: one <code class="docutils literal"><span class="pre">String</span></code></p>
@@ -764,22 +800,21 @@ provided key.</td>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">requiringPermission</span></code></td>
 <td>Requires the command sender to have the specified permission in order to use the given
 command argument</td>
-<td>inherited</td>
+<td><p class="first last">унаследованное</p>
+</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition tip">
 <p class="first admonition-title">Совет</p>
-<p class="last">See the <a class="reference external" href="https://jd.spongepowered.org/org/spongepowered/api/command/args/GenericArguments.html">Javadocs for GenericArguments</a>
-for more information.</p>
+<p class="last">Для дополнительной информации посмотрите <a class="reference external" href="https://jd.spongepowered.org/org/spongepowered/api/command/args/GenericArguments.html">Javadoc&#8217;и для GenericArguments</a>.</p>
 </div>
 </div>
 <div class="section" id="custom-command-elements">
 <h2>Custom Command Elements<a class="headerlink" href="#custom-command-elements" title="Ссылка на этот заголовок">¶</a></h2>
 <p>It is possible to create custom command elements (e.g. a URL parser or a <code class="docutils literal"><span class="pre">Vector2i</span></code> element) by extending the abstract
 <code class="docutils literal"><span class="pre">CommandElement</span></code> class.</p>
-<p>The <code class="docutils literal"><span class="pre">parseValue</span></code> method should fetch a raw argument string with <code class="docutils literal"><span class="pre">args.next()</span></code> and convert it to an object. The method
-should throw an <code class="docutils literal"><span class="pre">ArgumentParseException</span></code> if the parsing fails</p>
+<p>Метод <code class="docutils literal"><span class="pre">parseValue</span></code> должен получить необработанный аргумент string с помощью <code class="docutils literal"><span class="pre">args.next()</span></code> и конвертировать его в объект. Если парсинг окажется неудачным, метод должен вызвать <code class="docutils literal"><span class="pre">ArgumentParseException</span></code></p>
 <p>The <code class="docutils literal"><span class="pre">complete</span></code> method should use <code class="docutils literal"><span class="pre">args.peek()</span></code> to read the next raw argument. It returns a list of suggestions for
 TAB completion.</p>
 <div class="section" id="example-vector2i-command-element-definition">
@@ -852,8 +887,7 @@ TAB completion.</p>
 </div>
 <div class="admonition tip">
 <p class="first admonition-title">Совет</p>
-<p class="last">Look at the <a class="reference external" href="https://github.com/SpongePowered/SpongeAPI/blob/master/src/main/java/org/spongepowered/api/command/args/GenericArguments.java">source code</a>
-of the <code class="docutils literal"><span class="pre">GenericArguments</span></code> class for more examples.</p>
+<p class="last">Просмотрите <a class="reference external" href="https://github.com/SpongePowered/SpongeAPI/blob/master/src/main/java/org/spongepowered/api/command/args/GenericArguments.java">исходный код</a> класса <code class="docutils literal"><span class="pre">GenericArguments</span></code>, чтобы увидеть больше примеров.</p>
 </div>
 </div>
 </div>

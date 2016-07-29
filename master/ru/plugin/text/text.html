@@ -258,7 +258,7 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Создание плагина</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../buildsystem.html">Build Systems</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../buildsystem.html">Система сборки</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../workspace/index.html">Подготовка рабочего пространства</a><ul>
@@ -305,7 +305,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Команды</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../commands/creating.html">Building a Command</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../commands/creating.html">Создание команды</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/arguments.html">Парсинг аргументов</a><ul class="simple">
@@ -315,7 +315,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/childcommands.html">Дочерние Команды</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/service.html">Командный менеджер</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commands/service.html">Менеджер команд</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/commandcallable.html">Low-Level Command API</a><ul class="simple">
 </ul>
 </li>
@@ -336,7 +336,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../assets/index.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../assets/index.html">API ресурсов</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">Configuring Plugins</a><ul>
@@ -386,7 +386,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../blocks/index.html">Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../blocks/index.html">Блоки</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../blocks/concepts.html">Концепты</a><ul class="simple">
 </ul>
 </li>
@@ -423,7 +423,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../effects.html">Эффекты</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Scheduler</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Планировщик</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../services.html">Сервисы</a><ul class="simple">
@@ -433,7 +433,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../permissions.html">Разрешения</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../bans.html">Баны</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../bans.html">Блокировки</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../bookview.html">Book Views</a></li>
@@ -574,11 +574,11 @@
 <p>The Text API is used to create formatted text, which can be sent to players in chat messages, and can also be used in
 places such as books and signs.</p>
 <div class="section" id="unformatted-text">
-<h2>Unformatted Text<a class="headerlink" href="#unformatted-text" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Неформатированный текст<a class="headerlink" href="#unformatted-text" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Oftentimes, all you need is unformatted text. Unformatted text does not require the use of a text builder, and is the
 simplest form of text to create.</p>
 <div class="section" id="example">
-<h3>Example:<a class="headerlink" href="#example" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Пример:<a class="headerlink" href="#example" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.text.Text</span><span class="o">;</span>
 
 <span class="n">Text</span> <span class="n">unformattedText</span> <span class="o">=</span> <span class="n">Text</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">&quot;Hey! This is unformatted text!&quot;</span><span class="o">);</span>

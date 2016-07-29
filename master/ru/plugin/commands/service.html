@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Командный менеджер &mdash; Документация Sponge 4.1.0</title>
+     <title>Менеджер команд &mdash; Документация Sponge 4.1.0</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -258,7 +258,7 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Создание плагина</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../buildsystem.html">Build Systems</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../buildsystem.html">Система сборки</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../workspace/index.html">Подготовка рабочего пространства</a><ul>
@@ -305,7 +305,7 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Команды</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="creating.html">Building a Command</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="creating.html">Создание команды</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="arguments.html">Парсинг аргументов</a><ul class="simple">
@@ -315,7 +315,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="childcommands.html">Дочерние Команды</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Командный менеджер</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Менеджер команд</a></li>
 <li class="toctree-l3"><a class="reference internal" href="commandcallable.html">Low-Level Command API</a><ul class="simple">
 </ul>
 </li>
@@ -336,7 +336,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../assets/index.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../assets/index.html">API ресурсов</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">Configuring Plugins</a><ul>
@@ -386,7 +386,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../blocks/index.html">Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../blocks/index.html">Блоки</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../blocks/concepts.html">Концепты</a><ul class="simple">
 </ul>
 </li>
@@ -423,7 +423,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../effects.html">Эффекты</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Scheduler</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Планировщик</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../services.html">Сервисы</a><ul class="simple">
@@ -433,7 +433,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../permissions.html">Разрешения</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../bans.html">Баны</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../bans.html">Блокировки</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../bookview.html">Book Views</a></li>
@@ -570,7 +570,7 @@
                 <div class="body" role="main">
                   
   <div class="section" id="the-command-manager">
-<h1>Командный менеджер<a class="headerlink" href="#the-command-manager" title="Ссылка на этот заголовок">¶</a></h1>
+<h1>Менеджер команд<a class="headerlink" href="#the-command-manager" title="Ссылка на этот заголовок">¶</a></h1>
 <p>The <code class="docutils literal"><span class="pre">CommandManager</span></code> stands as the manager for watching what commands get typed into chat, and redirecting them to
 the right command handler. To register your command, use the method <code class="docutils literal"><span class="pre">CommandManager.register()</span></code>, passing your plugin,
 an instance of the command, and any needed aliases as parameters.</p>
@@ -585,9 +585,7 @@ commands from the main plugin class, use <code class="docutils literal"><span cl
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Примечание</p>
-<p class="last">The arguments after the new instance of your command are the aliases to register for the command. You can add as
-many Strings as you want. The first alias that isn&#8217;t used by another command becomes the primary alias. This means
-aliases used by another command are ignored.</p>
+<p class="last">Аргументы после указания экземпляра команды являются дополнительными вариантами для регистрации команды. Вы можете добавить столько, сколько вы хотите. Первый вариант, который не используется другой командой становится основным. Это означает, что варианты используемые другой командой игнорируются.</p>
 </div>
 <p>The <code class="docutils literal"><span class="pre">CommandManager</span></code> can also be used to call a command programatically:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">cmdManager</span><span class="o">.</span><span class="na">process</span><span class="o">(</span><span class="n">player</span><span class="o">,</span> <span class="s">&quot;msg Notch hi notch!&quot;</span><span class="o">);</span>

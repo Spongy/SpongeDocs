@@ -34,7 +34,7 @@
       <link rel="shortcut icon" href="../_static/favicon.ico"/>
         <link rel="top" title="Документация Sponge 4.1.0" href="../index.html" />
         <link rel="up" title="Создание плагина" href="index.html" />
-        <link rel="next" title="Scheduler" href="scheduler.html" />
+        <link rel="next" title="Планировщик" href="scheduler.html" />
         <link rel="prev" title="Создание ItemStack" href="items/creating.html" />
     
   <script type="text/javascript">
@@ -257,7 +257,7 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Создание плагина</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="buildsystem.html">Build Systems</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="buildsystem.html">Система сборки</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="workspace/index.html">Подготовка рабочего пространства</a><ul>
@@ -304,7 +304,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="commands/index.html">Команды</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="commands/creating.html">Building a Command</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="commands/creating.html">Создание команды</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="commands/arguments.html">Парсинг аргументов</a><ul class="simple">
@@ -314,7 +314,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="commands/childcommands.html">Дочерние Команды</a></li>
-<li class="toctree-l3"><a class="reference internal" href="commands/service.html">Командный менеджер</a></li>
+<li class="toctree-l3"><a class="reference internal" href="commands/service.html">Менеджер команд</a></li>
 <li class="toctree-l3"><a class="reference internal" href="commands/commandcallable.html">Low-Level Command API</a><ul class="simple">
 </ul>
 </li>
@@ -335,7 +335,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="assets/index.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="assets/index.html">API ресурсов</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="configuration/index.html">Configuring Plugins</a><ul>
@@ -385,7 +385,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="blocks/index.html">Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="blocks/index.html">Блоки</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="blocks/concepts.html">Концепты</a><ul class="simple">
 </ul>
 </li>
@@ -422,7 +422,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="">Эффекты</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="scheduler.html">Scheduler</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="scheduler.html">Планировщик</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="services.html">Сервисы</a><ul class="simple">
@@ -432,7 +432,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="permissions.html">Разрешения</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bans.html">Баны</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="bans.html">Блокировки</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="bookview.html">Book Views</a></li>
@@ -570,11 +570,10 @@
                   
   <div class="section" id="effects">
 <h1>Эффекты<a class="headerlink" href="#effects" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Using the effect API in Sponge, we can create special effects to be used on a server. Using a <code class="docutils literal"><span class="pre">Viewer</span></code>, we can play
-sounds or spawn particles on the server.</p>
+<p>С помощью API эффектов в Sponge, вы можете создать особые эффекты для использования на сервере. Используя <code class="docutils literal"><span class="pre">Viewer</span></code>, можно проиграть звук или создать частицы на сервере.</p>
 <div class="section" id="playing-sounds">
-<h2>Воспроизведение звуков<a class="headerlink" href="#playing-sounds" title="Ссылка на этот заголовок">¶</a></h2>
-<p>With any given <code class="docutils literal"><span class="pre">Viewer</span></code>, we can simply play a sound at a location:</p>
+<h2>Проигрывание звуков<a class="headerlink" href="#playing-sounds" title="Ссылка на этот заголовок">¶</a></h2>
+<p>С любым <code class="docutils literal"><span class="pre">Viewer</span></code>, вы можете проиграть звук в нужном месте:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.effect.Viewer</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.effect.sound.SoundTypes</span><span class="o">;</span>
 
@@ -599,8 +598,8 @@ this is shown below:</p>
 </div>
 </div>
 <div class="section" id="spawning-particles">
-<h2>Спавн частиц<a class="headerlink" href="#spawning-particles" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Similarly to sounds, we can use the <code class="docutils literal"><span class="pre">Viewer</span></code> class to spawn particles within the world:</p>
+<h2>Создание частиц<a class="headerlink" href="#spawning-particles" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Также, как и для звуков, Вы можете использовать класс <code class="docutils literal"><span class="pre">Viewer</span></code> для создания частиц:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.effect.particle.ParticleEffect</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.effect.particle.ParticleTypes</span><span class="o">;</span>
 
@@ -625,7 +624,7 @@ like to use a sand block. This can be done like so:</p>
 </div>
 <div class="section" id="creating-potions">
 <h2>Создание зелий<a class="headerlink" href="#creating-potions" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Similarly to potions and sounds, we need to use a builder to create our potion effect:</p>
+<p>Аналогично, как со звуками и зельями, Вам нужно использовать builder для создания эффекта зелья:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.effect.potion.PotionEffect</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.effect.potion.PotionEffectTypes</span><span class="o">;</span>
 
@@ -633,9 +632,7 @@ like to use a sand block. This can be done like so:</p>
     <span class="o">.</span><span class="na">duration</span><span class="o">(</span><span class="mi">10</span><span class="o">).</span><span class="na">amplifier</span><span class="o">(</span><span class="mi">5</span><span class="o">).</span><span class="na">build</span><span class="o">();</span>
 </pre></div>
 </div>
-<p>Using this, we can create a haste <code class="docutils literal"><span class="pre">PotionEffect</span></code> that will last for ten seconds and have an amplifier of five.
-Unlike particles and sounds, potions cannot be applied to a <code class="docutils literal"><span class="pre">Viewer</span></code>. Instead, we need an entity that supports
-<code class="docutils literal"><span class="pre">PotionEffectData</span></code>, such as a player.</p>
+<p>Используя данный код, вы можете создать <code class="docutils literal"><span class="pre">PotionEffect</span></code> спешки, который будет длиться десять секунд и иметь силу, равной пяти. В отличие от частиц и звуков, к зельям нельзя применить <code class="docutils literal"><span class="pre">Viewer</span></code>. Вместо этого, возьмите сущность, поддерживающую <code class="docutils literal"><span class="pre">PotionEffectData</span></code>, например, игрока.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.data.manipulator.mutable.PotionEffectData</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.entity.living.player.Player</span><span class="o">;</span>
 
@@ -644,8 +641,7 @@ Unlike particles and sounds, potions cannot be applied to a <code class="docutil
 <span class="n">player</span><span class="o">.</span><span class="na">offer</span><span class="o">(</span><span class="n">effects</span><span class="o">);</span>
 </pre></div>
 </div>
-<p>This will get or create a <code class="docutils literal"><span class="pre">PotionEffectData</span></code> from a player. We then add our previous potion effect to the list and
-offer it back to the player.</p>
+<p>Этот код получает или создает <code class="docutils literal"><span class="pre">PotionEffectData</span></code> из игрока. Затем вы добавляете эффект зелья в список и возвращаете список игроку.</p>
 </div>
 </div>
 

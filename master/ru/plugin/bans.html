@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Баны &mdash; Документация Sponge 4.1.0</title>
+     <title>Блокировки &mdash; Документация Sponge 4.1.0</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -257,7 +257,7 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Создание плагина</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="buildsystem.html">Build Systems</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="buildsystem.html">Система сборки</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="workspace/index.html">Подготовка рабочего пространства</a><ul>
@@ -304,7 +304,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="commands/index.html">Команды</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="commands/creating.html">Building a Command</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="commands/creating.html">Создание команды</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="commands/arguments.html">Парсинг аргументов</a><ul class="simple">
@@ -314,7 +314,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="commands/childcommands.html">Дочерние Команды</a></li>
-<li class="toctree-l3"><a class="reference internal" href="commands/service.html">Командный менеджер</a></li>
+<li class="toctree-l3"><a class="reference internal" href="commands/service.html">Менеджер команд</a></li>
 <li class="toctree-l3"><a class="reference internal" href="commands/commandcallable.html">Low-Level Command API</a><ul class="simple">
 </ul>
 </li>
@@ -335,7 +335,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="assets/index.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="assets/index.html">API ресурсов</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="configuration/index.html">Configuring Plugins</a><ul>
@@ -385,7 +385,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="blocks/index.html">Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="blocks/index.html">Блоки</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="blocks/concepts.html">Концепты</a><ul class="simple">
 </ul>
 </li>
@@ -422,7 +422,7 @@
 <li class="toctree-l2"><a class="reference internal" href="effects.html">Эффекты</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="scheduler.html">Scheduler</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="scheduler.html">Планировщик</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="services.html">Сервисы</a><ul class="simple">
@@ -432,7 +432,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="permissions.html">Разрешения</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Баны</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="">Блокировки</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="bookview.html">Book Views</a></li>
@@ -569,7 +569,7 @@
                 <div class="body" role="main">
                   
   <div class="section" id="bans">
-<h1>Баны<a class="headerlink" href="#bans" title="Ссылка на этот заголовок">¶</a></h1>
+<h1>Блокировки<a class="headerlink" href="#bans" title="Ссылка на этот заголовок">¶</a></h1>
 <p>The <code class="docutils literal"><span class="pre">BanService</span></code> is a service built into the SpongeAPI that adds the functionality for you to ban or pardon users in
 your plugin. The <code class="docutils literal"><span class="pre">BanService</span></code> provides several methods to do things such as banning users, pardoning users, or even
 getting a <code class="docutils literal"><span class="pre">Ban</span></code> and the information on the <code class="docutils literal"><span class="pre">Ban</span></code>.</p>
@@ -611,7 +611,7 @@ example of this is shown below:</p>
 </div>
 </div>
 <div class="section" id="creating-a-ban">
-<h2>Creating a Ban<a class="headerlink" href="#creating-a-ban" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Создание блокировки<a class="headerlink" href="#creating-a-ban" title="Ссылка на этот заголовок">¶</a></h2>
 <p>So now we can obtain the <code class="docutils literal"><span class="pre">BanService</span></code> and the information on a <code class="docutils literal"><span class="pre">Ban</span></code>, but what if we wanted to create our own bans?
 We can use a <code class="docutils literal"><span class="pre">Ban.Builder</span></code> to create our own <code class="docutils literal"><span class="pre">Ban</span></code>. To get a <code class="docutils literal"><span class="pre">Ban.Builder</span></code>, simply call the <code class="docutils literal"><span class="pre">builder()</span></code> method
 on <code class="docutils literal"><span class="pre">Ban</span></code>. Using our builder, we can specify things such as the type of the ban, the reason for the ban, or the
@@ -631,13 +631,13 @@ on <code class="docutils literal"><span class="pre">Ban</span></code>. Using our
 <p>Note that if you wish to create a simple, indefinite ban on a <code class="docutils literal"><span class="pre">User</span></code>, you can use the <code class="docutils literal"><span class="pre">Ban.of(GameProfile</span> <span class="pre">profile)</span></code>
 method or the <code class="docutils literal"><span class="pre">Ban.of(GameProfile</span> <span class="pre">profile,</span> <span class="pre">Text</span> <span class="pre">reason)</span></code> methods to quickly construct a ban.</p>
 <div class="section" id="adding-a-ban">
-<h3>Adding a Ban<a class="headerlink" href="#adding-a-ban" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Добавление блокировки<a class="headerlink" href="#adding-a-ban" title="Ссылка на этот заголовок">¶</a></h3>
 <p>Now that we have created our ban, we can now register it to be used in Sponge. Using our <code class="docutils literal"><span class="pre">BanService</span></code> from before, we
 can use the <code class="docutils literal"><span class="pre">addBan(Ban</span> <span class="pre">ban)</span></code> method to accomplish this. Note that adding a ban will remove any previously existing
 ban.</p>
 </div>
 <div class="section" id="pardoning">
-<h3>Pardoning<a class="headerlink" href="#pardoning" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Разблокировка<a class="headerlink" href="#pardoning" title="Ссылка на этот заголовок">¶</a></h3>
 <p>Now let&#8217;s say we wanted to remove a ban from a user. We can use the <code class="docutils literal"><span class="pre">pardon(GameProfile)</span></code> method from our
 <code class="docutils literal"><span class="pre">BanService</span></code>. This method returns a boolean, which specifies if the user had a ban in place previously.</p>
 </div>

@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Scheduler &mdash; Документация Sponge 4.1.0</title>
+     <title>Планировщик &mdash; Документация Sponge 4.1.0</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -257,7 +257,7 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Создание плагина</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="buildsystem.html">Build Systems</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="buildsystem.html">Система сборки</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="workspace/index.html">Подготовка рабочего пространства</a><ul>
@@ -304,7 +304,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="commands/index.html">Команды</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="commands/creating.html">Building a Command</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="commands/creating.html">Создание команды</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="commands/arguments.html">Парсинг аргументов</a><ul class="simple">
@@ -314,7 +314,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="commands/childcommands.html">Дочерние Команды</a></li>
-<li class="toctree-l3"><a class="reference internal" href="commands/service.html">Командный менеджер</a></li>
+<li class="toctree-l3"><a class="reference internal" href="commands/service.html">Менеджер команд</a></li>
 <li class="toctree-l3"><a class="reference internal" href="commands/commandcallable.html">Low-Level Command API</a><ul class="simple">
 </ul>
 </li>
@@ -335,7 +335,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="assets/index.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="assets/index.html">API ресурсов</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="configuration/index.html">Configuring Plugins</a><ul>
@@ -385,7 +385,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="blocks/index.html">Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="blocks/index.html">Блоки</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="blocks/concepts.html">Концепты</a><ul class="simple">
 </ul>
 </li>
@@ -422,7 +422,7 @@
 <li class="toctree-l2"><a class="reference internal" href="effects.html">Эффекты</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Scheduler</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="">Планировщик</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="services.html">Сервисы</a><ul class="simple">
@@ -432,7 +432,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="permissions.html">Разрешения</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bans.html">Баны</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="bans.html">Блокировки</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="bookview.html">Book Views</a></li>
@@ -569,13 +569,11 @@
                 <div class="body" role="main">
                   
   <div class="section" id="scheduler">
-<h1>Scheduler<a class="headerlink" href="#scheduler" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Sponge exposes the <code class="docutils literal"><span class="pre">Scheduler</span></code> to allow you to designate tasks to be executed in the future. The
-<code class="docutils literal"><span class="pre">Scheduler</span></code> provides a <code class="docutils literal"><span class="pre">Task.Builder</span></code> with which you can specify task properties such as the delay, interval,
-name, (a)synchronicity, and <code class="docutils literal"><span class="pre">Runnable</span></code> (see <a class="reference internal" href="#task-properties"><span>Task Properties</span></a>).</p>
+<h1>Планировщик<a class="headerlink" href="#scheduler" title="Ссылка на этот заголовок">¶</a></h1>
+<p>У Sponge есть <code class="docutils literal"><span class="pre">Scheduler</span></code>, позволяющий назначать задачи, которые выполнятся в будущем. <code class="docutils literal"><span class="pre">Scheduler</span></code> предоставляет <code class="docutils literal"><span class="pre">Task.Builder</span></code>, в котором можно указать параметры задачи, такие как задержка, интервал, название, (а)синхронность и <code class="docutils literal"><span class="pre">Runnable</span></code> (см. <a class="reference internal" href="#task-properties"><span>Параметры задач</span></a>).</p>
 <div class="section" id="task-builder">
-<h2>Task Builder<a class="headerlink" href="#task-builder" title="Ссылка на этот заголовок">¶</a></h2>
-<p>First, obtain an instance of the <code class="docutils literal"><span class="pre">Scheduler</span></code>, and retrieve the <code class="docutils literal"><span class="pre">Task.Builder</span></code>:</p>
+<h2>Создатель задач<a class="headerlink" href="#task-builder" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Сперва, получите экземпляр <code class="docutils literal"><span class="pre">Scheduler</span></code>, после чего создайте <code class="docutils literal"><span class="pre">Task.Builder</span></code>:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.scheduler.Scheduler</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.scheduler.Task</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.Sponge</span><span class="o">;</span>
@@ -584,8 +582,7 @@ name, (a)synchronicity, and <code class="docutils literal"><span class="pre">Run
 <span class="n">Task</span><span class="o">.</span><span class="na">Builder</span> <span class="n">taskBuilder</span> <span class="o">=</span> <span class="n">scheduler</span><span class="o">.</span><span class="na">createTaskBuilder</span><span class="o">();</span>
 </pre></div>
 </div>
-<p>The only required property is the <a class="reference external" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html">Runnable</a>,
-which you can specify using <code class="docutils literal"><span class="pre">Task.Builder#execute(Runnable</span> <span class="pre">runnable)</span></code>:</p>
+<p>Единственным обязательным параметром является <a class="reference external" href="http://docs.oracle.com/javase/7/docs/api/java/lang/Runnable.html">Runnable</a>, который можно указать с помощью <code class="docutils literal"><span class="pre">Task.Builder#execute(Runnable</span> <span class="pre">runnable)</span></code>:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">taskBuilder</span><span class="o">.</span><span class="na">execute</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
         <span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">&quot;Yay! Schedulers!&quot;</span><span class="o">);</span>
@@ -593,7 +590,7 @@ which you can specify using <code class="docutils literal"><span class="pre">Tas
 <span class="o">});</span>
 </pre></div>
 </div>
-<p>or using Java 8 syntax with <code class="docutils literal"><span class="pre">Task.Builder#execute(Runnable</span> <span class="pre">runnable)</span></code></p>
+<p>или с помощью синтаксиса Java 8: <code class="docutils literal"><span class="pre">Task.Builder#execute(Runnable</span> <span class="pre">runnable)</span></code></p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">taskBuilder</span><span class="o">.</span><span class="na">execute</span><span class="o">(</span>
     <span class="o">()</span> <span class="o">-&gt;</span> <span class="o">{</span>
         <span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">&quot;Yay! Schedulers!&quot;</span><span class="o">);</span>
@@ -601,7 +598,7 @@ which you can specify using <code class="docutils literal"><span class="pre">Tas
 <span class="o">);</span>
 </pre></div>
 </div>
-<p>or using Java 8 syntax with <code class="docutils literal"><span class="pre">Task.Builder#execute(Consumer&lt;Task&gt;</span> <span class="pre">task)</span></code></p>
+<p>или с помощью синтаксиса Java 8: <code class="docutils literal"><span class="pre">Task.Builder#execute(Consumer&lt;Task&gt;</span> <span class="pre">task)</span></code></p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">taskBuilder</span><span class="o">.</span><span class="na">execute</span><span class="o">(</span>
     <span class="n">task</span> <span class="o">-&gt;</span> <span class="o">{</span>
         <span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">&quot;Yay! Schedulers! :&quot;</span> <span class="o">+</span> <span class="n">task</span><span class="o">.</span><span class="na">getName</span><span class="o">());</span>
@@ -610,8 +607,8 @@ which you can specify using <code class="docutils literal"><span class="pre">Tas
 </pre></div>
 </div>
 <div class="section" id="task-properties">
-<span id="id1"></span><h3>Task Properties<a class="headerlink" href="#task-properties" title="Ссылка на этот заголовок">¶</a></h3>
-<p>Using the <code class="docutils literal"><span class="pre">Task.Builder</span></code>, you can specify other, optional properties, as described below.</p>
+<span id="id1"></span><h3>Параметры задач<a class="headerlink" href="#task-properties" title="Ссылка на этот заголовок">¶</a></h3>
+<p>С помощью <code class="docutils literal"><span class="pre">Task.Builder</span></code> можно указать другие, дополнительные параметры, описанные ниже.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="15%" />
@@ -619,27 +616,30 @@ which you can specify using <code class="docutils literal"><span class="pre">Tas
 <col width="64%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">Property</th>
-<th class="head">Method Used</th>
-<th class="head">Description</th>
+<tr class="row-odd"><th class="head"><p class="first last">Параметр</p>
+</th>
+<th class="head"><p class="first last">Используемый метод</p>
+</th>
+<th class="head"><p class="first last">Описание</p>
+</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>delay</td>
+<tr class="row-even"><td><p class="first last">задержка</p>
+</td>
 <td><p class="first">delayTicks(long delay)</p>
 <dl class="last docutils">
 <dt>delay(long delay,</dt>
 <dd>TimeUnit unit)</dd>
 </dl>
 </td>
-<td><p class="first">The optional amount of time to pass before the task is to be run.</p>
-<p>The time is specified as a number of ticks with the <code class="docutils literal"><span class="pre">delayTicks()</span></code>
-method, or it may be provided as a number of a more convenient time
-unit by specifying a <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/TimeUnit.html">TimeUnit</a> with the delay() method.</p>
-<p class="last"><em>Either method, but not both, can specified per task.</em></p>
+<td><p class="first">Количество времени, прежде чем задача будет выполнена.</p>
+<p>Время указывается в количестве тиков методом <code class="docutils literal"><span class="pre">delayTicks()</span></code>, а также время может быть передано более удобной единицей времени путем задания параметра <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/TimeUnit.html">TimeUnit</a> в методе delay().</p>
+<p class="last"><em>Можно указать любой метод, но не оба одновременно, для каждой задачи.</em></p>
 </td>
 </tr>
-<tr class="row-odd"><td>interval</td>
+<tr class="row-odd"><td><p class="first last">интервал</p>
+</td>
 <td><dl class="first last docutils">
 <dt>intervalTicks(</dt>
 <dd>long interval)</dd>
@@ -647,15 +647,13 @@ unit by specifying a <a class="reference external" href="http://docs.oracle.com/
 <dd>TimeUnit unit)</dd>
 </dl>
 </td>
-<td><p class="first">The amount of time between repetitions of the task.  If an interval is
-not specified, the task will not be repeated.</p>
-<p>The time is specified as a number of ticks with the <code class="docutils literal"><span class="pre">intervalTicks()</span></code>
-method, or it may be provided as a number of a more convenient time
-unit by specifying a <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/TimeUnit.html">TimeUnit</a> with the interval() method.</p>
-<p class="last"><em>Either method, but not both, can specified per task.</em></p>
+<td><p class="first">Количество времени между повторами задачи. Если интервал не указан, то задача не будет повторяться.</p>
+<p>Время указывается в количестве тиков методом <code class="docutils literal"><span class="pre">intervalTicks()</span></code>, а также время может быть передано более удобной единицей времени путем задания параметра <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/util/concurrent/TimeUnit.html">TimeUnit</a> в методе interval().</p>
+<p class="last"><em>Можно указать любой метод, но не оба одновременно, для каждой задачи.</em></p>
 </td>
 </tr>
-<tr class="row-even"><td>synchronization</td>
+<tr class="row-even"><td><p class="first last">синхронизация</p>
+</td>
 <td>async()</td>
 <td>A synchronous task is run in the game&#8217;s main loop in series with the
 tick cycle. If <code class="docutils literal"><span class="pre">Task.Builder#async</span></code> is used, the task will be run
@@ -663,7 +661,8 @@ asynchronously. Therefore, it will run in its own thread, independently
 of the tick cycle, and may not safely use game state.
 (See <a class="reference internal" href="#asynchronous-tasks">Asynchronous Tasks</a>.)</td>
 </tr>
-<tr class="row-odd"><td>name</td>
+<tr class="row-odd"><td><p class="first last">название</p>
+</td>
 <td>name(String name)</td>
 <td>The name of the task. By default, the name of the task will be
 PLUGIN_ID &#8220;-&#8221; ( &#8220;A-&#8221; | &#8220;S-&#8221; ) SERIAL_ID. For example, a default task name
@@ -718,7 +717,7 @@ access the task. The below example will schedule a task that will count down fro
 </div>
 </div>
 <div class="section" id="asynchronous-tasks">
-<h3>Asynchronous Tasks<a class="headerlink" href="#asynchronous-tasks" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Асинхронные задачи<a class="headerlink" href="#asynchronous-tasks" title="Ссылка на этот заголовок">¶</a></h3>
 <p>Asynchronous tasks should be used primarily for code that may take a significant period of time to execute, namely
 requests to another server or database. If done on the main thread, a request to another server could greatly impact
 the performance of the game, since the next tick cannot be fired until the request is completed.</p>
@@ -727,9 +726,11 @@ thread asynchronously, you should execute all of the code that does not use the 
 another <cite>synchronous</cite> task to handle the code that needs the API. There are a few parts of Minecraft that you can work
 with <cite>asynchronously</cite>, including:</p>
 <ul class="simple">
-<li>Chat</li>
+<li><p class="first">Чат</p>
+</li>
 <li>Sponge&#8217;s built-in Permissions handling</li>
-<li>Sponge&#8217;s scheduler</li>
+<li><p class="first">Планировщик от Sponge</p>
+</li>
 </ul>
 <p>In addition, there are a few other operations that are safe to do asynchronously:</p>
 <ul class="simple">
@@ -739,7 +740,7 @@ with <cite>asynchronously</cite>, including:</p>
 </div>
 </div>
 <div class="section" id="compatibility-with-other-libraries">
-<h2>Compatibility with other libraries<a class="headerlink" href="#compatibility-with-other-libraries" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Совместимость с другими библиотеками<a class="headerlink" href="#compatibility-with-other-libraries" title="Ссылка на этот заголовок">¶</a></h2>
 <p>As your plugin grows in size and scope you might want to start using one of the many concurrency libraries available
 for Java and the JVM.
 These libraries do tend to support Java&#8217;s
@@ -747,10 +748,10 @@ These libraries do tend to support Java&#8217;s
 of directing on which thread the task is executed.</p>
 <p>To allow these libraries to work with Sponge&#8217;s <code class="docutils literal"><span class="pre">Scheduler</span></code> the following methods can be used:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">Scheduler#createSyncExecutor(Object</span> <span class="pre">plugin)</span></code> creates a <code class="docutils literal"><span class="pre">ScheduledExecutorService</span></code> which executes tasks
-through Sponge&#8217;s synchronous scheduler.</li>
-<li><code class="docutils literal"><span class="pre">Scheduler#createAsyncExecutor(Object</span> <span class="pre">plugin)</span></code> creates a <code class="docutils literal"><span class="pre">ScheduledExecutorService</span></code> which executes tasks
-through Sponge&#8217;s asynchronous scheduler. Tasks are subject to the restrictions mentioned in <a class="reference internal" href="#asynchronous-tasks">Asynchronous Tasks</a>.</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">Scheduler#createSyncExecutor(Object</span> <span class="pre">plugin)</span></code> создает <code class="docutils literal"><span class="pre">ScheduledExecutorService</span></code>, который выполняет задачи посредством синхронизации планировщика от Sponge.</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">Scheduler#createAsyncExecutor(Object</span> <span class="pre">plugin)</span></code> создает <code class="docutils literal"><span class="pre">ScheduledExecutorService</span></code>, который выполняет задачи посредством асинхронного планировщика от Sponge. Задачи имеют ограничения упомянутые в разделе <a class="reference internal" href="#asynchronous-tasks">Асинхронные задачи</a>.</p>
+</li>
 </ul>
 <p>One thing to keep in mind is that any tasks that interacts with Sponge outside of the interactions listed in
 <a class="reference internal" href="#asynchronous-tasks">Asynchronous Tasks</a> need to be executed on the ExecutorService created with

@@ -257,7 +257,7 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Создание плагина</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="buildsystem.html">Build Systems</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="buildsystem.html">Система сборки</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="workspace/index.html">Подготовка рабочего пространства</a><ul>
@@ -304,7 +304,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="commands/index.html">Команды</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="commands/creating.html">Building a Command</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="commands/creating.html">Создание команды</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="commands/arguments.html">Парсинг аргументов</a><ul class="simple">
@@ -314,7 +314,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="commands/childcommands.html">Дочерние Команды</a></li>
-<li class="toctree-l3"><a class="reference internal" href="commands/service.html">Командный менеджер</a></li>
+<li class="toctree-l3"><a class="reference internal" href="commands/service.html">Менеджер команд</a></li>
 <li class="toctree-l3"><a class="reference internal" href="commands/commandcallable.html">Low-Level Command API</a><ul class="simple">
 </ul>
 </li>
@@ -335,7 +335,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="assets/index.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="assets/index.html">API ресурсов</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="configuration/index.html">Configuring Plugins</a><ul>
@@ -385,7 +385,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="blocks/index.html">Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="blocks/index.html">Блоки</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="blocks/concepts.html">Концепты</a><ul class="simple">
 </ul>
 </li>
@@ -422,7 +422,7 @@
 <li class="toctree-l2"><a class="reference internal" href="effects.html">Эффекты</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="scheduler.html">Scheduler</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="scheduler.html">Планировщик</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="services.html">Сервисы</a><ul class="simple">
@@ -432,7 +432,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="permissions.html">Разрешения</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bans.html">Баны</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="bans.html">Блокировки</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="bookview.html">Book Views</a></li>
@@ -585,7 +585,7 @@ name, unless (1) your plugin primarily concerns the minecraft block &#8220;Spong
 for other APIs (in which case you may append &#8220;for Sponge&#8221; to the title).</p>
 </div>
 <div class="section" id="economy-api">
-<h3>Economy API<a class="headerlink" href="#economy-api" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>API экономики<a class="headerlink" href="#economy-api" title="Ссылка на этот заголовок">¶</a></h3>
 <p>The Economy API is used to link economy plugins with other plugins that use the economy (i.e. shops). You can read
 about the Economy API <a class="reference internal" href="economy/index.html"><em>here</em></a>, which details everything you need to know about the API.</p>
 </div>
@@ -595,14 +595,14 @@ about the Economy API <a class="reference internal" href="economy/index.html"><e
 “Coremods”. SpongeForge is a Coremod, and deploys Mixins on startup. Mixins cannot be used by plugins.</p>
 </div>
 <div class="section" id="packets">
-<h3>Packets<a class="headerlink" href="#packets" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Пакеты<a class="headerlink" href="#packets" title="Ссылка на этот заголовок">¶</a></h3>
 <p>Anything to do with intercepting packets, or introducing custom items/blocks/entities/etc, is <em>not</em> planned to be part
 of the Sponge API. Note that using packets may be looking at the problem the wrong way, as there may be a solution
 achievable with the existing Sponge API. In some cases it may be possible to add whatever is needed to the Sponge API;
 otherwise, the alternative is to use the Forge API and create a Mod instead.</p>
 </div>
 <div class="section" id="using-forge-or-nms-classes">
-<h3>Using Forge or NMS Classes<a class="headerlink" href="#using-forge-or-nms-classes" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Использование Forge или NMS классов<a class="headerlink" href="#using-forge-or-nms-classes" title="Ссылка на этот заголовок">¶</a></h3>
 <p>We do not recommend working with Forge or Minecraft base classes at all, unless it is to provide compatibility with a
 mod for Sponge API. Most uses of NMS (net.minecraft.server) code in plugins do not fail gracefully, making
 troubleshooting very difficult. Maintaining NMS modifications is also more difficult than using the Sponge API. Mods that

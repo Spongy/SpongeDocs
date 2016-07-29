@@ -396,7 +396,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../blocks/modifying.html">ブロックの改変</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">Tile Entities</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">タイルエンティティ</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../blocks/virtualblock.html">Virtual Block Changes</a><ul class="simple">
@@ -452,11 +452,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../wgen/index.html">World Generation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../wgen/index.html">ワールド生成</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../wgen/modifiers.html">WorldGeneratorModifier</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../wgen/customwgen.html">Modifying World Generation</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../wgen/customwgen.html">ワールド生成を変更</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -674,6 +674,10 @@ mods. By default, this is set to false.</li>
 </ul>
 <p>By default, <code class="docutils literal"><span class="pre">&#64;Listener</span></code> is configured so that your event listener will <em>not</em> be called if the event in question is
 cancellable and has been cancelled (such as by another plugin).</p>
+<div class="admonition note">
+<p class="first admonition-title">注釈</p>
+<p class="last">Events cancelled early on will still trigger listeners registered with a later <code class="docutils literal"><span class="pre">Order</span></code>.</p>
+</div>
 </div>
 <div class="section" id="gamereloadevent">
 <span id="game-reload"></span><h3>GameReloadEvent<a class="headerlink" href="#gamereloadevent" title="このヘッドラインへのパーマリンク">¶</a></h3>
