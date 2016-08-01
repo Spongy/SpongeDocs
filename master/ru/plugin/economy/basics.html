@@ -467,6 +467,9 @@
 <li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Game Profile Manager</a><ul class="simple">
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../offline-userplayer-data.html">Offline Player Data</a><ul class="simple">
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../debugging.html">Plugin Debugging</a><ul class="simple">
 </ul>
 </li>
@@ -574,9 +577,12 @@
 <p>The Sponge Economy API has a few basic components that developers should be familiar with:</p>
 <ul class="simple">
 <li>EconomyService</li>
-<li>Currency</li>
-<li>Accounts</li>
-<li>Transactions</li>
+<li><p class="first">Валюта</p>
+</li>
+<li><p class="first">Аккаунты</p>
+</li>
+<li><p class="first">Транзакции</p>
+</li>
 </ul>
 <div class="section" id="the-economyservice">
 <h2>The EconomyService<a class="headerlink" href="#the-economyservice" title="Ссылка на этот заголовок">¶</a></h2>
@@ -591,14 +597,14 @@ have to implement it yourself, if you want to make use of it.</p>
 </div>
 </div>
 <div class="section" id="currency">
-<h2>Currency<a class="headerlink" href="#currency" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Валюта<a class="headerlink" href="#currency" title="Ссылка на этот заголовок">¶</a></h2>
 <p>The <a class="reference external" href="https://jd.spongepowered.org/org/spongepowered/api/service/economy/Currency.html">org.spongepowered.api.service.economy.Currency</a>
 object represents a form of Currency. <code class="docutils literal"><span class="pre">Currency</span></code> stores a display name (plural and singular), a symbol, the amount of
 fractional digits, and whether the currency is the default currency for the economy. If the economy plugin chooses, it
 can support multiple currencies.</p>
 </div>
 <div class="section" id="accounts">
-<h2>Accounts<a class="headerlink" href="#accounts" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Аккаунты<a class="headerlink" href="#accounts" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Accounts are used to store economy information about a specific player or other object (i.e. bank, business, entity).
 There are two account types in the Sponge Economy API:</p>
 <div class="section" id="virtual-accounts">
@@ -613,7 +619,7 @@ anything, but are commonly used for things such as banks, or non-players. To get
 </div>
 </div>
 <div class="section" id="transactions">
-<h2>Transactions<a class="headerlink" href="#transactions" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Транзакции<a class="headerlink" href="#transactions" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Transactions represent an account&#8217;s change in balance. There are currently three types of transactions:</p>
 <ul class="simple">
 <li>Deposit: Occurs when an account has funds added to it</li>
