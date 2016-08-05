@@ -581,16 +581,10 @@ must use the <a class="reference external" href="https://jd.spongepowered.org/4.
 <strong>Otherwise, the context object will throw an exception!</strong></p>
 <div class="admonition tip">
 <p class="first admonition-title">Astuce</p>
-<p class="last">You can use the
-<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/GenericArguments.html#onlyOne-org.spongepowered.api.command.args.CommandElement-">GenericArguments#onlyOne(CommandElement)</a> element to limit the amount of returned values to a single one,
-so you can safely use <code class="docutils literal"><span class="pre">args.&lt;T&gt;getOne(String)</span></code>.</p>
+<p class="last">Vous pouvez utiliser l&#8217;élément <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/GenericArguments.html#onlyOne-org.spongepowered.api.command.args.CommandElement-">GenericArguments#onlyOne(CommandElement)</a> pour limiter le nombre de valeurs renvoyées à une seule valeur, donc vous vous pouvez utilisez prudemment <code class="docutils literal"><span class="pre">args.&lt;T&gt;getOne(String</span> <span class="pre">key)</span></code>.</p>
 </div>
-<p>To create a new <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/CommandElement.html">CommandElement</a> (argument), use the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/GenericArguments.html">GenericArguments</a> factory class. Many command
-elements require a short text key, which is displayed in error and help messages.</p>
-<p>Apply the <code class="docutils literal"><span class="pre">CommandElement</span></code> to the command builder with the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/spec/CommandSpec.Builder.html#arguments-CommandElement...-">CommandSpec.Builder#arguments(CommandElement...)</a>
-method. It is possible to pass more than one <code class="docutils literal"><span class="pre">CommandElement</span></code> to the method, thus chaining multiple arguments (e.g
-<code class="docutils literal"><span class="pre">/msg</span> <span class="pre">&lt;player&gt;</span> <span class="pre">&lt;msg&gt;</span></code>). This has the same effect as wrapping the <code class="docutils literal"><span class="pre">CommandElement</span></code> objects in a
-<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/GenericArguments.html#seq-CommandElement...-">GenericArguments#seq(CommandElement...)</a> element.</p>
+<p>Pour créer un nouveau <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/CommandElement.html">CommandElement</a> (argument), utilisez la classe <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/GenericArguments.html">GenericArguments</a>. De nombreux éléments de commande nécessitent un court mot-clé, qui est affiché en cas d&#8217;erreurs ou demandes d&#8217;aide.</p>
+<p>Appliquez le <code class="docutils literal"><span class="pre">CommandElement</span></code> à un constructeur de commandes avec la méthode <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/spec/CommandSpec.Builder.html#arguments-CommandElement...-">CommandSpec.Builder#arguments(CommandElement...)</a>. C&#8217;est possible de transmettre plus d&#8217;un``CommandElement`` à la méthode, ainsi vous pouvez enchaîner les arguments (ex: <code class="docutils literal"><span class="pre">/msg</span> <span class="pre">&lt;player&gt;</span> <span class="pre">&lt;msg&gt;</span></code>). Ceci a le même effet que d&#8217;inclure les objets du <code class="docutils literal"><span class="pre">CommandElement</span></code> dans un élément <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/GenericArguments.html#seq-CommandElement...-">GenericArguments#seq(CommandElement...)</a>.</p>
 <div class="section" id="example-building-a-command-with-multiple-arguments">
 <h2>Exemple: Construction d&#8217;une Commande à Arguments Multiples<a class="headerlink" href="#example-building-a-command-with-multiple-arguments" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.Sponge</span><span class="o">;</span>
@@ -720,8 +714,8 @@ instances</td>
 </td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">catalogedElement</span></code></td>
-<td>Expect an argument that is a member of the specified
-<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/CatalogType.html">CatalogType</a>.</td>
+<td><p class="first last">Attend un argument qui est membre d&#8217;un <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/CatalogType.html">CatalogType</a> spécifique.</p>
+</td>
 <td>multiple matching elements
 of the specified catalog type</td>
 </tr>

@@ -590,8 +590,7 @@
 <h2>Etats d&#8217;Initialisations<a class="headerlink" href="#initialization-states" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Les états d&#8217;initialisations ne se produisent qu&#8217;une fois au cours de l&#8217;exécution de l&#8217;application.</p>
 <p><strong>CONSTRUCTION</strong></p>
-<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameConstructionEvent.html">GameConstructionEvent</a> is triggered.
-During this state, the <code class="docutils literal"><span class="pre">&#64;Plugin</span></code> class instance for each plugin is triggered.</p>
+<p>L&#8217;événement <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameConstructionEvent.html">GameConstructionEvent</a> est levé. Durant cet état, l&#8217;instance de la classe <code class="docutils literal"><span class="pre">&#64;Plugin</span></code> est déclenchée pour chaque plugin.</p>
 <p><strong>PRE_INITIALISATION</strong></p>
 <p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GamePreInitializationEvent.html">GamePreInitializationEvent</a> is triggered.
 During this state, the plugin gets ready for initialization. Access to a default logger instance and access to
@@ -635,13 +634,9 @@ During this state, no players are connected and no changes to worlds are saved.<
 <p class="last">Les Statuts d&#8217;arrêts ne sont pas garantis d&#8217;être exécutés durant un arrêt. Ils ne seront pas activés si le jeu s&#8217;arrête de force via Ctrl+C, Task Manager, un crash de l&#8217;ordinateur, ou toutes autres situations similaires.</p>
 </div>
 <p><strong>GAME_STOPPING</strong></p>
-<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStoppingServerEvent.html">GameStoppingServerEvent</a> is triggered.
-This state occurs immediately before <code class="docutils literal"><span class="pre">GAME_STOPPED</span></code>. Plugins providing an API should still be capable of accepting
-basic requests.</p>
+<p>Le <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStoppingServerEvent.html">GameStoppingServerEvent</a> est déclenché. Ce statut intervient immédiatement avant <code class="docutils literal"><span class="pre">GAME_STOPPED</span></code>. Les plugin fournissant une API sont toujours capables d&#8217;accepter des requêtes basiques.</p>
 <p><strong>GAME_STOPPED</strong></p>
-<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStoppedServerEvent.html">GameStoppedServerEvent</a> is triggered.
-Once this event has finished executing, Minecraft will shut down. No further interaction with the game or other plugins
-should be attempted at this point.</p>
+<p>Le <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStoppedServerEvent.html">GameStoppedServerEvent</a> est déclenché. Une fois qu&#8217;il a fini d&#8217;être exécuté, Minecraft s&#8217;arrêtera. Plus aucune autre interaction avec le jeu ou les plugins ne doit être tentée à ce stade.</p>
 </div>
 </div>
 

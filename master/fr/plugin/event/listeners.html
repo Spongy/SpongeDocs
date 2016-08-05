@@ -591,16 +591,11 @@ object for events as Sponge will do it automatically.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">The event bus <strong>supports supertypes</strong>. For example, <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/block/ChangeBlockEvent.Break.html">ChangeBlockEvent.Break</a> extends
-<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/block/ChangeBlockEvent.html">ChangeBlockEvent</a>. Therefore, a plugin could listen to <code class="docutils literal"><span class="pre">ChangeBlockEvent</span></code> and still receive
-<code class="docutils literal"><span class="pre">ChangeBlockEvent.Break</span></code>s. However, a plugin listening to just <code class="docutils literal"><span class="pre">ChangeBlockEvent.Break</span></code> would not be notified
-of other types of <code class="docutils literal"><span class="pre">ChangeBlockEvent</span></code>.</p>
+<p class="last">Le bus d&#8217;événements <strong>supporte le supertypes</strong>. Par exemple la classe <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/block/ChangeBlockEvent.Break.html">ChangeBlockEvent.Break</a> hérite de la classe <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/block/ChangeBlockEvent.html">ChangeBlockEvent</a>. Donc un plugin pourrait écouter l&#8217;événement <code class="docutils literal"><span class="pre">ChangeBlockEvent</span></code> et toujours recevoir des événements <code class="docutils literal"><span class="pre">ChangeBlockEvent.Break</span></code>. Toutefois, un plugin n&#8217;écoutant que l&#8217;événement <code class="docutils literal"><span class="pre">ChangeBlockEvent.Break</span></code> ne sera pas averti des autres types de l&#8217;événement <code class="docutils literal"><span class="pre">ChangeBlockEvent</span></code>.</p>
 </div>
 <div class="section" id="registering-and-unregistering-event-listeners">
 <h2>Registering and Unregistering Event Listeners<a class="headerlink" href="#registering-and-unregistering-event-listeners" title="Lien permanent vers ce titre">¶</a></h2>
-<p>To register event listeners annotated by <code class="docutils literal"><span class="pre">&#64;Listener</span></code> that are not in the main plugin class, you can use
-<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/EventManager.html#registerListeners-java.lang.Object-java.lang.Object-">EventManager#registerListeners(Object, Object)</a>, which accepts a reference to the plugin and an instance of
-the class containing the event listeners.</p>
+<p>Pour enregistrer les event listeners annotés de <code class="docutils literal"><span class="pre">&#64;Listener</span></code> qui ne sont pas dans la classe principale de votre plugin, vous pouvez utiliser la méthode <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/EventManager.html#registerListeners-java.lang.Object-java.lang.Object-">EventManager#registerListeners(Object, Object)</a>, qui pend en paramètres une instance du plugin et une instance de la classe contenant les events listeners.</p>
 <p><strong>Example: Registering Event Listeners in Other Classes</strong></p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.Sponge</span><span class="o">;</span>
 
@@ -617,13 +612,7 @@ the class containing the event listeners.</p>
 </div>
 <div class="section" id="dynamically-registering-event-listeners">
 <h3>Dynamically Registering Event Listeners<a class="headerlink" href="#dynamically-registering-event-listeners" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Some plugins (such as scripting plugins) may wish to dynamically register an event listener. In that case the event
-listener is not a method annotated with <code class="docutils literal"><span class="pre">&#64;Listener</span></code>, but rather a class implementing the <code class="docutils literal"><span class="pre">EventListener</span></code> interface.
-This event listener can then be registered by calling <code class="docutils literal"><span class="pre">EventManager#registerListener</span></code>, which accepts a reference to the
-plugin as the first argument, the <code class="docutils literal"><span class="pre">Class</span></code> of events handled as the second argument, and the listener itself as the
-final argument. Optionally, you can specify an <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/Order.html">Order</a> to run the event listener in as the third argument or a
-boolean value as the fourth argument (before the instance of the listener) which determines whether to call the listener
-before other server modifications.</p>
+<p>Certains plugins (comme les plugins de scripting) peuvent avoir besoin d&#8217;inscrire un event listener dynamiquement. Dans ce cas, l&#8217;event listener n&#8217;est pas une méthode annotée de <code class="docutils literal"><span class="pre">&#64;Listener</span></code>, mais une classe implémentant l&#8217;interface <code class="docutils literal"><span class="pre">EventListener</span></code>. Cet event listener peut ensuite être inscrit avec la méthode <code class="docutils literal"><span class="pre">EventManager#registerListener</span></code>, qui prend en paramètres, dans l&#8217;ordre: une référence au plugin, sa <a href="#id1"><span class="problematic" id="id2">``</span></a>Class`, et le listener lui-même. Optionnellement, vous pouvez spécifier un ordre <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/Order.html">Order</a> d&#8217;exécution en troisième paramètre (avant l&#8217;instance du listener), ou un booléen en quatrième argument qui déterminera s&#8217;il faut appeler le listener avant ou bien après toute modification effectuée par le serveur.</p>
 <p><strong>Example: Implementing EventListener</strong></p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.event.EventListener</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.event.block.ChangeBlockEvent</span><span class="o">;</span>

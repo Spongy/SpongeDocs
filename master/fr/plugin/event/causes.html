@@ -655,9 +655,7 @@ the cause.</p>
 <p class="first admonition-title">Note</p>
 <p class="last">Cause objects are immutable therefore cannot be modified once created.</p>
 </div>
-<p>Using <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/cause/Cause.html#of-org.spongepowered.api.event.cause.NamedCause-">Cause#of(NamedCause)</a>, you can construct a cause from a series of objects. The objects will be added to
-the cause chain in the order that they are passed to the method, so the first object parameter will become the root
-cause. Remember that a <code class="docutils literal"><span class="pre">Cause</span></code> may not be empty, so at least one non-null parameter is always required.</p>
+<p>À l&#8217;aide de <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/cause/Cause.html#of-org.spongepowered.api.event.cause.NamedCause-">Cause#of(NamedCause)</a> vous pouvez construire une cause d&#8217;une série d&#8217;objets. Les objets seront ajoutés à la chaîne de cause à l&#8217;ordre dans lequel ils sont passés à la méthode, alors que le premier paramètre de l&#8217;objet va devenir la cause de racine. N&#8217;oubliez pas qu&#8217;une <code class="docutils literal"><span class="pre">Cause</span></code> ne peut pas être vide, donc au moins un paramètre non null est toujours requis.</p>
 <p>If you already have a cause object and would like to append some more objects to the chain you can use
 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/cause/Cause.html#with-org.spongepowered.api.event.cause.NamedCause-NamedCause...-">Cause#with(NamedCause, NamedCause...)</a>. This constructs a new Cause object containing first the objects
 already present in the original cause, then followed by the additional objects that you provided.</p>

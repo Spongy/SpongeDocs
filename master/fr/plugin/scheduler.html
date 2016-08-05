@@ -585,8 +585,7 @@
 <span class="n">Task</span><span class="o">.</span><span class="na">Builder</span> <span class="n">taskBuilder</span> <span class="o">=</span> <span class="n">scheduler</span><span class="o">.</span><span class="na">createTaskBuilder</span><span class="o">();</span>
 </pre></div>
 </div>
-<p>The only required property is the <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html">Runnable</a>,
-which you can specify using <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/scheduler/Task.Builder.html#execute-java.lang.Runnable-">Task.Builder#execute(Runnable)</a>:</p>
+<p>La seule propriété requise est le <a class="reference external" href="http://docs.oracle.com/javase/8/docs/api/java/lang/Runnable.html">Runnable</a>, que vous pouvez spécifier en utilisant la méthode <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/scheduler/Task.Builder.html#execute-java.lang.Runnable-">Task.Builder#execute(Runnable)</a>:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">taskBuilder</span><span class="o">.</span><span class="na">execute</span><span class="o">(</span><span class="k">new</span> <span class="n">Runnable</span><span class="o">()</span> <span class="o">{</span>
     <span class="kd">public</span> <span class="kt">void</span> <span class="nf">run</span><span class="o">()</span> <span class="o">{</span>
         <span class="n">logger</span><span class="o">.</span><span class="na">info</span><span class="o">(</span><span class="s">&quot;Yay! Schedulers!&quot;</span><span class="o">);</span>
@@ -680,7 +679,7 @@ of the tick cycle, and may not safely use game state.
     <span class="o">.</span><span class="na">name</span><span class="o">(</span><span class="s">&quot;ExamplePlugin - Fetch Stats from Database&quot;</span><span class="o">).</span><span class="na">submit</span><span class="o">(</span><span class="n">plugin</span><span class="o">);</span>
 </pre></div>
 </div>
-<p>To cancel a task, simply call the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/scheduler/Task.html#cancel--">Task#cancel()</a> method:</p>
+<p>Pour annuler une tâche, utilisez simplement la méthode <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/scheduler/Task.html#cancel--">Task#cancel()</a>:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">task</span><span class="o">.</span><span class="na">cancel</span><span class="o">();</span>
 </pre></div>
 </div>

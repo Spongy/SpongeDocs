@@ -596,14 +596,11 @@ economy&#8217;s currencies and provides methods for account management.</p>
 </div>
 <div class="section" id="currency">
 <h2>La devise<a class="headerlink" href="#currency" title="Lien permanent vers ce titre">¶</a></h2>
-<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/service/economy/Currency.html">Currency</a> object represents a form of Currency. <code class="docutils literal"><span class="pre">Currency</span></code> stores a display name (plural and singular),
-a symbol, the amount of fractional digits, and whether the currency is the default currency for the economy. If the
-economy plugin chooses, it can support multiple currencies.</p>
+<p>L&#8217;objet <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/service/economy/Currency.html">Currency</a> représente une sorte de Monnaie. <code class="docutils literal"><span class="pre">Currency</span></code> stocke un nom d&#8217;affichage, display name (Au pluriel et au singulier), un symbole, la quantité de nombres significatifs, et si la monnaie est la monnaie par défaut de l&#8217;économie. Si le plugin d&#8217;économie est fait pour, il peut supporter plusieurs monnaies.</p>
 </div>
 <div class="section" id="accounts">
 <h2>Les comptes<a class="headerlink" href="#accounts" title="Lien permanent vers ce titre">¶</a></h2>
-<p><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/service/economy/account/Account.html">Account</a>s are used to store economy information about a specific player or other object (i.e. bank,
-business, entity). There are two account types in the Sponge Economy API:</p>
+<p>Les <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/service/economy/account/Account.html">Account</a>s sont utilisés pour stocker les informations économiques par rapport à un joueur spécifique où un autre objet (ex: Une banque, une entreprise, une entité,...). Il y a deux types de comptes dans l&#8217;API Economie de Sponge:</p>
 <div class="section" id="virtual-accounts">
 <h3>Les comptes virtuels<a class="headerlink" href="#virtual-accounts" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Les comptes virtuels sont reliés à un identifiant qui est déclaré dans un String. Les comptes virtuels peuvent être reliés à presque tout, mais ils sont communément utilisés pour des choses comme les banques, ou des entités non-joueuses. Pour récupérer l&#8217;identifiant d&#8217;un compte virtuel, utilisez &#8216;&#8217;getIdentifier()&#8217;&#8216;.</p>
@@ -624,8 +621,7 @@ business, entity). There are two account types in the Sponge Economy API:</p>
 <li><p class="first">Transfert: A lieu quand un compte échange des fonds avec un autre compte</p>
 </li>
 </ul>
-<p>When a transfer occurs, the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/economy/EconomyTransactionEvent.html">EconomyTransactionEvent</a> is fired. Using this event, you can get the
-<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/service/economy/transaction/TransactionResult.html">TransactionResult</a>. The <code class="docutils literal"><span class="pre">TransactionResult</span></code> stores data about the transaction that occurred, including:</p>
+<p>Quand un transfert a lieu, l&#8217;event <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/economy/EconomyTransactionEvent.html">EconomyTransactionEvent</a> est déclenché. En utilisant cet event, vous pouvez récupérer le <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/service/economy/transaction/TransactionResult.html">TransactionResult</a>. Le <code class="docutils literal"><span class="pre">TransactionResult</span></code> stocke les données de la transaction qui a eu lieu, cela inclut:</p>
 <ul class="simple">
 <li><p class="first">Le(s) compte(s) impliqué(s)</p>
 </li>

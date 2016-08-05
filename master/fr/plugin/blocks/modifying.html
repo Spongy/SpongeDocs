@@ -588,16 +588,11 @@
 </pre></div>
 </div>
 </div></blockquote>
-<p>It&#8217;s as simple as that. If you just want to &#8216;delete&#8217; a block (which is done by replacing it with air), you may just
-use the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/Location.html#removeBlock--">Location#removeBlock()</a> method provided by <code class="docutils literal"><span class="pre">Location</span></code>.</p>
+<p>C&#8217;est aussi simple que cela. Si vous voulez juste &#8216;supprimer&#8217; un bloc (qui ce fait en le remplaçant par de l&#8217;air), vous devez juste utiliser la méthode <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/Location.html#removeBlock--">Location#removeBlock()</a> qui est fournit par une <code class="docutils literal"><span class="pre">Location</span></code> (emplacement).</p>
 </div>
 <div class="section" id="altering-block-states">
 <h2>Modifier les Etats des Blocs<a class="headerlink" href="#altering-block-states" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Similar to the above example, the <code class="docutils literal"><span class="pre">Location</span></code> class provides a <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/Location.html#setBlock-org.spongepowered.api.block.BlockState-">Location#setBlock(BlockState)</a> method
-accepting a new <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/block/BlockState.html">BlockState</a>. To make use of it, you first must acquire a <code class="docutils literal"><span class="pre">BlockState</span></code> you can modify. You
-can do so either by getting the block&#8217;s current state via the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/Location.html#getBlock--">Location#getBlock()</a> method or by using a
-<code class="docutils literal"><span class="pre">BlockType</span></code>&#8216;s default state. The latter is demonstrated below. The default state for a Sponge block is retrieved
-and then modified to directly create a wet sponge block:</p>
+<p>Comme dans l&#8217;exemple ci-dessus, la classe <code class="docutils literal"><span class="pre">Location</span></code> fournit une méthode <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/Location.html#setBlock-org.spongepowered.api.block.BlockState-">Location#setBlock(BlockState)</a> utilisant un nouveau <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/block/BlockState.html">BlockState</a>. Pour pouvoir l&#8217;utiliser, vous devez en premier lieu avoir un <code class="docutils literal"><span class="pre">BlockState</span></code> que vous pouvez modifier. Vous pouvez faire la même chose en obtenant l&#8217;état actuel du bloc avec la méthode <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/Location.html#getBlock--">Location#getBlock()</a> que fournit la classe <code class="docutils literal"><span class="pre">Location</span></code> ou en utilisant l&#8217;état d&#8217;un bloc par défaut. Ce dernier est démontré ci-dessous: L&#8217;état par défaut d&#8217;un bloc d&#8217;éponge est récupéré et ensuite modifié pour créer directement un bloc d&#8217;éponge mouillée:</p>
 <blockquote>
 <div><div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.Sponge</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.block.BlockState</span><span class="o">;</span>
@@ -641,12 +636,8 @@ given data set, overwriting existing values. The following example will change a
 </pre></div>
 </div>
 </div></blockquote>
-<p>Note that the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/block/DirtData.html">DirtData</a> is a mutable copy of the data held in the <code class="docutils literal"><span class="pre">BlockState</span></code>. It is changed and then
-converted back to an immutable and used to create a new <code class="docutils literal"><span class="pre">BlockState</span></code> which then replaces the original block.</p>
-<p>The <code class="docutils literal"><span class="pre">without()</span></code> method accepts a class reference and will create a new <code class="docutils literal"><span class="pre">BlockState</span></code> without the data
-represented by the given class. If the block state would not be valid without that data, a default value will be used.
-So if the <code class="docutils literal"><span class="pre">DirtData</span></code> from a dirt blocks state is removed, it will fall back to <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/type/DirtTypes.html#DIRT">DirtTypes#DIRT</a>, the default
-value. The following example will dry the block at a given <code class="docutils literal"><span class="pre">Location</span></code>, if possible.</p>
+<p>Notez que <cite>:javadoc:`DirtData</cite> est une copie mutable des données contenues dans le <code class="docutils literal"><span class="pre">BlockState</span></code>. Elles sont changées et ensuite utilisées pour créer un nouveau <code class="docutils literal"><span class="pre">BlockState</span></code> qui va remplacer le bloc originel.</p>
+<p>La méthode <code class="docutils literal"><span class="pre">without()</span></code> accepte une classe référence et va créer un nouveau <code class="docutils literal"><span class="pre">BlockState</span></code> sans les données représentées par la classe donnée. Si le nouveau <code class="docutils literal"><span class="pre">BlockState</span></code> ne serais pas valide sans ces données, une valeur par défaut sera utilisée. Donc si la donnée <code class="docutils literal"><span class="pre">DirtData</span></code> des bloc de terre est supprimé, elle sera automatiquement remplacer par la valeur <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/type/DirtTypes.html#DIRT">DirtTypes#DIRT</a>, la valeur par défaut. L&#8217;exemple suivant va sécher le bloc a la <code class="docutils literal"><span class="pre">Location</span></code> (emplacement) donné, si possible.</p>
 <blockquote>
 <div><div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span>
     <span class="nn">org.spongepowered.api.data.manipulator.immutable.block.ImmutableWetData</span><span class="o">;</span>
@@ -661,9 +652,7 @@ value. The following example will dry the block at a given <code class="docutils
 </pre></div>
 </div>
 </div></blockquote>
-<p>Since the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/WetData.html">WetData</a> data manipulator represents boolean data, by removing it we set the wetness of the block
-(if it has any) to false. The <code class="docutils literal"><span class="pre">dryState.isPresent()</span></code> check will fail on block states that can not be wet since
-<code class="docutils literal"><span class="pre">dryState</span></code> will be <code class="docutils literal"><span class="pre">Optional.empty()</span></code> in that case.</p>
+<p>Puisque le manipulateur de données <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/WetData.html">WetData</a> représente des données booléennes, en le supprimant nous définissons l&#8217;humidité du bloc (si il en possède) comme <code class="docutils literal"><span class="pre">false</span></code> (faux). La vérification <code class="docutils literal"><span class="pre">dryState.isPresent()``échouera</span> <span class="pre">lorsqu'elle</span> <span class="pre">sera</span> <span class="pre">faîtes</span> <span class="pre">sur</span> <span class="pre">des</span> <span class="pre">blocs</span> <span class="pre">ne</span> <span class="pre">pouvant</span> <span class="pre">pas</span> <span class="pre">être</span> <span class="pre">humides</span> <span class="pre">et</span> <span class="pre">sera</span> <span class="pre">``Optional.absent()</span></code> dans ce cas.</p>
 </div>
 <div class="section" id="copying-blocks">
 <h2>Copier des Blocs<a class="headerlink" href="#copying-blocks" title="Lien permanent vers ce titre">¶</a></h2>

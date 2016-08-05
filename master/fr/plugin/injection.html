@@ -578,8 +578,8 @@
 <h2>Liste Temporaire des Types Injectés<a class="headerlink" href="#temporary-list-of-injected-types" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="docutils">
 <dt>ConfigDir (annotation sur Path ou File)</dt>
-<dd>Used to inject the plugin&#8217;s configuration directory:
-<code class="docutils literal"><span class="pre">./mods/</span></code> OR <code class="docutils literal"><span class="pre">./mods/&lt;Plugin#id&gt;/</span></code> depending on <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/config/ConfigDir.html#sharedRoot--">ConfigDir#sharedRoot()</a></dd>
+<dd><p class="first last">Utilisé pour injecter le répertoire de configuration du plugin: <code class="docutils literal"><span class="pre">./mods/</span></code> ou <code class="docutils literal"><span class="pre">./mods/&lt;Plugin#id&gt;/</span></code> selon la valeur de <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/config/ConfigDir.html#sharedRoot--">ConfigDir#sharedRoot()</a></p>
+</dd>
 <dt><a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/loader/ConfigurationLoader.html">ConfigurationLoader&lt;CommentedConfigurationNode&gt;</a></dt>
 <dd><p class="first last">Doit être une annotation avec <code class="docutils literal"><span class="pre">&#64;DefaultConfig</span></code>. Utilisé pour injecter un <code class="docutils literal"><span class="pre">ConfigurationLoader</span></code> pré-généré pour le <code class="docutils literal"><span class="pre">File</span></code> ou la même annotation.</p>
 </dd>
@@ -633,8 +633,7 @@
 </div>
 <div class="section" id="game">
 <h3>Game<a class="headerlink" href="#game" title="Lien permanent vers ce titre">¶</a></h3>
-<p>The <code class="docutils literal"><span class="pre">Game</span></code> object is the opening for many of the internal functions of the SpongeAPI, from the <code class="docutils literal"><span class="pre">EventManager</span></code> to the
-<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/Server.html">Server</a> and even the Sync/Async <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/scheduler/Scheduler.html">Scheduler</a>.</p>
+<p>La classe <code class="docutils literal"><span class="pre">Game</span></code> est l&#8217;ouverture à plusieurs fonctions internes de l&#8217;Api Sponge, depuis l&#8217;<code class="docutils literal"><span class="pre">EventManager</span></code> jusqu&#8217;au <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/Server.html">Server</a> et même les Sync/Async <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/scheduler/Scheduler.html">Scheduler</a>.</p>
 <p>Il est totalement possible de recevoir un objet <code class="docutils literal"><span class="pre">Game</span></code> avec la plupart des events, il peut toutefois être obtenu pas une injection.</p>
 <p><strong>Exemple - Champ</strong></p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">com.google.inject.Inject</span><span class="o">;</span>
@@ -668,7 +667,7 @@
 </div>
 <div class="section" id="config-directory">
 <h3>Dossier de configuration<a class="headerlink" href="#config-directory" title="Lien permanent vers ce titre">¶</a></h3>
-<p>The recommended way to obtain your config file is through Guice, along with the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/config/ConfigDir.html">ConfigDir</a> annotation.</p>
+<p>La manière recommandée pour obtenir votre fichier de configuration est d&#8217;utiliser Guice, au moyen de l&#8217;annotation <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/config/ConfigDir.html">ConfigDir</a>.</p>
 <div class="admonition tip">
 <p class="first admonition-title">Astuce</p>
 <p class="last">Si vous assignez à <code class="docutils literal"><span class="pre">sharedRoot</span></code> la valeur <code class="docutils literal"><span class="pre">true</span></code>, votre <code class="docutils literal"><span class="pre">ConfigDir</span></code> sera le même répertoire qui - potentiellement - contient la configuration d&#8217;autres plugins. Dans la plupart des cas où récupérer le <code class="docutils literal"><span class="pre">ConfigDir</span></code> est nécessaire, la valeur devrait être mise à <code class="docutils literal"><span class="pre">false</span></code>.</p>

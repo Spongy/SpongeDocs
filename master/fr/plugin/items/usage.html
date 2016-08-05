@@ -592,8 +592,7 @@ actual <code class="docutils literal"><span class="pre">ItemStack</span></code> 
 </pre></div>
 </div>
 <p>See how simple that is? Because sticks can stack, we can also find out how many are present.</p>
-<p>Getting the amount of items in an <code class="docutils literal"><span class="pre">ItemStack</span></code> is relatively easy. The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/item/inventory/ItemStack.html#getQuantity--">ItemStack#getQuantity()</a> method will
-handle this for us.</p>
+<p>Obtenir la quantité d&#8217;objets dans un <code class="docutils literal"><span class="pre">ItemStack</span></code> est relativement facile. La méthode <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/item/inventory/ItemStack.html#getQuantity--">ItemStack#getQuantity()</a> fournie par l&#8217;<code class="docutils literal"><span class="pre">ItemStack</span></code> le fera pour nous.</p>
 </div>
 <div class="section" id="modifying-itemstack-data">
 <h2>Modifying ItemStack Data<a class="headerlink" href="#modifying-itemstack-data" title="Lien permanent vers ce titre">¶</a></h2>
@@ -606,13 +605,8 @@ specify the key that needs to be changed:</p>
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>In this, we specified that the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/key/Keys.html#UNBREAKABLE">Keys#UNBREAKABLE</a> key is the key that we would like to change. We then set its
-value to <code class="docutils literal"><span class="pre">true</span></code> to imply that the item will never break. All of this is enclosed within the <code class="docutils literal"><span class="pre">offer()</span></code> method of the
-<code class="docutils literal"><span class="pre">ItemStack</span></code> to return our changes back to the <code class="docutils literal"><span class="pre">ItemStack</span></code>.</p>
-<p>Different keys will require different values based on their job. For example, to change the lore of an item, one would
-need to specify a <code class="docutils literal"><span class="pre">List</span></code> of <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/Text.html">Text</a> rather than an boolean or other value. It is also important to perform
-checks to see if the key can actually apply to the item. For example, some items might not have durability or may
-already have lore applied to the item.</p>
+<p>Dans cet exemple, nous avons spécifié que la clé <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/key/Keys.html#UNBREAKABLE">Keys#UNBREAKABLE</a> est la clé que nous voulions changer. nous avons ensuite défini la valeur à <code class="docutils literal"><span class="pre">true</span></code> pour signifier que l&#8217;objet ne se cassera jamais. Tout ceci est passé en paramètre à la méthode <code class="docutils literal"><span class="pre">offer()</span></code> de l&#8217;<code class="docutils literal"><span class="pre">ItemStack</span></code> pour modifier à son tour l&#8217;<code class="docutils literal"><span class="pre">ItemStack</span></code>.</p>
+<p>Différentes clés requerront différentes valeurs basées sur leur emploi. Par exemple, pour changer la connaissance d&#8217;un objet, on aurait besoin de spécifier une <code class="docutils literal"><span class="pre">List</span></code> de <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/Text.html">Text</a> plutôt qu&#8217;un booléen ou une autre valeur. Il est également important d&#8217;effectuer des vérifications pour voir si une clé peut effectivement être utilisée sur un objet. Par exemple, certains objet pourraient ne pas avoir de durabilité, ou pourraient déjà avoir une connaissance associée à l&#8217;objet.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.text.Text</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">java.util.List</span><span class="o">;</span>

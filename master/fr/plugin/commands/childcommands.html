@@ -605,9 +605,7 @@
     <span class="o">.</span><span class="na">build</span><span class="o">();</span>
 </pre></div>
 </div>
-<p>Instead of registering them to the command service, child commands are registered on their parent command using the
-<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/spec/CommandSpec.Builder.html#child-org.spongepowered.api.command.CommandCallable-String...-">CommandSpec.Builder#child(CommandCallable, String...)</a> method. They are registered with a list of aliases.
-The first alias supplied is the primary one and will appear in the usage message.</p>
+<p>Au lieu de les enregistrer dans le service de commande, les sous-commandes sont enregistrées dans la commande principale par le biais de la méthode <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/spec/CommandSpec.Builder.html#child-org.spongepowered.api.command.CommandCallable-String...-">CommandSpec.Builder#child(CommandCallable, String...)</a>. Elles sont enregistrées avec la liste de leurs alias. Le premier alias fourni est le principal et apparaîtra dans la message d&#8217;aide d&#8217;utilisation.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">CommandSpec</span> <span class="n">mailCommandSpec</span> <span class="o">=</span> <span class="n">CommandSpec</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
     <span class="o">.</span><span class="na">permission</span><span class="o">(</span><span class="s">&quot;myplugin.mail&quot;</span><span class="o">)</span>
     <span class="o">.</span><span class="na">description</span><span class="o">(</span><span class="n">Text</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">&quot;Send and receive mails&quot;</span><span class="o">))</span>

@@ -601,10 +601,7 @@ will return <code class="docutils literal"><span class="pre">Optional#empty()</s
 </div>
 <div class="section" id="working-with-assets">
 <h2>Working with Assets<a class="headerlink" href="#working-with-assets" title="Lien permanent vers ce titre">¶</a></h2>
-<p>The <code class="docutils literal"><span class="pre">Asset</span></code> class is essentially just a wrapper around a <code class="docutils literal"><span class="pre">URL</span></code> with some common I/O operations built in. The use
-cases of <code class="docutils literal"><span class="pre">Assets</span></code>s is essentially unbounded but one common use case is to generate a default configuration file if
-your plugin&#8217;s configuration file is not found. You can achieve this using a <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/plugin/PluginContainer.html">PluginContainer</a> with the
-following code:</p>
+<p>La classe <code class="docutils literal"><span class="pre">Asset</span></code> est essentiellement un emballage autour de <code class="docutils literal"><span class="pre">URL</span></code> avec quelques communes opérations I/O dedans. Les utilisations de <code class="docutils literal"><span class="pre">Assets</span></code> sont quasi-illimités mais une utilisation commune est de généré un fichier de configuration par défaut si votre celui de votre plugin n&#8217;est pas trouvé. Vous pouvez effectuer ceci en utilisant un <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/plugin/PluginContainer.html">PluginContainer</a> avec le code suivant :</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.nio.file.Files</span><span class="o">;</span>
 
 <span class="k">if</span> <span class="o">(</span><span class="n">Files</span><span class="o">.</span><span class="na">notExists</span><span class="o">(</span><span class="n">configPath</span><span class="o">))</span> <span class="o">{</span>

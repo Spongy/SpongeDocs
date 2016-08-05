@@ -670,8 +670,7 @@ front of the message.</p>
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>Note that we do not wish to define any additional recipients, so we return an empty collection in the
-<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/channel/MessageChannel.html#getMembers--">MessageChannel#getMembers()</a> method.</p>
+<p>Notez que nous ne souhaitons pas définir d&#8217;autres récipients, nous retournons donc une collection vide dans la méthode <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/channel/MessageChannel.html#getMembers--">MessageChannel#getMembers()</a>.</p>
 <p>Thanks to the capabilities of combined <code class="docutils literal"><span class="pre">MessageChannel</span></code>s, we can combine our newly created <code class="docutils literal"><span class="pre">AdminMessageChannel</span></code>
 with any other <code class="docutils literal"><span class="pre">MessageChannel</span></code>. Now if a player joins with the <code class="docutils literal"><span class="pre">myplugin.admin</span></code> permission, we will obtain the
 <code class="docutils literal"><span class="pre">MessageChannel</span></code> his messages are sent to, combine it with an <code class="docutils literal"><span class="pre">AdminMessageChannel</span></code> and set the combined channel

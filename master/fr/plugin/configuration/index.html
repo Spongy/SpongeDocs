@@ -603,8 +603,7 @@
 </div>
 <div class="section" id="getting-your-default-plugin-configuration">
 <span id="getting-default-config"></span><h3>Votre Premiere Config de Base<a class="headerlink" href="#getting-your-default-plugin-configuration" title="Lien permanent vers ce titre">¶</a></h3>
-<p>The Sponge API offers the use of the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/config/DefaultConfig.html">DefaultConfig</a> annotation on a field or setter method with the type
-<code class="docutils literal"><span class="pre">Path</span></code> to get the default configuration file for your plugin.</p>
+<p>L&#8217;API Sponge offre l&#8217;utilisation de l&#8217;annotation <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/config/DefaultConfig.html">DefaultConfig</a> sur une méthode ou un champ avec le type <code class="docutils literal"><span class="pre">Path</span></code> pour obtenir le fichier de configuration par défaut de votre plugin.</p>
 <p>L&#8217;annotation <code class="docutils literal"><span class="pre">&#64;DefaultConfig</span></code> exige un <code class="docutils literal"><span class="pre">sharedRoot</span></code> booléen. Si vous définissez des <code class="docutils literal"><span class="pre">sharedRoot</span></code> sur <code class="docutils literal"><span class="pre">true</span></code>, le chemin d&#8217;accès retourné sera dans un répertoire de configuration partagé. Dans ce cas, le fichier de configuration pour votre plugin sera <code class="docutils literal"><span class="pre">your_plugin_id.conf</span></code>, où &#8220;your_plugin_id&#8221; est remplacé par l&#8217;ID de votre plugin.</p>
 <div class="admonition tip">
 <p class="first admonition-title">Astuce</p>
@@ -654,9 +653,7 @@ non-existant paths as the library will handle them appropriately.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">The use of YAML format (<a class="reference external" href="http://yaml.org/spec/1.1/">http://yaml.org/spec/1.1/</a>) is also supported, but the preferred config format for Sponge
-plugins is HOCON. Conversion from YAML to HOCON can be automated by using a <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/yaml/YAMLConfigurationLoader.html">YAMLConfigurationLoader</a> to
-load the old config and then saving it using a <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/hocon/HoconConfigurationLoader.html">HoconConfigurationLoader</a>.</p>
+<p class="last">Le format YAML (<a class="reference external" href="http://yaml.org/spec/1.1/">http://yaml.org/spec/1.1/</a>) est également supporté, mais le format préféré pour les configurations de plugins Sponge est HOCON. La conversion de YAML à HOCON peut être automatiséeen utilisant un <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/yaml/YAMLConfigurationLoader.html">YAMLConfigurationLoader</a> pour charger l&#8217;ancienne configuration puis la sauvegarder en utilisant un <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/hocon/HoconConfigurationLoader.html">HoconConfigurationLoader</a>.</p>
 </div>
 </div>
 </div>
