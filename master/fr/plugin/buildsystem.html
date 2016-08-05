@@ -278,8 +278,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="plugin-identifier.html">Plugin Identifiers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plugin-class.html">Main Plugin Class</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="plugin-identifier.html">Identifiants de Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin-class.html">Classe Principale du Plugin</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="lifecycle.html">Cycle de vie des Plugins</a><ul class="simple">
@@ -303,7 +303,7 @@
 <li class="toctree-l2"><a class="reference internal" href="logging.html">Journalisation (Logging) et Débogage</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="commands/index.html">Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/index.html">Commandes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="commands/creating.html">Construction d&#8217;une commande</a><ul class="simple">
 </ul>
 </li>
@@ -320,7 +320,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="event/index.html">Events</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="event/index.html">Événements</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="event/listeners.html">Les Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -330,12 +330,12 @@
 <li class="toctree-l3"><a class="reference internal" href="event/filters.html">Filtres d&#8217;événement</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="event/custom.html">Custom Events</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="event/custom.html">Événements personnalisés</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="assets/index.html">La Ressource API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="assets.html">The Asset API</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="configuration/index.html">Configuration des plugins</a><ul>
@@ -419,7 +419,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="effects.html">Effects</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="effects.html">Effets</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="scheduler.html">Scheduler</a><ul class="simple">
@@ -428,7 +428,7 @@
 <li class="toctree-l2"><a class="reference internal" href="services.html">Services</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="database.html">Databases</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="database.html">Bases de données</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="permissions.html">Permissions</a></li>
@@ -436,7 +436,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="bookview.html">Book Views</a></li>
-<li class="toctree-l2"><a class="reference internal" href="economy/index.html">Economy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="economy/index.html">Économie</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="economy/basics.html">Les concepts de base</a><ul class="simple">
 </ul>
 </li>
@@ -460,10 +460,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="manager.html">Plugin Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="manager.html">Gestionnaire de Plugin</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="game-profile-manager.html">Game Profile Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="game-profile-manager.html">Gestionnaire de Profil de Jeu</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="offline-userplayer-data.html">Offline Player Data</a><ul class="simple">
@@ -573,59 +573,39 @@
                   
   <div class="section" id="build-systems">
 <h1>Build Systems<a class="headerlink" href="#build-systems" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Build systems such as <a class="reference external" href="https://gradle.org/">Gradle</a> or <a class="reference external" href="https://maven.apache.org/">Maven</a> can manage the build process of your projects. As an independent tool from your
-IDE, you can use them to manage your dependency on SpongeAPI or other plugins and give other people an easy way to
-build your plugin from the source.</p>
+<p>Les Build systems comme <a class="reference external" href="https://gradle.org/">Gradle</a> ou <a class="reference external" href="https://maven.apache.org/">Maven</a> peuvent gérer la construction de vos projets. Comme un outil indépendant de votre IDE, vous pouvez l&#8217;utiliser pour gérer votre dépendance de SpongeAPI ou d&#8217;autres plugins et permettre à d&#8217;autres développeurs de facilement construire votre plugin depuis la source.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">SpongeAPI does <strong>not</strong> require using a build system for creating plugins, however we strongly recommend using one.
-Except the short explanation at <a class="reference internal" href="#creating-a-plugin-without-a-build-system">Creating a plugin without a build system</a>, the following parts will assume you&#8217;re
-using a build system, which can manage the dependencies for you.</p>
+<p class="last">Il n&#8217;est <strong>pas</strong> obligé d&#8217;utiliser un build system pour créer des plugins avec SpongeAPI, cependant nous recommandons fortement d&#8217;en utiliser un. À l&#8217;exception de la courte explication à <a class="reference internal" href="#creating-a-plugin-without-a-build-system">Créer un plugin sans build system</a>, les parties suivantes assument que vous utiliser un build system, qui gérera les dépendances pour vous.</p>
 </div>
-<p>Generally, you can use any build system which supports <em>Maven dependencies</em>, which is a standard supported by the
-majority of build systems for Java projects. The following sections will focus on <a class="reference external" href="https://gradle.org/">Gradle</a> and <a class="reference external" href="https://maven.apache.org/">Maven</a>, which are the two
-most common choices as build systems. If you&#8217;re unsure which one to use we recommend using <a class="reference external" href="https://gradle.org/">Gradle</a> as it is also used
-for the Sponge projects and provides the best integration for Sponge plugins.</p>
+<p>Généralement, vous pouvez utiliser n&#8217;importe quel build system qui supporte <em>Maven dependencies</em>, qui est un standard supporté par la majorité d&#8217;entre eux pour des projets Java. La section suivante sera axée sur <a class="reference external" href="https://gradle.org/">Gradle</a> et <a class="reference external" href="https://maven.apache.org/">Maven</a>, qui sont deux des plus utilisé. Si vous ne savez pas lequel utiliser, nous recommandons <a class="reference external" href="https://gradle.org/">Gradle</a> puisqu&#8217;il est utilisé pour les projets Sponge et fourni la meilleure intégration pour les plugins Sponge.</p>
 <div class="section" id="gradle">
 <h2>Gradle<a class="headerlink" href="#gradle" title="Lien permanent vers ce titre">¶</a></h2>
-<p><a class="reference external" href="https://gradle.org/">Gradle</a> uses <a class="reference external" href="http://www.groovy-lang.org/">Groovy</a>-based scripts for configuring projects. A <a class="reference external" href="https://gradle.org/">Gradle</a> project typically consists of a <code class="docutils literal"><span class="pre">build.gradle</span></code>
-file in your project&#8217;s root directory, which tells <a class="reference external" href="https://gradle.org/">Gradle</a> how to build the project.</p>
+<p><a class="reference external" href="https://gradle.org/">Gradle</a> utilise un script basé sur <a class="reference external" href="http://www.groovy-lang.org/">Groovy</a> pour configurer les projets. Un projet <a class="reference external" href="https://gradle.org/">Gradle</a> typique consiste en un fichier <code class="docutils literal"><span class="pre">build.gradle</span></code> dans le dossier racine de votre projet, qui indique à <a class="reference external" href="https://gradle.org/">Gradle</a> comment construire le projet.</p>
 <div class="admonition tip">
 <p class="first admonition-title">Astuce</p>
-<p class="last">Refer to the <a class="reference external" href="https://docs.gradle.org/current/userguide/userguide.html">Gradle User Guide</a> for the installation and a general introduction of concepts used in <a class="reference external" href="https://gradle.org/">Gradle</a>. If
-you&#8217;re only interested in how to use <a class="reference external" href="https://gradle.org/">Gradle</a> for a simple Java project, a good place to start would be the <a class="reference external" href="https://docs.gradle.org/current/userguide/tutorial_java_projects.html">Gradle
-Java Quickstart</a>.</p>
+<p class="last">Référez vous au <a class="reference external" href="https://docs.gradle.org/current/userguide/userguide.html">Gradle User Guide</a> pour l&#8217;installation et l&#8217;introduction des concepts de base de <a class="reference external" href="https://gradle.org/">Gradle</a>. Si vous n&#8217;êtes intéressé que par comment utiliser <a class="reference external" href="https://gradle.org/">Gradle</a> pour un simple projet Java, le meilleur endroit où commencer serait le <a class="reference external" href="https://docs.gradle.org/current/userguide/tutorial_java_projects.html">Gradle Java Quickstart</a>.</p>
 </div>
-<p>Setup your workspace as explained in <a class="reference internal" href="workspace/index.html"><em>Mise en Place de votre Espace de Travail</em></a> then follow <a class="reference internal" href="project/gradle.html"><em>Configurer Gradle</em></a>.</p>
+<p>Configurez votre espace de travail comme indiqué dans <a class="reference internal" href="workspace/index.html"><em>Mise en Place de votre Espace de Travail</em></a> puis suivez <a class="reference internal" href="project/gradle.html"><em>Configurer Gradle</em></a>.</p>
 </div>
 <div class="section" id="maven">
 <h2>Maven<a class="headerlink" href="#maven" title="Lien permanent vers ce titre">¶</a></h2>
-<p><a class="reference external" href="https://maven.apache.org/">Maven</a> uses a XML-based configuration called <a class="reference external" href="https://maven.apache.org/guides/introduction/introduction-to-the-pom.html">Project Object Model</a> (or <em>POM</em>) for configuring projects.
-A <a class="reference external" href="https://maven.apache.org/">Maven</a> project typically contains a <code class="docutils literal"><span class="pre">pom.xml</span></code> file in the project root directory which tells <a class="reference external" href="https://maven.apache.org/">Maven</a> how to
-build the project.</p>
+<p><a class="reference external" href="https://maven.apache.org/">Maven</a> utilise une configuration basée sur XML appelée <a class="reference external" href="https://maven.apache.org/guides/introduction/introduction-to-the-pom.html">Project Object Model</a> (ou <em>POM</em>) pour configurer vos projets. Un projet <a class="reference external" href="https://maven.apache.org/">Maven</a> typique contient un fichier <code class="docutils literal"><span class="pre">pom.xml</span></code> dans le dossier racine de votre projet, qui indique à <a class="reference external" href="https://maven.apache.org/">Maven</a> comment construire votre projet.</p>
 <div class="admonition tip">
 <p class="first admonition-title">Astuce</p>
-<p class="last">Refer to the <a class="reference external" href="https://maven.apache.org/users/index.html">Maven Users Centre</a> for the installation and a general introduction of concepts used in <a class="reference external" href="https://maven.apache.org/">Maven</a>. If
-you&#8217;re only interested in how to use <a class="reference external" href="https://maven.apache.org/">Maven</a> for a simple Java project, a good place to start would be <a class="reference external" href="https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html">Maven in 5
-Minutes</a>.</p>
+<p class="last">Référez vous au <a class="reference external" href="https://maven.apache.org/users/index.html">Maven Users Centre</a> pour l&#8217;installation et l&#8217;introduction des concepts de base de <a class="reference external" href="https://maven.apache.org/">Maven</a>. Si vous n&#8217;êtes intéressé que par comment utiliser <a class="reference external" href="https://maven.apache.org/">Maven</a> pour un simple projet Java, le meilleur endroit où commencer serait <a class="reference external" href="https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html">Maven in 5 Minutes</a>.</p>
 </div>
-<p>Setup your workspace as explained in <a class="reference internal" href="workspace/index.html"><em>Mise en Place de votre Espace de Travail</em></a> then follow <a class="reference internal" href="project/maven.html"><em>Configurer Maven</em></a>.</p>
+<p>Configurez votre espace de travail comme indiqué dans <a class="reference internal" href="workspace/index.html"><em>Mise en Place de votre Espace de Travail</em></a> puis suivez <a class="reference internal" href="project/maven.html"><em>Configurer Maven</em></a>.</p>
 </div>
 <div class="section" id="creating-a-plugin-without-a-build-system">
-<h2>Creating a plugin without a build system<a class="headerlink" href="#creating-a-plugin-without-a-build-system" title="Lien permanent vers ce titre">¶</a></h2>
-<p>It is also possible to create Sponge plugins without the use of a build system, only with the included tools in your
-IDE.</p>
+<h2>Créer un plugin sans build system<a class="headerlink" href="#creating-a-plugin-without-a-build-system" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Il est également possible de créer un plugin Sponge sans utiliser de build system, seulement avec les outils inclus dans votre IDE.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Avertissement</p>
-<p class="last"><strong>We strongly suggest against using SpongeAPI without a build system.</strong> In the long term using a build system will
-simplify the development process for you and other people wanting to contribute to your project. This method of
-developing plugins does not receive active testing by the Sponge team.</p>
+<p class="last"><strong>Nous vous suggérons fortement de ne pas utiliser SpongeAPI sans système de construction.</strong> Sur le long terme, l&#8217;utilisation d&#8217;un build system simplifie le processus de développement pour vous comme pour toutes les personnes souhaitant contribuer à votre projet. Cette méthode de développement de plugins ne reçoit aucun test par l&#8217;équipe de Sponge.</p>
 </div>
-<p>For developing plugins without a build system you need to download the SpongeAPI dependency manually from the
-<a class="reference external" href="https://repo.spongepowered.org/maven/org/spongepowered/spongeapi/">SpongeAPI Download Page</a>. For developing without a build system, we provide the <code class="docutils literal"><span class="pre">shaded</span></code> artifact which bundles all
-dependencies that would normally be automatically downloaded by the build system.</p>
-<p>After you have downloaded the <code class="docutils literal"><span class="pre">shaded</span></code> artifact and have added it to a project in your IDE, you can start developing
-your plugin. Continue at <a class="reference internal" href="plugin-identifier.html"><em>Plugin Identifiers</em></a> for choosing an identifier for your project, then continue at <a class="reference internal" href="plugin-class.html"><em>Main Plugin Class</em></a>.</p>
+<p>Pour le développement de plugins sans build system vous devez télécharger SpongeAPI manuellement depuis la <a class="reference external" href="https://repo.spongepowered.org/maven/org/spongepowered/spongeapi/">SpongeAPI Download Page</a>. Nous fournissons un <code class="docutils literal"><span class="pre">shaded</span></code> artifact qui contient toutes les dépendances requises qui auraient été téléchargées automatiquement avec un build system.</p>
+<p>Après avoir téléchargé ce <code class="docutils literal"><span class="pre">shaded</span></code> artifact et ajouté ce dernier dans votre IDE, vous pouvez commencer à développer votre plugin. Continuez vers <a class="reference internal" href="plugin-identifier.html"><em>Identifiants de Plugins</em></a> pour choisir un identifiant pour votre projet, puis continuez vers <a class="reference internal" href="plugin-class.html"><em>Classe Principale du Plugin</em></a>.</p>
 </div>
 </div>
 

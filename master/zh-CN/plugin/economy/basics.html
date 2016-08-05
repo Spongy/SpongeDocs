@@ -241,7 +241,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Preparing for Development</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">为开发做准备</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../preparing/jdk.html">安装JDK</a><ul class="simple">
 </ul>
 </li>
@@ -337,7 +337,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../assets/index.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../assets.html">The Asset API</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">Configuring Plugins</a><ul>
@@ -387,7 +387,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../blocks/index.html">Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../blocks/index.html">方块</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../blocks/concepts.html">概念</a><ul class="simple">
 </ul>
 </li>
@@ -397,7 +397,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../blocks/modifying.html">修改方块</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">Tile Entities</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">Tile Entity</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../blocks/virtualblock.html">Virtual Block Changes</a><ul class="simple">
@@ -495,7 +495,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">贡献指南</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../contributing/howtogit.html">How to Git(Hub)</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/howtogit.html">如何使用Git（Hub）</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/implementation/index.html">Developing Sponge</a><ul>
@@ -584,9 +584,8 @@
 </ul>
 <div class="section" id="the-economyservice">
 <h2>The EconomyService<a class="headerlink" href="#the-economyservice" title="永久链接至标题">¶</a></h2>
-<p>The <code class="docutils literal"><span class="pre">EconomyService</span></code> is the basis of the Economy API. It is used to interact via the Economy API, stores an
-economy&#8217;s currencies and provides methods for account management. The <code class="docutils literal"><span class="pre">EconomyService</span></code> JavaDocs can be found
-<a class="reference external" href="https://jd.spongepowered.org/index.html?org/spongepowered/api/service/economy/EconomyService.html">here</a>.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/service/economy/EconomyService.html">EconomyService</a> is the basis of the Economy API. It is used to interact via the Economy API, stores an
+economy&#8217;s currencies and provides methods for account management.</p>
 <div class="admonition warning">
 <p class="first admonition-title">警告</p>
 <p class="last">Sponge does not provide a default implementation for the <code class="docutils literal"><span class="pre">EconomyService</span></code>. It&#8217;s completely up to plugins to
@@ -596,15 +595,14 @@ have to implement it yourself, if you want to make use of it.</p>
 </div>
 <div class="section" id="currency">
 <h2>Currency<a class="headerlink" href="#currency" title="永久链接至标题">¶</a></h2>
-<p>The <a class="reference external" href="https://jd.spongepowered.org/org/spongepowered/api/service/economy/Currency.html">org.spongepowered.api.service.economy.Currency</a>
-object represents a form of Currency. <code class="docutils literal"><span class="pre">Currency</span></code> stores a display name (plural and singular), a symbol, the amount of
-fractional digits, and whether the currency is the default currency for the economy. If the economy plugin chooses, it
-can support multiple currencies.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/service/economy/Currency.html">Currency</a> object represents a form of Currency. <code class="docutils literal"><span class="pre">Currency</span></code> stores a display name (plural and singular),
+a symbol, the amount of fractional digits, and whether the currency is the default currency for the economy. If the
+economy plugin chooses, it can support multiple currencies.</p>
 </div>
 <div class="section" id="accounts">
 <h2>Accounts<a class="headerlink" href="#accounts" title="永久链接至标题">¶</a></h2>
-<p>Accounts are used to store economy information about a specific player or other object (i.e. bank, business, entity).
-There are two account types in the Sponge Economy API:</p>
+<p><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/service/economy/account/Account.html">Account</a>s are used to store economy information about a specific player or other object (i.e. bank,
+business, entity). There are two account types in the Sponge Economy API:</p>
 <div class="section" id="virtual-accounts">
 <h3>Virtual Accounts<a class="headerlink" href="#virtual-accounts" title="永久链接至标题">¶</a></h3>
 <p>Virtual accounts are tied to an identifier, which is stored as a string. Virtual accounts can be tied to almost
@@ -624,8 +622,8 @@ anything, but are commonly used for things such as banks, or non-players. To get
 <li>Withdraw: Occurs when an account has funds removed from it</li>
 <li>Transfer: Occurs when an account exchanges funds with another account</li>
 </ul>
-<p>When a transfer occurs, the <code class="docutils literal"><span class="pre">EconomyTransactionEvent</span></code> is fired. Using this event, you can get the <code class="docutils literal"><span class="pre">TransactionResult</span></code>.
-The <code class="docutils literal"><span class="pre">TransactionResult</span></code> stores data about the transaction that occurred, including:</p>
+<p>When a transfer occurs, the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/economy/EconomyTransactionEvent.html">EconomyTransactionEvent</a> is fired. Using this event, you can get the
+<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/service/economy/transaction/TransactionResult.html">TransactionResult</a>. The <code class="docutils literal"><span class="pre">TransactionResult</span></code> stores data about the transaction that occurred, including:</p>
 <ul class="simple">
 <li>Account involved</li>
 <li>Currency involved</li>
@@ -633,8 +631,7 @@ The <code class="docutils literal"><span class="pre">TransactionResult</span></c
 <li>Transaction type</li>
 <li>Result of the transaction</li>
 </ul>
-<p>You can view all possible transaction results at the
-<a class="reference external" href="https://jd.spongepowered.org/index.html?org/spongepowered/api/service/economy/transaction/ResultType.html">Sponge JavaDocs</a>.</p>
+<p>You can view all possible transaction results on the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/service/economy/transaction/ResultType.html">ResultType</a> JavaDocs page.</p>
 </div>
 </div>
 

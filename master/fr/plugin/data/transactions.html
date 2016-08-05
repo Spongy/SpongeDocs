@@ -279,8 +279,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">Plugin Identifiers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Main Plugin Class</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">Identifiants de Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Classe Principale du Plugin</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../lifecycle.html">Cycle de vie des Plugins</a><ul class="simple">
@@ -304,7 +304,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../logging.html">Journalisation (Logging) et Débogage</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Commandes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../commands/creating.html">Construction d&#8217;une commande</a><ul class="simple">
 </ul>
 </li>
@@ -321,7 +321,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Events</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Événements</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Les Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -331,12 +331,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Filtres d&#8217;événement</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Custom Events</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Événements personnalisés</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../assets/index.html">La Ressource API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../assets.html">The Asset API</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">Configuration des plugins</a><ul>
@@ -420,7 +420,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../effects.html">Effects</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../effects.html">Effets</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Scheduler</a><ul class="simple">
@@ -429,7 +429,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../services.html">Services</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../database.html">Databases</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../database.html">Bases de données</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../permissions.html">Permissions</a></li>
@@ -437,7 +437,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../bookview.html">Book Views</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../economy/index.html">Economy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../economy/index.html">Économie</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../economy/basics.html">Les concepts de base</a><ul class="simple">
 </ul>
 </li>
@@ -461,10 +461,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../manager.html">Plugin Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../manager.html">Gestionnaire de Plugin</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Game Profile Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Gestionnaire de Profil de Jeu</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../offline-userplayer-data.html">Offline Player Data</a><ul class="simple">
@@ -576,10 +576,12 @@
 <h1>Transactions<a class="headerlink" href="#transactions" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="reading-the-result">
 <h2>Lire les résultats<a class="headerlink" href="#reading-the-result" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour tout ce que vous <code class="docutils literal"><span class="pre">offrez</span></code> à un data holder, la méthode <code class="docutils literal"><span class="pre">offer</span></code> donnera un <code class="docutils literal"><span class="pre">DataTransactionResult</span></code>. Cet objet contiendra ce qui suit:</p>
+<p>For everything you <code class="docutils literal"><span class="pre">offer</span></code> to a data holder, the <code class="docutils literal"><span class="pre">offer</span></code> method will yield a <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/DataTransactionResult.html">DataTransactionResult</a>. This
+object will contain the following:</p>
 <div class="section" id="type">
 <h3>Type<a class="headerlink" href="#type" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Le <code class="docutils literal"><span class="pre">Type</span></code> indique si la transaction s&#8217;est faite avec succès ou si elle a échoué.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/DataTransactionResult.Type.html">DataTransactionResult.Type</a> indicates whether the transaction was completed
+successfully and, if not, how it failed.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="16%" />
@@ -649,13 +651,16 @@
 <li><p class="first"><code class="docutils literal"><span class="pre">getSuccessfulData()</span></code> devrait contenir un conteneur de valeur pour <code class="docutils literal"><span class="pre">Keys.HEALTH</span></code> avec une valeur de 20.0</p>
 </li>
 </ul>
-<p>Maintenant qu&#8217;est-ce qui serait différent si nous utilisions l&#8217;exemple de healing de la page <a class="reference internal" href="datamanipulators.html"><em>Manipulateurs de données</em></a> à la place ? Puisque que le manipulateur de données <code class="docutils literal"><span class="pre">HealthData</span></code> contient des valeurs pour le niveau de vie actuel et la vie maximale, en plus du résultat ci-dessus, la liste <code class="docutils literal"><span class="pre">getReplacedData()</span></code> et la liste <code class="docutils literal"><span class="pre">getSuccessfulData()</span></code> devraient contenir un élément de plus: Un conteneur de valeurs pour <a href="#id1"><span class="problematic" id="id2">``</span></a>Keys.MAX_HEALTH``avec une valeur de 20.0.</p>
+<p>Now what would be different if we used the healing example from the <a class="reference internal" href="datamanipulators.html"><em>Manipulateurs de données</em></a> page instead? Since the
+<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/entity/HealthData.html">HealthData</a> data manipulator contains values for both the current and the maximum health, in addition to the
+above result, both the <code class="docutils literal"><span class="pre">getReplacedData()</span></code> list and the <code class="docutils literal"><span class="pre">getSuccessfulData()</span></code> list would contain one more element:
+A value container for the <code class="docutils literal"><span class="pre">Keys.MAX_HEALTH</span></code> key with a value of 20.0.</p>
 </div>
 <div class="section" id="offering-healthdata-to-a-block-of-stone">
 <h3>Donner un HealthData à un block de stone<a class="headerlink" href="#offering-healthdata-to-a-block-of-stone" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Now our above-mentioned examples are coded in a such a way that they will fail silently rather than try to offer the
 incompatible data. But imagine we took a (fully healed) player&#8217;s <code class="docutils literal"><span class="pre">HealthData</span></code> and tried to offer it to the
-<code class="docutils literal"><span class="pre">Location</span></code> of the stone block he&#8217;s currently standing on. We can do this, since <code class="docutils literal"><span class="pre">Location</span></code> is also a data
+<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/Location.html">Location</a> of the stone block he&#8217;s currently standing on. We can do this, since <code class="docutils literal"><span class="pre">Location</span></code> is also a data
 holder. And if we do, it would reward us with a <code class="docutils literal"><span class="pre">DataTransactionResult</span></code> like this:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">getType()</span></code> would return <code class="docutils literal"><span class="pre">FAILURE</span></code></li>

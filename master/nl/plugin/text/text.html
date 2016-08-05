@@ -336,7 +336,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../assets/index.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../assets.html">The Asset API</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">Configuring Plugins</a><ul>
@@ -609,8 +609,8 @@ configured.</p>
 <span class="n">Text</span> <span class="n">coloredText</span> <span class="o">=</span> <span class="n">Text</span><span class="o">.</span><span class="na">builder</span><span class="o">(</span><span class="s">&quot;Woot! Golden text is golden.&quot;</span><span class="o">).</span><span class="na">color</span><span class="o">(</span><span class="n">TextColors</span><span class="o">.</span><span class="na">GOLD</span><span class="o">).</span><span class="na">build</span><span class="o">();</span>
 </pre></div>
 </div>
-<p>Any color specified within the <code class="docutils literal"><span class="pre">org.spongepowered.api.text.format.TextColors</span></code> class can be used when coloring text.
-Multiple colors can be used in text by appending additional texts with different colors:</p>
+<p>Any color specified within the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/format/TextColors.html">TextColors</a> class can be used when coloring text. Multiple colors can be used
+in text by appending additional texts with different colors:</p>
 </div>
 <div class="section" id="example-multi-colored-text">
 <h3>Example: Multi-colored Text<a class="headerlink" href="#example-multi-colored-text" title="Permalink naar deze titel">¶</a></h3>
@@ -641,8 +641,8 @@ Multiple colors can be used in text by appending additional texts with different
 </div>
 <div class="section" id="coloring-styling-shortcut">
 <h3>Coloring &amp; Styling Shortcut<a class="headerlink" href="#coloring-styling-shortcut" title="Permalink naar deze titel">¶</a></h3>
-<p>The <code class="docutils literal"><span class="pre">org.spongepowered.api.text.Text#of(Object...</span> <span class="pre">objects)</span></code> method provides a simple way to add color and styling to
-your text in a much more concise way.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/Text.html#of-Object...-">Text#of(Object...)</a> method provides a simple way to add color and styling to your text in a much more
+concise way.</p>
 </div>
 <div class="section" id="example-color-style-shortcut">
 <h3>Example: Color &amp; Style Shortcut<a class="headerlink" href="#example-color-style-shortcut" title="Permalink naar deze titel">¶</a></h3>
@@ -653,8 +653,8 @@ your text in a much more concise way.</p>
 <div class="section" id="text-actions">
 <span id="id1"></span><h3>Tekst Acties<a class="headerlink" href="#text-actions" title="Permalink naar deze titel">¶</a></h3>
 <p>The text builder also offers the ability to create actions for text. Any action specified within the
-<code class="docutils literal"><span class="pre">org.spongepowered.api.text.action.TextActions</span></code> class can be used when creating text actions for text. The method
-below is a small example of what text actions can do.</p>
+<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/action/TextActions.html">TextActions</a> class can be used when creating text actions for text. The method below is a small example of
+what text actions can do.</p>
 </div>
 <div class="section" id="example-text-with-an-action">
 <h3>Example: Text with an Action<a class="headerlink" href="#example-text-with-an-action" title="Permalink naar deze titel">¶</a></h3>
@@ -666,7 +666,7 @@ below is a small example of what text actions can do.</p>
 <p>In de methode hierboven, spelers kunnen op de &#8220;Klik hier!&#8221; tekst klikken om een specifiek commando uit te voeren.</p>
 <div class="admonition note">
 <p class="first admonition-title">Notitie</p>
-<p class="last">Sommige tekst acties zoals <code class="docutils literal"><span class="pre">ChangePage</span></code> kunnen enkel gebruikt worden bij boeken.</p>
+<p class="last">Some text actions, such as <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/action/TextActions.html#changePage-int-">TextActions#changePage(int)</a>, can only be used with book items.</p>
 </div>
 <div class="admonition tip">
 <p class="first admonition-title">Tip</p>
@@ -681,8 +681,8 @@ because of the builder pattern interface.</p>
 <p class="first admonition-title">Tip</p>
 <p class="last">Lees dit <a href="#id2"><span class="problematic" id="id3">`Minecraft wiki artikel&lt;http://minecraft.gamepedia.com/Commands#Target_selectors&gt;`__</span></a> om beter te begrijpen wat doelwit selecteerders zijn in Minecraft en hoe je ze moet gebruiken.</p>
 </div>
-<p>To use selectors in text, you must use the <code class="docutils literal"><span class="pre">org.spongepowered.api.text.selector.SelectorBuilder</span></code> interface. This is
-illustrated in the example below.</p>
+<p>To use selectors in text, you must use the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/selector/Selector.Builder.html">Selector.Builder</a> interface. This is illustrated in the example
+below.</p>
 </div>
 <div class="section" id="example-selector-generated-text">
 <h3>Example: Selector-generated Text<a class="headerlink" href="#example-selector-generated-text" title="Permalink naar deze titel">¶</a></h3>

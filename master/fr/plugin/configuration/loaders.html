@@ -279,8 +279,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">Plugin Identifiers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Main Plugin Class</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">Identifiants de Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Classe Principale du Plugin</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../lifecycle.html">Cycle de vie des Plugins</a><ul class="simple">
@@ -304,7 +304,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../logging.html">Journalisation (Logging) et Débogage</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Commandes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../commands/creating.html">Construction d&#8217;une commande</a><ul class="simple">
 </ul>
 </li>
@@ -321,7 +321,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Events</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Événements</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Les Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -331,12 +331,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Filtres d&#8217;événement</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Custom Events</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Événements personnalisés</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../assets/index.html">La Ressource API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../assets.html">The Asset API</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Configuration des plugins</a><ul class="current">
@@ -420,7 +420,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../effects.html">Effects</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../effects.html">Effets</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Scheduler</a><ul class="simple">
@@ -429,7 +429,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../services.html">Services</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../database.html">Databases</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../database.html">Bases de données</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../permissions.html">Permissions</a></li>
@@ -437,7 +437,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../bookview.html">Book Views</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../economy/index.html">Economy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../economy/index.html">Économie</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../economy/basics.html">Les concepts de base</a><ul class="simple">
 </ul>
 </li>
@@ -461,10 +461,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../manager.html">Plugin Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../manager.html">Gestionnaire de Plugin</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Game Profile Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Gestionnaire de Profil de Jeu</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../offline-userplayer-data.html">Offline Player Data</a><ul class="simple">
@@ -574,13 +574,10 @@
                   
   <div class="section" id="configuration-loaders">
 <h1>Loaders de Configuration<a class="headerlink" href="#configuration-loaders" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Let&#8217;s break down how Configurate works, beginning with the loading process. Configurate provides <code class="docutils literal"><span class="pre">ConfigurationLoaders</span></code>
-for common configuration formats, standing as the manager of the physical configuration file, allowing you to
-save and load data from the given resource. They also allow you to load empty configurations, giving you the option of
-hard-coding default values or loading from a pre-written file.</p>
+<p>Nous allons décomposer la manière dont marche Configurate, en commençant par le processus de chargement. Configurate fournit un <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/loader/ConfigurationLoader.html">ConfigurationLoader</a>s pour les formats courants de configuration, comme le gestionnaire de fichiers physiques de votre configuration, vous permettant de sauvegarder et charger les données d&#8217;une ressource donnée. Ils permettent aussi de charger une configuration vide, vous permettant de hard-coder des valeurs par défaut ou de les charger depuis un fichier pré-écrit.</p>
 <div class="section" id="getting-your-loader">
 <h2>Obtenir votre Loader<a class="headerlink" href="#getting-your-loader" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Tout d&#8217;abord, prenons un nouveau <code class="docutils literal"><span class="pre">HoconConfigurationLoader</span></code> qui pointera vers notre fichier de configuration.</p>
+<p>First, let&#8217;s grab a new <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/hocon/HoconConfigurationLoader.html">HoconConfigurationLoader</a> that points to our configuration file.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.nio.file.Path</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">ninja.leaping.configurate.commented.CommentedConfigurationNode</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">ninja.leaping.configurate.hocon.HoconConfigurationLoader</span><span class="o">;</span>
@@ -605,7 +602,7 @@ are read-only as they have no way of writing back data to the URL.</p>
 </div>
 <div class="section" id="loading-and-saving">
 <h2>Loading and Saving<a class="headerlink" href="#loading-and-saving" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Once you obtained your <code class="docutils literal"><span class="pre">ConfigurationLoader</span></code> you can use it to obtain an empty <code class="docutils literal"><span class="pre">ConfigurationNode</span></code> using the
+<p>Once you obtained your <code class="docutils literal"><span class="pre">ConfigurationLoader</span></code> you can use it to obtain an empty <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/ConfigurationNode.html">ConfigurationNode</a> using the
 <code class="docutils literal"><span class="pre">createEmptyNode()</span></code> method.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ninja.leaping.configurate.ConfigurationNode</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">ninja.leaping.configurate.ConfigurationOptions</span><span class="o">;</span>
@@ -615,9 +612,9 @@ are read-only as they have no way of writing back data to the URL.</p>
 <span class="n">ConfigurationNode</span> <span class="n">rootNode</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="na">createEmptyNode</span><span class="o">(</span><span class="n">ConfigurationOptions</span><span class="o">.</span><span class="na">defaults</span><span class="o">());</span>
 </pre></div>
 </div>
-<p>This method expects the <code class="docutils literal"><span class="pre">ConfigurationOptions</span></code> to use as a parameter. Unless you want to use features like custom
-type serialization, you can just use <code class="docutils literal"><span class="pre">ConfigurationOptions.defaults()</span></code> to create an options object with default
-values.</p>
+<p>This method expects the <cite>ninja.leaping.configurate.ConfigurationOptions</cite> to use as a parameter. Unless you want to use
+features like custom type serialization, you can just use <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/ConfigurationOptions.html#defaults--">ConfigurationOptions#defaults()</a> to create an
+options object with default values.</p>
 <p>Using the <code class="docutils literal"><span class="pre">load()</span></code> method you can attempt to load the configuration contents from the source specified upon creation
 of the <code class="docutils literal"><span class="pre">ConfigurationLoader</span></code>. It also expects a <code class="docutils literal"><span class="pre">ConfigurationOptions</span></code> instance, but also provides a no-args form
 that is shorthand for <code class="docutils literal"><span class="pre">load(ConfigurationOptions.defaults())</span></code>.</p>

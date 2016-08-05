@@ -279,8 +279,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">Plugin Identifiers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Main Plugin Class</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">Identifiants de Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Classe Principale du Plugin</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../lifecycle.html">Cycle de vie des Plugins</a><ul class="simple">
@@ -304,7 +304,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../logging.html">Journalisation (Logging) et Débogage</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Commandes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../commands/creating.html">Construction d&#8217;une commande</a><ul class="simple">
 </ul>
 </li>
@@ -321,7 +321,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Events</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Événements</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Les Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -331,12 +331,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Filtres d&#8217;événement</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Custom Events</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Événements personnalisés</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../assets/index.html">La Ressource API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../assets.html">The Asset API</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Configuration des plugins</a><ul class="current">
@@ -420,7 +420,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../effects.html">Effects</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../effects.html">Effets</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Scheduler</a><ul class="simple">
@@ -429,7 +429,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../services.html">Services</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../database.html">Databases</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../database.html">Bases de données</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../permissions.html">Permissions</a></li>
@@ -437,7 +437,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../bookview.html">Book Views</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../economy/index.html">Economy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../economy/index.html">Économie</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../economy/basics.html">Les concepts de base</a><ul class="simple">
 </ul>
 </li>
@@ -461,10 +461,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../manager.html">Plugin Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../manager.html">Gestionnaire de Plugin</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Game Profile Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Gestionnaire de Profil de Jeu</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../offline-userplayer-data.html">Offline Player Data</a><ul class="simple">
@@ -590,9 +590,9 @@ custom data structures to a config file, this will not be enough.</p>
 <p>Also assume some methods to access those fields, a nice constructor setting both of those etc.</p>
 <div class="section" id="creating-a-custom-typeserializer">
 <h2>Creating a custom TypeSerializer<a class="headerlink" href="#creating-a-custom-typeserializer" title="Lien permanent vers ce titre">¶</a></h2>
-<p>A very straightforward way of writing and loading such a data structure is providing a custom <code class="docutils literal"><span class="pre">TypeSerializer</span></code>.
-The <code class="docutils literal"><span class="pre">TypeSerializer</span></code> interface provides two methods, one to write the data from an object to a configuration node
-and one to create an object from a given configuration node.</p>
+<p>A very straightforward way of writing and loading such a data structure is providing a custom <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/objectmapping/serialize/TypeSerializer.html">TypeSerializer</a>.
+The <code class="docutils literal"><span class="pre">TypeSerializer</span></code> interface provides two methods, one to write the data from an object to a configuration node and
+one to create an object from a given configuration node.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">com.google.common.reflect.TypeToken</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">ninja.leaping.configurate.objectmapping.ObjectMappingException</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">ninja.leaping.configurate.objectmapping.serialize.TypeSerializer</span><span class="o">;</span>
@@ -617,8 +617,8 @@ and one to create an object from a given configuration node.</p>
 </pre></div>
 </div>
 <p>This <code class="docutils literal"><span class="pre">TypeSerializer</span></code> must then be registered with Configurate. This can be done either globally, by registering to
-the default <code class="docutils literal"><span class="pre">TypeSerializerCollection</span></code> or locally, by specifying it in the <code class="docutils literal"><span class="pre">ConfigurationOptions</span></code> when loading your
-config.</p>
+the default <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/objectmapping/serialize/TypeSerializerCollection.html">TypeSerializerCollection</a> or locally, by specifying it in the <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/ConfigurationOptions.html">ConfigurationOptions</a>
+when loading your config.</p>
 <p><strong>Code Example: Registering a TypeSerializer globally</strong></p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ninja.leaping.configurate.objectmapping.serialize.TypeSerializers</span><span class="o">;</span>
 
@@ -647,8 +647,8 @@ being overwritten.</p>
 <div class="section" id="using-objectmappers">
 <h2>Using ObjectMappers<a class="headerlink" href="#using-objectmappers" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Since in many cases the (de)serialization boils down to mapping fields to configuration nodes, writing such a
-<code class="docutils literal"><span class="pre">TypeSerializer</span></code> is a rather dull affair and something we&#8217;d like Configurate to do on its own. So let&#8217;s
-annotate our class with the <code class="docutils literal"><span class="pre">&#64;ConfigSerializable</span></code> and <code class="docutils literal"><span class="pre">&#64;Setting</span></code> annotations.</p>
+<code class="docutils literal"><span class="pre">TypeSerializer</span></code> is a rather dull affair and something we&#8217;d like Configurate to do on its own. So let&#8217;s annotate our
+class with the <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/objectmapping/serialize/ConfigSerializable.html">ConfigSerializable</a> and <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/objectmapping/Setting.html">Setting</a> annotations.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ninja.leaping.configurate.objectmapping.Setting</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">ninja.leaping.configurate.objectmapping.serialize.ConfigSerializable</span><span class="o">;</span>
 
@@ -677,13 +677,13 @@ configuration nodes, otherwise it will be discarded.</p>
 <p class="last">You may also use the shorthand <code class="docutils literal"><span class="pre">&#64;Setting(&quot;someNode&quot;)</span></code> instead of <code class="docutils literal"><span class="pre">&#64;Setting(value=&quot;someNode&quot;)</span></code></p>
 </div>
 <p>The <code class="docutils literal"><span class="pre">&#64;ConfigSerializable</span></code> annotation eliminates the need for any registration since it allows Configurate to
-just generate an <code class="docutils literal"><span class="pre">ObjectMapper</span></code> for the class. The only limitation is that Configurate needs an empty
+just generate an <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/objectmapping/ObjectMapper.html">ObjectMapper</a> for the class. The only limitation is that Configurate needs an empty
 constructor to instantiate a new object before filling in the annotated fields.</p>
 </div>
 <div class="section" id="providing-a-custom-objectmapperfactory">
 <h2>Providing a custom ObjectMapperFactory<a class="headerlink" href="#providing-a-custom-objectmapperfactory" title="Lien permanent vers ce titre">¶</a></h2>
-<p>That restriction, however, can be lifted if we use a different <code class="docutils literal"><span class="pre">ObjectMapperFactory</span></code>, for example a
-<code class="docutils literal"><span class="pre">GuiceObjectMapperFactory</span></code>. Instead of requiring an empty constructor, it will work on any class that guice
+<p>That restriction, however, can be lifted if we use a different <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/objectmapping/ObjectMapperFactory.html">ObjectMapperFactory</a>, for example a
+<a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/objectmapping/GuiceObjectMapperFactory.html">GuiceObjectMapperFactory</a>. Instead of requiring an empty constructor, it will work on any class that guice
 can create via dependency injection. This also allows for a mixture of <code class="docutils literal"><span class="pre">&#64;Inject</span></code> and <code class="docutils literal"><span class="pre">&#64;Setting</span></code> annotated fields.</p>
 <p>Your plugin can just acquire a <code class="docutils literal"><span class="pre">GuiceObjectMapperFactory</span></code> simply by dependency injection
 (see <a class="reference internal" href="../injection.html"><em>Injection de Dépendances</em></a>) and then pass it to the <code class="docutils literal"><span class="pre">ConfigurationOptions</span></code>.</p>

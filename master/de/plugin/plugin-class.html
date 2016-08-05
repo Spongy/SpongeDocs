@@ -335,7 +335,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="assets/index.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="assets.html">The Asset API</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="configuration/index.html">Configuring Plugins</a><ul>
@@ -581,7 +581,8 @@
 <h2>Die Klasse beginnen<a class="headerlink" href="#starting-your-class" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Der nächste Schritt nach dem Hinzufügen der Sponge-API als Abhängigkeit (englisch <em>dependency</em>) ist das Erstellen einer neuen Klasse. Diese Klasse kannst du nach deinen Wünschen benennen, solange sie nicht mit <code class="docutils literal"><span class="pre">org.spongepowered</span></code> beginnt. Gemäß unserer Konvention sollen Klassennamen in Großbuchstaben angelegt sein.</p>
 <p>Oracle <a class="reference external" href="http://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html">empfiehlt</a> deine Domain als Package Namen zu verwenden, falls du eine Domain besitzt. Falls du keine hast, wird das Nutzen einer Email Adresse (wie z.B. <code class="docutils literal"><span class="pre">com.gmail.Benutzername.Projekt</span></code>) oder eines open-source Repositories (wie z.B. <code class="docutils literal"><span class="pre">io.github.Benutzername.Projekt</span></code>) empfohlen, da es die gängige Praxis darstellt.</p>
-<p>Nachdem du deine Main-Klasse erstellst hast, muss dieser die <code class="docutils literal"><span class="pre">&#64;Plugin</span></code> Beifügung (englisch <em>annotation</em>) angehangen werden. Diese Annotation erlaubt es Sponge deine Main-Klasse einfacher zu finden, wenn dein Plugin geladen wird. Hier ist ein Beispiel dargestellt.</p>
+<p>After creating your main class, the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/plugin/Plugin.html">Plugin</a> annotation must be affixed to it. This annotation allows Sponge
+to easily find your main plugin class when your plugin is loaded. An example usage is illustrated below.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">io.github.username.project</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.plugin.Plugin</span><span class="o">;</span>
@@ -600,7 +601,9 @@
 <div class="section" id="initializing-your-plugin">
 <h2>Initialisiere dein Plugin<a class="headerlink" href="#initializing-your-plugin" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Plugins werden eingelesen, bevor das Spiel und die Spielwelt(en) geladen werden. Dies ermöglicht ein Zeitfenster, in dem dein Plugins mit dem Spiel interagieren kann, beispielsweise durch Registrieren eines Befehls oder Events.</p>
-<p>Dein Plugin kann auf bestimmte Events lauschen, die sogenannten <strong>state events</strong>. Diese informieren über Änderungen des Spielstatus. Im unten dargestellten Beispiel wird <code class="docutils literal"><span class="pre">onServerStart()</span></code> aufgerufen, wenn das <code class="docutils literal"><span class="pre">GameStartedServerEvent</span></code> ausgelöst wird. Beachte die <code class="docutils literal"><span class="pre">&#64;Listener</span></code> Annotation vor der Methode.</p>
+<p>Your plugin can listen for particular events, called <strong>state events</strong>, to be notified about changes in the state of the
+game. In the example below, <code class="docutils literal"><span class="pre">onServerStart()</span></code> is called when the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStartedServerEvent.html">GameStartedServerEvent</a> occurs; take note
+of the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/Listener.html">Listener</a> annotation before the method.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.event.Listener</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.event.game.state.GameStartedServerEvent</span><span class="o">;</span>
 
@@ -625,20 +628,20 @@
 <ul class="simple">
 <li><p class="first"><strong>Initialisierung</strong>: Diese Events werden beim Laden von Sponge und Plugins ausgelöst.</p>
 <ul>
-<li>GameConstructionEvent</li>
-<li>GamePreInitializationEvent</li>
-<li>GameInitializationEvent</li>
-<li>GamePostInitializationEvent</li>
-<li>GameLoadCompleteEvent</li>
+<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameConstructionEvent.html">GameConstructionEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GamePreInitializationEvent.html">GamePreInitializationEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameInitializationEvent.html">GameInitializationEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GamePostInitializationEvent.html">GamePostInitializationEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameLoadCompleteEvent.html">GameLoadCompleteEvent</a></li>
 </ul>
 </li>
 <li><p class="first"><strong>Laufzeit</strong>: Diese Events werden beim während das Spiel und Welten geladen werden ausgelöst.</p>
 <ul>
-<li>GameAboutToStartServerEvent</li>
-<li>GameStartingServerEvent</li>
-<li>GameStartedServerEvent</li>
-<li>GameStoppingServerEvent</li>
-<li>GameStoppedServerEvent</li>
+<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameAboutToStartServerEvent.html">GameAboutToStartServerEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStartingServerEvent.html">GameStartingServerEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStartedServerEvent.html">GameStartedServerEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStoppingServerEvent.html">GameStoppingServerEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStoppedServerEvent.html">GameStoppedServerEvent</a></li>
 </ul>
 </li>
 </ul>

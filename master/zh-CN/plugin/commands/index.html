@@ -240,7 +240,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Preparing for Development</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">为开发做准备</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../preparing/jdk.html">安装JDK</a><ul class="simple">
 </ul>
 </li>
@@ -336,7 +336,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../assets/index.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../assets.html">The Asset API</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">Configuring Plugins</a><ul>
@@ -386,7 +386,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../blocks/index.html">Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../blocks/index.html">方块</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../blocks/concepts.html">概念</a><ul class="simple">
 </ul>
 </li>
@@ -396,7 +396,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../blocks/modifying.html">修改方块</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">Tile Entities</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">Tile Entity</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../blocks/virtualblock.html">Virtual Block Changes</a><ul class="simple">
@@ -494,7 +494,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">贡献指南</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../contributing/howtogit.html">How to Git(Hub)</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/howtogit.html">如何使用Git（Hub）</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/implementation/index.html">Developing Sponge</a><ul>
@@ -578,7 +578,8 @@
 <p class="first admonition-title">小技巧</p>
 <p class="last">因为命令 API 需要使用文本 API，所以请务必先阅读 <a class="reference internal" href="../text/index.html"><em>Text</em></a>。</p>
 </div>
-<p>在 Sponge 中可以使用两种不同的 API 来创建命令：<code class="docutils literal"><span class="pre">CommandCallable</span></code> 接口和 <code class="docutils literal"><span class="pre">CommandSpec</span></code> 构造器。</p>
+<p>There are two different APIs to create commands in Sponge: The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/CommandCallable.html">CommandCallable</a> interface and the
+<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/spec/CommandSpec.html">CommandSpec</a> builder.</p>
 <p>使用 <code class="docutils literal"><span class="pre">CommandSpec</span></code> 构造器是创建命令最方便舒适的方式了，本节将会进行详细的介绍。这种方式支持子命令和参数解析。</p>
 <p>另外，你也可以使用 <code class="docutils literal"><span class="pre">CommandCallable</span></code>，它是一个低级别的接口，允许访问原始的命令数据。详情请看 <a class="reference internal" href="commandcallable.html"><em>这一页</em></a>。</p>
 <div class="section" id="contents">

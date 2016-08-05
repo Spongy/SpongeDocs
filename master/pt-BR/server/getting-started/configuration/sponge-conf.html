@@ -338,7 +338,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/assets/index.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/assets.html">The Asset API</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../plugin/configuration/index.html">Configuring Plugins</a><ul>
@@ -579,9 +579,7 @@
 <div class="section" id="global-configuration">
 <h2>Configuração Global<a class="headerlink" href="#global-configuration" title="Link permanente para este título">¶</a></h2>
 <p>O ficheiro global.conf contém as definições de configuração gerais do Sponge. Este ficheiro é criado no diretório config/sponge, dentro da pasta do teu servidor. Muitas destas propriedades podem ser anuladas pelas configurações especficas de cada mundo ou dimensão, utilizando os ficheiros de configuração nas subpastas de config/worlds.</p>
-<p>Below is a complete global.conf file with all possible nodes that may be present on a server. Note that certain
-sections will not be present immediately, and will be added to the file when the server encounters them. This config
-was generated using SpongeForge build 1399, SpongeAPI version 4.1:</p>
+<p>Abaixo, segue um ficheiro global.conf completo com todos os nós (<em>nodes</em>) possíveis que podem estar presentes num servidor. Nota que algumas secções não estarão disponíveis de imediato, estarão disponíveis quando o servidor as encontrar. O exemplo abaixo foi gerado por um servidor a correr o SpongeForge (build 1399) e a SpongeAPI (versão 4.1):</p>
 <div class="highlight-none"><div class="highlight"><pre><span></span># 1.0
 #
 # # If you need help with the configuration or have any questions related to Sponge,
@@ -809,7 +807,8 @@ sponge {
 </th>
 <th class="head"><p class="first last">Predefinição</p>
 </th>
-<th class="head">Description</th>
+<th class="head"><p class="first last">Descrição</p>
+</th>
 </tr>
 </thead>
 <tbody valign="top">
@@ -933,15 +932,14 @@ from a player will likely despawn</td>
 <tr class="row-odd"><td>living-soft-despawn-minimum-life</td>
 <td>integer</td>
 <td>30</td>
-<td>The amount of seconds before a living entity between
-the soft and hard despawn ranges from a player to be
-considered for despawning</td>
+<td><p class="first last">A quantidade de segundos antes de uma entidade viva dentro dos intervalos de <em>desapwn</em> para ser considerada para <em>despawning</em></p>
+</td>
 </tr>
 <tr class="row-even"><td>living-soft-despawn-range</td>
 <td>integer</td>
 <td>32</td>
-<td>The lower bounded range where living entities near a
-player may potentially despawn</td>
+<td><p class="first last">O limite inferior do intervalo de distância ao jogador mais próximo em que uma entidade será considerada para <em>despawning</em></p>
+</td>
 </tr>
 <tr class="row-odd"><td>max-bounding-box-size</td>
 <td>integer</td>

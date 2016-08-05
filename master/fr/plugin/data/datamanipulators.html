@@ -279,8 +279,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">Plugin Identifiers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Main Plugin Class</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">Identifiants de Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Classe Principale du Plugin</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../lifecycle.html">Cycle de vie des Plugins</a><ul class="simple">
@@ -304,7 +304,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../logging.html">Journalisation (Logging) et Débogage</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Commandes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../commands/creating.html">Construction d&#8217;une commande</a><ul class="simple">
 </ul>
 </li>
@@ -321,7 +321,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Events</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Événements</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Les Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -331,12 +331,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Filtres d&#8217;événement</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Custom Events</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Événements personnalisés</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../assets/index.html">La Ressource API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../assets.html">The Asset API</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">Configuration des plugins</a><ul>
@@ -420,7 +420,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../effects.html">Effects</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../effects.html">Effets</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Scheduler</a><ul class="simple">
@@ -429,7 +429,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../services.html">Services</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../database.html">Databases</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../database.html">Bases de données</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../permissions.html">Permissions</a></li>
@@ -437,7 +437,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../bookview.html">Book Views</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../economy/index.html">Economy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../economy/index.html">Économie</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../economy/basics.html">Les concepts de base</a><ul class="simple">
 </ul>
 </li>
@@ -461,10 +461,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../manager.html">Plugin Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../manager.html">Gestionnaire de Plugin</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Game Profile Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Gestionnaire de Profil de Jeu</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../offline-userplayer-data.html">Offline Player Data</a><ul class="simple">
@@ -602,15 +602,15 @@
 </div>
 <p>First we need to check if our target has health data. We do so by first asking it to provide us with its health
 data by passing its class to the <code class="docutils literal"><span class="pre">get()</span></code> method. We get an <code class="docutils literal"><span class="pre">Optional</span></code> which we can use for our check.
-This <code class="docutils literal"><span class="pre">Optional</span></code> will be absent if either our target does not support <code class="docutils literal"><span class="pre">HealthData</span></code> or if it supports it but
+This <code class="docutils literal"><span class="pre">Optional</span></code> will be absent if either our target does not support <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/entity/HealthData.html">HealthData</a> or if it supports it but
 at the present moment does not hold any health data.</p>
 <p>If the health data is present, it now contains a mutable copy of the data present on the data holder. We make
 our alterations and finally offer the changed data back to our target, where it is accepted (again, <code class="docutils literal"><span class="pre">offer()</span></code>
-will return a <code class="docutils literal"><span class="pre">DataTransactionResult</span></code> which we will disregard in this example and get back to <a class="reference internal" href="transactions.html"><em>at a later
-point</em></a>).</p>
+will return a <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/DataTransactionResult.html">DataTransactionResult</a> which we will disregard in this example and get back to
+<a class="reference internal" href="transactions.html"><em>at a later point</em></a>).</p>
 <p>As you can see, the results for <code class="docutils literal"><span class="pre">health()</span></code> and <code class="docutils literal"><span class="pre">maxHealth()</span></code> are again keyed values we obtain from the
-<code class="docutils literal"><span class="pre">DataHolder</span></code>. As the <code class="docutils literal"><span class="pre">MutableBoundedValue</span></code> we receive from calling <code class="docutils literal"><span class="pre">health()</span></code> again just contains a copy of
-the data, we first need to apply our changes back to the <code class="docutils literal"><span class="pre">DataManipulator</span></code> before we can offer the
+<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/DataHolder.html">DataHolder</a>. As the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/value/mutable/MutableBoundedValue.html">MutableBoundedValue</a> we receive from calling <code class="docutils literal"><span class="pre">health()</span></code> again just contains a
+copy of the data, we first need to apply our changes back to the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/DataManipulator.html">DataManipulator</a> before we can offer the
 <code class="docutils literal"><span class="pre">healthData</span></code> back to our target.</p>
 <div class="admonition tip">
 <p class="first admonition-title">Astuce</p>
@@ -652,9 +652,9 @@ don&#8217;t need to bother with <code class="docutils literal"><span class="pre"
 <p>Then we just offer the saved health data to the <em>other</em> target, thus switching their health status with each other.</p>
 <p>This example done with <code class="docutils literal"><span class="pre">Keys</span></code> would be a bit longer and more complicated since we&#8217;d have to take care of each
 individual key by ourself. And if instead of health we swapped another data manipulator containing even more data
-(maybe <code class="docutils literal"><span class="pre">InvisibilityData</span></code> which even contains a list), we&#8217;d have a lot more work to do. But since the data
-holder itself takes care of all data pertaining to it, we could even modify the above function to swap arbitrary
-data between two holders.</p>
+(maybe <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/entity/InvisibilityData.html">InvisibilityData</a> which even contains a list), we&#8217;d have a lot more work to do. But since the data
+holder itself takes care of all data pertaining to it, we could even modify the above function to swap arbitrary data
+between two holders.</p>
 <p><strong>Code Example: Swapping any data manipulator</strong></p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.data.manipulator.DataManipulator</span><span class="o">;</span>
 
@@ -673,8 +673,9 @@ holder demonstrates the core design goal of the Data API: Maximum compatibility 
 </div>
 <div class="section" id="mutable-vs-immutable-data-manipulators">
 <h2>Mutable vs. Immutable Data Manipulators<a class="headerlink" href="#mutable-vs-immutable-data-manipulators" title="Lien permanent vers ce titre">¶</a></h2>
-<p>To every data manipulator, there is a matching <code class="docutils literal"><span class="pre">ImmutableDataManipulator</span></code>. For instance, both <code class="docutils literal"><span class="pre">HealthData</span></code> and
-<code class="docutils literal"><span class="pre">ImmutableHealthData</span></code> contain the same data, only the latter returns new instances when requesting modified data.</p>
+<p>To every data manipulator, there is a matching <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/ImmutableDataManipulator.html">ImmutableDataManipulator</a>. For instance, both <code class="docutils literal"><span class="pre">HealthData</span></code>
+and <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/immutable/entity/ImmutableHealthData.html">ImmutableHealthData</a> contain the same data, only the latter returns new instances when requesting modified
+data.</p>
 <p>Conversion between mutable and immutable data manipulators is done via the <code class="docutils literal"><span class="pre">asImmutable()</span></code> and <code class="docutils literal"><span class="pre">asMutable()</span></code>
 methods, which each will return a copy of the data. The only way to obtain an immutable data manipulator
 from a data holder is obtaining a mutable one and then using <code class="docutils literal"><span class="pre">asImmutable()</span></code>.</p>
@@ -695,7 +696,7 @@ latter is always possible, there are cases where it is impossible for a <code cl
 then not hold it. Examples of those include:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">HealthData</span></code> is always present on every (vanilla) <code class="docutils literal"><span class="pre">DataHolder</span></code> that supports it</li>
-<li><code class="docutils literal"><span class="pre">DisplayNameData</span></code> is always present on a <code class="docutils literal"><span class="pre">Player</span></code>, but may be absent on other entities</li>
+<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/DisplayNameData.html">DisplayNameData</a> is always present on a <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/entity/living/player/Player.html">Player</a>, but may be absent on other entities.</li>
 </ul>
 </div>
 </div>

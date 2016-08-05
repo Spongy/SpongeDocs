@@ -35,7 +35,7 @@
         <link rel="top" title="documentation Sponge 4.1.0" href="../index.html" />
         <link rel="up" title="Création d’un Plugin" href="index.html" />
         <link rel="next" title="Injection de Dépendances" href="injection.html" />
-        <link rel="prev" title="Main Plugin Class" href="plugin-class.html" />
+        <link rel="prev" title="Classe Principale du Plugin" href="plugin-class.html" />
     
   <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -278,8 +278,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="plugin-identifier.html">Plugin Identifiers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plugin-class.html">Main Plugin Class</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="plugin-identifier.html">Identifiants de Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin-class.html">Classe Principale du Plugin</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Cycle de vie des Plugins</a><ul class="simple">
@@ -303,7 +303,7 @@
 <li class="toctree-l2"><a class="reference internal" href="logging.html">Journalisation (Logging) et Débogage</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="commands/index.html">Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/index.html">Commandes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="commands/creating.html">Construction d&#8217;une commande</a><ul class="simple">
 </ul>
 </li>
@@ -320,7 +320,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="event/index.html">Events</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="event/index.html">Événements</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="event/listeners.html">Les Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -330,12 +330,12 @@
 <li class="toctree-l3"><a class="reference internal" href="event/filters.html">Filtres d&#8217;événement</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="event/custom.html">Custom Events</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="event/custom.html">Événements personnalisés</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="assets/index.html">La Ressource API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="assets.html">The Asset API</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="configuration/index.html">Configuration des plugins</a><ul>
@@ -419,7 +419,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="effects.html">Effects</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="effects.html">Effets</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="scheduler.html">Scheduler</a><ul class="simple">
@@ -428,7 +428,7 @@
 <li class="toctree-l2"><a class="reference internal" href="services.html">Services</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="database.html">Databases</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="database.html">Bases de données</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="permissions.html">Permissions</a></li>
@@ -436,7 +436,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="bookview.html">Book Views</a></li>
-<li class="toctree-l2"><a class="reference internal" href="economy/index.html">Economy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="economy/index.html">Économie</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="economy/basics.html">Les concepts de base</a><ul class="simple">
 </ul>
 </li>
@@ -460,10 +460,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="manager.html">Plugin Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="manager.html">Gestionnaire de Plugin</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="game-profile-manager.html">Game Profile Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="game-profile-manager.html">Gestionnaire de Profil de Jeu</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="offline-userplayer-data.html">Offline Player Data</a><ul class="simple">
@@ -590,29 +590,42 @@
 <h2>Etats d&#8217;Initialisations<a class="headerlink" href="#initialization-states" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Les états d&#8217;initialisations ne se produisent qu&#8217;une fois au cours de l&#8217;exécution de l&#8217;application.</p>
 <p><strong>CONSTRUCTION</strong></p>
-<p>L&#8217;événement <code class="docutils literal"><span class="pre">GameConstructionEvent</span></code> est levé. Durant cet état, l&#8217;instance de la classe <code class="docutils literal"><span class="pre">&#64;Plugin</span></code> est déclenchée pour chaque plugin.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameConstructionEvent.html">GameConstructionEvent</a> is triggered.
+During this state, the <code class="docutils literal"><span class="pre">&#64;Plugin</span></code> class instance for each plugin is triggered.</p>
 <p><strong>PRE_INITIALISATION</strong></p>
-<p>L&#8217;événement <code class="docutils literal"><span class="pre">GamePreInitializationEvent</span></code> est levé. Durant cet état, le plugin se prépare à l&#8217;initialisation. Les accès à l&#8217;instance du logger par défaut et aux informations concernant les localisations de fichiers de configurations préférées sont disponibles.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GamePreInitializationEvent.html">GamePreInitializationEvent</a> is triggered.
+During this state, the plugin gets ready for initialization. Access to a default logger instance and access to
+information regarding preferred configuration file locations is available.</p>
 <p><strong>INITIALISATION</strong></p>
-<p>L&#8217;événement <code class="docutils literal"><span class="pre">GameInitializationEvent</span></code> est levé. Durant cet état, le plugin devrait avoir finit tout ce qu&#8217;il avait à faire afin de fonctionner. Les gestionnaires d&#8217;événements sont traités à ce moment là.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameInitializationEvent.html">GameInitializationEvent</a> is triggered.
+During this state, the plugin should finish any work needed in order to be functional. Global event handlers should get
+registered in this stage.</p>
 <p><strong>POST_INITIALISATION</strong></p>
-<p>L&#8217;événement <code class="docutils literal"><span class="pre">GamePostInitializationEvent</span></code> est levé. Par cet état, les communications inter-plugin devraient être prêtes à se produire. Les plugins fournissant une API devraient être prêts à accepter des requêtes de base.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GamePostInitializationEvent.html">GamePostInitializationEvent</a> is triggered.
+By this state, inter-plugin communication should be ready to occur. Plugins providing an API should be ready to accept
+basic requests.</p>
 <p><strong>LOAD_COMPLETE</strong></p>
-<p>L&#8217;événement <code class="docutils literal"><span class="pre">GameLoadCompleteEvent</span></code> est levé. Par cet état, toutes les initialisations des plugins devraient être terminées.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameLoadCompleteEvent.html">GameLoadCompleteEvent</a> is triggered.
+By this state, all plugin initialization should be completed.</p>
 </div>
 <div class="section" id="running-states">
 <h2>Etats en cours d&#8217;exécution<a class="headerlink" href="#running-states" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Les états en cours d’exécutions peuvent se produire plusieurs fois par lancement. <code class="docutils literal"><span class="pre">SERVER_ABOUT_TO_START</span></code> peut suivre <code class="docutils literal"><span class="pre">SERVER_STOPPED</span></code>, et <code class="docutils literal"><span class="pre">SERVER_STOPPED</span></code> peut se produire à tout moment durant le processus s&#8217;il y a une erreur.</p>
 <p><strong>SERVER_ABOUT_TO_START</strong></p>
-<p>L&#8217;événement <code class="docutils literal"><span class="pre">GameAboutToStartServerEvent</span></code> est levé. L&#8217;instance du serveur existe, mais les mondes ne sont pas encore chargés.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameAboutToStartServerEvent.html">GameAboutToStartServerEvent</a> event is triggered.
+The server instance exists, but worlds are not yet loaded.</p>
 <p><strong>SERVER_STARTING</strong></p>
-<p>L’événement <code class="docutils literal"><span class="pre">GameStartingServerEvent</span></code> est levé. L&#8217;instance du serveur existe et les mondes sont chargés. Les commandes sont traitées durant cet état.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStartingServerEvent.html">GameStartingServerEvent</a> is triggered.
+The server instance exists, and worlds are loaded. Command registration is handled during this state.</p>
 <p><strong>SERVER_STARTED</strong></p>
-<p>L&#8217;événement <code class="docutils literal"><span class="pre">GameStartedServerEvent</span></code> est levé. L&#8217;instance du serveur existe et tous les mondes sont chargés.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStartedServerEvent.html">GameStartedServerEvent</a> event is triggered.
+The server instance exists, and worlds are loaded.</p>
 <p><strong>SERVER_STOPPING</strong></p>
-<p>L&#8217;événement <code class="docutils literal"><span class="pre">GameStoppingServerEvent</span></code> est levé. Cet été se produit immédiatement avant le dernier tick, avant que les mondes soient sauvegardés.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStoppingServerEvent.html">GameStoppingServerEvent</a> is triggered.
+This state occurs immediately before the final tick, before the worlds are saved.</p>
 <p><strong>SERVER_STOPPED</strong></p>
-<p>L&#8217;événement <code class="docutils literal"><span class="pre">GameStoppedServerEvent</span></code> est levé. Durant cet état, plus aucun joueur n&#8217;est connecté et plus aucune modification de monde n&#8217;est sauvegardé.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStoppedServerEvent.html">GameStoppedServerEvent</a> is triggered.
+During this state, no players are connected and no changes to worlds are saved.</p>
 </div>
 <div class="section" id="stopping-states">
 <h2>Statuts d&#8217;arrêts<a class="headerlink" href="#stopping-states" title="Lien permanent vers ce titre">¶</a></h2>
@@ -622,9 +635,13 @@
 <p class="last">Les Statuts d&#8217;arrêts ne sont pas garantis d&#8217;être exécutés durant un arrêt. Ils ne seront pas activés si le jeu s&#8217;arrête de force via Ctrl+C, Task Manager, un crash de l&#8217;ordinateur, ou toutes autres situations similaires.</p>
 </div>
 <p><strong>GAME_STOPPING</strong></p>
-<p>Le <code class="docutils literal"><span class="pre">GameStoppingEvent</span></code> est déclenché. Ce statut intervient immédiatement avant <code class="docutils literal"><span class="pre">GAME_STOPPED</span></code>. Les plugin fournissant une API sont toujours capables d&#8217;accepter des requêtes basiques.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStoppingServerEvent.html">GameStoppingServerEvent</a> is triggered.
+This state occurs immediately before <code class="docutils literal"><span class="pre">GAME_STOPPED</span></code>. Plugins providing an API should still be capable of accepting
+basic requests.</p>
 <p><strong>GAME_STOPPED</strong></p>
-<p>Le <code class="docutils literal"><span class="pre">GameStoppedEvent</span></code> est déclenché. Une fois qu&#8217;il a fini d&#8217;être exécuté, Minecraft s&#8217;arrêtera. Plus aucune autre interaction avec le jeu ou les plugins ne doit être tentée à ce stade.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStoppedServerEvent.html">GameStoppedServerEvent</a> is triggered.
+Once this event has finished executing, Minecraft will shut down. No further interaction with the game or other plugins
+should be attempted at this point.</p>
 </div>
 </div>
 

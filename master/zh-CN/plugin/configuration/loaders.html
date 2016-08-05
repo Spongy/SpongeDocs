@@ -241,7 +241,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Preparing for Development</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">为开发做准备</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../preparing/jdk.html">安装JDK</a><ul class="simple">
 </ul>
 </li>
@@ -337,7 +337,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../assets/index.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../assets.html">The Asset API</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Configuring Plugins</a><ul class="current">
@@ -387,7 +387,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../blocks/index.html">Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../blocks/index.html">方块</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../blocks/concepts.html">概念</a><ul class="simple">
 </ul>
 </li>
@@ -397,7 +397,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../blocks/modifying.html">修改方块</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">Tile Entities</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">Tile Entity</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../blocks/virtualblock.html">Virtual Block Changes</a><ul class="simple">
@@ -495,7 +495,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">贡献指南</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../contributing/howtogit.html">How to Git(Hub)</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/howtogit.html">如何使用Git（Hub）</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/implementation/index.html">Developing Sponge</a><ul>
@@ -575,13 +575,13 @@
                   
   <div class="section" id="configuration-loaders">
 <h1>加载器的配置<a class="headerlink" href="#configuration-loaders" title="永久链接至标题">¶</a></h1>
-<p>Let&#8217;s break down how Configurate works, beginning with the loading process. Configurate provides <code class="docutils literal"><span class="pre">ConfigurationLoaders</span></code>
-for common configuration formats, standing as the manager of the physical configuration file, allowing you to
-save and load data from the given resource. They also allow you to load empty configurations, giving you the option of
-hard-coding default values or loading from a pre-written file.</p>
+<p>Let&#8217;s break down how Configurate works, beginning with the loading process. Configurate provides
+<a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/loader/ConfigurationLoader.html">ConfigurationLoader</a>s for common configuration formats, standing as the manager of the physical
+configuration file, allowing you to save and load data from the given resource. They also allow you to load empty
+configurations, giving you the option of hard-coding default values or loading from a pre-written file.</p>
 <div class="section" id="getting-your-loader">
 <h2>Getting your Loader<a class="headerlink" href="#getting-your-loader" title="永久链接至标题">¶</a></h2>
-<p>First, let&#8217;s grab a new <code class="docutils literal"><span class="pre">HoconConfigurationLoader</span></code> that points to our configuration file.</p>
+<p>First, let&#8217;s grab a new <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/hocon/HoconConfigurationLoader.html">HoconConfigurationLoader</a> that points to our configuration file.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.nio.file.Path</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">ninja.leaping.configurate.commented.CommentedConfigurationNode</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">ninja.leaping.configurate.hocon.HoconConfigurationLoader</span><span class="o">;</span>
@@ -607,7 +607,7 @@ configuration to be edited by the server administrator (or your plugin itself).<
 </div>
 <div class="section" id="loading-and-saving">
 <h2>Loading and Saving<a class="headerlink" href="#loading-and-saving" title="永久链接至标题">¶</a></h2>
-<p>Once you obtained your <code class="docutils literal"><span class="pre">ConfigurationLoader</span></code> you can use it to obtain an empty <code class="docutils literal"><span class="pre">ConfigurationNode</span></code> using the
+<p>Once you obtained your <code class="docutils literal"><span class="pre">ConfigurationLoader</span></code> you can use it to obtain an empty <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/ConfigurationNode.html">ConfigurationNode</a> using the
 <code class="docutils literal"><span class="pre">createEmptyNode()</span></code> method.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ninja.leaping.configurate.ConfigurationNode</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">ninja.leaping.configurate.ConfigurationOptions</span><span class="o">;</span>
@@ -617,9 +617,9 @@ configuration to be edited by the server administrator (or your plugin itself).<
 <span class="n">ConfigurationNode</span> <span class="n">rootNode</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="na">createEmptyNode</span><span class="o">(</span><span class="n">ConfigurationOptions</span><span class="o">.</span><span class="na">defaults</span><span class="o">());</span>
 </pre></div>
 </div>
-<p>This method expects the <code class="docutils literal"><span class="pre">ConfigurationOptions</span></code> to use as a parameter. Unless you want to use features like custom
-type serialization, you can just use <code class="docutils literal"><span class="pre">ConfigurationOptions.defaults()</span></code> to create an options object with default
-values.</p>
+<p>This method expects the <cite>ninja.leaping.configurate.ConfigurationOptions</cite> to use as a parameter. Unless you want to use
+features like custom type serialization, you can just use <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/ConfigurationOptions.html#defaults--">ConfigurationOptions#defaults()</a> to create an
+options object with default values.</p>
 <p>Using the <code class="docutils literal"><span class="pre">load()</span></code> method you can attempt to load the configuration contents from the source specified upon creation
 of the <code class="docutils literal"><span class="pre">ConfigurationLoader</span></code>. It also expects a <code class="docutils literal"><span class="pre">ConfigurationOptions</span></code> instance, but also provides a no-args form
 that is shorthand for <code class="docutils literal"><span class="pre">load(ConfigurationOptions.defaults())</span></code>.</p>

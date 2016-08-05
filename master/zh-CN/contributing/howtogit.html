@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>How to Git(Hub) &mdash; Sponge 4.1.0 文档</title>
+     <title>如何使用Git（Hub） &mdash; Sponge 4.1.0 文档</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -240,7 +240,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../preparing/index.html">Preparing for Development</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../preparing/index.html">为开发做准备</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../preparing/jdk.html">安装JDK</a><ul class="simple">
 </ul>
 </li>
@@ -336,7 +336,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/assets/index.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin/assets.html">The Asset API</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/configuration/index.html">Configuring Plugins</a><ul>
@@ -386,7 +386,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/blocks/index.html">Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/blocks/index.html">方块</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../plugin/blocks/concepts.html">概念</a><ul class="simple">
 </ul>
 </li>
@@ -396,7 +396,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../plugin/blocks/modifying.html">修改方块</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/blocks/tileentities.html">Tile Entities</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../plugin/blocks/tileentities.html">Tile Entity</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../plugin/blocks/virtualblock.html">Virtual Block Changes</a><ul class="simple">
@@ -494,7 +494,7 @@
 <li class="toctree-l2"><a class="reference internal" href="guidelines.html">贡献指南</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">How to Git(Hub)</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="">如何使用Git（Hub）</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="implementation/index.html">Developing Sponge</a><ul>
@@ -573,26 +573,20 @@
                 <div class="body" role="main">
                   
   <div class="section" id="how-to-git-hub">
-<h1>How to Git(Hub)<a class="headerlink" href="#how-to-git-hub" title="永久链接至标题">¶</a></h1>
-<p>If you want to assist in creating Sponge, you have an awesome addition to the API, or you want to improve our Docs,
-then you&#8217;ll need to become familiar with <code class="docutils literal"><span class="pre">git</span></code> and GitHub. If you&#8217;re already familiar with forking, branches,
-issues, pull-requests and commits, then just skip this topic. If you have no clue what we&#8217;re talking about, then read on.</p>
+<h1>如何使用Git（Hub）<a class="headerlink" href="#how-to-git-hub" title="永久链接至标题">¶</a></h1>
+<p>如果你想要协助开发Sponge，或者你对API的补充有了一个好的想法，或者你想要改进一下我们的文档，那么你就需要熟悉``git``或者GitHub。如果你已经对复刻（Fork）、分支（Branch）、Issue、Pull Request或者提交非常熟悉，那么你可以直接跳过这一部分。如果你不清楚我们在说些什么的话，请接着读下去。</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">This guide assumes that you&#8217;ve read <a class="reference internal" href="../preparing/git.html"><em>安装Git</em></a> and that you&#8217;ve already setup your machine with a Git
-client of your choice.</p>
+<p class="last">我们假定你已经阅读了:doc:，<cite>../准备/Git</cite>，并已经在你的机器上配置好了Git客户端。</p>
 </div>
 <div class="section" id="the-basic-concept-of-git-and-github">
-<h2>The Basic Concept of Git and GitHub<a class="headerlink" href="#the-basic-concept-of-git-and-github" title="永久链接至标题">¶</a></h2>
-<p>Git allows many different developers to develop a single piece of software at the same time. GitHub is a website where
-developers can collaborate and share their work with others. GitHub relies on Git for the management of said work.</p>
+<h2>Git 和 GitHub 的基本概念<a class="headerlink" href="#the-basic-concept-of-git-and-github" title="永久链接至标题">¶</a></h2>
+<p>Git允许许多不同的开发者在同一时间开发同一个软件。GitHub是一个开发人员可以和他人协作并分享他们的成果的网站。GitHub依赖Git管理上述的工作。</p>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>
-<p class="last">If you&#8217;re unfamiliar with the Git and GitHub vocabulary, have a look at the
-<a class="reference external" href="https://help.github.com/articles/github-glossary/">glossary page on GitHub</a>.</p>
+<p class="last">如果你不熟悉Git和GitHub的相关词汇，可以看一看GitHub提供的术语表：&lt;<a class="reference external" href="https://help.github.com/articles/github-glossary/">https://help.github.com/articles/github-glossary/</a>&gt;。</p>
 </div>
-<img alt="Repo Overview" src="../_images/repo-overview.svg" /><p>In this case the repo is named <code class="docutils literal"><span class="pre">SpongePowered</span></code>, has two branches named <code class="docutils literal"><span class="pre">master</span></code> and
-<code class="docutils literal"><span class="pre">feature</span> <span class="pre">1</span></code> and also some commits on both branches.</p>
+<img alt="Repo Overview" src="../_images/repo-overview.svg" /><p>因此，这一代码仓库被命名为``SpongePowered``，并拥有两个分别名为``master``和``feature 1``的分支，和其上的若干提交。</p>
 <p>Let&#8217;s put these terms into context - beginning with the <em>repository</em>. The repository (short: <em>repo</em>) is the place where
 a project stores its files. The SpongePowered repositories are located at <a class="reference external" href="http://github.com/spongepowered">GitHub</a>.
 However, this repo has some access restrictions to preserve it from unwanted or malicious changes. You can&#8217;t simply make

@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Custom Events &mdash; documentation Sponge 4.1.0</title>
+     <title>Événements personnalisés &mdash; documentation Sponge 4.1.0</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -33,8 +33,8 @@
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="documentation Sponge 4.1.0" href="../../index.html" />
-        <link rel="up" title="Events" href="index.html" />
-        <link rel="next" title="La Ressource API" href="../assets/index.html" />
+        <link rel="up" title="Événements" href="index.html" />
+        <link rel="next" title="The Asset API" href="../assets.html" />
         <link rel="prev" title="Filtres d’événement" href="filters.html" />
     
   <script type="text/javascript">
@@ -134,7 +134,7 @@
       <ul class="controls">
         <li>|</li>
         
-        <li><a href="../assets/index.html" title="Next Page"><i class="fa fa-fw fa-chevron-right"></i></a></li>
+        <li><a href="../assets.html" title="Next Page"><i class="fa fa-fw fa-chevron-right"></i></a></li>
         
         <li><a href="#top" title="To the top"><i class="fa fa-fw fa-chevron-up"></i></a></li>
         <li><a href="../../index.html" title="Home"><i class="fa fa-fw fa-home"></i></a></li>
@@ -156,7 +156,7 @@
         <ul>
         <li><a href="../../index.html">documentation Sponge 4.1.0</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >Création d&#8217;un Plugin</a><i class="fa fa-fw fa-chevron-right"></i></li>
-        <li><a href="index.html" accesskey="U">Events</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="index.html" accesskey="U">Événements</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
     <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -279,8 +279,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">Plugin Identifiers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Main Plugin Class</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">Identifiants de Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Classe Principale du Plugin</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../lifecycle.html">Cycle de vie des Plugins</a><ul class="simple">
@@ -304,7 +304,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../logging.html">Journalisation (Logging) et Débogage</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Commandes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../commands/creating.html">Construction d&#8217;une commande</a><ul class="simple">
 </ul>
 </li>
@@ -321,7 +321,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Events</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Événements</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="listeners.html">Les Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -331,12 +331,12 @@
 <li class="toctree-l3"><a class="reference internal" href="filters.html">Filtres d&#8217;événement</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Custom Events</a><ul class="simple">
+<li class="toctree-l3 current"><a class="current reference internal" href="">Événements personnalisés</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../assets/index.html">La Ressource API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../assets.html">The Asset API</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">Configuration des plugins</a><ul>
@@ -420,7 +420,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../effects.html">Effects</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../effects.html">Effets</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Scheduler</a><ul class="simple">
@@ -429,7 +429,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../services.html">Services</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../database.html">Databases</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../database.html">Bases de données</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../permissions.html">Permissions</a></li>
@@ -437,7 +437,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../bookview.html">Book Views</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../economy/index.html">Economy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../economy/index.html">Économie</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../economy/basics.html">Les concepts de base</a><ul class="simple">
 </ul>
 </li>
@@ -461,10 +461,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../manager.html">Plugin Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../manager.html">Gestionnaire de Plugin</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Game Profile Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Gestionnaire de Profil de Jeu</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../offline-userplayer-data.html">Offline Player Data</a><ul class="simple">
@@ -573,14 +573,15 @@
                 <div class="body" role="main">
                   
   <div class="section" id="custom-events">
-<h1>Custom Events<a class="headerlink" href="#custom-events" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>Événements personnalisés<a class="headerlink" href="#custom-events" title="Lien permanent vers ce titre">¶</a></h1>
 <p>You can write your own event classes and dispatch those events using the method described above. An event class must
-either implement the <code class="docutils literal"><span class="pre">Event</span></code> interface and, if it should be possible to cancel the event, <code class="docutils literal"><span class="pre">Cancellable</span></code>.</p>
+either implement the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/Event.html">Event</a> interface and, if it should be possible to cancel the event,
+<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/Cancellable.html">Cancellable</a>.</p>
 <div class="admonition tip">
 <p class="first admonition-title">Astuce</p>
 <p class="last">Depending on what type of event you want to create, there might be another interface to implement instead of
-<code class="docutils literal"><span class="pre">Event</span></code>. For example if your event describes something that happens to a <code class="docutils literal"><span class="pre">Player</span></code>, you should have your custom
-Event class implement <code class="docutils literal"><span class="pre">TargetPlayerEvent</span></code>.</p>
+<code class="docutils literal"><span class="pre">Event</span></code>. For example if your event describes something that happens to a <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/entity/living/player/Player.html">Player</a>, you should have your
+custom event class implement <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/entity/living/humanoid/player/TargetPlayerEvent.html">TargetPlayerEvent</a>.</p>
 </div>
 <div class="section" id="example-custom-event-class">
 <h2>Exemple : Classe d&#8217;Événement Personnalisée<a class="headerlink" href="#example-custom-event-class" title="Lien permanent vers ce titre">¶</a></h2>
@@ -588,8 +589,8 @@ Event class implement <code class="docutils literal"><span class="pre">TargetPla
 mutate in a way specified by the event. Since the event targets a player and can be cancelled by listeners, it
 implements both the <code class="docutils literal"><span class="pre">TargetPlayerEvent</span></code> and <code class="docutils literal"><span class="pre">Cancellable</span></code> interfaces.</p>
 <p>Since generally custom events are intended to be listened to by other plugins, it is in your best interest to document
-them appropriately. This includes a list of objects typically found in the <code class="docutils literal"><span class="pre">Cause</span></code>. In the below example, it would
-probably be mentioned that the root cause is generally an object of the fictitious <code class="docutils literal"><span class="pre">FLARDSource</span></code> class.</p>
+them appropriately. This includes a list of objects typically found in the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/cause/Cause.html">Cause</a>. In the below example, it
+would probably be mentioned that the root cause is generally an object of the fictitious <code class="docutils literal"><span class="pre">FLARDSource</span></code> class.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.entity.living.player.Player</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.event.Cancellable</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.event.cause.Cause</span><span class="o">;</span>

@@ -35,7 +35,7 @@
       <link rel="shortcut icon" href="../_static/favicon.ico"/>
         <link rel="top" title="Sponge 4.1.0 文档" href="../index.html" />
         <link rel="up" title="Contributing to Sponge" href="index.html" />
-        <link rel="next" title="How to Git(Hub)" href="howtogit.html" />
+        <link rel="next" title="如何使用Git（Hub）" href="howtogit.html" />
         <link rel="prev" title="Contributing to Sponge" href="index.html" />
     
   <script type="text/javascript">
@@ -240,7 +240,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../preparing/index.html">Preparing for Development</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../preparing/index.html">为开发做准备</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../preparing/jdk.html">安装JDK</a><ul class="simple">
 </ul>
 </li>
@@ -336,7 +336,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/assets/index.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin/assets.html">The Asset API</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/configuration/index.html">Configuring Plugins</a><ul>
@@ -386,7 +386,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/blocks/index.html">Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/blocks/index.html">方块</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../plugin/blocks/concepts.html">概念</a><ul class="simple">
 </ul>
 </li>
@@ -396,7 +396,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../plugin/blocks/modifying.html">修改方块</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/blocks/tileentities.html">Tile Entities</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../plugin/blocks/tileentities.html">Tile Entity</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../plugin/blocks/virtualblock.html">Virtual Block Changes</a><ul class="simple">
@@ -494,7 +494,7 @@
 <li class="toctree-l2 current"><a class="current reference internal" href="">贡献指南</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="howtogit.html">How to Git(Hub)</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="howtogit.html">如何使用Git（Hub）</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="implementation/index.html">Developing Sponge</a><ul>
@@ -578,18 +578,12 @@
 <div class="section" id="general-steps">
 <h2>大体步骤<a class="headerlink" href="#general-steps" title="永久链接至标题">¶</a></h2>
 <ol class="arabic simple">
-<li><p class="first">按照 <a class="reference internal" href="../preparing/index.html"><em>Preparing for Development</em></a> 中的描述建立你的工作区。</p>
+<li><p class="first">按照 <a class="reference internal" href="../preparing/index.html"><em>为开发做准备</em></a> 中的描述建立你的工作区。</p>
 </li>
-<li><p class="first">请确保您熟悉 Git 和 GitHub。如果你需要更新你的知识，看看这里： <a class="reference internal" href="howtogit.html"><em>How to Git(Hub)</em></a></p>
+<li><p class="first">请确保您熟悉 Git 和 GitHub。如果你需要更新你的知识，看看这里： <a class="reference internal" href="howtogit.html"><em>如何使用Git（Hub）</em></a></p>
 </li>
-<li>Check for existing issues in the <a class="reference external" href="https://github.com/SpongePowered/SpongeAPI/issues">SpongeAPI</a>,
-<a class="reference external" href="https://github.com/SpongePowered/SpongeCommon">SpongeCommon</a>,
-<a class="reference external" href="https://github.com/SpongePowered/SpongeForge">SpongeForge</a>,
-<a class="reference external" href="https://github.com/SpongePowered/SpongeVanilla">SpongeVanilla</a>, and
-<a class="reference external" href="https://github.com/SpongePowered/SpongeDocs">SpongeDocs</a> repositories. There is possibly someone else already
-working on the same thing. You can also check
-<a class="reference external" href="https://github.com/SpongePowered/SpongeAPI/labels/help%20wanted">issues marked with &#8220;help wanted&#8221;</a> for existing
-issues we need your help with.</li>
+<li><p class="first">请先检查在`SpongeAPI &lt;<a class="reference external" href="https://github.com/SpongePowered/SpongeAPI/issues">https://github.com/SpongePowered/SpongeAPI/issues</a>&gt;`，<cite>SpongeCommon &lt;https://github.com/SpongePowered/SpongeCommon&gt;</cite>，<cite>SpongeForge &lt;https://github.com/SpongePowered/SpongeForge&gt;</cite>，<cite>SpongeVanilla &lt;https://github.com/SpongePowered/SpongeVanilla&gt;</cite>，和`SpongeDocs &lt;<a class="reference external" href="https://github.com/SpongePowered/SpongeDocs">https://github.com/SpongePowered/SpongeDocs</a>&gt;`中已有的Issue。说不定已经有人在进行相同的工作了。你也可以检查一下被标记为“Help Wanted <cite>&lt;https://github.com/SpongePowered/SpongeAPI/labels/help%20wanted&gt;</cite>”的Issue以查找已有的但需要帮助的部分。</p>
+</li>
 </ol>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
@@ -606,8 +600,8 @@ issues we need your help with.</li>
 </li>
 <li><p class="first">如果你做了额外的改动，请Push一个新的提交。<strong>不要把所有的改动挤在一起</strong> ，那会使跟踪你在不同版本间所做的改动变得异常困难</p>
 </li>
-<li>Make sure your PR is rebased to the latest changes of the branch you&#8217;re intending to merge it into. If you need help
-rebasing it, just ask!</li>
+<li><p class="first">确信你的PR（Pull Request）已经衍合（Rebase）到当前你想要合并的分支的最新提交处。如果你不知道如何衍合，请直接问！</p>
+</li>
 </ol>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>

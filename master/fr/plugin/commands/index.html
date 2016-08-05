@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Commands &mdash; documentation Sponge 4.1.0</title>
+     <title>Commandes &mdash; documentation Sponge 4.1.0</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -278,8 +278,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">Plugin Identifiers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Main Plugin Class</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">Identifiants de Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Classe Principale du Plugin</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../lifecycle.html">Cycle de vie des Plugins</a><ul class="simple">
@@ -303,7 +303,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../logging.html">Journalisation (Logging) et Débogage</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Commands</a><ul>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Commandes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="creating.html">Construction d&#8217;une commande</a><ul class="simple">
 </ul>
 </li>
@@ -320,7 +320,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Events</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Événements</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Les Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -330,12 +330,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Filtres d&#8217;événement</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Custom Events</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Événements personnalisés</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../assets/index.html">La Ressource API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../assets.html">The Asset API</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">Configuration des plugins</a><ul>
@@ -419,7 +419,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../effects.html">Effects</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../effects.html">Effets</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Scheduler</a><ul class="simple">
@@ -428,7 +428,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../services.html">Services</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../database.html">Databases</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../database.html">Bases de données</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../permissions.html">Permissions</a></li>
@@ -436,7 +436,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../bookview.html">Book Views</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../economy/index.html">Economy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../economy/index.html">Économie</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../economy/basics.html">Les concepts de base</a><ul class="simple">
 </ul>
 </li>
@@ -460,10 +460,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../manager.html">Plugin Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../manager.html">Gestionnaire de Plugin</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Game Profile Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Gestionnaire de Profil de Jeu</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../offline-userplayer-data.html">Offline Player Data</a><ul class="simple">
@@ -572,16 +572,16 @@
                 <div class="body" role="main">
                   
   <div class="section" id="commands">
-<h1>Commands<a class="headerlink" href="#commands" title="Lien permanent vers ce titre">¶</a></h1>
+<h1>Commandes<a class="headerlink" href="#commands" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="admonition tip">
 <p class="first admonition-title">Astuce</p>
 <p class="last">Depuis que l&#8217;API de Commandes utilise l&#8217;API Texte, soyez sûr d&#8217;avoir lu <a class="reference internal" href="../text/index.html"><em>Text</em></a> d&#8217;abord.</p>
 </div>
-<p>Il y a 2 API différentes pour créer des commandes avec Sponge: L&#8217;interface <code class="docutils literal"><span class="pre">CommandCallable</span></code> et le constructeur <code class="docutils literal"><span class="pre">CommandSpec</span></code> .</p>
+<p>Il y a 2 API différentes pour créer des commandes avec Sponge: L&#8217;interface <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/CommandCallable.html">CommandCallable</a> et le constructeur <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/spec/CommandSpec.html">CommandSpec</a>.</p>
 <p>Le moyen le plus confortable pour créer une nouvelle commande est le constructeur <code class="docutils literal"><span class="pre">CommandSpec</span></code>, qui est détaillé dans cette section. Il supporte les commandes enfant et l&#8217;analyse d&#8217;arguments.</p>
 <p>Vous pouvez également utiliser <code class="docutils literal"><span class="pre">CommandCallable</span></code>, une interface de niveau inférieur qui permet d&#8217;accéder aux données brutes de la commande. Il est décrit dans <a class="reference internal" href="commandcallable.html"><em>cette page</em></a>.</p>
 <div class="section" id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Contenu<a class="headerlink" href="#contents" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="creating.html">Construction d&#8217;une commande</a><ul class="simple">

@@ -34,9 +34,9 @@
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 4.1.0 文档" href="../../index.html" />
-        <link rel="up" title="Blocks" href="index.html" />
+        <link rel="up" title="方块" href="index.html" />
         <link rel="next" title="访问方块" href="accessing.html" />
-        <link rel="prev" title="Blocks" href="index.html" />
+        <link rel="prev" title="方块" href="index.html" />
     
   <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -157,7 +157,7 @@
         <ul>
         <li><a href="../../index.html">Sponge 4.1.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >插件开发</a><i class="fa fa-fw fa-chevron-right"></i></li>
-        <li><a href="index.html" accesskey="U">Blocks</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="index.html" accesskey="U">方块</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
     <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -241,7 +241,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Preparing for Development</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">为开发做准备</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../preparing/jdk.html">安装JDK</a><ul class="simple">
 </ul>
 </li>
@@ -337,7 +337,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../assets/index.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../assets.html">The Asset API</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">Configuring Plugins</a><ul>
@@ -387,7 +387,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Blocks</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">方块</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="">概念</a><ul class="simple">
 </ul>
 </li>
@@ -397,7 +397,7 @@
 <li class="toctree-l3"><a class="reference internal" href="modifying.html">修改方块</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="tileentities.html">Tile Entities</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="tileentities.html">Tile Entity</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="virtualblock.html">Virtual Block Changes</a><ul class="simple">
@@ -495,7 +495,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">贡献指南</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../contributing/howtogit.html">How to Git(Hub)</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/howtogit.html">如何使用Git（Hub）</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/implementation/index.html">Developing Sponge</a><ul>
@@ -576,13 +576,10 @@
   <div class="section" id="concepts">
 <h1>概念<a class="headerlink" href="#concepts" title="永久链接至标题">¶</a></h1>
 <div class="section" id="properties">
-<h2>特性<a class="headerlink" href="#properties" title="永久链接至标题">¶</a></h2>
-<p>All blocks are of a <em>base type</em>. Examples of base types include dirt, stairs, and leaves. However, to further
-differentiate these base types, each block has set of different properties, of which each can take a limited set of
-values (i.e. <em>podzol</em> dirt, <em>brick</em> stairs, <em>oak</em> leaves). A block can have multiple properties (such as <em>east-facing</em>,
-<em>brick</em> stairs).</p>
+<h2>属性<a class="headerlink" href="#properties" title="永久链接至标题">¶</a></h2>
+<p>所有方块都各有一种*基类型*。基类型的例子有泥土、楼梯、树叶等。然而，为了进一步区分这些基类型，每一种方块都有一系列不同的属性，每种属性都只能取不同的有限值的集合（例如：<a href="#id1"><span class="problematic" id="id2">*</span></a>灰化*土、<a href="#id3"><span class="problematic" id="id4">*</span></a>砖块*楼梯、<a href="#id5"><span class="problematic" id="id6">*</span></a>橡树*树叶等）。一种方块可以有多个属性（例如：<a href="#id7"><span class="problematic" id="id8">*</span></a>朝向东*的*砖块*楼梯）。</p>
 <div class="topic">
-<p class="topic-title first">Examples of block properties</p>
+<p class="topic-title first">方块属性的例子：</p>
 <div class="code highlight-python"><div class="highlight"><pre><span></span>minecraft:dirt[snowy=false,variant=default]
 minecraft:dirt[snowy=true,variant=default]
 minecraft:dirt[snowy=false,variant=grassless]
@@ -597,17 +594,9 @@ minecraft:redstone_wire[east=up,north=side,power=0,south=up,west=up]
 </pre></div>
 </div>
 </div>
-<p>Some properties, however, are <em>ephemeral</em> &#8211; they exist only when the game is running. Their values are not written to
-the save file because their values can be detected automatically. For example, with Redstone wire, whether they are
-powered or not can be detected based on the environment (is there a lever that is on?). In this case, the <code class="docutils literal"><span class="pre">power</span></code>
-property of <code class="docutils literal"><span class="pre">minecraft:redstone_wire</span></code> as illustrated above is an ephemeral property.</p>
-<p>As of writing, Minecraft still stores block data to an old format with 12 bits for a base type (4096 possible base types)
-and 4 bits for &#8220;metadata&#8221; (16 possible values per base type). However, properties do not map directly to metadata due to
-legacy reasons: for example, the furnace block consists of two base types (currently smelting versus not smelting), each
-not utilizing their metadata at all. On the other hand, logs do use their metadata fully, but because the combination of
-properties exceeds 16 possible values (think tree type and direction), logs must be split over two base types.</p>
-<p>In the future, there will only be one 16 bit number (65536 possible combinations of base type + properties). Blocks will
-be assigned an ID automatically and this assignment will be stored in the world save file. This is illustrated below:</p>
+<p>然而，有些属性是*临时*的——它们只在游戏运行的时候才存在。它们的值不会被写入到存档文件中，因为它们的值可以被自动检测到。例如，就红石线来说，它们的被充能与否可以通过环境被检测到 （在这里有一个打开的拉杆么？） 。此时，<a href="#id1"><span class="problematic" id="id2">``</span></a>minecraft:redstone_wire``的``power``属性，就是一个临时属性。</p>
+<p>在本文档撰写的时候，Minecraft仍然将方块数据保存到一个旧的格式，用12bit确定方块的基类型（一共有4096种可能的基类型）以及4bit确定方块的“元数据（metadata）”（每个基类型有16种值）。然而，由于一些历史原因，属性并不直接映射到元数据：例如，熔炉方块由两种方块组成（熔炼中的以及没有熔炼中的），它们都完全没有利用本身的元数据。此外，原木确实完整使用了它们的元数据，但是因为属性的组合超过了16种可能值（考虑树木类型以及方向），原木必须被分成两个基类型。</p>
+<p>在未来，仍然只会使用一个16bit数字（基类型和属性的65536种组合） 。方块将被自动分配一个ID上，而这一分配将会保存到世界存档中。如下所示：</p>
 <div class="highlight-python"><div class="highlight"><pre><span></span>0 =&gt; minecraft:dirt[snowy=false,variant=default]
 1 =&gt; minecraft:dirt[snowy=true,variant=default]
 2 =&gt; minecraft:dirt[snowy=false,variant=grassless]
@@ -620,17 +609,12 @@ etc.
 </div>
 <div class="section" id="tile-entity-data">
 <h2>Tile Entity 数据<a class="headerlink" href="#tile-entity-data" title="永久链接至标题">¶</a></h2>
-<p>With 65536 possible combinations, it is not possible to store a lot of information like inventory, so there&#8217;s an
-additional way that <em>some</em> blocks have data: tile entities.</p>
-<p>Tile entities themselves are Java objects (like a <cite>Chest</cite> class). Normally, Minecraft code would access data in a tile
-entity by getting its instance and then calling it methods or fields, like a regular object
-(<code class="docutils literal"><span class="pre">world.getTileEntity(position).getInventory()</span></code>). When tile entities need to be written to the save file, they are
-stored in the <a class="reference external" href="http://minecraft.gamepedia.com/NBT_format">NBT format</a>.</p>
+<p>65536种可能的组合是没有办法存储诸如物品栏之类的大量信息的。所以*某些*方块通过额外的方式存储信息：Tile Entity。</p>
+<p>Tile Entity本身是Java的对象（Object，例如一个`Chest`类）。Minecraft通常会通过获取一个Tile Entity的实例然后调用方法或访问值以获取数据，就像一个普通的对象一样（<code class="docutils literal"><span class="pre">world.getTileEntity(position).getInventory()</span></code>）当Tile Entity需要写入文件保存时，它们将会以`NBT格式 &lt;<a class="reference external" href="http://minecraft.gamepedia.com/NBT_format">http://minecraft.gamepedia.com/NBT_format</a>&gt;`的方式存储。</p>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>
-<p>Some things, like paintings, are actually entities.</p>
-<p class="last">However, tile entities can also override rendering so they don&#8217;t look like a regular block, although this is
-generally inefficient and causes a client framerate drop.</p>
+<p>一些东西，比如说挂画，实际上是实体（Entity）。</p>
+<p class="last">不过，Tile Entity也可以覆写渲染方法使其看起来不太像一个正常的方块，尽管这往往效率低下而且会造成客户端的帧率下降。</p>
 </div>
 </div>
 </div>

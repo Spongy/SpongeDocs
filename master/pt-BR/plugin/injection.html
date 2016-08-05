@@ -336,7 +336,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="assets/index.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="assets.html">The Asset API</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="configuration/index.html">Configuring Plugins</a><ul>
@@ -579,8 +579,8 @@
 <h2>Lista temporária dos tipos injetados<a class="headerlink" href="#temporary-list-of-injected-types" title="Link permanente para este título">¶</a></h2>
 <dl class="docutils">
 <dt>ConfigDir (anotação no Path ou File)</dt>
-<dd><p class="first last">Usado para injetar o diretório de configuração do plugin: <code class="docutils literal"><span class="pre">./mods/</span></code> OU <code class="docutils literal"><span class="pre">./mods/&lt;Plugin#id&gt;/</span></code> dependendo do parâmetro <code class="docutils literal"><span class="pre">sharedRoot</span></code></p>
-</dd>
+<dd>Used to inject the plugin&#8217;s configuration directory:
+<code class="docutils literal"><span class="pre">./mods/</span></code> OR <code class="docutils literal"><span class="pre">./mods/&lt;Plugin#id&gt;/</span></code> depending on <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/config/ConfigDir.html#sharedRoot--">ConfigDir#sharedRoot()</a></dd>
 <dt>ConfigurationLoader&lt;CommentedConfigurationNode&gt; (&#8216;Carregador&#8217; de configurações)</dt>
 <dd><p class="first last">Precisa ser anotado com <code class="docutils literal"><span class="pre">&#64;DefaultConfig</span></code>. Usado para injetar um <code class="docutils literal"><span class="pre">ConfigurationLoader</span></code> pré-elaborado para o <code class="docutils literal"><span class="pre">File</span></code> da mesma anotação.</p>
 </dd>
@@ -612,8 +612,7 @@
 <dd><p class="first last">Precisa ser anotado com <code class="docutils literal"><span class="pre">&#64;DefaultConfig</span></code> ou <code class="docutils literal"><span class="pre">&#64;ConfigDir</span></code>. Dependendo da anotação informada isto irá conter a referencia para o arquivo de configuração padrão dos plugins ou o diretório usado para armazenar os arquivos de configuração.</p>
 </dd>
 <dt>PluginContainer (Container do plugin)</dt>
-<dd><p class="first last">Uma classe wrapper de <a href="#id1"><span class="problematic" id="id2">``</span></a>&#64;Plugin`, usada para obter as informações da anotação com fácil uso.</p>
-</dd>
+<dd>A <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/plugin/Plugin.html">Plugin</a> class wrapper, used to retrieve information from the annotation for easier use.</dd>
 <dt>PluginManager (Gerenciador de plugins)</dt>
 <dd><p class="first last">Gerencia os plugins carregados pela implementação. Pode obter o <code class="docutils literal"><span class="pre">PluginContainer</span></code> de outros plugins.</p>
 </dd>
@@ -635,7 +634,8 @@
 </div>
 <div class="section" id="game">
 <h3>Game (Jogo)<a class="headerlink" href="#game" title="Link permanente para este título">¶</a></h3>
-<p>O objeto <code class="docutils literal"><span class="pre">Game</span></code> é a abertura para a maioria das funções internas do SpongeAPI, do <code class="docutils literal"><span class="pre">EventManager</span></code> ao <code class="docutils literal"><span class="pre">Server</span></code>, e até mesmo o <code class="docutils literal"><span class="pre">Scheduler</span></code> Sincrônico/Assíncrono.</p>
+<p>The <code class="docutils literal"><span class="pre">Game</span></code> object is the opening for many of the internal functions of the SpongeAPI, from the <code class="docutils literal"><span class="pre">EventManager</span></code> to the
+<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/Server.html">Server</a> and even the Sync/Async <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/scheduler/Scheduler.html">Scheduler</a>.</p>
 <p>É completamente possível receber o objeto <code class="docutils literal"><span class="pre">Game</span></code> a partir da maioria dos evento, porém, é comumente obtido a partir de uma injeção.</p>
 <p><strong>Exemplo - Variável</strong></p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">com.google.inject.Inject</span><span class="o">;</span>
@@ -669,7 +669,7 @@
 </div>
 <div class="section" id="config-directory">
 <h3>Diretório de configuração<a class="headerlink" href="#config-directory" title="Link permanente para este título">¶</a></h3>
-<p>A forma recomendada de obter seu arquivo de configuração é por meio do Guice, juntamente com a anotação &#64;ConfigFile.</p>
+<p>The recommended way to obtain your config file is through Guice, along with the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/config/ConfigDir.html">ConfigDir</a> annotation.</p>
 <div class="admonition tip">
 <p class="first admonition-title">Dica</p>
 <p class="last">Se você definir o parâmetro <code class="docutils literal"><span class="pre">sharedRoot</span></code> para <code class="docutils literal"><span class="pre">true</span></code> será o mesmo diretório que - potencialmente - guarda as configurações de outros plugins. Em muitos casos quando obter o <code class="docutils literal"><span class="pre">ConfigDir</span></code> for necessário, isto deve ser <code class="docutils literal"><span class="pre">false</span></code>.</p>
@@ -709,10 +709,11 @@
 </div>
 <div class="section" id="defaultconfig">
 <h3>DefaultConfig (Configuração padrão)<a class="headerlink" href="#defaultconfig" title="Link permanente para este título">¶</a></h3>
-<p>O <code class="docutils literal"><span class="pre">DefaultConfig</span></code> funciona semelhante ao <code class="docutils literal"><span class="pre">ConfigDir</span></code>. A grande diferença é obviamente que <code class="docutils literal"><span class="pre">DefaultConfig</span></code> se refere a um arquivo especifico, enquanto <code class="docutils literal"><span class="pre">ConfigDir</span></code> se refere a um diretório.</p>
+<p>The way that <code class="docutils literal"><span class="pre">&#64;DefaultConfig</span></code> works is very similar to <code class="docutils literal"><span class="pre">&#64;ConfigDir</span></code>. The biggest difference obviously being that
+<code class="docutils literal"><span class="pre">&#64;DefaultConfig</span></code> refers to a specific file, where <code class="docutils literal"><span class="pre">&#64;ConfigDir</span></code> refers to a directory.</p>
 <div class="admonition tip">
 <p class="first admonition-title">Dica</p>
-<p class="last">Veja <a class="reference internal" href="configuration/index.html"><em>Configuring Plugins</em></a> para um guia completo, especialmente para <code class="docutils literal"><span class="pre">DefaultConfig</span></code>.</p>
+<p class="last">View <a class="reference internal" href="configuration/index.html"><em>Configuring Plugins</em></a> for a complete guide, specifically for <code class="docutils literal"><span class="pre">&#64;DefaultConfig</span></code>.</p>
 </div>
 </div>
 </div>

@@ -35,7 +35,7 @@
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 4.1.0 文档" href="../../index.html" />
         <link rel="up" title="Events" href="index.html" />
-        <link rel="next" title="The Asset API" href="../assets/index.html" />
+        <link rel="next" title="The Asset API" href="../assets.html" />
         <link rel="prev" title="Event Filters" href="filters.html" />
     
   <script type="text/javascript">
@@ -135,7 +135,7 @@
       <ul class="controls">
         <li>|</li>
         
-        <li><a href="../assets/index.html" title="Next Page"><i class="fa fa-fw fa-chevron-right"></i></a></li>
+        <li><a href="../assets.html" title="Next Page"><i class="fa fa-fw fa-chevron-right"></i></a></li>
         
         <li><a href="#top" title="To the top"><i class="fa fa-fw fa-chevron-up"></i></a></li>
         <li><a href="../../index.html" title="Home"><i class="fa fa-fw fa-home"></i></a></li>
@@ -241,7 +241,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Preparing for Development</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">为开发做准备</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../preparing/jdk.html">安装JDK</a><ul class="simple">
 </ul>
 </li>
@@ -337,7 +337,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../assets/index.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../assets.html">The Asset API</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">Configuring Plugins</a><ul>
@@ -387,7 +387,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../blocks/index.html">Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../blocks/index.html">方块</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../blocks/concepts.html">概念</a><ul class="simple">
 </ul>
 </li>
@@ -397,7 +397,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../blocks/modifying.html">修改方块</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">Tile Entities</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">Tile Entity</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../blocks/virtualblock.html">Virtual Block Changes</a><ul class="simple">
@@ -495,7 +495,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">贡献指南</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../contributing/howtogit.html">How to Git(Hub)</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/howtogit.html">如何使用Git（Hub）</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/implementation/index.html">Developing Sponge</a><ul>
@@ -576,12 +576,13 @@
   <div class="section" id="custom-events">
 <h1>Custom Events<a class="headerlink" href="#custom-events" title="永久链接至标题">¶</a></h1>
 <p>You can write your own event classes and dispatch those events using the method described above. An event class must
-either implement the <code class="docutils literal"><span class="pre">Event</span></code> interface and, if it should be possible to cancel the event, <code class="docutils literal"><span class="pre">Cancellable</span></code>.</p>
+either implement the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/Event.html">Event</a> interface and, if it should be possible to cancel the event,
+<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/Cancellable.html">Cancellable</a>.</p>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>
 <p class="last">Depending on what type of event you want to create, there might be another interface to implement instead of
-<code class="docutils literal"><span class="pre">Event</span></code>. For example if your event describes something that happens to a <code class="docutils literal"><span class="pre">Player</span></code>, you should have your custom
-Event class implement <code class="docutils literal"><span class="pre">TargetPlayerEvent</span></code>.</p>
+<code class="docutils literal"><span class="pre">Event</span></code>. For example if your event describes something that happens to a <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/entity/living/player/Player.html">Player</a>, you should have your
+custom event class implement <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/entity/living/humanoid/player/TargetPlayerEvent.html">TargetPlayerEvent</a>.</p>
 </div>
 <div class="section" id="example-custom-event-class">
 <h2>Example: Custom Event Class<a class="headerlink" href="#example-custom-event-class" title="永久链接至标题">¶</a></h2>
@@ -589,8 +590,8 @@ Event class implement <code class="docutils literal"><span class="pre">TargetPla
 mutate in a way specified by the event. Since the event targets a player and can be cancelled by listeners, it
 implements both the <code class="docutils literal"><span class="pre">TargetPlayerEvent</span></code> and <code class="docutils literal"><span class="pre">Cancellable</span></code> interfaces.</p>
 <p>Since generally custom events are intended to be listened to by other plugins, it is in your best interest to document
-them appropriately. This includes a list of objects typically found in the <code class="docutils literal"><span class="pre">Cause</span></code>. In the below example, it would
-probably be mentioned that the root cause is generally an object of the fictitious <code class="docutils literal"><span class="pre">FLARDSource</span></code> class.</p>
+them appropriately. This includes a list of objects typically found in the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/cause/Cause.html">Cause</a>. In the below example, it
+would probably be mentioned that the root cause is generally an object of the fictitious <code class="docutils literal"><span class="pre">FLARDSource</span></code> class.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.entity.living.player.Player</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.event.Cancellable</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.event.cause.Cause</span><span class="o">;</span>

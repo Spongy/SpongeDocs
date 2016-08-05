@@ -278,8 +278,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">Plugin Identifiers</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Main Plugin Class</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">Identifiants de Plugins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Classe Principale du Plugin</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../lifecycle.html">Cycle de vie des Plugins</a><ul class="simple">
@@ -303,7 +303,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../logging.html">Journalisation (Logging) et Débogage</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Commandes</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../commands/creating.html">Construction d&#8217;une commande</a><ul class="simple">
 </ul>
 </li>
@@ -320,7 +320,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Events</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Événements</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Les Event Listeners</a><ul class="simple">
 </ul>
 </li>
@@ -330,12 +330,12 @@
 <li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Filtres d&#8217;événement</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Custom Events</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Événements personnalisés</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../assets/index.html">La Ressource API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../assets.html">The Asset API</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">Configuration des plugins</a><ul>
@@ -419,7 +419,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../effects.html">Effects</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../effects.html">Effets</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Scheduler</a><ul class="simple">
@@ -428,7 +428,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../services.html">Services</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../database.html">Databases</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../database.html">Bases de données</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../permissions.html">Permissions</a></li>
@@ -436,7 +436,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../bookview.html">Book Views</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../economy/index.html">Economy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../economy/index.html">Économie</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../economy/basics.html">Les concepts de base</a><ul class="simple">
 </ul>
 </li>
@@ -460,10 +460,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../manager.html">Plugin Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../manager.html">Gestionnaire de Plugin</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Game Profile Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Gestionnaire de Profil de Jeu</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../offline-userplayer-data.html">Offline Player Data</a><ul class="simple">
@@ -577,7 +577,7 @@
 <p>Where other approaches define the available data using interfaces and inheritance (like a <code class="docutils literal"><span class="pre">LivingEntity</span></code>
 interface providing getter and setter functions for current and maximum health), in Sponge every entity, block
 etc. is completely oblivious to what data it holds. While this may appear less straightforward than direct
-accessor methods, it is foremost far more extensible. And thanks to the addition of <code class="docutils literal"><span class="pre">Key</span></code>s, simply accessing
+accessor methods, it is foremost far more extensible. And thanks to the addition of <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/key/Key.html">Key</a>s, simply accessing
 specific values is no less straightforward.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Avertissement</p>
@@ -590,30 +590,34 @@ to simply use the data API, you will not have to deal with many of them, as most
 specific data manipulators.</p>
 <div class="section" id="dataholder">
 <h3>DataHolder<a class="headerlink" href="#dataholder" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Un data holder est simplement quelque chose qui contient des données. Il fournit des méthodes permettant de récupérer et de retourner ces données. L&#8217;interface, en soi, est complètement indépendante du type des données enregistrées. Puisque seules les implémentations auront cette information, il est possible de demander à un <code class="docutils literal"><span class="pre">DataHolder</span></code> de fournir des données qu&#8217;il ne possède pas, ou d&#8217;accepter des données qu&#8217;il ne peut pas utiliser. Dans ces cas, la valeur retournée par ces méthodes fournira l&#8217;information <code class="docutils literal"><span class="pre">Optional.empty()</span></code> (information non disponible), ou information non acceptée (<a class="reference internal" href="transactions.html"><em>DataTransactionResult</em></a>).</p>
+<p>A data holder is just that - something that holds data. It provides methods to retrieve and offer back data. The
+interface itself is completely oblivious to the type of data held. Since only the implementations will possess
+this knowledge, it is possible to ask a <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/DataHolder.html">DataHolder</a> to provide data it does not have or to accept data it
+cannot use. In those cases, the return values of the methods will provide the information that data is not available
+(via <code class="docutils literal"><span class="pre">Optional.empty()</span></code>) or not accepted (via the <a class="reference internal" href="transactions.html"><em>DataTransactionResult</em></a>).</p>
 </div>
 <div class="section" id="property">
 <h3>Propriété<a class="headerlink" href="#property" title="Lien permanent vers ce titre">¶</a></h3>
 <p>A property too is data, but not synchronized between server and clients. Therefore, it can only be
 changed by modifications present on both client and server. Since Sponge is not intended to require a
 client-side counterpart, properties are not modifiable.
-Examples of properties are the harvesting ablities on tools (represented as <a class="reference external" href="https://jd.spongepowered.org/3.0.0/org/spongepowered/api/data/property/item/HarvestingProperty.html">HarvestingProperty</a>) or the
-damage absorption of an equippable armor item (represented as <a class="reference external" href="https://jd.spongepowered.org/3.0.0/org/spongepowered/api/data/property/item/DamageAbsorptionProperty.html">DamageAbsorptionProperty</a>).</p>
+Examples of properties are the harvesting ablities on tools (represented as <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/property/item/HarvestingProperty.html">HarvestingProperty</a> or the damage
+absorption of an equippable armor item (represented as <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/property/item/DamageAbsorptionProperty.html">DamageAbsorptionProperty</a>).</p>
 </div>
 <div class="section" id="datamanipulator">
 <h3>Manipulateur de données<a class="headerlink" href="#datamanipulator" title="Lien permanent vers ce titre">¶</a></h3>
 <p>A data manipulator represents points of cohesive data that describes a certain component of its holder. For
-example <code class="docutils literal"><span class="pre">HealthData</span></code>, which contains both current and maximum health. If a data holder has <code class="docutils literal"><span class="pre">HealthData</span></code>, it
-has health that can somehow be depleted and replenished and can die if that health is depleted. This allows for
-the re-use of such components over the API and prevents duplication of accessor methods. For example, sheep, stained
-glass blocks and leather armor all can share the <code class="docutils literal"><span class="pre">DyeableData</span></code> holding the color they are dyed in.</p>
+example <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/entity/HealthData.html">HealthData</a>, which contains both current and maximum health. If a data holder has <code class="docutils literal"><span class="pre">HealthData</span></code>, it
+has health that can somehow be depleted and replenished and can die if that health is depleted. This allows for the
+re-use of such components over the API and prevents duplication of accessor methods. For example, sheep, stained glass
+blocks and leather armor all can share the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/DyeableData.html">DyeableData</a> holding the color they are dyed in.</p>
 </div>
 <div class="section" id="key">
 <h3>Key<a class="headerlink" href="#key" title="Lien permanent vers ce titre">¶</a></h3>
 <p>A <code class="docutils literal"><span class="pre">Key</span></code> is a unique identifier for a single point of data and can be used to directly read or set that point of
 data without worrying about data manipulators. It was designed to provide a convenient way of accessing data
 similar to direct getter/setter methods. All keys used within Sponge are listed as constants in the
-<code class="docutils literal"><span class="pre">org.spongepowered.api.data.key.Keys</span></code> utility class.</p>
+<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/key/Keys.html">Keys</a> utility class.</p>
 </div>
 <div class="section" id="value">
 <h3>Valeur<a class="headerlink" href="#value" title="Lien permanent vers ce titre">¶</a></h3>

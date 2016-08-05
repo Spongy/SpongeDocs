@@ -336,7 +336,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="assets/index.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="assets.html">The Asset API</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="configuration/index.html">Configuring Plugins</a><ul>
@@ -591,29 +591,42 @@
 <h2>Estados de inicialização<a class="headerlink" href="#initialization-states" title="Link permanente para este título">¶</a></h2>
 <p>Estados de inicialização somente ocorrem uma vez durante uma única inicialização.</p>
 <p><strong>CONSTRUCTION (CONSTRUÇÃO)</strong></p>
-<p>O <code class="docutils literal"><span class="pre">GameConstructionEvent</span></code> é acionado. Durante este estado, a instância do <code class="docutils literal"><span class="pre">&#64;Plugin</span></code> para cada plugin já foi chamada.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameConstructionEvent.html">GameConstructionEvent</a> is triggered.
+During this state, the <code class="docutils literal"><span class="pre">&#64;Plugin</span></code> class instance for each plugin is triggered.</p>
 <p><strong>PRE_INITIALIZATION (PRE_INICIALIZAÇÃO)</strong></p>
-<p>O <code class="docutils literal"><span class="pre">GamePreInitializationEvent</span></code> é chamado. Durante este estado, o plugin se prepara para inicializar. Acesso a instância padrão do Logger e a informação sobre os locais preferenciais de configuração estão disponível.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GamePreInitializationEvent.html">GamePreInitializationEvent</a> is triggered.
+During this state, the plugin gets ready for initialization. Access to a default logger instance and access to
+information regarding preferred configuration file locations is available.</p>
 <p><strong>INITIALIZATION (INICIALIZAÇÃO)</strong></p>
-<p>O <code class="docutils literal"><span class="pre">GameInitializationEvent</span></code> é chamado. Durante este estado, o plugin deve terminar qualquer trabalho necessário para ser funcional. Gerenciadores globais de eventos devem ser registrados neste estágio.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameInitializationEvent.html">GameInitializationEvent</a> is triggered.
+During this state, the plugin should finish any work needed in order to be functional. Global event handlers should get
+registered in this stage.</p>
 <p><strong>POST_INITIALIZATION (PÓS INICIALIZAÇÃO)</strong></p>
-<p>O <code class="docutils literal"><span class="pre">GamePostInitializationEvent</span></code> é chamado. Neste estado, a comunicação entre plugins deve estar pronta para ocorrer. Plugins que fornecem uma API devem estar prontos para aceitar as solicitações básicos.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GamePostInitializationEvent.html">GamePostInitializationEvent</a> is triggered.
+By this state, inter-plugin communication should be ready to occur. Plugins providing an API should be ready to accept
+basic requests.</p>
 <p><strong>LOAD_COMPLETE (CARREGAMENTO COMPLETO)</strong></p>
-<p>O <code class="docutils literal"><span class="pre">GameLoadCompleteEvent</span></code> é chamado. Neste estado, a inicialização de todos plugins devem estar concluída.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameLoadCompleteEvent.html">GameLoadCompleteEvent</a> is triggered.
+By this state, all plugin initialization should be completed.</p>
 </div>
 <div class="section" id="running-states">
 <h2>Estados de execução<a class="headerlink" href="#running-states" title="Link permanente para este título">¶</a></h2>
 <p>Estados de execução podem ocorrer várias vezes durante uma única incialização. <code class="docutils literal"><span class="pre">SERVER_ABOUT_TO_START</span></code> pode ser chamado junto com <code class="docutils literal"><span class="pre">SERVER_STOPPED</span></code>, e <code class="docutils literal"><span class="pre">SERVER_STOPPED</span></code> pode ocorrer a qualquer momento durante o processo caso haja erro.</p>
 <p><strong>SERVER_ABOUT_TO_START (SERVIDOR PERTO DE INICIAR)</strong></p>
-<p>O evento <code class="docutils literal"><span class="pre">GameAboutToStartServerEvent</span></code> é chamado. A instância do servidor existe, porém os mundos não foram carregados ainda.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameAboutToStartServerEvent.html">GameAboutToStartServerEvent</a> event is triggered.
+The server instance exists, but worlds are not yet loaded.</p>
 <p><strong>SERVER_STARTING (SERVIDOR INICIANDO)</strong></p>
-<p>O <code class="docutils literal"><span class="pre">GameStartingServerEvent</span></code> é chamado. A instância do servidor existe, e os mundos foram carregados. O registro de comandos é tratado neste estado.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStartingServerEvent.html">GameStartingServerEvent</a> is triggered.
+The server instance exists, and worlds are loaded. Command registration is handled during this state.</p>
 <p><strong>SERVER_STARTED (SERVIDOR INICIADO)</strong></p>
-<p>O <code class="docutils literal"><span class="pre">GameStartedServerEvent</span></code> é chamado. A instância do servidor existe, e os mundos foram carregados.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStartedServerEvent.html">GameStartedServerEvent</a> event is triggered.
+The server instance exists, and worlds are loaded.</p>
 <p><strong>SERVER_STOPPING (SERVIDOR PARANDO)</strong></p>
-<p>O <code class="docutils literal"><span class="pre">GameStoppingServerEvent</span></code> é chamado. Este estado ocorre imediatamente antes do ultimo tick, antes dos mundos serem salvos.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStoppingServerEvent.html">GameStoppingServerEvent</a> is triggered.
+This state occurs immediately before the final tick, before the worlds are saved.</p>
 <p><strong>SERVER_STOPPED (SERVIDOR PAROU)</strong></p>
-<p>O <code class="docutils literal"><span class="pre">GameStoppedServerEvent</span></code> é chamado. Durante este estado, nenhum player está conectado e nenhuma alteração no mundo é salva.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStoppedServerEvent.html">GameStoppedServerEvent</a> is triggered.
+During this state, no players are connected and no changes to worlds are saved.</p>
 </div>
 <div class="section" id="stopping-states">
 <h2>Estados de parada<a class="headerlink" href="#stopping-states" title="Link permanente para este título">¶</a></h2>
@@ -623,9 +636,13 @@
 <p class="last">Não é garantido que os estados de parada serão chamados quando o servidor fechar. Eles podem <strong>não</strong> ser chamados caso o jogo for forçado a fechar, via Ctrl-C, gerenciador de tarefas, uma falha no computador, ou situações similares.</p>
 </div>
 <p><strong>GAME_STOPPING (JOGO PARANDO)</strong></p>
-<p>O <code class="docutils literal"><span class="pre">GameStoppingEvent</span></code> é chamado. Este estado ocorre imediatamente antes do <code class="docutils literal"><span class="pre">GAME_STOPPED</span></code>. Plugins que fornecem alguma API ainda devem ser capazes de receber solicitações básicas.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStoppingServerEvent.html">GameStoppingServerEvent</a> is triggered.
+This state occurs immediately before <code class="docutils literal"><span class="pre">GAME_STOPPED</span></code>. Plugins providing an API should still be capable of accepting
+basic requests.</p>
 <p><strong>GAME_STOPPED (JOGO PAROU)</strong></p>
-<p>O <code class="docutils literal"><span class="pre">GameStoppedEvent</span></code> é chamado. Uma vez que este evento terminar a execução, o Minecraft será fechado. Nenhuma interação com o jogo ou com outros plugins deve ser tentada neste ponto.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStoppedServerEvent.html">GameStoppedServerEvent</a> is triggered.
+Once this event has finished executing, Minecraft will shut down. No further interaction with the game or other plugins
+should be attempted at this point.</p>
 </div>
 </div>
 

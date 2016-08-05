@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Tile Entities &mdash; Sponge 4.1.0 文档</title>
+     <title>Tile Entity &mdash; Sponge 4.1.0 文档</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -34,7 +34,7 @@
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 4.1.0 文档" href="../../index.html" />
-        <link rel="up" title="Blocks" href="index.html" />
+        <link rel="up" title="方块" href="index.html" />
         <link rel="next" title="Virtual Block Changes" href="virtualblock.html" />
         <link rel="prev" title="修改方块" href="modifying.html" />
     
@@ -157,7 +157,7 @@
         <ul>
         <li><a href="../../index.html">Sponge 4.1.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >插件开发</a><i class="fa fa-fw fa-chevron-right"></i></li>
-        <li><a href="index.html" accesskey="U">Blocks</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="index.html" accesskey="U">方块</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
     <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -241,7 +241,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Preparing for Development</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">为开发做准备</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../preparing/jdk.html">安装JDK</a><ul class="simple">
 </ul>
 </li>
@@ -337,7 +337,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../assets/index.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../assets.html">The Asset API</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">Configuring Plugins</a><ul>
@@ -387,7 +387,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Blocks</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">方块</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="concepts.html">概念</a><ul class="simple">
 </ul>
 </li>
@@ -397,7 +397,7 @@
 <li class="toctree-l3"><a class="reference internal" href="modifying.html">修改方块</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Tile Entities</a><ul class="simple">
+<li class="toctree-l3 current"><a class="current reference internal" href="">Tile Entity</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="virtualblock.html">Virtual Block Changes</a><ul class="simple">
@@ -495,7 +495,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">贡献指南</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../contributing/howtogit.html">How to Git(Hub)</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/howtogit.html">如何使用Git（Hub）</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/implementation/index.html">Developing Sponge</a><ul>
@@ -574,12 +574,12 @@
                 <div class="body" role="main">
                   
   <div class="section" id="tile-entities">
-<h1>Tile Entities<a class="headerlink" href="#tile-entities" title="永久链接至标题">¶</a></h1>
+<h1>Tile Entity<a class="headerlink" href="#tile-entities" title="永久链接至标题">¶</a></h1>
 <p>Tile entity 是可以执行诸如自动合成一类的附加操作 (熔炉和炼药台)，或者提供特殊效果 (例如信标和音符盒) 的方块。它们也保存诸如物品栏或者文字一类的附加数据 (例如箱子、告示牌或命令方块)。</p>
 <div class="section" id="identifying-tile-entities-and-their-type">
 <h2>确定 Tile Entity 和它们的类型<a class="headerlink" href="#identifying-tile-entities-and-their-type" title="永久链接至标题">¶</a></h2>
-<p>Again, it all starts with a <code class="docutils literal"><span class="pre">Location</span></code>. The <code class="docutils literal"><span class="pre">getTileEntity()</span></code> function will return the tile entity corresponding
-to the block or <code class="docutils literal"><span class="pre">Optional.empty()</span></code> if the block is not a tile entity.</p>
+<p>Again, it all starts with a <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/Location.html">Location</a>. The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/Location.html#getTileEntity--">Location#getTileEntity()</a> function will return the tile
+entity corresponding to the block or <code class="docutils literal"><span class="pre">Optional.empty()</span></code> if the block is not a tile entity.</p>
 <blockquote>
 <div><div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.world.Location</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.world.World</span><span class="o">;</span>
@@ -590,7 +590,9 @@ to the block or <code class="docutils literal"><span class="pre">Optional.empty(
 </pre></div>
 </div>
 </div></blockquote>
-<p>Tile entity 的类型可以通过 <code class="docutils literal"><span class="pre">getType()</span></code> 函数获得，它返回一个 <code class="docutils literal"><span class="pre">TileEntityType</span></code>，这个对象可以用和比较 <code class="docutils literal"><span class="pre">BlockType</span></code> 相似的方法来比较。在进行这个检查之后，<code class="docutils literal"><span class="pre">TileEntity</span></code> 变量可以被安全的转型到对应的子类型。</p>
+<p>The type of a tile entity can then be obtained by the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/block/tileentity/TileEntity.html#getType--">TileEntity#getType()</a> function which returns a
+<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/block/tileentity/TileEntityType.html">TileEntityType</a>. Which can then be compared similar to a <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/block/BlockType.html">BlockType</a>. After performing this check
+the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/block/tileentity/TileEntity.html">TileEntity</a> variable can safely be cast to the according subtype.</p>
 <blockquote>
 <div><div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.block.tileentity.Jukebox</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.block.tileentity.TileEntity</span><span class="o">;</span>
@@ -609,11 +611,15 @@ to the block or <code class="docutils literal"><span class="pre">Optional.empty(
 </pre></div>
 </div>
 </div></blockquote>
-<p>在进行这个转型之后，各个子接口提供的方法就可以被访问了 (在实例中，<code class="docutils literal"><span class="pre">ejectRecord()</span></code> 方法)。要获取关于 <code class="docutils literal"><span class="pre">TileEntity</span></code> 的子类型以及它们各自的方法，请在API文档中参考 <code class="docutils literal"><span class="pre">org.spongepowered.api.block.tileentity</span></code> 包以及它的子包。</p>
+<p>After performing this cast, the methods provided by the particular interface can be accessed (in this example the
+<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/block/tileentity/Jukebox.html#ejectRecord--">Jukebox#ejectRecord()</a> method). For detailed information about <code class="docutils literal"><span class="pre">TileEntity</span></code> subtypes and their respective
+methods refer to the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/block/tileentity/package-summary.html">org.spongepowered.api.block.tileentity</a> package and its subpackages in the API.</p>
 </div>
 <div class="section" id="accessing-and-modifying-a-tile-entity-s-data">
 <h2>Tile Entity 数据的访问和修改<a class="headerlink" href="#accessing-and-modifying-a-tile-entity-s-data" title="永久链接至标题">¶</a></h2>
-<p>和方块状态相似的，在 tile entity 中存储的数据是通过一个 <code class="docutils literal"><span class="pre">DataManipulator</span></code> 访问的。既然通过使用的 <code class="docutils literal"><span class="pre">DataManipulator</span></code> 可以完整的描述使用数据的类型，所有数据操作都可以仅使用 <code class="docutils literal"><span class="pre">TileEntity</span></code> 接口完成而不需要转型。</p>
+<p>Similar to block states, the data stored in a tile entity is accessed using a <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/DataManipulator.html">DataManipulator</a>. Since the
+kind of a data is fully described by the <code class="docutils literal"><span class="pre">DataManipulator</span></code> used, all data manipulation can be done with the
+<code class="docutils literal"><span class="pre">TileEntity</span></code> interface itself and does not require a cast.</p>
 <p>接下来的例子包含了两个修改告示牌的数据的方法。第一个方法 (在可能时) 读取第一行的内容，第二个尝试去设置它并且返回一个布尔值代表操作的成功与否。</p>
 <blockquote>
 <div><div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.data.manipulator.mutable.tileentity.SignData</span><span class="o">;</span>
@@ -641,11 +647,14 @@ to the block or <code class="docutils literal"><span class="pre">Optional.empty(
 </pre></div>
 </div>
 </div></blockquote>
-<p>和使用 <code class="docutils literal"><span class="pre">BlockState</span></code> 的主要区别是 tile entity 是一个可变的 <code class="docutils literal"><span class="pre">DataHolder</span></code> 而不是可变的 <code class="docutils literal"><span class="pre">BlockState</span></code>。</p>
+<p>The main difference to working with a <code class="docutils literal"><span class="pre">BlockState</span></code> is that a tile entity is a mutable <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/DataHolder.html">DataHolder</a> as
+opposed to the immutable <code class="docutils literal"><span class="pre">BlockState</span></code>.</p>
 </div>
 <div class="section" id="accessing-inventories">
 <h2>访问物品栏<a class="headerlink" href="#accessing-inventories" title="永久链接至标题">¶</a></h2>
-<p>很大一部分 tile entity 带有它们自己的物品栏，最值得注意的是箱子和熔炉。物品栏不能直接通过 <code class="docutils literal"><span class="pre">TileEntity</span></code> 接口获得，所以一个转型是必要的。既然所有包含一个物品栏的 tile entity 都继承 <code class="docutils literal"><span class="pre">TileEntityCarrier</span></code> 接口，只需要转型到它就已经足够了，正如接下来的例子所示。</p>
+<p>Quite a share of tile entities come with their own inventory, most notably chests and furnaces. That inventory can not
+be accessed directly from the <code class="docutils literal"><span class="pre">TileEntity</span></code> interface. So a cast will be necessary. Since all tile entities containing
+an inventory extend the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/block/tileentity/carrier/TileEntityCarrier.html">TileEntityCarrier</a> interface it suffices to cast to that interface as shown below.</p>
 <blockquote>
 <div><div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.block.tileentity.carrier.TileEntityCarrier</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.item.inventory.Inventory</span><span class="o">;</span>
@@ -660,7 +669,7 @@ to the block or <code class="docutils literal"><span class="pre">Optional.empty(
 </pre></div>
 </div>
 </div></blockquote>
-<p>Refer to the inventory documentation regarding the manipulation of the inventory.</p>
+<p>请参阅操作物品栏（Inventory）的相关文档。</p>
 </div>
 </div>
 
