@@ -650,9 +650,7 @@
 <div class="section" id="writing-a-command-executor">
 <h3>Écrire l&#8217;Éxécution de la Commande<a class="headerlink" href="#writing-a-command-executor" title="Lien permanent vers ce titre">¶</a></h3>
 <p>La seule chose requise pour construire une commande simple est la classe de l’exécution de la commande, qui contient la logique de la commande.</p>
-<p>The class has to implement the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/spec/CommandExecutor.html">CommandExecutor</a> interface, which defines the
-<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/spec/CommandExecutor.html#execute-org.spongepowered.api.command.CommandSource-org.spongepowered.api.command.args.CommandContext-">CommandExecutor#execute(CommandSource, CommandContext)</a> method. The method is called on command execution and
-has two arguments:</p>
+<p>La classe doit implémenter l&#8217;interface <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/spec/CommandExecutor.html">CommandExecutor</a>, qui définit la méthode <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/spec/CommandExecutor.html#execute-org.spongepowered.api.command.CommandSource-org.spongepowered.api.command.args.CommandContext-">CommandExecutor#execute(CommandSource, CommandContext)</a>. La méthode est appelée pendant l&#8217;exécution de la commande et possède deux arguments:</p>
 <ul class="simple">
 <li><p class="first">La source de la commande qui l&#8217;exécute. (ex: la console, un bloc de commande ou bien un joueur)</p>
 </li>

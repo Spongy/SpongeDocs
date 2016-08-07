@@ -573,10 +573,7 @@
                   
   <div class="section" id="the-data-api">
 <h1>The Data API<a class="headerlink" href="#the-data-api" title="Permalink to this headline">¶</a></h1>
-<p>The unified Data API aims to provide a consistent way of accessing and modifying data. &#8216;Data&#8217;, in this context
-means any data that is consistently synchronized between client and server. It can be changed server-side and
-then those changes will be synchronized to the connected clients. This includes, among many others, the text on
-a sign, the looks of a horse or the health of any living entity.</p>
+<p>The unified Data API aims to provide a consistent way of accessing and modifying data. &#8216;Data&#8217;, in this context means any data that is consistently synchronised between client and server. It can be changed server-side and then those changes will be synchronised to the connected clients. This includes, among many others, the text on a sign, the looks of a horse or the health of any living entity.</p>
 <p>Where other approaches define the available data using interfaces and inheritance (like a <code class="docutils literal"><span class="pre">LivingEntity</span></code>
 interface providing getter and setter functions for current and maximum health), in Sponge every entity, block
 etc. is completely oblivious to what data it holds. While this may appear less straightforward than direct
@@ -602,19 +599,11 @@ cannot use. In those cases, the return values of the methods will provide the in
 </div>
 <div class="section" id="property">
 <h3>Property<a class="headerlink" href="#property" title="Permalink to this headline">¶</a></h3>
-<p>A property too is data, but not synchronized between server and clients. Therefore, it can only be
-changed by modifications present on both client and server. Since Sponge is not intended to require a
-client-side counterpart, properties are not modifiable.
-Examples of properties are the harvesting ablities on tools (represented as <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/property/item/HarvestingProperty.html">HarvestingProperty</a> or the damage
-absorption of an equippable armor item (represented as <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/property/item/DamageAbsorptionProperty.html">DamageAbsorptionProperty</a>).</p>
+<p>A property too is data, but not synchronised between server and clients. Therefore, it can only be changed by modifications present on both client and server. Since Sponge is not intended to require a client-side counterpart, properties are not modifiable. Examples of properties are the harvesting abilities on tools (represented as <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/property/item/HarvestingProperty.html">HarvestingProperty</a> or the damage absorption of an equippable armour item (represented as <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/property/item/DamageAbsorptionProperty.html">DamageAbsorptionProperty</a>).</p>
 </div>
 <div class="section" id="datamanipulator">
 <h3>DataManipulator<a class="headerlink" href="#datamanipulator" title="Permalink to this headline">¶</a></h3>
-<p>A data manipulator represents points of cohesive data that describes a certain component of its holder. For
-example <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/entity/HealthData.html">HealthData</a>, which contains both current and maximum health. If a data holder has <code class="docutils literal"><span class="pre">HealthData</span></code>, it
-has health that can somehow be depleted and replenished and can die if that health is depleted. This allows for the
-re-use of such components over the API and prevents duplication of accessor methods. For example, sheep, stained glass
-blocks and leather armor all can share the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/DyeableData.html">DyeableData</a> holding the color they are dyed in.</p>
+<p>A data manipulator represents points of cohesive data that describes a certain component of its holder. For example <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/entity/HealthData.html">HealthData</a>, which contains both current and maximum health. If a data holder has <code class="docutils literal"><span class="pre">HealthData</span></code>, it has health that can somehow be depleted and replenished and can die if that health is depleted. This allows for the re-use of such components over the API and prevents duplication of accessor methods. For example, sheep, stained glass blocks and leather armour all can share the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/DyeableData.html">DyeableData</a> holding the colour they are dyed in.</p>
 </div>
 <div class="section" id="key">
 <h3>Key<a class="headerlink" href="#key" title="Permalink to this headline">¶</a></h3>

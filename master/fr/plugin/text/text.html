@@ -607,8 +607,7 @@ places such as books and signs.</p>
 <span class="n">Text</span> <span class="n">coloredText</span> <span class="o">=</span> <span class="n">Text</span><span class="o">.</span><span class="na">builder</span><span class="o">(</span><span class="s">&quot;Woot! Golden text is golden.&quot;</span><span class="o">).</span><span class="na">color</span><span class="o">(</span><span class="n">TextColors</span><span class="o">.</span><span class="na">GOLD</span><span class="o">).</span><span class="na">build</span><span class="o">();</span>
 </pre></div>
 </div>
-<p>Any color specified within the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/format/TextColors.html">TextColors</a> class can be used when coloring text. Multiple colors can be used
-in text by appending additional texts with different colors:</p>
+<p>Toutes les couleurs spécifiées dans la classe <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/format/TextColors.html">TextColors</a> peuvent être utilisées pour colorer un texte. Plusieurs couleurs peuvent être utilisées dans un même texte en y ajoutant bout à bout d&#8217;autres textes de couleurs différentes:</p>
 </div>
 <div class="section" id="example-multi-colored-text">
 <h3>Exemple: Texte Multicolor<a class="headerlink" href="#example-multi-colored-text" title="Lien permanent vers ce titre">¶</a></h3>
@@ -649,9 +648,7 @@ in text by appending additional texts with different colors:</p>
 </div>
 <div class="section" id="text-actions">
 <span id="id1"></span><h3>Actions de Texte<a class="headerlink" href="#text-actions" title="Lien permanent vers ce titre">¶</a></h3>
-<p>The text builder also offers the ability to create actions for text. Any action specified within the
-<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/action/TextActions.html">TextActions</a> class can be used when creating text actions for text. The method below is a small example of
-what text actions can do.</p>
+<p>Le générateur de texte offre aussi la possibilité de créer des actions pour le texte. Toute action spécifiée dans la classe <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/action/TextActions.html">TextActions</a> peut être utilisée lorsque vous créez des actions de texte pour un texte. La méthode employé ci-dessous est un petit exemple de ce que les actions de texte peuvent faire.</p>
 </div>
 <div class="section" id="example-text-with-an-action">
 <h3>Exemple: Texte avec une Action<a class="headerlink" href="#example-text-with-an-action" title="Lien permanent vers ce titre">¶</a></h3>
@@ -663,7 +660,7 @@ what text actions can do.</p>
 <p>Avec la méthode donnée ci-dessus, les joueurs peuvent cliquer sur &#8220;Click here!&#8221; pour lancer une certaine commande.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Some text actions, such as <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/action/TextActions.html#changePage-int-">TextActions#changePage(int)</a>, can only be used with book items.</p>
+<p class="last">Certaines actions de texte, telle que <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/action/TextActions.html#changePage-int-">TextActions#changePage(int)</a>, sont utilisables uniquement avec les éléments du livre.</p>
 </div>
 <div class="admonition tip">
 <p class="first admonition-title">Astuce</p>
@@ -677,8 +674,7 @@ what text actions can do.</p>
 <p class="first admonition-title">Astuce</p>
 <p class="last">Consultez cet <a class="reference external" href="http://minecraft.gamepedia.com/Commands#Target_selectors">article du wiki Minecraft</a> pour mieux comprendre ce que sont les sélecteurs de cible dans Minecraft, et comment les utiliser.</p>
 </div>
-<p>To use selectors in text, you must use the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/selector/Selector.Builder.html">Selector.Builder</a> interface. This is illustrated in the example
-below.</p>
+<p>Pour utiliser les sélecteurs dans une texte, vous devez utiliser l&#8217;interface <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/selector/Selector.Builder.html">Selector.Builder</a>. Ce que l&#8217;exemple ci-dessous vous illustre.</p>
 </div>
 <div class="section" id="example-selector-generated-text">
 <h3>Exemple: Texte généré par Sélecteur<a class="headerlink" href="#example-selector-generated-text" title="Lien permanent vers ce titre">¶</a></h3>

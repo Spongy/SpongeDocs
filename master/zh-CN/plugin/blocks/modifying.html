@@ -577,8 +577,7 @@
 <h1>修改方块<a class="headerlink" href="#modifying-blocks" title="永久链接至标题">¶</a></h1>
 <div class="section" id="changing-a-blocks-type">
 <h2>更改方块类型<a class="headerlink" href="#changing-a-blocks-type" title="永久链接至标题">¶</a></h2>
-<p>Changing the Type of a Block is as simple as calling the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/Location.html#setBlockType-org.spongepowered.api.block.BlockType-">Location#setBlockType(BlockType)</a> method with the
-new <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/block/BlockType.html">BlockType</a>. For example the following code turns the block at the given <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/Location.html">Location</a> into a sponge:</p>
+<p>更换一个方块的类型的做法，就是调用 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/Location.html#setBlockType-org.spongepowered.api.block.BlockType-">Location#setBlockType(BlockType)</a> 这一方法，并传入 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/block/BlockType.html">BlockType</a> 这么简单。例如，下面的代码把给定的 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/Location.html">Location</a> 对应的方块设置成海绵。</p>
 <blockquote>
 <div><div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.block.BlockTypes</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.world.Location</span><span class="o">;</span>
@@ -590,16 +589,11 @@ new <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/s
 </pre></div>
 </div>
 </div></blockquote>
-<p>It&#8217;s as simple as that. If you just want to &#8216;delete&#8217; a block (which is done by replacing it with air), you may just
-use the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/Location.html#removeBlock--">Location#removeBlock()</a> method provided by <code class="docutils literal"><span class="pre">Location</span></code>.</p>
+<p>它就是这么简单。如果你只是想要“删除”一个方法（也就是把它替换成空气），你可以只使用 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/Location.html#removeBlock--">Location#removeBlock()</a> 这一由 <code class="docutils literal"><span class="pre">Location</span></code> 提供的方法。</p>
 </div>
 <div class="section" id="altering-block-states">
 <h2>更改方块状态<a class="headerlink" href="#altering-block-states" title="永久链接至标题">¶</a></h2>
-<p>Similar to the above example, the <code class="docutils literal"><span class="pre">Location</span></code> class provides a <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/Location.html#setBlock-org.spongepowered.api.block.BlockState-">Location#setBlock(BlockState)</a> method
-accepting a new <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/block/BlockState.html">BlockState</a>. To make use of it, you first must acquire a <code class="docutils literal"><span class="pre">BlockState</span></code> you can modify. You
-can do so either by getting the block&#8217;s current state via the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/Location.html#getBlock--">Location#getBlock()</a> method or by using a
-<code class="docutils literal"><span class="pre">BlockType</span></code>&#8216;s default state. The latter is demonstrated below. The default state for a Sponge block is retrieved
-and then modified to directly create a wet sponge block:</p>
+<p>和之前的例子类似，提供了 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/Location.html#setBlock-org.spongepowered.api.block.BlockState-">Location#setBlock(BlockState)</a> 方法的 <code class="docutils literal"><span class="pre">Location</span></code> 类需要传入一个 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/block/BlockState.html">BlockState</a> 参数。如果想要使用它，你首先必须获取一个 <code class="docutils literal"><span class="pre">BlockState</span></code> 用于修改。你可以使用 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/Location.html#getBlock--">Location#getBlock()</a> 方法获取一个方块的当前 <code class="docutils literal"><span class="pre">BlockState</span></code> 或者使用一个 <code class="docutils literal"><span class="pre">BlockType</span></code> 的默认状态。下面的例子阐释了后面的使用方法。这一例子先获取了一个海绵方块的默认状态然后进行修改，以产生一个湿海绵方块。</p>
 <blockquote>
 <div><div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.Sponge</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.block.BlockState</span><span class="o">;</span>
@@ -616,11 +610,8 @@ and then modified to directly create a wet sponge block:</p>
 </pre></div>
 </div>
 </div></blockquote>
-<p>Since a <code class="docutils literal"><span class="pre">BlockState</span></code> is an <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/ImmutableDataHolder.html">ImmutableDataHolder</a>, you may use the provided methods <code class="docutils literal"><span class="pre">with()</span></code> and
-<code class="docutils literal"><span class="pre">without()</span></code>, both of which will return a new altered <code class="docutils literal"><span class="pre">BlockState</span></code> or <code class="docutils literal"><span class="pre">Optional.empty()</span></code> if the given
-<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/ImmutableDataManipulator.html">ImmutableDataManipulator</a> is not applicable to the kind of block represented by the <code class="docutils literal"><span class="pre">BlockState</span></code>.</p>
-<p>The <code class="docutils literal"><span class="pre">with()</span></code> method accepts an <code class="docutils literal"><span class="pre">ImmutableDataManipulator</span></code> and will try to create a new <code class="docutils literal"><span class="pre">BlockState</span></code> with the
-given data set, overwriting existing values. The following example will change any dirt block to podzol.</p>
+<p>因为一个 <code class="docutils literal"><span class="pre">BlockState</span></code> 是一个 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/ImmutableDataHolder.html">ImmutableDataHolder</a> ，所以你可以使用它提供的分别名为 <code class="docutils literal"><span class="pre">with()</span></code> 和 <code class="docutils literal"><span class="pre">without()</span></code> 的方法。这两个方法都会返回一个额外的 <code class="docutils literal"><span class="pre">BlockState</span></code> 或者当给定的 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/ImmutableDataManipulator.html">ImmutableDataManipulator</a> 不适用于那种 <code class="docutils literal"><span class="pre">BlockState</span></code> 代表的方块时，返回一个 <cite>Optional.empty()`</cite> 。</p>
+<p><code class="docutils literal"><span class="pre">with()</span></code> 方法接受一个 <code class="docutils literal"><span class="pre">ImmutableDataManipulator</span></code> 参数，并且会尝试使用给定的数据集合创建一个新的 <code class="docutils literal"><span class="pre">BlockState</span></code> 以覆盖已经存在的值。下面的示例把所有泥土方块转变为灰化土。</p>
 <blockquote>
 <div><div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.data.key.Keys</span><span class="o">;</span>
 <span class="kn">import</span>
@@ -643,12 +634,8 @@ given data set, overwriting existing values. The following example will change a
 </pre></div>
 </div>
 </div></blockquote>
-<p>Note that the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/block/DirtData.html">DirtData</a> is a mutable copy of the data held in the <code class="docutils literal"><span class="pre">BlockState</span></code>. It is changed and then
-converted back to an immutable and used to create a new <code class="docutils literal"><span class="pre">BlockState</span></code> which then replaces the original block.</p>
-<p>The <code class="docutils literal"><span class="pre">without()</span></code> method accepts a class reference and will create a new <code class="docutils literal"><span class="pre">BlockState</span></code> without the data
-represented by the given class. If the block state would not be valid without that data, a default value will be used.
-So if the <code class="docutils literal"><span class="pre">DirtData</span></code> from a dirt blocks state is removed, it will fall back to <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/type/DirtTypes.html#DIRT">DirtTypes#DIRT</a>, the default
-value. The following example will dry the block at a given <code class="docutils literal"><span class="pre">Location</span></code>, if possible.</p>
+<p>请注意， <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/block/DirtData.html">DirtData</a> 是一个 <code class="docutils literal"><span class="pre">BlockState</span></code> 中数据的一个可变副本。它先进行改变，然后再转换为不可变的，最后产生一个新的 <code class="docutils literal"><span class="pre">BlockState</span></code> 替换旧的方块。</p>
+<p><code class="docutils literal"><span class="pre">without()</span></code> 方法接受一个类的引用并且会创建一个没有该类所代表的数据的新 <code class="docutils literal"><span class="pre">BlockState</span></code>。如果方块状态在该数据不存在的情况下会变得不合法，将使用一个默认值。因此如果泥土方块的 <code class="docutils literal"><span class="pre">DirtData</span></code> 被移除了，将会采用默认值 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/type/DirtTypes.html#DIRT">DirtTypes#DIRT</a> 。接下来的示例将会让给定位置的方块变干，如果可能的话。</p>
 <blockquote>
 <div><div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span>
     <span class="nn">org.spongepowered.api.data.manipulator.immutable.block.ImmutableWetData</span><span class="o">;</span>
@@ -663,17 +650,11 @@ value. The following example will dry the block at a given <code class="docutils
 </pre></div>
 </div>
 </div></blockquote>
-<p>Since the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/WetData.html">WetData</a> data manipulator represents boolean data, by removing it we set the wetness of the block
-(if it has any) to false. The <code class="docutils literal"><span class="pre">dryState.isPresent()</span></code> check will fail on block states that can not be wet since
-<code class="docutils literal"><span class="pre">dryState</span></code> will be <code class="docutils literal"><span class="pre">Optional.empty()</span></code> in that case.</p>
+<p>既然 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/WetData.html">WetData</a> 这一 <code class="docutils literal"><span class="pre">DataManipulator</span></code> 表示一个布尔值，我们可以通过移除它把方块的湿属性（如果有的话）设置为假。 <code class="docutils literal"><span class="pre">dryState.isPresent()</span></code> 检查会在不能变湿的方块类型上失效，因为这时 <code class="docutils literal"><span class="pre">dryState</span></code> 是 <code class="docutils literal"><span class="pre">Optional.empty()</span></code> 。</p>
 </div>
 <div class="section" id="copying-blocks">
 <h2>复制方块<a class="headerlink" href="#copying-blocks" title="永久链接至标题">¶</a></h2>
-<p>If you want to copy all of a block&#8217;s data, the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/block/BlockSnapshot.html">BlockSnapshot</a> class is your best friend. While it doesn&#8217;t
-expose all the data, it stores a <code class="docutils literal"><span class="pre">BlockType</span></code>, its <code class="docutils literal"><span class="pre">BlockState</span></code> and, if necessary, all additional Tile Entity Data
-(for example chest inventories). Conveniently, the <code class="docutils literal"><span class="pre">Location</span></code> class provides a <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/Location.html#createSnapshot--">Location#createSnapshot()</a>
-method to create a snapshot of the block at that point in time. That makes copying blocks from one location to another
-very simple:</p>
+<p>如果你想要复制一个方块的所有数据， <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/block/BlockSnapshot.html">BlockSnapshot</a> 可能会是最好的选择。尽管它并不公开所有的数据，但是它存储了一个 <code class="docutils literal"><span class="pre">BlockType</span></code> ，它的 <code class="docutils literal"><span class="pre">BlockState</span></code> ，和所有额外的 Tile Entity 数据（如果有必要），比如一个箱子的物品栏（ Inventory ）。 <code class="docutils literal"><span class="pre">Location</span></code> 类提供了一个 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/Location.html#createSnapshot--">Location#createSnapshot()</a> 方法以即时创建一个方块的快照（ <code class="docutils literal"><span class="pre">BlockSnapshot</span></code> ）。这使得把方块从一处复制到另一处变得十分简单：</p>
 <blockquote>
 <div><div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.block.BlockSnapshot</span><span class="o">;</span>
 

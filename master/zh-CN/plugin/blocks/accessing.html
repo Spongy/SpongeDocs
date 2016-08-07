@@ -638,7 +638,7 @@ in the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/or
 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/block/package-summary.html">org.spongepowered.api.data.manipulator.mutable.block</a> packages. Then, we can just pass that class to the
 <code class="docutils literal"><span class="pre">get(DataManipulator)</span></code> method of <code class="docutils literal"><span class="pre">Location</span></code> which will return an <code class="docutils literal"><span class="pre">Optional</span></code>. We then have to check if our
 <code class="docutils literal"><span class="pre">DataManipulator</span></code> actually exists for our block by checking <code class="docutils literal"><span class="pre">ifPresent()</span></code>. If it exists, then we can use it.</p>
-<p>更多和``DataManipulator``有关的东西可以在:doc:<a href="#id1"><span class="problematic" id="id2">`</span></a>数据API文档 &lt;../data/datamanipulators&gt;`中找到。</p>
+<p>更多和``DataManipulator``有关的东西可以在 <a class="reference internal" href="../data/datamanipulators.html"><em>data documentation</em></a> 中找到。</p>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>
 <p class="last">如果一个方块永远不可能不支持一种特定的``DataManipulator``，比如``DirectionalData``对于台阶，自然就没有必要检查``isPresent()``。直接通过添加``.get()``在语句的末尾就可以获取被Optional包装的数据。请注意，如果一个方块停止支持这种特定的``DataManipulator``，那么这样的操作会产生一个``NullPointerException``。</p>

@@ -621,11 +621,7 @@ object matching the provided type.</p>
 </div>
 <div class="section" id="named-causes">
 <h2>Named Causes<a class="headerlink" href="#named-causes" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Sometimes the ordering of objects within the cause isn&#8217;t enough to get the proper idea of what an object represents in
-relation to the event. This is where <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/cause/NamedCause.html">NamedCause</a> comes in. Named causes provide a method for tagging objects
-within a cause with a <strong>unique</strong> name allowing them to be easily identified and requested. Some examples of use cases
-for named causes is the <cite>Notifier</cite> of a <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/block/ChangeBlockEvent.Grow.html">ChangeBlockEvent.Grow</a> or the <cite>Source</cite> of a
-<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/entity/DamageEntityEvent.html">DamageEntityEvent</a>.</p>
+<p>Parfois l&#8217;ordre des objets dans la cause n&#8217;est pas suffisant pour obtenir l&#8217;idée correcte de ce que l&#8217;objet représente par rapport à l&#8217;événement. C&#8217;est là qu&#8217;intervient <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/cause/NamedCause.html">NamedCause</a>. Les causes nommées fournissent une méthode pour référencer des objets dans une cause avec un nom <strong>unique</strong> leur permettant d&#8217;être facilement identifié et demandé. Quelques exemples de cas d&#8217;utilisation pour des causes nommées est le <cite>Notifier</cite> d&#8217;un <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/block/ChangeBlockEvent.Grow.html">ChangeBlockEvent.Grow</a> ou la <cite>Source</cite> d&#8217;un <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/entity/DamageEntityEvent.html">DamageEntityEvent</a>.</p>
 <p><strong>Retrieving a named entry from a cause</strong></p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="nd">@Listener</span>
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">onGrow</span><span class="o">(</span><span class="n">ChangeBlockEvent</span><span class="o">.</span><span class="na">Grow</span> <span class="n">event</span><span class="o">)</span> <span class="o">{</span>
@@ -633,9 +629,7 @@ for named causes is the <cite>Notifier</cite> of a <a class="reference external"
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>This example makes use of <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/cause/Cause.html#get-java.lang.String-java.lang.Class-">Cause#get(String, Class&lt;T&gt;)</a> which can be used to retrieve the expected object
-associated with a name if it is present within the cause chain. Additionally <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/cause/Cause.html#getNamedCauses--">Cause#getNamedCauses()</a> provides
-a <code class="docutils literal"><span class="pre">Map&lt;String,</span> <span class="pre">Object&gt;</span></code> which can be used to find all present names and their associated objects.</p>
+<p>Cet exemple utilise <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/cause/Cause.html#get-java.lang.String-java.lang.Class-">Cause#get(String, Class&lt;T&gt;)</a> qui peut être utilisé pour récupérer l&#8217;objet associé à un nom s&#8217;il est présent dans la chaîne de cause. En outre, <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/cause/Cause.html#getNamedCauses--">Cause#getNamedCauses()</a> fournit une <code class="docutils literal"><span class="pre">Map&lt;String,</span> <span class="pre">Object&gt;</span></code> qui permet de trouver tous les noms présents et leurs objets associés.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
 <p class="last">Some common identifying names for <code class="docutils literal"><span class="pre">NamedCause</span></code>s are present as static fields in the
@@ -656,9 +650,7 @@ the cause.</p>
 <p class="last">Cause objects are immutable therefore cannot be modified once created.</p>
 </div>
 <p>À l&#8217;aide de <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/cause/Cause.html#of-org.spongepowered.api.event.cause.NamedCause-">Cause#of(NamedCause)</a> vous pouvez construire une cause d&#8217;une série d&#8217;objets. Les objets seront ajoutés à la chaîne de cause à l&#8217;ordre dans lequel ils sont passés à la méthode, alors que le premier paramètre de l&#8217;objet va devenir la cause de racine. N&#8217;oubliez pas qu&#8217;une <code class="docutils literal"><span class="pre">Cause</span></code> ne peut pas être vide, donc au moins un paramètre non null est toujours requis.</p>
-<p>If you already have a cause object and would like to append some more objects to the chain you can use
-<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/cause/Cause.html#with-org.spongepowered.api.event.cause.NamedCause-NamedCause...-">Cause#with(NamedCause, NamedCause...)</a>. This constructs a new Cause object containing first the objects
-already present in the original cause, then followed by the additional objects that you provided.</p>
+<p>Si vous avez déjà un Objet Cause et souhaiteriez y ajouter d&#8217;autres objets vous pouvez utiliser <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/cause/Cause.html#with-org.spongepowered.api.event.cause.NamedCause-NamedCause...-">Cause#with(NamedCause, NamedCause...)</a>. Cela construit un Objet Cause qui contient en premier lieu les Objets présents dans l&#8217;Objet Cause originel et ensuite les Objets additionnels que vous avez fourni.</p>
 <p>Finally if you wish to add an object to a cause with a defined named first call <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/cause/NamedCause.html#of-java.lang.String-Object-">NamedCause#of(String, Object)</a>
 and then pass the returned <code class="docutils literal"><span class="pre">NamedCause</span></code> instance to the cause chain as you would a normal object.</p>
 </div>
