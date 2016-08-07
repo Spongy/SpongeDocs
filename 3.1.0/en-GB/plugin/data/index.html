@@ -538,10 +538,7 @@
                   
   <div class="section" id="the-data-api">
 <h1>The Data API<a class="headerlink" href="#the-data-api" title="Permalink to this headline">¶</a></h1>
-<p>The unified Data API aims to provide a consistent way of accessing and modifying data. &#8216;Data&#8217;, in this context
-means any data that is consistently synchronized between client and server. It can be changed server-side and
-then those changes will be synchronized to the connected clients. This includes, among many others, the text on
-a sign, the looks of a horse or the health of any living entity.</p>
+<p>The unified Data API aims to provide a consistent way of accessing and modifying data. &#8216;Data&#8217;, in this context means any data that is consistently synchronised between client and server. It can be changed server-side and then those changes will be synchronised to the connected clients. This includes, among many others, the text on a sign, the looks of a horse or the health of any living entity.</p>
 <p>Where other approaches define the available data using interfaces and inheritance (like a <code class="docutils literal"><span class="pre">LivingEntity</span></code>
 interface providing getter and setter functions for current and maximum health), in Sponge every entity, block
 etc. is completely oblivious to what data it holds. While this may appear less straightforward than direct
@@ -567,11 +564,7 @@ available (via <code class="docutils literal"><span class="pre">Optional.empty()
 </div>
 <div class="section" id="property">
 <h3>Property<a class="headerlink" href="#property" title="Permalink to this headline">¶</a></h3>
-<p>A property too is data, but not synchronized between server and clients. Therefore, it can only be
-changed by modifications present on both client and server. Since Sponge is not intended to require a
-client-side counterpart, properties are not modifiable.
-Examples of properties are the harvesting ablities on tools (represented as <a class="reference external" href="https://jd.spongepowered.org/3.0.0/org/spongepowered/api/data/property/item/HarvestingProperty.html">HarvestingProperty</a>) or the
-damage absorption of an equippable armor item (represented as <a class="reference external" href="https://jd.spongepowered.org/3.0.0/org/spongepowered/api/data/property/item/DamageAbsorptionProperty.html">DamageAbsorptionProperty</a>).</p>
+<p>A property too is data, but not synchronised between server and clients. Therefore, it can only be changed by modifications present on both client and server. Since Sponge is not intended to require a client-side counterpart, properties are not modifiable. Examples of properties are the harvesting ablities on tools (represented as <a class="reference external" href="https://jd.spongepowered.org/3.0.0/org/spongepowered/api/data/property/item/HarvestingProperty.html">HarvestingProperty</a>) or the damage absorption of an equippable armour item (represented as <a class="reference external" href="https://jd.spongepowered.org/3.0.0/org/spongepowered/api/data/property/item/DamageAbsorptionProperty.html">DamageAbsorptionProperty</a>).</p>
 </div>
 <div class="section" id="datamanipulator">
 <h3>DataManipulator<a class="headerlink" href="#datamanipulator" title="Permalink to this headline">¶</a></h3>

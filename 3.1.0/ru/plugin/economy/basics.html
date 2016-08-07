@@ -33,9 +33,9 @@
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Документация Sponge 3.1.0" href="../../index.html" />
-        <link rel="up" title="The Economy API" href="index.html" />
+        <link rel="up" title="API экономики" href="index.html" />
         <link rel="next" title="Using the Economy API" href="using.html" />
-        <link rel="prev" title="The Economy API" href="index.html" />
+        <link rel="prev" title="API экономики" href="index.html" />
     
   <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -156,7 +156,7 @@
         <ul>
         <li><a href="../../index.html">Документация Sponge 3.1.0</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >Создание плагина</a><i class="fa fa-fw fa-chevron-right"></i></li>
-        <li><a href="index.html" accesskey="U">The Economy API</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="index.html" accesskey="U">API экономики</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
     <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -313,14 +313,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Создание команд</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../commands/creating.html">Building a Command</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../commands/creating.html">Создание команды</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/arguments.html">Парсинг аргументов</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/childcommands.html">Дочерние Команды</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/service.html">Командный менеджер</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commands/service.html">Менеджер команд</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/commandcallable.html">Low-Level Command API</a><ul class="simple">
 </ul>
 </li>
@@ -409,7 +409,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../permissions.html">Работа с Permissions API</a></li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">The Economy API</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">API экономики</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="">Основные понятия</a><ul class="simple">
 </ul>
 </li>
@@ -542,9 +542,12 @@
 <p>The Sponge Economy API has a few basic components that developers should be familiar with:</p>
 <ul class="simple">
 <li>EconomyService</li>
-<li>Currency</li>
-<li>Accounts</li>
-<li>Transactions</li>
+<li><p class="first">Валюта</p>
+</li>
+<li><p class="first">Аккаунты</p>
+</li>
+<li><p class="first">Транзакции</p>
+</li>
 </ul>
 <div class="section" id="the-economyservice">
 <h2>The EconomyService<a class="headerlink" href="#the-economyservice" title="Ссылка на этот заголовок">¶</a></h2>
@@ -559,14 +562,14 @@ have to implement it yourself, if you want to make use of it.</p>
 </div>
 </div>
 <div class="section" id="currency">
-<h2>Currency<a class="headerlink" href="#currency" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Валюта<a class="headerlink" href="#currency" title="Ссылка на этот заголовок">¶</a></h2>
 <p>The <a class="reference external" href="https://jd.spongepowered.org/org/spongepowered/api/service/economy/Currency.html">org.spongepowered.api.service.economy.Currency</a>
 object represents a form of Currency. <code class="docutils literal"><span class="pre">Currency</span></code> stores a display name (plural and singular), a symbol, the amount of
 fractional digits, and whether the currency is the default currency for the economy. If the economy plugin chooses, it
 can support multiple currencies.</p>
 </div>
 <div class="section" id="accounts">
-<h2>Accounts<a class="headerlink" href="#accounts" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Аккаунты<a class="headerlink" href="#accounts" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Accounts are used to store economy information about a specific player or other object (i.e. bank, business, entity).
 There are two account types in the Sponge Economy API:</p>
 <div class="section" id="virtual-accounts">
@@ -581,7 +584,7 @@ anything, but are commonly used for things such as banks, or non-players. To get
 </div>
 </div>
 <div class="section" id="transactions">
-<h2>Transactions<a class="headerlink" href="#transactions" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Транзакции<a class="headerlink" href="#transactions" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Transactions represent an account&#8217;s change in balance. There are currently three types of transactions:</p>
 <ul class="simple">
 <li>Deposit: Occurs when an account has funds added to it</li>

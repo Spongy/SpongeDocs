@@ -238,7 +238,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Preparing for Development</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">为开发做准备</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../preparing/jdk.html">安装JDK</a><ul class="simple">
 </ul>
 </li>
@@ -460,7 +460,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">贡献指南</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../contributing/howtogit.html">How to Git(Hub)</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/howtogit.html">如何使用Git（Hub）</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/implementation/index.html">Developing Sponge</a><ul>
@@ -571,16 +571,12 @@
 </div>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>
-<p class="last">The function <code class="docutils literal"><span class="pre">==</span></code> could be used in place of <code class="docutils literal"><span class="pre">equals()</span></code> as there is only one <code class="docutils literal"><span class="pre">BlockType</span></code> instance
-for every block, however it is recommended to use <code class="docutils literal"><span class="pre">equals()</span></code>.</p>
+<p class="last">运算符``==``可以被用来替换掉``equals()``方法，因为对于每个方块，它们分别只有一个``BlockType``实例，尽管我们仍然建议使用``equals()``。</p>
 </div>
 </div>
 <div class="section" id="block-data-manipulators">
-<h2>Block Data Manipulators<a class="headerlink" href="#block-data-manipulators" title="永久链接至标题">¶</a></h2>
-<p>The data of a block is held as a <code class="docutils literal"><span class="pre">DataManipulator</span></code>, similar to other parts of the API. This is the container that
-holds information on components of our block such as the orientation of a block, specific types (stone vs. granite),
-and so on. Checking the values of these manipulators is easy, you just need to check the block&#8217;s direction
-<code class="docutils literal"><span class="pre">DirectionalData</span></code>.</p>
+<h2>操作方块数据<a class="headerlink" href="#block-data-manipulators" title="永久链接至标题">¶</a></h2>
+<p>和API的其他部分的存储方式类似，一个方块的数据被以``DataManipulator``的方式存储。它是一个存储了方块的各种角度的信息的容器。这样的信息有方块的方向、特殊类型（例如石头和花岗岩）等。获取这样的数据是十分简单的，如果想要获取方块的方向，你只需要使用``DirectionalData``。</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.data.key.Keys</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.data.manipulator.mutable.block.DirectionalData</span><span class="o">;</span>
 
@@ -597,25 +593,16 @@ and so on. Checking the values of these manipulators is easy, you just need to c
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>First, we need to know which <code class="docutils literal"><span class="pre">DataManipulator</span></code> sub-interface we need. Those that are applicable to blocks are found
-in the <code class="docutils literal"><span class="pre">org.spongepowered.api.data.manipulator.mutable</span></code> and <code class="docutils literal"><span class="pre">org.spongepowered.api.data.manipulator.mutable.block</span></code>
-packages. Then, we can just pass that class to the <code class="docutils literal"><span class="pre">get(DataManipulator)</span></code> method of <code class="docutils literal"><span class="pre">Location</span></code> which will return
-an <code class="docutils literal"><span class="pre">Optional</span></code>. We then have to check if our <code class="docutils literal"><span class="pre">DataManipulator</span></code> actually exists for our block by checking
-<code class="docutils literal"><span class="pre">ifPresent()</span></code>. If it exists, then we can use it.</p>
-<p>More on <code class="docutils literal"><span class="pre">DataManipulator</span></code>s can be found in the <a class="reference internal" href="../data/datamanipulators.html"><em>data documentation</em></a>.</p>
+<p>首先，我们需要知道我们需要的``DataManipulator``的子接口是什么样子。我们可以在``org.spongepowered.api.data.manipulator.mutable``和``org.spongepowered.api.data.manipulator.mutable.block``两个包下找到适用于方块的部分。然后，我们直接把对应的class传入``Location``类的``get(DataManipulator)``方法从而返回一个``Optional``。然后我们就需要通过``isPresent()``（译者注：原文为``ifPresent()``，怀疑其笔误）方法判断这一``DataManipulator``是否真的存在，如果存在，我们就可以使用它了。</p>
+<p>更多和``DataManipulator``有关的东西可以在 <a class="reference internal" href="../data/datamanipulators.html"><em>data documentation</em></a> 中找到。</p>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>
-<p class="last">If a block will never stop supporting a particular <code class="docutils literal"><span class="pre">DataManipulator</span></code>, such as <code class="docutils literal"><span class="pre">DirectionalData</span></code> with stairs,
-then there is no need to check for <code class="docutils literal"><span class="pre">isPresent()</span></code>. Just remove the optional around the <code class="docutils literal"><span class="pre">DataManipulator</span></code> and
-fetch the non-optional data by adding <code class="docutils literal"><span class="pre">.get()</span></code> to the end of the statement. Note, that this will cause a
-<code class="docutils literal"><span class="pre">NullPointerException</span></code> if a block ever stops supporting a particular <code class="docutils literal"><span class="pre">DataManipulator</span></code>.</p>
+<p class="last">如果一个方块永远不可能不支持一种特定的``DataManipulator``，比如``DirectionalData``对于台阶，自然就没有必要检查``isPresent()``。直接通过添加``.get()``在语句的末尾就可以获取被Optional包装的数据。请注意，如果一个方块停止支持这种特定的``DataManipulator``，那么这样的操作会产生一个``NullPointerException``。</p>
 </div>
 </div>
 <div class="section" id="block-states">
 <h2>方块状态<a class="headerlink" href="#block-states" title="永久链接至标题">¶</a></h2>
-<p>A <code class="docutils literal"><span class="pre">BlockState</span></code> contains a <code class="docutils literal"><span class="pre">BlockType</span></code>,  any <code class="docutils literal"><span class="pre">DataManipulator</span></code>s and properties that are applied to the
-block, and any <code class="docutils literal"><span class="pre">BlockTrait</span></code>s for a block. It stores all immutable value&#8217;s for a particular block. One use of this
-is getting an  <code class="docutils literal"><span class="pre">ImmutableDataManipulator</span></code>, as shown below:</p>
+<p>一个``BlockState``包含一个``BlockType``，任何应用于一个方块的``DataManipulator``和属性，和任何属于一个方块的``BlockTrait``。它储存了一个特定的方块的所有不可变数据。一种用法是获取一个``ImmutableDataManipulator``，就像下面这样：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.block.BlockState</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.data.manipulator.immutable.ImmutableWetData</span><span class="o">;</span>
 
@@ -629,14 +616,11 @@ is getting an  <code class="docutils literal"><span class="pre">ImmutableDataMan
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>More information on mutable and immutable <code class="docutils literal"><span class="pre">DataManipulator</span></code>s can be found in the <a class="reference internal" href="../data/datamanipulators.html"><em>data documentation</em></a>.</p>
+<p>更多和可变或不可变的``DataManipulator``有关的东西可以在:doc:<a href="#id1"><span class="problematic" id="id2">`</span></a>数据API文档 &lt;../data/datamanipulators&gt;`中找到。</p>
 </div>
 <div class="section" id="block-properties">
-<h2>Block Properties<a class="headerlink" href="#block-properties" title="永久链接至标题">¶</a></h2>
-<p>Blocks can contain certain properties. A property is a pre-set value that defines the game logic of that particular
-block. For example, blocks can contain pre-determined blast-resistance values that can be used to determine what
-you&#8217;re working with, without actually checking the type of block it could be one by one. For example, if we wanted to
-get the blast resistance of a block and checking if it is greater than or equal to one, it would be done like so:</p>
+<h2>方块属性<a class="headerlink" href="#block-properties" title="永久链接至标题">¶</a></h2>
+<p>一个方块可以包含若干种属性。一种属性是一类定义了特定方块的游戏逻辑的值的集合。例如，方块可以包含既定的爆炸抗性值，这一值可以被拿来使用而不需要逐个检查每个方块的种类。比如如果我们想要获取爆炸抗性并检查它是否大于等于一，我们就可以这么做：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.data.property.DoubleProperty</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.data.property.block.BlastResistanceProperty</span><span class="o">;</span>
 
@@ -653,14 +637,8 @@ get the blast resistance of a block and checking if it is greater than or equal 
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>This will get the blast resistance of our block and compare it to a new <code class="docutils literal"><span class="pre">DoubleProperty</span></code>, as
-<code class="docutils literal"><span class="pre">BlastResistanceProperty</span></code> inherits from <code class="docutils literal"><span class="pre">DoubleProperty</span></code>. The method will then return if the blast resistance of
-our block is greater than one, the value in placed <code class="docutils literal"><span class="pre">matches()</span></code>. If we wanted to see if it was less than two, we
-would replace it with <code class="docutils literal"><span class="pre">lessThan()</span></code>.</p>
-<p>If we were comparing two pre-existing properties, it will take the <code class="docutils literal"><span class="pre">Operator</span></code> of our first value, the one we are
-creating a double property for. If the <code class="docutils literal"><span class="pre">Operator</span></code> is <code class="docutils literal"><span class="pre">DELEGATE</span></code>, which is the none operator, then it will take the
-<code class="docutils literal"><span class="pre">Operator</span></code> of the second value, the one in <code class="docutils literal"><span class="pre">matches()</span></code>. Comparison will return false if both are <code class="docutils literal"><span class="pre">DELEGATE</span></code>.
-An example of comparing two <code class="docutils literal"><span class="pre">PoweredProperty</span></code>s, a <code class="docutils literal"><span class="pre">BooleanProperty</span></code>, can be seen below:</p>
+<p>这就可以得到我们针对的方块的爆炸抗性值并和一个新``DoubleProperty``进行比较，因为``BlastResistanceProperty``是``DoubleProperty``的子类。这一方法就会返回爆炸抗性是否大于等于一，也就是被放置在``matches()``方法里的``DoubleProperty``。如果我们想要知道它是否比二小，我们就会把相应的方法替换成``lessThan()``。</p>
+<p>如果我们在比较两个已经存在的属性，那么先会判断第一个的``Operator``，这里也就是我们设置的``DoubleProperty``的``Operator``。如果它是``DELEGATE``，也就是并不存在，那么它就会获取第二个的``Operator``，也就是``matches()``中的属性的``Operator``。如果两个属性的``Operator``都是``DELEGATE``，那么它将会返回假。下面是比较两个``PoweredProperty``和一个``BooleanProperty``的例子：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.data.property.block.PoweredProperty</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">areBlocksPowered</span><span class="o">(</span><span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">blockLoc</span><span class="o">,</span> <span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">blockLoc2</span><span class="o">)</span> <span class="o">{</span>
@@ -681,17 +659,12 @@ An example of comparing two <code class="docutils literal"><span class="pre">Pow
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>The second <code class="docutils literal"><span class="pre">if</span></code> check checks if one of the properties is true. If it is true and both are equal, then both
-of the values must be true. Therefore, eliminating the need to check the second value. Now we know that both
-blocks are being powered.</p>
-<p>A list of possible block properties can be found in the package <code class="docutils literal"><span class="pre">org.spongepowered.api.data.property.block</span></code>.</p>
+<p>第二个``if``条件判断其中一个属性是否为真。如果其为真而且两个属性一致，那么两个属性自然都为真。因此，我们不需要检查第二个值就可以知道两个方块都是被充能的。</p>
+<p>可能的方块属性列表可以在包``org.spongepowered.api.data.property.block``下找到。</p>
 </div>
 <div class="section" id="block-traits">
-<h2>Block Traits<a class="headerlink" href="#block-traits" title="永久链接至标题">¶</a></h2>
-<p>A block trait is a certain value on the current state of a block. A block may or may not contain block traits depending
-on the type of block. For example, a bed has a <code class="docutils literal"><span class="pre">BooleanTrait</span></code> called <code class="docutils literal"><span class="pre">BED_OCCUPIED</span></code>. As a boolean can only have two
-values, true and false, the <code class="docutils literal"><span class="pre">BED_OCCUPIED</span></code> trait can only be true or false. Checking this value is simple, just call
-the <code class="docutils literal"><span class="pre">getTraitValue()</span></code> method on a <code class="docutils literal"><span class="pre">BlockState</span></code>. An example of this with a bed is shown below:</p>
+<h2>方块特性<a class="headerlink" href="#block-traits" title="永久链接至标题">¶</a></h2>
+<p>方块特性是一个方块的当前状态的确定值。一个方块可能或不可能包含方块特性取决于方块的种类。例如：方块“床”有一个名为``BED_OCCUPIED``的方块特性，<code class="docutils literal"><span class="pre">BooleanTrait</span></code>。作为一个布尔值它只有真或假两种可能值，所以方块特性``BED_OCCUPIED``也只可能为真或假。检查这一特性值十分简单，只需要调用``BlockState``的``getTraitValue()``方法就可以了。一种针对床的例子如下：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.block.trait.BooleanTraits</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isBedOccupied</span><span class="o">(</span><span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">blockLoc</span><span class="o">)</span> <span class="o">{</span>
@@ -704,8 +677,7 @@ the <code class="docutils literal"><span class="pre">getTraitValue()</span></cod
 </div>
 <div class="admonition warning">
 <p class="first admonition-title">警告</p>
-<p class="last">If possible, it is recommended to use <code class="docutils literal"><span class="pre">DataManipulator</span></code>s in place of <code class="docutils literal"><span class="pre">BlockTrait</span></code>s where possible as they are
-only to be meant as a fallback for modded compatibility.</p>
+<p class="last">如果有可能，请尽量使用``DataManipulator``以替代``BlockTrait``，因为``BlockTrait``只是在考虑与Mod的兼容性时才有意义。</p>
 </div>
 </div>
 </div>

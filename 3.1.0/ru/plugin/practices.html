@@ -312,14 +312,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="commands/index.html">Создание команд</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="commands/creating.html">Building a Command</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="commands/creating.html">Создание команды</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="commands/arguments.html">Парсинг аргументов</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="commands/childcommands.html">Дочерние Команды</a></li>
-<li class="toctree-l3"><a class="reference internal" href="commands/service.html">Командный менеджер</a></li>
+<li class="toctree-l3"><a class="reference internal" href="commands/service.html">Менеджер команд</a></li>
 <li class="toctree-l3"><a class="reference internal" href="commands/commandcallable.html">Low-Level Command API</a><ul class="simple">
 </ul>
 </li>
@@ -408,7 +408,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="permissions.html">Работа с Permissions API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="economy/index.html">The Economy API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="economy/index.html">API экономики</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="economy/basics.html">Основные понятия</a><ul class="simple">
 </ul>
 </li>
@@ -547,9 +547,9 @@ compatibility. This information may change and expand as the Sponge project matu
 list, merely an attempt to detail some issues that are likely to arise during plugin development, and propose our best
 solutions.</p>
 <div class="section" id="economy-api">
-<h3>Economy API<a class="headerlink" href="#economy-api" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>API экономики<a class="headerlink" href="#economy-api" title="Ссылка на этот заголовок">¶</a></h3>
 <p>The Economy API is used to link economy plugins with other plugins that use the economy (i.e. shops). You can read
-about <a class="reference internal" href="economy/index.html"><em>The Economy API</em></a> on the docs page, which details everything you need to know about the API.</p>
+about <a class="reference internal" href="economy/index.html"><em>API экономики</em></a> on the docs page, which details everything you need to know about the API.</p>
 </div>
 <div class="section" id="mixins">
 <h3>Mixins<a class="headerlink" href="#mixins" title="Ссылка на этот заголовок">¶</a></h3>
@@ -557,14 +557,14 @@ about <a class="reference internal" href="economy/index.html"><em>The Economy AP
 “Coremods”. SpongeForge is a Coremod, and deploys Mixins on startup. Mixins cannot be used by plugins.</p>
 </div>
 <div class="section" id="packets">
-<h3>Packets<a class="headerlink" href="#packets" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Пакеты<a class="headerlink" href="#packets" title="Ссылка на этот заголовок">¶</a></h3>
 <p>Anything to do with intercepting packets, or introducing custom items/blocks/entities/etc, is <em>not</em> planned to be part
 of the Sponge API. Note that using packets may be looking at the problem the wrong way, as there may be a solution
 achievable with the existing Sponge API. In some cases it may be possible to add whatever is needed to the Sponge API;
 otherwise, the alternative is to use the Forge API and create a Mod instead.</p>
 </div>
 <div class="section" id="using-forge-or-nms-classes">
-<h3>Using Forge or NMS Classes<a class="headerlink" href="#using-forge-or-nms-classes" title="Ссылка на этот заголовок">¶</a></h3>
+<h3>Использование Forge или NMS классов<a class="headerlink" href="#using-forge-or-nms-classes" title="Ссылка на этот заголовок">¶</a></h3>
 <p>We do not recommend working with Forge or Minecraft base classes at all, unless it is to provide compatibility with a
 mod for Sponge API. Most uses of NMS (net.minecraft.server) code in plugins do not fail gracefully, making
 troubleshooting very difficult. Maintaining NMS modifications is also more difficult than using the Sponge API. Mods that

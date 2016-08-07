@@ -238,7 +238,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Preparing for Development</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">为开发做准备</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../preparing/jdk.html">安装JDK</a><ul class="simple">
 </ul>
 </li>
@@ -460,7 +460,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">贡献指南</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../contributing/howtogit.html">How to Git(Hub)</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/howtogit.html">如何使用Git（Hub）</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/implementation/index.html">Developing Sponge</a><ul>
@@ -543,8 +543,7 @@
 <p>Tile entity 是可以执行诸如自动合成一类的附加操作 (熔炉和炼药台)，或者提供特殊效果 (例如信标和音符盒) 的方块。它们也保存诸如物品栏或者文字一类的附加数据 (例如箱子、告示牌或命令方块)。</p>
 <div class="section" id="identifying-tile-entities-and-their-type">
 <h2>确定 Tile Entity 和它们的类型<a class="headerlink" href="#identifying-tile-entities-and-their-type" title="永久链接至标题">¶</a></h2>
-<p>Again, it all starts with a <code class="docutils literal"><span class="pre">Location</span></code>. The <code class="docutils literal"><span class="pre">getTileEntity()</span></code> function will return the tile entity corresponding
-to the block or <code class="docutils literal"><span class="pre">Optional.empty()</span></code> if the block is not a tile entity.</p>
+<p>我们再次从``Location``开始。<a href="#id1"><span class="problematic" id="id2">``</span></a>getTileEntity()``方法将会返回一个和方块对应的Tile Entity或者``Optional.empty()``如果这一方块没有对应的Tile Entity。</p>
 <blockquote>
 <div><div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.world.Location</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.world.World</span><span class="o">;</span>
@@ -625,7 +624,7 @@ to the block or <code class="docutils literal"><span class="pre">Optional.empty(
 </pre></div>
 </div>
 </div></blockquote>
-<p>Refer to the inventory documentation regarding the manipulation of the inventory.</p>
+<p>请参阅操作物品栏（Inventory）的相关文档。</p>
 </div>
 </div>
 

@@ -313,14 +313,14 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Создание команд</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../commands/creating.html">Building a Command</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../commands/creating.html">Создание команды</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/arguments.html">Парсинг аргументов</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/childcommands.html">Дочерние Команды</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/service.html">Командный менеджер</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commands/service.html">Менеджер команд</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/commandcallable.html">Low-Level Command API</a><ul class="simple">
 </ul>
 </li>
@@ -409,7 +409,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../permissions.html">Работа с Permissions API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../economy/index.html">The Economy API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../economy/index.html">API экономики</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../economy/basics.html">Основные понятия</a><ul class="simple">
 </ul>
 </li>
@@ -539,8 +539,7 @@
                   
   <div class="section" id="creating-an-itemstack">
 <h1>Создание ItemStack<a class="headerlink" href="#creating-an-itemstack" title="Ссылка на этот заголовок">¶</a></h1>
-<p>If you want to create your own items, you need to go through several steps. Let&#8217;s go through a basic example and create
-an enchanted diamond sword.</p>
+<p>Для создания своего предмета вам нужно пройти несколько этапов. Давайте рассмотрим простой пример и создадим зачарованный алмазный меч.</p>
 <p>To create an <code class="docutils literal"><span class="pre">ItemStack</span></code>, we need to first grab the builder from the <code class="docutils literal"><span class="pre">ItemStack</span></code>. This is done with the
 <code class="docutils literal"><span class="pre">ItemStack.builder()</span></code> method. In the builder, we can specify things such as the <code class="docutils literal"><span class="pre">ItemType</span></code> or the quantity of the
 item. In our example, we will be creating a diamond sword that contains enchantments, a custom name, and is
@@ -598,7 +597,7 @@ the <code class="docutils literal"><span class="pre">ItemStack</span></code>. Us
 </div>
 <p>That&#8217;s it. You now have a fully enchanted, unbreakable, and beautifully named sword which you can give to players.</p>
 <div class="section" id="spawning-the-item">
-<h2>Spawning the Item<a class="headerlink" href="#spawning-the-item" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Спавн предмета<a class="headerlink" href="#spawning-the-item" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Sure we can simply put the sword into a player&#8217;s inventory, but what if we wanted to throw it out into the open world
 and spawn the item? This is where <a class="reference internal" href="../entities/spawning.html"><em>entity spawning</em></a> comes into play. Since the in-game
 graphical representation of an <code class="docutils literal"><span class="pre">ItemStack</span></code> is <code class="docutils literal"><span class="pre">Item</span></code>, we can spawn it in similarly to a normal <code class="docutils literal"><span class="pre">Entity</span></code>. The
@@ -638,7 +637,7 @@ main plugin instance as the <code class="docutils literal"><span class="pre">Cau
 </div>
 </div>
 <div class="section" id="creating-an-itemstack-from-a-block">
-<h2>Creating an ItemStack From a Block<a class="headerlink" href="#creating-an-itemstack-from-a-block" title="Ссылка на этот заголовок">¶</a></h2>
+<h2>Создание ItemStack из блока<a class="headerlink" href="#creating-an-itemstack-from-a-block" title="Ссылка на этот заголовок">¶</a></h2>
 <p>An <code class="docutils literal"><span class="pre">ItemStack</span></code> for a block can be created by using the method <code class="docutils literal"><span class="pre">itemType()</span></code> on the builder similarly to normal
 items, but what if we wanted to create an <code class="docutils literal"><span class="pre">ItemStack</span></code> from a <code class="docutils literal"><span class="pre">BlockState</span></code> itself? To create an <code class="docutils literal"><span class="pre">ItemStack</span></code> from a
 <code class="docutils literal"><span class="pre">BlockState</span></code>, you would need to use the <code class="docutils literal"><span class="pre">fromBlockState()</span></code> method on the <code class="docutils literal"><span class="pre">ItemStack</span></code> builder. An example of this

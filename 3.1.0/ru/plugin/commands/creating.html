@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Building a Command &mdash; Документация Sponge 3.1.0</title>
+     <title>Создание команды &mdash; Документация Sponge 3.1.0</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -313,14 +313,14 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Создание команд</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="">Building a Command</a><ul class="simple">
+<li class="toctree-l3 current"><a class="current reference internal" href="">Создание команды</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="arguments.html">Парсинг аргументов</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="childcommands.html">Дочерние Команды</a></li>
-<li class="toctree-l3"><a class="reference internal" href="service.html">Командный менеджер</a></li>
+<li class="toctree-l3"><a class="reference internal" href="service.html">Менеджер команд</a></li>
 <li class="toctree-l3"><a class="reference internal" href="commandcallable.html">Low-Level Command API</a><ul class="simple">
 </ul>
 </li>
@@ -409,7 +409,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../permissions.html">Работа с Permissions API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../economy/index.html">The Economy API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../economy/index.html">API экономики</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../economy/basics.html">Основные понятия</a><ul class="simple">
 </ul>
 </li>
@@ -538,7 +538,7 @@
                 <div class="body" role="main">
                   
   <div class="section" id="building-a-command">
-<h1>Building a Command<a class="headerlink" href="#building-a-command" title="Ссылка на этот заголовок">¶</a></h1>
+<h1>Создание команды<a class="headerlink" href="#building-a-command" title="Ссылка на этот заголовок">¶</a></h1>
 <p>The first step is to get a new <code class="docutils literal"><span class="pre">CommandSpec</span></code> builder. The builder provides methods to modify the command help
 messages, command arguments and the command logic. These methods can be chained.</p>
 <p>To finally build the command, call the <code class="docutils literal"><span class="pre">build()</span></code> method of the builder.</p>
@@ -567,8 +567,10 @@ messages, command arguments and the command logic. These methods can be chained.
 <col width="81%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">Method</th>
-<th class="head">Description</th>
+<tr class="row-odd"><th class="head"><p class="first last">Метод</p>
+</th>
+<th class="head"><p class="first last">Описание</p>
+</th>
 </tr>
 </thead>
 <tbody valign="top">
