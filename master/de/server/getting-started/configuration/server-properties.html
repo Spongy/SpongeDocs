@@ -858,7 +858,7 @@
 <div><p><strong>-1</strong> - Die Kompression wird komplett abgeschaltet.</p>
 <p><strong>0</strong> - Alles wird komprimiert.</p>
 </div></blockquote>
-<p class="last"><strong>Achtung:</strong> <a href="#id1"><span class="problematic" id="id2">*</span></a>Die Ethernet Spezifikation legt fest, dass Pakete die kleiner als 64 Bytes sind auf 64 Bytes aufgefüllt werden. Das Setzen eines kleineren Wertes als 64 kann also kontraproduktiv sein. Es ist außerdem nicht empfohlen den Maximalwert (MTU; Maximum Transmission Unit) von typischen 1500 Bytes zu überschreiten.</p>
+<p class="last"><strong>Achtung:</strong> <a href="#id1"><span class="problematic" id="id2">*</span></a>Die Ethernet Spezifikation legt fest, dass Pakete die kleiner als 64 Bytes sind auf 64 Bytes aufgefüllt werden. Das Setzen eines kleineren Wertes als 64 kann also kontraproduktiv sein. Es ist außerdem nicht empfohlen den Maximalwert (MTU; Maximum Transmission Unit) von typischen 1500 Bytes zu überschreiten. *</p>
 </td>
 </tr>
 <tr class="row-odd"><td>online-mode</td>
@@ -891,7 +891,7 @@
 <td>0</td>
 <td><p class="first">Wenn dieser Wert auf einen von 0 verschiedenen Wert gesetzt wird, werden Spieler vom Server geworfen, die mehr Minuten als der angegebene Wert abwesend sind.</p>
 <blockquote class="last">
-<div><p><strong>Notitz:</strong> <a href="#id1"><span class="problematic" id="id2">*</span></a>Die Idle Zeit des Spielers wird zurückgesetzt, wenn der Server eines der folgenden Datenpakete vom Spieler erhält:</p>
+<div><p><strong>Notiz:</strong> <em>Die Idle Zeit des Spielers wird zurückgesetzt, wenn der Server eines der folgenden Datenpakete vom Spieler erhält:</em></p>
 <blockquote>
 <div><ul class="simple">
 <li>102 (0x66) WindowClick</li>
@@ -919,7 +919,7 @@
 <div><p><strong>false</strong> - Spieler können andere Spieler nicht töten (auch als PvE bekannt: Spieler gegen Umgebung).</p>
 <p><strong>true</strong> - Spieler können sich gegenseitig töten.</p>
 </div></blockquote>
-<p class="last"><strong>Anmerkung:</strong> <a href="#id1"><span class="problematic" id="id2">*</span></a>Indirekter, durch Spieler verursachter, Schaden (wie z.B. Lave, TnT, Wasser, fallender Sand etc.) wird anderen Spielern dennoch Schaden zufügen.</p>
+<p class="last"><strong>Anmerkung:</strong> <em>Indirekter, durch Spieler verursachter, Schaden (wie z. B. Lave, TnT, Wasser, fallender Sand etc.) wird anderen Spielern dennoch Schaden zufügen.</em></p>
 </td>
 </tr>
 <tr class="row-odd"><td>query.port</td>

@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>HOCON简介 &mdash; Sponge 4.1.0 文档</title>
+     <title>HOCON 简介 &mdash; Sponge 4.1.0 文档</title>
     
   <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/sponge.css" type="text/css" />
@@ -197,7 +197,7 @@
 </ul>
 </li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">配置Sponge</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="">HOCON简介</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">HOCON 简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="json.html">JSON语法</a></li>
 <li class="toctree-l4"><a class="reference internal" href="sponge-conf.html">global.conf</a></li>
 <li class="toctree-l4"><a class="reference internal" href="server-properties.html">server.properties</a></li>
@@ -575,58 +575,60 @@
                 <div class="body" role="main">
                   
   <div class="section" id="introduction-to-hocon">
-<h1>HOCON简介<a class="headerlink" href="#introduction-to-hocon" title="永久链接至标题">¶</a></h1>
-<p>HOCON (Human-Optimized Config Object Notation) is an easy-to-use configuration format. It is used by Sponge and
-individual plugins utilizing the Sponge API to store important data, such as configuration or player data. HOCON files
-typically use the suffix <code class="docutils literal"><span class="pre">.conf</span></code>.</p>
+<h1>HOCON 简介<a class="headerlink" href="#introduction-to-hocon" title="永久链接至标题">¶</a></h1>
+<p>HOCON（Human-Optimized Config Object Notation）是一个易于使用的配置文件格式。它被用于 Sponge 以及利用 Sponge API 的独立插件以储存重要的数据，比如配置或者玩家数据。HOCON 文件通常以 <code class="docutils literal"><span class="pre">.conf</span></code> 作为后缀名。</p>
 <div class="section" id="components">
-<h2>Components<a class="headerlink" href="#components" title="永久链接至标题">¶</a></h2>
+<h2>组件<a class="headerlink" href="#components" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
-<li>a <code class="docutils literal"><span class="pre">key</span></code> is a string preceding a value</li>
-<li>a <code class="docutils literal"><span class="pre">value</span></code> is a string, number, object, array, or boolean following a <code class="docutils literal"><span class="pre">key</span></code></li>
-<li>a <code class="docutils literal"><span class="pre">key-value</span> <span class="pre">separator</span></code> separates keys from values, and can be either <code class="docutils literal"><span class="pre">:</span></code> or <code class="docutils literal"><span class="pre">=</span></code></li>
-<li>a <code class="docutils literal"><span class="pre">comment</span></code> is prefixed with <code class="docutils literal"><span class="pre">#</span></code> or <code class="docutils literal"><span class="pre">//</span></code>, typically serving to provide feedback or instructions</li>
+<li><p class="first">一个 <code class="docutils literal"><span class="pre">key</span></code> 是一个键值对字符串中的前一个值</p>
+</li>
+<li><p class="first">一个 <code class="docutils literal"><span class="pre">value</span></code> 可以是字符串、数字、对象、数组或者布尔值并紧随 <code class="docutils literal"><span class="pre">key</span></code> 的后面</p>
+</li>
+<li><p class="first">一个 <code class="docutils literal"><span class="pre">key-value</span> <span class="pre">separator</span></code> 把键和值分离，可以是 <code class="docutils literal"><span class="pre">:</span></code> 或者 <code class="docutils literal"><span class="pre">=</span></code></p>
+</li>
+<li><p class="first">一个 <code class="docutils literal"><span class="pre">comment</span></code> 以 <code class="docutils literal"><span class="pre">#</span></code> 或者 <code class="docutils literal"><span class="pre">//</span></code> 开头，通常用于提供反馈或说明</p>
+</li>
 </ul>
-<p><strong>Example:</strong></p>
+<p><strong>示例：</strong></p>
 <div class="highlight-json"><div class="highlight"><pre><span></span>yellow-thing: &quot;Sponge&quot;
 </pre></div>
 </div>
-<p>In this example, the <code class="docutils literal"><span class="pre">key</span></code> is <code class="docutils literal"><span class="pre">yellow-thing</span></code>, the <code class="docutils literal"><span class="pre">value</span></code> is <code class="docutils literal"><span class="pre">Sponge</span></code>, and the <code class="docutils literal"><span class="pre">key-value</span> <span class="pre">separator</span></code> is <code class="docutils literal"><span class="pre">:</span></code>.</p>
+<p>在这一示例中， <code class="docutils literal"><span class="pre">key</span></code> 是 <code class="docutils literal"><span class="pre">yellow-thing</span></code> ， <code class="docutils literal"><span class="pre">value</span></code> 是 <code class="docutils literal"><span class="pre">Sponge</span></code> ，而 <code class="docutils literal"><span class="pre">key-value</span> <span class="pre">separator</span></code> 是 <code class="docutils literal"><span class="pre">:</span></code> 。</p>
 </div>
 <div class="section" id="working-with-hocon">
-<h2>Working with HOCON<a class="headerlink" href="#working-with-hocon" title="永久链接至标题">¶</a></h2>
-<p>HOCON is more flexible than the JSON (JavaScript Object Notation) format in that there are several ways to write valid
-HOCON. Below are two examples of valid HOCON.</p>
-<p><strong>Example #1:</strong></p>
+<h2>使用 HOCON<a class="headerlink" href="#working-with-hocon" title="永久链接至标题">¶</a></h2>
+<p>HOCON 要比 JSON（JavaScript Object Notation）更灵活因为书写一个合法的 HOCON 的方式要更多。下面是两个合法的 HOCON 的例子。</p>
+<p><strong>示例一：</strong></p>
 <div class="highlight-none"><div class="highlight"><pre><span></span>player: {
     name: &quot;Steve&quot;,
     level: 30
 }
 </pre></div>
 </div>
-<p><strong>Example #2:</strong></p>
+<p><strong>示例二：</strong></p>
 <div class="highlight-none"><div class="highlight"><pre><span></span>player {
     name = &quot;Steve&quot;
     level = 30
 }
 </pre></div>
 </div>
-<p>In practice, it is best to follow the formatting conventions of the HOCON configuration you are editing. When editing
-a HOCON configuration for Sponge or an individual plugin utilizing the Sponge API, the values are likely the only thing
-you will be changing unless otherwise specified.</p>
+<p>在实际使用中，最好遵守你正在编辑的 HOCON 的格式约定。当你在编辑 Sponge 以及利用 Sponge API 的独立插件的 HOCON 配置文件的时候，除了值（Value）之外，其他的内容如无特殊要求，请不要动。</p>
 <div class="section" id="debugging-your-configuration">
-<h3>Debugging your configuration<a class="headerlink" href="#debugging-your-configuration" title="永久链接至标题">¶</a></h3>
-<p>If a HOCON configuration does not appear to be working, here are some tips.</p>
+<h3>调试你的配置<a class="headerlink" href="#debugging-your-configuration" title="永久链接至标题">¶</a></h3>
+<p>如果 HOCON 配置文件似乎不会工作，这里有一些小提示。</p>
 <ul class="simple">
-<li>Curly braces must be balanced</li>
-<li>Quotation marks must be balanced</li>
-<li>Duplicate keys that appear later take precedence</li>
+<li><p class="first">花括号必须匹配</p>
+</li>
+<li><p class="first">引号必须匹配</p>
+</li>
+<li><p class="first">如果两个键重复，以后出现的为准</p>
+</li>
 </ul>
 </div>
 </div>
 <div class="section" id="specification">
-<h2>Specification<a class="headerlink" href="#specification" title="永久链接至标题">¶</a></h2>
-<p>More information about the HOCON format can be found <a class="reference external" href="https://github.com/typesafehub/config/blob/master/HOCON.md">here</a>.</p>
+<h2>技术规范<a class="headerlink" href="#specification" title="永久链接至标题">¶</a></h2>
+<p>在 <a class="reference external" href="https://github.com/typesafehub/config/blob/master/HOCON.md">这里</a> 可以找到有关 HOCON 配置文件格式的更多信息。</p>
 </div>
 </div>
 
