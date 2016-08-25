@@ -35,7 +35,7 @@
         <link rel="top" title="Документация Sponge 4.1.0" href="../index.html" />
         <link rel="up" title="Создание плагина" href="index.html" />
         <link rel="next" title="Жизненный цикл плагина" href="lifecycle.html" />
-        <link rel="prev" title="Plugin Identifiers" href="plugin-identifier.html" />
+        <link rel="prev" title="Идентификаторы плагина" href="plugin-identifier.html" />
     
   <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -278,7 +278,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="plugin-identifier.html">Plugin Identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin-identifier.html">Идентификаторы плагина</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">Основной класс плагина</a><ul class="simple">
 </ul>
 </li>
@@ -575,22 +575,13 @@
 <h1>Основной класс плагина<a class="headerlink" href="#main-plugin-class" title="Ссылка на этот заголовок">¶</a></h1>
 <div class="admonition note">
 <p class="first admonition-title">Примечание</p>
-<p class="last">The instructions within the Sponge Documentation assume that you have prior knowledge of Java. The Sponge API
-provides the foundation for you to begin creating plugins for Minecraft servers powered by Sponge; however, it is
-up to you to be creative and make your code work! There are several free Java courses online if you have had little
-experience with Java.</p>
+<p class="last">Документация Sponge рассчитана на тех, кто знает Java. API Sponge предоставляет основу для создания плагинов для серверов Minecraft, на которых установлен Sponge; однако, именно разработчик плагина должен быть творческим и создавать правильный программный код! Тем, у кого мало опыта в Java, рекомендуется сперва поискать в Интернете бесплатные курсы или учебники по Java.</p>
 </div>
 <div class="section" id="starting-your-class">
-<h2>Starting Your Class<a class="headerlink" href="#starting-your-class" title="Ссылка на этот заголовок">¶</a></h2>
-<p>The next step after adding the Sponge API as a dependency is creating a new class. The class can be named however you
-like, and can be in any package that does <strong>not</strong> begin with <code class="docutils literal"><span class="pre">org.spongepowered</span></code>. By convention, class names should be
-in title case.</p>
-<p>Oracle <a class="reference external" href="http://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html">recommends</a> to use your domain as your
-package name, if you own a domain. However, in the event that you do not own a domain, a common practice is to use an
-email address (such as <code class="docutils literal"><span class="pre">com.gmail.username.project</span></code>) or an open-source repository
-(such as <code class="docutils literal"><span class="pre">io.github.username.project</span></code>).</p>
-<p>After creating your main class, the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/plugin/Plugin.html">Plugin</a> annotation must be affixed to it. This annotation allows Sponge
-to easily find your main plugin class when your plugin is loaded. An example usage is illustrated below.</p>
+<h2>Начинаем создание главного класса плагина<a class="headerlink" href="#starting-your-class" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Следующий шаг, после добавления Sponge API в качестве зависимости, это создание нового класса. Класс может называться как угодно, и может быть в любом пакете, который <strong>не</strong> начинается с <code class="docutils literal"><span class="pre">org.spongepowered</span></code>. По соглашению, каждое слово в имени класса должно начинаться с большой буквы.</p>
+<p>Oracle <a class="reference external" href="http://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html">рекомендует</a> использовать ваш домен как имя пакета, если у вас есть домен. В противном случае, часто используется email адрес (например <code class="docutils literal"><span class="pre">com.gmail.username.project</span></code>) или репозиторий с открытым исходным кодом (например <code class="docutils literal"><span class="pre">io.github.username.project</span></code>).</p>
+<p>После создание вашего главного класса, вам необходимо добавить к нему аннотацию <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/plugin/Plugin.html">Plugin</a>. Эта аннотация позволяет Sponge найти главный класс плагина при его загрузке. Пример использования показан ниже.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">io.github.username.project</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.plugin.Plugin</span><span class="o">;</span>
@@ -603,16 +594,13 @@ to easily find your main plugin class when your plugin is loaded. An example usa
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Примечание</p>
-<p class="last">Refer to <a class="reference internal" href="plugin-identifier.html"><em>Plugin Identifiers</em></a> if you&#8217;ve not chosen your plugin ID yet.</p>
+<p class="last">Обратитесь к :doc: <cite>идентификатор плагина</cite>, если вы еще не выбрали ваш ID плагина.</p>
 </div>
 </div>
 <div class="section" id="initializing-your-plugin">
-<h2>Initializing Your Plugin<a class="headerlink" href="#initializing-your-plugin" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Plugins are loaded before the game and the world(s). This leaves a specific timeframe when your plugin should begin
-interacting with the game, such as registering commands or events.</p>
-<p>Your plugin can listen for particular events, called <strong>state events</strong>, to be notified about changes in the state of the
-game. In the example below, <code class="docutils literal"><span class="pre">onServerStart()</span></code> is called when the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStartedServerEvent.html">GameStartedServerEvent</a> occurs; take note
-of the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/Listener.html">Listener</a> annotation before the method.</p>
+<h2>Инициализация вашего плагина<a class="headerlink" href="#initializing-your-plugin" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Плагины загружаются до загрузки самой игры и игровых миров. При этом существует промежуток времени, в который плагин может начать взаимодействовать с игрой, например зарегистрировать команды или события.</p>
+<p>Плагин может слушать определенные события, называемые <strong>эвенты</strong>, чтобы получать уведомления об изменениях состояния игры. В примере ниже метод <code class="docutils literal"><span class="pre">onServerStart()</span></code> вызывается когда возникает событие <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStartedServerEvent.html">GameStartedServerEvent</a>; обратите внимание на аннотацию <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/Listener.html">Listener</a> перед методом.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.event.Listener</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.event.game.state.GameStartedServerEvent</span><span class="o">;</span>
 
@@ -629,16 +617,14 @@ of the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/or
 </div>
 <div class="admonition tip">
 <p class="first admonition-title">Совет</p>
-<p class="last">The Sponge documentation provides a guide with more information on events (see <a class="reference internal" href="event/index.html"><em>События</em></a>). Normally, in addition
-to prefixing event-handler methods with <code class="docutils literal"><span class="pre">&#64;Listener</span></code>, you must also register your object with Sponge&#8217;s event bus.
-However, your main plugin class is registered automatically.</p>
+<p class="last">Документация Sponge предоставляет более подробную информацию про события (смотрите <a class="reference internal" href="event/index.html"><em>События</em></a>). Обычно, помимо добавления аннотации <code class="docutils literal"><span class="pre">&#64;Listener</span></code>, вам также необходимо зарегистрировать ваш слушатель. Однако главный класс плагина регистрируется автоматически.</p>
 </div>
 <div class="section" id="state-events">
-<h3>State Events<a class="headerlink" href="#state-events" title="Ссылка на этот заголовок">¶</a></h3>
-<p>It may also be desirable to listen for other state events, particularly the <code class="docutils literal"><span class="pre">GameStoppingServerEvent</span></code>. There are two
-categories of state events:</p>
+<h3>События жизни сервера<a class="headerlink" href="#state-events" title="Ссылка на этот заголовок">¶</a></h3>
+<p>Также, может быть полезно слушать другие события жизни сервера, особенно <code class="docutils literal"><span class="pre">GameStoppingServerEvent</span></code>. Существует две категории события жизни сервера:</p>
 <ul class="simple">
-<li><strong>Initialization</strong>: These events occur when Sponge and plugins are loading.<ul>
+<li><p class="first"><strong>Инициализация</strong>: эти события вызываются при загрузке Sponge и плагинов.</p>
+<ul>
 <li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameConstructionEvent.html">GameConstructionEvent</a></li>
 <li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GamePreInitializationEvent.html">GamePreInitializationEvent</a></li>
 <li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameInitializationEvent.html">GameInitializationEvent</a></li>
@@ -646,7 +632,8 @@ categories of state events:</p>
 <li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameLoadCompleteEvent.html">GameLoadCompleteEvent</a></li>
 </ul>
 </li>
-<li><strong>Running</strong>: These events occur when the game and world are loading.<ul>
+<li><p class="first"><strong>Running</strong>: Эти события вызываются при загрузки игры и игровых миров.</p>
+<ul>
 <li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameAboutToStartServerEvent.html">GameAboutToStartServerEvent</a></li>
 <li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStartingServerEvent.html">GameStartingServerEvent</a></li>
 <li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStartedServerEvent.html">GameStartedServerEvent</a></li>
@@ -655,7 +642,7 @@ categories of state events:</p>
 </ul>
 </li>
 </ul>
-<p>For information regarding when each state event occurs, see the <a class="reference internal" href="lifecycle.html"><em>plugin lifecycle documentation</em></a>.</p>
+<p>Для получения более подробной информации, когда вызывается каждое события жизни сервера, смотрите <a class="reference internal" href="lifecycle.html"><em>документацию жизненного цикла плагина</em></a>.</p>
 </div>
 </div>
 </div>

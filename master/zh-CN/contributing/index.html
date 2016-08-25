@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Contributing to Sponge &mdash; Sponge 4.1.0 文档</title>
+     <title>向 Sponge 贡献代码 &mdash; Sponge 4.1.0 文档</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -194,7 +194,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/configuration/index.html">配置Sponge</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/hocon.html">HOCON 简介</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/json.html">JSON语法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/json.html">JSON 语法</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/sponge-conf.html">global.conf</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/server-properties.html">server.properties</a></li>
 </ul>
@@ -268,16 +268,16 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/project/index.html">Setting Up Your Project</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/project/gradle.html">Setting Up Gradle</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin/project/index.html">设置你的项目</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/project/gradle.html">设置 Gradle</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/project/maven.html">Setting Up Maven</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../plugin/project/maven.html">设置 Maven</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/plugin-identifier.html">Plugin Identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/plugin-identifier.html">插件标识符</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/plugin-class.html">Main Plugin Class</a><ul class="simple">
 </ul>
 </li>
@@ -402,7 +402,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/entities/index.html">Entities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/entities/index.html">实体</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../plugin/entities/spawning.html">生成一个实体</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../plugin/entities/modifying.html">Modifying an Entity</a><ul class="simple">
 </ul>
@@ -474,7 +474,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../plugin/tab-lists.html">Tab Lists</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/plugin-meta.html">Plugin Metadata</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin/plugin-meta.html">插件的元数据</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/ray-tracing.html">Ray Tracing</a><ul class="simple">
@@ -488,7 +488,7 @@
 </li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Contributing to Sponge</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">向 Sponge 贡献代码</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="guidelines.html">贡献指南</a><ul class="simple">
 </ul>
 </li>
@@ -525,7 +525,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于Sponge项目</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于 Sponge 项目</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../about/introduction.html">简介</a><ul class="simple">
 </ul>
 </li>
@@ -571,13 +571,11 @@
                 <div class="body" role="main">
                   
   <div class="section" id="contributing-to-sponge">
-<h1>Contributing to Sponge<a class="headerlink" href="#contributing-to-sponge" title="永久链接至标题">¶</a></h1>
-<p>This sections intends to show you ways to get involved with Sponge.</p>
+<h1>向 Sponge 贡献代码<a class="headerlink" href="#contributing-to-sponge" title="永久链接至标题">¶</a></h1>
+<p>这一部分告诉你如何熟悉 Sponge。</p>
 <div class="section" id="what-are-the-projects-i-can-help-with">
-<h2>What are the projects I can help with?<a class="headerlink" href="#what-are-the-projects-i-can-help-with" title="永久链接至标题">¶</a></h2>
-<p>The Sponge Project and its parts are maintained on <a class="reference external" href="https://github.com/spongepowered">GitHub</a>. If you&#8217;re unfamiliar
-with GitHub and the tool git, then take a look at <a class="reference internal" href="howtogit.html"><em>如何使用Git（Hub）</em></a> first. A read of our <a class="reference internal" href="guidelines.html"><em>贡献指南</em></a> is strongly
-advised before starting any work. There are several projects we&#8217;re currently maintaining:</p>
+<h2>我可以帮助的项目是什么？<a class="headerlink" href="#what-are-the-projects-i-can-help-with" title="永久链接至标题">¶</a></h2>
+<p>Sponge 项目和它的所有部分在 <a class="reference external" href="https://github.com/spongepowered">GitHub</a> 上维护。如果你对 GitHub 和其对应的工具 Git 不太熟悉，你可以考虑先看一看 <a class="reference internal" href="howtogit.html"><em>如何使用Git（Hub）</em></a> 这一章节。在你的所有工作开始之前，我们强烈建议你阅读 <a class="reference internal" href="guidelines.html"><em>贡献指南</em></a> 这一部分。我们目前维护的项目部分如下：</p>
 <ul class="simple">
 <li>SpongeAPI</li>
 <li>SpongeForge</li>
@@ -587,40 +585,42 @@ advised before starting any work. There are several projects we&#8217;re current
 <li>SpongeDocs</li>
 <li>Ore</li>
 </ul>
-<p>If you want to know more about the structure of the project and how everything is tied together, head over to
-<a class="reference internal" href="../about/structure.html"><em>The Structure of the Sponge Project</em></a>.</p>
+<p>如果你想要知道更多关于项目的内容，可以去阅读 <a class="reference internal" href="../about/structure.html"><em>The Structure of the Sponge Project</em></a> 这一部分。</p>
 </div>
 <div class="section" id="what-kind-of-help-is-needed">
-<h2>What kind of help is needed?<a class="headerlink" href="#what-kind-of-help-is-needed" title="永久链接至标题">¶</a></h2>
+<h2>需要什么样的帮助？<a class="headerlink" href="#what-kind-of-help-is-needed" title="永久链接至标题">¶</a></h2>
 <div class="section" id="basic-contributions">
-<h3>Basic contributions<a class="headerlink" href="#basic-contributions" title="永久链接至标题">¶</a></h3>
-<p>This can be done by almost everyone. You don&#8217;t need to know a programming language like Java or Python to:</p>
+<h3>基本的贡献<a class="headerlink" href="#basic-contributions" title="永久链接至标题">¶</a></h3>
+<p>这里是几乎每一个人都可以完成的贡献。你不需要知道一些诸如 Java 或 Python 等编程语言。</p>
 <ul class="simple">
-<li>test SpongeForge or SpongeVanilla and report bugs or usage quirks</li>
-<li>report or suggest any errors, faults or bugs you encounter</li>
-<li>post suggestions or idea you have which would make Sponge better</li>
+<li><p class="first">测试 SpongeForge 或者 SpongeVanilla 并报告 BUG 或者偶然出现的使用问题</p>
+</li>
+<li><p class="first">报告或者建议你遇到的任何错误、故障、和 BUG。</p>
+</li>
+<li><p class="first">发布可以让 Sponge 变得更好的建议和意见</p>
+</li>
 </ul>
-<p>Reporting bugs best via our <a class="reference external" href="https://github.com/spongepowered/">GitHub repositories</a>, suggestions fit onto our
-<a class="reference external" href="https://forums.spongepowered.org/">forums</a>. Just have a look at our
-<a class="reference internal" href="../server/spongineer/bugreport.html"><em>Bug Reporting page</em></a> for further instructions.</p>
+<p>通过我们的 <a class="reference external" href="https://github.com/spongepowered/">GitHub 仓库</a> 来汇报 BUG，和我们的 <a class="reference external" href="https://forums.spongepowered.org/">论坛</a> 来提供建议。可以看看我们的 <a class="reference internal" href="../server/spongineer/bugreport.html"><em>Bug Reporting page</em></a> 以获取更多的信息。</p>
 </div>
 <div class="section" id="intermediate-contributions">
-<h3>Intermediate Contributions<a class="headerlink" href="#intermediate-contributions" title="永久链接至标题">¶</a></h3>
-<p>You should at least have basic knowledge of Java, Python or reST to help out on the following tasks:</p>
+<h3>中级的贡献<a class="headerlink" href="#intermediate-contributions" title="永久链接至标题">¶</a></h3>
+<p>你应该至少拥有 Java 或 Python 等的编程语言基础知识来帮助我们完成以下的事情：</p>
 <ul class="simple">
-<li>help fixing bugs</li>
-<li>finish the implementation of the API (SpongeForge and SpongeVanilla)</li>
-<li><a class="reference internal" href="spongedocs.html"><em>help writing the SpongeDocs</em></a></li>
-<li>help <a class="reference external" href="https://crowdin.com/project/sponge-docs">translate the Docs on Crowdin</a></li>
-<li>help out developing Ore</li>
+<li><p class="first">帮助修复 BUG</p>
+</li>
+<li><p class="first">完成 API 的实现（包括 SpongeForge 和 SpongeVanilla）</p>
+</li>
+<li><p class="first"><a class="reference internal" href="spongedocs.html"><em>帮助撰写文档</em></a></p>
+</li>
+<li><p class="first">帮助 <a class="reference external" href="https://crowdin.com/project/sponge-docs">在 Crowdin 上翻译文档</a></p>
+</li>
+<li><p class="first">帮助发展 Ore</p>
+</li>
 </ul>
-<p>The development of the <a class="reference external" href="https://github.com/spongepowered/SpongeAPI">Sponge API</a>,
-<a class="reference external" href="https://github.com/spongepowered/SpongeForge">SpongeForge</a>,
-<a class="reference external" href="https://github.com/spongepowered/SpongeVanilla">SpongeVanilla</a> and <a class="reference external" href="https://github.com/spongepowered/Ore">Ore</a> as
-well as the <a class="reference external" href="https://github.com/spongepowered/SpongeDocs">SpongeDocs</a> is done in several repositories hosted on GitHub.</p>
+<p><a class="reference external" href="https://github.com/spongepowered/SpongeAPI">Sponge API</a> ， <a class="reference external" href="https://github.com/spongepowered/SpongeForge">SpongeForge</a> ， <a class="reference external" href="https://github.com/spongepowered/SpongeVanilla">SpongeVanilla</a> ，和 <a class="reference external" href="https://github.com/spongepowered/Ore">Ore</a> 以及 <a class="reference external" href="https://github.com/spongepowered/SpongeDocs">SpongeDocs</a> 都托管在 GitHub 上开发。</p>
 </div>
 <div class="section" id="advanced-contributions">
-<h3>Advanced Contributions<a class="headerlink" href="#advanced-contributions" title="永久链接至标题">¶</a></h3>
+<h3>高级的贡献<a class="headerlink" href="#advanced-contributions" title="永久链接至标题">¶</a></h3>
 <p>And finally these are the most difficult things you can help out with. Advanced knowledge of Java, Minecraft and at
 least basic knowledge of the <a class="reference external" href="https://github.com/spongepowered/SpongeAPI">Sponge API</a> and its
 <a class="reference external" href="https://jd.spongepowered.org">structure</a> is strongly advised before attempting to help out with:</p>
@@ -631,7 +631,7 @@ least basic knowledge of the <a class="reference external" href="https://github.
 </div>
 </div>
 <div class="section" id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="永久链接至标题">¶</a></h2>
+<h2>目录<a class="headerlink" href="#contents" title="永久链接至标题">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="guidelines.html">贡献指南</a><ul class="simple">

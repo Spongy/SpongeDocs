@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Plugin Metadata &mdash; Sponge 4.1.0 文档</title>
+     <title>插件的元数据 &mdash; Sponge 4.1.0 文档</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -196,7 +196,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/configuration/index.html">配置Sponge</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/hocon.html">HOCON 简介</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/json.html">JSON语法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/json.html">JSON 语法</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/sponge-conf.html">global.conf</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/server-properties.html">server.properties</a></li>
 </ul>
@@ -270,16 +270,16 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="project/index.html">Setting Up Your Project</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="project/gradle.html">Setting Up Gradle</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="project/index.html">设置你的项目</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="project/gradle.html">设置 Gradle</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="project/maven.html">Setting Up Maven</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="project/maven.html">设置 Maven</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="plugin-identifier.html">Plugin Identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin-identifier.html">插件标识符</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plugin-class.html">Main Plugin Class</a><ul class="simple">
 </ul>
 </li>
@@ -404,7 +404,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="entities/index.html">Entities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="entities/index.html">实体</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="entities/spawning.html">生成一个实体</a></li>
 <li class="toctree-l3"><a class="reference internal" href="entities/modifying.html">Modifying an Entity</a><ul class="simple">
 </ul>
@@ -476,7 +476,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tab-lists.html">Tab Lists</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Plugin Metadata</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="">插件的元数据</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ray-tracing.html">Ray Tracing</a><ul class="simple">
@@ -490,7 +490,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">向 Sponge 贡献代码</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../contributing/guidelines.html">贡献指南</a><ul class="simple">
 </ul>
 </li>
@@ -527,7 +527,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于Sponge项目</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于 Sponge 项目</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../about/introduction.html">简介</a><ul class="simple">
 </ul>
 </li>
@@ -573,21 +573,24 @@
                 <div class="body" role="main">
                   
   <div class="section" id="plugin-metadata">
-<h1>Plugin Metadata<a class="headerlink" href="#plugin-metadata" title="永久链接至标题">¶</a></h1>
-<p>Adding plugin metadata helps users to identify your plugin more easily by giving them the ability to check the name,
-version, description, or even the authors of a plugin at runtime. It will also be used when publishing plugins on a plugin
-portal like <a class="reference external" href="https://github.com/SpongePowered/Ore">Ore</a>.</p>
-<p>Currently, Sponge supports the following types of plugin metadata:</p>
+<h1>插件的元数据<a class="headerlink" href="#plugin-metadata" title="永久链接至标题">¶</a></h1>
+<p>添加插件的元数据（Metadata）可以通过给予他们在运行时检查插件的名称、 版本、 描述、甚至插件的作者的能力帮助用户更容易地识别你的插件。插件的元数据也会用在一些发布插件的地方比如 <a class="reference external" href="https://github.com/SpongePowered/Ore">Ore</a> 。</p>
+<p>目前，Sponge 支持以下类型的插件的元数据︰</p>
 <ul class="simple">
-<li>Plugin ID, Plugin Name, Version</li>
-<li>Description</li>
-<li>URL (e.g. Website)</li>
-<li>Authors</li>
-<li>Plugin dependencies</li>
+<li><p class="first">插件 ID、 插件名称、以及版本</p>
+</li>
+<li><p class="first">描述</p>
+</li>
+<li><p class="first">URL（例如网站）</p>
+</li>
+<li><p class="first">作者</p>
+</li>
+<li><p class="first">插件依赖</p>
+</li>
 </ul>
 <div class="section" id="plugin-annotation">
-<h2>Plugin annotation<a class="headerlink" href="#plugin-annotation" title="永久链接至标题">¶</a></h2>
-<p>You can define the additional (optional) plugin metadata on your <code class="docutils literal"><span class="pre">&#64;Plugin</span></code> annotation:</p>
+<h2>插件注解<a class="headerlink" href="#plugin-annotation" title="永久链接至标题">¶</a></h2>
+<p>你可以在你的 <code class="docutils literal"><span class="pre">&#64;Plugin</span></code> 注解中添加额外的（可选）元数据：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.plugin.Plugin</span><span class="o">;</span>
 
 <span class="nd">@Plugin</span><span class="o">(</span><span class="n">id</span> <span class="o">=</span> <span class="s">&quot;myplugin&quot;</span><span class="o">,</span> <span class="n">name</span> <span class="o">=</span> <span class="s">&quot;My Plugin&quot;</span><span class="o">,</span> <span class="n">version</span> <span class="o">=</span> <span class="s">&quot;1.0&quot;</span><span class="o">,</span>
@@ -599,12 +602,13 @@ portal like <a class="reference external" href="https://github.com/SpongePowered
 </div>
 </div>
 <div class="section" id="file-metadata">
-<h2>File metadata<a class="headerlink" href="#file-metadata" title="永久链接至标题">¶</a></h2>
-<p>Additionally to plugin metadata defined in the plugin annotation we also recommend plugins to include this metadata in
-an extra file in the JAR, which has several advantages:</p>
+<h2>文件元数据<a class="headerlink" href="#file-metadata" title="永久链接至标题">¶</a></h2>
+<p>对于插件注解中额外添加的元数据，我们也同时建议在 JAR 的一个额外的文件中包含元数据，这样的优点有：</p>
 <ul class="simple">
-<li>Easier integration for build systems (e.g. contributing the version from the build system into plugin metadata)</li>
-<li>Easier for plugin portals to obtain the plugin metadata (no parsing of class files necessary)</li>
+<li><p class="first">易于在构建系统中集成（例如在构建系统中添加版本进插件的元数据）</p>
+</li>
+<li><p class="first">易于用于发布插件的网站识别（不需要解析插件的字节码文件）</p>
+</li>
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
@@ -650,7 +654,7 @@ file based on the contents of your <code class="docutils literal"><span class="p
 <h4>Build system integration<a class="headerlink" href="#build-system-integration" title="永久链接至标题">¶</a></h4>
 <p>If you&#8217;re using Gradle, <a class="reference external" href="start/project/gradle">SpongeGradle</a> will provide additional integration for Gradle and
 plugin metadata. For example, it will automatically include the project version defined in the Gradle build script in
-your plugin metadata. See <a class="reference internal" href="project/gradle.html"><em>Setting Up Gradle</em></a> for details.</p>
+your plugin metadata. See <a class="reference internal" href="project/gradle.html"><em>设置 Gradle</em></a> for details.</p>
 </div>
 </div>
 </div>

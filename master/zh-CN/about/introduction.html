@@ -34,9 +34,9 @@
     <script type="text/javascript" src="../_static/lights.js"></script>
       <link rel="shortcut icon" href="../_static/favicon.ico"/>
         <link rel="top" title="Sponge 4.1.0 文档" href="../index.html" />
-        <link rel="up" title="关于Sponge项目" href="index.html" />
+        <link rel="up" title="关于 Sponge 项目" href="index.html" />
         <link rel="next" title="常见问题" href="faq.html" />
-        <link rel="prev" title="关于Sponge项目" href="index.html" />
+        <link rel="prev" title="关于 Sponge 项目" href="index.html" />
     
   <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -156,7 +156,7 @@
       <div class="breadcrumbs">
         <ul>
         <li><a href="../index.html">Sponge 4.1.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
-        <li><a href="index.html" accesskey="U">关于Sponge项目</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="index.html" accesskey="U">关于 Sponge 项目</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
     <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -196,7 +196,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/configuration/index.html">配置Sponge</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/hocon.html">HOCON 简介</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/json.html">JSON语法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/json.html">JSON 语法</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/sponge-conf.html">global.conf</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/server-properties.html">server.properties</a></li>
 </ul>
@@ -270,16 +270,16 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/project/index.html">Setting Up Your Project</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/project/gradle.html">Setting Up Gradle</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin/project/index.html">设置你的项目</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/project/gradle.html">设置 Gradle</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/project/maven.html">Setting Up Maven</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../plugin/project/maven.html">设置 Maven</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/plugin-identifier.html">Plugin Identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/plugin-identifier.html">插件标识符</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/plugin-class.html">Main Plugin Class</a><ul class="simple">
 </ul>
 </li>
@@ -404,7 +404,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/entities/index.html">Entities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/entities/index.html">实体</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../plugin/entities/spawning.html">生成一个实体</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../plugin/entities/modifying.html">Modifying an Entity</a><ul class="simple">
 </ul>
@@ -476,7 +476,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../plugin/tab-lists.html">Tab Lists</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/plugin-meta.html">Plugin Metadata</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin/plugin-meta.html">插件的元数据</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/ray-tracing.html">Ray Tracing</a><ul class="simple">
@@ -490,7 +490,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">向 Sponge 贡献代码</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../contributing/guidelines.html">贡献指南</a><ul class="simple">
 </ul>
 </li>
@@ -527,7 +527,7 @@
 </li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">关于Sponge项目</a><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">关于 Sponge 项目</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="">简介</a><ul class="simple">
 </ul>
 </li>
@@ -589,25 +589,21 @@
 <p>大多数基于SpongeAPI的插件应该可以跨好几个Minecraft版本工作而不用特别更新。即在大部分情况下都不需要担心插件不兼容的问题。</p>
 <p>Sponge API分为以下2种版本：</p>
 <ol class="arabic simple">
-<li><strong>SpongeForge</strong>, a coremod for Minecraft Forge, which is an existing Minecraft modding framework famous for spurring
-the Minecraft modding scene. Forge lacks a cross-version API, and this is where Sponge steps in. Sponge allows
-server owners to deploy Sponge plugins with ease, making server management easier.</li>
-<li><strong>SpongeVanilla</strong>, a stand-alone implementation of the Sponge API, running on top of the vanilla Minecraft server.
-(SpongeVanilla was formerly known as Granite, until the development teams merged).</li>
+<li><p class="first"><strong>SpongeForge</strong> ，一个运行在 Minecraft Forge 上的 coremod。Minecraft Forge 是一个因用于开发 Minecraft Mod 而知名的框架。Forge API 不能跨版本，而 Sponge 正是致力于跨版本。Sponge 允许开发者更容易地开发插件，让服主们更轻松简单地管理服务器。</p>
+</li>
+<li><p class="first"><strong>SpongeVanilla</strong> ，一个独立的 Sponge API 实现，运行于原版 Minecraft 服务端上（SpongeVanilla 原名 Granite，后来其开发组被合并）。</p>
+</li>
 </ol>
-<p>Players on servers running SpongeForge or SpongeVanilla do not need to install any client-side mods. They are able to join
-servers running Sponge using the vanilla Minecraft client provided by Mojang.</p>
+<p>加入运行有 SpongeForge 或 SpongeVanilla 的服务器的玩家不需要在客户端安装任何 Mod。直接使用原版 Minecraft 客户端加入服务器就可以。</p>
 <p>Sponge API在2种版本中的接口是一致的，这表示服主们可以在任何一种版本中运行基于Sponge API开发的插件，所有接口和参数在2种版本中都是一致的。</p>
 </div>
 <div class="section" id="where-can-i-download-sponge">
 <h2>我应该从哪儿下载Sponge？<a class="headerlink" href="#where-can-i-download-sponge" title="永久链接至标题">¶</a></h2>
-<p>Neither SpongeForge nor SpongeVanilla is ready yet but development builds can be found at <a class="reference internal" href="../downloads.html"><em>下载</em></a>.</p>
+<p>不管是 SpongeForge 还是 SpongeVanilla 都还不够完善，不过可以在 <a class="reference internal" href="../downloads.html"><em>下载</em></a> 找到开发构建。</p>
 </div>
 <div class="section" id="who-is-behind-sponge">
 <h2>Sponge由哪些人支持？<a class="headerlink" href="#who-is-behind-sponge" title="永久链接至标题">¶</a></h2>
-<p>The project leaders are blood, gabizou and Zidane. We are trying to be very open with the team to ensure the project leaders
-do not end up “holding all of the keys.” Nonetheless, these three people make the final decisions to ensure the efficient
-operation of the project.</p>
+<p>团队由 blood、gabizou、和 Zidane 领导。我们确保我们和整个团队一起，以防止“把鸡蛋放在同一个篮子里”。不过它们三个人还是有着有利于项目发展的最终决策权。</p>
 <p>相关人员的完整列表位于 <a class="reference internal" href="staff.html"><em>工作人员</em></a>。</p>
 <p>我们的开发者精通Java。大部分人已经研究Minecraft好些年并了解其内部机制。Sponge项目有成堆的优秀开发者支持，很抱歉不能将他们全部列出。</p>
 </div>

@@ -197,7 +197,7 @@
 </li>
 <li class="toctree-l3 current"><a class="current reference internal" href="">配置Sponge</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="hocon.html">HOCON 简介</a></li>
-<li class="toctree-l4"><a class="reference internal" href="json.html">JSON语法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json.html">JSON 语法</a></li>
 <li class="toctree-l4"><a class="reference internal" href="sponge-conf.html">global.conf</a></li>
 <li class="toctree-l4"><a class="reference internal" href="server-properties.html">server.properties</a></li>
 </ul>
@@ -271,16 +271,16 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/project/index.html">Setting Up Your Project</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../plugin/project/gradle.html">Setting Up Gradle</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/project/index.html">设置你的项目</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/project/gradle.html">设置 Gradle</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../plugin/project/maven.html">Setting Up Maven</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/project/maven.html">设置 Maven</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/plugin-identifier.html">Plugin Identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/plugin-identifier.html">插件标识符</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../plugin/plugin-class.html">Main Plugin Class</a><ul class="simple">
 </ul>
 </li>
@@ -405,7 +405,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/entities/index.html">Entities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/entities/index.html">实体</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/entities/spawning.html">生成一个实体</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/entities/modifying.html">Modifying an Entity</a><ul class="simple">
 </ul>
@@ -477,7 +477,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../plugin/tab-lists.html">Tab Lists</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/plugin-meta.html">Plugin Metadata</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/plugin-meta.html">插件的元数据</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../plugin/ray-tracing.html">Ray Tracing</a><ul class="simple">
@@ -491,7 +491,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../contributing/index.html">Contributing to Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing/index.html">向 Sponge 贡献代码</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../contributing/guidelines.html">贡献指南</a><ul class="simple">
 </ul>
 </li>
@@ -528,7 +528,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于Sponge项目</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于 Sponge 项目</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/introduction.html">简介</a><ul class="simple">
 </ul>
 </li>
@@ -578,13 +578,13 @@
 <p>你可以在&#8221;config&#8221;文件夹下找到所有的配置文件。</p>
 <div class="section" id="config-syntax">
 <h2>配置参数<a class="headerlink" href="#config-syntax" title="永久链接至标题">¶</a></h2>
-<p>Most configuration files will make use of the <a class="reference internal" href="hocon.html"><em>HOCON</em></a> format.</p>
+<p>大多数配置文件使用 <a class="reference internal" href="hocon.html"><em>HOCON</em></a> 文件格式。</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="hocon.html">HOCON 简介</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="json.html">JSON语法</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="json.html">JSON 语法</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -605,64 +605,61 @@
 <p>插件会在&#8221;config&#8221;文件夹内有自己的配置文件。</p>
 </div>
 <div class="section" id="world-configs">
-<h2>World Configs<a class="headerlink" href="#world-configs" title="永久链接至标题">¶</a></h2>
-<p>There are three types of world configs:</p>
+<h2>世界的配置<a class="headerlink" href="#world-configs" title="永久链接至标题">¶</a></h2>
+<p>有三种类型的世界的配置：</p>
 <ul class="simple">
-<li>Global</li>
-<li>Dimension</li>
-<li>World</li>
+<li><p class="first">全局</p>
+</li>
+<li><p class="first">维度</p>
+</li>
+<li><p class="first">世界</p>
+</li>
 </ul>
-<p>Global configuration files can affect all of a server&#8217;s worlds and dimensions. This is the default level for configs.
-Dimension configuration files are used to affect a certain dimension or group of worlds. These types of configs will
-override the global config files. World configuration files are used to modify individual worlds only. World configs
-override dimension and global configs.</p>
+<p>全局配置文件可以影响所有服务器的世界和维度。这是默认的配置级别。维度配置文件用于影响某些特定维度的世界或者世界组。这些类型的配置会覆盖全局配置。世界配置文件用于修改单独的世界，并覆盖全局配置和维度配置。</p>
 <div class="section" id="modifying-the-config-in-game">
-<h3>Modifying the Config In-Game<a class="headerlink" href="#modifying-the-config-in-game" title="永久链接至标题">¶</a></h3>
-<p>It is possible to modify these configs through the in-game command <code class="docutils literal"><span class="pre">/sponge</span> <span class="pre">config</span></code>. The syntax for the config
-command looks like this:</p>
+<h3>在游戏中修改配置<a class="headerlink" href="#modifying-the-config-in-game" title="永久链接至标题">¶</a></h3>
+<p>可以在游戏中使用 <code class="docutils literal"><span class="pre">/sponge</span> <span class="pre">config</span></code> 修改配置。用于配置的命令的形式是这样子的：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">sponge</span> <span class="n">config</span> <span class="o">&lt;</span><span class="n">flag</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>There are <em>flags</em> for specifying the target that you would wish to change. These flags are global, dimension, and world.</p>
+<p>有一些 <em>标志</em> 用于指定你想要改变的目标。这些标志是全局（Global）、维度（Dimension）和世界（World）。</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">-g</span></code> is the flag for global</li>
-<li><code class="docutils literal"><span class="pre">-d</span> <span class="pre">&lt;dim&gt;</span></code> targets a dimension (replacing <em>&lt;dim&gt;</em> with the dimension you want to configure)</li>
-<li><code class="docutils literal"><span class="pre">-w</span> <span class="pre">&lt;world&gt;</span></code> targets one world (replacing <em>&lt;world&gt;</em> with your chosen world).</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">-g</span></code> 是用作全局的标志</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">-d</span> <span class="pre">&lt;dim&gt;</span></code> 用于维度（把 <em>&lt;dim&gt;</em> 替换成你想要配置的维度）</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">-w</span> <span class="pre">&lt;world&gt;</span></code> 用于世界（把 <em>&lt;world&gt;</em> 替换成你想要配置的世界）。</p>
+</li>
 </ul>
-<p>The <em>key</em> is the value you want to change. The <em>value</em> is whatever you want to change the value of the key to.</p>
-<p>Here is an example of this command in action:</p>
+<p><em>key</em> 是你想要更改的值，而 <em>value</em> 是你想要把对应的值改成什么样子。</p>
+<p>这里是一个运行中的命令的例子：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">sponge</span> <span class="n">config</span> <span class="o">-</span><span class="n">d</span> <span class="n">nether</span> <span class="n">logging</span><span class="o">.</span><span class="na">chunk</span><span class="o">-</span><span class="n">load</span> <span class="kc">true</span>
 </pre></div>
 </div>
-<p>This will set the config to log when chunks are loaded for the nether.</p>
-<p>If you need to check the value of a key, you would need to omit the <em>value</em>. Checking the value of a key such as
-<code class="docutils literal"><span class="pre">logging.chunk-load</span></code> in the nether would be done like so:</p>
+<p>这将会设置为把下界的区块被加载的行为记录进日志。</p>
+<p>如果你想要检查一个键对应的值，你需要省略 <em>value</em> 。如果我们想要检查下界中关于 <code class="docutils literal"><span class="pre">logging.chunk-load</span></code> 对应的值，我们可以这么做：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">sponge</span> <span class="n">config</span> <span class="o">-</span><span class="n">d</span> <span class="n">nether</span> <span class="n">logging</span><span class="o">.</span><span class="na">chunk</span><span class="o">-</span><span class="n">load</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="saving-a-world-config">
-<h3>Saving a World Config<a class="headerlink" href="#saving-a-world-config" title="永久链接至标题">¶</a></h3>
-<p>Saving a world config to the file may be desired after making modifications. This would be useful in the event of an
-unexpected server crash. This would be done by using the <code class="docutils literal"><span class="pre">/sponge</span> <span class="pre">save</span></code> command on the sponge server. The syntax for
-this command is similar to the config command:</p>
+<h3>保存世界配置<a class="headerlink" href="#saving-a-world-config" title="永久链接至标题">¶</a></h3>
+<p>在完成配置后需要把世界配置保存到文件中。这一做法的意义是防止意外的服务端崩溃。可以在 Sponge 服务器上使用 <code class="docutils literal"><span class="pre">/sponge</span> <span class="pre">save</span></code> 命令保存配置。其对应命令的格式就像用于配置的命令一样：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">sponge</span> <span class="n">save</span> <span class="o">&lt;</span><span class="n">flag</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>Here is an example for saving the global config:</p>
+<p>下面是用于保存全局配置的一个示例：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">sponge</span> <span class="n">save</span> <span class="o">-</span><span class="n">g</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="reloading-a-world-config">
-<h3>Reloading a World Config<a class="headerlink" href="#reloading-a-world-config" title="永久链接至标题">¶</a></h3>
-<p>Sometimes it may be desired that a world config is reloaded while the server is still running. This would be useful if
-you have made changes to the local config file and would like to reload it for use on the live server. This is made
-possible by the command <code class="docutils literal"><span class="pre">/sponge</span> <span class="pre">reload</span></code>. The syntax for the command is as follows:</p>
+<h3>重新加载一个世界配置<a class="headerlink" href="#reloading-a-world-config" title="永久链接至标题">¶</a></h3>
+<p>有的时候可能需要在服务器仍在运行的时候重新加载世界配置。这一般适用于当你更改本地配置文件并想要正在运行的服务端重新加载配置这一需求。可以使用 <code class="docutils literal"><span class="pre">/sponge</span> <span class="pre">reload</span></code> 命令完成这件事，下面是这个命令的样式：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">sponge</span> <span class="n">reload</span> <span class="o">&lt;</span><span class="n">flag</span><span class="o">&gt;</span>
 </pre></div>
 </div>
-<p>Here is an example of reloading the end world config file:</p>
+<p>下面是重新加载末界配置文件的示例：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">sponge</span> <span class="n">reload</span> <span class="o">-</span><span class="n">d</span> <span class="n">the_end</span>
 </pre></div>
 </div>

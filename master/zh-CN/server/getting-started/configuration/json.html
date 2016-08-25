@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>JSON语法 &mdash; Sponge 4.1.0 文档</title>
+     <title>JSON 语法 &mdash; Sponge 4.1.0 文档</title>
     
   <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/sponge.css" type="text/css" />
@@ -198,7 +198,7 @@
 </li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">配置Sponge</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="hocon.html">HOCON 简介</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">JSON语法</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">JSON 语法</a></li>
 <li class="toctree-l4"><a class="reference internal" href="sponge-conf.html">global.conf</a></li>
 <li class="toctree-l4"><a class="reference internal" href="server-properties.html">server.properties</a></li>
 </ul>
@@ -272,16 +272,16 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/project/index.html">Setting Up Your Project</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../plugin/project/gradle.html">Setting Up Gradle</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/project/index.html">设置你的项目</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/project/gradle.html">设置 Gradle</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../plugin/project/maven.html">Setting Up Maven</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/project/maven.html">设置 Maven</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/plugin-identifier.html">Plugin Identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/plugin-identifier.html">插件标识符</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../plugin/plugin-class.html">Main Plugin Class</a><ul class="simple">
 </ul>
 </li>
@@ -406,7 +406,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/entities/index.html">Entities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/entities/index.html">实体</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/entities/spawning.html">生成一个实体</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/entities/modifying.html">Modifying an Entity</a><ul class="simple">
 </ul>
@@ -478,7 +478,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../plugin/tab-lists.html">Tab Lists</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/plugin-meta.html">Plugin Metadata</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/plugin-meta.html">插件的元数据</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../plugin/ray-tracing.html">Ray Tracing</a><ul class="simple">
@@ -492,7 +492,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../contributing/index.html">Contributing to Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing/index.html">向 Sponge 贡献代码</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../contributing/guidelines.html">贡献指南</a><ul class="simple">
 </ul>
 </li>
@@ -529,7 +529,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于Sponge项目</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于 Sponge 项目</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/introduction.html">简介</a><ul class="simple">
 </ul>
 </li>
@@ -575,9 +575,8 @@
                 <div class="body" role="main">
                   
   <div class="section" id="json-syntax">
-<h1>JSON语法<a class="headerlink" href="#json-syntax" title="永久链接至标题">¶</a></h1>
-<p>This is an example of a <code class="docutils literal"><span class="pre">whitelist.json</span></code> file with correct formatting (although the UUID-s are fictional). Your file
-should follow the same syntax.</p>
+<h1>JSON 语法<a class="headerlink" href="#json-syntax" title="永久链接至标题">¶</a></h1>
+<p>这里是使用正确无误的语法的一个名为 <code class="docutils literal"><span class="pre">whitelist.json</span></code> 的文件（虽然 UUID 都是虚构的）的示例。你的 JSON 文件应该和这个文件的语法一致。</p>
 <div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">[</span>
   <span class="p">{</span>
     <span class="nt">&quot;uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;01234567-89ab-cdef-0123-456789abcdef&quot;</span><span class="p">,</span>
@@ -591,16 +590,22 @@ should follow the same syntax.</p>
 </pre></div>
 </div>
 <div class="section" id="format-rules">
-<h2>Format Rules<a class="headerlink" href="#format-rules" title="永久链接至标题">¶</a></h2>
+<h2>语法规则<a class="headerlink" href="#format-rules" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
-<li>Square braces (<code class="docutils literal"><span class="pre">[]</span></code>) open and close the file</li>
-<li>Each entry in the file is wrapped with curly braces (<code class="docutils literal"><span class="pre">{}</span></code>)</li>
-<li>Each key and its corresponding value is typed on its own line</li>
-<li>If more than one exists, both entries and key/value pairs are comma separated</li>
-<li>All strings are in quotation marks</li>
-<li>UUID-s are 32 symbols long, and written in hexadecimal (0-9, a-f).</li>
-<li>the UUID symbols are grouped. First is a group of 8, then three groups of 4, then a group of 12. The groups are
-separated by dashes (<code class="docutils literal"><span class="pre">-</span></code>)</li>
+<li><p class="first">一个文件使用中括号（ <code class="docutils literal"><span class="pre">[]</span></code> ）包围起来</p>
+</li>
+<li><p class="first">每一个条目（Entry）使用大括号（ <code class="docutils literal"><span class="pre">{}</span></code> ）包裹起来</p>
+</li>
+<li><p class="first">每一个键和它对应的值应该在其各自的行上</p>
+</li>
+<li><p class="first">如果存在多个，键值对之间使用逗号分隔</p>
+</li>
+<li><p class="first">所有字符串都用引号引起来</p>
+</li>
+<li><p class="first">UUID 为 32bit 长，并且使用十六进制（0-9和a-f）书写。</p>
+</li>
+<li><p class="first">UUID 需要进行分组。每一组的长度分别为“8-4-4-4-12”，组之间用短横线（ <code class="docutils literal"><span class="pre">-</span></code> ）分隔</p>
+</li>
 </ul>
 </div>
 </div>

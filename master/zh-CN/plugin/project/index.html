@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Setting Up Your Project &mdash; Sponge 4.1.0 文档</title>
+     <title>设置你的项目 &mdash; Sponge 4.1.0 文档</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -35,7 +35,7 @@
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 4.1.0 文档" href="../../index.html" />
         <link rel="up" title="插件开发" href="../index.html" />
-        <link rel="next" title="Setting Up Gradle" href="gradle.html" />
+        <link rel="next" title="设置 Gradle" href="gradle.html" />
         <link rel="prev" title="安装和使用Eclipse" href="../workspace/eclipse.html" />
     
   <script type="text/javascript">
@@ -196,7 +196,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/configuration/index.html">配置Sponge</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/hocon.html">HOCON 简介</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/json.html">JSON语法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/json.html">JSON 语法</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/sponge-conf.html">global.conf</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/server-properties.html">server.properties</a></li>
 </ul>
@@ -270,16 +270,16 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Setting Up Your Project</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="gradle.html">Setting Up Gradle</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="">设置你的项目</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gradle.html">设置 Gradle</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="maven.html">Setting Up Maven</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="maven.html">设置 Maven</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">Plugin Identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">插件标识符</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Main Plugin Class</a><ul class="simple">
 </ul>
 </li>
@@ -404,7 +404,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../entities/index.html">Entities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../entities/index.html">实体</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../entities/spawning.html">生成一个实体</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../entities/modifying.html">Modifying an Entity</a><ul class="simple">
 </ul>
@@ -476,7 +476,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../tab-lists.html">Tab Lists</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin-meta.html">Plugin Metadata</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin-meta.html">插件的元数据</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../ray-tracing.html">Ray Tracing</a><ul class="simple">
@@ -490,7 +490,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing to Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">向 Sponge 贡献代码</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">贡献指南</a><ul class="simple">
 </ul>
 </li>
@@ -527,7 +527,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于Sponge项目</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于 Sponge 项目</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">简介</a><ul class="simple">
 </ul>
 </li>
@@ -573,21 +573,20 @@
                 <div class="body" role="main">
                   
   <div class="section" id="setting-up-your-project">
-<h1>Setting Up Your Project<a class="headerlink" href="#setting-up-your-project" title="永久链接至标题">¶</a></h1>
-<p>Before you can start developing your Sponge plugin, you need to set up the SpongeAPI dependency in your project. If
-you&#8217;re already experienced with your build system, below is the Maven dependency you need to add. Otherwise, there is a
-more detailed explanation at the <a class="reference internal" href="gradle.html"><em>Gradle</em></a> and <a class="reference internal" href="maven.html"><em>Maven</em></a> page.</p>
+<h1>设置你的项目<a class="headerlink" href="#setting-up-your-project" title="永久链接至标题">¶</a></h1>
+<p>在你开始开发你的 Sponge 插件之前，你需要在你的项目中设置 SpongeAPI 的依赖。如果你有使用构建系统的经验，下面是你需要添加的 Maven 仓库。如果没有，这里分别是 <a class="reference internal" href="gradle.html"><em>Gradle</em></a> 和 <a class="reference internal" href="maven.html"><em>Maven</em></a> 的更详细说明。</p>
 <div class="section" id="spongeapi-dependency">
-<h2>SpongeAPI dependency<a class="headerlink" href="#spongeapi-dependency" title="永久链接至标题">¶</a></h2>
+<h2>SpongeAPI 依赖<a class="headerlink" href="#spongeapi-dependency" title="永久链接至标题">¶</a></h2>
 <div class="section" id="maven-repository">
-<h3>Maven repository<a class="headerlink" href="#maven-repository" title="永久链接至标题">¶</a></h3>
+<h3>Maven 仓库<a class="headerlink" href="#maven-repository" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="9%" />
 <col width="91%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td>Name</td>
+<tr class="row-odd"><td><p class="first last">名称</p>
+</td>
 <td><code class="docutils literal"><span class="pre">sponge</span></code></td>
 </tr>
 <tr class="row-even"><td>URL</td>
@@ -597,7 +596,7 @@ more detailed explanation at the <a class="reference internal" href="gradle.html
 </table>
 </div>
 <div class="section" id="maven-dependency">
-<h3>Maven dependency<a class="headerlink" href="#maven-dependency" title="永久链接至标题">¶</a></h3>
+<h3>Maven 依赖<a class="headerlink" href="#maven-dependency" title="永久链接至标题">¶</a></h3>
 <table border="1" class="docutils">
 <colgroup>
 <col width="15%" />
@@ -610,21 +609,22 @@ more detailed explanation at the <a class="reference internal" href="gradle.html
 <tr class="row-even"><td>Artifact ID</td>
 <td><code class="docutils literal"><span class="pre">spongeapi</span></code></td>
 </tr>
-<tr class="row-odd"><td>Version</td>
-<td>For example: <code class="docutils literal"><span class="pre">4.0.3</span></code> (stable), or <code class="docutils literal"><span class="pre">5.0.0-SNAPSHOT</span></code> (dev build, unstable)</td>
+<tr class="row-odd"><td><p class="first last">版本</p>
+</td>
+<td>For example: <code class="docutils literal"><span class="pre">4.1.0</span></code> (stable), or <code class="docutils literal"><span class="pre">5.0.0-SNAPSHOT</span></code> (dev build, unstable)</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="section" id="id1">
-<h2>Setting Up Your Project<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
+<h2>设置你的项目<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="gradle.html">Setting Up Gradle</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="gradle.html">设置 Gradle</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="maven.html">Setting Up Maven</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="maven.html">设置 Maven</a><ul class="simple">
 </ul>
 </li>
 </ul>

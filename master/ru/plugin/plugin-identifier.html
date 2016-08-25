@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Plugin Identifiers &mdash; Документация Sponge 4.1.0</title>
+     <title>Идентификаторы плагина &mdash; Документация Sponge 4.1.0</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -278,7 +278,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Plugin Identifiers</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Идентификаторы плагина</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plugin-class.html">Основной класс плагина</a><ul class="simple">
 </ul>
 </li>
@@ -572,21 +572,15 @@
                 <div class="body" role="main">
                   
   <div class="section" id="plugin-identifiers">
-<h1>Plugin Identifiers<a class="headerlink" href="#plugin-identifiers" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Sponge plugins are identified using a unique <strong>plugin ID</strong>, and a human-readable <strong>plugin name</strong>. It is important that
-you choose a proper name for your project now, because later plugins will interact with your plugin under your chosen
-plugin ID (e.g. when defining plugin dependencies). The plugin ID is also used for creating the default configuration
-folders for your plugin.</p>
+<h1>Идентификаторы плагина<a class="headerlink" href="#plugin-identifiers" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Sponge плагины идентифицируются используя уникальный <strong>ID плагина</strong> и удобное для чтения <strong>имя плагина</strong>. Это очень важно выбрать правильное имя для вашего проекта сейчас, потому-что потом, остальные плагины будут взаимодействовать с вашим плагином по выбранному вами <strong>ID плагина</strong> (в том числе при указании зависимостей). ID плагина также используется при создании стандартной конфигурации для вашего плагина.</p>
 <div class="admonition note">
 <p class="first admonition-title">Примечание</p>
-<p class="last">Plugin IDs must be lowercase and may only contain characters from a-z, dashes, underscores or dots. It cannot end
-with a dash, underscore or dot. The plugin name does <strong>not</strong> have such a limitation and can even contain spaces or
-special characters.</p>
+<p class="last">ID плагина может содержать исключительно символы a-z в нижнем регистре, дефис, нижний дефис и точки. Он не может заканчивается дефисом, нижним дефисом или точкой. Имя плагина <strong>не</strong> содержит каких-либо ограничений, и может содержать даже пробелы и специальные символы.</p>
 </div>
-<p>Keep in mind your plugin ID will be the main identification of your plugin, used in other plugins as dependencies, for
-your configuration files, as well as other properties stored for your plugin. That&#8217;s why it is important you always
-choose a proper plugin ID directly, because changing it again later will be difficult.</p>
-<p>Continue at <a class="reference internal" href="plugin-class.html"><em>Основной класс плагина</em></a> for an introduction how to set up your plugin class.</p>
+<p>Имейте в виду, ваш ID плагина будет основной идентификацией вашего плагина, который будет использоваться как зависимость в других плагинах, для файлов конфигурации, и также для многих других настроек хранимых вашим плагином.
+Во почему важно сразу выбрать правильный ID плагина, так как изменить его позже будет гораздо сложнее.</p>
+<p>Смотрите <a class="reference internal" href="plugin-class.html"><em>Основной класс плагина</em></a> для подробней по настройке главного класса вашего плагина.</p>
 </div>
 
 
