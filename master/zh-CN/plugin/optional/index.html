@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Optionals &mdash; Sponge 4.1.0 文档</title>
+     <title>使用 Optional &mdash; Sponge 4.1.0 文档</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -35,7 +35,7 @@
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 4.1.0 文档" href="../../index.html" />
         <link rel="up" title="插件开发" href="../index.html" />
-        <link rel="next" title="Optionals Explained" href="basic.html" />
+        <link rel="next" title="对于 Optional 的解释" href="basic.html" />
         <link rel="prev" title="最佳做法" href="../practices.html" />
     
   <script type="text/javascript">
@@ -258,11 +258,11 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">插件开发</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../buildsystem.html">Build Systems</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../buildsystem.html">构建系统</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../workspace/index.html">建立工作目录</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../workspace/idea.html">架设Intellij IDEA</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../workspace/idea.html">设置 IntelliJ IDEA</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../workspace/eclipse.html">安装和使用Eclipse</a><ul class="simple">
@@ -280,23 +280,23 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">插件标识符</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Main Plugin Class</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">插件的主类</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../lifecycle.html">插件周期</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../injection.html">注入依赖项</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../injection.html">依赖注入</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../practices.html">最佳做法</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Optionals</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="basic.html">Optionals Explained</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="">使用 Optional</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="basic.html">对于 Optional 的解释</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="usage.html">Usage Examples</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="usage.html">用法示例</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -304,7 +304,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../logging.html">日志记录和调试</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../commands/index.html">命令</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../commands/creating.html">创建一个命令</a><ul class="simple">
 </ul>
 </li>
@@ -399,7 +399,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">Tile Entity</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../blocks/virtualblock.html">Virtual Block Changes</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../blocks/virtualblock.html">虚拟方块更改</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -573,18 +573,16 @@
                 <div class="body" role="main">
                   
   <div class="section" id="optionals">
-<h1>Optionals<a class="headerlink" href="#optionals" title="永久链接至标题">¶</a></h1>
-<p><code class="docutils literal"><span class="pre">Optional</span></code>s are a feature widely used in the SpongeAPI. This section tries to explain why we need them and how
-they&#8217;re used. If you already know why we use <code class="docutils literal"><span class="pre">Optional</span></code>s, just head directly to the <a class="reference internal" href="usage.html"><em>Usage Examples</em></a> section. If you&#8217;re
-unsure what they are, what they do and why we need them, then <a class="reference internal" href="basic.html"><em>Optionals Explained</em></a> should be the first chapter to read.</p>
+<h1>使用 Optional<a class="headerlink" href="#optionals" title="永久链接至标题">¶</a></h1>
+<p><code class="docutils literal"><span class="pre">Optional</span></code> 是一种被 SpongeAPI 广泛使用的特性。这一节会去试图解释为什么我们需要 <code class="docutils literal"><span class="pre">Optional</span></code> 而且它们是怎么运用的。如果你已经知道 <code class="docutils literal"><span class="pre">Optional</span></code> 是什么了，只需要直接去阅读 <a class="reference internal" href="usage.html"><em>用法示例</em></a> 这一节就可以了。如果你不是很确定它们是什么，它们做了些什么，和我们为什么需要它们，那么你可能应该先从 <a class="reference internal" href="basic.html"><em>对于 Optional 的解释</em></a> 这一节开始。</p>
 <div class="section" id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="永久链接至标题">¶</a></h2>
+<h2>目录<a class="headerlink" href="#contents" title="永久链接至标题">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="basic.html">Optionals Explained</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="basic.html">对于 Optional 的解释</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="usage.html">Usage Examples</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="usage.html">用法示例</a><ul class="simple">
 </ul>
 </li>
 </ul>

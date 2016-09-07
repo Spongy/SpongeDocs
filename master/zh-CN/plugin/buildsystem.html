@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Build Systems &mdash; Sponge 4.1.0 文档</title>
+     <title>构建系统 &mdash; Sponge 4.1.0 文档</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -258,11 +258,11 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">插件开发</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">Build Systems</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="">构建系统</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="workspace/index.html">建立工作目录</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="workspace/idea.html">架设Intellij IDEA</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="workspace/idea.html">设置 IntelliJ IDEA</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="workspace/eclipse.html">安装和使用Eclipse</a><ul class="simple">
@@ -280,23 +280,23 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="plugin-identifier.html">插件标识符</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plugin-class.html">Main Plugin Class</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="plugin-class.html">插件的主类</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="lifecycle.html">插件周期</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="injection.html">注入依赖项</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="injection.html">依赖注入</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="practices.html">最佳做法</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="optional/index.html">Optionals</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="optional/basic.html">Optionals Explained</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="optional/index.html">使用 Optional</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optional/basic.html">对于 Optional 的解释</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="optional/usage.html">Usage Examples</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="optional/usage.html">用法示例</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -304,7 +304,7 @@
 <li class="toctree-l2"><a class="reference internal" href="logging.html">日志记录和调试</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="commands/index.html">Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/index.html">命令</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="commands/creating.html">创建一个命令</a><ul class="simple">
 </ul>
 </li>
@@ -399,7 +399,7 @@
 <li class="toctree-l3"><a class="reference internal" href="blocks/tileentities.html">Tile Entity</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="blocks/virtualblock.html">Virtual Block Changes</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="blocks/virtualblock.html">虚拟方块更改</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -573,60 +573,40 @@
                 <div class="body" role="main">
                   
   <div class="section" id="build-systems">
-<h1>Build Systems<a class="headerlink" href="#build-systems" title="永久链接至标题">¶</a></h1>
-<p>Build systems such as <a class="reference external" href="https://gradle.org/">Gradle</a> or <a class="reference external" href="https://maven.apache.org/">Maven</a> can manage the build process of your projects. As an independent tool from your
-IDE, you can use them to manage your dependency on SpongeAPI or other plugins and give other people an easy way to
-build your plugin from the source.</p>
+<h1>构建系统<a class="headerlink" href="#build-systems" title="永久链接至标题">¶</a></h1>
+<p>一些诸如 <a class="reference external" href="https://gradle.org/">Gradle</a> 或者 <a class="reference external" href="https://maven.apache.org/">Maven</a> 等构建系统可以帮助你管理你的项目的构建过程。作为一个和 IDE 无关的工具，你可以使用它们来管理你对 SpongeAPI 或者其他的插件的依赖，同时给予其他人一种方便的方式通过源代码构建你的插件。</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">SpongeAPI does <strong>not</strong> require using a build system for creating plugins, however we strongly recommend using one.
-Except the short explanation at <a class="reference internal" href="#creating-a-plugin-without-a-build-system">Creating a plugin without a build system</a>, the following parts will assume you&#8217;re
-using a build system, which can manage the dependencies for you.</p>
+<p class="last">SpongeAPI 并**不**使用构建系统创建插件，然而我们强烈建议使用一个。除了 <a class="reference internal" href="#creating-a-plugin-without-a-build-system">不使用构建系统创建插件</a> 这一部分，下面的部分将假设你正在使用一个可以方便地管理依赖的构建系统。</p>
 </div>
-<p>Generally, you can use any build system which supports <em>Maven dependencies</em>, which is a standard supported by the
-majority of build systems for Java projects. The following sections will focus on <a class="reference external" href="https://gradle.org/">Gradle</a> and <a class="reference external" href="https://maven.apache.org/">Maven</a>, which are the two
-most common choices as build systems. If you&#8217;re unsure which one to use we recommend using <a class="reference external" href="https://gradle.org/">Gradle</a> as it is also used
-for the Sponge projects and provides the best integration for Sponge plugins.</p>
+<p>一般来说，你可以使用任何支持 <strong>Maven 依赖</strong> 的构建系统，这也是绝大多数的 Java 项目构建系统支持的一项。下面的部分将侧重于 <a class="reference external" href="https://gradle.org/">Gradle</a> 和 <a class="reference external" href="https://maven.apache.org/">Maven</a> 这两个最常见的用于构建的选择。如果你不太确信使用哪个系统更合适，我们推荐你使用 <a class="reference external" href="https://gradle.org/">Gradle</a> ，因为 Sponge 项目也在使用 <a class="reference external" href="https://gradle.org/">Gradle</a> ，此外，<a class="reference external" href="https://gradle.org/">Gradle</a> 同时也可以保证和 Sponge 插件的最佳整合。</p>
 <div class="section" id="gradle">
 <h2>Gradle<a class="headerlink" href="#gradle" title="永久链接至标题">¶</a></h2>
-<p><a class="reference external" href="https://gradle.org/">Gradle</a> uses <a class="reference external" href="http://www.groovy-lang.org/">Groovy</a>-based scripts for configuring projects. A <a class="reference external" href="https://gradle.org/">Gradle</a> project typically consists of a <code class="docutils literal"><span class="pre">build.gradle</span></code>
-file in your project&#8217;s root directory, which tells <a class="reference external" href="https://gradle.org/">Gradle</a> how to build the project.</p>
+<p><a class="reference external" href="https://gradle.org/">Gradle</a> 使用基于 <a class="reference external" href="http://www.groovy-lang.org/">Groovy</a> 的脚本来配置项目。一个 <a class="reference external" href="https://gradle.org/">Gradle</a> 项目通常包含在你的项目的根目录中，并通过 <code class="docutils literal"><span class="pre">build.gradle</span></code> 这一文件告诉 <a class="reference external" href="https://gradle.org/">Gradle</a> 如何构建这一项目。</p>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>
-<p class="last">Refer to the <a class="reference external" href="https://docs.gradle.org/current/userguide/userguide.html">Gradle User Guide</a> for the installation and a general introduction of concepts used in <a class="reference external" href="https://gradle.org/">Gradle</a>. If
-you&#8217;re only interested in how to use <a class="reference external" href="https://gradle.org/">Gradle</a> for a simple Java project, a good place to start would be the <a class="reference external" href="https://docs.gradle.org/current/userguide/tutorial_java_projects.html">Gradle
-Java Quickstart</a>.</p>
+<p class="last">请参阅 <a class="reference external" href="https://docs.gradle.org/current/userguide/userguide.html">Gradle User Guide</a> 以了解 <a class="reference external" href="https://gradle.org/">Gradle</a> 是如何安装的和一些 <a class="reference external" href="https://gradle.org/">Gradle</a> 中的一般概念 。如果你只是对如何把 <a class="reference external" href="https://gradle.org/">Gradle</a> 应用于一个新的 Java 项目感兴趣，那么你可以先考虑从 <a class="reference external" href="https://docs.gradle.org/current/userguide/tutorial_java_projects.html">Gradle Java Quickstart</a> 开始。</p>
 </div>
-<p>Setup your workspace as explained in <a class="reference internal" href="workspace/index.html"><em>建立工作目录</em></a> then follow <a class="reference internal" href="project/gradle.html"><em>设置 Gradle</em></a>.</p>
+<p>首先以 <a class="reference internal" href="workspace/index.html"><em>建立工作目录</em></a> 介绍的方式设置你的开发环境，然后按照 <a class="reference internal" href="project/gradle.html"><em>设置 Gradle</em></a> 说的去做。</p>
 </div>
 <div class="section" id="maven">
 <h2>Maven<a class="headerlink" href="#maven" title="永久链接至标题">¶</a></h2>
-<p><a class="reference external" href="https://maven.apache.org/">Maven</a> uses a XML-based configuration called <a class="reference external" href="https://maven.apache.org/guides/introduction/introduction-to-the-pom.html">Project Object Model</a> (or <em>POM</em>) for configuring projects.
-A <a class="reference external" href="https://maven.apache.org/">Maven</a> project typically contains a <code class="docutils literal"><span class="pre">pom.xml</span></code> file in the project root directory which tells <a class="reference external" href="https://maven.apache.org/">Maven</a> how to
-build the project.</p>
+<p><a class="reference external" href="https://maven.apache.org/">Maven</a> 使用基于 XML 的配置，又称为 <a class="reference external" href="https://maven.apache.org/guides/introduction/introduction-to-the-pom.html">Project Object Model</a> (or <em>POM</em>) 以完成对项目的配置。一个典型的 <a class="reference external" href="https://maven.apache.org/">Maven</a> 项目在其根目录包含一个 <code class="docutils literal"><span class="pre">pom.xml</span></code> 文件，这一文件告诉 <a class="reference external" href="https://maven.apache.org/">Maven</a> 如何构建一个项目。</p>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>
-<p class="last">Refer to the <a class="reference external" href="https://maven.apache.org/users/index.html">Maven Users Centre</a> for the installation and a general introduction of concepts used in <a class="reference external" href="https://maven.apache.org/">Maven</a>. If
-you&#8217;re only interested in how to use <a class="reference external" href="https://maven.apache.org/">Maven</a> for a simple Java project, a good place to start would be <a class="reference external" href="https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html">Maven in 5
-Minutes</a>.</p>
+<p class="last">请参阅 <a class="reference external" href="https://maven.apache.org/users/index.html">Maven User Guide</a> 以了解 <a class="reference external" href="https://maven.apache.org/">Maven</a> 是如何安装的和一些 <a class="reference external" href="https://maven.apache.org/">Maven</a> 中的一般概念 。如果你只是对如何把 <a class="reference external" href="https://maven.apache.org/">Maven</a> 应用于一个新的 Java 项目感兴趣，那么你可以先考虑从 <a class="reference external" href="https://maven.apache.org/guides/getting-started/maven-in-five-minutes.html">Maven in 5 Minutes</a> 开始。</p>
 </div>
-<p>Setup your workspace as explained in <a class="reference internal" href="workspace/index.html"><em>建立工作目录</em></a> then follow <a class="reference internal" href="project/maven.html"><em>设置 Maven</em></a>.</p>
+<p>首先以 <a class="reference internal" href="workspace/index.html"><em>建立工作目录</em></a> 介绍的方式设置你的开发环境，然后按照 <a class="reference internal" href="project/maven.html"><em>设置 Maven</em></a> 说的去做。</p>
 </div>
 <div class="section" id="creating-a-plugin-without-a-build-system">
-<h2>Creating a plugin without a build system<a class="headerlink" href="#creating-a-plugin-without-a-build-system" title="永久链接至标题">¶</a></h2>
-<p>It is also possible to create Sponge plugins without the use of a build system, only with the included tools in your
-IDE.</p>
+<h2>不使用构建系统创建插件<a class="headerlink" href="#creating-a-plugin-without-a-build-system" title="永久链接至标题">¶</a></h2>
+<p>创建一个 Sponge 插件也可以完全不使用任何构建系统，而只使用你手上的 IDE。</p>
 <div class="admonition warning">
 <p class="first admonition-title">警告</p>
-<p class="last"><strong>We strongly suggest against using SpongeAPI without a build system.</strong> In the long term using a build system will
-simplify the development process for you and other people wanting to contribute to your project. This method of
-developing plugins does not receive active testing by the Sponge team.</p>
+<p class="last"><strong>我们强烈建议不要在没有构建系统的情况下使用 SpongeAPI</strong>。在一个长期的开发过程中，使用构建系统会大大简化你和想要参与协助开发的其他人的开发流程。这种开发 Sponge 插件的方式不会收到 Sponge 团队的主动测试。</p>
 </div>
-<p>For developing plugins without a build system you need to download the SpongeAPI dependency manually from the
-<a class="reference external" href="https://repo.spongepowered.org/maven/org/spongepowered/spongeapi/">SpongeAPI Download Page</a>. For developing without a build system, we provide the <code class="docutils literal"><span class="pre">shaded</span></code> artifact which bundles all
-dependencies that would normally be automatically downloaded by the build system.</p>
-<p>After you have downloaded the <code class="docutils literal"><span class="pre">shaded</span></code> artifact and have added it to a project in your IDE, you can start developing
-your plugin. Continue at <a class="reference internal" href="plugin-identifier.html"><em>插件标识符</em></a> for choosing an identifier for your project, then continue at <a class="reference internal" href="plugin-class.html"><em>Main Plugin Class</em></a>.</p>
+<p>如果你不想使用构建系统开发 Sponge 插件，你需要从 <a class="reference external" href="https://repo.spongepowered.org/maven/org/spongepowered/spongeapi/">SpongeAPI Download Page</a> 中手动下载 SpongeAPI 依赖。为了不使用构建系统开发，我们提供一个 <code class="docutils literal"><span class="pre">shaded</span></code> 文件，这一文件把所有本应该使用构建系统自动下载的依赖集中到了一起。</p>
+<p>在你下载完 <code class="docutils literal"><span class="pre">shaded</span></code> 文件并将其添加到你的 IDE 中的项目后，你可以开始开发你的插件了。你可以依照 <a class="reference internal" href="plugin-identifier.html"><em>插件标识符</em></a> 这一部分选择你的插件 ID，然后你可以依照 <a class="reference internal" href="plugin-class.html"><em>插件的主类</em></a> 继续你的工作。</p>
 </div>
 </div>
 

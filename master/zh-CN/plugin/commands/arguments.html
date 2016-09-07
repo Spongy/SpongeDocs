@@ -34,7 +34,7 @@
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 4.1.0 文档" href="../../index.html" />
-        <link rel="up" title="Commands" href="index.html" />
+        <link rel="up" title="命令" href="index.html" />
         <link rel="next" title="Command Flags" href="flags.html" />
         <link rel="prev" title="创建一个命令" href="creating.html" />
     
@@ -157,7 +157,7 @@
         <ul>
         <li><a href="../../index.html">Sponge 4.1.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >插件开发</a><i class="fa fa-fw fa-chevron-right"></i></li>
-        <li><a href="index.html" accesskey="U">Commands</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="index.html" accesskey="U">命令</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
     <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -259,11 +259,11 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">插件开发</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../buildsystem.html">Build Systems</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../buildsystem.html">构建系统</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../workspace/index.html">建立工作目录</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../workspace/idea.html">架设Intellij IDEA</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../workspace/idea.html">设置 IntelliJ IDEA</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../workspace/eclipse.html">安装和使用Eclipse</a><ul class="simple">
@@ -281,23 +281,23 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">插件标识符</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Main Plugin Class</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">插件的主类</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../lifecycle.html">插件周期</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../injection.html">注入依赖项</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../injection.html">依赖注入</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../practices.html">最佳做法</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../optional/index.html">Optionals</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../optional/basic.html">Optionals Explained</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../optional/index.html">使用 Optional</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../optional/basic.html">对于 Optional 的解释</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../optional/usage.html">Usage Examples</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../optional/usage.html">用法示例</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -305,7 +305,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../logging.html">日志记录和调试</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Commands</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">命令</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="creating.html">创建一个命令</a><ul class="simple">
 </ul>
 </li>
@@ -400,7 +400,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">Tile Entity</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../blocks/virtualblock.html">Virtual Block Changes</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../blocks/virtualblock.html">虚拟方块更改</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -575,22 +575,14 @@
                   
   <div class="section" id="argument-parsing">
 <h1>参数分析<a class="headerlink" href="#argument-parsing" title="永久链接至标题">¶</a></h1>
-<p>The Command Builder API comes with a powerful argument parser. It converts the string input to java base types
-(integers, booleans, strings) or game objects (players, worlds, block types , ...). The parser supports optional
-arguments and flags. It also handles TAB completion of arguments.</p>
-<p>The parsed arguments are stored in the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/CommandContext.html">CommandContext</a> object. If the parser returns a single object, obtain
-it with <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/CommandContext.html#getOne-java.lang.String-">CommandContext#getOne(String)</a>. Optional and weak arguments may return <code class="docutils literal"><span class="pre">Optional.empty()</span></code>.</p>
-<p>Many of the parsers may return more than one object (e.g. multiple players with a matching username). In that case, you
-must use the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/CommandContext.html#getAll-java.lang.String-">CommandContext#getAll(String)</a> method to get the <code class="docutils literal"><span class="pre">Collection</span></code> of possible matches.
-<strong>Otherwise, the context object will throw an exception!</strong></p>
+<p>命令生成器（Command Builder）的 API 附带了一个非常强大的参数解析器。它把字符串输入转换为 Java 的基本类型（整数、布尔值、字符串）或游戏中的对象（玩家、世界、方块类型等）。这一解析器支持可选参数和标志，它同时也可以处理使用 TAB 的参数自动补全。</p>
+<p>解析过的参数存储在 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/CommandContext.html">CommandContext</a> 对象中。如果解析器返回了单个对象，可以通过 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/CommandContext.html#getOne-java.lang.String-">CommandContext#getOne(String)</a> 获取。可选参数和弱参数可能会返回 <code class="docutils literal"><span class="pre">Optional.empty()</span></code>。</p>
+<p>很多解析器可能会返回多个对象（例如匹配用户名的多个玩家）。在这种情况下，你必须使用 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/CommandContext.html#getAll-java.lang.String-">CommandContext#getAll(String)</a> 以获取所有可能的匹配项对应的 <code class="docutils literal"><span class="pre">Collection</span></code>，<strong>否则上下文对象会抛出异常</strong>！</p>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>
-<p class="last">You can use the
-<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/GenericArguments.html#onlyOne-org.spongepowered.api.command.args.CommandElement-">GenericArguments#onlyOne(CommandElement)</a> element to limit the amount of returned values to a single one,
-so you can safely use <code class="docutils literal"><span class="pre">args.&lt;T&gt;getOne(String)</span></code>.</p>
+<p class="last">你可以使用 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/GenericArguments.html#onlyOne-org.spongepowered.api.command.args.CommandElement-">GenericArguments#onlyOne(CommandElement)</a> 限制返回数量只有一个，这样你就可以安全地使用 <code class="docutils literal"><span class="pre">args.&lt;T&gt;getOne(String)</span></code> 了。</p>
 </div>
-<p>To create a new <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/CommandElement.html">CommandElement</a> (argument), use the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/GenericArguments.html">GenericArguments</a> factory class. Many command
-elements require a short text key, which is displayed in error and help messages.</p>
+<p>若要创建一个新的 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/CommandElement.html">CommandElement</a> （参数），请使用 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/GenericArguments.html">GenericArguments</a> 这一工厂类（Factory Class）。许多 <code class="docutils literal"><span class="pre">CommandElement</span></code> 都需要一段短文本用于显示帮助或错误信息。</p>
 <p>Apply the <code class="docutils literal"><span class="pre">CommandElement</span></code> to the command builder with the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/spec/CommandSpec.Builder.html#arguments-CommandElement...-">CommandSpec.Builder#arguments(CommandElement...)</a>
 method. It is possible to pass more than one <code class="docutils literal"><span class="pre">CommandElement</span></code> to the method, thus chaining multiple arguments (e.g
 <code class="docutils literal"><span class="pre">/msg</span> <span class="pre">&lt;player&gt;</span> <span class="pre">&lt;msg&gt;</span></code>). This has the same effect as wrapping the <code class="docutils literal"><span class="pre">CommandElement</span></code> objects in a

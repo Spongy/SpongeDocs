@@ -259,11 +259,11 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">插件开发</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../buildsystem.html">Build Systems</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../buildsystem.html">构建系统</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../workspace/index.html">建立工作目录</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../workspace/idea.html">架设Intellij IDEA</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../workspace/idea.html">设置 IntelliJ IDEA</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../workspace/eclipse.html">安装和使用Eclipse</a><ul class="simple">
@@ -281,23 +281,23 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">插件标识符</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Main Plugin Class</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">插件的主类</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../lifecycle.html">插件周期</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../injection.html">注入依赖项</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../injection.html">依赖注入</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../practices.html">最佳做法</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../optional/index.html">Optionals</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../optional/basic.html">Optionals Explained</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../optional/index.html">使用 Optional</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../optional/basic.html">对于 Optional 的解释</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../optional/usage.html">Usage Examples</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../optional/usage.html">用法示例</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -305,7 +305,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../logging.html">日志记录和调试</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../commands/index.html">命令</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../commands/creating.html">创建一个命令</a><ul class="simple">
 </ul>
 </li>
@@ -400,7 +400,7 @@
 <li class="toctree-l3"><a class="reference internal" href="tileentities.html">Tile Entity</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="virtualblock.html">Virtual Block Changes</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="virtualblock.html">虚拟方块更改</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -577,8 +577,7 @@
 <h1>访问方块<a class="headerlink" href="#accessing-blocks" title="永久链接至标题">¶</a></h1>
 <div class="section" id="basic-information">
 <h2>基本信息<a class="headerlink" href="#basic-information" title="永久链接至标题">¶</a></h2>
-<p>Blocks are most commonly identified and accessed by their <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/Location.html">Location</a>. This location points to a certain
-coordinate within an <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/extent/Extent.html">Extent</a>. In most cases a <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/World.html">World</a> will be used as the <code class="docutils literal"><span class="pre">Extent</span></code>.</p>
+<p>方块一般可以通过他们的 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/Location.html">Location</a> （位置） 来识别和访问。这个位置指向到一个 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/extent/Extent.html">Extent</a> （地域） 的特定坐标中。在大多数情况下，一个 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/World.html">World</a> （世界） 会被用作地域。</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.Sponge</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.world.Location</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.world.World</span><span class="o">;</span>
@@ -607,16 +606,12 @@ coordinate within an <a class="reference external" href="https://jd.spongepowere
 </div>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>
-<p class="last">The function <code class="docutils literal"><span class="pre">==</span></code> could be used in place of <code class="docutils literal"><span class="pre">equals()</span></code> as there is only one <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/block/BlockType.html">BlockType</a> instance for
-every block, however it is generally recommended to use <code class="docutils literal"><span class="pre">equals()</span></code>.</p>
+<p class="last">运算符``==``可以被用来替换掉``equals()``方法，因为对于每个方块，它们分别只有一个 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/block/BlockType.html">BlockType</a> 实例，尽管我们仍然建议使用``equals()``。</p>
 </div>
 </div>
 <div class="section" id="block-data-manipulators">
 <h2>操作方块数据<a class="headerlink" href="#block-data-manipulators" title="永久链接至标题">¶</a></h2>
-<p>The data of a block is held as a <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/DataManipulator.html">DataManipulator</a>, similar to other parts of the API. This is the container
-that holds information on components of our block such as the orientation of a block, specific types (stone vs.
-granite), and so on. Checking the values of these manipulators is easy, you just need to check the block&#8217;s direction
-<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/block/DirectionalData.html">DirectionalData</a>.</p>
+<p>和API的其他部分的存储方式类似，一个方块的数据被以 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/DataManipulator.html">DataManipulator</a> 的方式存储。它是一个存储了方块的各种角度的信息的容器。这样的信息有方块的方向、特殊类型（例如石头和花岗岩）等。获取这样的数据是十分简单的，如果想要获取方块的方向，你只需要使用 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/block/DirectionalData.html">DirectionalData</a>。</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.data.key.Keys</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.data.manipulator.mutable.block.DirectionalData</span><span class="o">;</span>
 
@@ -633,11 +628,7 @@ granite), and so on. Checking the values of these manipulators is easy, you just
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>First, we need to know which <code class="docutils literal"><span class="pre">DataManipulator</span></code> sub-interface we need. Those that are applicable to blocks are found
-in the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/package-summary.html">org.spongepowered.api.data.manipulator.mutable</a> and
-<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/block/package-summary.html">org.spongepowered.api.data.manipulator.mutable.block</a> packages. Then, we can just pass that class to the
-<code class="docutils literal"><span class="pre">get(DataManipulator)</span></code> method of <code class="docutils literal"><span class="pre">Location</span></code> which will return an <code class="docutils literal"><span class="pre">Optional</span></code>. We then have to check if our
-<code class="docutils literal"><span class="pre">DataManipulator</span></code> actually exists for our block by checking <code class="docutils literal"><span class="pre">ifPresent()</span></code>. If it exists, then we can use it.</p>
+<p>首先，我们需要知道我们需要的``DataManipulator``的子接口是什么样子。我们可以在 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/package-summary.html">org.spongepowered.api.data.manipulator.mutable</a> 和 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/block/package-summary.html">org.spongepowered.api.data.manipulator.mutable.block</a> 两个包下找到适用于方块的部分。然后，我们直接把对应的class传入 <code class="docutils literal"><span class="pre">Location</span></code> 类的 <code class="docutils literal"><span class="pre">get(DataManipulator)</span></code> 方法从而返回一个 <code class="docutils literal"><span class="pre">Optional</span></code> 。然后我们就需要通过 <code class="docutils literal"><span class="pre">isPresent()</span></code> （译者注：原文为 <code class="docutils literal"><span class="pre">ifPresent()</span></code> ，怀疑其笔误）方法判断这一 <code class="docutils literal"><span class="pre">DataManipulator</span></code> 是否真的存在，如果存在，我们就可以使用它了。</p>
 <p>更多和``DataManipulator``有关的东西可以在 <a class="reference internal" href="../data/datamanipulators.html"><em>data documentation</em></a> 中找到。</p>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>
@@ -646,9 +637,7 @@ in the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/or
 </div>
 <div class="section" id="block-states">
 <h2>方块状态<a class="headerlink" href="#block-states" title="永久链接至标题">¶</a></h2>
-<p>A <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/block/BlockState.html">BlockState</a> contains a <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/block/BlockType.html">BlockType</a>,  any <code class="docutils literal"><span class="pre">DataManipulator</span></code>s and properties that are applied to
-the block, and any <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/block/trait/BlockTrait.html">BlockTrait</a>s for a block. It stores all immutable value&#8217;s for a particular block. One
-use of this is getting an <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/ImmutableDataManipulator.html">ImmutableDataManipulator</a>, as shown below:</p>
+<p>一个 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/block/BlockState.html">BlockState</a> 包含一个 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/block/BlockType.html">BlockType</a>，任何应用于一个方块的``DataManipulator``和属性，和任何属于一个方块的 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/block/trait/BlockTrait.html">BlockTrait</a> 。它储存了一个特定的方块的所有不可变数据。一种用法是获取一个 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/ImmutableDataManipulator.html">ImmutableDataManipulator</a>，就像下面这样：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.block.BlockState</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.data.manipulator.immutable.ImmutableWetData</span><span class="o">;</span>
 
@@ -683,14 +672,8 @@ use of this is getting an <a class="reference external" href="https://jd.spongep
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>This will get the blast resistance of our block and compare it to a new <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/property/DoubleProperty.html">DoubleProperty</a>, as
-<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/property/block/BlastResistanceProperty.html">BlastResistanceProperty</a> inherits from <code class="docutils literal"><span class="pre">DoubleProperty</span></code>. The method will then return if the blast
-resistance of our block is greater than one, the value in placed <code class="docutils literal"><span class="pre">matches()</span></code>. If we wanted to see if it was less than
-two, we would replace it with <code class="docutils literal"><span class="pre">lessThan()</span></code>.</p>
-<p>If we were comparing two pre-existing properties, it will take the <code class="docutils literal"><span class="pre">Operator</span></code> of our first value, the one we are
-creating a double property for. If the <code class="docutils literal"><span class="pre">Operator</span></code> is <code class="docutils literal"><span class="pre">DELEGATE</span></code>, which is the none operator, then it will take the
-<code class="docutils literal"><span class="pre">Operator</span></code> of the second value, the one in <code class="docutils literal"><span class="pre">matches()</span></code>. Comparison will return false if both are <code class="docutils literal"><span class="pre">DELEGATE</span></code>.
-An example of comparing two <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/property/block/PoweredProperty.html">PoweredProperty</a>s, a <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/property/BooleanProperty.html">BooleanProperty</a>, can be seen below:</p>
+<p>这就可以得到我们针对的方块的爆炸抗性值并和一个新 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/property/DoubleProperty.html">DoubleProperty</a> 进行比较，因为 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/property/block/BlastResistanceProperty.html">BlastResistanceProperty</a> 是``DoubleProperty``的子类。这一方法就会返回爆炸抗性是否大于等于一，也就是被放置在``matches()``方法里的``DoubleProperty``。如果我们想要知道它是否比二小，我们就会把相应的方法替换成``lessThan()``。</p>
+<p>如果我们在比较两个已经存在的属性，那么先会判断第一个的``Operator``，这里也就是我们设置的``DoubleProperty``的``Operator``。如果它是``DELEGATE``，也就是并不存在，那么它就会获取第二个的``Operator``，也就是``matches()``中的属性的``Operator``。如果两个属性的``Operator``都是``DELEGATE``，那么它将会返回假。下面是比较两个 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/property/block/PoweredProperty.html">PoweredProperty</a> 和一个 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/property/BooleanProperty.html">BooleanProperty</a> 的例子：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.data.property.block.PoweredProperty</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">areBlocksPowered</span><span class="o">(</span><span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">blockLoc</span><span class="o">,</span> <span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">blockLoc2</span><span class="o">)</span> <span class="o">{</span>
@@ -712,15 +695,11 @@ An example of comparing two <a class="reference external" href="https://jd.spong
 </pre></div>
 </div>
 <p>第二个``if``条件判断其中一个属性是否为真。如果其为真而且两个属性一致，那么两个属性自然都为真。因此，我们不需要检查第二个值就可以知道两个方块都是被充能的。</p>
-<p>A list of possible block properties can be found in the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/property/block/package-summary.html">org.spongepowered.api.data.property.block</a> package.</p>
+<p>可能的方块属性列表可以在 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/property/block/package-summary.html">org.spongepowered.api.data.property.block</a> 下找到。</p>
 </div>
 <div class="section" id="block-traits">
 <h2>方块特性<a class="headerlink" href="#block-traits" title="永久链接至标题">¶</a></h2>
-<p>A block trait is a certain value on the current state of a block. A block may or may not contain block traits depending
-on the type of block. For example, a bed has a <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/block/trait/BooleanTrait.html">BooleanTrait</a> called
-<code class="docutils literal"><span class="pre">BED_OCCUPIED</span></code>. As a boolean can only have two values, true and false, the <code class="docutils literal"><span class="pre">BED_OCCUPIED</span></code> trait can only be true or
-false. Checking this value is simple, just call the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/block/BlockState.html#getTraitValue-org.spongepowered.api.block.trait.BlockTrait-">BlockState#getTraitValue(BlockTrait)</a> method. An example
-of this with a bed is shown below:</p>
+<p>方块特性是一个方块的当前状态的确定值。一个方块可能或不可能包含方块特性取决于方块的种类。例如：方块“床”有一个名为``BED_OCCUPIED``的方块特性， <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/block/trait/BooleanTrait.html">BooleanTrait</a> 。作为一个布尔值它只有真或假两种可能值，所以方块特性``BED_OCCUPIED``也只可能为真或假。检查这一特性值十分简单，只需要调用 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/block/BlockState.html#getTraitValue-org.spongepowered.api.block.trait.BlockTrait-">BlockState#getTraitValue(BlockTrait)</a> 方法就可以了。一种针对床的例子如下：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.block.trait.BooleanTraits</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isBedOccupied</span><span class="o">(</span><span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">blockLoc</span><span class="o">)</span> <span class="o">{</span>

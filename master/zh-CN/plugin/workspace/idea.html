@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>架设Intellij IDEA &mdash; Sponge 4.1.0 文档</title>
+     <title>设置 IntelliJ IDEA &mdash; Sponge 4.1.0 文档</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -259,11 +259,11 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">插件开发</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../buildsystem.html">Build Systems</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../buildsystem.html">构建系统</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">建立工作目录</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="">架设Intellij IDEA</a><ul class="simple">
+<li class="toctree-l3 current"><a class="current reference internal" href="">设置 IntelliJ IDEA</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="eclipse.html">安装和使用Eclipse</a><ul class="simple">
@@ -281,23 +281,23 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin-identifier.html">插件标识符</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">Main Plugin Class</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin-class.html">插件的主类</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../lifecycle.html">插件周期</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../injection.html">注入依赖项</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../injection.html">依赖注入</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../practices.html">最佳做法</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../optional/index.html">Optionals</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../optional/basic.html">Optionals Explained</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../optional/index.html">使用 Optional</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../optional/basic.html">对于 Optional 的解释</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../optional/usage.html">Usage Examples</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../optional/usage.html">用法示例</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -305,7 +305,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../logging.html">日志记录和调试</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../commands/index.html">Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../commands/index.html">命令</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../commands/creating.html">创建一个命令</a><ul class="simple">
 </ul>
 </li>
@@ -400,7 +400,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">Tile Entity</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../blocks/virtualblock.html">Virtual Block Changes</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../blocks/virtualblock.html">虚拟方块更改</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -574,7 +574,7 @@
                 <div class="body" role="main">
                   
   <div class="section" id="setting-up-intellij-idea">
-<h1>架设Intellij IDEA<a class="headerlink" href="#setting-up-intellij-idea" title="永久链接至标题">¶</a></h1>
+<h1>设置 IntelliJ IDEA<a class="headerlink" href="#setting-up-intellij-idea" title="永久链接至标题">¶</a></h1>
 <p>This article describes how to configure your <strong>IntelliJ IDEA</strong> workspace for plugin development with SpongeAPI and
 <a class="reference internal" href="../buildsystem.html"><em>a build system such as Maven or Gradle</em></a>.</p>
 <div class="section" id="gradle">
@@ -589,7 +589,7 @@
 <li><p class="first">选择``Gradle``分项，然后单击``Next``。</p>
 </li>
 <li>Enter your <strong>Group ID</strong>, <strong>Artifact ID</strong>, and <strong>Version</strong>.<ul>
-<li>Your <strong>Group ID</strong> should usually correspond to your Java package name. See <a class="reference internal" href="../plugin-class.html"><em>Main Plugin Class</em></a> for details.</li>
+<li>Your <strong>Group ID</strong> should usually correspond to your Java package name. See <a class="reference internal" href="../plugin-class.html"><em>插件的主类</em></a> for details.</li>
 <li>Your <strong>Artifact ID</strong> should usually correspond to your <strong>plugin ID</strong> you chose earlier, e.g. <code class="docutils literal"><span class="pre">myplugin</span></code>.</li>
 <li>Your <strong>Version</strong> is up to you.</li>
 </ul>
@@ -628,7 +628,7 @@ of re-creating it inside your IDE:</p>
 </li>
 <li>Select <code class="docutils literal"><span class="pre">Maven</span></code> in the popup, and click <code class="docutils literal"><span class="pre">Next</span></code>.</li>
 <li>Enter your <strong>Group ID</strong>, <strong>Artifact ID</strong>, and <strong>Version</strong>.<ul>
-<li>Your <strong>Group ID</strong> should usually correspond to your Java package name. See <a class="reference internal" href="../plugin-class.html"><em>Main Plugin Class</em></a> for details.</li>
+<li>Your <strong>Group ID</strong> should usually correspond to your Java package name. See <a class="reference internal" href="../plugin-class.html"><em>插件的主类</em></a> for details.</li>
 <li>Your <strong>Artifact ID</strong> should usually correspond to your <strong>plugin ID</strong> you chose earlier, e.g. <code class="docutils literal"><span class="pre">myplugin</span></code>.</li>
 <li>Your <strong>Version</strong> is up to you.</li>
 </ul>

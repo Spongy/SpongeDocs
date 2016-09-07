@@ -35,7 +35,7 @@
       <link rel="shortcut icon" href="../_static/favicon.ico"/>
         <link rel="top" title="Sponge 4.1.0 文档" href="../index.html" />
         <link rel="up" title="插件开发" href="index.html" />
-        <link rel="next" title="Main Plugin Class" href="plugin-class.html" />
+        <link rel="next" title="插件的主类" href="plugin-class.html" />
         <link rel="prev" title="设置 Maven" href="project/maven.html" />
     
   <script type="text/javascript">
@@ -258,11 +258,11 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">插件开发</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="buildsystem.html">Build Systems</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="buildsystem.html">构建系统</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="workspace/index.html">建立工作目录</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="workspace/idea.html">架设Intellij IDEA</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="workspace/idea.html">设置 IntelliJ IDEA</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="workspace/eclipse.html">安装和使用Eclipse</a><ul class="simple">
@@ -280,23 +280,23 @@
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="current reference internal" href="">插件标识符</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plugin-class.html">Main Plugin Class</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="plugin-class.html">插件的主类</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="lifecycle.html">插件周期</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="injection.html">注入依赖项</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="injection.html">依赖注入</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="practices.html">最佳做法</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="optional/index.html">Optionals</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="optional/basic.html">Optionals Explained</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="optional/index.html">使用 Optional</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="optional/basic.html">对于 Optional 的解释</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="optional/usage.html">Usage Examples</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="optional/usage.html">用法示例</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -304,7 +304,7 @@
 <li class="toctree-l2"><a class="reference internal" href="logging.html">日志记录和调试</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="commands/index.html">Commands</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="commands/index.html">命令</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="commands/creating.html">创建一个命令</a><ul class="simple">
 </ul>
 </li>
@@ -399,7 +399,7 @@
 <li class="toctree-l3"><a class="reference internal" href="blocks/tileentities.html">Tile Entity</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="blocks/virtualblock.html">Virtual Block Changes</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="blocks/virtualblock.html">虚拟方块更改</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -580,7 +580,7 @@
 <p class="last">插件 ID必须全部使用小写字母，而且只能包括小写字母、短横线、下划线或者小数点。它不能以一个短横线、下划线或者小数点结尾。插件名称**没有**这样的限制，甚至可以包括空格或者特殊字符。</p>
 </div>
 <p>请牢记你的插件 ID 将是用于识别你的插件的主要标志，并会使用在其他插件的依赖、你的配置文件、以及存储和你的插件相关的其他属性。这也是为什么选用一个合适的插件 ID 十分重要，因为后来的修改会变得十分困难。</p>
-<p>请继续在 <a class="reference internal" href="plugin-class.html"><em>Main Plugin Class</em></a> 中查看关于如何设置你的插件类的介绍。</p>
+<p>请继续在 <a class="reference internal" href="plugin-class.html"><em>插件的主类</em></a> 中查看关于如何设置你的插件类的介绍。</p>
 </div>
 
 
