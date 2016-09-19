@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Creating a Server &mdash; Sponge 4.1.0 documentação</title>
+     <title>Criando um servidor &mdash; Sponge 4.1.0 documentação</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -34,7 +34,7 @@
     <script type="text/javascript" src="../_static/lights.js"></script>
       <link rel="shortcut icon" href="../_static/favicon.ico"/>
         <link rel="top" title="Sponge 4.1.0 documentação" href="../index.html" />
-        <link rel="next" title="Guia de Início" href="getting-started/index.html" />
+        <link rel="next" title="Primeiros passos" href="getting-started/index.html" />
         <link rel="prev" title="Documentação do Sponge" href="../index.html" />
     
   <script type="text/javascript">
@@ -172,12 +172,12 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../index.html">Tabela de Conteúdo</a></h3>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Creating a Server</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="getting-started/index.html">Guia de Início</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="getting-started/jre.html">Instalar o Java</a><ul class="simple">
+<li class="toctree-l1 current"><a class="current reference internal" href="">Criando um servidor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting-started/index.html">Primeiros passos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="getting-started/jre.html">Instalando o Java</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="getting-started/migrating.html">Migrar para o Sponge</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="getting-started/migrating.html">Migrando para o Sponge</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="getting-started/implementations/index.html">Escolher uma Implementação</a><ul>
@@ -185,16 +185,16 @@
 <li class="toctree-l4"><a class="reference internal" href="getting-started/implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="getting-started/launch-script.html">Criar um <em>Launch Script</em></a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="getting-started/launch-script.html">Criando um script de inicialização</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="getting-started/port-forward.html">Encaminhamento de Portas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="getting-started/port-forward.html">Encaminhamento de portas</a></li>
 <li class="toctree-l3"><a class="reference internal" href="getting-started/bungeecord.html">Usar o Sponge com o BungeeCord</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="getting-started/configuration/index.html">Configurando o Sponge</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="getting-started/configuration/hocon.html">Introdução ao HOCON</a></li>
-<li class="toctree-l4"><a class="reference internal" href="getting-started/configuration/json.html">SIntaxe JSON</a></li>
+<li class="toctree-l4"><a class="reference internal" href="getting-started/configuration/json.html">Sintaxe JSON</a></li>
 <li class="toctree-l4"><a class="reference internal" href="getting-started/configuration/sponge-conf.html">global.conf</a></li>
 <li class="toctree-l4"><a class="reference internal" href="getting-started/configuration/server-properties.html">server.properties</a></li>
 </ul>
@@ -489,10 +489,10 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../contributing/index.html">Contributing to Sponge</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../contributing/guidelines.html">Diretrizes de Contribuição</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../contributing/guidelines.html">Guias de contribuição</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../contributing/howtogit.html">Como Git(Hub)</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../contributing/howtogit.html">Como utilizar o Git(Hub)</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../contributing/implementation/index.html">Desenvolver o Sponge</a><ul>
@@ -525,7 +525,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../about/index.html">Sobre o Projeto Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">Sobre o projeto Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../about/introduction.html">Introdução</a><ul class="simple">
 </ul>
 </li>
@@ -571,23 +571,23 @@
                 <div class="body" role="main">
                   
   <div class="section" id="creating-a-server">
-<h1>Creating a Server<a class="headerlink" href="#creating-a-server" title="Link permanente para este título">¶</a></h1>
-<p>Os artigos nesta secção explicam como criar e correr um servidor com uma implementação da SpongeAPI.</p>
-<p>Esta secção destina-se a utilizadores que queiram criar um novo servidor utilizando uma implementação do Sponge ou migrar um servidor existente para uma implementação do Sponge. Desenvolvedores de plugins também poderão estar interessados nos artigos contidos nesta secção - servidores de testes podem ser úteis para o desenvolvimento de plugins.</p>
+<h1>Criando um servidor<a class="headerlink" href="#creating-a-server" title="Link permanente para este título">¶</a></h1>
+<p>Os artigos nesta seção explicam como criar e executar um servidor com alguma implementação da SpongeAPI.</p>
+<p>Se você é um usuário que deseja criar um novo servidor usando uma implementação do Sponge ou migrar um servidor existente a uma implementação do Sponge, isto é para você. Desenvolvedores de plugins podem também estar interessados nos artigos contidos nessa seção - servidores de teste podem ser úteis para o desenvolvimento de plugins.</p>
 <div class="admonition note">
 <p class="first admonition-title">Nota</p>
-<p class="last">Geralmente, as instruções não são dadas especificamente para uma implementação da SpongeAPI, pois tentamos fazer com que nada mude entre elas. No entanto, podem haver problemas.</p>
+<p class="last">Tentamos ser independentes de implementação quando possível, o que significa que as instruções geralmente não são específicas para uma implementação da SpongeAPI. No entanto, podem ocorrer erros.</p>
 </div>
 <div class="section" id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="Link permanente para este título">¶</a></h2>
+<h2>Conteúdo<a class="headerlink" href="#contents" title="Link permanente para este título">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="getting-started/index.html">Guia de Início</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="getting-started/jre.html">Instalar o Java</a></li>
-<li class="toctree-l2"><a class="reference internal" href="getting-started/migrating.html">Migrar para o Sponge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="getting-started/index.html">Primeiros passos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="getting-started/jre.html">Instalando o Java</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started/migrating.html">Migrando para o Sponge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="getting-started/implementations/index.html">Escolher uma Implementação</a></li>
-<li class="toctree-l2"><a class="reference internal" href="getting-started/launch-script.html">Criar um <em>Launch Script</em></a></li>
-<li class="toctree-l2"><a class="reference internal" href="getting-started/port-forward.html">Encaminhamento de Portas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started/launch-script.html">Criando um script de inicialização</a></li>
+<li class="toctree-l2"><a class="reference internal" href="getting-started/port-forward.html">Encaminhamento de portas</a></li>
 <li class="toctree-l2"><a class="reference internal" href="getting-started/bungeecord.html">Usar o Sponge com o BungeeCord</a></li>
 <li class="toctree-l2"><a class="reference internal" href="getting-started/configuration/index.html">Configurando o Sponge</a></li>
 </ul>

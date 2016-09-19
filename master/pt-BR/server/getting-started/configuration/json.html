@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>SIntaxe JSON &mdash; Sponge 4.1.0 documentação</title>
+     <title>Sintaxe JSON &mdash; Sponge 4.1.0 documentação</title>
     
   <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/sponge.css" type="text/css" />
@@ -156,8 +156,8 @@
       <div class="breadcrumbs">
         <ul>
         <li><a href="../../../index.html">Sponge 4.1.0 documentação</a><i class="fa fa-fw fa-chevron-right"></i></li>
-        <li><a href="../../index.html" >Creating a Server</a><i class="fa fa-fw fa-chevron-right"></i></li>
-        <li><a href="../index.html" >Guia de Início</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html" >Criando um servidor</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../index.html" >Primeiros passos</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">Configurando o Sponge</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
@@ -176,12 +176,12 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../../index.html">Tabela de Conteúdo</a></h3>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Creating a Server</a><ul class="current">
-<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Guia de Início</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="../jre.html">Instalar o Java</a><ul class="simple">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Criando um servidor</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Primeiros passos</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jre.html">Instalando o Java</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../migrating.html">Migrar para o Sponge</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../migrating.html">Migrando para o Sponge</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../implementations/index.html">Escolher uma Implementação</a><ul>
@@ -189,16 +189,16 @@
 <li class="toctree-l4"><a class="reference internal" href="../implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../launch-script.html">Criar um <em>Launch Script</em></a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../launch-script.html">Criando um script de inicialização</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../port-forward.html">Encaminhamento de Portas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../port-forward.html">Encaminhamento de portas</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../bungeecord.html">Usar o Sponge com o BungeeCord</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">Configurando o Sponge</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="hocon.html">Introdução ao HOCON</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">SIntaxe JSON</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">Sintaxe JSON</a></li>
 <li class="toctree-l4"><a class="reference internal" href="sponge-conf.html">global.conf</a></li>
 <li class="toctree-l4"><a class="reference internal" href="server-properties.html">server.properties</a></li>
 </ul>
@@ -493,10 +493,10 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../contributing/index.html">Contributing to Sponge</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../contributing/guidelines.html">Diretrizes de Contribuição</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/guidelines.html">Guias de contribuição</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../contributing/howtogit.html">Como Git(Hub)</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/howtogit.html">Como utilizar o Git(Hub)</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../contributing/implementation/index.html">Desenvolver o Sponge</a><ul>
@@ -529,7 +529,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">Sobre o Projeto Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">Sobre o projeto Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/introduction.html">Introdução</a><ul class="simple">
 </ul>
 </li>
@@ -575,8 +575,8 @@
                 <div class="body" role="main">
                   
   <div class="section" id="json-syntax">
-<h1>SIntaxe JSON<a class="headerlink" href="#json-syntax" title="Link permanente para este título">¶</a></h1>
-<p>Este é um exemplo de um ficheiro <code class="docutils literal"><span class="pre">whitelist.json</span></code> com a formatação correta (apesar de os UUID-s serem fictícios). Deves utilizar a mesma sintaxe.</p>
+<h1>Sintaxe JSON<a class="headerlink" href="#json-syntax" title="Link permanente para este título">¶</a></h1>
+<p>Este é um exemplo de um arquivo <code class="docutils literal"><span class="pre">whitelist.json</span></code> com a formatação correta (apesar dos UUIDs serem fictícios). Seu arquivo deve seguir a mesma sintaxe.</p>
 <div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">[</span>
   <span class="p">{</span>
     <span class="nt">&quot;uuid&quot;</span><span class="p">:</span> <span class="s2">&quot;01234567-89ab-cdef-0123-456789abcdef&quot;</span><span class="p">,</span>
@@ -590,21 +590,21 @@
 </pre></div>
 </div>
 <div class="section" id="format-rules">
-<h2>Regras de Formatação<a class="headerlink" href="#format-rules" title="Link permanente para este título">¶</a></h2>
+<h2>Regras de formatação<a class="headerlink" href="#format-rules" title="Link permanente para este título">¶</a></h2>
 <ul class="simple">
-<li><p class="first">Parênteses retos  (<code class="docutils literal"><span class="pre">[]</span></code>) abrem e fecham o ficheiro</p>
+<li><p class="first">Colchetes (<code class="docutils literal"><span class="pre">[]</span></code>) abrem e fecham o arquivo</p>
 </li>
-<li><p class="first">Cada item no ficheiro fica entre parênteses curvos (<code class="docutils literal"><span class="pre">{}</span></code>)</p>
+<li><p class="first">Cada item do arquivo fica entre chaves (<code class="docutils literal"><span class="pre">{}</span></code>)</p>
 </li>
-<li><p class="first">Cada <em>key</em> e o seu valor correspondente ficam na mesma linha</p>
+<li><p class="first">Cada chave e seu valor correspondente são digitados na mesma linha</p>
 </li>
-<li><p class="first">Se existir mais de um item, tanto os itens como os pares <em>key</em>/valor são separados por vírgulas</p>
+<li><p class="first">Se houver mais de um item, tanto os itens como os pares chave/valor são separados por vírgulas</p>
 </li>
-<li><p class="first">Todas as strings estão dentro de aspas</p>
+<li><p class="first">Todas as <em>strings</em> são entre aspas</p>
 </li>
-<li><p class="first">Os UUID-s têm 32 carateres, e são escritos de forma hexadecimal (0-9, a-f).</p>
+<li><p class="first">Aa UUIDs têm 32 caracteres, e são escritas em hexadecimal (0-9, a-f).</p>
 </li>
-<li><p class="first">Os símbolos dos UUID-s são agrupados. Primeiro está um grupo de 8 carateres, depois três grupos de 4 e finalmente um de 12. Os grupos são separados por travessões (<code class="docutils literal"><span class="pre">-</span></code>)</p>
+<li><p class="first">Os caracteres da UUID são agrupados. Primeiro é um grupo de 8 caracteres, depois três grupos de 4 e então um grupo de 12. Os grupos são separados por hifens (<code class="docutils literal"><span class="pre">-</span></code>)</p>
 </li>
 </ul>
 </div>

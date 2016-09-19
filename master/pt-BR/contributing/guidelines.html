@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Diretrizes de Contribuição &mdash; Sponge 4.1.0 documentação</title>
+     <title>Guias de contribuição &mdash; Sponge 4.1.0 documentação</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -35,7 +35,7 @@
       <link rel="shortcut icon" href="../_static/favicon.ico"/>
         <link rel="top" title="Sponge 4.1.0 documentação" href="../index.html" />
         <link rel="up" title="Contributing to Sponge" href="index.html" />
-        <link rel="next" title="Como Git(Hub)" href="howtogit.html" />
+        <link rel="next" title="Como utilizar o Git(Hub)" href="howtogit.html" />
         <link rel="prev" title="Contributing to Sponge" href="index.html" />
     
   <script type="text/javascript">
@@ -174,12 +174,12 @@
 </div>
 <script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../index.html">Tabela de Conteúdo</a></h3>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Creating a Server</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../server/getting-started/index.html">Guia de Início</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/jre.html">Instalar o Java</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="../server/index.html">Criando um servidor</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../server/getting-started/index.html">Primeiros passos</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/jre.html">Instalando o Java</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/migrating.html">Migrar para o Sponge</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/migrating.html">Migrando para o Sponge</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/implementations/index.html">Escolher uma Implementação</a><ul>
@@ -187,16 +187,16 @@
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/launch-script.html">Criar um <em>Launch Script</em></a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/launch-script.html">Criando um script de inicialização</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/port-forward.html">Encaminhamento de Portas</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/port-forward.html">Encaminhamento de portas</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/bungeecord.html">Usar o Sponge com o BungeeCord</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/configuration/index.html">Configurando o Sponge</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/hocon.html">Introdução ao HOCON</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/json.html">SIntaxe JSON</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/json.html">Sintaxe JSON</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/sponge-conf.html">global.conf</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/server-properties.html">server.properties</a></li>
 </ul>
@@ -491,10 +491,10 @@
 </ul>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Contributing to Sponge</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="">Diretrizes de Contribuição</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="">Guias de contribuição</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="howtogit.html">Como Git(Hub)</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="howtogit.html">Como utilizar o Git(Hub)</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="implementation/index.html">Desenvolver o Sponge</a><ul>
@@ -527,7 +527,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../about/index.html">Sobre o Projeto Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">Sobre o projeto Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../about/introduction.html">Introdução</a><ul class="simple">
 </ul>
 </li>
@@ -573,39 +573,39 @@
                 <div class="body" role="main">
                   
   <div class="section" id="contribution-guidelines">
-<h1>Diretrizes de Contribuição<a class="headerlink" href="#contribution-guidelines" title="Link permanente para este título">¶</a></h1>
-<p>Vamos precisar sempre de programadores para nos ajudar a melhorar a Sponge Api. Não há nenhum projeto perfeito, há sempre coisas que podem ser melhoradas. Se és um programador e estás interessado, não exites. Tem apenas o cuidado de seguir as diretrizes.</p>
+<h1>Guias de contribuição<a class="headerlink" href="#contribution-guidelines" title="Link permanente para este título">¶</a></h1>
+<p>Sempre haverá demanda de desenvolvedores para nos ajudar a melhorar a SpongeApi. Não existe isso de projeto perfeito, sempre há coisas que podem ser melhoradas. Se você é um desenvolvedor e está interessado em ajudar então por favor, não hesite. Apenas certifique-se de seguir nossas diretrizes.</p>
 <div class="section" id="general-steps">
-<h2>Passos Gerais<a class="headerlink" href="#general-steps" title="Link permanente para este título">¶</a></h2>
+<h2>Passos gerais<a class="headerlink" href="#general-steps" title="Link permanente para este título">¶</a></h2>
 <ol class="arabic simple">
-<li><p class="first">Prepara o teu espaço de trabalho conforme descrito em <a class="reference internal" href="../preparing/index.html"><em>Preparação para Desenvolvimento</em></a>.</p>
+<li><p class="first">Prepare sua <em>workspace</em> como descrito em <a class="reference internal" href="../preparing/index.html"><em>Preparação para Desenvolvimento</em></a>.</p>
 </li>
-<li><p class="first">Certifica-te de que estás familiarizado com o Git e com o GitHub. Se precisas de refrescar os teus conhecimentos, dá uma olhadela aqui: <a class="reference internal" href="howtogit.html"><em>Como Git(Hub)</em></a></p>
+<li><p class="first">Certifique-se de estar familiarizado com o Git e com o GitHub. Se precisa refrescar seu conhecimento, dê uma olhada aqui: <a class="reference internal" href="howtogit.html"><em>Como utilizar o Git(Hub)</em></a></p>
 </li>
-<li><p class="first">Procura problemas existentes na SpongeAPI &lt;<a class="reference external" href="https://github.com/SpongePowered/SpongeAPI/issues">https://github.com/SpongePowered/SpongeAPI/issues</a>&gt;, no <a class="reference external" href="https://github.com/SpongePowered/SpongeCommon">SpongeCommon</a>, no`SpongeForge &lt;<a class="reference external" href="https://github.com/SpongePowered/SpongeForge">https://github.com/SpongePowered/SpongeForge</a>&gt;`_, <a class="reference external" href="https://github.com/SpongePowered/SpongeVanilla">SpongeVanilla</a>, e nos`SpongeDocs &lt;<a class="reference external" href="https://github.com/SpongePowered/SpongeDocs">https://github.com/SpongePowered/SpongeDocs</a>&gt;`_. Pode haver alguém que já esteja a trabalhar nesse mesmo problema. Poderás também também verificar os problemas marcados com &#8220;help wanted&#8221; &lt;<a class="reference external" href="https://github.com/SpongePowered/SpongeAPI/labels/help%20wanted">https://github.com/SpongePowered/SpongeAPI/labels/help%20wanted</a>&gt; para problemas que possam precisar ajuda.</p>
+<li><p class="first">Verifique se há problemas existentes nos repositórios <a class="reference external" href="https://github.com/SpongePowered/SpongeAPI/issues">SpongeAPI</a>, <a class="reference external" href="https://github.com/SpongePowered/SpongeCommon">SpongeCommon</a>, <a class="reference external" href="https://github.com/SpongePowered/SpongeForge">SpongeForge</a>, <a class="reference external" href="https://github.com/SpongePowered/SpongeVanilla">SpongeVanilla</a>, e <a class="reference external" href="https://github.com/SpongePowered/SpongeDocs">SpongeDocs</a>. Existe a possibilidade de mais alguém estar trabalhando na mesma coisa. Você também pode checar <a class="reference external" href="https://github.com/SpongePowered/SpongeAPI/labels/help%20wanted">problemas marcados com &#8220;procura-se ajuda&#8221;</a> para problemas que precisamos da sua ajuda.</p>
 </li>
 </ol>
 <div class="admonition note">
 <p class="first admonition-title">Nota</p>
-<p class="last">Por favor não submetas Pull Requests para modificações com menos de 20 linhas. Em vez disso, <a class="reference external" href="https://webchat.esper.net/?channels=sponge">entra no canal de IRC #sponge (irc.esper.net)</a> ou <a class="reference external" href="https://webchat.esper.net/?channels=spongedev">#spongedev (rc.esper.net)</a> para nós fazermos uma única alteração com todas as sugestões pequenas que recebermos.</p>
+<p class="last">Por favor, não envie <em>pull request</em> para mudanças com menos de 20 linhas. Em vez disso, <a class="reference external" href="https://webchat.esper.net/?channels=sponge">entre em #sponge no IRC (irc.esper.net)</a> ou em <a class="reference external" href="https://webchat.esper.net/?channels=spongedev">#spongedev no IRC (irc.esper.net)</a> e iremos alterar junto com outras mudanças pequenas.</p>
 </div>
 <ol class="arabic simple" start="4">
-<li><p class="first">Se o problema necessitar uma grande alteração, deverás submeter o problema sem nenhuma alteração inicialmente para nós confirmarmos o problema e sabermos que estás a trabalhar em arranjá-lo. Também deverás criar um WIP (trabalho em andamento) pull request com &#8220;[WIP]&#8221; no início do título para começarmos a revê-lo o mais cedo possível.</p>
+<li><p class="first">Se o problema requer uma grande mudança você pode querer enviar os problemas sem as mudanças necessarias primeiro para que possamos cofirmar o problema e saber que você está trabalhando para resolver ele. Você deve também antes criar um <em>WIP (work in progress) pull request</em> com o prefixo <code class="docutils literal"><span class="pre">[WIP]</span></code> para que possamos começar a rever eles.</p>
 </li>
-<li><p class="first">Faz <em>fork</em> do projeto, clona-o e faz as alterações num novo branch.</p>
+<li><p class="first">Dê <em>fork</em> no projeto, clone ele e faça suas alterações em um <em>branch</em> extra.</p>
 </li>
-<li><p class="first">Testa as tuas alterações (verifica que compila). Depois faz <em>commit</em> e <em>push</em> para o teu <em>fork</em>.</p>
+<li><p class="first">Teste suas alterações (certifique-se de que compila!), comite e envie elas ao seu <em>fork</em>.</p>
 </li>
-<li><p class="first">Envia o <em>pull request</em> com uma pequena descrição do que é que alteraraste e porquê que deve ser alterado dessa maneira.</p>
+<li><p class="first">Envie o <em>pull request</em> com um pequeno sumário do que você mudou e por que deve ser alterado dessa forma.</p>
 </li>
-<li><p class="first">Se fizeres novas alterações, envia novos <em>commits</em> para o teu <em>branch</em>. <strong>Não juntes as alterações</strong>, isso faz com que seja extremamente difícil de ver o que mudaste comparando à versão anterior do teu <em>pull request</em>.</p>
+<li><p class="first">Se você fizer mudanças adicionais, envie novos <em>commits</em> ao seu <em>branch</em>. <strong>Não misture suas mudanças</strong>, isso faz com que ver o que você mudou comparado à versão anterior do seu <em>pull request</em> fique algo extremamente difícil.</p>
 </li>
-<li>Make sure your PR is rebased to the latest changes of the branch you&#8217;re intending to merge it into. If you need help
-rebasing it, just ask!</li>
+<li><p class="first">Certifique-se de que seu PR está com base nas últimas mudanças do <em>branch</em> em que você está interessado em fazer o <em>merge</em>. Se você precisa fazer <em>rebase</em>, apenas peça!</p>
+</li>
 </ol>
 <div class="admonition tip">
 <p class="first admonition-title">Dica</p>
-<p class="last">If you&#8217;re unsure which branch you should base your work on, read about our <a class="reference internal" href="versioning.html"><em>Versioning System and Repository Branch Layout</em></a> before submitting your PR.</p>
+<p class="last">Se você não estiver seguro sobre qual <em>branch</em> você deve basear seu trabalho, leia sobre nosso <a class="reference internal" href="versioning.html"><em>Versioning System and Repository Branch Layout</em></a> antes de enviar sua <em>PR</em>.</p>
 </div>
 </div>
 </div>
