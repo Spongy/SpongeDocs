@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Performance Tweaks &mdash; Документация Sponge 4.1.0</title>
+     <title>Настройки производительности &mdash; Документация Sponge 4.1.0</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -215,7 +215,7 @@
 <li class="toctree-l3"><a class="reference internal" href="exploit-patches.html">Патчи уязвимостей</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Performance Tweaks</a><ul class="simple">
+<li class="toctree-l3 current"><a class="current reference internal" href="">Настройки производительности</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -365,7 +365,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/text/pagination.html">The Pagination Service</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/messagechannels.html">Message Channels</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/messagechannels.html">Каналы сообщений</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/text/templates.html">TextTemplates</a></li>
@@ -436,8 +436,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/bans.html">Блокировки</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/bookview.html">Book Views</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/economy/index.html">Economy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/bookview.html">Книга просмотров</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/economy/index.html">Экономика</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/economy/basics.html">Основные понятия</a><ul class="simple">
 </ul>
 </li>
@@ -573,16 +573,14 @@
                 <div class="body" role="main">
                   
   <div class="section" id="performance-tweaks">
-<h1>Performance Tweaks<a class="headerlink" href="#performance-tweaks" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Sponge provides several performance enhancing and tweaking options to help you run a lag-free server, even
-under heavy load.</p>
+<h1>Настройки производительности<a class="headerlink" href="#performance-tweaks" title="Ссылка на этот заголовок">¶</a></h1>
+<p>Sponge обеспечивает некоторые улучшения производительности и тонкую настройку, что может помочь вам без проблем запустить сервер, даже при большой нагрузке.</p>
 <div class="admonition note">
 <p class="first admonition-title">Примечание</p>
-<p class="last">While we try to improve the performance of every server, the performance gains depend on your setup. Please run some
-tests to ensure you configured your Sponge server to get the most out of it!</p>
+<p class="last">Хотя мы стараемся улучшать производительность каждого сервера, ваш выигрыш в производительности зависит от ваших установок. Запустите несколько тестов, чтобы убедиться, что вы получаете максимальную отдачу от вашего сервера Sponge!</p>
 </div>
 <div class="section" id="entity-activation-range">
-<h2>Entity Activation Range<a class="headerlink" href="#entity-activation-range" title="Ссылка на этот заголовок">¶</a></h2>
+<h2><strong>Диапазон активации сущностей</strong><a class="headerlink" href="#entity-activation-range" title="Ссылка на этот заголовок">¶</a></h2>
 <p>This setting will alter the loading behaviour of entities around players. Lowering the value will only load close
 entities, while raising it will also load entities that are far away from the player. Lower this to improve your
 servers performance, especially with high entity and player counts.</p>

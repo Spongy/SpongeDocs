@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Events &mdash; Sponge 4.1.0 文档</title>
+     <title>事件 &mdash; Sponge 4.1.0 文档</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -35,7 +35,7 @@
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 4.1.0 文档" href="../../index.html" />
         <link rel="up" title="插件开发" href="../index.html" />
-        <link rel="next" title="Event Listeners" href="listeners.html" />
+        <link rel="next" title="事件监听器" href="listeners.html" />
         <link rel="prev" title="低级命令API" href="../commands/commandcallable.html" />
     
   <script type="text/javascript">
@@ -265,7 +265,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../workspace/idea.html">设置 IntelliJ IDEA</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../workspace/eclipse.html">安装和使用Eclipse</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../workspace/eclipse.html">设置 Eclipse</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -311,27 +311,27 @@
 <li class="toctree-l3"><a class="reference internal" href="../commands/arguments.html">参数分析</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/flags.html">Command Flags</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../commands/flags.html">命令标志</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/childcommands.html">Child Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/service.html">The Command Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commands/childcommands.html">子命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commands/service.html">命令管理器</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/commandcallable.html">低级命令API</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Events</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="listeners.html">Event Listeners</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="">事件</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="listeners.html">事件监听器</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="causes.html">Event Causes</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="causes.html">事件原因</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="filters.html">Event Filters</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="filters.html">事件过滤</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="custom.html">Custom Events</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="custom.html">自定义事件</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -339,14 +339,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../assets.html">The Asset API</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">Configuring Plugins</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../configuration/loaders.html">加载器的配置</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">配置插件</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../configuration/loaders.html">配置加载器</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../configuration/nodes.html">Nodes的配置</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../configuration/nodes.html">配置节点</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../configuration/serialization.html">Serializing Objects</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../configuration/serialization.html">序列化对象</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -371,17 +371,17 @@
 <li class="toctree-l3"><a class="reference internal" href="../text/templates.html">TextTemplates</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../data/index.html">数据API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../data/keys.html">使用键盘</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../data/index.html">数据 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data/keys.html">使用数据键</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../data/datamanipulators.html">数据臂</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../data/datamanipulators.html">操作数据</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../data/transactions.html">Transactions</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../data/transactions.html">记录</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../data/serialization.html">Serializing Data</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../data/serialization.html">序列化数据</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -406,7 +406,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../entities/index.html">实体</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../entities/spawning.html">生成一个实体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../entities/modifying.html">Modifying an Entity</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../entities/modifying.html">修改一个实体</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -508,7 +508,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/debugging.html">在IDE中调试</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/mixins.html">Mixins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/mixins.html">Mixin</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/datamanipulator.html">Implementing DataManipulators</a><ul class="simple">
 </ul>
 </li>
@@ -573,31 +573,27 @@
                 <div class="body" role="main">
                   
   <div class="section" id="events">
-<h1>Events<a class="headerlink" href="#events" title="永久链接至标题">¶</a></h1>
-<p>Events are used to inform plugins of certain happenings. Many events can also be <em>cancelled</em> &#8211; that is, the action that
-the event refers to can be prevented from occurring. Cancellable events implement the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/Cancellable.html">Cancellable</a> interface.</p>
-<p>Sponge itself contains many events; however, plugins can create their own events which other plugins can listen to.</p>
-<p>Event listeners are assigned a priority that determines the order in which the event listener is run in context of other
-event listeners (such as those from other plugins). For example, an event listener with <code class="docutils literal"><span class="pre">EARLY</span></code> priority will return
-before most other event listeners. See <a class="reference internal" href="listeners.html#about-listener"><span>About &#64;Listener</span></a> for more information.</p>
-<p>Events cannot be sent to a specific set of plugins. All plugins that listen to an event will be notified of the event.</p>
-<p>The event bus or event manager is the class that keeps track of which plugins are listening to which event,
-and is also responsible for distributing events to event listeners.</p>
-<p>Sponge provides a built in callback for plugin reloading. See the <a class="reference internal" href="listeners.html#game-reload"><span>GameReloadEvent</span></a> section for more information.</p>
+<h1>事件<a class="headerlink" href="#events" title="永久链接至标题">¶</a></h1>
+<p>事件用于通知插件某些事情发生了。许多事件可以被 <em>取消</em> —— 亦即，事件的行为可以被阻止发生。可取消的事件会实现 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/Cancellable.html">Cancellable</a> 接口。</p>
+<p>Sponge 本身包含许多事件；另外，插件也可以创建自己的事件，供其他插件监听。</p>
+<p>事件监听器会被分配一个优先级，以确定一个事件监听器是在其它（插件的）事件监听器的条件下运行的顺序。例如，一个 <code class="docutils literal"><span class="pre">EARLY</span></code> 优先级的事件监听器会在大多数其它事件监听器之前返回。请参阅 <a class="reference internal" href="listeners.html#about-listener"><span>关于 &#64;Listener</span></a> 以获取更多的信息。</p>
+<p>事件不能被发送给一组特定的插件。所有监听了一个事件的插件都会得到该事件的通知。</p>
+<p>事件总线或事件管理器是一个负责跟踪哪些插件监听了哪些事件，以及分发事件给事件监听器的类。</p>
+<p>Sponge 提供了一套内置的回调方法用于插件的重新加载。请参阅 <a class="reference internal" href="listeners.html#game-reload"><span>GameReloadEvent</span></a> 部分以获取更多信息。</p>
 <div class="section" id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="永久链接至标题">¶</a></h2>
+<h2>目录<a class="headerlink" href="#contents" title="永久链接至标题">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="listeners.html">Event Listeners</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="listeners.html">事件监听器</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="causes.html">Event Causes</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="causes.html">事件原因</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="filters.html">Event Filters</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="filters.html">事件过滤</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="custom.html">Custom Events</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="custom.html">自定义事件</a><ul class="simple">
 </ul>
 </li>
 </ul>
