@@ -585,11 +585,13 @@ carefully before proceeding here.</p>
 <h3>IntelliJ IDEA<a class="headerlink" href="#intellij-idea" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Dans IntelliJ, chaque projet à son propre workspace. Pour rendre votre projet <strong>Sponge(Vanilla)</strong> visible, vous devez le définir en tant que <em>Module</em>. En supposant que vous avez déjà créé votre projet en ayant suivi les instructions de <a class="reference internal" href="workspace/idea.html"><em>Configurer IntelliJ IDEA</em></a>, importez le en suivant les étapes suivantes.</p>
 <ul class="simple">
-<li><p class="first">Ouvrez le projet <strong>Sponge(Vanilla)</strong>.</p>
-</li>
+<li>Open the <code class="docutils literal"><span class="pre">SpongeVanilla</span></code>/<code class="docutils literal"><span class="pre">SpongeForge</span></code> project.</li>
 <li><p class="first">Cliquez sur <code class="docutils literal"><span class="pre">File</span></code>, puis sur <code class="docutils literal"><span class="pre">New</span></code>, et enfin sur <code class="docutils literal"><span class="pre">Module</span> <span class="pre">from</span> <span class="pre">Existing</span> <span class="pre">Sources...</span></code>.</p>
 </li>
-<li><p class="first">Naviguez dans le répertoire du projet de votre plugin et sélectionnez le fichier <code class="docutils literal"><span class="pre">.iml</span></code> (ex : <code class="docutils literal"><span class="pre">MyPlugin.iml</span></code>)</p>
+<li>Navigate to the directory of your plugin project.<ul>
+<li>If you&#8217;re using Gradle, select the <code class="docutils literal"><span class="pre">build.gradle</span></code> file, in the next dialog check <code class="docutils literal"><span class="pre">Use</span> <span class="pre">auto-import</span></code> and confirm.</li>
+<li>Otherwise, just select the whole directory and click <code class="docutils literal"><span class="pre">Finish</span></code>.</li>
+</ul>
 </li>
 <li><p class="first">Cliquez sur <code class="docutils literal"><span class="pre">Finish</span></code>.</p>
 </li>
@@ -601,7 +603,8 @@ carefully before proceeding here.</p>
 </div>
 <div class="section" id="eclipse">
 <h3>Eclipse<a class="headerlink" href="#eclipse" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Il suffit de créer votre projet comme il l&#8217;est expliqué ici: <a class="reference internal" href="workspace/eclipse.html"><em>Préparation d&#8217;Eclipse</em></a>. Tant qu&#8217;il est dans le même workspace que celui du projet <strong>Sponge(Vanilla)</strong>, il sera visible.</p>
+<p>Just create your project as described here: <a class="reference internal" href="workspace/eclipse.html"><em>Préparation d&#8217;Eclipse</em></a>. As long as it is in the same workspace
+as your <code class="docutils literal"><span class="pre">SpongeVanilla</span></code>/<code class="docutils literal"><span class="pre">SpongeForge</span></code> project, it will be visible.</p>
 </div>
 </div>
 <div class="section" id="adding-plugin-to-sponge-classpath">
@@ -620,29 +623,12 @@ carefully before proceeding here.</p>
 </li>
 </ul>
 </li>
-<li><p class="first">Cliquez sur <code class="docutils literal"><span class="pre">Modules</span></code>. Assurez-vous que Sponge / SpongeVanilla (ça dépend de ce que vous voulez) est sélectionné dans la colonne du milieu</p>
-</li>
-<li><p class="first">Sur la colonne de droite, sélectionner <code class="docutils literal"><span class="pre">Dependencies</span></code></p>
-</li>
-<li><p class="first">Cliquez sur le <code class="docutils literal"><span class="pre">+</span></code> vert (<code class="docutils literal"><span class="pre">Add</span></code>) tout à droite, et sélectionner <code class="docutils literal"><span class="pre">Module</span> <span class="pre">Dependency</span></code></p>
-</li>
-<li><p class="first">Sélectionnez votre Module (Plugin).</p>
-</li>
-<li><p class="first">NE cochez PAS le module, après qu&#8217;il soit ajouté à la liste.</p>
-</li>
-</ul>
-<p>Si vous utilisez Gradle pour construire votre plugin:</p>
-<ul class="simple">
-<li><p class="first">Ouvrez le volet de Gradle sur le côté droit de la fenêtre de l&#8217;IDE.</p>
-</li>
-<li><p class="first">Cliquez sur le vert symbole <code class="docutils literal"><span class="pre">+</span></code> sous <code class="docutils literal"><span class="pre">Gradle</span> <span class="pre">Projects</span></code>.</p>
-</li>
-<li><p class="first">Naviguez vers le dossier de votre plugin sur le système de fichiers.</p>
-</li>
-<li><p class="first">Double-cliquez sur le fichier build.gradle.</p>
-</li>
-<li><p class="first">Cliquez sur l&#8217;icône de rafraîchissement bleu (deux flèches dans un cercle) pour charger les dépendances de votre plugin dans l&#8217;espace de travail.</p>
-</li>
+<li>Click <code class="docutils literal"><span class="pre">Modules</span></code>. Expand the <code class="docutils literal"><span class="pre">SpongeForge</span></code> or <code class="docutils literal"><span class="pre">SpongeVanilla</span></code> group (depending on what you chose).</li>
+<li>Make sure <code class="docutils literal"><span class="pre">SpongeForge_main</span></code> or <code class="docutils literal"><span class="pre">SpongeVanilla_main</span></code> is selected.</li>
+<li>On the right column, select the <code class="docutils literal"><span class="pre">Dependencies</span></code> tab.</li>
+<li>Click the <code class="docutils literal"><span class="pre">+</span></code> symbol (<code class="docutils literal"><span class="pre">Add</span></code>) on the bottom of the column, and select <code class="docutils literal"><span class="pre">Module</span> <span class="pre">Dependency</span></code>.</li>
+<li>Select <code class="docutils literal"><span class="pre">yourplugin_main</span></code>.</li>
+<li>Do NOT check the <code class="docutils literal"><span class="pre">Export</span></code> option on the module, after it is added to the list.</li>
 </ul>
 </div>
 <div class="section" id="id2">
