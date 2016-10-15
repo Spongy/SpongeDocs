@@ -1,0 +1,683 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+     <title>配置Sponge &mdash; Sponge 4.1.0 文档</title>
+    
+  <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/sponge.css" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link href='//fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:400italic,700italic,700,400' rel='stylesheet' type='text/css' />
+  <link rel="stylesheet" href="../../../_static/tomorrow.css" type="text/css" />
+  <link id="syntax-highlighting-ref" rel="stylesheet" href="../../../_static/tomorrow_night.css" type="text/css" />
+      
+  <script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+      URL_ROOT:    '../../../',
+      VERSION:     '4.1.0',
+      COLLAPSE_INDEX: false,
+      FILE_SUFFIX: '.html',
+      HAS_SOURCE:  true
+    };
+  </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/translations.js"></script>
+    <script type="text/javascript" src="../../../_static/store.min.js"></script>
+    <script type="text/javascript" src="../../../_static/lights.js"></script>
+      <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+        <link rel="top" title="Sponge 4.1.0 文档" href="../../../index.html" />
+        <link rel="up" title="入门指南" href="../index.html" />
+        <link rel="next" title="HOCON 简介" href="hocon.html" />
+        <link rel="prev" title="和BungeeCorge配合使用Sponge" href="../bungeecord.html" />
+    
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-59476017-2', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+    
+  <link rel="alternate" hreflang="da" href="/4.1.0/da/">
+  <link rel="alternate" hreflang="de" href="/4.1.0/de/">
+  <link rel="alternate" hreflang="en-GB" href="/4.1.0/en-GB/">
+  <link rel="alternate" hreflang="en-PT" href="/4.1.0/en-PT/">
+  <link rel="alternate" hreflang="en" href="/4.1.0/en/">
+  <link rel="alternate" hreflang="es-ES" href="/4.1.0/es-ES/">
+  <link rel="alternate" hreflang="fi" href="/4.1.0/fi/">
+  <link rel="alternate" hreflang="fr" href="/4.1.0/fr/">
+  <link rel="alternate" hreflang="it" href="/4.1.0/it/">
+  <link rel="alternate" hreflang="ja" href="/4.1.0/ja/">
+  <link rel="alternate" hreflang="ko" href="/4.1.0/ko/">
+  <link rel="alternate" hreflang="lt" href="/4.1.0/lt/">
+  <link rel="alternate" hreflang="nb" href="/4.1.0/nb/">
+  <link rel="alternate" hreflang="nl" href="/4.1.0/nl/">
+  <link rel="alternate" hreflang="pl" href="/4.1.0/pl/">
+  <link rel="alternate" hreflang="pt-BR" href="/4.1.0/pt-BR/">
+  <link rel="alternate" hreflang="pt-PT" href="/4.1.0/pt-PT/">
+  <link rel="alternate" hreflang="ru" href="/4.1.0/ru/">
+  <link rel="alternate" hreflang="uk" href="/4.1.0/uk/">
+  <link rel="alternate" hreflang="zh-CN" href="/4.1.0/zh-CN/">
+  <link rel="alternate" hreflang="zh-TW" href="/4.1.0/zh-TW/">
+  <link rel="alternate" hreflang="x-default" href="/"> 
+  </head>
+  <body role="document" id="top">
+    <div class="topbar">
+  <div role="navigation" aria-label="related navigation">
+    <div class="sp-logo-container sp-not-mobileview sp-mobileview">
+      <a class="sp-logo-link" data-auto-route="true" href="/">
+        <img height="40px" id="site-logo" class="logo-big" alt="Sponge Forums" src="../../../_static/spongelogo.png">
+      </a>
+      <div class="sp-logo-bg"></div>
+      <div class="sp-logo-chevron"><i class="fa fa-fw fa-chevron-down"></i></div>
+      <div class="sp-logo-menu sp-skip-handler">
+        <ul class="sp-logo-dropdown" id="ddleft">
+          <a href="https://www.spongepowered.org"><li><i class="fa-fw fa fa-home"></i>Homepage</li></a>
+          <a href="https://forums.spongepowered.org"><li><i class="fa-fw fa fa-comment"></i>Forums</li></a>
+          <a href="https://github.com/SpongePowered"><li><i class="fa-fw fa fa-code"></i>Code</li></a>
+          <a class="sp-forums-home" href="https://docs.spongepowered.org"><li class="active"><i class="fa-fw fa fa-book"></i>SpongeDocs</li></a>
+          <a href="https://jd.spongepowered.org"><li><i class="fa-fw fa fa-graduation-cap"></i>JavaDocs</li></a>
+          <a href="https://forums.spongepowered.org/c/plugins/plugin-releases"><li><i class="fa-fw fa fa-plug"></i>Plugins</li></a>
+          <a href="https://forums.spongepowered.org/t/sponge-downloads/11448"><li><i class="fa-fw fa fa-download"></i>Get Sponge</li></a>
+        </ul>
+      </div>
+    </div>
+    <div class="menu-right">
+      <div><i class="fa fa-fw fa-globe"></i></div>
+        <ul class="dropdown" id="ddlang">
+          <li><a href="/4.1.0/da/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/da.png" alt="Flag for Danish"/></a></li>
+          <li><a href="/4.1.0/de/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/de.png" alt="Flag for German"/></a></li>
+          <li><a href="/4.1.0/en-GB/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/en-GB.png" alt="Flag for English, United Kingdom"/></a></li>
+          <li><a href="/4.1.0/en-PT/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/en-PT.png" alt="Flag for Pirate English"/></a></li>
+          <li><a href="/4.1.0/en/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/en.png" alt="Flag for English"/></a></li>
+          <li><a href="/4.1.0/es-ES/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/es-ES.png" alt="Flag for Spanish"/></a></li>
+          <li><a href="/4.1.0/fi/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/fi.png" alt="Flag for Finnish"/></a></li>
+          <li><a href="/4.1.0/fr/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/fr.png" alt="Flag for French"/></a></li>
+          <li><a href="/4.1.0/it/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/it.png" alt="Flag for Italian"/></a></li>
+          <li><a href="/4.1.0/ja/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ja.png" alt="Flag for Japanese"/></a></li>
+          <li><a href="/4.1.0/ko/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ko.png" alt="Flag for Korean"/></a></li>
+          <li><a href="/4.1.0/lt/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/lt.png" alt="Flag for Lithuanian"/></a></li>
+          <li><a href="/4.1.0/nb/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nb.png" alt="Flag for Norwegian Bokmal"/></a></li>
+          <li><a href="/4.1.0/nl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nl.png" alt="Flag for Dutch"/></a></li>
+          <li><a href="/4.1.0/pl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pl.png" alt="Flag for Polish"/></a></li>
+          <li><a href="/4.1.0/pt-BR/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pt-BR.png" alt="Flag for Portuguese, Brazilian"/></a></li>
+          <li><a href="/4.1.0/pt-PT/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pt-PT.png" alt="Flag for Portuguese"/></a></li>
+          <li><a href="/4.1.0/ru/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ru.png" alt="Flag for Russian"/></a></li>
+          <li><a href="/4.1.0/uk/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/uk.png" alt="Flag for Ukrainian"/></a></li>
+          <li><a href="/4.1.0/zh-CN/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/zh-CN.png" alt="Flag for Chinese Simplified"/></a></li>
+          <li><a href="/4.1.0/zh-TW/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/zh-TW.png" alt="Flag for Chinese Traditional"/></a></li>
+        </ul>
+    </div>
+    <div class="menu-right">
+      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+        <ul class="dropdown" id="ddvers">
+          <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
+          <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
+        </ul>
+    </div>
+    <div class="menu-right">
+      <div title="Toggle syntax highlighting between light and dark" class="lights">
+        <i class="fa fa-fw fa-lightbulb-o"></i>
+      </div>
+    </div>
+    <div>
+      <ul class="controls">
+        <li>|</li>
+        
+        <li><a href="hocon.html" title="Next Page"><i class="fa fa-fw fa-chevron-right"></i></a></li>
+        
+        <li><a href="#top" title="To the top"><i class="fa fa-fw fa-chevron-up"></i></a></li>
+        <li><a href="../../../index.html" title="Home"><i class="fa fa-fw fa-home"></i></a></li>
+        
+        <li><a href="../bungeecord.html" title="Previous Page"><i class="fa fa-fw fa-chevron-left"></i></a></li>
+        
+        <li>|</li>
+        
+          <li><a href="https://github.com/SpongePowered/SpongeDocs/blob/master/source/server/getting-started/configuration/index.rst" title="Edit on GitHub"><i class="fa fa-fw fa-github"></i></a></li>
+        
+      </ul>
+    </div>
+    <h3>导航</h3>
+  </div>
+    </div>
+    <div class="container">
+
+      <div class="breadcrumbs">
+        <ul>
+        <li><a href="../../../index.html">Sponge 4.1.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html" >创建服务器</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../index.html" accesskey="U">入门指南</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        </ul>
+      </div> 
+    <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+    <form class="search" action="../../../search.html" method="get">
+      <div class="searchbox-inner">
+        <input class="field" type="text" name="q" autocomplete="off" />
+        <button class="submit" type="submit"><i class="fa fa-fw fa-search" aria-hidden="true"></i></button>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </div>
+    </form>
+    <p class="searchtip" style="font-size: 90%"></p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../../index.html">內容目录</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">创建服务器</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">入门指南</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jre.html">安装 Java</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../migrating.html">迁移到 Sponge</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../implementations/index.html">选择一个安装启动</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../implementations/spongeforge.html">Installing SpongeForge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../launch-script.html">创建启动脚本</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../port-forward.html">端口转发</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bungeecord.html">和BungeeCorge配合使用Sponge</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">配置Sponge</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="hocon.html">HOCON 简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json.html">JSON 语法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sponge-conf.html">global.conf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="server-properties.html">server.properties</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../management/index.html">服务器管理</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../management/whitelist.html">管理白名单</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../management/bans.html">管理—封禁</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../management/permissions.html">权限管理</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../management/plugins.html">安装插件</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../management/exploit-patches.html">Exploit Patches</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../management/performance-tweaks.html">Performance Tweaks</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../spongineer/index.html">成为Sponge专家</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../spongineer/commands.html">命令</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../spongineer/troubleshooting.html">故障排查</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../spongineer/logs.html">日志文件</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../spongineer/debugging.html">Debugging</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../spongineer/bugreport.html">Reporting Bugs</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../preparing/index.html">为开发做准备</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../preparing/jdk.html">安装JDK</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preparing/ide.html">安装IDE</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preparing/text.html">安装一个文本编辑器</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preparing/git.html">安装Git</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../plugin/index.html">插件开发</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/buildsystem.html">构建系统</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/workspace/index.html">建立工作目录</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/workspace/idea.html">设置 IntelliJ IDEA</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/workspace/eclipse.html">设置 Eclipse</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/project/index.html">设置你的项目</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/project/gradle.html">设置 Gradle</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/project/maven.html">设置 Maven</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/plugin-identifier.html">插件标识符</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/plugin-class.html">插件的主类</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/lifecycle.html">插件周期</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/injection.html">依赖注入</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/practices.html">最佳做法</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/optional/index.html">使用 Optional</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/optional/basic.html">对于 Optional 的解释</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/optional/usage.html">用法示例</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/logging.html">日志记录和调试</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/commands/index.html">命令</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/creating.html">创建一个命令</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/arguments.html">参数分析</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/flags.html">命令标志</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/childcommands.html">子命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/service.html">命令管理器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/commandcallable.html">低级别命令 API</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/event/index.html">事件</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/listeners.html">事件监听器</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/causes.html">事件原因</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/filters.html">事件过滤</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/custom.html">自定义事件</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/assets.html">使用 Asset API</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/configuration/index.html">插件配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/configuration/loaders.html">配置加载器</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/configuration/nodes.html">配置节点</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/configuration/serialization.html">序列化对象</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/text/index.html">文本 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/text.html">创建文本</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/representations/index.html">序列化文本</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../plugin/text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../plugin/text/representations/xml.html">TextXML Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../plugin/text/representations/json.html">JSON Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../plugin/text/representations/configurate.html">Configuration Format</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/pagination.html">分页</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/messagechannels.html">消息通道</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/templates.html">文本模板</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/data/index.html">数据 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/data/keys.html">使用数据键</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/data/datamanipulators.html">操作数据</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/data/transactions.html">数据操作记录</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/data/serialization.html">序列化数据</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/blocks/index.html">方块</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/blocks/concepts.html">概念</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/blocks/accessing.html">访问方块</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/blocks/modifying.html">修改方块</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/blocks/tileentities.html">Tile Entity</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/blocks/virtualblock.html">虚拟方块更改</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/entities/index.html">实体</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/entities/spawning.html">生成一个实体</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/entities/modifying.html">修改一个实体</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/items/index.html">Items</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/items/usage.html">Basic Item Usage</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/items/creating.html">Creating an ItemStack</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/effects.html">Effects</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/scheduler.html">Scheduler</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/services.html">Services</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/database.html">Databases</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/permissions.html">Permissions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/bans.html">Bans</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/bookview.html">Book Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/economy/index.html">Economy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/economy/basics.html">Basic Concepts</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/economy/using.html">Using the Economy API</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/economy/practices.html">Economy API Best Practices</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/economy/implementing.html">Implementing the Economy API</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/wgen/index.html">World Generation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/wgen/modifiers.html">WorldGeneratorModifiers</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/wgen/customwgen.html">Modifying World Generation</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/manager.html">Plugin Manager</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/game-profile-manager.html">Game Profile Manager</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/offline-userplayer-data.html">Offline Player Data</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/debugging.html">Plugin Debugging</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/tab-lists.html">Tab Lists</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/plugin-meta.html">插件的元数据</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/ray-tracing.html">Ray Tracing</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/tutorials.html">教程</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing/index.html">向 Sponge 贡献代码</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/guidelines.html">贡献指南</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/howtogit.html">如何使用Git（Hub）</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/implementation/index.html">Developing Sponge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/codestyle.html">代码规范</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/git-implementation.html">Git Workflow for API and Implementations</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/pr.html">Submitting a Pull-Request</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/debugging.html">在IDE中调试</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/mixins.html">Mixin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/datamanipulator.html">Implementing DataManipulators</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/spongedocs.html">SpongeDocs文稿</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/porting.html">将Sponge移植到其他平台</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/versioning.html">Versioning System and Repository Branch Layout</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">关于 Sponge 项目</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/introduction.html">简介</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html">常见问题</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/structure.html">The Structure of the Sponge Project</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/future.html">未来计划</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/license.html">许可</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/posting.html">论坛发帖准则</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/rules.html">论坛及 IRC 准则</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/staff.html">工作人员</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/glossary.html">Sponge 术语表</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/assets.html">艺术资源</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/history.html">Sponge的历史</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../downloads.html">下载</a><ul class="simple">
+</ul>
+</li>
+</ul>
+<ul class="simple">
+</ul>
+
+      </div>
+    </div> 
+
+        <div class="document">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body" role="main">
+                  
+  <div class="section" id="configuring-sponge">
+<h1>配置Sponge<a class="headerlink" href="#configuring-sponge" title="永久链接至标题">¶</a></h1>
+<p>你可以在&#8221;config&#8221;文件夹下找到所有的配置文件。</p>
+<div class="section" id="config-syntax">
+<h2>配置参数<a class="headerlink" href="#config-syntax" title="永久链接至标题">¶</a></h2>
+<p>大多数配置文件使用 <a class="reference internal" href="hocon.html"><em>HOCON</em></a> 文件格式。</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="hocon.html">HOCON 简介</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="json.html">JSON 语法</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="what-you-can-configure">
+<h2>你可以配置什么<a class="headerlink" href="#what-you-can-configure" title="永久链接至标题">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="sponge-conf.html">global.conf</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="server-properties.html">server.properties</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</div>
+<p>插件会在&#8221;config&#8221;文件夹内有自己的配置文件。</p>
+</div>
+<div class="section" id="world-configs">
+<h2>世界的配置<a class="headerlink" href="#world-configs" title="永久链接至标题">¶</a></h2>
+<p>有三种类型的世界的配置：</p>
+<ul class="simple">
+<li><p class="first">全局</p>
+</li>
+<li><p class="first">维度</p>
+</li>
+<li><p class="first">世界</p>
+</li>
+</ul>
+<p>全局配置文件可以影响所有服务器的世界和维度。这是默认的配置级别。维度配置文件用于影响某些特定维度的世界或者世界组。这些类型的配置会覆盖全局配置。世界配置文件用于修改单独的世界，并覆盖全局配置和维度配置。</p>
+<div class="section" id="modifying-the-config-in-game">
+<h3>在游戏中修改配置<a class="headerlink" href="#modifying-the-config-in-game" title="永久链接至标题">¶</a></h3>
+<p>可以在游戏中使用 <code class="docutils literal"><span class="pre">/sponge</span> <span class="pre">config</span></code> 修改配置。用于配置的命令的形式是这样子的：</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">sponge</span> <span class="n">config</span> <span class="o">&lt;</span><span class="n">flag</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">key</span><span class="o">&gt;</span> <span class="o">&lt;</span><span class="n">value</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>有一些 <em>标志</em> 用于指定你想要改变的目标。这些标志是全局（Global）、维度（Dimension）和世界（World）。</p>
+<ul class="simple">
+<li><p class="first"><code class="docutils literal"><span class="pre">-g</span></code> 是用作全局的标志</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">-d</span> <span class="pre">&lt;dim&gt;</span></code> 用于维度（把 <em>&lt;dim&gt;</em> 替换成你想要配置的维度）</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">-w</span> <span class="pre">&lt;world&gt;</span></code> 用于世界（把 <em>&lt;world&gt;</em> 替换成你想要配置的世界）。</p>
+</li>
+</ul>
+<p><em>key</em> 是你想要更改的值，而 <em>value</em> 是你想要把对应的值改成什么样子。</p>
+<p>这里是一个运行中的命令的例子：</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">sponge</span> <span class="n">config</span> <span class="o">-</span><span class="n">d</span> <span class="n">nether</span> <span class="n">logging</span><span class="o">.</span><span class="na">chunk</span><span class="o">-</span><span class="n">load</span> <span class="kc">true</span>
+</pre></div>
+</div>
+<p>这将会设置为把下界的区块被加载的行为记录进日志。</p>
+<p>如果你想要检查一个键对应的值，你需要省略 <em>value</em> 。如果我们想要检查下界中关于 <code class="docutils literal"><span class="pre">logging.chunk-load</span></code> 对应的值，我们可以这么做：</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">sponge</span> <span class="n">config</span> <span class="o">-</span><span class="n">d</span> <span class="n">nether</span> <span class="n">logging</span><span class="o">.</span><span class="na">chunk</span><span class="o">-</span><span class="n">load</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="saving-a-world-config">
+<h3>保存世界配置<a class="headerlink" href="#saving-a-world-config" title="永久链接至标题">¶</a></h3>
+<p>在完成配置后需要把世界配置保存到文件中。这一做法的意义是防止意外的服务端崩溃。可以在 Sponge 服务器上使用 <code class="docutils literal"><span class="pre">/sponge</span> <span class="pre">save</span></code> 命令保存配置。其对应命令的格式就像用于配置的命令一样：</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">sponge</span> <span class="n">save</span> <span class="o">&lt;</span><span class="n">flag</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>下面是用于保存全局配置的一个示例：</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">sponge</span> <span class="n">save</span> <span class="o">-</span><span class="n">g</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="reloading-a-world-config">
+<h3>重新加载一个世界配置<a class="headerlink" href="#reloading-a-world-config" title="永久链接至标题">¶</a></h3>
+<p>有的时候可能需要在服务器仍在运行的时候重新加载世界配置。这一般适用于当你更改本地配置文件并想要正在运行的服务端重新加载配置这一需求。可以使用 <code class="docutils literal"><span class="pre">/sponge</span> <span class="pre">reload</span></code> 命令完成这件事，下面是这个命令的样式：</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">sponge</span> <span class="n">reload</span> <span class="o">&lt;</span><span class="n">flag</span><span class="o">&gt;</span>
+</pre></div>
+</div>
+<p>下面是重新加载末界配置文件的示例：</p>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">sponge</span> <span class="n">reload</span> <span class="o">-</span><span class="n">d</span> <span class="n">the_end</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          <div class="clearer"></div>
+        </div>
+        <div class="footer" role="contentinfo">
+              &copy; 版权所有 2014-2016, Sponge Contributors.
+            由 <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.3 创建。
+        </div>
+    </div>
+  </body>
+</html>

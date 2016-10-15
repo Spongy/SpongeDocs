@@ -1,0 +1,632 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+     <title>Sponge mit Bungeecord nutzen &mdash; Sponge 4.1.0 Dokumentation</title>
+    
+  <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link href='//fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:400italic,700italic,700,400' rel='stylesheet' type='text/css' />
+  <link rel="stylesheet" href="../../_static/tomorrow.css" type="text/css" />
+  <link id="syntax-highlighting-ref" rel="stylesheet" href="../../_static/tomorrow_night.css" type="text/css" />
+      
+  <script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+      URL_ROOT:    '../../',
+      VERSION:     '4.1.0',
+      COLLAPSE_INDEX: false,
+      FILE_SUFFIX: '.html',
+      HAS_SOURCE:  true
+    };
+  </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../_static/store.min.js"></script>
+    <script type="text/javascript" src="../../_static/lights.js"></script>
+      <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+        <link rel="top" title="Sponge 4.1.0 Dokumentation" href="../../index.html" />
+        <link rel="up" title="Erste Schritte" href="index.html" />
+        <link rel="next" title="Sponge konfigurieren" href="configuration/index.html" />
+        <link rel="prev" title="Portweiterleitung" href="port-forward.html" />
+    
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-59476017-2', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+    
+  <link rel="alternate" hreflang="da" href="/4.1.0/da/">
+  <link rel="alternate" hreflang="de" href="/4.1.0/de/">
+  <link rel="alternate" hreflang="en-GB" href="/4.1.0/en-GB/">
+  <link rel="alternate" hreflang="en-PT" href="/4.1.0/en-PT/">
+  <link rel="alternate" hreflang="en" href="/4.1.0/en/">
+  <link rel="alternate" hreflang="es-ES" href="/4.1.0/es-ES/">
+  <link rel="alternate" hreflang="fi" href="/4.1.0/fi/">
+  <link rel="alternate" hreflang="fr" href="/4.1.0/fr/">
+  <link rel="alternate" hreflang="it" href="/4.1.0/it/">
+  <link rel="alternate" hreflang="ja" href="/4.1.0/ja/">
+  <link rel="alternate" hreflang="ko" href="/4.1.0/ko/">
+  <link rel="alternate" hreflang="lt" href="/4.1.0/lt/">
+  <link rel="alternate" hreflang="nb" href="/4.1.0/nb/">
+  <link rel="alternate" hreflang="nl" href="/4.1.0/nl/">
+  <link rel="alternate" hreflang="pl" href="/4.1.0/pl/">
+  <link rel="alternate" hreflang="pt-BR" href="/4.1.0/pt-BR/">
+  <link rel="alternate" hreflang="pt-PT" href="/4.1.0/pt-PT/">
+  <link rel="alternate" hreflang="ru" href="/4.1.0/ru/">
+  <link rel="alternate" hreflang="uk" href="/4.1.0/uk/">
+  <link rel="alternate" hreflang="zh-CN" href="/4.1.0/zh-CN/">
+  <link rel="alternate" hreflang="zh-TW" href="/4.1.0/zh-TW/">
+  <link rel="alternate" hreflang="x-default" href="/"> 
+  </head>
+  <body role="document" id="top">
+    <div class="topbar">
+  <div role="navigation" aria-label="related navigation">
+    <div class="sp-logo-container sp-not-mobileview sp-mobileview">
+      <a class="sp-logo-link" data-auto-route="true" href="/">
+        <img height="40px" id="site-logo" class="logo-big" alt="Sponge Forums" src="../../_static/spongelogo.png">
+      </a>
+      <div class="sp-logo-bg"></div>
+      <div class="sp-logo-chevron"><i class="fa fa-fw fa-chevron-down"></i></div>
+      <div class="sp-logo-menu sp-skip-handler">
+        <ul class="sp-logo-dropdown" id="ddleft">
+          <a href="https://www.spongepowered.org"><li><i class="fa-fw fa fa-home"></i>Homepage</li></a>
+          <a href="https://forums.spongepowered.org"><li><i class="fa-fw fa fa-comment"></i>Forums</li></a>
+          <a href="https://github.com/SpongePowered"><li><i class="fa-fw fa fa-code"></i>Code</li></a>
+          <a class="sp-forums-home" href="https://docs.spongepowered.org"><li class="active"><i class="fa-fw fa fa-book"></i>SpongeDocs</li></a>
+          <a href="https://jd.spongepowered.org"><li><i class="fa-fw fa fa-graduation-cap"></i>JavaDocs</li></a>
+          <a href="https://forums.spongepowered.org/c/plugins/plugin-releases"><li><i class="fa-fw fa fa-plug"></i>Plugins</li></a>
+          <a href="https://forums.spongepowered.org/t/sponge-downloads/11448"><li><i class="fa-fw fa fa-download"></i>Get Sponge</li></a>
+        </ul>
+      </div>
+    </div>
+    <div class="menu-right">
+      <div><i class="fa fa-fw fa-globe"></i></div>
+        <ul class="dropdown" id="ddlang">
+          <li><a href="/4.1.0/da/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/da.png" alt="Flag for Danish"/></a></li>
+          <li><a href="/4.1.0/de/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/de.png" alt="Flag for German"/></a></li>
+          <li><a href="/4.1.0/en-GB/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/en-GB.png" alt="Flag for English, United Kingdom"/></a></li>
+          <li><a href="/4.1.0/en-PT/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/en-PT.png" alt="Flag for Pirate English"/></a></li>
+          <li><a href="/4.1.0/en/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/en.png" alt="Flag for English"/></a></li>
+          <li><a href="/4.1.0/es-ES/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/es-ES.png" alt="Flag for Spanish"/></a></li>
+          <li><a href="/4.1.0/fi/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/fi.png" alt="Flag for Finnish"/></a></li>
+          <li><a href="/4.1.0/fr/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/fr.png" alt="Flag for French"/></a></li>
+          <li><a href="/4.1.0/it/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/it.png" alt="Flag for Italian"/></a></li>
+          <li><a href="/4.1.0/ja/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ja.png" alt="Flag for Japanese"/></a></li>
+          <li><a href="/4.1.0/ko/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ko.png" alt="Flag for Korean"/></a></li>
+          <li><a href="/4.1.0/lt/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/lt.png" alt="Flag for Lithuanian"/></a></li>
+          <li><a href="/4.1.0/nb/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nb.png" alt="Flag for Norwegian Bokmal"/></a></li>
+          <li><a href="/4.1.0/nl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nl.png" alt="Flag for Dutch"/></a></li>
+          <li><a href="/4.1.0/pl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pl.png" alt="Flag for Polish"/></a></li>
+          <li><a href="/4.1.0/pt-BR/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pt-BR.png" alt="Flag for Portuguese, Brazilian"/></a></li>
+          <li><a href="/4.1.0/pt-PT/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pt-PT.png" alt="Flag for Portuguese"/></a></li>
+          <li><a href="/4.1.0/ru/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ru.png" alt="Flag for Russian"/></a></li>
+          <li><a href="/4.1.0/uk/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/uk.png" alt="Flag for Ukrainian"/></a></li>
+          <li><a href="/4.1.0/zh-CN/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/zh-CN.png" alt="Flag for Chinese Simplified"/></a></li>
+          <li><a href="/4.1.0/zh-TW/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/zh-TW.png" alt="Flag for Chinese Traditional"/></a></li>
+        </ul>
+    </div>
+    <div class="menu-right">
+      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+        <ul class="dropdown" id="ddvers">
+          <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
+          <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
+        </ul>
+    </div>
+    <div class="menu-right">
+      <div title="Toggle syntax highlighting between light and dark" class="lights">
+        <i class="fa fa-fw fa-lightbulb-o"></i>
+      </div>
+    </div>
+    <div>
+      <ul class="controls">
+        <li>|</li>
+        
+        <li><a href="configuration/index.html" title="Next Page"><i class="fa fa-fw fa-chevron-right"></i></a></li>
+        
+        <li><a href="#top" title="To the top"><i class="fa fa-fw fa-chevron-up"></i></a></li>
+        <li><a href="../../index.html" title="Home"><i class="fa fa-fw fa-home"></i></a></li>
+        
+        <li><a href="port-forward.html" title="Previous Page"><i class="fa fa-fw fa-chevron-left"></i></a></li>
+        
+        <li>|</li>
+        
+          <li><a href="https://github.com/SpongePowered/SpongeDocs/blob/master/source/server/getting-started/bungeecord.rst" title="Edit on GitHub"><i class="fa fa-fw fa-github"></i></a></li>
+        
+      </ul>
+    </div>
+    <h3>Navigation</h3>
+  </div>
+    </div>
+    <div class="container">
+
+      <div class="breadcrumbs">
+        <ul>
+        <li><a href="../../index.html">Sponge 4.1.0 Dokumentation</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../index.html" >Einen Server erstellen</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="index.html" accesskey="U">Erste Schritte</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        </ul>
+      </div> 
+    <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+    <form class="search" action="../../search.html" method="get">
+      <div class="searchbox-inner">
+        <input class="field" type="text" name="q" autocomplete="off" />
+        <button class="submit" type="submit"><i class="fa fa-fw fa-search" aria-hidden="true"></i></button>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </div>
+    </form>
+    <p class="searchtip" style="font-size: 90%"></p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../index.html">Inhalt</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../index.html">Einen Server erstellen</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">Erste Schritte</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="jre.html">Java installieren</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="migrating.html">Auf Sponge umsteigen</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="implementations/index.html">Auswählen einer Implementierung</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="implementations/spongeforge.html">SpongeForge installieren</a></li>
+<li class="toctree-l4"><a class="reference internal" href="implementations/spongevanilla.html">SpongeVanilla Installation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="launch-script.html">Ein Start-Skript erstellen</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="port-forward.html">Portweiterleitung</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">Sponge mit Bungeecord nutzen</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="configuration/index.html">Sponge konfigurieren</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="configuration/hocon.html">Einführung in HOCON</a></li>
+<li class="toctree-l4"><a class="reference internal" href="configuration/json.html">JSON Syntax</a></li>
+<li class="toctree-l4"><a class="reference internal" href="configuration/sponge-conf.html">global.conf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="configuration/server-properties.html">server.properties</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../management/index.html">Server Management</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../management/whitelist.html">Verwalten der Whitelist</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../management/bans.html">Verwalten von Bans</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../management/permissions.html">Berechtigungen verwalten</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../management/plugins.html">Installieren von Plugins</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../management/exploit-patches.html">Exploit Patches</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../management/performance-tweaks.html">Performance Tweaks</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../spongineer/index.html">Ein Sponge Experte werden</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../spongineer/commands.html">Befehle</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../spongineer/troubleshooting.html">Fehlerbehebung</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../spongineer/logs.html">Logdateien</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../spongineer/debugging.html">Debuggen</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../spongineer/bugreport.html">Fehler melden</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Vorbereitung für die Entwicklung</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../preparing/jdk.html">Installieren des JDKs</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../preparing/ide.html">Installieren einer IDE</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../preparing/text.html">Installation eines Text Editors</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../preparing/git.html">Git installieren</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../plugin/index.html">Plugins erstellen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/buildsystem.html">Build Systems</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/workspace/index.html">Den Arbeitsbereich einrichten</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/workspace/idea.html">IntelliJ IDEA einrichten</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/workspace/eclipse.html">Eclipse einrichten</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/project/index.html">Das Projekt einrichten</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/project/gradle.html">Grable einrichten</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/project/maven.html">Maven einrichten</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/plugin-identifier.html">Plugin Identifiers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/plugin-class.html">Main Plugin Class</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/lifecycle.html">Der Plugin-Lebenszyklus</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/injection.html">Dependency Injection</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/practices.html">Bewährtes Vorgehen</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/optional/index.html">Extras</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/optional/basic.html">Optionals erklärt</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/optional/usage.html">Beispiele für die Verwendung</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/logging.html">Loggen und Debugging</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/commands/index.html">Befehle</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/creating.html">Einen Befehl erstellen</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/arguments.html">Das Parsen von Argumenten</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/flags.html">Command Flags</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/childcommands.html">Untergeordnete Befehle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/service.html">The Command Manager</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/commandcallable.html">Unterste Ebene der Command API</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/event/index.html">Ereignisse</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/listeners.html">Event Listeners</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/causes.html">Event Causes</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/filters.html">Event Filters</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/custom.html">Benutzerdefinierte Ereignisse</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/assets.html">The Asset API</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/configuration/index.html">Configuring Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/configuration/loaders.html">Konfigurationsladende Elemente</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/configuration/nodes.html">Nodes konfigurieren</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/configuration/serialization.html">Serializing Objects</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/text/index.html">Text</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/text.html">Texte erstellen</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../plugin/text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../plugin/text/representations/xml.html">TextXML Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../plugin/text/representations/json.html">JSON Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../plugin/text/representations/configurate.html">Konfiguration-Format</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/pagination.html">Der Pagination-Service</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/messagechannels.html">Message Channels</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/templates.html">TextTemplates</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/data/index.html">Die Daten API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/data/keys.html">Using Keys</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/data/datamanipulators.html">Daten-Manipulatoren</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/data/transactions.html">Transactions</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/data/serialization.html">Serializing Data</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/blocks/index.html">Blöcke</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/concepts.html">Konzept</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/accessing.html">Block-Zugriff</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/modifying.html">Blöcke verändern</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/tileentities.html">Tile Entities</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/virtualblock.html">Virtual Block Changes</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/entities/index.html">Entitäten</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/entities/spawning.html">Spawnen eines Entitys</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/entities/modifying.html">Modifying an Entity</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/items/index.html">Items</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/items/usage.html">Basic Item Usage</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/items/creating.html">Ein ItemStack erstellen</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/effects.html">Effekte</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/scheduler.html">Scheduler</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/services.html">Services</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/database.html">Datenbanken</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/permissions.html">Rechte</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/bans.html">Bans</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/bookview.html">Book Views</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/economy/index.html">Wirtschaft</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/economy/basics.html">Grundlegende Konzepte</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/economy/using.html">Using the Economy API</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/economy/practices.html">Economy API Best Practices</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/economy/implementing.html">Implementing the Economy API</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/wgen/index.html">Weltgenerierung</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/wgen/modifiers.html">WorldGeneratorModifiers</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/wgen/customwgen.html">Modifying World Generation</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/manager.html">Plugin-Manager</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/game-profile-manager.html">Game Profile Manager</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/offline-userplayer-data.html">Offline Player Data</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/debugging.html">Plugins Debuggen</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/tab-lists.html">Tab Lists</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/plugin-meta.html">Plugin Metadata</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/ray-tracing.html">Ray-Tracing</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/tutorials.html">Tutorials</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Zu Sponge beitragen</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">Richtlinien für Beiträge</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/howtogit.html">Wie man Git(Hub)t</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/implementation/index.html">Developing Sponge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/codestyle.html">Code Formatierung</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/git-implementation.html">Git Workflow for API and Implementations</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/pr.html">Submitting a Pull-Request</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/debugging.html">Sponge in der IDE debuggen</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/mixins.html">Mixins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/datamanipulator.html">Implementierung des DataManipulators</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/spongedocs.html">SpongeDocs schreiben</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/porting.html">Portierung von Sponge auf andere Platformen</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/versioning.html">Versioning System and Repository Branch Layout</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">Über das Sponge Projekt</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">Einführung</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/faq.html">Häufig gestellte Fragen</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/structure.html">Die Struktur des Sponge Projekts</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/future.html">Zukunftspläne</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/license.html">Lizenz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/posting.html">Richtlinien für Forenbeiträge</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/rules.html">Regeln für das Forum und den IRC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/staff.html">Mitarbeiter</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Sponge Glossar</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/assets.html">Grafiken</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/history.html">Die Geschichte des Sponge-Projekts</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads.html">Download</a><ul class="simple">
+</ul>
+</li>
+</ul>
+<ul class="simple">
+</ul>
+
+      </div>
+    </div> 
+
+        <div class="document">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body" role="main">
+                  
+  <div class="section" id="using-sponge-with-bungeecord">
+<h1>Sponge mit Bungeecord nutzen<a class="headerlink" href="#using-sponge-with-bungeecord" title="Link zu dieser Überschrift">¶</a></h1>
+<p>BungeeCord ist eine Software, geschrieben von md_5 und dem SpigotMC Team, die es ermöglicht mehrere Minecraftserver miteinander zu verlinken, so dass Spieler zwischen den Servers wechseln können, ohne das sie sich erneut verbinden müssen. BungeeCorde wird üblicherweise von großen Server-Netzwerken genutzt, die viele Spielmodi anbieten.</p>
+<p>Für weitere Informationen über BungeeCorde, was es ist, wie man es einrichtet und wie es funktioniert, kannst du dich auf der <a class="reference external" href="https://www.spigotmc.org/wiki/bungeecord/">BungeeCord Website</a> umsehen. Diese Seite wird sich auf die Sponge spezifischen Schritte beschränken.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warnung</p>
+<p class="last">Damit man Server mit BungeeCord verbinden kann, müssen diese im Offline-Modus laufen. Im Offline-Modus kann sich allerdings jeder Spieler, mit jedem gewünschten Namen, mit dem Server verbinden und so unter Anderem Administratorberechtigungen erlangen. Es ist also unbedingt nötig die Server durch z.B. eine Firewall zu schützen. Falls du Linux für deine Server einsetzt, gibt es ` hier &lt;<a class="reference external" href="https://www.spigotmc.org/wiki/firewall-guide/">https://www.spigotmc.org/wiki/firewall-guide/</a>&gt;`_ einen IPTables Guide. Alternativ setzen einige Distributionen &#8220;ufw&#8221; ein: <a class="reference external" href="https://wiki.ubuntu.com/UncomplicatedFirewall">UncomplicatedFirewall</a>.</p>
+</div>
+<p>Wenn du nicht mit Linux vertraut bist oder dir nicht sicher bist, wie du unerlaubte Zugriffe auf den Server verhindern kannst, solltest du dir Hilfe von einem Erfahrenen Nutzer holen, damit die Sicherheit deines Servers gewährleistet ist.</p>
+<div class="admonition note">
+<p class="first admonition-title">Bemerkung</p>
+<p class="last">Achte darauf das Port 22 freigegeben ist, falls du SSH einsetzen möchtest. Andernfalls läufst du Gefahr dich selbst aus deinem Server auszusperren!</p>
+</div>
+<div class="section" id="ip-forwarding">
+<h2>Portweiterleitung<a class="headerlink" href="#ip-forwarding" title="Link zu dieser Überschrift">¶</a></h2>
+<p>BungeeCord hat einen IP Forwarding Modus (Portweiterleitung), welcher es BungeeCord erlaubt die UUID und IP Adressen von Spielern zu allen verknüpften Servern weiterzuleiten, obwohl diese im Offline-Modus laufen. Mit den derzeitigen Versionen von BungeeCord funktioniert IP Forwarding mit SpongeVanilla, während es mit SpongeForge nur klappt, wenn ein Vanilla Client genutzt wird. Gemoddete Server die gemoddete Clients voraussetzen können von Hause aus <em>nicht</em> mit IP Forwarding genutzt werden. Dafür wird entweder ein Patch oder Plugin für BungeeCord benötigt.</p>
+<p>Es wurde bereits ein Pull-Request für BungeeCord eingereicht um dieses Problem zu beheben und die volle SpongeForge Untersützung zu ermöglichen. Derzeit wird auf das einpflegen des PR gewartet:</p>
+<ul class="simple">
+<li><p class="first">Alter PR, enthält den Kontext: <a class="reference external" href="https://github.com/SpigotMC/BungeeCord/pull/1557">BungeeCord PR 1557</a></p>
+</li>
+<li><p class="first">Neuer PR, nutzt eine andere Methode um Probleme zu vermeiden: <a class="reference external" href="https://github.com/SpigotMC/BungeeCord/pull/1678">BungeeCord PR 1678</a></p>
+</li>
+</ul>
+</div>
+<div class="section" id="using-bungeecord-without-ip-forwarding">
+<h2>BungeeCord ohne IP Forwarding nutzen<a class="headerlink" href="#using-bungeecord-without-ip-forwarding" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Es ist empfohlen IP Forwarding zu nutzen, falls möglich. Wenn du dennoch darauf verzichten möchtest, musst du sicherstellen, das <code class="docutils literal"><span class="pre">online-mode</span></code> in deiner <code class="docutils literal"><span class="pre">server.properties</span></code> Datei auf <code class="docutils literal"><span class="pre">false</span></code> gesetzt ist und der Server zur <code class="docutils literal"><span class="pre">config.yml</span></code> von Bungeecord hinzugefügt ist. Bungee wird dann alle Verbindungen zum Server weiterleiten, wenn es erforderlich ist. Eine gute Vorsichtsmaßnahme ist, den <code class="docutils literal"><span class="pre">server-port</span></code> auf etwas anderes als die standardmäßigen <code class="docutils literal"><span class="pre">25565</span></code> zu setzen.</p>
+<p>Dies funktioniert mit allen Implementierungen von Sponge, einschließlich Mods.</p>
+</div>
+<div class="section" id="using-bungeecord-with-ip-forwarding">
+<h2>BungeeCord mit IP Forwarding nutzen<a class="headerlink" href="#using-bungeecord-with-ip-forwarding" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Wenn du IP Forwarding einsetzen möchtest:</p>
+<ul class="simple">
+<li><p class="first">Setze <code class="docutils literal"><span class="pre">ip_forward</span></code> in BungeeCords <code class="docutils literal"><span class="pre">config.yml</span></code> auf <code class="docutils literal"><span class="pre">true</span></code></p>
+</li>
+<li><p class="first">Setze in der Sponge Konfiguration (<code class="docutils literal"><span class="pre">config/global.conf</span></code>) <code class="docutils literal"><span class="pre">modules.bungeecord</span></code> auf <code class="docutils literal"><span class="pre">true</span></code> und <code class="docutils literal"><span class="pre">bungeecord.ip-forwarding</span></code> ebenfalls auf <code class="docutils literal"><span class="pre">true</span></code></p>
+</li>
+<li><p class="first">Wenn du eine andere Server-Software einsetzt, schau in der Dokumentation des betreffenden Servers nach.</p>
+</li>
+</ul>
+<p>Dieser Schritt muss für <strong>alle</strong> Server die mit dem BungeeCord-Netzwerk verbunden werden sollen durchgeführt werden. Danach befolst du einfach die Anleistung für Bungeecord ohne IP Forwarding.</p>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          <div class="clearer"></div>
+        </div>
+        <div class="footer" role="contentinfo">
+              &copy; Copyright 2014-2016, Sponge Contributors.
+            Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.3 erstellt.
+        </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,1488 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+     <title>global.conf &mdash; Документация Sponge 4.1.0</title>
+    
+  <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/sponge.css" type="text/css" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+  <link href='//fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:400italic,700italic,700,400' rel='stylesheet' type='text/css' />
+  <link rel="stylesheet" href="../../../_static/tomorrow.css" type="text/css" />
+  <link id="syntax-highlighting-ref" rel="stylesheet" href="../../../_static/tomorrow_night.css" type="text/css" />
+      
+  <script type="text/javascript">
+    var DOCUMENTATION_OPTIONS = {
+      URL_ROOT:    '../../../',
+      VERSION:     '4.1.0',
+      COLLAPSE_INDEX: false,
+      FILE_SUFFIX: '.html',
+      HAS_SOURCE:  true
+    };
+  </script>
+    <script type="text/javascript" src="../../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    <script type="text/javascript" src="../../../_static/store.min.js"></script>
+    <script type="text/javascript" src="../../../_static/lights.js"></script>
+      <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
+        <link rel="top" title="Документация Sponge 4.1.0" href="../../../index.html" />
+        <link rel="up" title="Настройка Sponge" href="index.html" />
+        <link rel="next" title="server.properties" href="server-properties.html" />
+        <link rel="prev" title="Синтаксис JSON" href="json.html" />
+    
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-59476017-2', 'auto');
+    ga('send', 'pageview');
+
+  </script>
+    
+  <link rel="alternate" hreflang="da" href="/4.1.0/da/">
+  <link rel="alternate" hreflang="de" href="/4.1.0/de/">
+  <link rel="alternate" hreflang="en-GB" href="/4.1.0/en-GB/">
+  <link rel="alternate" hreflang="en-PT" href="/4.1.0/en-PT/">
+  <link rel="alternate" hreflang="en" href="/4.1.0/en/">
+  <link rel="alternate" hreflang="es-ES" href="/4.1.0/es-ES/">
+  <link rel="alternate" hreflang="fi" href="/4.1.0/fi/">
+  <link rel="alternate" hreflang="fr" href="/4.1.0/fr/">
+  <link rel="alternate" hreflang="it" href="/4.1.0/it/">
+  <link rel="alternate" hreflang="ja" href="/4.1.0/ja/">
+  <link rel="alternate" hreflang="ko" href="/4.1.0/ko/">
+  <link rel="alternate" hreflang="lt" href="/4.1.0/lt/">
+  <link rel="alternate" hreflang="nb" href="/4.1.0/nb/">
+  <link rel="alternate" hreflang="nl" href="/4.1.0/nl/">
+  <link rel="alternate" hreflang="pl" href="/4.1.0/pl/">
+  <link rel="alternate" hreflang="pt-BR" href="/4.1.0/pt-BR/">
+  <link rel="alternate" hreflang="pt-PT" href="/4.1.0/pt-PT/">
+  <link rel="alternate" hreflang="ru" href="/4.1.0/ru/">
+  <link rel="alternate" hreflang="uk" href="/4.1.0/uk/">
+  <link rel="alternate" hreflang="zh-CN" href="/4.1.0/zh-CN/">
+  <link rel="alternate" hreflang="zh-TW" href="/4.1.0/zh-TW/">
+  <link rel="alternate" hreflang="x-default" href="/"> 
+  </head>
+  <body role="document" id="top">
+    <div class="topbar">
+  <div role="navigation" aria-label="related navigation">
+    <div class="sp-logo-container sp-not-mobileview sp-mobileview">
+      <a class="sp-logo-link" data-auto-route="true" href="/">
+        <img height="40px" id="site-logo" class="logo-big" alt="Sponge Forums" src="../../../_static/spongelogo.png">
+      </a>
+      <div class="sp-logo-bg"></div>
+      <div class="sp-logo-chevron"><i class="fa fa-fw fa-chevron-down"></i></div>
+      <div class="sp-logo-menu sp-skip-handler">
+        <ul class="sp-logo-dropdown" id="ddleft">
+          <a href="https://www.spongepowered.org"><li><i class="fa-fw fa fa-home"></i>Homepage</li></a>
+          <a href="https://forums.spongepowered.org"><li><i class="fa-fw fa fa-comment"></i>Forums</li></a>
+          <a href="https://github.com/SpongePowered"><li><i class="fa-fw fa fa-code"></i>Code</li></a>
+          <a class="sp-forums-home" href="https://docs.spongepowered.org"><li class="active"><i class="fa-fw fa fa-book"></i>SpongeDocs</li></a>
+          <a href="https://jd.spongepowered.org"><li><i class="fa-fw fa fa-graduation-cap"></i>JavaDocs</li></a>
+          <a href="https://forums.spongepowered.org/c/plugins/plugin-releases"><li><i class="fa-fw fa fa-plug"></i>Plugins</li></a>
+          <a href="https://forums.spongepowered.org/t/sponge-downloads/11448"><li><i class="fa-fw fa fa-download"></i>Get Sponge</li></a>
+        </ul>
+      </div>
+    </div>
+    <div class="menu-right">
+      <div><i class="fa fa-fw fa-globe"></i></div>
+        <ul class="dropdown" id="ddlang">
+          <li><a href="/4.1.0/da/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/da.png" alt="Flag for Danish"/></a></li>
+          <li><a href="/4.1.0/de/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/de.png" alt="Flag for German"/></a></li>
+          <li><a href="/4.1.0/en-GB/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/en-GB.png" alt="Flag for English, United Kingdom"/></a></li>
+          <li><a href="/4.1.0/en-PT/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/en-PT.png" alt="Flag for Pirate English"/></a></li>
+          <li><a href="/4.1.0/en/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/en.png" alt="Flag for English"/></a></li>
+          <li><a href="/4.1.0/es-ES/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/es-ES.png" alt="Flag for Spanish"/></a></li>
+          <li><a href="/4.1.0/fi/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/fi.png" alt="Flag for Finnish"/></a></li>
+          <li><a href="/4.1.0/fr/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/fr.png" alt="Flag for French"/></a></li>
+          <li><a href="/4.1.0/it/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/it.png" alt="Flag for Italian"/></a></li>
+          <li><a href="/4.1.0/ja/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ja.png" alt="Flag for Japanese"/></a></li>
+          <li><a href="/4.1.0/ko/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ko.png" alt="Flag for Korean"/></a></li>
+          <li><a href="/4.1.0/lt/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/lt.png" alt="Flag for Lithuanian"/></a></li>
+          <li><a href="/4.1.0/nb/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nb.png" alt="Flag for Norwegian Bokmal"/></a></li>
+          <li><a href="/4.1.0/nl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nl.png" alt="Flag for Dutch"/></a></li>
+          <li><a href="/4.1.0/pl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pl.png" alt="Flag for Polish"/></a></li>
+          <li><a href="/4.1.0/pt-BR/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pt-BR.png" alt="Flag for Portuguese, Brazilian"/></a></li>
+          <li><a href="/4.1.0/pt-PT/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pt-PT.png" alt="Flag for Portuguese"/></a></li>
+          <li><a href="/4.1.0/ru/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ru.png" alt="Flag for Russian"/></a></li>
+          <li><a href="/4.1.0/uk/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/uk.png" alt="Flag for Ukrainian"/></a></li>
+          <li><a href="/4.1.0/zh-CN/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/zh-CN.png" alt="Flag for Chinese Simplified"/></a></li>
+          <li><a href="/4.1.0/zh-TW/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/zh-TW.png" alt="Flag for Chinese Traditional"/></a></li>
+        </ul>
+    </div>
+    <div class="menu-right">
+      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+        <ul class="dropdown" id="ddvers">
+          <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
+          <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
+        </ul>
+    </div>
+    <div class="menu-right">
+      <div title="Toggle syntax highlighting between light and dark" class="lights">
+        <i class="fa fa-fw fa-lightbulb-o"></i>
+      </div>
+    </div>
+    <div>
+      <ul class="controls">
+        <li>|</li>
+        
+        <li><a href="server-properties.html" title="Next Page"><i class="fa fa-fw fa-chevron-right"></i></a></li>
+        
+        <li><a href="#top" title="To the top"><i class="fa fa-fw fa-chevron-up"></i></a></li>
+        <li><a href="../../../index.html" title="Home"><i class="fa fa-fw fa-home"></i></a></li>
+        
+        <li><a href="json.html" title="Previous Page"><i class="fa fa-fw fa-chevron-left"></i></a></li>
+        
+        <li>|</li>
+        
+          <li><a href="https://github.com/SpongePowered/SpongeDocs/blob/master/source/server/getting-started/configuration/sponge-conf.rst" title="Edit on GitHub"><i class="fa fa-fw fa-github"></i></a></li>
+        
+      </ul>
+    </div>
+    <h3>Навигация</h3>
+  </div>
+    </div>
+    <div class="container">
+
+      <div class="breadcrumbs">
+        <ul>
+        <li><a href="../../../index.html">Документация Sponge 4.1.0</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html" >Создание сервера</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../index.html" >Начало работы</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="index.html" accesskey="U">Настройка Sponge</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        </ul>
+      </div> 
+    <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+      <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+    <form class="search" action="../../../search.html" method="get">
+      <div class="searchbox-inner">
+        <input class="field" type="text" name="q" autocomplete="off" />
+        <button class="submit" type="submit"><i class="fa fa-fw fa-search" aria-hidden="true"></i></button>
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </div>
+    </form>
+    <p class="searchtip" style="font-size: 90%"></p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script><h3><a href="../../../index.html">Оглавление</a></h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../index.html">Создание сервера</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="../index.html">Начало работы</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="../jre.html">Установка Java</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../migrating.html">Переход на Sponge</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../implementations/index.html">Выбор реализации</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../implementations/spongeforge.html">Установка SpongeForge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../implementations/spongevanilla.html">Установка SpongeVanilla</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../launch-script.html">Создание сценария (скрипта) запуска</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../port-forward.html">Перенаправление портов</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../bungeecord.html">Sponge и BungeeCord</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">Настройка Sponge</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="hocon.html">Основы HOCON</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json.html">Синтаксис JSON</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">global.conf</a></li>
+<li class="toctree-l4"><a class="reference internal" href="server-properties.html">server.properties</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../management/index.html">Управление сервером</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../management/whitelist.html">Управление WhiteList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../management/bans.html">Управление банами</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../management/permissions.html">Управление правами игроков</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../management/plugins.html">Установка плагинов</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../management/exploit-patches.html">Патчи уязвимостей</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../management/performance-tweaks.html">Настройки производительности</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../spongineer/index.html">Станьте экспертом по серверам Sponge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../spongineer/commands.html">Команды</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../spongineer/troubleshooting.html">Устранение неполадок</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../spongineer/logs.html">Лог-файлы</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../spongineer/debugging.html">Отладка</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../spongineer/bugreport.html">Сообщение о проблемах</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../preparing/index.html">Подготовка к разработке</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../preparing/jdk.html">Установка JDK</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preparing/ide.html">Установка IDE</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preparing/text.html">Установка текстового редактора</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../preparing/git.html">Установка Git</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../plugin/index.html">Создание плагина</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/buildsystem.html">Система сборки</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/workspace/index.html">Подготовка рабочего пространства</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/workspace/idea.html">Настройка IntelliJ IDEA</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/workspace/eclipse.html">Настройка Eclipse</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/project/index.html">Setting Up Your Project</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/project/gradle.html">Setting Up Gradle</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/project/maven.html">Setting Up Maven</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/plugin-identifier.html">Идентификаторы плагина</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/plugin-class.html">Основной класс плагина</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/lifecycle.html">Жизненный цикл плагина</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/injection.html">Внедрение зависимостей</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/practices.html">Практические рекомендации</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/optional/index.html">Дополнительно</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/optional/basic.html">Optionals Explained</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/optional/usage.html">Примеры использования</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/logging.html">Ведение логов (журналов) и отладка</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/commands/index.html">Команды</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/creating.html">Создание команды</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/arguments.html">Парсинг аргументов</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/flags.html">Command Flags</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/childcommands.html">Дочерние Команды</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/service.html">Менеджер команд</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/commands/commandcallable.html">Low-Level Command API</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/event/index.html">События</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/listeners.html">Event Listeners</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/causes.html">Event Causes</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/filters.html">Event Filters</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/event/custom.html">Custom Events</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/assets.html">The Asset API</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/configuration/index.html">Configuring Plugins</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/configuration/loaders.html">Configuration Loaders</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/configuration/nodes.html">Configuration Nodes</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/configuration/serialization.html">Serializing Objects</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/text/index.html">Текст</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/text.html">Создание текста</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../../plugin/text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../plugin/text/representations/xml.html">TextXML Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../plugin/text/representations/json.html">Формат JSON</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../../plugin/text/representations/configurate.html">Configuration Format</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/pagination.html">The Pagination Service</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/messagechannels.html">Каналы сообщений</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/templates.html">TextTemplates</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/data/index.html">The Data API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/data/keys.html">Использование ключей</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/data/datamanipulators.html">Манипуляторы данных</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/data/transactions.html">Транзакции</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/data/serialization.html">Serializing Data</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/blocks/index.html">Блоки</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/blocks/concepts.html">Концепты</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/blocks/accessing.html">Доступ к блокам</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/blocks/modifying.html">Изменение блоков</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/blocks/tileentities.html">Tile Entities</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/blocks/virtualblock.html">Виртуальные изменения блока</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/entities/index.html">Сущности</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/entities/spawning.html">Спавн Сущности</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/entities/modifying.html">Modifying an Entity</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/items/index.html">Items</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/items/usage.html">Basic Item Usage</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/items/creating.html">Создание ItemStack</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/effects.html">Эффекты</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/scheduler.html">Планировщик</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/services.html">Сервисы</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/database.html">Базы данных</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/permissions.html">Разрешения</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/bans.html">Блокировки</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/bookview.html">Книга просмотров</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/economy/index.html">Экономика</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/economy/basics.html">Основные понятия</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/economy/using.html">Using the Economy API</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/economy/practices.html">Economy API Best Practices</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/economy/implementing.html">Implementing the Economy API</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/wgen/index.html">Генерация мира</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/wgen/modifiers.html">WorldGeneratorModifiers</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/wgen/customwgen.html">Модифицирование генерации мира</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/manager.html">Plugin Manager</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/game-profile-manager.html">Game Profile Manager</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/offline-userplayer-data.html">Offline Player Data</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/debugging.html">Plugin Debugging</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/tab-lists.html">Tab Lists</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/plugin-meta.html">Plugin Metadata</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/ray-tracing.html">Ray Tracing</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/tutorials.html">Туториалы</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../contributing/index.html">Участие в разработке Sponge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/guidelines.html">Указания по содействию</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/howtogit.html">How to Git(Hub)</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/implementation/index.html">Разработка Sponge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/codestyle.html">Стиль кода</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/git-implementation.html">Рабочий поток данных Git-a для самого API и выполнения API</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/pr.html">Submitting a Pull-Request</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/debugging.html">Отладка Sponge В IDE</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/mixins.html">Mixins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/datamanipulator.html">Implementing DataManipulators</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/spongedocs.html">Написание англоязычной документации SpongeDocs</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/porting.html">Перенос Sponge на другие платформы</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/versioning.html">Versioning System and Repository Branch Layout</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../about/index.html">О проекте Sponge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/introduction.html">Введение</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html">Часто задаваемые вопросы</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/structure.html">Структура Sponge</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/future.html">Планы на будущее</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/license.html">Лицензия</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/posting.html">Советы по отправке постов на форуме</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/rules.html">Правила форума &amp; IRC</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/staff.html">Коллектив</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/glossary.html">Словарь Sponge</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/assets.html">Арты</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../about/history.html">История Sponge</a><ul class="simple">
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../../downloads.html">Загрузки</a><ul class="simple">
+</ul>
+</li>
+</ul>
+<ul class="simple">
+</ul>
+
+      </div>
+    </div> 
+
+        <div class="document">
+            <div class="documentwrapper">
+              <div class="bodywrapper">
+                <div class="body" role="main">
+                  
+  <div class="section" id="global-conf">
+<h1>global.conf<a class="headerlink" href="#global-conf" title="Ссылка на этот заголовок">¶</a></h1>
+<div class="section" id="global-configuration">
+<h2>Главный файл конфигурации<a class="headerlink" href="#global-configuration" title="Ссылка на этот заголовок">¶</a></h2>
+<p>Файл global.conf содержит глобальные настройки конфигурации Sponge. Этот файл находится в папке config/sponge, которые находятся в папке вашего сервера. Многие из этих настроек могут быть переопределены для типов мира или измерений при помощи файлов конфигурации, находящихся в подпапках config/worlds.</p>
+<p>Ниже приведен полный файл global.conf с всеми возможными параметрами, которые могут присутствовать на сервере. Обратите внимание, что некоторые разделы будут добавлены в файл, когда сервер обнаружит их. Данный конфигурационный был создан с помощью SpongeForge сборки 1399, SpongeAPI версии 4.1:</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span># 1.0
+#
+# # If you need help with the configuration or have any questions related to Sponge,
+# # join us at the IRC or drop by our forums and leave a post.
+#
+# # IRC: #sponge @ irc.esper.net ( http://webchat.esper.net/?channel=sponge )
+# # Forums: https://forums.spongepowered.org/
+#
+
+sponge {
+    block-tracking {
+        # Add block ids you wish to blacklist for player block placement tracking.
+        block-blacklist=[]
+        # If enabled, adds player tracking support for block positions. Note: This should only be disabled if you do not care who caused a block to change.
+        enabled=true
+    }
+    bungeecord {
+        # If enabled, allows BungeeCord to forward IP address, UUID, and Game Profile to this server
+        ip-forwarding=false
+    }
+    commands {
+        # A mapping from unqualified command alias to plugin id of the plugin that should handle a certain command
+        aliases {}
+    }
+    debug {
+        # Dump chunks in the event of a deadlock
+        dump-chunks-on-deadlock=false
+        # Dump the heap in the event of a deadlock
+        dump-heap-on-deadlock=false
+        # Dump the server thread on deadlock warning
+        dump-threads-on-warn=false
+        # Enable Java&#39;s thread contention monitoring for thread dumps
+        thread-contention-monitoring=false
+    }
+    entity {
+        # Number of colliding entities in one spot before logging a warning. Set to 0 to disable
+        collision-warn-size=200
+        # Number of entities in one dimension before logging a warning. Set to 0 to disable
+        count-warn-size=0
+        # Number of ticks before a painting is respawned on clients when their art is changed
+        entity-painting-respawn-delay=2
+        # Number of ticks before the fake player entry of a human is removed from the tab list (range of 0 to 100 ticks).
+        human-player-list-remove-delay=10
+        # Controls the time in ticks for when an item despawns.
+        item-despawn-rate=6000
+        # The upper bounded range where living entities farther from a player will likely despawn
+        living-hard-despawn-range=128
+        # The amount of seconds before a living entity between the soft and hard despawn ranges from a player to be considered for despawning
+        living-soft-despawn-minimum-life=30
+        # The lower bounded range where living entities near a player may potentially despawn
+        living-soft-despawn-range=32
+        # Max size of an entity&#39;s bounding box before removing it. Set to 0 to disable
+        max-bounding-box-size=1000
+        # Square of the max speed of an entity before removing it. Set to 0 to disable
+        max-speed=100
+    }
+    entity-activation-range {
+        # If enabled, newly discovered entities will be added to this config with a default value.
+        auto-populate=false
+        # Default activation ranges used for all entities unless overidden.
+        defaults {
+            ambient=32
+            aquatic=32
+            creature=32
+            misc=16
+            monster=32
+        }
+        # Per-mod overrides. Refer to the Minecraft default mod for example.
+        mods {}
+    }
+    entity-collisions {
+        # If enabled, newly discovered entities/blocks will be added to this config with a default value.
+        auto-populate=false
+        # Default max collisions used for all entities/blocks unless overidden.
+        defaults {}
+        # Max amount of entities any given entity or block can collide with. This improves performance when there are more than 8 entities on top of eachother such as a 1x1 spawn pen. Set to 0 to disable.
+        max-entities-within-aabb=8
+        # Per-mod overrides. Refer to the Minecraft default mod for example.
+        mods {
+            minecraft {
+                blocks {
+                    &quot;detector_rail&quot;=1
+                    &quot;heavy_weighted_pressure_plate&quot;=150
+                    &quot;light_weighted_pressure_plate&quot;=15
+                    &quot;mob_spawner&quot;=-1
+                    &quot;stone_pressure_plate&quot;=1
+                    &quot;wooden_button&quot;=1
+                    &quot;wooden_pressure_plate&quot;=1
+                }
+                # Default max collisions used for all entities/blocks unless overidden.
+                defaults {
+                    blocks=8
+                    entities=8
+                }
+                # Set to false if you want mod to ignore entity collision rules.
+                enabled=true
+                entities {
+                    thrownpotion=-1
+                }
+            }
+        }
+    }
+    exploits {
+        prevent-creative-itemstack-name-exploit=true
+        prevent-sign-command-exploit=true
+    }
+    general {
+        # Forces Chunk Loading on provide requests (speedup for mods that don&#39;t check if a chunk is loaded)
+        chunk-load-override=false
+        # Disable warning messages to server admins
+        disable-warnings=false
+    }
+    ip-sets {}
+    logging {
+        # Log when blocks are broken
+        block-break=false
+        # Log when blocks are modified
+        block-modify=false
+        # Log when blocks are placed
+        block-place=false
+        # Log when blocks are populated in a chunk
+        block-populate=false
+        # Log when blocks are placed by players and tracked
+        block-tracking=false
+        # Log when chunks are loaded
+        chunk-load=false
+        # Log when chunks are unloaded
+        chunk-unload=false
+        # Whether to log entity collision/count checks
+        entity-collision-checks=false
+        # Log when living entities are destroyed
+        entity-death=false
+        # Log when living entities are despawned
+        entity-despawn=false
+        # Log when living entities are spawned
+        entity-spawn=false
+        # Whether to log entity removals due to speed
+        entity-speed-removal=false
+        # Log when server receives exploited packet with itemstack name exceeding string limit.
+        exploit-itemstack-name-overflow=false
+        # Log when player attempts to respawn invisible to surrounding players.
+        exploit-respawn-invisibility=false
+        # Log when server receives exploited packet to update a sign containing commands from player with no permission.
+        exploit-sign-command-updates=false
+        # Add stack traces to dev logging
+        log-stacktraces=false
+        # Log when a world auto-saves its chunk data. Note: This may be spammy depending on the auto-save-interval configured for world.
+        world-auto-save=false
+    }
+    modules {
+        bungeecord=false
+        entity-activation-range=true
+        entity-collisions=true
+        exploits=true
+        optimizations=true
+        timings=true
+    }
+    optimizations {
+        # Caches chunks internally for faster returns when querying at various positions
+        chunk-map-caching=true
+        # A simple patch to reduce a few sanity checks for the sake of speed when performing block state operations
+        fast-blockstate-lookup=true
+        # This prevents chunks being loaded for getting light values at specific block positions. May have side effects.
+        ignore-unloaded-chunks-on-get-light=true
+    }
+    # Configuration options related to the Sql service, including connection aliases etc
+    sql {
+        # Aliases for SQL connections, in the format jdbc:protocol://[username[:password]@]host/database
+        aliases {}
+    }
+    timings {
+        enabled=true
+        hidden-config-entries=[
+            &quot;sponge.sql&quot;
+        ]
+        history-interval=300
+        history-length=3600
+        server-name-privacy=false
+        verbose=true
+    }
+    world {
+        # The auto-save tick interval used when saving global player data. Set to 0 to disable. (Default: 900) Note: 20 ticks is equivalent to 1 second.
+        auto-player-save-interval=900
+        # The auto-save tick interval used to save all loaded chunks in a world. Set to 0 to disable. (Default: 900) Note: 20 ticks is equivalent to 1 second.
+        auto-save-interval=900
+        # Lava behaves like vanilla water when source block is removed
+        flowing-lava-decay=false
+        # Enable if you want the world to generate spawn the moment its loaded.
+        generate-spawn-on-load=true
+        # Vanilla water source behavior - is infinite
+        infinite-water-source=false
+        # Enable if this world&#39;s spawn should remain loaded with no players.
+        keep-spawn-loaded=true
+        # Enable if this world should be loaded on startup.
+        load-on-startup=true
+        # Specifies the radius (in chunks) of where creatures will spawn. This value is capped to the current view distance setting in server.properties
+        mob-spawn-range=8
+        # A list of all detected portal agents used in this world. In order to override, change the target world name to any other valid world. Note: If world is not found, it will fallback to default.
+        portal-agents {
+            &quot;minecraft:default_nether&quot;=DIM-1
+            &quot;minecraft:default_the_end&quot;=DIM1
+        }
+        # Enable if this world allows PVP combat.
+        pvp-enabled=true
+        # Enable if this world should be registered.
+        world-enabled=true
+    }
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="global-properties-of-sponge">
+<h2>Глобальные переменные Sponge<a class="headerlink" href="#global-properties-of-sponge" title="Ссылка на этот заголовок">¶</a></h2>
+<table border="1" class="docutils">
+<colgroup>
+<col width="35%" />
+<col width="7%" />
+<col width="9%" />
+<col width="49%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head"><p class="first last">Параметр</p>
+</th>
+<th class="head"><p class="first last">Тип</p>
+</th>
+<th class="head"><p class="first last">Значение по умолчанию</p>
+</th>
+<th class="head"><p class="first last">Описание параметра</p>
+</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><p class="first last"><strong>Отслеживание блоков</strong></p>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>block-blacklist</td>
+<td>string</td>
+<td>null</td>
+<td><p class="first last">Добавляет идентификаторы блоков, какие вы хотите, в черный список отслеживания поставленных игроком блоков.</p>
+</td>
+</tr>
+<tr class="row-even"><td>enabled</td>
+<td>boolean</td>
+<td>true</td>
+<td><p class="first last">Добавляет поддержку отслеживания позиции блока игроком.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>Bungeecord</strong></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>ip-forwarding</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Разрешает BungeeCord отправлять IP-адрес, UUID и игровой профиль на сервер.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last"><strong>Команды</strong></p>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>aliases</td>
+<td>string</td>
+<td>null</td>
+<td><p class="first">Псевдоним, который будет решать конфликты, когда несколько плагинов запрашивают определённую команду. Правильный синтаксис: <code class="docutils literal"><span class="pre">&lt;команда&gt;=&lt;плагин&gt;</span></code> Пример:</p>
+<div class="last highlight-python"><div class="highlight"><pre><span></span>aliases = {
+    title=myPlugin
+}
+</pre></div>
+</div>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last"><strong>Параметры отладки</strong></p>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>dump-chunks-on-deadlock</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Дампить чанки, если случился deadlock.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>dump-heap-on-deadlock</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Дампить кучу, если случился deadlock.</p>
+</td>
+</tr>
+<tr class="row-even"><td>dump-threads-on-warn</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Дампить поток сервера, если случился deadlock.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>thread-contention-monitoring</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Включает мониторинг подключений Java-потоков, для того чтобы делать дампы потоков.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last"><strong>Параметры сущностей</strong></p>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>collision-warn-size</td>
+<td>integer</td>
+<td>200</td>
+<td><p class="first last">Количество сталкивающихся сущностей в одном месте до вывода предупреждения. 0 — отключить параметр.</p>
+</td>
+</tr>
+<tr class="row-even"><td>count-warn-size</td>
+<td>integer</td>
+<td>0</td>
+<td><p class="first last">Количество сущностей, разрешённым находиться в одном измерении до вывода предупреждения. 0 — отключить параметр.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>entity-painting-respawn-delay</td>
+<td>integer</td>
+<td>2</td>
+<td><p class="first last">Количество тиком, прежде чем картина возродится на клиенте, когда её изображение изменено.</p>
+</td>
+</tr>
+<tr class="row-even"><td>human-player-list-remove-delay</td>
+<td>integer</td>
+<td>10</td>
+<td>Number of ticks before the fake player entry of
+a human is removed from the tab list. The
+allowed range is 0 - 100.</td>
+</tr>
+<tr class="row-odd"><td>item-despawn-rate</td>
+<td>integer</td>
+<td>6000</td>
+<td><p class="first last">Время в тиках, перед тем, как вещь исчезнет.</p>
+</td>
+</tr>
+<tr class="row-even"><td>living-hard-despawn-range</td>
+<td>integer</td>
+<td>128</td>
+<td><p class="first last">Верхнее ограничение диапазона, в котором живые сущности, находящиеся далеко от игрока, будут, скорее всего, исчезать</p>
+</td>
+</tr>
+<tr class="row-odd"><td>living-soft-despawn-minimum-life</td>
+<td>integer</td>
+<td>30</td>
+<td><p class="first last">Количество секунд, после которых живая сущность, находящаяся между мягким и жестким радиусами исчезновения от игрока, исчезнет</p>
+</td>
+</tr>
+<tr class="row-even"><td>living-soft-despawn-range</td>
+<td>integer</td>
+<td>32</td>
+<td><p class="first last">Нижнее ограничение диапазона, в котором живые сущности, находящиеся далеко от игрока, будут, скорее всего, исчезать</p>
+</td>
+</tr>
+<tr class="row-odd"><td>max-bounding-box-size</td>
+<td>integer</td>
+<td>1000</td>
+<td><p class="first last">Максимальный размер хитбокса сущности. Превысив это значение, сущность будет удалена. 0 — отключить параметр.</p>
+</td>
+</tr>
+<tr class="row-even"><td>max-speed</td>
+<td>integer</td>
+<td>100</td>
+<td><p class="first last">Квадрат максимальной скорости сущности. Превысив это значение, сущность будет удалена. 0 — отключить параметр</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last"><strong>Диапазон активации сущностей</strong></p>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>auto-populate</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Если этот параметр включён, новые обнаруженные сущности будут добавлены в файл конфигурации со стандартным значением.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last"><strong>По умолчанию</strong></p>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Стандартный радиус активации всех сущностей, если это не изменено.</p>
+</td>
+</tr>
+<tr class="row-even"><td>ambient</td>
+<td>integer</td>
+<td>32</td>
+<td><p class="first last">Стандартный радиус активации окружающих сущностей.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>aquatic</td>
+<td>integer</td>
+<td>32</td>
+<td><p class="first last">Стандартный радиус активации подводных сущностей.</p>
+</td>
+</tr>
+<tr class="row-even"><td>creature</td>
+<td>integer</td>
+<td>16</td>
+<td><p class="first last">Стандартный радиус активации для существ.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>misc</td>
+<td>integer</td>
+<td>16</td>
+<td><p class="first last">Стандартный радиус активации прочих сущностей.</p>
+</td>
+</tr>
+<tr class="row-even"><td>monster</td>
+<td>integer</td>
+<td>32</td>
+<td><p class="first last">Стандартный радиус активации для монстров.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last"><strong>Модификации</strong></p>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Per-mod overrides. Refer to the Minecraft default
+mod for example.</td>
+</tr>
+<tr class="row-even"><td><p class="first last"><strong>Коллизия сущностей</strong></p>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>auto-populate</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Если этот параметр включён, новые обнаруженные сущности/блоки будут добавлены в файл конфигурации со стандартным значением.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last"><strong>По умолчанию</strong></p>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Стандартный радиус коллизии всех сущностей/блоков, если это не изменено.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>max-entities-within-aabb</td>
+<td>integer</td>
+<td>8</td>
+<td>Max amount of entities any given entity or block
+can collide with. Set to 0 to disable.</td>
+</tr>
+<tr class="row-even"><td><p class="first last"><strong>Модификации</strong></p>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>Per-mod overrides. Refer to the Minecraft default
+mod for example.</td>
+</tr>
+<tr class="row-odd"><td><strong>Minecraft</strong></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><p class="first last"><strong>Блоки</strong></p>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>&#8220;detector_rail&#8221;</td>
+<td>integer</td>
+<td>1</td>
+<td><p class="first last">Макс. столкновений для &#8220;detector_rail&#8221;.</p>
+</td>
+</tr>
+<tr class="row-even"><td>&#8220;heavy_weighted_pressure_plate&#8221;</td>
+<td>integer</td>
+<td>150</td>
+<td><p class="first last">Макс. столкновений для &#8220;heavy_weighted_pressure_plate&#8221;.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>&#8220;light_weighted_pressure_plate&#8221;</td>
+<td>integer</td>
+<td>15</td>
+<td><p class="first last">Макс. столкновений для &#8220;light_weighted_pressure_plate&#8221;.</p>
+</td>
+</tr>
+<tr class="row-even"><td>&#8220;mob_spawner&#8221;</td>
+<td>integer</td>
+<td>-1</td>
+<td><p class="first last">Макс. столкновений для &#8220;mob_spawner&#8221;.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>&#8220;stone_pressure_plate&#8221;</td>
+<td>integer</td>
+<td>1</td>
+<td><p class="first last">Макс. столкновений для &#8220;stone_pressure_plate&#8221;.</p>
+</td>
+</tr>
+<tr class="row-even"><td>&#8220;wooden_button&#8221;</td>
+<td>integer</td>
+<td>1</td>
+<td><p class="first last">Макс. столкновений для &#8220;wooden_button&#8221;.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>&#8220;wooden_pressure_plate&#8221;</td>
+<td>integer</td>
+<td>1</td>
+<td><p class="first last">Макс. столкновений для &#8220;wooden_pressure_plate&#8221;.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last"><strong>По умолчанию</strong></p>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td><p class="first last">Стандартный радиус коллизии всех сущностей/блоков, если это не изменено.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>blocks</td>
+<td>integer</td>
+<td>8</td>
+<td><p class="first last">Макс. столкновений по умолчанию для блоков.</p>
+</td>
+</tr>
+<tr class="row-even"><td>entities</td>
+<td>integer</td>
+<td>8</td>
+<td><p class="first last">Макс. столкновений по умолчанию для сущностей.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>enabled</td>
+<td>boolean</td>
+<td>true</td>
+<td><p class="first last">Установите значение на false, если хотите игнорировать правила столкновения сущностей.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last"><strong>Сущности</strong></p>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>thrownpotion</td>
+<td>integer</td>
+<td>-1</td>
+<td><p class="first last">Макс. столкновений для выкинутого зелья.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last"><strong>Уязвимости</strong></p>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>prevent-creative-itemstack-name-exploit</td>
+<td>boolean</td>
+<td>true</td>
+<td><p class="first last">Предотвращает уязвимость, когда клиент посылает пакет с именем itemstack, превышающий ограничение символов string.</p>
+</td>
+</tr>
+<tr class="row-even"><td>prevent-sign-command-exploit</td>
+<td>boolean</td>
+<td>true</td>
+<td><p class="first last">Предотвращает уязвимость, когда клиент посылает пакет обновления таблички, содержащей команды, если у игрока нет разрешений.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last"><strong>Главные параметры</strong></p>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>chunk-load-override</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Заставляет загружаться чанки, если они запрашиваются. Этот параметр — ускорение для модификаций, которые не проверяют, загружен ли чанк.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>disable-warnings</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Отключает сообщения с предупреждениями, отправляемых администраторам сервера.</p>
+</td>
+</tr>
+<tr class="row-even"><td><strong>Ip Sets</strong></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td><p class="first last"><strong>Настройки журналирования</strong></p>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>block-break</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Регистрирует, если блок был сломан.</p>
+</td>
+</tr>
+<tr class="row-even"><td>block-modify</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Регистрирует, если блок был модифицирован.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>block-place</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Регистрирует, если блок был установлен.</p>
+</td>
+</tr>
+<tr class="row-even"><td>block-populate</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Регистрирует, когда чанк заполняется блоками.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>block-tracking</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Регистрирует, если блок был установлен игроком и отслеживается.</p>
+</td>
+</tr>
+<tr class="row-even"><td>chunk-load</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Регистрирует загрузку чанков.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>chunk-unload</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Регистрирует отгрузку чанков.</p>
+</td>
+</tr>
+<tr class="row-even"><td>entity-collision-checks</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Регистрирует проверку коллизий/количества объектов.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>entity-death</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Регистрирует, если были уничтожены живые существа.</p>
+</td>
+</tr>
+<tr class="row-even"><td>entity-despawn</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Регистрирует, если живые существа исчезло.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>entity-spawn</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Регистрирует, если живые существа были заспавнены.</p>
+</td>
+</tr>
+<tr class="row-even"><td>entity-speed-removal</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Регистрирует объекты, удаленные из-за ускорения.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>exploit-itemstack-name-overflow</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Регистрирует, когда сервер получает эксплуатируемые пакеты с именем itemstack, превышающих ограничение string.</p>
+</td>
+</tr>
+<tr class="row-even"><td>exploit-respawn-invisibility</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Регистрирует, когда игрок пытается возродиться невидимым для окружающих игроков.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>exploit-sign-command-updates</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Регистрирует, когда сервер получает эксплуатируемые пакеты, содержащих команды от игрока, не имеющего разрешений.</p>
+</td>
+</tr>
+<tr class="row-even"><td>log-stacktraces</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Добавить трассировку стека для протоколирования разработчика.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>world-auto-save</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Если включено, регистрирует, когда мир автоматически сохраняет данные о своих чанках.</p>
+</td>
+</tr>
+<tr class="row-even"><td><p class="first last"><strong>Модули</strong></p>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>bungeecord</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Включает поддержку BungeeCord.</p>
+</td>
+</tr>
+<tr class="row-even"><td>entity-activation-range</td>
+<td>boolean</td>
+<td>true</td>
+<td><p class="first last">Включает параметры радиуса активации сущностей.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>entity-collisions</td>
+<td>boolean</td>
+<td>true</td>
+<td><p class="first last">Включает параметры коллизии сущностей.</p>
+</td>
+</tr>
+<tr class="row-even"><td>exploits</td>
+<td>boolean</td>
+<td>true</td>
+<td><p class="first last">Включает модуль предупреждений эксплойтов.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>optimizations</td>
+<td>boolean</td>
+<td>true</td>
+<td><p class="first last">Включает модуль оптимизации.</p>
+</td>
+</tr>
+<tr class="row-even"><td>timings</td>
+<td>boolean</td>
+<td>true</td>
+<td><p class="first last">Включает модуль таймингов.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>SQL</strong></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>aliases</td>
+<td>string</td>
+<td>null</td>
+<td><p class="first last">Псевдонимы для SQL соединений. Формат: <code class="docutils literal"><span class="pre">jdbc:protocol://[логин[:пароль]&#64;]хост/БД</span></code></p>
+</td>
+</tr>
+<tr class="row-odd"><td><p class="first last"><strong>Тайминги</strong></p>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-even"><td>enabled</td>
+<td>boolean</td>
+<td>true</td>
+<td><p class="first last">Этот параметр включит тайминги.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>hidden-config-entries</td>
+<td>string</td>
+<td>sponge.sql</td>
+<td><p class="first last">Скрытые поля конфигурации.</p>
+</td>
+</tr>
+<tr class="row-even"><td>history-interval</td>
+<td>integer</td>
+<td>300</td>
+<td><p class="first last">Интервал между появлением сообщений с историей таймингов.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>history-length</td>
+<td>integer</td>
+<td>3600</td>
+<td><p class="first last">Как долго(в тиках) будет храниться история таймингов на сервере.</p>
+</td>
+</tr>
+<tr class="row-even"><td>server-name-privacy</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Следует ли включать такие сведения, как название, motd, online-mode и иконку сервера в сообщение.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>verbose</td>
+<td>boolean</td>
+<td>true</td>
+<td>Whether or not for timings to monitor at
+the verbose level.</td>
+</tr>
+<tr class="row-even"><td><p class="first last"><strong>Настройки мира</strong></p>
+</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+</tr>
+<tr class="row-odd"><td>auto-player-save-interval</td>
+<td>integer</td>
+<td>900</td>
+<td><p class="first last">Интервал автоматического сохранения в тиках, используемый при сохранении данных о игроке.</p>
+</td>
+</tr>
+<tr class="row-even"><td>auto-save-interval</td>
+<td>integer</td>
+<td>900</td>
+<td><p class="first last">Интервал автоматического сохранения в тиках, используемый для сохранения всех загруженных чанков в мире.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>flowing-lava-decay</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">Когда задано true, лава принимает свойства стандартной воды, если удалён исходный блок.</p>
+</td>
+</tr>
+<tr class="row-even"><td>generate-spawn-on-load</td>
+<td>boolean</td>
+<td>true</td>
+<td><p class="first last">Если задано true, мир должен генерировать спаун при загрузке мира.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>infinite-water-source</td>
+<td>boolean</td>
+<td>false</td>
+<td><p class="first last">False = стандартные свойства стандартной воды.</p>
+</td>
+</tr>
+<tr class="row-even"><td>keep-spawn-loaded</td>
+<td>boolean</td>
+<td>true</td>
+<td><p class="first last">Если задано true, спаун должен быть загружен даже с отсутствием игроков.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>load-on-startup</td>
+<td>boolean</td>
+<td>true</td>
+<td><p class="first last">Если задано true, мир должен загружаться при запуске.</p>
+</td>
+</tr>
+<tr class="row-even"><td>mob-spawn-range</td>
+<td>integer</td>
+<td>8</td>
+<td><p class="first last">Указывает радиус (в чанках), где будут спавняться существа. Это значение ограничено текущим параметром видимой дистанции в server.properties.</p>
+</td>
+</tr>
+<tr class="row-odd"><td><strong>Portal Agents</strong></td>
+<td>&nbsp;</td>
+<td>&nbsp;</td>
+<td>A list of all detected portal agents used in this
+world. In order to override, change the target world
+name to any other valid world. If world is not found,
+it will fallback to default.</td>
+</tr>
+<tr class="row-even"><td>&#8220;minecraft:default_nether&#8221;</td>
+<td>world</td>
+<td>DIM-1</td>
+<td><p class="first last">Стандартный мир Незера.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>&#8220;minecraft:default_the_end&#8221;</td>
+<td>world</td>
+<td>DIM1</td>
+<td><p class="first last">Стандартный мир Энда.</p>
+</td>
+</tr>
+<tr class="row-even"><td>pvp-enabled</td>
+<td>boolean</td>
+<td>true</td>
+<td><p class="first last">Если задано true, разрешает PVP бой.</p>
+</td>
+</tr>
+<tr class="row-odd"><td>world-enabled</td>
+<td>boolean</td>
+<td>true</td>
+<td><p class="first last">Включите, если данный мир должен быть зарегистрирован.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+                </div>
+              </div>
+            </div>
+          <div class="clearer"></div>
+        </div>
+        <div class="footer" role="contentinfo">
+              &copy; Copyright 2014-2016, Sponge Contributors.
+            Создано с помощью <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.3.
+        </div>
+    </div>
+  </body>
+</html>
