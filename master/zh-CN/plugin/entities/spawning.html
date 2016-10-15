@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>生成一个实体 &mdash; Sponge 4.1.0 文档</title>
+     <title>生成一个实体 &mdash; Sponge 5.0.0 文档</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -33,7 +33,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.1.0 文档" href="../../index.html" />
+        <link rel="top" title="Sponge 5.0.0 文档" href="../../index.html" />
         <link rel="up" title="实体" href="index.html" />
         <link rel="next" title="修改一个实体" href="modifying.html" />
         <link rel="prev" title="实体" href="index.html" />
@@ -120,9 +120,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -155,7 +156,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">Sponge 4.1.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">Sponge 5.0.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >插件开发</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">实体</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
@@ -575,7 +576,7 @@
                   
   <div class="section" id="spawning-an-entity">
 <h1>生成一个实体<a class="headerlink" href="#spawning-an-entity" title="永久链接至标题">¶</a></h1>
-<p>你需要四样数据以指定如何在世界上生成实体： <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/entity/Entity.html">Entity</a> 、 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/Location.html">Location</a> 、 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/extent/Extent.html">Extent</a> 、和 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/entity/EntityType.html">EntityType</a> 。获取这些东西其实相当简单，你需要关心的只有需要插件代码中指定的 <code class="docutils literal"><span class="pre">Location</span></code> 和你想要生成的 <code class="docutils literal"><span class="pre">Entity</span></code> 的类型。</p>
+<p>你需要四样数据以指定如何在世界上生成实体： <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/entity/Entity.html">Entity</a> 、 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/Location.html">Location</a> 、 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/extent/Extent.html">Extent</a> 、和 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/entity/EntityType.html">EntityType</a> 。获取这些东西其实相当简单，你需要关心的只有需要插件代码中指定的 <code class="docutils literal"><span class="pre">Location</span></code> 和你想要生成的 <code class="docutils literal"><span class="pre">Entity</span></code> 的类型。</p>
 <p>例如，让我们试着去生成一个爬行者：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.entity.Entity</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.entity.EntityTypes</span><span class="o">;</span>
@@ -602,7 +603,7 @@
 </pre></div>
 </div>
 <p>这样我们就指定了 <code class="docutils literal"><span class="pre">Location</span></code> 对应的地域（Extent），用于生成我们想要生成的实体（译者注：可能的地域包括区块（Chunk）或者世界（World）等）。然后，我们使用这一地域创建了一个实体，不过需要注意的是它只是创建了一个实体，还没有在对应的地域内生成这一实体。我们需要指定 <code class="docutils literal"><span class="pre">Entity</span></code> 的类型，和其具体的 <code class="docutils literal"><span class="pre">Location</span></code> 。</p>
-<p><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/extent/EntityUniverse.html#createEntity-org.spongepowered.api.entity.EntityType-com.flowpowered.math.vector.Vector3d-">EntityUniverse#createEntity(EntityType, Vector3d)</a> 方法返回一个 <code class="docutils literal"><span class="pre">Optional</span></code> ，因为一个 <code class="docutils literal"><span class="pre">Location</span></code> 可能不适合生成一个 <code class="docutils literal"><span class="pre">Entity</span></code> 。然后我们从 <code class="docutils literal"><span class="pre">Optional</span></code> 中得到 <code class="docutils literal"><span class="pre">Entity</span></code> 实例，并使用 <code class="docutils literal"><span class="pre">Extent</span></code> 在世界中生成实体。我们还要为生成实体指定一个 <code class="docutils literal"><span class="pre">Cause</span></code> 。生成 <code class="docutils literal"><span class="pre">Entity</span></code> 的最佳选择是 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/cause/entity/spawn/EntitySpawnCause.html">EntitySpawnCause</a> 。在此示例中，我们声明我们的实体是使用插件生成的，尽管我们可以使用任何原因来最贴切地声明为我们是如何生成的实体，比如刷怪笼或刷怪蛋。</p>
+<p><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/extent/EntityUniverse.html#createEntity-org.spongepowered.api.entity.EntityType-com.flowpowered.math.vector.Vector3d-">EntityUniverse#createEntity(EntityType, Vector3d)</a> 方法返回一个 <code class="docutils literal"><span class="pre">Optional</span></code> ，因为一个 <code class="docutils literal"><span class="pre">Location</span></code> 可能不适合生成一个 <code class="docutils literal"><span class="pre">Entity</span></code> 。然后我们从 <code class="docutils literal"><span class="pre">Optional</span></code> 中得到 <code class="docutils literal"><span class="pre">Entity</span></code> 实例，并使用 <code class="docutils literal"><span class="pre">Extent</span></code> 在世界中生成实体。我们还要为生成实体指定一个 <code class="docutils literal"><span class="pre">Cause</span></code> 。生成 <code class="docutils literal"><span class="pre">Entity</span></code> 的最佳选择是 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/cause/entity/spawn/EntitySpawnCause.html">EntitySpawnCause</a> 。在此示例中，我们声明我们的实体是使用插件生成的，尽管我们可以使用任何原因来最贴切地声明为我们是如何生成的实体，比如刷怪笼或刷怪蛋。</p>
 </div>
 
 

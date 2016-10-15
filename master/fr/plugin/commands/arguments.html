@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Séparation des Arguments &mdash; documentation Sponge 4.1.0</title>
+     <title>Séparation des Arguments &mdash; documentation Sponge 5.0.0</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="documentation Sponge 4.1.0" href="../../index.html" />
+        <link rel="top" title="documentation Sponge 5.0.0" href="../../index.html" />
         <link rel="up" title="Commandes" href="index.html" />
         <link rel="next" title="Command Flags" href="flags.html" />
         <link rel="prev" title="Construction d’une commande" href="creating.html" />
@@ -119,9 +119,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -154,7 +155,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">documentation Sponge 4.1.0</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">documentation Sponge 5.0.0</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >Création d&#8217;un Plugin</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">Commandes</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
@@ -575,16 +576,16 @@
   <div class="section" id="argument-parsing">
 <h1>Séparation des Arguments<a class="headerlink" href="#argument-parsing" title="Lien permanent vers ce titre">¶</a></h1>
 <p>L&#8217;API de Construction de Commandes est doté d&#8217;un analyseur d&#8217;arguments très puissant. Il convertit les caractères entrées en types de java de base (integers, booleans, strings) ou en objets du jeu (joueurs, mondes, types de bloc, ...). L&#8217;analyseur supporte les arguments optionnels et les flags. Il supporte également la achèvements des arguments a l&#8217;aide de TAB.</p>
-<p>L&#8217;analyseur d&#8217;arguments est stocké dans l&#8217;objet <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/CommandContext.html">CommandContext</a>. Si l&#8217;analyseur renvoie un seul objet, on peut l&#8217;obtenir avec <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/CommandContext.html#getOne-java.lang.String-">CommandContext#getOne(String)</a>. Les arguments optionnel ou faible peuvent renvoyer <code class="docutils literal"><span class="pre">Optional.absent()</span></code>.</p>
+<p>L&#8217;analyseur d&#8217;arguments est stocké dans l&#8217;objet <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/CommandContext.html">CommandContext</a>. Si l&#8217;analyseur renvoie un seul objet, on peut l&#8217;obtenir avec <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/CommandContext.html#getOne-java.lang.String-">CommandContext#getOne(String)</a>. Les arguments optionnel ou faible peuvent renvoyer <code class="docutils literal"><span class="pre">Optional.absent()</span></code>.</p>
 <p>Many of the parsers may return more than one object (e.g. multiple players with a matching username). In that case, you
-must use the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/CommandContext.html#getAll-java.lang.String-">CommandContext#getAll(String)</a> method to get the <code class="docutils literal"><span class="pre">Collection</span></code> of possible matches.
+must use the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/CommandContext.html#getAll-java.lang.String-">CommandContext#getAll(String)</a> method to get the <code class="docutils literal"><span class="pre">Collection</span></code> of possible matches.
 <strong>Otherwise, the context object will throw an exception!</strong></p>
 <div class="admonition tip">
 <p class="first admonition-title">Astuce</p>
-<p class="last">Vous pouvez utiliser l&#8217;élément <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/GenericArguments.html#onlyOne-org.spongepowered.api.command.args.CommandElement-">GenericArguments#onlyOne(CommandElement)</a> pour limiter le nombre de valeurs renvoyées à une seule valeur, donc vous vous pouvez utilisez prudemment <code class="docutils literal"><span class="pre">args.&lt;T&gt;getOne(String</span> <span class="pre">key)</span></code>.</p>
+<p class="last">Vous pouvez utiliser l&#8217;élément <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/GenericArguments.html#onlyOne-org.spongepowered.api.command.args.CommandElement-">GenericArguments#onlyOne(CommandElement)</a> pour limiter le nombre de valeurs renvoyées à une seule valeur, donc vous vous pouvez utilisez prudemment <code class="docutils literal"><span class="pre">args.&lt;T&gt;getOne(String</span> <span class="pre">key)</span></code>.</p>
 </div>
-<p>Pour créer un nouveau <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/CommandElement.html">CommandElement</a> (argument), utilisez la classe <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/GenericArguments.html">GenericArguments</a>. De nombreux éléments de commande nécessitent un court mot-clé, qui est affiché en cas d&#8217;erreurs ou demandes d&#8217;aide.</p>
-<p>Appliquez le <code class="docutils literal"><span class="pre">CommandElement</span></code> à un constructeur de commandes avec la méthode <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/spec/CommandSpec.Builder.html#arguments-CommandElement...-">CommandSpec.Builder#arguments(CommandElement...)</a>. C&#8217;est possible de transmettre plus d&#8217;un``CommandElement`` à la méthode, ainsi vous pouvez enchaîner les arguments (ex: <code class="docutils literal"><span class="pre">/msg</span> <span class="pre">&lt;player&gt;</span> <span class="pre">&lt;msg&gt;</span></code>). Ceci a le même effet que d&#8217;inclure les objets du <code class="docutils literal"><span class="pre">CommandElement</span></code> dans un élément <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/GenericArguments.html#seq-CommandElement...-">GenericArguments#seq(CommandElement...)</a>.</p>
+<p>Pour créer un nouveau <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/CommandElement.html">CommandElement</a> (argument), utilisez la classe <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/GenericArguments.html">GenericArguments</a>. De nombreux éléments de commande nécessitent un court mot-clé, qui est affiché en cas d&#8217;erreurs ou demandes d&#8217;aide.</p>
+<p>Appliquez le <code class="docutils literal"><span class="pre">CommandElement</span></code> à un constructeur de commandes avec la méthode <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/spec/CommandSpec.Builder.html#arguments-CommandElement...-">CommandSpec.Builder#arguments(CommandElement...)</a>. C&#8217;est possible de transmettre plus d&#8217;un``CommandElement`` à la méthode, ainsi vous pouvez enchaîner les arguments (ex: <code class="docutils literal"><span class="pre">/msg</span> <span class="pre">&lt;player&gt;</span> <span class="pre">&lt;msg&gt;</span></code>). Ceci a le même effet que d&#8217;inclure les objets du <code class="docutils literal"><span class="pre">CommandElement</span></code> dans un élément <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/GenericArguments.html#seq-CommandElement...-">GenericArguments#seq(CommandElement...)</a>.</p>
 <div class="section" id="example-building-a-command-with-multiple-arguments">
 <h2>Exemple: Construction d&#8217;une Commande à Arguments Multiples<a class="headerlink" href="#example-building-a-command-with-multiple-arguments" title="Lien permanent vers ce titre">¶</a></h2>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.Sponge</span><span class="o">;</span>
@@ -714,7 +715,7 @@ instances</td>
 </td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">catalogedElement</span></code></td>
-<td><p class="first last">Attend un argument qui est membre d&#8217;un <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/CatalogType.html">CatalogType</a> spécifique.</p>
+<td><p class="first last">Attend un argument qui est membre d&#8217;un <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/CatalogType.html">CatalogType</a> spécifique.</p>
 </td>
 <td>multiple matching elements
 of the specified catalog type</td>
@@ -794,18 +795,18 @@ command argument</td>
 </table>
 <div class="admonition tip">
 <p class="first admonition-title">Astuce</p>
-<p class="last">See the Javadocs for <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/GenericArguments.html">GenericArguments</a> for more information.</p>
+<p class="last">See the Javadocs for <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/GenericArguments.html">GenericArguments</a> for more information.</p>
 </div>
 </div>
 <div class="section" id="custom-command-elements">
 <h2>Elements de Commandes Personalisés<a class="headerlink" href="#custom-command-elements" title="Lien permanent vers ce titre">¶</a></h2>
 <p>It is possible to create custom command elements (e.g. a URL parser or a <code class="docutils literal"><span class="pre">Vector2i</span></code> element) by extending the abstract
 <code class="docutils literal"><span class="pre">CommandElement</span></code> class.</p>
-<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/CommandElement.html#parseValue-org.spongepowered.api.command.CommandSource-org.spongepowered.api.command.args.CommandArgs-">CommandElement#parseValue(CommandSource, CommandArgs)</a> method should fetch a raw argument string with
-<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/CommandArgs.html#next--">CommandArgs#next()</a> and convert it to an object. The method should throw an <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/ArgumentParseException.html">ArgumentParseException</a>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/CommandElement.html#parseValue-org.spongepowered.api.command.CommandSource-org.spongepowered.api.command.args.CommandArgs-">CommandElement#parseValue(CommandSource, CommandArgs)</a> method should fetch a raw argument string with
+<a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/CommandArgs.html#next--">CommandArgs#next()</a> and convert it to an object. The method should throw an <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/ArgumentParseException.html">ArgumentParseException</a>
 if the parsing fails.</p>
-<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/CommandElement.html#complete-org.spongepowered.api.command.CommandSource-org.spongepowered.api.command.args.CommandArgs-org.spongepowered.api.command.args.CommandContext-">CommandElement#complete(CommandSource, CommandArgs, CommandContext)</a> method should use
-<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/CommandArgs.html#peek--">CommandArgs#peek()</a> to read the next raw argument. It returns a list of suggestions for TAB completion.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/CommandElement.html#complete-org.spongepowered.api.command.CommandSource-org.spongepowered.api.command.args.CommandArgs-org.spongepowered.api.command.args.CommandContext-">CommandElement#complete(CommandSource, CommandArgs, CommandContext)</a> method should use
+<a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/CommandArgs.html#peek--">CommandArgs#peek()</a> to read the next raw argument. It returns a list of suggestions for TAB completion.</p>
 <div class="section" id="example-vector2i-command-element-definition">
 <h3>Example: <code class="docutils literal"><span class="pre">Vector2i</span></code> command element definition<a class="headerlink" href="#example-vector2i-command-element-definition" title="Lien permanent vers ce titre">¶</a></h3>
 <p>The parser in this example reads two input arguments and converts them to a vector.</p>

@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>The Asset API &mdash; documentation Sponge 4.1.0</title>
+     <title>The Asset API &mdash; documentation Sponge 5.0.0</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="../_static/store.min.js"></script>
     <script type="text/javascript" src="../_static/lights.js"></script>
       <link rel="shortcut icon" href="../_static/favicon.ico"/>
-        <link rel="top" title="documentation Sponge 4.1.0" href="../index.html" />
+        <link rel="top" title="documentation Sponge 5.0.0" href="../index.html" />
         <link rel="up" title="Création d’un Plugin" href="index.html" />
         <link rel="next" title="Configuration des plugins" href="configuration/index.html" />
         <link rel="prev" title="Événements personnalisés" href="event/custom.html" />
@@ -119,9 +119,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -154,7 +155,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../index.html">documentation Sponge 4.1.0</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../index.html">documentation Sponge 5.0.0</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">Création d&#8217;un Plugin</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
@@ -573,7 +574,7 @@
                   
   <div class="section" id="the-asset-api">
 <h1>The Asset API<a class="headerlink" href="#the-asset-api" title="Lien permanent vers ce titre">¶</a></h1>
-<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/asset/AssetManager.html">AssetManager</a> allows developers to retrieve resources from a plugin JAR.</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/asset/AssetManager.html">AssetManager</a> allows developers to retrieve resources from a plugin JAR.</p>
 <p>By default, a plugin&#8217;s assets resides in a directory named <code class="docutils literal"><span class="pre">assets/myplugin/</span></code> where <code class="docutils literal"><span class="pre">myplugin</span></code> is the plugin ID. In
 most cases this default directory should be used but if you <em>need</em> to change it, you may do so by setting the
 <code class="docutils literal"><span class="pre">assets</span></code> attribute in your <code class="docutils literal"><span class="pre">&#64;Plugin</span></code> annotation or <code class="docutils literal"><span class="pre">mcmod.info</span></code> file.</p>
@@ -596,12 +597,12 @@ the plugin parameter.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">The examples above assume that <code class="docutils literal"><span class="pre">myfile.txt</span></code> exists as an <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/asset/Asset.html">Asset</a>. If it does not, then <code class="docutils literal"><span class="pre">getAsset()</span></code>
+<p class="last">The examples above assume that <code class="docutils literal"><span class="pre">myfile.txt</span></code> exists as an <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/asset/Asset.html">Asset</a>. If it does not, then <code class="docutils literal"><span class="pre">getAsset()</span></code>
 will return <code class="docutils literal"><span class="pre">Optional#empty()</span></code>.</p>
 </div>
 <div class="section" id="working-with-assets">
 <h2>Working with Assets<a class="headerlink" href="#working-with-assets" title="Lien permanent vers ce titre">¶</a></h2>
-<p>La classe <code class="docutils literal"><span class="pre">Asset</span></code> est essentiellement un emballage autour de <code class="docutils literal"><span class="pre">URL</span></code> avec quelques communes opérations I/O dedans. Les utilisations de <code class="docutils literal"><span class="pre">Assets</span></code> sont quasi-illimités mais une utilisation commune est de généré un fichier de configuration par défaut si votre celui de votre plugin n&#8217;est pas trouvé. Vous pouvez effectuer ceci en utilisant un <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/plugin/PluginContainer.html">PluginContainer</a> avec le code suivant :</p>
+<p>La classe <code class="docutils literal"><span class="pre">Asset</span></code> est essentiellement un emballage autour de <code class="docutils literal"><span class="pre">URL</span></code> avec quelques communes opérations I/O dedans. Les utilisations de <code class="docutils literal"><span class="pre">Assets</span></code> sont quasi-illimités mais une utilisation commune est de généré un fichier de configuration par défaut si votre celui de votre plugin n&#8217;est pas trouvé. Vous pouvez effectuer ceci en utilisant un <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/plugin/PluginContainer.html">PluginContainer</a> avec le code suivant :</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.nio.file.Files</span><span class="o">;</span>
 
 <span class="k">if</span> <span class="o">(</span><span class="n">Files</span><span class="o">.</span><span class="na">notExists</span><span class="o">(</span><span class="n">configPath</span><span class="o">))</span> <span class="o">{</span>

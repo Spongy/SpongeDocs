@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Création de texte &mdash; documentation Sponge 4.1.0</title>
+     <title>Création de texte &mdash; documentation Sponge 5.0.0</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="documentation Sponge 4.1.0" href="../../index.html" />
+        <link rel="top" title="documentation Sponge 5.0.0" href="../../index.html" />
         <link rel="up" title="Text" href="index.html" />
         <link rel="next" title="Sérialiseurs de Texte" href="representations/index.html" />
         <link rel="prev" title="Text" href="index.html" />
@@ -119,9 +119,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -154,7 +155,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">documentation Sponge 4.1.0</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">documentation Sponge 5.0.0</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >Création d&#8217;un Plugin</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">Text</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
@@ -607,7 +608,7 @@ places such as books and signs.</p>
 <span class="n">Text</span> <span class="n">coloredText</span> <span class="o">=</span> <span class="n">Text</span><span class="o">.</span><span class="na">builder</span><span class="o">(</span><span class="s">&quot;Woot! Golden text is golden.&quot;</span><span class="o">).</span><span class="na">color</span><span class="o">(</span><span class="n">TextColors</span><span class="o">.</span><span class="na">GOLD</span><span class="o">).</span><span class="na">build</span><span class="o">();</span>
 </pre></div>
 </div>
-<p>Toutes les couleurs spécifiées dans la classe <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/format/TextColors.html">TextColors</a> peuvent être utilisées pour colorer un texte. Plusieurs couleurs peuvent être utilisées dans un même texte en y ajoutant bout à bout d&#8217;autres textes de couleurs différentes:</p>
+<p>Toutes les couleurs spécifiées dans la classe <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/format/TextColors.html">TextColors</a> peuvent être utilisées pour colorer un texte. Plusieurs couleurs peuvent être utilisées dans un même texte en y ajoutant bout à bout d&#8217;autres textes de couleurs différentes:</p>
 </div>
 <div class="section" id="example-multi-colored-text">
 <h3>Exemple: Texte Multicolor<a class="headerlink" href="#example-multi-colored-text" title="Lien permanent vers ce titre">¶</a></h3>
@@ -638,7 +639,7 @@ places such as books and signs.</p>
 </div>
 <div class="section" id="coloring-styling-shortcut">
 <h3>Raccourcis de Colorisation et Stylisation<a class="headerlink" href="#coloring-styling-shortcut" title="Lien permanent vers ce titre">¶</a></h3>
-<p>La méthode <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/Text.html#of-Object...-">Text#of(Object...)</a> fournit un façon simple d&#8217;ajouter une couleur ou un style à votre texte de manière beaucoup plus concise.</p>
+<p>La méthode <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/Text.html#of-Object...-">Text#of(Object...)</a> fournit un façon simple d&#8217;ajouter une couleur ou un style à votre texte de manière beaucoup plus concise.</p>
 </div>
 <div class="section" id="example-color-style-shortcut">
 <h3>Exemple: Raccourcis de Couleur et Style<a class="headerlink" href="#example-color-style-shortcut" title="Lien permanent vers ce titre">¶</a></h3>
@@ -648,7 +649,7 @@ places such as books and signs.</p>
 </div>
 <div class="section" id="text-actions">
 <span id="id1"></span><h3>Actions de Texte<a class="headerlink" href="#text-actions" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Le générateur de texte offre aussi la possibilité de créer des actions pour le texte. Toute action spécifiée dans la classe <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/action/TextActions.html">TextActions</a> peut être utilisée lorsque vous créez des actions de texte pour un texte. La méthode employé ci-dessous est un petit exemple de ce que les actions de texte peuvent faire.</p>
+<p>Le générateur de texte offre aussi la possibilité de créer des actions pour le texte. Toute action spécifiée dans la classe <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/action/TextActions.html">TextActions</a> peut être utilisée lorsque vous créez des actions de texte pour un texte. La méthode employé ci-dessous est un petit exemple de ce que les actions de texte peuvent faire.</p>
 </div>
 <div class="section" id="example-text-with-an-action">
 <h3>Exemple: Texte avec une Action<a class="headerlink" href="#example-text-with-an-action" title="Lien permanent vers ce titre">¶</a></h3>
@@ -660,7 +661,7 @@ places such as books and signs.</p>
 <p>Avec la méthode donnée ci-dessus, les joueurs peuvent cliquer sur &#8220;Click here!&#8221; pour lancer une certaine commande.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">Certaines actions de texte, telle que <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/action/TextActions.html#changePage-int-">TextActions#changePage(int)</a>, sont utilisables uniquement avec les éléments du livre.</p>
+<p class="last">Certaines actions de texte, telle que <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/action/TextActions.html#changePage-int-">TextActions#changePage(int)</a>, sont utilisables uniquement avec les éléments du livre.</p>
 </div>
 <div class="admonition tip">
 <p class="first admonition-title">Astuce</p>
@@ -674,7 +675,7 @@ places such as books and signs.</p>
 <p class="first admonition-title">Astuce</p>
 <p class="last">Consultez cet <a class="reference external" href="http://minecraft.gamepedia.com/Commands#Target_selectors">article du wiki Minecraft</a> pour mieux comprendre ce que sont les sélecteurs de cible dans Minecraft, et comment les utiliser.</p>
 </div>
-<p>Pour utiliser les sélecteurs dans une texte, vous devez utiliser l&#8217;interface <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/selector/Selector.Builder.html">Selector.Builder</a>. Ce que l&#8217;exemple ci-dessous vous illustre.</p>
+<p>Pour utiliser les sélecteurs dans une texte, vous devez utiliser l&#8217;interface <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/selector/Selector.Builder.html">Selector.Builder</a>. Ce que l&#8217;exemple ci-dessous vous illustre.</p>
 </div>
 <div class="section" id="example-selector-generated-text">
 <h3>Exemple: Texte généré par Sélecteur<a class="headerlink" href="#example-selector-generated-text" title="Lien permanent vers ce titre">¶</a></h3>

@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Injeção de dependência &mdash; Sponge 4.1.0 documentação</title>
+     <title>Injeção de dependência &mdash; Sponge 5.0.0 documentação</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -33,7 +33,7 @@
     <script type="text/javascript" src="../_static/store.min.js"></script>
     <script type="text/javascript" src="../_static/lights.js"></script>
       <link rel="shortcut icon" href="../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.1.0 documentação" href="../index.html" />
+        <link rel="top" title="Sponge 5.0.0 documentação" href="../index.html" />
         <link rel="up" title="Criando um plugin" href="index.html" />
         <link rel="next" title="Best Practices" href="practices.html" />
         <link rel="prev" title="Ciclo de Vida de um Plugin" href="lifecycle.html" />
@@ -120,9 +120,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -155,7 +156,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../index.html">Sponge 4.1.0 documentação</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../index.html">Sponge 5.0.0 documentação</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">Criando um plugin</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
@@ -580,7 +581,7 @@
 <dl class="docutils">
 <dt>ConfigDir (anotação no Path ou File)</dt>
 <dd>Used to inject the plugin&#8217;s configuration directory:
-<code class="docutils literal"><span class="pre">./mods/</span></code> OR <code class="docutils literal"><span class="pre">./mods/&lt;Plugin#id&gt;/</span></code> depending on <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/config/ConfigDir.html#sharedRoot--">ConfigDir#sharedRoot()</a></dd>
+<code class="docutils literal"><span class="pre">./mods/</span></code> OR <code class="docutils literal"><span class="pre">./mods/&lt;Plugin#id&gt;/</span></code> depending on <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/config/ConfigDir.html#sharedRoot--">ConfigDir#sharedRoot()</a></dd>
 <dt>ConfigurationLoader&lt;CommentedConfigurationNode&gt; (&#8216;Carregador&#8217; de configurações)</dt>
 <dd><p class="first last">Precisa ser anotado com <code class="docutils literal"><span class="pre">&#64;DefaultConfig</span></code>. Usado para injetar um <code class="docutils literal"><span class="pre">ConfigurationLoader</span></code> pré-elaborado para o <code class="docutils literal"><span class="pre">File</span></code> da mesma anotação.</p>
 </dd>
@@ -612,7 +613,7 @@
 <dd><p class="first last">Precisa ser anotado com <code class="docutils literal"><span class="pre">&#64;DefaultConfig</span></code> ou <code class="docutils literal"><span class="pre">&#64;ConfigDir</span></code>. Dependendo da anotação informada isto irá conter a referencia para o arquivo de configuração padrão dos plugins ou o diretório usado para armazenar os arquivos de configuração.</p>
 </dd>
 <dt>PluginContainer (Container do plugin)</dt>
-<dd>A <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/plugin/Plugin.html">Plugin</a> class wrapper, used to retrieve information from the annotation for easier use.</dd>
+<dd>A <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/plugin/Plugin.html">Plugin</a> class wrapper, used to retrieve information from the annotation for easier use.</dd>
 <dt>PluginManager (Gerenciador de plugins)</dt>
 <dd><p class="first last">Gerencia os plugins carregados pela implementação. Pode obter o <code class="docutils literal"><span class="pre">PluginContainer</span></code> de outros plugins.</p>
 </dd>
@@ -635,7 +636,7 @@
 <div class="section" id="game">
 <h3>Game (Jogo)<a class="headerlink" href="#game" title="Link permanente para este título">¶</a></h3>
 <p>The <code class="docutils literal"><span class="pre">Game</span></code> object is the opening for many of the internal functions of the SpongeAPI, from the <code class="docutils literal"><span class="pre">EventManager</span></code> to the
-<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/Server.html">Server</a> and even the Sync/Async <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/scheduler/Scheduler.html">Scheduler</a>.</p>
+<a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/Server.html">Server</a> and even the Sync/Async <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/scheduler/Scheduler.html">Scheduler</a>.</p>
 <p>É completamente possível receber o objeto <code class="docutils literal"><span class="pre">Game</span></code> a partir da maioria dos evento, porém, é comumente obtido a partir de uma injeção.</p>
 <p><strong>Exemplo - Variável</strong></p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">com.google.inject.Inject</span><span class="o">;</span>
@@ -669,7 +670,7 @@
 </div>
 <div class="section" id="config-directory">
 <h3>Diretório de configuração<a class="headerlink" href="#config-directory" title="Link permanente para este título">¶</a></h3>
-<p>The recommended way to obtain your config file is through Guice, along with the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/config/ConfigDir.html">ConfigDir</a> annotation.</p>
+<p>The recommended way to obtain your config file is through Guice, along with the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/config/ConfigDir.html">ConfigDir</a> annotation.</p>
 <div class="admonition tip">
 <p class="first admonition-title">Dica</p>
 <p class="last">Se você definir o parâmetro <code class="docutils literal"><span class="pre">sharedRoot</span></code> para <code class="docutils literal"><span class="pre">true</span></code> será o mesmo diretório que - potencialmente - guarda as configurações de outros plugins. Em muitos casos quando obter o <code class="docutils literal"><span class="pre">ConfigDir</span></code> for necessário, isto deve ser <code class="docutils literal"><span class="pre">false</span></code>.</p>

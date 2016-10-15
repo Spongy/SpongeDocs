@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Configuring Plugins &mdash; Sponge 4.1.0 Dokumentation</title>
+     <title>Configuring Plugins &mdash; Sponge 5.0.0 Dokumentation</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.1.0 Dokumentation" href="../../index.html" />
+        <link rel="top" title="Sponge 5.0.0 Dokumentation" href="../../index.html" />
         <link rel="up" title="Plugins erstellen" href="../index.html" />
         <link rel="next" title="Konfigurationsladende Elemente" href="loaders.html" />
         <link rel="prev" title="The Asset API" href="../assets.html" />
@@ -119,9 +119,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -154,7 +155,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">Sponge 4.1.0 Dokumentation</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">Sponge 5.0.0 Dokumentation</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" accesskey="U">Plugins erstellen</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
@@ -610,7 +611,7 @@ pose too much of an issue if you use an alternate format instead.</p>
 </div>
 <div class="section" id="getting-your-default-plugin-configuration">
 <span id="getting-default-config"></span><h3>Erstellen der Standard-Plugin-Konfiguration<a class="headerlink" href="#getting-your-default-plugin-configuration" title="Link zu dieser Überschrift">¶</a></h3>
-<p>The Sponge API offers the use of the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/config/DefaultConfig.html">DefaultConfig</a> annotation on a field or setter method with the type
+<p>The Sponge API offers the use of the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/config/DefaultConfig.html">DefaultConfig</a> annotation on a field or setter method with the type
 <code class="docutils literal"><span class="pre">Path</span></code> to get the default configuration file for your plugin.</p>
 <p>Die <code class="docutils literal"><span class="pre">&#64;DefaultConfig</span></code> Anmerkung benötigt eine boolsche <code class="docutils literal"><span class="pre">sharedRoot</span></code> Variable. Wenn <code class="docutils literal"><span class="pre">sharedRoot</span></code> auf <code class="docutils literal"><span class="pre">true</span></code> gesetzt wird, so liegt der ausgegebene Pfad in einem speziellen Ordner für (Plugin-) Konfigurationen. In diesem Fall wird deine Konfigurationsdatei <code class="docutils literal"><span class="pre">Deine_Plugin_ID.conf</span></code> heissen (mit &#8220;Deine_Plugin_ID&#8221; für die von dir vergebene, einmalige ID deines Plugins).</p>
 <div class="admonition tip">
@@ -626,7 +627,7 @@ pose too much of an issue if you use an alternate format instead.</p>
 </li>
 </ul>
 <p>You can also obtain a <code class="docutils literal"><span class="pre">Path</span></code> instance pointing to the config directory instead of a particular file. Just
-have it injected using the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/config/ConfigDir.html">ConfigDir</a> annotation, either with <code class="docutils literal"><span class="pre">sharedRoot</span></code> set to <code class="docutils literal"><span class="pre">false</span></code> for a plugin
+have it injected using the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/config/ConfigDir.html">ConfigDir</a> annotation, either with <code class="docutils literal"><span class="pre">sharedRoot</span></code> set to <code class="docutils literal"><span class="pre">false</span></code> for a plugin
 specific directory or to <code class="docutils literal"><span class="pre">true</span></code> to get the shared configuration directory.</p>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>

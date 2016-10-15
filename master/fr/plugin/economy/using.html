@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Utilisation de l’API Economie &mdash; documentation Sponge 4.1.0</title>
+     <title>Utilisation de l’API Economie &mdash; documentation Sponge 5.0.0</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="documentation Sponge 4.1.0" href="../../index.html" />
+        <link rel="top" title="documentation Sponge 5.0.0" href="../../index.html" />
         <link rel="up" title="Économie" href="index.html" />
         <link rel="next" title="Meilleurs exemples d’utilisation de l’API Economie" href="practices.html" />
         <link rel="prev" title="Les concepts de base" href="basics.html" />
@@ -119,9 +119,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -154,7 +155,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">documentation Sponge 4.1.0</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">documentation Sponge 5.0.0</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >Création d&#8217;un Plugin</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">Économie</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
@@ -577,9 +578,9 @@
 <p>L&#8217;API Economie unifie tous les plugins d&#8217;économie sous une API. Cela signifie que n&#8217;importe quel plugin utilisant l&#8217;API Economie sera compatible avec tous les plugins implémentant cette API. Cette page vous guidera à travers les étapes de l&#8217;utilisation de l&#8217;API Economie dans votre propre plugin.</p>
 <div class="section" id="loading-the-economyservice">
 <h2>Chargement du Service d&#8217;Economie<a class="headerlink" href="#loading-the-economyservice" title="Lien permanent vers ce titre">¶</a></h2>
-<p>In order to utilize the Economy API, you must first load the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/service/economy/EconomyService.html">EconomyService</a> class:</p>
+<p>In order to utilize the Economy API, you must first load the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/economy/EconomyService.html">EconomyService</a> class:</p>
 <ol class="arabic simple">
-<li><p class="first">Écoutez le <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/service/ChangeServiceProviderEvent.html">ChangeServiceProviderEvent</a> afin d&#8217;obtenir une instance de la classe EconomyService quand elle sera enregistrée.</p>
+<li><p class="first">Écoutez le <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/service/ChangeServiceProviderEvent.html">ChangeServiceProviderEvent</a> afin d&#8217;obtenir une instance de la classe EconomyService quand elle sera enregistrée.</p>
 </li>
 <li><p class="first">Quand l&#8217;event est lançé, vérifiez si le service ajouté est bien le &#8216;&#8217;EconomyService&#8217;&#8216;. Il this is true, vous pouvez l&#8217;assigner à une variable pour accéder à l&#8217;Economy API plus tard.</p>
 </li>
@@ -625,7 +626,7 @@ Economy API has to offer.</p>
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>Some <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/service/economy/account/Account.html">Account</a> methods require variables such as:</p>
+<p>Some <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/economy/account/Account.html">Account</a> methods require variables such as:</p>
 <ul class="simple">
 <li><p class="first">Monnaie: La monnaie impliquée dans l&#8217;échange</p>
 </li>
@@ -636,7 +637,7 @@ Economy API has to offer.</p>
 </ul>
 <p>Ces variables sont pour des utilisations avancées, mais doivent toujours être renseignées. Voici une liste des valeurs acceptables par défaut:</p>
 <ul class="simple">
-<li><p class="first">Devise: <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/service/economy/EconomyService.html#getDefaultCurrency--">EconomyService#getDefaultCurrency()</a></p>
+<li><p class="first">Devise: <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/economy/EconomyService.html#getDefaultCurrency--">EconomyService#getDefaultCurrency()</a></p>
 </li>
 <li>Cause: <code class="docutils literal"><span class="pre">Cause.source(myPlugin).build()</span></code></li>
 <li><p class="first">Contexte: &#8216;&#8217; new HashSet&lt;Context&gt;()&#8217;&#8216;</p>

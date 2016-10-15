@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Основной класс плагина &mdash; Документация Sponge 4.1.0</title>
+     <title>Основной класс плагина &mdash; Документация Sponge 5.0.0</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="../_static/store.min.js"></script>
     <script type="text/javascript" src="../_static/lights.js"></script>
       <link rel="shortcut icon" href="../_static/favicon.ico"/>
-        <link rel="top" title="Документация Sponge 4.1.0" href="../index.html" />
+        <link rel="top" title="Документация Sponge 5.0.0" href="../index.html" />
         <link rel="up" title="Создание плагина" href="index.html" />
         <link rel="next" title="Жизненный цикл плагина" href="lifecycle.html" />
         <link rel="prev" title="Идентификаторы плагина" href="plugin-identifier.html" />
@@ -119,9 +119,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -154,7 +155,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../index.html">Документация Sponge 4.1.0</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../index.html">Документация Sponge 5.0.0</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">Создание плагина</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
@@ -581,7 +582,7 @@
 <h2>Начинаем создание главного класса плагина<a class="headerlink" href="#starting-your-class" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Следующий шаг, после добавления Sponge API в качестве зависимости, это создание нового класса. Класс может называться как угодно, и может быть в любом пакете, который <strong>не</strong> начинается с <code class="docutils literal"><span class="pre">org.spongepowered</span></code>. По соглашению, каждое слово в имени класса должно начинаться с большой буквы.</p>
 <p>Oracle <a class="reference external" href="http://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html">рекомендует</a> использовать ваш домен как имя пакета, если у вас есть домен. В противном случае, часто используется email адрес (например <code class="docutils literal"><span class="pre">com.gmail.username.project</span></code>) или репозиторий с открытым исходным кодом (например <code class="docutils literal"><span class="pre">io.github.username.project</span></code>).</p>
-<p>После создание вашего главного класса, вам необходимо добавить к нему аннотацию <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/plugin/Plugin.html">Plugin</a>. Эта аннотация позволяет Sponge найти главный класс плагина при его загрузке. Пример использования показан ниже.</p>
+<p>После создание вашего главного класса, вам необходимо добавить к нему аннотацию <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/plugin/Plugin.html">Plugin</a>. Эта аннотация позволяет Sponge найти главный класс плагина при его загрузке. Пример использования показан ниже.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">io.github.username.project</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.plugin.Plugin</span><span class="o">;</span>
@@ -600,7 +601,7 @@
 <div class="section" id="initializing-your-plugin">
 <h2>Инициализация вашего плагина<a class="headerlink" href="#initializing-your-plugin" title="Ссылка на этот заголовок">¶</a></h2>
 <p>Плагины загружаются до загрузки самой игры и игровых миров. При этом существует промежуток времени, в который плагин может начать взаимодействовать с игрой, например зарегистрировать команды или события.</p>
-<p>Плагин может слушать определенные события, называемые <strong>эвенты</strong>, чтобы получать уведомления об изменениях состояния игры. В примере ниже метод <code class="docutils literal"><span class="pre">onServerStart()</span></code> вызывается когда возникает событие <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStartedServerEvent.html">GameStartedServerEvent</a>; обратите внимание на аннотацию <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/Listener.html">Listener</a> перед методом.</p>
+<p>Плагин может слушать определенные события, называемые <strong>эвенты</strong>, чтобы получать уведомления об изменениях состояния игры. В примере ниже метод <code class="docutils literal"><span class="pre">onServerStart()</span></code> вызывается когда возникает событие <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameStartedServerEvent.html">GameStartedServerEvent</a>; обратите внимание на аннотацию <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/Listener.html">Listener</a> перед методом.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.event.Listener</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.event.game.state.GameStartedServerEvent</span><span class="o">;</span>
 
@@ -625,20 +626,20 @@
 <ul class="simple">
 <li><p class="first"><strong>Инициализация</strong>: эти события вызываются при загрузке Sponge и плагинов.</p>
 <ul>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameConstructionEvent.html">GameConstructionEvent</a></li>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GamePreInitializationEvent.html">GamePreInitializationEvent</a></li>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameInitializationEvent.html">GameInitializationEvent</a></li>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GamePostInitializationEvent.html">GamePostInitializationEvent</a></li>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameLoadCompleteEvent.html">GameLoadCompleteEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameConstructionEvent.html">GameConstructionEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GamePreInitializationEvent.html">GamePreInitializationEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameInitializationEvent.html">GameInitializationEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GamePostInitializationEvent.html">GamePostInitializationEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameLoadCompleteEvent.html">GameLoadCompleteEvent</a></li>
 </ul>
 </li>
 <li><p class="first"><strong>Running</strong>: Эти события вызываются при загрузки игры и игровых миров.</p>
 <ul>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameAboutToStartServerEvent.html">GameAboutToStartServerEvent</a></li>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStartingServerEvent.html">GameStartingServerEvent</a></li>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStartedServerEvent.html">GameStartedServerEvent</a></li>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStoppingServerEvent.html">GameStoppingServerEvent</a></li>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStoppedServerEvent.html">GameStoppedServerEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameAboutToStartServerEvent.html">GameAboutToStartServerEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameStartingServerEvent.html">GameStartingServerEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameStartedServerEvent.html">GameStartedServerEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameStoppingServerEvent.html">GameStoppingServerEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameStoppedServerEvent.html">GameStoppedServerEvent</a></li>
 </ul>
 </li>
 </ul>

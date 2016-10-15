@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Transactions &mdash; documentation Sponge 4.1.0</title>
+     <title>Transactions &mdash; documentation Sponge 5.0.0</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="documentation Sponge 4.1.0" href="../../index.html" />
+        <link rel="top" title="documentation Sponge 5.0.0" href="../../index.html" />
         <link rel="up" title="La Data API" href="index.html" />
         <link rel="next" title="Sérialisation de données" href="serialization.html" />
         <link rel="prev" title="Manipulateurs de données" href="datamanipulators.html" />
@@ -119,9 +119,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -154,7 +155,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">documentation Sponge 4.1.0</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">documentation Sponge 5.0.0</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >Création d&#8217;un Plugin</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">La Data API</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
@@ -576,10 +577,10 @@
 <h1>Transactions<a class="headerlink" href="#transactions" title="Lien permanent vers ce titre">¶</a></h1>
 <div class="section" id="reading-the-result">
 <h2>Lire les résultats<a class="headerlink" href="#reading-the-result" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Pour tout ce que vous <code class="docutils literal"><span class="pre">offrez</span></code> à un data holder, la méthode <code class="docutils literal"><span class="pre">offer</span></code> donnera un <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/DataTransactionResult.html">DataTransactionResult</a>. Cet objet contiendra ce qui suit:</p>
+<p>Pour tout ce que vous <code class="docutils literal"><span class="pre">offrez</span></code> à un data holder, la méthode <code class="docutils literal"><span class="pre">offer</span></code> donnera un <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/DataTransactionResult.html">DataTransactionResult</a>. Cet objet contiendra ce qui suit:</p>
 <div class="section" id="type">
 <h3>Type<a class="headerlink" href="#type" title="Lien permanent vers ce titre">¶</a></h3>
-<p>Le <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/DataTransactionResult.Type.html">DataTransactionResult.Type</a> indique si la transaction s&#8217;est faite avec succès ou si elle a échoué.</p>
+<p>Le <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/DataTransactionResult.Type.html">DataTransactionResult.Type</a> indique si la transaction s&#8217;est faite avec succès ou si elle a échoué.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="16%" />
@@ -649,13 +650,13 @@
 <li><p class="first"><code class="docutils literal"><span class="pre">getSuccessfulData()</span></code> devrait contenir un conteneur de valeur pour <code class="docutils literal"><span class="pre">Keys.HEALTH</span></code> avec une valeur de 20.0</p>
 </li>
 </ul>
-<p>Maintenant qu&#8217;est-ce qui serait différent si nous utilisions l&#8217;exemple de healing de la page <a class="reference internal" href="datamanipulators.html"><em>Manipulateurs de données</em></a> à la place ? Puisque que le manipulateur de données <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/entity/HealthData.html">HealthData</a> contient des valeurs pour le niveau de vie actuel et la vie maximale, en plus du résultat ci-dessus, la liste <code class="docutils literal"><span class="pre">getReplacedData()</span></code> et la liste <code class="docutils literal"><span class="pre">getSuccessfulData()</span></code> devraient contenir un élément de plus: Un conteneur de valeurs pour <a href="#id1"><span class="problematic" id="id2">``</span></a>Keys.MAX_HEALTH``avec une valeur de 20.0.</p>
+<p>Maintenant qu&#8217;est-ce qui serait différent si nous utilisions l&#8217;exemple de healing de la page <a class="reference internal" href="datamanipulators.html"><em>Manipulateurs de données</em></a> à la place ? Puisque que le manipulateur de données <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/manipulator/mutable/entity/HealthData.html">HealthData</a> contient des valeurs pour le niveau de vie actuel et la vie maximale, en plus du résultat ci-dessus, la liste <code class="docutils literal"><span class="pre">getReplacedData()</span></code> et la liste <code class="docutils literal"><span class="pre">getSuccessfulData()</span></code> devraient contenir un élément de plus: Un conteneur de valeurs pour <a href="#id1"><span class="problematic" id="id2">``</span></a>Keys.MAX_HEALTH``avec une valeur de 20.0.</p>
 </div>
 <div class="section" id="offering-healthdata-to-a-block-of-stone">
 <h3>Donner un HealthData à un block de stone<a class="headerlink" href="#offering-healthdata-to-a-block-of-stone" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Now our above-mentioned examples are coded in a such a way that they will fail silently rather than try to offer the
 incompatible data. But imagine we took a (fully healed) player&#8217;s <code class="docutils literal"><span class="pre">HealthData</span></code> and tried to offer it to the
-<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/world/Location.html">Location</a> of the stone block he&#8217;s currently standing on. We can do this, since <code class="docutils literal"><span class="pre">Location</span></code> is also a data
+<a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/Location.html">Location</a> of the stone block he&#8217;s currently standing on. We can do this, since <code class="docutils literal"><span class="pre">Location</span></code> is also a data
 holder. And if we do, it would reward us with a <code class="docutils literal"><span class="pre">DataTransactionResult</span></code> like this:</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">getType()</span></code> would return <code class="docutils literal"><span class="pre">FAILURE</span></code></li>

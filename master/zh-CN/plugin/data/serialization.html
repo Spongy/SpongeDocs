@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>序列化数据 &mdash; Sponge 4.1.0 文档</title>
+     <title>序列化数据 &mdash; Sponge 5.0.0 文档</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -33,7 +33,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.1.0 文档" href="../../index.html" />
+        <link rel="top" title="Sponge 5.0.0 文档" href="../../index.html" />
         <link rel="up" title="数据 API" href="index.html" />
         <link rel="next" title="方块" href="../blocks/index.html" />
         <link rel="prev" title="数据操作记录" href="transactions.html" />
@@ -120,9 +120,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -155,7 +156,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">Sponge 4.1.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">Sponge 5.0.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >插件开发</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">数据 API</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
@@ -575,12 +576,12 @@
                   
   <div class="section" id="serializing-data">
 <h1>序列化数据<a class="headerlink" href="#serializing-data" title="永久链接至标题">¶</a></h1>
-<p>虽然 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/ImmutableDataManipulator.html">ImmutableDataManipulator</a> 存储数据是十分美妙的，然而对于重启服务器这一操作，数据的存储就束手无策了。然而，每一个 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/DataManipulator.html">DataManipulator</a> 都实现了 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/DataSerializable.html">DataSerializable</a> 接口，这意味着我们就可以使用 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/DataContainer.html">DataContainer</a> 序列化（Serialize）数据，同时使用 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/persistence/DataBuilder.html">DataBuilder</a> 反序列化（Deserialize）数据。</p>
+<p>虽然 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/manipulator/ImmutableDataManipulator.html">ImmutableDataManipulator</a> 存储数据是十分美妙的，然而对于重启服务器这一操作，数据的存储就束手无策了。然而，每一个 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/manipulator/DataManipulator.html">DataManipulator</a> 都实现了 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/DataSerializable.html">DataSerializable</a> 接口，这意味着我们就可以使用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/DataContainer.html">DataContainer</a> 序列化（Serialize）数据，同时使用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/persistence/DataBuilder.html">DataBuilder</a> 反序列化（Deserialize）数据。</p>
 <p>在通过初步地从特定的 <code class="docutils literal"><span class="pre">DataManipulator</span></code> 转换为较为普遍的结构之后， <code class="docutils literal"><span class="pre">DataContainer</span></code> 还可以起进行进一步的转换。</p>
 <div class="section" id="datacontainer-and-dataview">
 <h2>DataContainer 和 DataView<a class="headerlink" href="#datacontainer-and-dataview" title="永久链接至标题">¶</a></h2>
-<p>作为一个可以表示任何数据的通用结构， <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/DataView.html">DataView</a> 支持多个值，甚至包括嵌套的 <code class="docutils literal"><span class="pre">DataView</span></code> 作为值，这使得其看起来像一个树形的结构。每一个索引都使用 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/DataQuery.html">DataQuery</a> 去表示。 <code class="docutils literal"><span class="pre">DataContainer</span></code> 是 <code class="docutils literal"><span class="pre">DataView</span></code> 的根。</p>
-<p>每个 <code class="docutils literal"><span class="pre">DataSerializable</span></code> 都提供一个名为 <code class="docutils literal"><span class="pre">toContainer()</span></code> 的方法将其转换为 <code class="docutils literal"><span class="pre">DataContainer</span></code> 。作为示例，通过对一个 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/entity/HealthData.html">HealthData</a> 的实例的 <code class="docutils literal"><span class="pre">toContainer()</span></code> 方法调用将会返回一个包含有两个数据的 <code class="docutils literal"><span class="pre">DataContainer</span></code> ，一个表示当前生命值，一个表示最大生命值。每个 <code class="docutils literal"><span class="pre">DataQuery</span></code> 都通过对应的 <code class="docutils literal"><span class="pre">Key</span></code> 确定。</p>
+<p>作为一个可以表示任何数据的通用结构， <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/DataView.html">DataView</a> 支持多个值，甚至包括嵌套的 <code class="docutils literal"><span class="pre">DataView</span></code> 作为值，这使得其看起来像一个树形的结构。每一个索引都使用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/DataQuery.html">DataQuery</a> 去表示。 <code class="docutils literal"><span class="pre">DataContainer</span></code> 是 <code class="docutils literal"><span class="pre">DataView</span></code> 的根。</p>
+<p>每个 <code class="docutils literal"><span class="pre">DataSerializable</span></code> 都提供一个名为 <code class="docutils literal"><span class="pre">toContainer()</span></code> 的方法将其转换为 <code class="docutils literal"><span class="pre">DataContainer</span></code> 。作为示例，通过对一个 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/manipulator/mutable/entity/HealthData.html">HealthData</a> 的实例的 <code class="docutils literal"><span class="pre">toContainer()</span></code> 方法调用将会返回一个包含有两个数据的 <code class="docutils literal"><span class="pre">DataContainer</span></code> ，一个表示当前生命值，一个表示最大生命值。每个 <code class="docutils literal"><span class="pre">DataQuery</span></code> 都通过对应的 <code class="docutils literal"><span class="pre">Key</span></code> 确定。</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.data.DataContainer</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.data.key.Keys</span><span class="o">;</span>
 
@@ -589,7 +590,7 @@
 <span class="n">currentHealth</span> <span class="o">==</span> <span class="n">healthData</span><span class="o">.</span><span class="na">health</span><span class="o">().</span><span class="na">get</span><span class="o">();</span>  <span class="c1">// true</span>
 </pre></div>
 </div>
-<p>现在就是 <code class="docutils literal"><span class="pre">DataBuilder</span></code> 大显身手的时候了，它可以把一个 <code class="docutils literal"><span class="pre">DataContainer</span></code> 反序列化成一个 <code class="docutils literal"><span class="pre">HealthData</span></code> 的实例。 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/DataManager.html">DataManager</a> 负责注册和管理这些事情。它的获取方式包括一个 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/Game.html">Game</a> 的实例，或者 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/Sponge.html">Sponge</a> 类等。 <code class="docutils literal"><span class="pre">DataManager</span></code> 提供了一个方法用于获取合适的 <code class="docutils literal"><span class="pre">DataBuilder</span></code> 用于反序列化指定的 Class 和 额外的 <code class="docutils literal"><span class="pre">DataBuilder</span></code> 从而一步完成反序列化操作。下面的代码示例是等价的。</p>
+<p>现在就是 <code class="docutils literal"><span class="pre">DataBuilder</span></code> 大显身手的时候了，它可以把一个 <code class="docutils literal"><span class="pre">DataContainer</span></code> 反序列化成一个 <code class="docutils literal"><span class="pre">HealthData</span></code> 的实例。 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/DataManager.html">DataManager</a> 负责注册和管理这些事情。它的获取方式包括一个 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/Game.html">Game</a> 的实例，或者 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/Sponge.html">Sponge</a> 类等。 <code class="docutils literal"><span class="pre">DataManager</span></code> 提供了一个方法用于获取合适的 <code class="docutils literal"><span class="pre">DataBuilder</span></code> 用于反序列化指定的 Class 和 额外的 <code class="docutils literal"><span class="pre">DataBuilder</span></code> 从而一步完成反序列化操作。下面的代码示例是等价的。</p>
 <p><strong>代码示例：较长代码的反序列化操作</strong></p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.data.DataView</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.data.manipulator.mutable.entity.HealthData</span><span class="o">;</span>
@@ -614,11 +615,11 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>如果没有用于 <code class="docutils literal"><span class="pre">HealthData</span></code> 的 <code class="docutils literal"><span class="pre">DataBuilder</span></code> 被注册，或者指定的 <code class="docutils literal"><span class="pre">DataContainer</span></code> 为空，方法 <code class="docutils literal"><span class="pre">deserializeHealth</span></code> 将会返回一个 <code class="docutils literal"><span class="pre">Optional.empty()</span></code> 。如果 <code class="docutils literal"><span class="pre">DataContainer</span></code> 中含有非法数据，那么将抛出一个 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/persistence/InvalidDataException.html">InvalidDataException</a> 异常。</p>
+<p>如果没有用于 <code class="docutils literal"><span class="pre">HealthData</span></code> 的 <code class="docutils literal"><span class="pre">DataBuilder</span></code> 被注册，或者指定的 <code class="docutils literal"><span class="pre">DataContainer</span></code> 为空，方法 <code class="docutils literal"><span class="pre">deserializeHealth</span></code> 将会返回一个 <code class="docutils literal"><span class="pre">Optional.empty()</span></code> 。如果 <code class="docutils literal"><span class="pre">DataContainer</span></code> 中含有非法数据，那么将抛出一个 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/persistence/InvalidDataException.html">InvalidDataException</a> 异常。</p>
 </div>
 <div class="section" id="datatranslator">
 <h2>DataTranslator<a class="headerlink" href="#datatranslator" title="永久链接至标题">¶</a></h2>
-<p>Sponge 的默认实现通常为 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/MemoryDataView.html">MemoryDataView</a> 和 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/MemoryDataContainer.html">MemoryDataContainer</a> ，这意味着这些数据只会存储在内存中，并不会存活到服务端重启后。如果想要存储一个 <code class="docutils literal"><span class="pre">DataContainer</span></code> ，我们首先需要把它转换为一个可储存的形式。 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/translator/DataTranslator.html">DataTranslator</a> 就是用于这种转换的。比如 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/translator/ConfigurateTranslator.html">ConfigurateTranslator</a> ，就是用于把一个 <code class="docutils literal"><span class="pre">DataView</span></code> 转换为一个 <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/ConfigurationNode.html">ConfigurationNode</a> 的，反之亦然。 <code class="docutils literal"><span class="pre">ConfigurationNode</span></code> 就可以很方便地存储到配置文件中了，详见 <a class="reference internal" href="../configuration/index.html"><em>配置插件</em></a> 这一部分。</p>
+<p>Sponge 的默认实现通常为 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/MemoryDataView.html">MemoryDataView</a> 和 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/MemoryDataContainer.html">MemoryDataContainer</a> ，这意味着这些数据只会存储在内存中，并不会存活到服务端重启后。如果想要存储一个 <code class="docutils literal"><span class="pre">DataContainer</span></code> ，我们首先需要把它转换为一个可储存的形式。 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/translator/DataTranslator.html">DataTranslator</a> 就是用于这种转换的。比如 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/translator/ConfigurateTranslator.html">ConfigurateTranslator</a> ，就是用于把一个 <code class="docutils literal"><span class="pre">DataView</span></code> 转换为一个 <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/ConfigurationNode.html">ConfigurationNode</a> 的，反之亦然。 <code class="docutils literal"><span class="pre">ConfigurationNode</span></code> 就可以很方便地存储到配置文件中了，详见 <a class="reference internal" href="../configuration/index.html"><em>配置插件</em></a> 这一部分。</p>
 <p><strong>代码示例：把 HealthData 序列化为配置文件数据</strong></p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ninja.leaping.configurate.ConfigurationNode</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.data.translator.ConfigurateTranslator</span><span class="o">;</span>

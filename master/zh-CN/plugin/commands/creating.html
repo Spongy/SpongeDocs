@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>创建一个命令 &mdash; Sponge 4.1.0 文档</title>
+     <title>创建一个命令 &mdash; Sponge 5.0.0 文档</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -33,7 +33,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.1.0 文档" href="../../index.html" />
+        <link rel="top" title="Sponge 5.0.0 文档" href="../../index.html" />
         <link rel="up" title="命令" href="index.html" />
         <link rel="next" title="参数分析" href="arguments.html" />
         <link rel="prev" title="命令" href="index.html" />
@@ -120,9 +120,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -155,7 +156,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">Sponge 4.1.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">Sponge 5.0.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >插件开发</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">命令</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
@@ -575,8 +576,8 @@
                   
   <div class="section" id="building-a-command">
 <h1>创建一个命令<a class="headerlink" href="#building-a-command" title="永久链接至标题">¶</a></h1>
-<p>第一步是获取一个新的 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/spec/CommandSpec.html">CommandSpec</a> Builder。这一 Builder 提供用于编辑命令的帮助信息、参数、以及命令逻辑的一些方法。这些方法可以使用链式调用的方式调用。</p>
-<p>最后你需要使用 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/spec/CommandSpec.Builder.html#build--">CommandSpec.Builder#build()</a> 方法生成一个命令。</p>
+<p>第一步是获取一个新的 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/spec/CommandSpec.html">CommandSpec</a> Builder。这一 Builder 提供用于编辑命令的帮助信息、参数、以及命令逻辑的一些方法。这些方法可以使用链式调用的方式调用。</p>
+<p>最后你需要使用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/spec/CommandSpec.Builder.html#build--">CommandSpec.Builder#build()</a> 方法生成一个命令。</p>
 <p>然后你需要注册命令。</p>
 <div class="section" id="example-building-a-simple-command">
 <h2>示例：创建一个简单的命令<a class="headerlink" href="#example-building-a-simple-command" title="永久链接至标题">¶</a></h2>
@@ -652,7 +653,7 @@
 <div class="section" id="writing-a-command-executor">
 <h3>编写一个命令执行器（Command Executor）<a class="headerlink" href="#writing-a-command-executor" title="永久链接至标题">¶</a></h3>
 <p>创建一个简单的命令唯一所需的组件就是命令执行器，它负责整个命令的主逻辑。</p>
-<p>这个命令执行器必须实现一个 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/spec/CommandExecutor.html">CommandExecutor</a> 接口，这一接口定义了 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/spec/CommandExecutor.html#execute-org.spongepowered.api.command.CommandSource-org.spongepowered.api.command.args.CommandContext-">CommandExecutor#execute(CommandSource, CommandContext)</a> 方法，用于在命令执行时调用并传入两个参数：</p>
+<p>这个命令执行器必须实现一个 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/spec/CommandExecutor.html">CommandExecutor</a> 接口，这一接口定义了 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/spec/CommandExecutor.html#execute-org.spongepowered.api.command.CommandSource-org.spongepowered.api.command.args.CommandContext-">CommandExecutor#execute(CommandSource, CommandContext)</a> 方法，用于在命令执行时调用并传入两个参数：</p>
 <ul class="simple">
 <li><p class="first">执行命令的对象（Source），如服务端命令行、命令方块或者一个玩家</p>
 </li>
@@ -687,7 +688,7 @@
 <div class="section" id="player-only-commands">
 <h2>只允许玩家使用的命令<a class="headerlink" href="#player-only-commands" title="永久链接至标题">¶</a></h2>
 <p>有的时候需要只允许玩家执行一个命令（例如 <code class="docutils literal"><span class="pre">/suicide</span></code> 命令）。</p>
-<p>可以通过一个 <code class="docutils literal"><span class="pre">instanceof</span></code> 检查来确定 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/CommandSource.html">CommandSource</a> 的类型：</p>
+<p>可以通过一个 <code class="docutils literal"><span class="pre">instanceof</span></code> 检查来确定 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/CommandSource.html">CommandSource</a> 的类型：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.entity.living.player.Player</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.command.source.CommandBlockSource</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.command.source.ConsoleSource</span><span class="o">;</span>
@@ -713,7 +714,7 @@
 </div>
 <div class="section" id="command-results">
 <h3>命令执行结果<a class="headerlink" href="#command-results" title="永久链接至标题">¶</a></h3>
-<p><code class="docutils literal"><span class="pre">CommandExecutor#execute()</span></code> 方法必须返回一个 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/CommandResult.html">CommandResult</a>，也就是命令执行结果。在大多数情况下，命令执行成功时返回一个 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/CommandResult.html#success--">CommandResult#success()</a> ，失败时返回一个 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/CommandResult.html#empty--">CommandResult#empty()</a> ，是足够用的。如果需要传达更多信息，我们需要一个提供了若干个分别传入一个整数的用于设置属性的方法的 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/CommandResult.html#builder--">CommandResult#builder()</a> 来解决问题。所有没有被 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/CommandResult.html#builder--">CommandResult#builder()</a> 设置的属性将会为空。</p>
+<p><code class="docutils literal"><span class="pre">CommandExecutor#execute()</span></code> 方法必须返回一个 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/CommandResult.html">CommandResult</a>，也就是命令执行结果。在大多数情况下，命令执行成功时返回一个 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/CommandResult.html#success--">CommandResult#success()</a> ，失败时返回一个 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/CommandResult.html#empty--">CommandResult#empty()</a> ，是足够用的。如果需要传达更多信息，我们需要一个提供了若干个分别传入一个整数的用于设置属性的方法的 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/CommandResult.html#builder--">CommandResult#builder()</a> 来解决问题。所有没有被 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/CommandResult.html#builder--">CommandResult#builder()</a> 设置的属性将会为空。</p>
 <p>命令方块可以使用这些值来修改记分板（Scoreboard）的数据统计，然后可以用于在多个命令方块的组合中发挥作用。如果想要了解这些数据是如何访问的，可以参见 <a class="reference external" href="https://minecraft.gamepedia.com/Tutorials/Command_stats">这里</a> 。</p>
 </div>
 </div>
@@ -728,7 +729,7 @@
 <p>这个示例使用一个 Builder 以创建一个 <code class="docutils literal"><span class="pre">CommandResult</span></code> 用于使该命令影响到四十二个实体，并表现为成功。</p>
 <div class="section" id="error-handling">
 <h3>错误处理<a class="headerlink" href="#error-handling" title="永久链接至标题">¶</a></h3>
-<p><code class="docutils literal"><span class="pre">execute()</span></code> 方法可能会抛出一个 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/CommandException.html">CommandException</a> 用于表示命令执行时出了错。如果抛出了这样一个异常，那么其消息会被以错误消息的形式呈现给执行命令的对象。如果一个命令的参数没有办法解析，那么会自动抛出一个 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/ArgumentParseException.html">ArgumentParseException</a> 异常，这个异常是 <code class="docutils literal"><span class="pre">CommandException</span></code> 的子类。</p>
+<p><code class="docutils literal"><span class="pre">execute()</span></code> 方法可能会抛出一个 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/CommandException.html">CommandException</a> 用于表示命令执行时出了错。如果抛出了这样一个异常，那么其消息会被以错误消息的形式呈现给执行命令的对象。如果一个命令的参数没有办法解析，那么会自动抛出一个 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/ArgumentParseException.html">ArgumentParseException</a> 异常，这个异常是 <code class="docutils literal"><span class="pre">CommandException</span></code> 的子类。</p>
 </div>
 </div>
 </div>

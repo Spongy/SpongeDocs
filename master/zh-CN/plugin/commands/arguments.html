@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>参数分析 &mdash; Sponge 4.1.0 文档</title>
+     <title>参数分析 &mdash; Sponge 5.0.0 文档</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -33,7 +33,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.1.0 文档" href="../../index.html" />
+        <link rel="top" title="Sponge 5.0.0 文档" href="../../index.html" />
         <link rel="up" title="命令" href="index.html" />
         <link rel="next" title="命令标志" href="flags.html" />
         <link rel="prev" title="创建一个命令" href="creating.html" />
@@ -120,9 +120,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -155,7 +156,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">Sponge 4.1.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">Sponge 5.0.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >插件开发</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">命令</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
@@ -576,14 +577,14 @@
   <div class="section" id="argument-parsing">
 <h1>参数分析<a class="headerlink" href="#argument-parsing" title="永久链接至标题">¶</a></h1>
 <p>命令生成器（Command Builder）的 API 附带了一个非常强大的参数解析器。它把字符串输入转换为 Java 的基本类型（整数、布尔值、字符串）或游戏中的对象（玩家、世界、方块类型等）。这一解析器支持可选参数和标志，它同时也可以处理使用 TAB 的参数自动补全。</p>
-<p>解析过的参数存储在 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/CommandContext.html">CommandContext</a> 对象中。如果解析器返回了单个对象，可以通过 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/CommandContext.html#getOne-java.lang.String-">CommandContext#getOne(String)</a> 获取。可选参数和弱参数可能会返回 <code class="docutils literal"><span class="pre">Optional.empty()</span></code>。</p>
-<p>很多解析器可能会返回多个对象（例如匹配用户名的多个玩家）。在这种情况下，你必须使用 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/CommandContext.html#getAll-java.lang.String-">CommandContext#getAll(String)</a> 以获取所有可能的匹配项对应的 <code class="docutils literal"><span class="pre">Collection</span></code>，<strong>否则上下文对象会抛出异常</strong>！</p>
+<p>解析过的参数存储在 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/CommandContext.html">CommandContext</a> 对象中。如果解析器返回了单个对象，可以通过 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/CommandContext.html#getOne-java.lang.String-">CommandContext#getOne(String)</a> 获取。可选参数和弱参数可能会返回 <code class="docutils literal"><span class="pre">Optional.empty()</span></code>。</p>
+<p>很多解析器可能会返回多个对象（例如匹配用户名的多个玩家）。在这种情况下，你必须使用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/CommandContext.html#getAll-java.lang.String-">CommandContext#getAll(String)</a> 以获取所有可能的匹配项对应的 <code class="docutils literal"><span class="pre">Collection</span></code>，<strong>否则上下文对象会抛出异常</strong>！</p>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>
-<p class="last">你可以使用 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/GenericArguments.html#onlyOne-org.spongepowered.api.command.args.CommandElement-">GenericArguments#onlyOne(CommandElement)</a> 限制返回数量只有一个，这样你就可以安全地使用 <code class="docutils literal"><span class="pre">args.&lt;T&gt;getOne(String)</span></code> 了。</p>
+<p class="last">你可以使用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/GenericArguments.html#onlyOne-org.spongepowered.api.command.args.CommandElement-">GenericArguments#onlyOne(CommandElement)</a> 限制返回数量只有一个，这样你就可以安全地使用 <code class="docutils literal"><span class="pre">args.&lt;T&gt;getOne(String)</span></code> 了。</p>
 </div>
-<p>若要创建一个新的 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/CommandElement.html">CommandElement</a> （参数），请使用 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/GenericArguments.html">GenericArguments</a> 这一工厂类（Factory Class）。许多 <code class="docutils literal"><span class="pre">CommandElement</span></code> 都需要一段短文本用于显示帮助或错误信息。</p>
-<p>使用 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/spec/CommandSpec.Builder.html#arguments-CommandElement...-">CommandSpec.Builder#arguments(CommandElement...)</a> 把 <code class="docutils literal"><span class="pre">CommandElement</span></code> 应用到命令生成器上。这一方法可以传入多个 <code class="docutils literal"><span class="pre">CommandElement</span></code> ，这样就可以解析多个参数（例如 <code class="docutils literal"><span class="pre">/msg</span> <span class="pre">&lt;player&gt;</span> <span class="pre">&lt;msg&gt;</span></code> ）。传入多个参数等价于使用 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/GenericArguments.html#seq-CommandElement...-">GenericArguments#seq(CommandElement...)</a> 把多个参数包装起来。</p>
+<p>若要创建一个新的 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/CommandElement.html">CommandElement</a> （参数），请使用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/GenericArguments.html">GenericArguments</a> 这一工厂类（Factory Class）。许多 <code class="docutils literal"><span class="pre">CommandElement</span></code> 都需要一段短文本用于显示帮助或错误信息。</p>
+<p>使用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/spec/CommandSpec.Builder.html#arguments-CommandElement...-">CommandSpec.Builder#arguments(CommandElement...)</a> 把 <code class="docutils literal"><span class="pre">CommandElement</span></code> 应用到命令生成器上。这一方法可以传入多个 <code class="docutils literal"><span class="pre">CommandElement</span></code> ，这样就可以解析多个参数（例如 <code class="docutils literal"><span class="pre">/msg</span> <span class="pre">&lt;player&gt;</span> <span class="pre">&lt;msg&gt;</span></code> ）。传入多个参数等价于使用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/GenericArguments.html#seq-CommandElement...-">GenericArguments#seq(CommandElement...)</a> 把多个参数包装起来。</p>
 <div class="section" id="example-building-a-command-with-multiple-arguments">
 <h2>示例：使用命令生成器生成多个参数的命令<a class="headerlink" href="#example-building-a-command-with-multiple-arguments" title="永久链接至标题">¶</a></h2>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.Sponge</span><span class="o">;</span>
@@ -725,7 +726,7 @@
 </td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">catalogedElement</span></code></td>
-<td><p class="first last">期望一个表示特定 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/CatalogType.html">CatalogType</a> 成员的参数。</p>
+<td><p class="first last">期望一个表示特定 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/CatalogType.html">CatalogType</a> 成员的参数。</p>
 </td>
 <td><p class="first last">多个匹配特定类型（Catalog Type）的元素</p>
 </td>
@@ -816,14 +817,14 @@
 </table>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>
-<p class="last">详见 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/GenericArguments.html">GenericArguments</a> 以获取更详细的信息。</p>
+<p class="last">详见 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/GenericArguments.html">GenericArguments</a> 以获取更详细的信息。</p>
 </div>
 </div>
 <div class="section" id="custom-command-elements">
 <h2>自定义命令元素<a class="headerlink" href="#custom-command-elements" title="永久链接至标题">¶</a></h2>
 <p>可以通过继承 <code class="docutils literal"><span class="pre">CommandElement</span></code> 类创建自定义命令元素（如解析 URL 或者一个 <code class="docutils literal"><span class="pre">Vector2i</span></code> 元素）。</p>
-<p><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/CommandElement.html#parseValue-org.spongepowered.api.command.CommandSource-org.spongepowered.api.command.args.CommandArgs-">CommandElement#parseValue(CommandSource, CommandArgs)</a> 方法需要通过 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/CommandArgs.html#next--">CommandArgs#next()</a> 方法获取没有处理过的字符串并将其转换为一个对象（Object），如果转换出错，应抛出一个 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/ArgumentParseException.html">ArgumentParseException</a> 异常。</p>
-<p><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/CommandElement.html#complete-org.spongepowered.api.command.CommandSource-org.spongepowered.api.command.args.CommandArgs-org.spongepowered.api.command.args.CommandContext-">CommandElement#complete(CommandSource, CommandArgs, CommandContext)</a> 方法应使用 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/CommandArgs.html#peek--">CommandArgs#peek()</a> 方法读取下一个未处理过的参数。其返回一个 TAB 自动补全的列表。</p>
+<p><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/CommandElement.html#parseValue-org.spongepowered.api.command.CommandSource-org.spongepowered.api.command.args.CommandArgs-">CommandElement#parseValue(CommandSource, CommandArgs)</a> 方法需要通过 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/CommandArgs.html#next--">CommandArgs#next()</a> 方法获取没有处理过的字符串并将其转换为一个对象（Object），如果转换出错，应抛出一个 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/ArgumentParseException.html">ArgumentParseException</a> 异常。</p>
+<p><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/CommandElement.html#complete-org.spongepowered.api.command.CommandSource-org.spongepowered.api.command.args.CommandArgs-org.spongepowered.api.command.args.CommandContext-">CommandElement#complete(CommandSource, CommandArgs, CommandContext)</a> 方法应使用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/CommandArgs.html#peek--">CommandArgs#peek()</a> 方法读取下一个未处理过的参数。其返回一个 TAB 自动补全的列表。</p>
 <div class="section" id="example-vector2i-command-element-definition">
 <h3>示例： <code class="docutils literal"><span class="pre">Vector2i</span></code> 命令元素的定义<a class="headerlink" href="#example-vector2i-command-element-definition" title="永久链接至标题">¶</a></h3>
 <p>在这一示例中，解析器读取两个传入的参数并将其转换为一个 <code class="docutils literal"><span class="pre">Vector2i</span></code> 。</p>

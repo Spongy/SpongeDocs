@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>修改一个实体 &mdash; Sponge 4.1.0 文档</title>
+     <title>修改一个实体 &mdash; Sponge 5.0.0 文档</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -33,7 +33,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.1.0 文档" href="../../index.html" />
+        <link rel="top" title="Sponge 5.0.0 文档" href="../../index.html" />
         <link rel="up" title="实体" href="index.html" />
         <link rel="next" title="Items" href="../items/index.html" />
         <link rel="prev" title="生成一个实体" href="spawning.html" />
@@ -120,9 +120,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -155,7 +156,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">Sponge 4.1.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">Sponge 5.0.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >插件开发</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">实体</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
@@ -575,8 +576,8 @@
                   
   <div class="section" id="modifying-an-entity">
 <h1>修改一个实体<a class="headerlink" href="#modifying-an-entity" title="永久链接至标题">¶</a></h1>
-<p>确实，在世界上生成一个常规的实体已经足够了，不过，有没有什么更有趣的东西呢？这时候就需要 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/DataManipulator.html">DataManipulator</a> 大显身手了。一个 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/entity/Entity.html">Entity</a> 同时也是一个 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/DataHolder.html">DataHolder</a> ，也就是说一个实体可以存储数据。关于 <code class="docutils literal"><span class="pre">DataHolder</span></code> 的更多信息请参见 <a class="reference internal" href="../data/index.html"><em>这里</em></a> 。</p>
-<p>常见的适用于实体的 <code class="docutils literal"><span class="pre">DataManipulator</span></code> 有 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/entity/FoodData.html">FoodData</a> 以及 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/entity/HealthData.html">HealthData</a> 等。我们可以在 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/package-summary.html">org.spongepowered.api.data.manipulator.mutable</a> 和 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/entity/package-summary.html">org.spongepowered.api.data.manipulator.mutable.entity</a> 中找到适用于实体的 <code class="docutils literal"><span class="pre">DataManipulator</span></code> 。注意并非所有的 <code class="docutils literal"><span class="pre">DataManipulator</span></code> 都适用于所有的实体。</p>
+<p>确实，在世界上生成一个常规的实体已经足够了，不过，有没有什么更有趣的东西呢？这时候就需要 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/manipulator/DataManipulator.html">DataManipulator</a> 大显身手了。一个 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/entity/Entity.html">Entity</a> 同时也是一个 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/DataHolder.html">DataHolder</a> ，也就是说一个实体可以存储数据。关于 <code class="docutils literal"><span class="pre">DataHolder</span></code> 的更多信息请参见 <a class="reference internal" href="../data/index.html"><em>这里</em></a> 。</p>
+<p>常见的适用于实体的 <code class="docutils literal"><span class="pre">DataManipulator</span></code> 有 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/manipulator/mutable/entity/FoodData.html">FoodData</a> 以及 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/manipulator/mutable/entity/HealthData.html">HealthData</a> 等。我们可以在 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/manipulator/mutable/package-summary.html">org.spongepowered.api.data.manipulator.mutable</a> 和 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/manipulator/mutable/entity/package-summary.html">org.spongepowered.api.data.manipulator.mutable.entity</a> 中找到适用于实体的 <code class="docutils literal"><span class="pre">DataManipulator</span></code> 。注意并非所有的 <code class="docutils literal"><span class="pre">DataManipulator</span></code> 都适用于所有的实体。</p>
 <div class="section" id="entity-type">
 <h2>实体类型<a class="headerlink" href="#entity-type" title="永久链接至标题">¶</a></h2>
 <p>在我们进一步操纵实体之前，我们首先应检查这个 <code class="docutils literal"><span class="pre">Entity</span></code> 是什么类型的，因为一些实体并不是我们自己生成的，所以我们可能并不知道我们获取到的实体是什么类型的。一个很简单的检查就可以完成这一点，下面是一个检查一个 <code class="docutils literal"><span class="pre">Entity</span></code> 是否是一个爬行者的示例：</p>
@@ -594,7 +595,7 @@
 </div>
 <div class="section" id="entity-data-manipulators">
 <h2>操作实体数据<a class="headerlink" href="#entity-data-manipulators" title="永久链接至标题">¶</a></h2>
-<p>现在我们清楚这么一个 <code class="docutils literal"><span class="pre">Entity</span></code> 是一个爬行者了，那么我们就可以使用适用于爬行者的特殊 <code class="docutils literal"><span class="pre">DataManipulator</span></code> ，比如 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/entity/ExplosiveRadiusData.html">ExplosiveRadiusData</a> 。爬行者拥有这一数据，而并非每个实体都拥有。把一个实体的爆炸半径设置成五十的示例如下：</p>
+<p>现在我们清楚这么一个 <code class="docutils literal"><span class="pre">Entity</span></code> 是一个爬行者了，那么我们就可以使用适用于爬行者的特殊 <code class="docutils literal"><span class="pre">DataManipulator</span></code> ，比如 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/manipulator/mutable/entity/ExplosiveRadiusData.html">ExplosiveRadiusData</a> 。爬行者拥有这一数据，而并非每个实体都拥有。把一个实体的爆炸半径设置成五十的示例如下：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.data.manipulator.mutable.entity.ExplosiveRadiusData</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">explosionRadius50</span><span class="o">(</span><span class="n">Entity</span> <span class="n">creeper</span><span class="o">)</span> <span class="o">{</span>
@@ -604,7 +605,7 @@
 </pre></div>
 </div>
 <p>这样我们就获取到了这一 <code class="docutils literal"><span class="pre">Entity</span></code> 的 <code class="docutils literal"><span class="pre">ExplosiveRadiusData</span></code> 。我们就可以使用这一数据设置爬行者的爆炸半径为五十。然后我们需要把这一数据设置回爬行者身上，因为我们获取到的只是一个数据的副本。</p>
-<p>也许我们想要给我们的实体设置一个自定义名称！ <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/DisplayNameData.html">DisplayNameData</a> 就是用来完成这件事的。下面是一个示例：</p>
+<p>也许我们想要给我们的实体设置一个自定义名称！ <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/manipulator/mutable/DisplayNameData.html">DisplayNameData</a> 就是用来完成这件事的。下面是一个示例：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.data.manipulator.mutable.DisplayNameData</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.text.Text</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.text.format.TextColors</span><span class="o">;</span>
@@ -616,7 +617,7 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>此外，还有一种比较简短的方式来解决问题：通过使用 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/key/Keys.html">Keys</a> 而不是 <code class="docutils literal"><span class="pre">DataManipulator</span></code> 。就像这样：</p>
+<p>此外，还有一种比较简短的方式来解决问题：通过使用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/key/Keys.html">Keys</a> 而不是 <code class="docutils literal"><span class="pre">DataManipulator</span></code> 。就像这样：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.data.key.Keys</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">explosionRadius50</span><span class="o">(</span><span class="n">Entity</span> <span class="n">creeper</span><span class="o">)</span> <span class="o">{</span>

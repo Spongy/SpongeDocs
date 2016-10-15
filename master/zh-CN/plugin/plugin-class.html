@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>插件的主类 &mdash; Sponge 4.1.0 文档</title>
+     <title>插件的主类 &mdash; Sponge 5.0.0 文档</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -33,7 +33,7 @@
     <script type="text/javascript" src="../_static/store.min.js"></script>
     <script type="text/javascript" src="../_static/lights.js"></script>
       <link rel="shortcut icon" href="../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.1.0 文档" href="../index.html" />
+        <link rel="top" title="Sponge 5.0.0 文档" href="../index.html" />
         <link rel="up" title="插件开发" href="index.html" />
         <link rel="next" title="插件周期" href="lifecycle.html" />
         <link rel="prev" title="插件标识符" href="plugin-identifier.html" />
@@ -120,9 +120,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -155,7 +156,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../index.html">Sponge 4.1.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../index.html">Sponge 5.0.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">插件开发</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
@@ -601,7 +602,7 @@
 <div class="section" id="initializing-your-plugin">
 <h2>初始化你的插件<a class="headerlink" href="#initializing-your-plugin" title="永久链接至标题">¶</a></h2>
 <p>插件会在游戏和世界加载前加载。所以对于插件的所有和游戏的交互操作，如注册命令或者事件，都有着明确的时间表。</p>
-<p>你的插件可以监听特定的事件，我们称其为 <strong>状态事件（State event）</strong>，用于通知游戏阶段的变化。在下面的示例中，在 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStartedServerEvent.html">GameStartedServerEvent</a> 发生时， <code class="docutils literal"><span class="pre">onServerStart()</span></code> 方法会被调用，请注意在这一方法前添加的 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/Listener.html">Listener</a> 注解。</p>
+<p>你的插件可以监听特定的事件，我们称其为 <strong>状态事件（State event）</strong>，用于通知游戏阶段的变化。在下面的示例中，在 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameStartedServerEvent.html">GameStartedServerEvent</a> 发生时， <code class="docutils literal"><span class="pre">onServerStart()</span></code> 方法会被调用，请注意在这一方法前添加的 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/Listener.html">Listener</a> 注解。</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.event.Listener</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.event.game.state.GameStartedServerEvent</span><span class="o">;</span>
 
@@ -626,20 +627,20 @@
 <ul class="simple">
 <li><p class="first"><strong>初始化</strong>：这些事件会在 Sponge 和插件加载时发生。</p>
 <ul>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameConstructionEvent.html">GameConstructionEvent</a></li>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GamePreInitializationEvent.html">GamePreInitializationEvent</a></li>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameInitializationEvent.html">GameInitializationEvent</a></li>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GamePostInitializationEvent.html">GamePostInitializationEvent</a></li>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameLoadCompleteEvent.html">GameLoadCompleteEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameConstructionEvent.html">GameConstructionEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GamePreInitializationEvent.html">GamePreInitializationEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameInitializationEvent.html">GameInitializationEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GamePostInitializationEvent.html">GamePostInitializationEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameLoadCompleteEvent.html">GameLoadCompleteEvent</a></li>
 </ul>
 </li>
 <li><p class="first"><strong>运行</strong>：这些事件会在游戏和世界加载时发生。</p>
 <ul>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameAboutToStartServerEvent.html">GameAboutToStartServerEvent</a></li>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStartingServerEvent.html">GameStartingServerEvent</a></li>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStartedServerEvent.html">GameStartedServerEvent</a></li>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStoppingServerEvent.html">GameStoppingServerEvent</a></li>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStoppedServerEvent.html">GameStoppedServerEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameAboutToStartServerEvent.html">GameAboutToStartServerEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameStartingServerEvent.html">GameStartingServerEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameStartedServerEvent.html">GameStartedServerEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameStoppingServerEvent.html">GameStoppingServerEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameStoppedServerEvent.html">GameStoppedServerEvent</a></li>
 </ul>
 </li>
 </ul>

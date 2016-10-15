@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Construction d’une commande &mdash; documentation Sponge 4.1.0</title>
+     <title>Construction d’une commande &mdash; documentation Sponge 5.0.0</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="documentation Sponge 4.1.0" href="../../index.html" />
+        <link rel="top" title="documentation Sponge 5.0.0" href="../../index.html" />
         <link rel="up" title="Commandes" href="index.html" />
         <link rel="next" title="Séparation des Arguments" href="arguments.html" />
         <link rel="prev" title="Commandes" href="index.html" />
@@ -119,9 +119,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -154,7 +155,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">documentation Sponge 4.1.0</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">documentation Sponge 5.0.0</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >Création d&#8217;un Plugin</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">Commandes</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
@@ -574,8 +575,8 @@
                   
   <div class="section" id="building-a-command">
 <h1>Construction d&#8217;une commande<a class="headerlink" href="#building-a-command" title="Lien permanent vers ce titre">¶</a></h1>
-<p>La première étape est d&#8217;obtenir un nouveau constructeur <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/spec/CommandSpec.html">CommandSpec</a>. Le constructeur fournit des méthodes permettant de modifier les messages d&#8217;aides de la commande, les différents arguments de la commande et la commande en elle-même. Ces méthodes peuvent être enchaînées.</p>
-<p>Pour finalement construire sa commande, il faudra appeler la méthode <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/spec/CommandSpec.Builder.html#build--">CommandSpec.Builder#build()</a>.</p>
+<p>La première étape est d&#8217;obtenir un nouveau constructeur <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/spec/CommandSpec.html">CommandSpec</a>. Le constructeur fournit des méthodes permettant de modifier les messages d&#8217;aides de la commande, les différents arguments de la commande et la commande en elle-même. Ces méthodes peuvent être enchaînées.</p>
+<p>Pour finalement construire sa commande, il faudra appeler la méthode <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/spec/CommandSpec.Builder.html#build--">CommandSpec.Builder#build()</a>.</p>
 <p>Après cela, vous devez enregistrer la commande.</p>
 <div class="section" id="example-building-a-simple-command">
 <h2>Exemple: Construction d&#8217;une Commande Simple<a class="headerlink" href="#example-building-a-simple-command" title="Lien permanent vers ce titre">¶</a></h2>
@@ -650,7 +651,7 @@
 <div class="section" id="writing-a-command-executor">
 <h3>Écrire l&#8217;Éxécution de la Commande<a class="headerlink" href="#writing-a-command-executor" title="Lien permanent vers ce titre">¶</a></h3>
 <p>La seule chose requise pour construire une commande simple est la classe de l’exécution de la commande, qui contient la logique de la commande.</p>
-<p>La classe doit implémenter l&#8217;interface <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/spec/CommandExecutor.html">CommandExecutor</a>, qui définit la méthode <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/spec/CommandExecutor.html#execute-org.spongepowered.api.command.CommandSource-org.spongepowered.api.command.args.CommandContext-">CommandExecutor#execute(CommandSource, CommandContext)</a>. La méthode est appelée pendant l&#8217;exécution de la commande et possède deux arguments:</p>
+<p>La classe doit implémenter l&#8217;interface <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/spec/CommandExecutor.html">CommandExecutor</a>, qui définit la méthode <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/spec/CommandExecutor.html#execute-org.spongepowered.api.command.CommandSource-org.spongepowered.api.command.args.CommandContext-">CommandExecutor#execute(CommandSource, CommandContext)</a>. La méthode est appelée pendant l&#8217;exécution de la commande et possède deux arguments:</p>
 <ul class="simple">
 <li><p class="first">La source de la commande qui l&#8217;exécute. (ex: la console, un bloc de commande ou bien un joueur)</p>
 </li>
@@ -685,7 +686,7 @@
 <div class="section" id="player-only-commands">
 <h2>Commandes utilisables par les Joueurs Seulement<a class="headerlink" href="#player-only-commands" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Parfois il est nécessaire que seulement le joueur puisse exécuter une commande (ex: la commande <code class="docutils literal"><span class="pre">/suicide</span></code>).</p>
-<p>Effectuer une vérification à l&#8217;aide de <code class="docutils literal"><span class="pre">instanceof</span></code> permet de déterminer le type de <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/CommandSource.html">CommandSource</a>:</p>
+<p>Effectuer une vérification à l&#8217;aide de <code class="docutils literal"><span class="pre">instanceof</span></code> permet de déterminer le type de <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/CommandSource.html">CommandSource</a>:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.entity.living.player.Player</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.command.source.CommandBlockSource</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.command.source.ConsoleSource</span><span class="o">;</span>
@@ -711,7 +712,7 @@
 </div>
 <div class="section" id="command-results">
 <h3>Résultats de la Commande<a class="headerlink" href="#command-results" title="Lien permanent vers ce titre">¶</a></h3>
-<p>La méthode <code class="docutils literal"><span class="pre">CommandExecutor::execute()</span></code> doit toujours retourner un <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/CommandResult.html">CommandResult</a>. Dans la plupart des cas, il suffit juste de retourner <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/CommandResult.html#success--">CommandResult#success()</a> si la commande a été exécutée avec succès ou <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/CommandResult.html#empty--">CommandResult#empty()</a> si ce n&#8217;est pas le cas. Dans les cas où plusieurs d&#8217;informations doivent être déplacées, un <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/CommandResult.html#builder--">CommandResult#builder()</a> peut se révéler utile. Il fournit les méthodes <code class="docutils literal"><span class="pre">affectedBlocks()</span></code>, <code class="docutils literal"><span class="pre">affectedEntities()</span></code>, <code class="docutils literal"><span class="pre">affectedItems()</span></code>, <code class="docutils literal"><span class="pre">queryResult()</span></code> et <code class="docutils literal"><span class="pre">successCount()</span></code>, chacune acceptant un entier et affectant l&#8217;attribut de même nom. Tous les attributs qui ne sont pas définis pas le constructeur seront vides.</p>
+<p>La méthode <code class="docutils literal"><span class="pre">CommandExecutor::execute()</span></code> doit toujours retourner un <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/CommandResult.html">CommandResult</a>. Dans la plupart des cas, il suffit juste de retourner <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/CommandResult.html#success--">CommandResult#success()</a> si la commande a été exécutée avec succès ou <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/CommandResult.html#empty--">CommandResult#empty()</a> si ce n&#8217;est pas le cas. Dans les cas où plusieurs d&#8217;informations doivent être déplacées, un <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/CommandResult.html#builder--">CommandResult#builder()</a> peut se révéler utile. Il fournit les méthodes <code class="docutils literal"><span class="pre">affectedBlocks()</span></code>, <code class="docutils literal"><span class="pre">affectedEntities()</span></code>, <code class="docutils literal"><span class="pre">affectedItems()</span></code>, <code class="docutils literal"><span class="pre">queryResult()</span></code> et <code class="docutils literal"><span class="pre">successCount()</span></code>, chacune acceptant un entier et affectant l&#8217;attribut de même nom. Tous les attributs qui ne sont pas définis pas le constructeur seront vides.</p>
 <p>Les command blocks peuvent utiliser ces valeurs pour modifier les stats de scoreboard, ce qui peut être utilisé pour élaborer des constructions constituées de multiples command blocks. Un tutoriel sur la manière d&#8217;accéder aux données peut être trouvée <a class="reference external" href="https://minecraft.gamepedia.com/Tutorials/Command_stats">ici</a>.</p>
 </div>
 </div>
@@ -726,7 +727,7 @@
 <p>Cet exemple utilise un constructeur pour créer un <code class="docutils literal"><span class="pre">CommandResult</span></code> pour une commande qui affecte 42 entités et a été un succès.</p>
 <div class="section" id="error-handling">
 <h3>Gestion des erreurs<a class="headerlink" href="#error-handling" title="Lien permanent vers ce titre">¶</a></h3>
-<p>La méthode <code class="docutils literal"><span class="pre">execute()</span></code> peut également lever une <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/CommandException.html">CommandException</a>, signalant qu&#8217;une erreur est survenue lors de l&#8217;exécution de la commande. Si cette Exception est levée, son message sera affiché dans la source de la commande, formatée comme une erreur. L&#8217;usage de la commande peut être aussi affiché. Un <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/args/ArgumentParseException.html">ArgumentParseException</a>, un sous-type de <code class="docutils literal"><span class="pre">CommandException</span></code> est automatiquement levé si les arguments de la commande ne peuvent pas être analysés.</p>
+<p>La méthode <code class="docutils literal"><span class="pre">execute()</span></code> peut également lever une <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/CommandException.html">CommandException</a>, signalant qu&#8217;une erreur est survenue lors de l&#8217;exécution de la commande. Si cette Exception est levée, son message sera affiché dans la source de la commande, formatée comme une erreur. L&#8217;usage de la commande peut être aussi affiché. Un <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/ArgumentParseException.html">ArgumentParseException</a>, un sous-type de <code class="docutils literal"><span class="pre">CommandException</span></code> est automatiquement levé si les arguments de la commande ne peuvent pas être analysés.</p>
 </div>
 </div>
 </div>

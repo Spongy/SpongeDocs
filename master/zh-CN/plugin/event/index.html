@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>事件 &mdash; Sponge 4.1.0 文档</title>
+     <title>事件 &mdash; Sponge 5.0.0 文档</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -33,7 +33,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.1.0 文档" href="../../index.html" />
+        <link rel="top" title="Sponge 5.0.0 文档" href="../../index.html" />
         <link rel="up" title="插件开发" href="../index.html" />
         <link rel="next" title="事件监听器" href="listeners.html" />
         <link rel="prev" title="低级命令API" href="../commands/commandcallable.html" />
@@ -120,9 +120,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -155,7 +156,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">Sponge 4.1.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">Sponge 5.0.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" accesskey="U">插件开发</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
@@ -574,7 +575,7 @@
                   
   <div class="section" id="events">
 <h1>事件<a class="headerlink" href="#events" title="永久链接至标题">¶</a></h1>
-<p>事件用于通知插件某些事情发生了。许多事件可以被 <em>取消</em> —— 亦即，事件的行为可以被阻止发生。可取消的事件会实现 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/Cancellable.html">Cancellable</a> 接口。</p>
+<p>事件用于通知插件某些事情发生了。许多事件可以被 <em>取消</em> —— 亦即，事件的行为可以被阻止发生。可取消的事件会实现 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/Cancellable.html">Cancellable</a> 接口。</p>
 <p>Sponge 本身包含许多事件；另外，插件也可以创建自己的事件，供其他插件监听。</p>
 <p>事件监听器会被分配一个优先级，以确定一个事件监听器是在其它（插件的）事件监听器的条件下运行的顺序。例如，一个 <code class="docutils literal"><span class="pre">EARLY</span></code> 优先级的事件监听器会在大多数其它事件监听器之前返回。请参阅 <a class="reference internal" href="listeners.html#about-listener"><span>关于 &#64;Listener</span></a> 以获取更多的信息。</p>
 <p>事件不能被发送给一组特定的插件。所有监听了一个事件的插件都会得到该事件的通知。</p>

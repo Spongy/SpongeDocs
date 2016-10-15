@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Main Plugin Class &mdash; Sponge 4.1.0 Dokumentation</title>
+     <title>Main Plugin Class &mdash; Sponge 5.0.0 Dokumentation</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="../_static/store.min.js"></script>
     <script type="text/javascript" src="../_static/lights.js"></script>
       <link rel="shortcut icon" href="../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.1.0 Dokumentation" href="../index.html" />
+        <link rel="top" title="Sponge 5.0.0 Dokumentation" href="../index.html" />
         <link rel="up" title="Plugins erstellen" href="index.html" />
         <link rel="next" title="Der Plugin-Lebenszyklus" href="lifecycle.html" />
         <link rel="prev" title="Plugin Identifiers" href="plugin-identifier.html" />
@@ -119,9 +119,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -154,7 +155,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../index.html">Sponge 4.1.0 Dokumentation</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../index.html">Sponge 5.0.0 Dokumentation</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">Plugins erstellen</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
@@ -581,7 +582,7 @@
 <h2>Die Klasse beginnen<a class="headerlink" href="#starting-your-class" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Der nächste Schritt nach dem Hinzufügen der Sponge-API als Abhängigkeit (englisch <em>dependency</em>) ist das Erstellen einer neuen Klasse. Diese Klasse kannst du nach deinen Wünschen benennen, solange sie nicht mit <code class="docutils literal"><span class="pre">org.spongepowered</span></code> beginnt. Gemäß unserer Konvention sollen Klassennamen in Großbuchstaben angelegt sein.</p>
 <p>Oracle <a class="reference external" href="http://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html">empfiehlt</a> deine Domain als Package Namen zu verwenden, falls du eine Domain besitzt. Falls du keine hast, wird das Nutzen einer Email Adresse (wie z.B. <code class="docutils literal"><span class="pre">com.gmail.Benutzername.Projekt</span></code>) oder eines open-source Repositories (wie z.B. <code class="docutils literal"><span class="pre">io.github.Benutzername.Projekt</span></code>) empfohlen, da es die gängige Praxis darstellt.</p>
-<p>After creating your main class, the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/plugin/Plugin.html">Plugin</a> annotation must be affixed to it. This annotation allows Sponge
+<p>After creating your main class, the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/plugin/Plugin.html">Plugin</a> annotation must be affixed to it. This annotation allows Sponge
 to easily find your main plugin class when your plugin is loaded. An example usage is illustrated below.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">io.github.username.project</span><span class="o">;</span>
 
@@ -602,8 +603,8 @@ to easily find your main plugin class when your plugin is loaded. An example usa
 <h2>Initialisiere dein Plugin<a class="headerlink" href="#initializing-your-plugin" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Plugins werden eingelesen, bevor das Spiel und die Spielwelt(en) geladen werden. Dies ermöglicht ein Zeitfenster, in dem dein Plugins mit dem Spiel interagieren kann, beispielsweise durch Registrieren eines Befehls oder Events.</p>
 <p>Your plugin can listen for particular events, called <strong>state events</strong>, to be notified about changes in the state of the
-game. In the example below, <code class="docutils literal"><span class="pre">onServerStart()</span></code> is called when the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStartedServerEvent.html">GameStartedServerEvent</a> occurs; take note
-of the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/Listener.html">Listener</a> annotation before the method.</p>
+game. In the example below, <code class="docutils literal"><span class="pre">onServerStart()</span></code> is called when the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameStartedServerEvent.html">GameStartedServerEvent</a> occurs; take note
+of the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/Listener.html">Listener</a> annotation before the method.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.event.Listener</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.event.game.state.GameStartedServerEvent</span><span class="o">;</span>
 
@@ -628,20 +629,20 @@ of the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/or
 <ul class="simple">
 <li><p class="first"><strong>Initialisierung</strong>: Diese Events werden beim Laden von Sponge und Plugins ausgelöst.</p>
 <ul>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameConstructionEvent.html">GameConstructionEvent</a></li>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GamePreInitializationEvent.html">GamePreInitializationEvent</a></li>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameInitializationEvent.html">GameInitializationEvent</a></li>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GamePostInitializationEvent.html">GamePostInitializationEvent</a></li>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameLoadCompleteEvent.html">GameLoadCompleteEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameConstructionEvent.html">GameConstructionEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GamePreInitializationEvent.html">GamePreInitializationEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameInitializationEvent.html">GameInitializationEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GamePostInitializationEvent.html">GamePostInitializationEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameLoadCompleteEvent.html">GameLoadCompleteEvent</a></li>
 </ul>
 </li>
 <li><p class="first"><strong>Laufzeit</strong>: Diese Events werden beim während das Spiel und Welten geladen werden ausgelöst.</p>
 <ul>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameAboutToStartServerEvent.html">GameAboutToStartServerEvent</a></li>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStartingServerEvent.html">GameStartingServerEvent</a></li>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStartedServerEvent.html">GameStartedServerEvent</a></li>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStoppingServerEvent.html">GameStoppingServerEvent</a></li>
-<li><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameStoppedServerEvent.html">GameStoppedServerEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameAboutToStartServerEvent.html">GameAboutToStartServerEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameStartingServerEvent.html">GameStartingServerEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameStartedServerEvent.html">GameStartedServerEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameStoppingServerEvent.html">GameStoppingServerEvent</a></li>
+<li><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameStoppedServerEvent.html">GameStoppedServerEvent</a></li>
 </ul>
 </li>
 </ul>

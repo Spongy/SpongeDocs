@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Événements &mdash; documentation Sponge 4.1.0</title>
+     <title>Événements &mdash; documentation Sponge 5.0.0</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="documentation Sponge 4.1.0" href="../../index.html" />
+        <link rel="top" title="documentation Sponge 5.0.0" href="../../index.html" />
         <link rel="up" title="Création d’un Plugin" href="../index.html" />
         <link rel="next" title="Les Event Listeners" href="listeners.html" />
         <link rel="prev" title="API pour Commandes de Bas Niveau" href="../commands/commandcallable.html" />
@@ -119,9 +119,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -154,7 +155,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">documentation Sponge 4.1.0</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">documentation Sponge 5.0.0</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" accesskey="U">Création d&#8217;un Plugin</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
@@ -573,7 +574,7 @@
                   
   <div class="section" id="events">
 <h1>Événements<a class="headerlink" href="#events" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Les événements sont utilisés pour informer le plugin de certains faits qui se produisent. Beaucoup d&#8217;événements peuvent également être <em>annulés</em> &#8211; c&#8217;est à dire que l&#8217;action à laquelle fait référence l&#8217;événement peut être empêchée. Les événements annulables implémentent l&#8217;interface <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/Cancellable.html">Cancellable</a>.</p>
+<p>Les événements sont utilisés pour informer le plugin de certains faits qui se produisent. Beaucoup d&#8217;événements peuvent également être <em>annulés</em> &#8211; c&#8217;est à dire que l&#8217;action à laquelle fait référence l&#8217;événement peut être empêchée. Les événements annulables implémentent l&#8217;interface <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/Cancellable.html">Cancellable</a>.</p>
 <p>Sponge itself contains many events; however, plugins can create their own events which other plugins can listen to.</p>
 <p>Event listeners are assigned a priority that determines the order in which the event listener is run in context of other
 event listeners (such as those from other plugins). For example, an event listener with <code class="docutils literal"><span class="pre">EARLY</span></code> priority will return

@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>低级命令API &mdash; Sponge 4.1.0 文档</title>
+     <title>低级命令API &mdash; Sponge 5.0.0 文档</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -33,7 +33,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.1.0 文档" href="../../index.html" />
+        <link rel="top" title="Sponge 5.0.0 文档" href="../../index.html" />
         <link rel="up" title="命令" href="index.html" />
         <link rel="next" title="事件" href="../event/index.html" />
         <link rel="prev" title="命令管理器" href="service.html" />
@@ -120,9 +120,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -155,7 +156,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">Sponge 4.1.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">Sponge 5.0.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >插件开发</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">命令</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
@@ -575,7 +576,7 @@
                   
   <div class="section" id="low-level-command-api">
 <h1>低级命令API<a class="headerlink" href="#low-level-command-api" title="永久链接至标题">¶</a></h1>
-<p><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/CommandCallable.html">CommandCallable</a> 和 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/dispatcher/Dispatcher.html">Dispatcher</a> 两个接口可以用于定义命令。这两个接口可以用于自定义命令 API 的基础。</p>
+<p><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/CommandCallable.html">CommandCallable</a> 和 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/dispatcher/Dispatcher.html">Dispatcher</a> 两个接口可以用于定义命令。这两个接口可以用于自定义命令 API 的基础。</p>
 <p>我们强烈地建议使用 <a class="reference internal" href="creating.html"><em>Command Builder API</em></a> 以定义简单的命令。</p>
 <div class="section" id="writing-a-command">
 <h2>自定义一个命令<a class="headerlink" href="#writing-a-command" title="永久链接至标题">¶</a></h2>
@@ -626,12 +627,12 @@
 </div>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>
-<p class="last">如欲获取这一示例中每个方法的用途，请参阅 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/CommandCallable.html">CommandCallable</a> 。</p>
+<p class="last">如欲获取这一示例中每个方法的用途，请参阅 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/CommandCallable.html">CommandCallable</a> 。</p>
 </div>
 </div>
 <div class="section" id="registering-the-command">
 <h2>注册这一命令<a class="headerlink" href="#registering-the-command" title="永久链接至标题">¶</a></h2>
-<p>那么我们现在可以通过 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/CommandManager.html">CommandManager</a> 注册这个类了。 <code class="docutils literal"><span class="pre">CommandManager</span></code> 用于监视用户在聊天框中输入的命令，并将其重定向到正确的命令处理代码。请使用 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/CommandManager.html#register-java.lang.Object-org.spongepowered.api.command.CommandCallable-String...-">CommandManager#register(Object, CommandCallable, String...)</a> 方法，并传入插件的实例、命令的实例、以及所有需要作为命令的别名的字符串，以注册这一命令。</p>
+<p>那么我们现在可以通过 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/CommandManager.html">CommandManager</a> 注册这个类了。 <code class="docutils literal"><span class="pre">CommandManager</span></code> 用于监视用户在聊天框中输入的命令，并将其重定向到正确的命令处理代码。请使用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/CommandManager.html#register-java.lang.Object-org.spongepowered.api.command.CommandCallable-String...-">CommandManager#register(Object, CommandCallable, String...)</a> 方法，并传入插件的实例、命令的实例、以及所有需要作为命令的别名的字符串，以注册这一命令。</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.command.CommandManager</span><span class="o">;</span>
 
 <span class="n">CommandManager</span> <span class="n">cmdService</span> <span class="o">=</span> <span class="n">Sponge</span><span class="o">.</span><span class="na">getCommandManager</span><span class="o">();</span>
@@ -646,7 +647,7 @@
 <div class="section" id="command-dispatchers">
 <h2>命令调度器<a class="headerlink" href="#command-dispatchers" title="永久链接至标题">¶</a></h2>
 <p>命令调度可以用于创建分层命令结构（子命令）。</p>
-<p>默认的 <code class="docutils literal"><span class="pre">Dispatcher</span></code> 接口的实现是 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/dispatcher/SimpleDispatcher.html">SimpleDispatcher</a> 类。</p>
+<p>默认的 <code class="docutils literal"><span class="pre">Dispatcher</span></code> 接口的实现是 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/dispatcher/SimpleDispatcher.html">SimpleDispatcher</a> 类。</p>
 <p>一个 <code class="docutils literal"><span class="pre">Dispatcher</span></code> 同时也是一个 <code class="docutils literal"><span class="pre">CommandCallable</span></code> ，因此它可以像其他命令一样注册。</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.command.dispatcher.SimpleDispatcher</span><span class="o">;</span>
 

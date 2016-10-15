@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Les concepts de base &mdash; documentation Sponge 4.1.0</title>
+     <title>Les concepts de base &mdash; documentation Sponge 5.0.0</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="documentation Sponge 4.1.0" href="../../index.html" />
+        <link rel="top" title="documentation Sponge 5.0.0" href="../../index.html" />
         <link rel="up" title="Économie" href="index.html" />
         <link rel="next" title="Utilisation de l’API Economie" href="using.html" />
         <link rel="prev" title="Économie" href="index.html" />
@@ -119,9 +119,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -154,7 +155,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">documentation Sponge 4.1.0</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">documentation Sponge 5.0.0</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >Création d&#8217;un Plugin</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">Économie</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
@@ -587,7 +588,7 @@
 </ul>
 <div class="section" id="the-economyservice">
 <h2>Le service d&#8217;économie<a class="headerlink" href="#the-economyservice" title="Lien permanent vers ce titre">¶</a></h2>
-<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/service/economy/EconomyService.html">EconomyService</a> is the basis of the Economy API. It is used to interact via the Economy API, stores an
+<p>The <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/economy/EconomyService.html">EconomyService</a> is the basis of the Economy API. It is used to interact via the Economy API, stores an
 economy&#8217;s currencies and provides methods for account management.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Avertissement</p>
@@ -596,11 +597,11 @@ economy&#8217;s currencies and provides methods for account management.</p>
 </div>
 <div class="section" id="currency">
 <h2>La devise<a class="headerlink" href="#currency" title="Lien permanent vers ce titre">¶</a></h2>
-<p>L&#8217;objet <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/service/economy/Currency.html">Currency</a> représente une sorte de Monnaie. <code class="docutils literal"><span class="pre">Currency</span></code> stocke un nom d&#8217;affichage, display name (Au pluriel et au singulier), un symbole, la quantité de nombres significatifs, et si la monnaie est la monnaie par défaut de l&#8217;économie. Si le plugin d&#8217;économie est fait pour, il peut supporter plusieurs monnaies.</p>
+<p>L&#8217;objet <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/economy/Currency.html">Currency</a> représente une sorte de Monnaie. <code class="docutils literal"><span class="pre">Currency</span></code> stocke un nom d&#8217;affichage, display name (Au pluriel et au singulier), un symbole, la quantité de nombres significatifs, et si la monnaie est la monnaie par défaut de l&#8217;économie. Si le plugin d&#8217;économie est fait pour, il peut supporter plusieurs monnaies.</p>
 </div>
 <div class="section" id="accounts">
 <h2>Les comptes<a class="headerlink" href="#accounts" title="Lien permanent vers ce titre">¶</a></h2>
-<p>Les <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/service/economy/account/Account.html">Account</a>s sont utilisés pour stocker les informations économiques par rapport à un joueur spécifique où un autre objet (ex: Une banque, une entreprise, une entité,...). Il y a deux types de comptes dans l&#8217;API Economie de Sponge:</p>
+<p>Les <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/economy/account/Account.html">Account</a>s sont utilisés pour stocker les informations économiques par rapport à un joueur spécifique où un autre objet (ex: Une banque, une entreprise, une entité,...). Il y a deux types de comptes dans l&#8217;API Economie de Sponge:</p>
 <div class="section" id="virtual-accounts">
 <h3>Les comptes virtuels<a class="headerlink" href="#virtual-accounts" title="Lien permanent vers ce titre">¶</a></h3>
 <p>Les comptes virtuels sont reliés à un identifiant qui est déclaré dans un String. Les comptes virtuels peuvent être reliés à presque tout, mais ils sont communément utilisés pour des choses comme les banques, ou des entités non-joueuses. Pour récupérer l&#8217;identifiant d&#8217;un compte virtuel, utilisez &#8216;&#8217;getIdentifier()&#8217;&#8216;.</p>
@@ -621,7 +622,7 @@ economy&#8217;s currencies and provides methods for account management.</p>
 <li><p class="first">Transfert: A lieu quand un compte échange des fonds avec un autre compte</p>
 </li>
 </ul>
-<p>Quand un transfert a lieu, l&#8217;event <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/economy/EconomyTransactionEvent.html">EconomyTransactionEvent</a> est déclenché. En utilisant cet event, vous pouvez récupérer le <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/service/economy/transaction/TransactionResult.html">TransactionResult</a>. Le <code class="docutils literal"><span class="pre">TransactionResult</span></code> stocke les données de la transaction qui a eu lieu, cela inclut:</p>
+<p>Quand un transfert a lieu, l&#8217;event <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/economy/EconomyTransactionEvent.html">EconomyTransactionEvent</a> est déclenché. En utilisant cet event, vous pouvez récupérer le <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/economy/transaction/TransactionResult.html">TransactionResult</a>. Le <code class="docutils literal"><span class="pre">TransactionResult</span></code> stocke les données de la transaction qui a eu lieu, cela inclut:</p>
 <ul class="simple">
 <li><p class="first">Le(s) compte(s) impliqué(s)</p>
 </li>
@@ -634,7 +635,7 @@ economy&#8217;s currencies and provides methods for account management.</p>
 <li><p class="first">Le résultat de la transaction</p>
 </li>
 </ul>
-<p>You can view all possible transaction results on the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/service/economy/transaction/ResultType.html">ResultType</a> JavaDocs page.</p>
+<p>You can view all possible transaction results on the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/economy/transaction/ResultType.html">ResultType</a> JavaDocs page.</p>
 </div>
 </div>
 

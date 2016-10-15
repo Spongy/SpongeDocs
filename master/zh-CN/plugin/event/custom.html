@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>自定义事件 &mdash; Sponge 4.1.0 文档</title>
+     <title>自定义事件 &mdash; Sponge 5.0.0 文档</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -33,7 +33,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.1.0 文档" href="../../index.html" />
+        <link rel="top" title="Sponge 5.0.0 文档" href="../../index.html" />
         <link rel="up" title="事件" href="index.html" />
         <link rel="next" title="The Asset API" href="../assets.html" />
         <link rel="prev" title="事件过滤" href="filters.html" />
@@ -120,9 +120,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -155,7 +156,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">Sponge 4.1.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">Sponge 5.0.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >插件开发</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">事件</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
@@ -575,15 +576,15 @@
                   
   <div class="section" id="custom-events">
 <h1>自定义事件<a class="headerlink" href="#custom-events" title="永久链接至标题">¶</a></h1>
-<p>你可以编写你自己的事件类，然后使用之前提到的方法去调度它们。一个事件类必须实现 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/Event.html">Event</a> 这一接口，同时在其被设计为可取消时实现 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/Cancellable.html">Cancellable</a> 。</p>
+<p>你可以编写你自己的事件类，然后使用之前提到的方法去调度它们。一个事件类必须实现 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/Event.html">Event</a> 这一接口，同时在其被设计为可取消时实现 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/Cancellable.html">Cancellable</a> 。</p>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>
-<p class="last">根据需要创建的事件类型，实现 <code class="docutils literal"><span class="pre">Event</span></code> 类的可能是另一个接口而不是单纯的 <code class="docutils literal"><span class="pre">Event</span></code> 本身，比如如果我们想要创建一个关于 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/entity/living/player/Player.html">Player</a> 的事件，那么我们应该会去实现 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/entity/living/humanoid/player/TargetPlayerEvent.html">TargetPlayerEvent</a> 。</p>
+<p class="last">根据需要创建的事件类型，实现 <code class="docutils literal"><span class="pre">Event</span></code> 类的可能是另一个接口而不是单纯的 <code class="docutils literal"><span class="pre">Event</span></code> 本身，比如如果我们想要创建一个关于 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/entity/living/player/Player.html">Player</a> 的事件，那么我们应该会去实现 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/entity/living/humanoid/player/TargetPlayerEvent.html">TargetPlayerEvent</a> 。</p>
 </div>
 <div class="section" id="example-custom-event-class">
 <h2>实例：自定义事件类<a class="headerlink" href="#example-custom-event-class" title="永久链接至标题">¶</a></h2>
 <p>下面这个类描述了一个指示一个 <code class="docutils literal"><span class="pre">Player</span></code> 曾经接触过一个 FLARD 然后在即将变异时触发的事件。因为这个事件的目标是玩家，并且可以取消，所以它实现了 <code class="docutils literal"><span class="pre">TargetPlayerEvent</span></code> 和 <code class="docutils literal"><span class="pre">Cancellable</span></code> 两个接口。</p>
-<p>因为一般的自定义事件旨在使其他插件监听，所以最好的办法自然是把它们以合适的方式整理归类。我们可以在 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/cause/Cause.html">Cause</a> 类中找到一串对象用于表示事件的来源。在下面的示例中，我们虚构了一个 <code class="docutils literal"><span class="pre">FLARDSource</span></code> 类用于表示事件的来源信息，并作为根对象包含于事件原因（Cause）中。</p>
+<p>因为一般的自定义事件旨在使其他插件监听，所以最好的办法自然是把它们以合适的方式整理归类。我们可以在 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/cause/Cause.html">Cause</a> 类中找到一串对象用于表示事件的来源。在下面的示例中，我们虚构了一个 <code class="docutils literal"><span class="pre">FLARDSource</span></code> 类用于表示事件的来源信息，并作为根对象包含于事件原因（Cause）中。</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.entity.living.player.Player</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.event.Cancellable</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.event.cause.Cause</span><span class="o">;</span>

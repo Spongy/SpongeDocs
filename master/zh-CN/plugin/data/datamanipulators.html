@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>操作数据 &mdash; Sponge 4.1.0 文档</title>
+     <title>操作数据 &mdash; Sponge 5.0.0 文档</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -33,7 +33,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.1.0 文档" href="../../index.html" />
+        <link rel="top" title="Sponge 5.0.0 文档" href="../../index.html" />
         <link rel="up" title="数据 API" href="index.html" />
         <link rel="next" title="数据操作记录" href="transactions.html" />
         <link rel="prev" title="使用数据键" href="keys.html" />
@@ -120,9 +120,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -155,7 +156,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">Sponge 4.1.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">Sponge 5.0.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >插件开发</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">数据 API</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
@@ -601,9 +602,9 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>首先，我们需要检查我们的目标是否具有生命值的数据，我们首先通过把 <code class="docutils literal"><span class="pre">HealthData.class</span></code> 作为 <code class="docutils literal"><span class="pre">get()</span></code> 方法的参数的方式传入，以获取一个 <code class="docutils literal"><span class="pre">Optional</span></code> 用于检查。如果我们的数据访问器并不支持 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/entity/HealthData.html">HealthData</a> ，那么它会不包含任何数据。</p>
-<p>如果我们的数据访问器支持，那么它就包含了一个可修改的来源于当前数据访问器的数据副本。然后我们完成我们的改动，并设置回当前数据访问器（又一次地，我们使用了 <code class="docutils literal"><span class="pre">offer()</span></code> 方法，这一方法同样会返回一个 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/DataTransactionResult.html">DataTransactionResult</a> ，这一返回值我们暂且不去管它，稍后我们会在 <a class="reference internal" href="transactions.html"><em>这里</em></a> 看到这一返回值的具体含义）。</p>
-<p>正如你所看到的那样，我们从 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/DataHolder.html">DataHolder</a> 获取的 <code class="docutils literal"><span class="pre">health()</span></code> 和 <code class="docutils literal"><span class="pre">maxHealth()</span></code> 又一次地以被包装起来的数据值形式展现在我们面前。因为我们从 <code class="docutils literal"><span class="pre">health()</span></code> 获取到的 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/value/mutable/MutableBoundedValue.html">MutableBoundedValue</a> 仍然只是一份数据的副本，所以我们首先需要先把修改过的数据设置回我们的 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/DataManipulator.html">DataManipulator</a> ，然后再设置回当前数据访问器。</p>
+<p>首先，我们需要检查我们的目标是否具有生命值的数据，我们首先通过把 <code class="docutils literal"><span class="pre">HealthData.class</span></code> 作为 <code class="docutils literal"><span class="pre">get()</span></code> 方法的参数的方式传入，以获取一个 <code class="docutils literal"><span class="pre">Optional</span></code> 用于检查。如果我们的数据访问器并不支持 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/manipulator/mutable/entity/HealthData.html">HealthData</a> ，那么它会不包含任何数据。</p>
+<p>如果我们的数据访问器支持，那么它就包含了一个可修改的来源于当前数据访问器的数据副本。然后我们完成我们的改动，并设置回当前数据访问器（又一次地，我们使用了 <code class="docutils literal"><span class="pre">offer()</span></code> 方法，这一方法同样会返回一个 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/DataTransactionResult.html">DataTransactionResult</a> ，这一返回值我们暂且不去管它，稍后我们会在 <a class="reference internal" href="transactions.html"><em>这里</em></a> 看到这一返回值的具体含义）。</p>
+<p>正如你所看到的那样，我们从 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/DataHolder.html">DataHolder</a> 获取的 <code class="docutils literal"><span class="pre">health()</span></code> 和 <code class="docutils literal"><span class="pre">maxHealth()</span></code> 又一次地以被包装起来的数据值形式展现在我们面前。因为我们从 <code class="docutils literal"><span class="pre">health()</span></code> 获取到的 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/value/mutable/MutableBoundedValue.html">MutableBoundedValue</a> 仍然只是一份数据的副本，所以我们首先需要先把修改过的数据设置回我们的 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/manipulator/DataManipulator.html">DataManipulator</a> ，然后再设置回当前数据访问器。</p>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>
 <p class="last">数据 API 第一约定：你获取到的一切都是一份数据副本。所以每当你做出什么改变，你都需要把你的改变后的数据设置回它原先被获取到的地方。</p>
@@ -634,7 +635,7 @@
 </div>
 <p>如果两个数据访问器都支持 <code class="docutils literal"><span class="pre">HealthData</span></code> ，那么我们就把所有和生命值相关的数据存进了一个变量。这次我们根本不需要担心 <code class="docutils literal"><span class="pre">Optional</span></code> ，因为我们首先判断了两个数据访问器是否支持 <code class="docutils literal"><span class="pre">HealthData</span></code> ，其次我们使用了 <code class="docutils literal"><span class="pre">getOrCreate()</span></code> 方法，以保证如果 <code class="docutils literal"><span class="pre">HealthData</span></code> 不存在，就自动创建一个默认值。</p>
 <p>然后我们只是把彼此的 <code class="docutils literal"><span class="pre">HealthData</span></code> 设置到了对方的数据访问器上，从而交换了它们俩的生命值。</p>
-<p>如果直接使用 <code class="docutils literal"><span class="pre">Keys</span></code> 解决问题，代码会变得冗长和复杂，因为我们需要关心每一个数据键的相关问题。如果我们想要交换的不是生命值而是别的数据（诸如 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/entity/InvisibilityData.html">InvisibilityData</a> ，它包含了一个列表的数据），那么我们有可能就会不得不做很多工作。不过由于数据访问器只关心存储的数据这一整体而不在意其内容，我们甚至可以稍稍修改一下上面的方法使得两个数据访问器之间可以交换任意的数据。</p>
+<p>如果直接使用 <code class="docutils literal"><span class="pre">Keys</span></code> 解决问题，代码会变得冗长和复杂，因为我们需要关心每一个数据键的相关问题。如果我们想要交换的不是生命值而是别的数据（诸如 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/manipulator/mutable/entity/InvisibilityData.html">InvisibilityData</a> ，它包含了一个列表的数据），那么我们有可能就会不得不做很多工作。不过由于数据访问器只关心存储的数据这一整体而不在意其内容，我们甚至可以稍稍修改一下上面的方法使得两个数据访问器之间可以交换任意的数据。</p>
 <p><strong>代码示例：交换两个数据访问器的任意数据</strong></p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.data.manipulator.DataManipulator</span><span class="o">;</span>
 
@@ -652,7 +653,7 @@
 </div>
 <div class="section" id="mutable-vs-immutable-data-manipulators">
 <h2>可变（Mutable）和不可变（Immutable）数据比较<a class="headerlink" href="#mutable-vs-immutable-data-manipulators" title="永久链接至标题">¶</a></h2>
-<p>对于任何一个数据操纵器，我们都可以获取对应的 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/ImmutableDataManipulator.html">ImmutableDataManipulator</a> 。比如 <code class="docutils literal"><span class="pre">HealthData</span></code> 和 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/immutable/entity/ImmutableHealthData.html">ImmutableHealthData</a> 保存着完全相同的数据类型，区别仅仅是后者在修改数据时返回一个新的实例。</p>
+<p>对于任何一个数据操纵器，我们都可以获取对应的 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/manipulator/ImmutableDataManipulator.html">ImmutableDataManipulator</a> 。比如 <code class="docutils literal"><span class="pre">HealthData</span></code> 和 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/manipulator/immutable/entity/ImmutableHealthData.html">ImmutableHealthData</a> 保存着完全相同的数据类型，区别仅仅是后者在修改数据时返回一个新的实例。</p>
 <p>使用 <code class="docutils literal"><span class="pre">asImmutable()</span></code> 和 <code class="docutils literal"><span class="pre">asMutable()</span></code> 两个方法就可以很方便地在可变数据和不可变数据之间进行转换。每个方法返回的都是数据的副本。唯一的一种获取不可变数据的方式是首先通过数据访问器获取可变数据，然后使用 <code class="docutils literal"><span class="pre">asImmutable()</span></code> 进行转换。</p>
 <p>不可变数据的一种可能的用途是一些诸如玩家被治疗时触发的事件。这一事件需要提供生命值数据的副本，然而不应该有办法修改它。这样我们就可以在事件中提供 <code class="docutils literal"><span class="pre">ImmutableHealthData</span></code> 以解决问题。即便我们不知道第三方代码会对 <code class="docutils literal"><span class="pre">ImmutableHealthData</span></code> 做什么，我们仍然可以保证拿到的数据是不会发生变化的。</p>
 </div>
@@ -669,7 +670,7 @@
 <ul class="simple">
 <li><p class="first"><code class="docutils literal"><span class="pre">HealthData</span></code> 总是存在的，只要（原版的） <code class="docutils literal"><span class="pre">DataHolder</span></code> 支持它</p>
 </li>
-<li><p class="first"><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/DisplayNameData.html">DisplayNameData</a> 在 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/entity/living/player/Player.html">Player</a> 身上总是存在的，不过其他实体就不见得了。</p>
+<li><p class="first"><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/manipulator/mutable/DisplayNameData.html">DisplayNameData</a> 在 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/entity/living/player/Player.html">Player</a> 身上总是存在的，不过其他实体就不见得了。</p>
 </li>
 </ul>
 </div>

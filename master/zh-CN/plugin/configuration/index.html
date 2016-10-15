@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>配置插件 &mdash; Sponge 4.1.0 文档</title>
+     <title>配置插件 &mdash; Sponge 5.0.0 文档</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -33,7 +33,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.1.0 文档" href="../../index.html" />
+        <link rel="top" title="Sponge 5.0.0 文档" href="../../index.html" />
         <link rel="up" title="插件开发" href="../index.html" />
         <link rel="next" title="配置加载器" href="loaders.html" />
         <link rel="prev" title="The Asset API" href="../assets.html" />
@@ -120,9 +120,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -155,7 +156,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">Sponge 4.1.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">Sponge 5.0.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" accesskey="U">插件开发</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
@@ -604,7 +605,7 @@
 </div>
 <div class="section" id="getting-your-default-plugin-configuration">
 <span id="getting-default-config"></span><h3>获取你的默认插件配置<a class="headerlink" href="#getting-your-default-plugin-configuration" title="永久链接至标题">¶</a></h3>
-<p>Sponge API 提供的 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/config/DefaultConfig.html">DefaultConfig</a> 注解可以用于一个字段（Field）或者一个 Setter 上以接收一个 <code class="docutils literal"><span class="pre">Path</span></code> 作为你插件文件的默认路径。</p>
+<p>Sponge API 提供的 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/config/DefaultConfig.html">DefaultConfig</a> 注解可以用于一个字段（Field）或者一个 Setter 上以接收一个 <code class="docutils literal"><span class="pre">Path</span></code> 作为你插件文件的默认路径。</p>
 <p><code class="docutils literal"><span class="pre">&#64;DefaultConfig</span></code> 这一注解需要指定一个名为 <code class="docutils literal"><span class="pre">sharedRoot</span></code> 的布尔值。如果你设置其为 <code class="docutils literal"><span class="pre">true</span></code> ，那么它返回的路径将对应一个位于共享的文件夹中的名为 <code class="docutils literal"><span class="pre">your_plugin_id.conf</span></code> 的文件（这里的“your_plugin_id”被替换成了你的插件 ID）。</p>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>
@@ -618,7 +619,7 @@
 <li><p class="first">如果你计划将来只有一个配置文件（不太复杂的插件），设置为 <code class="docutils literal"><span class="pre">true</span></code> 。</p>
 </li>
 </ul>
-<p>你了可以获取到一个指向配置文件夹的 <code class="docutils literal"><span class="pre">Path</span></code> 而不是单独的文件。只要把它对应的字段和方法使用 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/config/ConfigDir.html">ConfigDir</a> 注解，不管 <code class="docutils literal"><span class="pre">sharedRoot</span></code> 是真还是假，都将返回一个文件夹，真为插件的特定文件夹，假为共享的文件夹。</p>
+<p>你了可以获取到一个指向配置文件夹的 <code class="docutils literal"><span class="pre">Path</span></code> 而不是单独的文件。只要把它对应的字段和方法使用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/config/ConfigDir.html">ConfigDir</a> 注解，不管 <code class="docutils literal"><span class="pre">sharedRoot</span></code> 是真还是假，都将返回一个文件夹，真为插件的特定文件夹，假为共享的文件夹。</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
 <p class="last">尽管获取到一个 <code class="docutils literal"><span class="pre">File</span></code> 而不是 <code class="docutils literal"><span class="pre">Path</span></code> 是可行的，Configurate （和 Sponge）都十分建议使用 <code class="docutils literal"><span class="pre">Path</span></code> 。</p>

@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>数据 API &mdash; Sponge 4.1.0 文档</title>
+     <title>数据 API &mdash; Sponge 5.0.0 文档</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -33,7 +33,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.1.0 文档" href="../../index.html" />
+        <link rel="top" title="Sponge 5.0.0 文档" href="../../index.html" />
         <link rel="up" title="插件开发" href="../index.html" />
         <link rel="next" title="使用数据键" href="keys.html" />
         <link rel="prev" title="TextTemplates" href="../text/templates.html" />
@@ -120,9 +120,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -155,7 +156,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">Sponge 4.1.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">Sponge 5.0.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" accesskey="U">插件开发</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
@@ -575,7 +576,7 @@
   <div class="section" id="the-data-api">
 <h1>数据 API<a class="headerlink" href="#the-data-api" title="永久链接至标题">¶</a></h1>
 <p>Sponge 提供了一套统一的数据 API 旨在提供一致的方式访问和修改数据。“数据”，在这里指的是所有始终保持客户端和服务端的同步的数据，可以在服务端被更改，然后同步到所有已连接的客户端内。这些数据包括但远远不限于，一块木牌上的文字、一匹马的外貌、和任何有生命的实体的生命值。</p>
-<p>尽管其他的 API 通过继承和接口的方式去访问和修改数据（比如一个 <code class="docutils literal"><span class="pre">LivingEntity</span></code> 提供对于当前生命值和最大生命值的 Getter 和 Setter 来访问和修改），然而在 Sponge 中，每一个实体、方块等，都不能直接地看出其拥有什么数据。和直接了当地获取数据相比，这可能并不那么直观，但是其强大的可扩展性却是非常重要的。由于增加了 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/key/Key.html">Key</a> ，访问特定的数据还是那么简单。</p>
+<p>尽管其他的 API 通过继承和接口的方式去访问和修改数据（比如一个 <code class="docutils literal"><span class="pre">LivingEntity</span></code> 提供对于当前生命值和最大生命值的 Getter 和 Setter 来访问和修改），然而在 Sponge 中，每一个实体、方块等，都不能直接地看出其拥有什么数据。和直接了当地获取数据相比，这可能并不那么直观，但是其强大的可扩展性却是非常重要的。由于增加了 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/key/Key.html">Key</a> ，访问特定的数据还是那么简单。</p>
 <div class="admonition warning">
 <p class="first admonition-title">警告</p>
 <p class="last">在这份文档撰写完成之际，数据 API 仍未完全实现。查阅 <a class="reference external" href="https://github.com/SpongePowered/SpongeCommon/issues/8">Implementation Tracker</a> ，在名为 <code class="docutils literal"><span class="pre">#spongedev</span></code> 的 IRC 频道中询问，或者在 <a class="reference external" href="https://forums.spongepowered.org">论坛</a> 中查找你需要的数据在目前的数据 API 实现中是否可用。</p>
@@ -585,19 +586,19 @@
 <p>如果你第一次接触数据 API 的文档，可能已经被多如牛毛的接口（Interface）和包（Package）吓得喘不过气了。不过如果只是想要使用数据 API，你并不需要完全理解它们，因为大部分的接口只是用于操纵特定的数据。</p>
 <div class="section" id="dataholder">
 <h3>数据访问器（DataHolder）<a class="headerlink" href="#dataholder" title="永久链接至标题">¶</a></h3>
-<p>一个数据访问器其实仅仅是——用于读写数据的一个东西。它提供了一些方法用于检索和设置数据。接口本身和其存储的数据类型一点关系都没有。因为只有实现才关系到存储的数据类型，所以访问一个其根本没有存在的数据，或者设置一个其根本无法使用的数据，在 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/DataHolder.html">DataHolder</a> 身上是完全有可能的。在这些情况下，返回值便会提供对于数据不可读（通过 <code class="docutils literal"><span class="pre">Optional.empty()</span></code> ）或者不可写（通过 <a class="reference internal" href="transactions.html"><em>DataTransactionResult</em></a> ）的信息。</p>
+<p>一个数据访问器其实仅仅是——用于读写数据的一个东西。它提供了一些方法用于检索和设置数据。接口本身和其存储的数据类型一点关系都没有。因为只有实现才关系到存储的数据类型，所以访问一个其根本没有存在的数据，或者设置一个其根本无法使用的数据，在 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/DataHolder.html">DataHolder</a> 身上是完全有可能的。在这些情况下，返回值便会提供对于数据不可读（通过 <code class="docutils literal"><span class="pre">Optional.empty()</span></code> ）或者不可写（通过 <a class="reference internal" href="transactions.html"><em>DataTransactionResult</em></a> ）的信息。</p>
 </div>
 <div class="section" id="property">
 <h3>属性（Property）<a class="headerlink" href="#property" title="永久链接至标题">¶</a></h3>
-<p>一个属性也是数据，但并不在客户端和服务端之间同步。因此，对其的修改只能在客户端和服务端进行。因为 Sponge 并不打算提供一个客户端，所以属性均是不可修改（Not Modifiable）的。一些属性的示例有：工具的采掘等级（Harvesting Ability，以 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/property/item/HarvestingProperty.html">HarvestingProperty</a> 的形式存在）、盔甲的伤害吸收等级（Damage Absorption，以 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/property/item/DamageAbsorptionProperty.html">DamageAbsorptionProperty</a> 的形式存在）等。</p>
+<p>一个属性也是数据，但并不在客户端和服务端之间同步。因此，对其的修改只能在客户端和服务端进行。因为 Sponge 并不打算提供一个客户端，所以属性均是不可修改（Not Modifiable）的。一些属性的示例有：工具的采掘等级（Harvesting Ability，以 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/property/item/HarvestingProperty.html">HarvestingProperty</a> 的形式存在）、盔甲的伤害吸收等级（Damage Absorption，以 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/property/item/DamageAbsorptionProperty.html">DamageAbsorptionProperty</a> 的形式存在）等。</p>
 </div>
 <div class="section" id="datamanipulator">
 <h3>数据操纵器（DataManipulator）<a class="headerlink" href="#datamanipulator" title="永久链接至标题">¶</a></h3>
-<p>一个数据操纵器表示描述特定数据的内聚的数据点。比如 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/entity/HealthData.html">HealthData</a> 同时包含了当前生命值和最大生命值两个数据。如果一个数据访问器（DataHolder）拥有 <code class="docutils literal"><span class="pre">HealthData</span></code> ，那么它就有着生命值，这一生命值可以，不管以什么样的方式，被扣除或者补充，同时在生命值为零时死亡。通过这样的组合，可以有效地防止多余的方法定义。比如羊、染色玻璃、以及皮革盔甲都拥有着 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/manipulator/mutable/DyeableData.html">DyeableData</a> 表示其被染的颜色。</p>
+<p>一个数据操纵器表示描述特定数据的内聚的数据点。比如 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/manipulator/mutable/entity/HealthData.html">HealthData</a> 同时包含了当前生命值和最大生命值两个数据。如果一个数据访问器（DataHolder）拥有 <code class="docutils literal"><span class="pre">HealthData</span></code> ，那么它就有着生命值，这一生命值可以，不管以什么样的方式，被扣除或者补充，同时在生命值为零时死亡。通过这样的组合，可以有效地防止多余的方法定义。比如羊、染色玻璃、以及皮革盔甲都拥有着 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/manipulator/mutable/DyeableData.html">DyeableData</a> 表示其被染的颜色。</p>
 </div>
 <div class="section" id="key">
 <h3>数据键（Key）<a class="headerlink" href="#key" title="永久链接至标题">¶</a></h3>
-<p>一个数据键是单个数据的唯一标识符，被用于直接获取或者设置数据而无需使用较为复杂的数据操纵器（DataManipulator）。它被设计为提供类似于 Getter 或者 Setter 的方式访问数据。 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/key/Keys.html">Keys</a> 工具类以常量的形式包含了在 Sponge 中使用的所有数据键。</p>
+<p>一个数据键是单个数据的唯一标识符，被用于直接获取或者设置数据而无需使用较为复杂的数据操纵器（DataManipulator）。它被设计为提供类似于 Getter 或者 Setter 的方式访问数据。 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/key/Keys.html">Keys</a> 工具类以常量的形式包含了在 Sponge 中使用的所有数据键。</p>
 </div>
 <div class="section" id="value">
 <h3>数据值（Value）<a class="headerlink" href="#value" title="永久链接至标题">¶</a></h3>

@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>虚拟方块更改 &mdash; Sponge 4.1.0 文档</title>
+     <title>虚拟方块更改 &mdash; Sponge 5.0.0 文档</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -33,7 +33,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.1.0 文档" href="../../index.html" />
+        <link rel="top" title="Sponge 5.0.0 文档" href="../../index.html" />
         <link rel="up" title="方块" href="index.html" />
         <link rel="next" title="实体" href="../entities/index.html" />
         <link rel="prev" title="Tile Entity" href="tileentities.html" />
@@ -120,9 +120,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -155,7 +156,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">Sponge 4.1.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">Sponge 5.0.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >插件开发</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">方块</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
@@ -576,7 +577,7 @@
   <div class="section" id="virtual-block-changes">
 <h1>虚拟方块更改<a class="headerlink" href="#virtual-block-changes" title="永久链接至标题">¶</a></h1>
 <p>虚拟方块更改（Virtual Block Changes）允许你对一个方块在客户端上看起来像是更改了一样，然而在服务端并没有变化。</p>
-<p>向客户端发送一个虚拟方块更改十分简单，只需要调用 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/effect/Viewer.html#sendBlockChange-int-int-int-org.spongepowered.api.block.BlockState-">Viewer#sendBlockChange(int, int, int, BlockState)</a> 方法即可。你只需要指定你想要更改的方块的坐标、以及其“新”的 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/block/BlockState.html">BlockState</a>。下面是一个示例：</p>
+<p>向客户端发送一个虚拟方块更改十分简单，只需要调用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/effect/Viewer.html#sendBlockChange-int-int-int-org.spongepowered.api.block.BlockState-">Viewer#sendBlockChange(int, int, int, BlockState)</a> 方法即可。你只需要指定你想要更改的方块的坐标、以及其“新”的 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/block/BlockState.html">BlockState</a>。下面是一个示例：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.block.BlockTypes</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.effect.Viewer</span><span class="o">;</span>
 
@@ -584,7 +585,7 @@
 </pre></div>
 </div>
 <p>这将使这个位于 <code class="docutils literal"><span class="pre">0</span> <span class="pre">65</span> <span class="pre">0</span></code> 的方块像是一个命令方块。当然，你并不只限于传输一个方块的默认状态。任何的 <code class="docutils literal"><span class="pre">BlockState</span></code> 都可以传入 <code class="docutils literal"><span class="pre">sendBlockChange()</span></code> 方法。</p>
-<p>除了指定三个整数坐标，你还可以指定一个 <code class="docutils literal"><span class="pre">Vector3i</span></code>。下面是一个使用 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/effect/Viewer.html#sendBlockChange-com.flowpowered.math.vector.Vector3i-org.spongepowered.api.block.BlockState-">Viewer#sendBlockChange(Vector3i, BlockState)</a> 方法的例子：</p>
+<p>除了指定三个整数坐标，你还可以指定一个 <code class="docutils literal"><span class="pre">Vector3i</span></code>。下面是一个使用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/effect/Viewer.html#sendBlockChange-com.flowpowered.math.vector.Vector3i-org.spongepowered.api.block.BlockState-">Viewer#sendBlockChange(Vector3i, BlockState)</a> 方法的例子：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">com.flowpowered.math.vector.Vector3i</span><span class="o">;</span>
 
 <span class="n">Vector3i</span> <span class="n">vector</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Vector3i</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">65</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
@@ -593,7 +594,7 @@
 </div>
 <div class="section" id="resetting-changes">
 <h2>重置更改<a class="headerlink" href="#resetting-changes" title="永久链接至标题">¶</a></h2>
-<p>如果想要重置你对客户端的特定位置的任何更改，你可以调用 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/effect/Viewer.html#resetBlockChange-int-int-int-">Viewer#resetBlockChange(int, int, int)</a> 这一方法。例如，如果我们想要撤消对于前面的示例所带来的影响，我们就只需要指定之前的坐标，并调用 <code class="docutils literal"><span class="pre">resetBlockChange()</span></code> 方法：</p>
+<p>如果想要重置你对客户端的特定位置的任何更改，你可以调用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/effect/Viewer.html#resetBlockChange-int-int-int-">Viewer#resetBlockChange(int, int, int)</a> 这一方法。例如，如果我们想要撤消对于前面的示例所带来的影响，我们就只需要指定之前的坐标，并调用 <code class="docutils literal"><span class="pre">resetBlockChange()</span></code> 方法：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">viewer</span><span class="o">.</span><span class="na">resetBlockChange</span><span class="o">(</span><span class="mi">0</span><span class="o">,</span> <span class="mi">65</span><span class="o">,</span> <span class="mi">0</span><span class="o">);</span>
 </pre></div>
 </div>

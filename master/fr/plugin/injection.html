@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Injection de Dépendances &mdash; documentation Sponge 4.1.0</title>
+     <title>Injection de Dépendances &mdash; documentation Sponge 5.0.0</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="../_static/store.min.js"></script>
     <script type="text/javascript" src="../_static/lights.js"></script>
       <link rel="shortcut icon" href="../_static/favicon.ico"/>
-        <link rel="top" title="documentation Sponge 4.1.0" href="../index.html" />
+        <link rel="top" title="documentation Sponge 5.0.0" href="../index.html" />
         <link rel="up" title="Création d’un Plugin" href="index.html" />
         <link rel="next" title="Meilleures Pratiques" href="practices.html" />
         <link rel="prev" title="Cycle de vie des Plugins" href="lifecycle.html" />
@@ -119,9 +119,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -154,7 +155,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../index.html">documentation Sponge 4.1.0</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../index.html">documentation Sponge 5.0.0</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">Création d&#8217;un Plugin</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
@@ -578,7 +579,7 @@
 <h2>Liste Temporaire des Types Injectés<a class="headerlink" href="#temporary-list-of-injected-types" title="Lien permanent vers ce titre">¶</a></h2>
 <dl class="docutils">
 <dt>ConfigDir (annotation sur Path ou File)</dt>
-<dd><p class="first last">Utilisé pour injecter le répertoire de configuration du plugin: <code class="docutils literal"><span class="pre">./mods/</span></code> ou <code class="docutils literal"><span class="pre">./mods/&lt;Plugin#id&gt;/</span></code> selon la valeur de <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/config/ConfigDir.html#sharedRoot--">ConfigDir#sharedRoot()</a></p>
+<dd><p class="first last">Utilisé pour injecter le répertoire de configuration du plugin: <code class="docutils literal"><span class="pre">./mods/</span></code> ou <code class="docutils literal"><span class="pre">./mods/&lt;Plugin#id&gt;/</span></code> selon la valeur de <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/config/ConfigDir.html#sharedRoot--">ConfigDir#sharedRoot()</a></p>
 </dd>
 <dt><a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/loader/ConfigurationLoader.html">ConfigurationLoader&lt;CommentedConfigurationNode&gt;</a></dt>
 <dd><p class="first last">Doit être une annotation avec <code class="docutils literal"><span class="pre">&#64;DefaultConfig</span></code>. Utilisé pour injecter un <code class="docutils literal"><span class="pre">ConfigurationLoader</span></code> pré-généré pour le <code class="docutils literal"><span class="pre">File</span></code> ou la même annotation.</p>
@@ -586,16 +587,16 @@
 <dt>DefaultConfig (annotation sur Path, ConfigurationLoader ou File)</dt>
 <dd><p class="first last">Utilisé pour injecter le fichier de configuration spécifique du plugin: <code class="docutils literal"><span class="pre">&lt;Plugin#id&gt;.conf</span></code>.</p>
 </dd>
-<dt><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/EventManager.html">EventManager</a></dt>
+<dt><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/EventManager.html">EventManager</a></dt>
 <dd><p class="first last">Gère l&#8217;enregistrement des manipulateurs d&#8217;événements (event handlers) et de l&#8217;envoi des événements.</p>
 </dd>
 <dt>File</dt>
 <dd><p class="first last">Doit être une annotation avec soit <code class="docutils literal"><span class="pre">&#64;DefaultConfig</span></code> soit <code class="docutils literal"><span class="pre">&#64;ConfigDir</span></code>. Dépendant de l&#8217;annotation de ce que contiendra une référence de fichier vers le fichier de configuration par défaut des plugins ou du dossier utilisé pour stocker les fichiers de configuration. Toutefois, Path (voir ci-dessus) doit être privilégié.</p>
 </dd>
-<dt><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/Game.html">Game</a></dt>
+<dt><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/Game.html">Game</a></dt>
 <dd><p class="first last">L&#8217;objet <code class="docutils literal"><span class="pre">Game</span></code> est l&#8217;accesseur principal de l&#8217;API Sponge.</p>
 </dd>
-<dt><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/GameRegistry.html">GameRegistry</a></dt>
+<dt><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/GameRegistry.html">GameRegistry</a></dt>
 <dd><p class="first last">Fournit un moyen facile pour récupérer certains types depuis un objet <code class="docutils literal"><span class="pre">Game</span></code>.</p>
 </dd>
 <dt><a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/objectmapping/GuiceObjectMapperFactory.html">GuiceObjectMapperFactory</a></dt>
@@ -610,10 +611,10 @@
 <dt>Path</dt>
 <dd><p class="first last">Doit être une annotation avec soit <code class="docutils literal"><span class="pre">&#64;DefaultConfig</span></code> soit <code class="docutils literal"><span class="pre">&#64;ConfigDir</span></code>. Dépendant de l&#8217;annotation de ce que contiendra une référence de chemin d&#8217;accès vers le fichier configuration par défaut des plugins ou du dossier utilisé pour stocker les fichiers de configuration.</p>
 </dd>
-<dt><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/plugin/PluginContainer.html">PluginContainer</a></dt>
-<dd><p class="first last">Un wrapper de classe <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/plugin/Plugin.html">Plugin</a>, utilisé pour récupérer les informations de l&#8217;annotation plus facilement.</p>
+<dt><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/plugin/PluginContainer.html">PluginContainer</a></dt>
+<dd><p class="first last">Un wrapper de classe <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/plugin/Plugin.html">Plugin</a>, utilisé pour récupérer les informations de l&#8217;annotation plus facilement.</p>
 </dd>
-<dt><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/plugin/PluginManager.html">PluginManager</a></dt>
+<dt><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/plugin/PluginManager.html">PluginManager</a></dt>
 <dd><p class="first last">Gère les plugins qui sont chargés par l’implémentation. Peut récupérer le <code class="docutils literal"><span class="pre">PluginContainer</span></code> d&#8217;un autre plugin.</p>
 </dd>
 </dl>
@@ -634,7 +635,7 @@
 </div>
 <div class="section" id="game">
 <h3>Game<a class="headerlink" href="#game" title="Lien permanent vers ce titre">¶</a></h3>
-<p>La classe <code class="docutils literal"><span class="pre">Game</span></code> est l&#8217;ouverture à plusieurs fonctions internes de l&#8217;Api Sponge, depuis l&#8217;<code class="docutils literal"><span class="pre">EventManager</span></code> jusqu&#8217;au <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/Server.html">Server</a> et même les Sync/Async <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/scheduler/Scheduler.html">Scheduler</a>.</p>
+<p>La classe <code class="docutils literal"><span class="pre">Game</span></code> est l&#8217;ouverture à plusieurs fonctions internes de l&#8217;Api Sponge, depuis l&#8217;<code class="docutils literal"><span class="pre">EventManager</span></code> jusqu&#8217;au <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/Server.html">Server</a> et même les Sync/Async <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/scheduler/Scheduler.html">Scheduler</a>.</p>
 <p>Il est totalement possible de recevoir un objet <code class="docutils literal"><span class="pre">Game</span></code> avec la plupart des events, il peut toutefois être obtenu pas une injection.</p>
 <p><strong>Exemple - Champ</strong></p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">com.google.inject.Inject</span><span class="o">;</span>
@@ -668,7 +669,7 @@
 </div>
 <div class="section" id="config-directory">
 <h3>Dossier de configuration<a class="headerlink" href="#config-directory" title="Lien permanent vers ce titre">¶</a></h3>
-<p>La manière recommandée pour obtenir votre fichier de configuration est d&#8217;utiliser Guice, au moyen de l&#8217;annotation <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/config/ConfigDir.html">ConfigDir</a>.</p>
+<p>La manière recommandée pour obtenir votre fichier de configuration est d&#8217;utiliser Guice, au moyen de l&#8217;annotation <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/config/ConfigDir.html">ConfigDir</a>.</p>
 <div class="admonition tip">
 <p class="first admonition-title">Astuce</p>
 <p class="last">Si vous assignez à <code class="docutils literal"><span class="pre">sharedRoot</span></code> la valeur <code class="docutils literal"><span class="pre">true</span></code>, votre <code class="docutils literal"><span class="pre">ConfigDir</span></code> sera le même répertoire qui - potentiellement - contient la configuration d&#8217;autres plugins. Dans la plupart des cas où récupérer le <code class="docutils literal"><span class="pre">ConfigDir</span></code> est nécessaire, la valeur devrait être mise à <code class="docutils literal"><span class="pre">false</span></code>.</p>

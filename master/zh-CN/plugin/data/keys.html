@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>使用数据键 &mdash; Sponge 4.1.0 文档</title>
+     <title>使用数据键 &mdash; Sponge 5.0.0 文档</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -33,7 +33,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.1.0 文档" href="../../index.html" />
+        <link rel="top" title="Sponge 5.0.0 文档" href="../../index.html" />
         <link rel="up" title="数据 API" href="index.html" />
         <link rel="next" title="操作数据" href="datamanipulators.html" />
         <link rel="prev" title="数据 API" href="index.html" />
@@ -120,9 +120,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -155,7 +156,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">Sponge 4.1.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">Sponge 5.0.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >插件开发</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">数据 API</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
@@ -577,7 +578,7 @@
 <h1>使用数据键<a class="headerlink" href="#using-keys" title="永久链接至标题">¶</a></h1>
 <div class="section" id="getting-and-offering-data-using-a-key">
 <h2>使用数据键访问和修改数据<a class="headerlink" href="#getting-and-offering-data-using-a-key" title="永久链接至标题">¶</a></h2>
-<p>一个数据访问器提供了通过 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/key/Key.html">Key</a> 访问和修改单个数据的方法。我们从一个示例开始：</p>
+<p>一个数据访问器提供了通过 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/key/Key.html">Key</a> 访问和修改单个数据的方法。我们从一个示例开始：</p>
 <p><strong>代码示例：“治疗”一个数据访问器，如果有可能的话</strong></p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.data.DataHolder</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.data.key.Keys</span><span class="o">;</span>
@@ -593,8 +594,8 @@
 <p>现在是解释上面这个方法的时候了。</p>
 <p>第一行检查这一数据访问器是否支持一个生命值。如果支持，那么就可以被“治疗”。因为一个数据访问器并没有可能在没有最大生命值的情况下拥有关于生命值的数据，反之亦然。使用 <code class="docutils literal"><span class="pre">supports()</span></code> 检查数据键是否存在足够了。</p>
 <p>第二行使用 <code class="docutils literal"><span class="pre">get()</span></code> 方法试图获取数据访问器的最大生命值。除了 <code class="docutils literal"><span class="pre">get()</span></code> 方法， <code class="docutils literal"><span class="pre">getOrNull()</span></code> 和 <code class="docutils literal"><span class="pre">getOrElse()</span></code> 同样通过在第一个参数传入 <code class="docutils literal"><span class="pre">Key</span></code> 获取数据。一般情况下应该使用 <code class="docutils literal"><span class="pre">get()</span></code> 方法获取一个表示数据的 <code class="docutils literal"><span class="pre">Optional</span></code> ，如果数据不存在则返回一个 <code class="docutils literal"><span class="pre">Optional.empty()</span></code> 。因为我们已经检查并确认了 <code class="docutils literal"><span class="pre">Key</span></code> 的存在，我们就可以直接使用 <code class="docutils literal"><span class="pre">Optional</span></code> 的 <code class="docutils literal"><span class="pre">get()</span></code> 方法，而不必进行更进一步的检查。我们也可以直接使用 <code class="docutils literal"><span class="pre">getOrNull()</span></code> ，它等价于 <code class="docutils literal"><span class="pre">get(key).orNull()</span></code> ，从而摆脱 <code class="docutils literal"><span class="pre">Optional</span></code> 。第三种方式是 <code class="docutils literal"><span class="pre">getOrElse()</span></code> ，在数据不存在时使用第二个参数提供的默认值代替。</p>
-<p>第三行的代码把数据设置回了数据访问器。我们提供一个 <code class="docutils literal"><span class="pre">Key</span></code> 表示当前生命值，并提供之前获取到的最大生命值。因此我们就把这个数据访问器“治疗”成了最大生命值。存在一系列的 <code class="docutils literal"><span class="pre">offer()</span></code> 方法用于不同的设置需求，所有的 <code class="docutils literal"><span class="pre">offer()</span></code> 方法都返回一个 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/DataTransactionResult.html">DataTransactionResult</a> ，其包含了数据是否被成功设置。现在，我们将使用那个期望传入一个 <code class="docutils literal"><span class="pre">Key</span></code> 和一个对应值的方法，不过在下一页我们会遇到更多。既然我们已经知道了我们对于生命值的设置一定会成功（因为该数据访问器支持这一做法），我们就可以直接无视返回值。</p>
-<p>当然，也可以使用 <code class="docutils literal"><span class="pre">remove()</span></code> 方法完全移除一个 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/DataHolder.html">DataHolder</a> 的数据。只需要简单地把对应的 <code class="docutils literal"><span class="pre">Key</span></code> 传入就可以做到这一点。下面的示例演示了如何移除一个数据访问器对应的自定义名称：</p>
+<p>第三行的代码把数据设置回了数据访问器。我们提供一个 <code class="docutils literal"><span class="pre">Key</span></code> 表示当前生命值，并提供之前获取到的最大生命值。因此我们就把这个数据访问器“治疗”成了最大生命值。存在一系列的 <code class="docutils literal"><span class="pre">offer()</span></code> 方法用于不同的设置需求，所有的 <code class="docutils literal"><span class="pre">offer()</span></code> 方法都返回一个 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/DataTransactionResult.html">DataTransactionResult</a> ，其包含了数据是否被成功设置。现在，我们将使用那个期望传入一个 <code class="docutils literal"><span class="pre">Key</span></code> 和一个对应值的方法，不过在下一页我们会遇到更多。既然我们已经知道了我们对于生命值的设置一定会成功（因为该数据访问器支持这一做法），我们就可以直接无视返回值。</p>
+<p>当然，也可以使用 <code class="docutils literal"><span class="pre">remove()</span></code> 方法完全移除一个 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/DataHolder.html">DataHolder</a> 的数据。只需要简单地把对应的 <code class="docutils literal"><span class="pre">Key</span></code> 传入就可以做到这一点。下面的示例演示了如何移除一个数据访问器对应的自定义名称：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">removeName</span><span class="o">(</span><span class="n">DataHolder</span> <span class="n">target</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">target</span><span class="o">.</span><span class="na">remove</span><span class="o">(</span><span class="n">Keys</span><span class="o">.</span><span class="na">DISPLAY_NAME</span><span class="o">);</span>
 <span class="o">}</span>
@@ -623,11 +624,11 @@
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>请注意，在两种情况下我们都需要确保我们传入的 <code class="docutils literal"><span class="pre">Function</span></code> 可以处理 <code class="docutils literal"><span class="pre">null</span></code> 。你还会注意到，这里根本没有检查当前数据访问器是否支持 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/key/Keys.html#MAX_HEALTH">Keys#MAX_HEALTH</a> 这一数据键。如果当前数据访问器根本不支持这一数据键， <code class="docutils literal"><span class="pre">transform()</span></code> 便会执行失败，并返回一个对应的 <code class="docutils literal"><span class="pre">DataTransactionResult</span></code> 。</p>
+<p>请注意，在两种情况下我们都需要确保我们传入的 <code class="docutils literal"><span class="pre">Function</span></code> 可以处理 <code class="docutils literal"><span class="pre">null</span></code> 。你还会注意到，这里根本没有检查当前数据访问器是否支持 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/key/Keys.html#MAX_HEALTH">Keys#MAX_HEALTH</a> 这一数据键。如果当前数据访问器根本不支持这一数据键， <code class="docutils literal"><span class="pre">transform()</span></code> 便会执行失败，并返回一个对应的 <code class="docutils literal"><span class="pre">DataTransactionResult</span></code> 。</p>
 </div>
 <div class="section" id="keyed-values">
 <h2>数据值<a class="headerlink" href="#keyed-values" title="永久链接至标题">¶</a></h2>
-<p>有的时候你并不想直接获取数据键对应的实际值，而是被包装起来的数据值。在这种情况下，使用 <code class="docutils literal"><span class="pre">getValue(key)</span></code> 方法而不是 <code class="docutils literal"><span class="pre">get(key)</span></code> 方法以解决问题。你会获取一个继承了 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/value/BaseValue.html">BaseValue</a> 类的，包含了一份实际值的对象。因为我们知道，当前生命值是以 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/data/value/mutable/MutableBoundedValue.html">MutableBoundedValue</a> 的形式存储的，我们可以找到可能的最小生命值，并可以设置其只比这一最小值高一点点。</p>
+<p>有的时候你并不想直接获取数据键对应的实际值，而是被包装起来的数据值。在这种情况下，使用 <code class="docutils literal"><span class="pre">getValue(key)</span></code> 方法而不是 <code class="docutils literal"><span class="pre">get(key)</span></code> 方法以解决问题。你会获取一个继承了 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/value/BaseValue.html">BaseValue</a> 类的，包含了一份实际值的对象。因为我们知道，当前生命值是以 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/value/mutable/MutableBoundedValue.html">MutableBoundedValue</a> 的形式存储的，我们可以找到可能的最小生命值，并可以设置其只比这一最小值高一点点。</p>
 <p><strong>代码示例：使目标濒临死亡</strong></p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.data.value.mutable.MutableBoundedValue</span><span class="o">;</span>
 

@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Дочерние Команды &mdash; Документация Sponge 4.1.0</title>
+     <title>Дочерние Команды &mdash; Документация Sponge 5.0.0</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -32,7 +32,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="Документация Sponge 4.1.0" href="../../index.html" />
+        <link rel="top" title="Документация Sponge 5.0.0" href="../../index.html" />
         <link rel="up" title="Команды" href="index.html" />
         <link rel="next" title="Менеджер команд" href="service.html" />
         <link rel="prev" title="Command Flags" href="flags.html" />
@@ -119,9 +119,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -154,7 +155,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">Документация Sponge 4.1.0</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">Документация Sponge 5.0.0</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >Создание плагина</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">Команды</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
@@ -574,7 +575,7 @@
                   
   <div class="section" id="child-commands">
 <h1>Дочерние Команды<a class="headerlink" href="#child-commands" title="Ссылка на этот заголовок">¶</a></h1>
-<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/spec/CommandSpec.html">CommandSpec</a> builder supports hierarchical command structures like this:</p>
+<p>The <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/spec/CommandSpec.html">CommandSpec</a> builder supports hierarchical command structures like this:</p>
 <ul class="simple">
 <li><p class="first">&#8216;&#8217;/mail&#8217;&#8217;  (родительская команда)</p>
 <ul>
@@ -606,7 +607,7 @@
 </pre></div>
 </div>
 <p>Instead of registering them to the command service, child commands are registered on their parent command using the
-<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/spec/CommandSpec.Builder.html#child-org.spongepowered.api.command.CommandCallable-String...-">CommandSpec.Builder#child(CommandCallable, String...)</a> method. They are registered with a list of aliases.
+<a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/spec/CommandSpec.Builder.html#child-org.spongepowered.api.command.CommandCallable-String...-">CommandSpec.Builder#child(CommandCallable, String...)</a> method. They are registered with a list of aliases.
 The first alias supplied is the primary one and will appear in the usage message.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">CommandSpec</span> <span class="n">mailCommandSpec</span> <span class="o">=</span> <span class="n">CommandSpec</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
     <span class="o">.</span><span class="na">permission</span><span class="o">(</span><span class="s">&quot;myplugin.mail&quot;</span><span class="o">)</span>
@@ -620,7 +621,7 @@ The first alias supplied is the primary one and will appear in the usage message
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Примечание</p>
-<p class="last">If a <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/spec/CommandExecutor.html">CommandExecutor</a> was set for the parent command, it is used as a fallback if the arguments do not
+<p class="last">If a <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/spec/CommandExecutor.html">CommandExecutor</a> was set for the parent command, it is used as a fallback if the arguments do not
 match one of the child command aliases. Setting an executor is not required.</p>
 </div>
 </div>

@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>命令管理器 &mdash; Sponge 4.1.0 文档</title>
+     <title>命令管理器 &mdash; Sponge 5.0.0 文档</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -20,7 +20,7 @@
   <script type="text/javascript">
     var DOCUMENTATION_OPTIONS = {
       URL_ROOT:    '../../',
-      VERSION:     '4.1.0',
+      VERSION:     '5.0.0',
       COLLAPSE_INDEX: false,
       FILE_SUFFIX: '.html',
       HAS_SOURCE:  true
@@ -33,7 +33,7 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-        <link rel="top" title="Sponge 4.1.0 文档" href="../../index.html" />
+        <link rel="top" title="Sponge 5.0.0 文档" href="../../index.html" />
         <link rel="up" title="命令" href="index.html" />
         <link rel="next" title="低级命令API" href="commandcallable.html" />
         <link rel="prev" title="子命令" href="childcommands.html" />
@@ -120,9 +120,10 @@
         </ul>
     </div>
     <div class="menu-right">
-      <div><i class="fa fa-fw fa-tag"></i><a>4.1.0</a></div>
+      <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -155,7 +156,7 @@
 
       <div class="breadcrumbs">
         <ul>
-        <li><a href="../../index.html">Sponge 4.1.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="../../index.html">Sponge 5.0.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >插件开发</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="index.html" accesskey="U">命令</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
@@ -575,8 +576,8 @@
                   
   <div class="section" id="the-command-manager">
 <h1>命令管理器<a class="headerlink" href="#the-command-manager" title="永久链接至标题">¶</a></h1>
-<p>命令管理器，即 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/CommandManager.html">CommandManager</a> 用于监视用户在聊天框中输入的命令，并将其重定向到正确的命令处理代码。你需要使用 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/command/CommandManager.html#register-java.lang.Object-org.spongepowered.api.command.CommandCallable-String...-">CommandManager#register(Object, CommandCallable, String...)</a> 方法，并传入插件的实例、命令的实例、以及所有需要作为命令的别名的字符串，以注册你想要注册的命令。</p>
-<p>通常情况下，你应该在 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/event/game/state/GameInitializationEvent.html">GameInitializationEvent</a> 触发时注册你的命令。如果你在你的插件主类注册的话，可以直接使用 <code class="docutils literal"><span class="pre">this</span></code> 以传入插件的实例。</p>
+<p>命令管理器，即 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/CommandManager.html">CommandManager</a> 用于监视用户在聊天框中输入的命令，并将其重定向到正确的命令处理代码。你需要使用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/CommandManager.html#register-java.lang.Object-org.spongepowered.api.command.CommandCallable-String...-">CommandManager#register(Object, CommandCallable, String...)</a> 方法，并传入插件的实例、命令的实例、以及所有需要作为命令的别名的字符串，以注册你想要注册的命令。</p>
+<p>通常情况下，你应该在 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameInitializationEvent.html">GameInitializationEvent</a> 触发时注册你的命令。如果你在你的插件主类注册的话，可以直接使用 <code class="docutils literal"><span class="pre">this</span></code> 以传入插件的实例。</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.Sponge</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.command.CommandManager</span><span class="o">;</span>
 
