@@ -48,27 +48,11 @@
 
   </script>
     
-  <link rel="alternate" hreflang="da" href="/master/da/">
-  <link rel="alternate" hreflang="de" href="/master/de/">
-  <link rel="alternate" hreflang="en-GB" href="/master/en-GB/">
-  <link rel="alternate" hreflang="en-PT" href="/master/en-PT/">
-  <link rel="alternate" hreflang="en" href="/master/en/">
-  <link rel="alternate" hreflang="es-ES" href="/master/es-ES/">
-  <link rel="alternate" hreflang="fi" href="/master/fi/">
-  <link rel="alternate" hreflang="fr" href="/master/fr/">
-  <link rel="alternate" hreflang="it" href="/master/it/">
-  <link rel="alternate" hreflang="ja" href="/master/ja/">
-  <link rel="alternate" hreflang="ko" href="/master/ko/">
-  <link rel="alternate" hreflang="lt" href="/master/lt/">
-  <link rel="alternate" hreflang="nb" href="/master/nb/">
-  <link rel="alternate" hreflang="nl" href="/master/nl/">
-  <link rel="alternate" hreflang="pl" href="/master/pl/">
-  <link rel="alternate" hreflang="pt-BR" href="/master/pt-BR/">
-  <link rel="alternate" hreflang="pt-PT" href="/master/pt-PT/">
-  <link rel="alternate" hreflang="ru" href="/master/ru/">
-  <link rel="alternate" hreflang="uk" href="/master/uk/">
-  <link rel="alternate" hreflang="zh-CN" href="/master/zh-CN/">
-  <link rel="alternate" hreflang="zh-TW" href="/master/zh-TW/">
+  {§#curver§}
+  {|#langs|}
+  <link rel="alternate" hreflang="{|crowdin_code|}" href="/{§currentversion§}/{|crowdin_code|}/">
+  {|/langs|}
+  {§/curver§}
   <link rel="alternate" hreflang="x-default" href="/"> 
   </head>
   <body role="document" id="top">
@@ -95,35 +79,20 @@
     <div class="menu-right">
       <div><i class="fa fa-fw fa-globe"></i></div>
         <ul class="dropdown" id="ddlang">
-          <li><a href="/master/da/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/da.png" alt="Flag for Danish"/></a></li>
-          <li><a href="/master/de/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/de.png" alt="Flag for German"/></a></li>
-          <li><a href="/master/en-GB/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/en-GB.png" alt="Flag for English, United Kingdom"/></a></li>
-          <li><a href="/master/en-PT/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/en-PT.png" alt="Flag for Pirate English"/></a></li>
-          <li><a href="/master/en/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/en.png" alt="Flag for English"/></a></li>
-          <li><a href="/master/es-ES/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/es-ES.png" alt="Flag for Spanish"/></a></li>
-          <li><a href="/master/fi/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/fi.png" alt="Flag for Finnish"/></a></li>
-          <li><a href="/master/fr/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/fr.png" alt="Flag for French"/></a></li>
-          <li><a href="/master/it/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/it.png" alt="Flag for Italian"/></a></li>
-          <li><a href="/master/ja/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ja.png" alt="Flag for Japanese"/></a></li>
-          <li><a href="/master/ko/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ko.png" alt="Flag for Korean"/></a></li>
-          <li><a href="/master/lt/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/lt.png" alt="Flag for Lithuanian"/></a></li>
-          <li><a href="/master/nb/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nb.png" alt="Flag for Norwegian Bokmal"/></a></li>
-          <li><a href="/master/nl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/nl.png" alt="Flag for Dutch"/></a></li>
-          <li><a href="/master/pl/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pl.png" alt="Flag for Polish"/></a></li>
-          <li><a href="/master/pt-BR/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pt-BR.png" alt="Flag for Portuguese, Brazilian"/></a></li>
-          <li><a href="/master/pt-PT/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/pt-PT.png" alt="Flag for Portuguese"/></a></li>
-          <li><a href="/master/ru/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/ru.png" alt="Flag for Russian"/></a></li>
-          <li><a href="/master/uk/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/uk.png" alt="Flag for Ukrainian"/></a></li>
-          <li><a href="/master/zh-CN/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/zh-CN.png" alt="Flag for Chinese Simplified"/></a></li>
-          <li><a href="/master/zh-TW/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/zh-TW.png" alt="Flag for Chinese Traditional"/></a></li>
+          {§#curver§}
+          {|#langs|}
+          <li><a href="/{§currentversion§}/{|crowdin_code|}/" class="lang"><img src="//d1ztvzf22lmr1j.cloudfront.net/images/flags/{|crowdin_code|}.png" alt="Flag for {|name|}"/></a></li>
+          {|/langs|}
+          {§/curver§}
         </ul>
     </div>
     <div class="menu-right">
       <div><i class="fa fa-fw fa-tag"></i><a>5.0.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
-          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
-          <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
+          {[#vers]}
+          <li><a href="/{[apiversion]}/en/"><i class="fa fa-fw fa-tag"></i> {[apiversion]}</a></li>
+          {[/vers]}
         </ul>
     </div>
     <div class="menu-right">
@@ -577,25 +546,28 @@
 <h1>Modifying Blocks<a class="headerlink" href="#modifying-blocks" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="changing-a-blocks-type">
 <h2>Changing a Blocks Type<a class="headerlink" href="#changing-a-blocks-type" title="Permalink to this headline">¶</a></h2>
-<p>Changing the Type of a Block is as simple as calling the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/Location.html#setBlockType-org.spongepowered.api.block.BlockType-">Location#setBlockType(BlockType)</a> method with the
-new <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/block/BlockType.html">BlockType</a>. For example the following code turns the block at the given <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/Location.html">Location</a> into a sponge:</p>
+<p>Changing the Type of a Block is as simple as calling the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/Location.html#setBlockType-org.spongepowered.api.block.BlockType-org.spongepowered.api.event.cause.Cause-">Location#setBlockType(BlockType, Cause)</a> method with
+the new <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/block/BlockType.html">BlockType</a>. As with most block modifications, we need to supply a cause for the block change. In most
+cases, this can be your main plugin class. The following code turns the block at the given <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/Location.html">Location</a> into a
+sponge:</p>
 <blockquote>
 <div><div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.block.BlockTypes</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.spongepowered.api.event.cause.Cause</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.world.Location</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.world.World</span><span class="o">;</span>
 
-<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setToSponge</span><span class="o">(</span><span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">blockLoc</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">blockLoc</span><span class="o">.</span><span class="na">setBlockType</span><span class="o">(</span><span class="n">BlockTypes</span><span class="o">.</span><span class="na">SPONGE</span><span class="o">);</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setToSponge</span><span class="o">(</span><span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">blockLoc</span><span class="o">,</span> <span class="n">Object</span> <span class="n">myPluginInstance</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">blockLoc</span><span class="o">.</span><span class="na">setBlockType</span><span class="o">(</span><span class="n">BlockTypes</span><span class="o">.</span><span class="na">SPONGE</span><span class="o">,</span> <span class="n">Cause</span><span class="o">.</span><span class="na">source</span><span class="o">(</span><span class="n">myPluginInstance</span><span class="o">).</span><span class="na">build</span><span class="o">());</span>
 <span class="o">}</span>
 </pre></div>
 </div>
 </div></blockquote>
 <p>It&#8217;s as simple as that. If you just want to &#8216;delete&#8217; a block (which is done by replacing it with air), you may just
-use the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/Location.html#removeBlock--">Location#removeBlock()</a> method provided by <code class="docutils literal"><span class="pre">Location</span></code>.</p>
+use the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/Location.html#removeBlock-org.spongepowered.api.event.cause.Cause-">Location#removeBlock(Cause)</a> method provided by <code class="docutils literal"><span class="pre">Location</span></code>.</p>
 </div>
 <div class="section" id="altering-block-states">
 <h2>Altering Block States<a class="headerlink" href="#altering-block-states" title="Permalink to this headline">¶</a></h2>
-<p>Similar to the above example, the <code class="docutils literal"><span class="pre">Location</span></code> class provides a <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/Location.html#setBlock-org.spongepowered.api.block.BlockState-">Location#setBlock(BlockState)</a> method
+<p>Similar to the above example, the <code class="docutils literal"><span class="pre">Location</span></code> class provides a <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/Location.html#setBlock-org.spongepowered.api.block.BlockState-org.spongepowered.api.event.cause.Cause-">Location#setBlock(BlockState, Cause)</a> method
 accepting a new <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/block/BlockState.html">BlockState</a>. To make use of it, you first must acquire a <code class="docutils literal"><span class="pre">BlockState</span></code> you can modify. You
 can do so either by getting the block&#8217;s current state via the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/Location.html#getBlock--">Location#getBlock()</a> method or by using a
 <code class="docutils literal"><span class="pre">BlockType</span></code>&#8216;s default state. The latter is demonstrated below. The default state for a Sponge block is retrieved
@@ -605,13 +577,13 @@ and then modified to directly create a wet sponge block:</p>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.block.BlockState</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.data.manipulator.mutable.WetData</span><span class="o">;</span>
 
-<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setToWetSponge</span><span class="o">(</span><span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">blockLoc</span><span class="o">)</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setToWetSponge</span><span class="o">(</span><span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">blockLoc</span><span class="o">,</span> <span class="n">Object</span> <span class="n">myPluginInstance</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">BlockState</span> <span class="n">state</span> <span class="o">=</span> <span class="n">BlockTypes</span><span class="o">.</span><span class="na">SPONGE</span><span class="o">.</span><span class="na">getDefaultState</span><span class="o">();</span>
     <span class="n">WetData</span> <span class="n">wetness</span> <span class="o">=</span> <span class="n">Sponge</span><span class="o">.</span><span class="na">getDataManager</span><span class="o">().</span>
         <span class="n">getManipulatorBuilder</span><span class="o">(</span><span class="n">WetData</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">get</span><span class="o">().</span><span class="na">create</span><span class="o">();</span>
     <span class="n">wetness</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">wetness</span><span class="o">.</span><span class="na">wet</span><span class="o">().</span><span class="na">set</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
     <span class="n">BlockState</span> <span class="n">newState</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="n">wetness</span><span class="o">.</span><span class="na">asImmutable</span><span class="o">()).</span><span class="na">get</span><span class="o">();</span>
-    <span class="n">blockLoc</span><span class="o">.</span><span class="na">setBlock</span><span class="o">(</span><span class="n">newState</span><span class="o">);</span>
+    <span class="n">blockLoc</span><span class="o">.</span><span class="na">setBlock</span><span class="o">(</span><span class="n">newState</span><span class="o">,</span> <span class="n">Cause</span><span class="o">.</span><span class="na">source</span><span class="o">(</span><span class="n">myPluginInstance</span><span class="o">).</span><span class="na">build</span><span class="o">());</span>
 <span class="o">}</span>
 </pre></div>
 </div>
@@ -628,7 +600,7 @@ given data set, overwriting existing values. The following example will change a
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.data.manipulator.mutable.block.DirtData</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.data.type.DirtTypes</span><span class="o">;</span>
 
-<span class="kd">public</span> <span class="kt">void</span> <span class="nf">dirtToPodzol</span><span class="o">(</span><span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">blockLoc</span><span class="o">)</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">dirtToPodzol</span><span class="o">(</span><span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">blockLoc</span><span class="o">,</span> <span class="n">Object</span> <span class="n">myPluginInstance</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">BlockState</span> <span class="n">state</span> <span class="o">=</span> <span class="n">blockLoc</span><span class="o">.</span><span class="na">getBlock</span><span class="o">();</span>
     <span class="n">Optional</span><span class="o">&lt;</span><span class="n">ImmutableDirtData</span><span class="o">&gt;</span> <span class="n">dirtDataOpt</span> <span class="o">=</span>
         <span class="n">state</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">ImmutableDirtData</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
@@ -637,7 +609,7 @@ given data set, overwriting existing values. The following example will change a
         <span class="n">DirtData</span> <span class="n">dirtData</span> <span class="o">=</span> <span class="n">dirtDataOpt</span><span class="o">.</span><span class="na">get</span><span class="o">().</span><span class="na">asMutable</span><span class="o">();</span>
         <span class="n">dirtData</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">Keys</span><span class="o">.</span><span class="na">DIRT_TYPE</span><span class="o">,</span> <span class="n">DirtTypes</span><span class="o">.</span><span class="na">PODZOL</span><span class="o">);</span>
         <span class="n">BlockState</span> <span class="n">dirtState</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="n">dirtData</span><span class="o">.</span><span class="na">asImmutable</span><span class="o">()).</span><span class="na">get</span><span class="o">();</span>
-        <span class="n">blockLoc</span><span class="o">.</span><span class="na">setBlock</span><span class="o">(</span><span class="n">dirtState</span><span class="o">);</span>
+        <span class="n">blockLoc</span><span class="o">.</span><span class="na">setBlock</span><span class="o">(</span><span class="n">dirtState</span><span class="o">,</span> <span class="n">Cause</span><span class="o">.</span><span class="na">source</span><span class="o">(</span><span class="n">myPluginInstance</span><span class="o">).</span><span class="na">build</span><span class="o">());</span>
     <span class="o">}</span>
 <span class="o">}</span>
 </pre></div>
@@ -653,11 +625,11 @@ value. The following example will dry the block at a given <code class="docutils
 <div><div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span>
     <span class="nn">org.spongepowered.api.data.manipulator.immutable.block.ImmutableWetData</span><span class="o">;</span>
 
-<span class="kd">public</span> <span class="kt">void</span> <span class="nf">dry</span><span class="o">(</span><span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">blockLoc</span><span class="o">)</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">dry</span><span class="o">(</span><span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">blockLoc</span><span class="o">,</span> <span class="n">Object</span> <span class="n">myPluginInstance</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">BlockState</span> <span class="n">wetState</span> <span class="o">=</span> <span class="n">blockLoc</span><span class="o">.</span><span class="na">getBlock</span><span class="o">();</span>
     <span class="n">Optional</span><span class="o">&lt;</span><span class="n">BlockState</span><span class="o">&gt;</span> <span class="n">dryState</span> <span class="o">=</span> <span class="n">wetState</span><span class="o">.</span><span class="na">without</span><span class="o">(</span><span class="n">ImmutableWetData</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">dryState</span><span class="o">.</span><span class="na">isPresent</span><span class="o">())</span> <span class="o">{</span>
-        <span class="n">blockLoc</span><span class="o">.</span><span class="na">setBlock</span><span class="o">(</span><span class="n">dryState</span><span class="o">.</span><span class="na">get</span><span class="o">());</span>
+        <span class="n">blockLoc</span><span class="o">.</span><span class="na">setBlock</span><span class="o">(</span><span class="n">dryState</span><span class="o">.</span><span class="na">get</span><span class="o">(),</span> <span class="n">Cause</span><span class="o">.</span><span class="na">source</span><span class="o">(</span><span class="n">myPluginInstance</span><span class="o">).</span><span class="na">build</span><span class="o">());</span>
     <span class="o">}</span>
 <span class="o">}</span>
 </pre></div>
@@ -677,9 +649,9 @@ very simple:</p>
 <blockquote>
 <div><div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.block.BlockSnapshot</span><span class="o">;</span>
 
-<span class="kd">public</span> <span class="kt">void</span> <span class="nf">copyBlock</span><span class="o">(</span><span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">from</span><span class="o">,</span> <span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">to</span><span class="o">)</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">copyBlock</span><span class="o">(</span><span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">from</span><span class="o">,</span> <span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">to</span><span class="o">,</span> <span class="n">Object</span> <span class="n">myPluginInstance</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">BlockSnapshot</span> <span class="n">snapshot</span> <span class="o">=</span> <span class="n">from</span><span class="o">.</span><span class="na">createSnapshot</span><span class="o">();</span>
-    <span class="n">to</span><span class="o">.</span><span class="na">setBlock</span><span class="o">(</span><span class="n">snapshot</span><span class="o">.</span><span class="na">getState</span><span class="o">());</span>
+    <span class="n">to</span><span class="o">.</span><span class="na">setBlock</span><span class="o">(</span><span class="n">snapshot</span><span class="o">.</span><span class="na">getState</span><span class="o">(),</span> <span class="n">Cause</span><span class="o">.</span><span class="na">source</span><span class="o">(</span><span class="n">myPluginInstance</span><span class="o">).</span><span class="na">build</span><span class="o">());</span>
 <span class="o">}</span>
 </pre></div>
 </div>
