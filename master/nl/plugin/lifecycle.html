@@ -575,6 +575,11 @@
   <div class="section" id="plugin-lifecycle">
 <h1>De levensloop van een plugin<a class="headerlink" href="#plugin-lifecycle" title="Permalink naar deze titel">¶</a></h1>
 <p>Voordat de plugin zichtbaar wordt gemaakt, itereert de plugin-lader door alle beschikbare plugins, bepaalt of alle dependencies aanwezig zijn en sorteert de plugins dan op volgorde gebaseerd op hun dependency. Gebeurtenissen worden aan plugins gegeven in deze volgorde. Bijvoorbeeld, plugin A die &#8220;[required-]after:B&#8221; bevat krijgt elk event nadat plugin B al het werk heeft gedaan voor de gegeven state. Daarbovenop zijn levenscyclus states globaal. Dit betekent dat alle plugins die zichtbaar zijn voor elkaar alle staten in een keer moeten doorlopen.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Waarschuwing</p>
+<p class="last">The Sponge <code class="docutils literal"><span class="pre">Server</span></code> object is not always available. Availability can be checked using the method
+<code class="docutils literal"><span class="pre">Sponge.isServerAvailable()</span></code> or <code class="docutils literal"><span class="pre">Game.isServerAvailable()</span></code>.</p>
+</div>
 <div class="section" id="state-events">
 <h2>State Events<a class="headerlink" href="#state-events" title="Permalink naar deze titel">¶</a></h2>
 <p>There are three categories of state events:</p>

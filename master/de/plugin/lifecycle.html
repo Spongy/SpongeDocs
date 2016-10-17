@@ -575,6 +575,11 @@
   <div class="section" id="plugin-lifecycle">
 <h1>Der Plugin-Lebenszyklus<a class="headerlink" href="#plugin-lifecycle" title="Link zu dieser Überschrift">¶</a></h1>
 <p>Bevor Plugins aktiviert werden liest der Plugin-Loader alle verfügbaren Plugins ein, stellt fest ob alle Abhängigkeiten erfüllt sind und sortiert die Plugins nach ihrer Abhängigkeitsreihenfolge. Lebenszyklus-Events werden den Plugins dann in dieser Reihenfolge gemeldet. Beispielsweise wird ein Plugin A welches &#8220;[required-]after:B&#8221; enthält jedes Event erst erhalten nachdem Plugin B meldet, dass das Event abgearbeitet wurde. Darüber hinaus sind Lebenszyklus Status global. Das heisst, dass alle Plugins die voneinander abhängig sind alle Status gemeinsam durchlaufen müssen.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Warnung</p>
+<p class="last">The Sponge <code class="docutils literal"><span class="pre">Server</span></code> object is not always available. Availability can be checked using the method
+<code class="docutils literal"><span class="pre">Sponge.isServerAvailable()</span></code> or <code class="docutils literal"><span class="pre">Game.isServerAvailable()</span></code>.</p>
+</div>
 <div class="section" id="state-events">
 <h2>Status Events<a class="headerlink" href="#state-events" title="Link zu dieser Überschrift">¶</a></h2>
 <p>Es gibt drei Kategorien von State-Events:</p>

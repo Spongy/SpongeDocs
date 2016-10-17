@@ -318,7 +318,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/childcommands.html">子命令</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/service.html">命令管理器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/commandcallable.html">低级命令API</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/commandcallable.html">低级别命令 API</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -338,10 +338,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/assets.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/assets.html">使用 Asset API</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/configuration/index.html">配置插件</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/configuration/index.html">插件配置</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/configuration/loaders.html">配置加载器</a><ul class="simple">
 </ul>
 </li>
@@ -353,24 +353,24 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/text/index.html">Text</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/text/index.html">文本 API</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/text/text.html">创建文本</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/representations/index.html">序列化文本</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../plugin/text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../plugin/text/representations/xml.html">TextXML Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../plugin/text/representations/json.html">JSON Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../plugin/text/representations/configurate.html">Configuration Format</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/pagination.html">分页服务</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/pagination.html">分页</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/messagechannels.html">Message Channels</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/messagechannels.html">消息通道</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/templates.html">TextTemplates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/templates.html">文本模板</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/data/index.html">数据 API</a><ul>
@@ -548,7 +548,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/staff.html">工作人员</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Sponge 词汇表</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Sponge 术语表</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/assets.html">艺术资源</a><ul class="simple">
@@ -610,6 +610,32 @@ If you add new mobs to the game, just repeat the procedure and those new mobs wi
 </pre></div>
 </div>
 </div>
+<div class="section" id="cache-tameable-owners">
+<h2>Cache Tameable Owners<a class="headerlink" href="#cache-tameable-owners" title="永久链接至标题">¶</a></h2>
+<p>This setting will cache tameable entities owners&#8217; UUID to save constant lookups from the data watcher.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>optimizations {
+    # Caches tameable entities owners to avoid constant lookups against data watchers. If mods cause issue, disable.
+    cache-tameable-owners=true
+    }
+</pre></div>
+</div>
+</div>
+<div class="section" id="drops-pre-merge">
+<h2>Drops Pre Merge<a class="headerlink" href="#drops-pre-merge" title="永久链接至标题">¶</a></h2>
+<p>This setting will pre-process and potentially merge item drops to avoid spawning extra entities that are then merged
+post-spawning.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>optimizations {
+    # If enabled, block item drops are pre-processed to avoid
+    # having to spawn extra entities that will be merged post spawning.
+    # Usually, Sponge is smart enough to determine when to attempt an item pre-merge
+    # and when not to, however, in certain cases, some mods rely on items not being
+    # pre-merged and actually spawned, in which case, the items will flow right through
+    # without being merged.
+    drops-pre-merge=true
+    }
+</pre></div>
+</div>
+</div>
 <div class="section" id="lighting-patch-to-ignore-unloaded-chunks">
 <h2>Lighting Patch to Ignore Unloaded Chunks<a class="headerlink" href="#lighting-patch-to-ignore-unloaded-chunks" title="永久链接至标题">¶</a></h2>
 <p>Enabling this setting avoids loading lighting data from not yet generated chunks. This reduces disk access and chunk
@@ -634,15 +660,16 @@ amount of memory for caching purposes. If you run out of memory, try to disable 
 </pre></div>
 </div>
 </div>
-<div class="section" id="reduce-hash-lookups-on-blockstate-queries">
-<h2>Reduce Hash Lookups on BlockState Queries<a class="headerlink" href="#reduce-hash-lookups-on-blockstate-queries" title="永久链接至标题">¶</a></h2>
-<p>Enabling this patch reduces hash lookups. This is achieved by removing a 2nd unnecessary lookup, which the server would
-only need when a blockstate becomes null. If you run into issues, disable this patch to revert the server to vanilla
-behaviour.</p>
-<div class="highlight-none"><div class="highlight"><pre><span></span>optimizations {
-      # A simple patch to reduce a few sanity checks for the sake of speed when
-      # performing block state operations
-      fast-blockstate-lookup=true
+<div class="section" id="inline-block-position-checks">
+<h2>Inline Block Position Checks<a class="headerlink" href="#inline-block-position-checks" title="永久链接至标题">¶</a></h2>
+<p>This setting inlines the check for if a block position is valid in a world.</p>
+<div class="highlight-none"><div class="highlight"><pre><span></span>optimizations{
+      # Inlines a simple check for whether a BlockPosition is valid
+      # in a world. By patching the check, the JVM can optimize the
+      # method further while reducing the number of operations performed
+      # for such a simple check. This may however break mods that alter
+      # world heights and can thus be disabled in those cases.
+      inline-block-position-checks=true
       }
 </pre></div>
 </div>

@@ -576,6 +576,11 @@
   <div class="section" id="plugin-lifecycle">
 <h1>Ciclo de Vida de um Plugin<a class="headerlink" href="#plugin-lifecycle" title="Link permanente para este título">¶</a></h1>
 <p>Antes de qualquer estado que fazem do plugin visível, o &#8220;carregador de plugins&#8221; primeiro organiza todos plugins disponíveis, determina se suas dependências estão presentes, e organiza os plugins por ordem de dependência. Os eventos de &#8220;ciclo de vida&#8221; são enviado para os plugins nesta ordem. Por exemplo, um plugin contendo &#8220;[required-]after:B&#8221; (&#8220;[requerido-]após:B&#8221; em tradução livre) irá receber os eventos após o plugin B completar o processo para o determinado estado. Além disto, o ciclo de vida é global. Isto significa que todos plugins visíveis ao outro devem passar por todos estados ao mesmo tempo.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Aviso</p>
+<p class="last">The Sponge <code class="docutils literal"><span class="pre">Server</span></code> object is not always available. Availability can be checked using the method
+<code class="docutils literal"><span class="pre">Sponge.isServerAvailable()</span></code> or <code class="docutils literal"><span class="pre">Game.isServerAvailable()</span></code>.</p>
+</div>
 <div class="section" id="state-events">
 <h2>Eventos de estado<a class="headerlink" href="#state-events" title="Link permanente para este título">¶</a></h2>
 <p>Existem três categorias de eventos de estado:</p>

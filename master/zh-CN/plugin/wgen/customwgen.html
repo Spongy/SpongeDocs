@@ -318,7 +318,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/childcommands.html">子命令</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/service.html">命令管理器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/commandcallable.html">低级命令API</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../commands/commandcallable.html">低级别命令 API</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -338,10 +338,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../assets.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../assets.html">使用 Asset API</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">配置插件</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">插件配置</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../configuration/loaders.html">配置加载器</a><ul class="simple">
 </ul>
 </li>
@@ -353,24 +353,24 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../text/index.html">Text</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../text/index.html">文本 API</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../text/text.html">创建文本</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../text/representations/index.html">序列化文本</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/xml.html">TextXML Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/json.html">JSON Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Configuration Format</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">分页服务</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">分页</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/messagechannels.html">Message Channels</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../text/messagechannels.html">消息通道</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">TextTemplates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">文本模板</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../data/index.html">数据 API</a><ul>
@@ -548,7 +548,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/staff.html">工作人员</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Sponge 词汇表</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Sponge 术语表</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/assets.html">艺术资源</a><ul class="simple">
@@ -696,8 +696,14 @@ in everything below that with stone and leave everything above it as air (or wat
 <p>Custom populators can be used to add a great variety of custom features. To create a custom populator you need
 only create a class implementing the Populator interface and add it to the list of populators attached to a
 biome, or to a world generator if you want it applied globally.</p>
-<p>The key thing to remember when creating a populator is that the area affected by the populator is a 16x16 area
-offset by 8 in both the x and z directions.</p>
+<p>Your custom populator will be passed an <code class="docutils literal"><span class="pre">Extent</span></code> which is a view onto the world covering the area that you
+should be applying your populator. It is advised that you do not make any assumptions as to the expected size
+or position of this extent, as it may be larger or smaller for operations such as regenerating a chunk.</p>
+<div class="admonition note">
+<p class="first admonition-title">注解</p>
+<p class="last">To allow your populator to overlap chunk boundaries your populator is allowed to extend up to 8 blocks outside
+of the boundaries of the extent.</p>
+</div>
 </div>
 <div class="section" id="creating-custom-biomes">
 <h2>Creating Custom Biomes<a class="headerlink" href="#creating-custom-biomes" title="永久链接至标题">¶</a></h2>

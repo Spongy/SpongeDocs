@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>低级命令API &mdash; Sponge 5.0.0 文档</title>
+     <title>低级别命令 API &mdash; Sponge 5.0.0 文档</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -318,7 +318,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="childcommands.html">子命令</a></li>
 <li class="toctree-l3"><a class="reference internal" href="service.html">命令管理器</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">低级命令API</a><ul class="simple">
+<li class="toctree-l3 current"><a class="current reference internal" href="">低级别命令 API</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -338,10 +338,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../assets.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../assets.html">使用 Asset API</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">配置插件</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">插件配置</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../configuration/loaders.html">配置加载器</a><ul class="simple">
 </ul>
 </li>
@@ -353,24 +353,24 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../text/index.html">Text</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../text/index.html">文本 API</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../text/text.html">创建文本</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../text/representations/index.html">序列化文本</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/xml.html">TextXML Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/json.html">JSON Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Configuration Format</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">分页服务</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">分页</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/messagechannels.html">Message Channels</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../text/messagechannels.html">消息通道</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">TextTemplates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">文本模板</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../data/index.html">数据 API</a><ul>
@@ -548,7 +548,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/staff.html">工作人员</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Sponge 词汇表</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Sponge 术语表</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/assets.html">艺术资源</a><ul class="simple">
@@ -575,7 +575,7 @@
                 <div class="body" role="main">
                   
   <div class="section" id="low-level-command-api">
-<h1>低级命令API<a class="headerlink" href="#low-level-command-api" title="永久链接至标题">¶</a></h1>
+<h1>低级别命令 API<a class="headerlink" href="#low-level-command-api" title="永久链接至标题">¶</a></h1>
 <p><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/CommandCallable.html">CommandCallable</a> 和 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/dispatcher/Dispatcher.html">Dispatcher</a> 两个接口可以用于定义命令。这两个接口可以用于自定义命令 API 的基础。</p>
 <p>我们强烈地建议使用 <a class="reference internal" href="creating.html"><em>Command Builder API</em></a> 以定义简单的命令。</p>
 <div class="section" id="writing-a-command">

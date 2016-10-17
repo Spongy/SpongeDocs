@@ -204,7 +204,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../server/management/index.html">Server Management</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../server/management/index.html">Керування сервером</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../server/management/whitelist.html">Managing the Whitelist</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../server/management/bans.html">Управління блокуваннями</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../server/management/permissions.html">Managing Permissions</a><ul class="simple">
@@ -221,7 +221,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../server/spongineer/index.html">Becoming an Expert Spongineer</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../server/spongineer/index.html">Станьте экспертом по серверам Sponge</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../server/spongineer/commands.html">Commands</a><ul class="simple">
 </ul>
 </li>
@@ -576,9 +576,7 @@
   <div class="section" id="the-asset-api">
 <h1>The Asset API<a class="headerlink" href="#the-asset-api" title="Постійне посилання на цей заголовок">¶</a></h1>
 <p>The <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/asset/AssetManager.html">AssetManager</a> allows developers to retrieve resources from a plugin JAR.</p>
-<p>By default, a plugin&#8217;s assets resides in a directory named <code class="docutils literal"><span class="pre">assets/myplugin/</span></code> where <code class="docutils literal"><span class="pre">myplugin</span></code> is the plugin ID. In
-most cases this default directory should be used but if you <em>need</em> to change it, you may do so by setting the
-<code class="docutils literal"><span class="pre">assets</span></code> attribute in your <code class="docutils literal"><span class="pre">&#64;Plugin</span></code> annotation or <code class="docutils literal"><span class="pre">mcmod.info</span></code> file.</p>
+<p>A plugin&#8217;s assets resides in a directory named <code class="docutils literal"><span class="pre">assets/myplugin/</span></code> where <code class="docutils literal"><span class="pre">myplugin</span></code> is the plugin ID.</p>
 <p>Once properly configured you can retrieve a resource for your (or any) plugin using the following code:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.asset.Asset</span><span class="o">;</span>
 

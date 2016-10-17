@@ -386,7 +386,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="blocks/index.html">Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="blocks/index.html">Bloki</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="blocks/concepts.html">Koncepcje</a><ul class="simple">
 </ul>
 </li>
@@ -692,9 +692,13 @@ simply call the <a class="reference external" href="https://jd.spongepowered.org
 </div>
 <div class="admonition tip">
 <p class="first admonition-title">Wskazówka</p>
-<p class="last"><code class="docutils literal"><span class="pre">GameProfileCache#add</span></code> also accepts a <code class="docutils literal"><span class="pre">boolean</span></code> second argument determining whether existing cache entries
-should be overwritten, and a <code class="docutils literal"><span class="pre">Date</span></code> third argument setting the expiry of the <code class="docutils literal"><span class="pre">GameProfile</span></code>.</p>
+<p class="last"><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/profile/GameProfileCache.html#add-org.spongepowered.api.profile.GameProfile-">GameProfileCache#add(GameProfile)</a> also accepts a <code class="docutils literal"><span class="pre">boolean</span></code> second argument determining whether
+existing cache entries should be overwritten, and a <code class="docutils literal"><span class="pre">Date</span></code> third argument setting the expiry of the
+<code class="docutils literal"><span class="pre">GameProfile</span></code>.</p>
 </div>
+<p>If you ever decide you need to remove a <code class="docutils literal"><span class="pre">GameProfile</span></code> from the cache, you may call
+<a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/profile/GameProfileCache.html#remove-org.spongepowered.api.profile.GameProfile-">GameProfileCache#remove(GameProfile)</a>. If you need to remove all <code class="docutils literal"><span class="pre">GameProfile</span></code>s from the cache, you may
+call <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/profile/GameProfileCache.html#clear--">GameProfileCache#clear()</a>.</p>
 <p>The <code class="docutils literal"><span class="pre">GameProfileCache</span></code> may also be set by plugins with the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/profile/GameProfileManager.html#setCache-org.spongepowered.api.profile.GameProfileCache-">GameProfileManager#setCache(GameProfileCache)</a>
 method. To restore the original cache, use the same method, passing in the result of
 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/profile/GameProfileManager.html#getDefaultCache--">GameProfileManager#getDefaultCache()</a>.</p>

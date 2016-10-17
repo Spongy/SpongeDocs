@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>TextTemplates &mdash; Sponge 5.0.0 文档</title>
+     <title>文本模板 &mdash; Sponge 5.0.0 文档</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -34,9 +34,9 @@
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 5.0.0 文档" href="../../index.html" />
-        <link rel="up" title="Text" href="index.html" />
+        <link rel="up" title="文本 API" href="index.html" />
         <link rel="next" title="数据 API" href="../data/index.html" />
-        <link rel="prev" title="Message Channels" href="messagechannels.html" />
+        <link rel="prev" title="消息通道" href="messagechannels.html" />
     
   <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -158,7 +158,7 @@
         <ul>
         <li><a href="../../index.html">Sponge 5.0.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >插件开发</a><i class="fa fa-fw fa-chevron-right"></i></li>
-        <li><a href="index.html" accesskey="U">Text</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="index.html" accesskey="U">文本 API</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
     <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -318,7 +318,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/childcommands.html">子命令</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/service.html">命令管理器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/commandcallable.html">低级命令API</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../commands/commandcallable.html">低级别命令 API</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -338,10 +338,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../assets.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../assets.html">使用 Asset API</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">配置插件</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">插件配置</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../configuration/loaders.html">配置加载器</a><ul class="simple">
 </ul>
 </li>
@@ -353,24 +353,24 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Text</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">文本 API</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="text.html">创建文本</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="representations/index.html">序列化文本</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="representations/xml.html">TextXML Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="representations/json.html">JSON Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="representations/configurate.html">Configuration Format</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="pagination.html">分页服务</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="pagination.html">分页</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="messagechannels.html">Message Channels</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="messagechannels.html">消息通道</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">TextTemplates</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="">文本模板</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../data/index.html">数据 API</a><ul>
@@ -548,7 +548,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/staff.html">工作人员</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Sponge 词汇表</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Sponge 术语表</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/assets.html">艺术资源</a><ul class="simple">
@@ -575,7 +575,7 @@
                 <div class="body" role="main">
                   
   <div class="section" id="texttemplates">
-<h1>TextTemplates<a class="headerlink" href="#texttemplates" title="永久链接至标题">¶</a></h1>
+<h1>文本模板<a class="headerlink" href="#texttemplates" title="永久链接至标题">¶</a></h1>
 <p><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/TextTemplate.html">TextTemplate</a>s are an easy and convenient way to store messages with variable elements. For instance, you
 may find yourself wanting to create a configurable message for players who have joined the server for the first time.
 This is easily attainable with <code class="docutils literal"><span class="pre">TextTemplate</span></code>s using the following strategy:</p>
@@ -614,7 +614,7 @@ of their server.</p>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>
 <p class="last">To learn more about how to use Configurate to create configuration files for your plugin please refer to
-<a class="reference internal" href="../configuration/index.html"><em>配置插件</em></a>.</p>
+<a class="reference internal" href="../configuration/index.html"><em>插件配置</em></a>.</p>
 </div>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ninja.leaping.configurate.ConfigurationNode</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">com.google.common.reflect.TypeToken</span><span class="o">;</span>

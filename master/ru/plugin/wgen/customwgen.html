@@ -34,7 +34,7 @@
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Документация Sponge 5.0.0" href="../../index.html" />
         <link rel="up" title="Генерация мира" href="index.html" />
-        <link rel="next" title="Plugin Manager" href="../manager.html" />
+        <link rel="next" title="Менеджер плагинов" href="../manager.html" />
         <link rel="prev" title="WorldGeneratorModifiers" href="modifiers.html" />
     
   <script type="text/javascript">
@@ -462,7 +462,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../manager.html">Plugin Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../manager.html">Менеджер плагинов</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Game Profile Manager</a><ul class="simple">
@@ -477,7 +477,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../tab-lists.html">Tab Lists</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin-meta.html">Plugin Metadata</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin-meta.html">Метаданные плагина</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../ray-tracing.html">Ray Tracing</a><ul class="simple">
@@ -700,8 +700,14 @@ in everything below that with stone and leave everything above it as air (or wat
 <p>Custom populators can be used to add a great variety of custom features. To create a custom populator you need
 only create a class implementing the Populator interface and add it to the list of populators attached to a
 biome, or to a world generator if you want it applied globally.</p>
-<p>The key thing to remember when creating a populator is that the area affected by the populator is a 16x16 area
-offset by 8 in both the x and z directions.</p>
+<p>Your custom populator will be passed an <code class="docutils literal"><span class="pre">Extent</span></code> which is a view onto the world covering the area that you
+should be applying your populator. It is advised that you do not make any assumptions as to the expected size
+or position of this extent, as it may be larger or smaller for operations such as regenerating a chunk.</p>
+<div class="admonition note">
+<p class="first admonition-title">Примечание</p>
+<p class="last">To allow your populator to overlap chunk boundaries your populator is allowed to extend up to 8 blocks outside
+of the boundaries of the extent.</p>
+</div>
 </div>
 <div class="section" id="creating-custom-biomes">
 <h2>Создание пользовательских биомов<a class="headerlink" href="#creating-custom-biomes" title="Ссылка на этот заголовок">¶</a></h2>

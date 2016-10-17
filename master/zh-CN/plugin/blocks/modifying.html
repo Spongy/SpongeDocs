@@ -318,7 +318,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/childcommands.html">子命令</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/service.html">命令管理器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/commandcallable.html">低级命令API</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../commands/commandcallable.html">低级别命令 API</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -338,10 +338,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../assets.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../assets.html">使用 Asset API</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">配置插件</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">插件配置</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../configuration/loaders.html">配置加载器</a><ul class="simple">
 </ul>
 </li>
@@ -353,24 +353,24 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../text/index.html">Text</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../text/index.html">文本 API</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../text/text.html">创建文本</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../text/representations/index.html">序列化文本</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/xml.html">TextXML Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/json.html">JSON Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Configuration Format</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">分页服务</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">分页</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/messagechannels.html">Message Channels</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../text/messagechannels.html">消息通道</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">TextTemplates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">文本模板</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../data/index.html">数据 API</a><ul>
@@ -548,7 +548,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/staff.html">工作人员</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Sponge 词汇表</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Sponge 术语表</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/assets.html">艺术资源</a><ul class="simple">
@@ -578,35 +578,44 @@
 <h1>修改方块<a class="headerlink" href="#modifying-blocks" title="永久链接至标题">¶</a></h1>
 <div class="section" id="changing-a-blocks-type">
 <h2>更改方块类型<a class="headerlink" href="#changing-a-blocks-type" title="永久链接至标题">¶</a></h2>
-<p>更换一个方块的类型的做法，就是调用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/Location.html#setBlockType-org.spongepowered.api.block.BlockType-">Location#setBlockType(BlockType)</a> 这一方法，并传入 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/block/BlockType.html">BlockType</a> 这么简单。例如，下面的代码把给定的 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/Location.html">Location</a> 对应的方块设置成海绵。</p>
+<p>Changing the Type of a Block is as simple as calling the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/Location.html#setBlockType-org.spongepowered.api.block.BlockType-org.spongepowered.api.event.cause.Cause-">Location#setBlockType(BlockType, Cause)</a> method with
+the new <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/block/BlockType.html">BlockType</a>. As with most block modifications, we need to supply a cause for the block change. In most
+cases, this can be your main plugin class. The following code turns the block at the given <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/Location.html">Location</a> into a
+sponge:</p>
 <blockquote>
 <div><div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.block.BlockTypes</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.spongepowered.api.event.cause.Cause</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.world.Location</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.world.World</span><span class="o">;</span>
 
-<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setToSponge</span><span class="o">(</span><span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">blockLoc</span><span class="o">)</span> <span class="o">{</span>
-    <span class="n">blockLoc</span><span class="o">.</span><span class="na">setBlockType</span><span class="o">(</span><span class="n">BlockTypes</span><span class="o">.</span><span class="na">SPONGE</span><span class="o">);</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setToSponge</span><span class="o">(</span><span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">blockLoc</span><span class="o">,</span> <span class="n">Object</span> <span class="n">myPluginInstance</span><span class="o">)</span> <span class="o">{</span>
+    <span class="n">blockLoc</span><span class="o">.</span><span class="na">setBlockType</span><span class="o">(</span><span class="n">BlockTypes</span><span class="o">.</span><span class="na">SPONGE</span><span class="o">,</span> <span class="n">Cause</span><span class="o">.</span><span class="na">source</span><span class="o">(</span><span class="n">myPluginInstance</span><span class="o">).</span><span class="na">build</span><span class="o">());</span>
 <span class="o">}</span>
 </pre></div>
 </div>
 </div></blockquote>
-<p>它就是这么简单。如果你只是想要“删除”一个方法（也就是把它替换成空气），你可以只使用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/Location.html#removeBlock--">Location#removeBlock()</a> 这一由 <code class="docutils literal"><span class="pre">Location</span></code> 提供的方法。</p>
+<p>It&#8217;s as simple as that. If you just want to &#8216;delete&#8217; a block (which is done by replacing it with air), you may just
+use the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/Location.html#removeBlock-org.spongepowered.api.event.cause.Cause-">Location#removeBlock(Cause)</a> method provided by <code class="docutils literal"><span class="pre">Location</span></code>.</p>
 </div>
 <div class="section" id="altering-block-states">
 <h2>更改方块状态<a class="headerlink" href="#altering-block-states" title="永久链接至标题">¶</a></h2>
-<p>和之前的例子类似，提供了 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/Location.html#setBlock-org.spongepowered.api.block.BlockState-">Location#setBlock(BlockState)</a> 方法的 <code class="docutils literal"><span class="pre">Location</span></code> 类需要传入一个 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/block/BlockState.html">BlockState</a> 参数。如果想要使用它，你首先必须获取一个 <code class="docutils literal"><span class="pre">BlockState</span></code> 用于修改。你可以使用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/Location.html#getBlock--">Location#getBlock()</a> 方法获取一个方块的当前 <code class="docutils literal"><span class="pre">BlockState</span></code> 或者使用一个 <code class="docutils literal"><span class="pre">BlockType</span></code> 的默认状态。下面的例子阐释了后面的使用方法。这一例子先获取了一个海绵方块的默认状态然后进行修改，以产生一个湿海绵方块。</p>
+<p>Similar to the above example, the <code class="docutils literal"><span class="pre">Location</span></code> class provides a <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/Location.html#setBlock-org.spongepowered.api.block.BlockState-org.spongepowered.api.event.cause.Cause-">Location#setBlock(BlockState, Cause)</a> method
+accepting a new <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/block/BlockState.html">BlockState</a>. To make use of it, you first must acquire a <code class="docutils literal"><span class="pre">BlockState</span></code> you can modify. You
+can do so either by getting the block&#8217;s current state via the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/Location.html#getBlock--">Location#getBlock()</a> method or by using a
+<code class="docutils literal"><span class="pre">BlockType</span></code>&#8216;s default state. The latter is demonstrated below. The default state for a Sponge block is retrieved
+and then modified to directly create a wet sponge block:</p>
 <blockquote>
 <div><div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.Sponge</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.block.BlockState</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.data.manipulator.mutable.WetData</span><span class="o">;</span>
 
-<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setToWetSponge</span><span class="o">(</span><span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">blockLoc</span><span class="o">)</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">setToWetSponge</span><span class="o">(</span><span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">blockLoc</span><span class="o">,</span> <span class="n">Object</span> <span class="n">myPluginInstance</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">BlockState</span> <span class="n">state</span> <span class="o">=</span> <span class="n">BlockTypes</span><span class="o">.</span><span class="na">SPONGE</span><span class="o">.</span><span class="na">getDefaultState</span><span class="o">();</span>
     <span class="n">WetData</span> <span class="n">wetness</span> <span class="o">=</span> <span class="n">Sponge</span><span class="o">.</span><span class="na">getDataManager</span><span class="o">().</span>
         <span class="n">getManipulatorBuilder</span><span class="o">(</span><span class="n">WetData</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">get</span><span class="o">().</span><span class="na">create</span><span class="o">();</span>
     <span class="n">wetness</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">wetness</span><span class="o">.</span><span class="na">wet</span><span class="o">().</span><span class="na">set</span><span class="o">(</span><span class="kc">true</span><span class="o">));</span>
     <span class="n">BlockState</span> <span class="n">newState</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="n">wetness</span><span class="o">.</span><span class="na">asImmutable</span><span class="o">()).</span><span class="na">get</span><span class="o">();</span>
-    <span class="n">blockLoc</span><span class="o">.</span><span class="na">setBlock</span><span class="o">(</span><span class="n">newState</span><span class="o">);</span>
+    <span class="n">blockLoc</span><span class="o">.</span><span class="na">setBlock</span><span class="o">(</span><span class="n">newState</span><span class="o">,</span> <span class="n">Cause</span><span class="o">.</span><span class="na">source</span><span class="o">(</span><span class="n">myPluginInstance</span><span class="o">).</span><span class="na">build</span><span class="o">());</span>
 <span class="o">}</span>
 </pre></div>
 </div>
@@ -620,7 +629,7 @@
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.data.manipulator.mutable.block.DirtData</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.data.type.DirtTypes</span><span class="o">;</span>
 
-<span class="kd">public</span> <span class="kt">void</span> <span class="nf">dirtToPodzol</span><span class="o">(</span><span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">blockLoc</span><span class="o">)</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">dirtToPodzol</span><span class="o">(</span><span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">blockLoc</span><span class="o">,</span> <span class="n">Object</span> <span class="n">myPluginInstance</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">BlockState</span> <span class="n">state</span> <span class="o">=</span> <span class="n">blockLoc</span><span class="o">.</span><span class="na">getBlock</span><span class="o">();</span>
     <span class="n">Optional</span><span class="o">&lt;</span><span class="n">ImmutableDirtData</span><span class="o">&gt;</span> <span class="n">dirtDataOpt</span> <span class="o">=</span>
         <span class="n">state</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">ImmutableDirtData</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
@@ -629,7 +638,7 @@
         <span class="n">DirtData</span> <span class="n">dirtData</span> <span class="o">=</span> <span class="n">dirtDataOpt</span><span class="o">.</span><span class="na">get</span><span class="o">().</span><span class="na">asMutable</span><span class="o">();</span>
         <span class="n">dirtData</span><span class="o">.</span><span class="na">set</span><span class="o">(</span><span class="n">Keys</span><span class="o">.</span><span class="na">DIRT_TYPE</span><span class="o">,</span> <span class="n">DirtTypes</span><span class="o">.</span><span class="na">PODZOL</span><span class="o">);</span>
         <span class="n">BlockState</span> <span class="n">dirtState</span> <span class="o">=</span> <span class="n">state</span><span class="o">.</span><span class="na">with</span><span class="o">(</span><span class="n">dirtData</span><span class="o">.</span><span class="na">asImmutable</span><span class="o">()).</span><span class="na">get</span><span class="o">();</span>
-        <span class="n">blockLoc</span><span class="o">.</span><span class="na">setBlock</span><span class="o">(</span><span class="n">dirtState</span><span class="o">);</span>
+        <span class="n">blockLoc</span><span class="o">.</span><span class="na">setBlock</span><span class="o">(</span><span class="n">dirtState</span><span class="o">,</span> <span class="n">Cause</span><span class="o">.</span><span class="na">source</span><span class="o">(</span><span class="n">myPluginInstance</span><span class="o">).</span><span class="na">build</span><span class="o">());</span>
     <span class="o">}</span>
 <span class="o">}</span>
 </pre></div>
@@ -641,11 +650,11 @@
 <div><div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span>
     <span class="nn">org.spongepowered.api.data.manipulator.immutable.block.ImmutableWetData</span><span class="o">;</span>
 
-<span class="kd">public</span> <span class="kt">void</span> <span class="nf">dry</span><span class="o">(</span><span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">blockLoc</span><span class="o">)</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">dry</span><span class="o">(</span><span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">blockLoc</span><span class="o">,</span> <span class="n">Object</span> <span class="n">myPluginInstance</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">BlockState</span> <span class="n">wetState</span> <span class="o">=</span> <span class="n">blockLoc</span><span class="o">.</span><span class="na">getBlock</span><span class="o">();</span>
     <span class="n">Optional</span><span class="o">&lt;</span><span class="n">BlockState</span><span class="o">&gt;</span> <span class="n">dryState</span> <span class="o">=</span> <span class="n">wetState</span><span class="o">.</span><span class="na">without</span><span class="o">(</span><span class="n">ImmutableWetData</span><span class="o">.</span><span class="na">class</span><span class="o">);</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">dryState</span><span class="o">.</span><span class="na">isPresent</span><span class="o">())</span> <span class="o">{</span>
-        <span class="n">blockLoc</span><span class="o">.</span><span class="na">setBlock</span><span class="o">(</span><span class="n">dryState</span><span class="o">.</span><span class="na">get</span><span class="o">());</span>
+        <span class="n">blockLoc</span><span class="o">.</span><span class="na">setBlock</span><span class="o">(</span><span class="n">dryState</span><span class="o">.</span><span class="na">get</span><span class="o">(),</span> <span class="n">Cause</span><span class="o">.</span><span class="na">source</span><span class="o">(</span><span class="n">myPluginInstance</span><span class="o">).</span><span class="na">build</span><span class="o">());</span>
     <span class="o">}</span>
 <span class="o">}</span>
 </pre></div>
@@ -659,9 +668,9 @@
 <blockquote>
 <div><div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.block.BlockSnapshot</span><span class="o">;</span>
 
-<span class="kd">public</span> <span class="kt">void</span> <span class="nf">copyBlock</span><span class="o">(</span><span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">from</span><span class="o">,</span> <span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">to</span><span class="o">)</span> <span class="o">{</span>
+<span class="kd">public</span> <span class="kt">void</span> <span class="nf">copyBlock</span><span class="o">(</span><span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">from</span><span class="o">,</span> <span class="n">Location</span><span class="o">&lt;</span><span class="n">World</span><span class="o">&gt;</span> <span class="n">to</span><span class="o">,</span> <span class="n">Object</span> <span class="n">myPluginInstance</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">BlockSnapshot</span> <span class="n">snapshot</span> <span class="o">=</span> <span class="n">from</span><span class="o">.</span><span class="na">createSnapshot</span><span class="o">();</span>
-    <span class="n">to</span><span class="o">.</span><span class="na">setBlock</span><span class="o">(</span><span class="n">snapshot</span><span class="o">.</span><span class="na">getState</span><span class="o">());</span>
+    <span class="n">to</span><span class="o">.</span><span class="na">setBlock</span><span class="o">(</span><span class="n">snapshot</span><span class="o">.</span><span class="na">getState</span><span class="o">(),</span> <span class="n">Cause</span><span class="o">.</span><span class="na">source</span><span class="o">(</span><span class="n">myPluginInstance</span><span class="o">).</span><span class="na">build</span><span class="o">());</span>
 <span class="o">}</span>
 </pre></div>
 </div>

@@ -318,7 +318,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/childcommands.html">子命令</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/service.html">命令管理器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/commandcallable.html">低级命令API</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../commands/commandcallable.html">低级别命令 API</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -338,10 +338,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../assets.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../assets.html">使用 Asset API</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">配置插件</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">插件配置</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../configuration/loaders.html">配置加载器</a><ul class="simple">
 </ul>
 </li>
@@ -353,24 +353,24 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../text/index.html">Text</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../text/index.html">文本 API</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../text/text.html">创建文本</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../text/representations/index.html">序列化文本</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/xml.html">TextXML Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/json.html">JSON Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Configuration Format</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">分页服务</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">分页</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/messagechannels.html">Message Channels</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../text/messagechannels.html">消息通道</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">TextTemplates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">文本模板</a></li>
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">数据 API</a><ul class="current">
@@ -548,7 +548,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/staff.html">工作人员</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Sponge 词汇表</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Sponge 术语表</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/assets.html">艺术资源</a><ul class="simple">
@@ -619,22 +619,30 @@
 </div>
 <div class="section" id="datatranslator">
 <h2>DataTranslator<a class="headerlink" href="#datatranslator" title="永久链接至标题">¶</a></h2>
-<p>Sponge 的默认实现通常为 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/MemoryDataView.html">MemoryDataView</a> 和 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/MemoryDataContainer.html">MemoryDataContainer</a> ，这意味着这些数据只会存储在内存中，并不会存活到服务端重启后。如果想要存储一个 <code class="docutils literal"><span class="pre">DataContainer</span></code> ，我们首先需要把它转换为一个可储存的形式。 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/translator/DataTranslator.html">DataTranslator</a> 就是用于这种转换的。比如 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/translator/ConfigurateTranslator.html">ConfigurateTranslator</a> ，就是用于把一个 <code class="docutils literal"><span class="pre">DataView</span></code> 转换为一个 <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/ConfigurationNode.html">ConfigurationNode</a> 的，反之亦然。 <code class="docutils literal"><span class="pre">ConfigurationNode</span></code> 就可以很方便地存储到配置文件中了，详见 <a class="reference internal" href="../configuration/index.html"><em>配置插件</em></a> 这一部分。</p>
+<p>In Sponge, generally the implementations <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/MemoryDataView.html">MemoryDataView</a> and <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/MemoryDataContainer.html">MemoryDataContainer</a> are used, which
+reside in memory only and thus will not persist over a server restart. In order to persistently store a
+<code class="docutils literal"><span class="pre">DataContainer</span></code>, it first has to be converted into a storable representation.</p>
+<p>Using the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/persistence/DataTranslators.html#CONFIGURATION_NODE">DataTranslators#CONFIGURATION_NODE</a> implementation of <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/persistence/DataTranslator.html">DataTranslator</a>, we can convert a
+<code class="docutils literal"><span class="pre">DataView</span></code> to a <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/ConfigurationNode.html">ConfigurationNode</a> and vice versa. <code class="docutils literal"><span class="pre">ConfigurationNode</span></code>s can then be written to and read
+from persistent files using the <a class="reference internal" href="../configuration/index.html"><em>Configurate Library</em></a>.</p>
 <p><strong>代码示例：把 HealthData 序列化为配置文件数据</strong></p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ninja.leaping.configurate.ConfigurationNode</span><span class="o">;</span>
-<span class="kn">import</span> <span class="nn">org.spongepowered.api.data.translator.ConfigurateTranslator</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.spongepowered.api.data.persistence.DataTranslator</span><span class="o">;</span>
+<span class="kn">import</span> <span class="nn">org.spongepowered.api.data.persistence.DataTranslators</span><span class="o">;</span>
 
-<span class="kd">public</span> <span class="kt">void</span> <span class="nf">writeToConfig</span><span class="o">(</span><span class="n">HealthData</span> <span class="n">data</span><span class="o">,</span> <span class="n">ConfigurationNode</span> <span class="n">config</span><span class="o">)</span> <span class="o">{</span>
-    <span class="kd">final</span> <span class="n">ConfigurateTranslator</span> <span class="n">translator</span> <span class="o">=</span> <span class="n">ConfigurateTranslator</span><span class="o">.</span><span class="na">instance</span><span class="o">();</span>
+<span class="kd">public</span> <span class="n">ConfigurationNode</span> <span class="nf">translateToConfig</span><span class="o">(</span><span class="n">HealthData</span> <span class="n">data</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="n">DataTranslator</span><span class="o">&lt;</span><span class="n">ConfigurationNode</span><span class="o">&gt;</span> <span class="n">translator</span> <span class="o">=</span> <span class="n">DataTranslators</span><span class="o">.</span><span class="na">CONFIGURATION_NODE</span><span class="o">;</span>
     <span class="kd">final</span> <span class="n">DataView</span> <span class="n">container</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="na">toContainer</span><span class="o">();</span>
-    <span class="n">translator</span><span class="o">.</span><span class="na">translateContainerToData</span><span class="o">(</span><span class="n">config</span><span class="o">,</span> <span class="n">container</span><span class="o">);</span>
+    <span class="k">return</span> <span class="n">translator</span><span class="o">.</span><span class="na">translate</span><span class="o">(</span><span class="n">container</span><span class="o">);</span>
 <span class="o">}</span>
 </pre></div>
 </div>
 <p><a href="#id1"><span class="problematic" id="id2">**</span></a>代码示例：把配置文件数据反序列化为 HealthData **</p>
-<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="n">Optional</span><span class="o">&lt;</span><span class="n">HealthData</span><span class="o">&gt;</span> <span class="nf">readHealthFromConfig</span><span class="o">(</span><span class="n">ConfigurationNode</span> <span class="n">config</span><span class="o">)</span> <span class="o">{</span>
-    <span class="kd">final</span> <span class="n">ConfigurateTranslator</span> <span class="n">translator</span> <span class="o">=</span> <span class="n">ConfigurateTranslator</span><span class="o">.</span><span class="na">instance</span><span class="o">();</span>
-    <span class="kd">final</span> <span class="n">DataView</span> <span class="n">container</span> <span class="o">=</span> <span class="n">translator</span><span class="o">.</span><span class="na">translateFrom</span><span class="o">(</span><span class="n">config</span><span class="o">);</span>
+<div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Optional</span><span class="o">;</span>
+
+<span class="kd">public</span> <span class="n">Optional</span><span class="o">&lt;</span><span class="n">HealthData</span><span class="o">&gt;</span> <span class="nf">translateFromConfig</span><span class="o">(</span><span class="n">ConfigurationNode</span> <span class="n">node</span><span class="o">)</span> <span class="o">{</span>
+    <span class="kd">final</span> <span class="n">DataTranslator</span><span class="o">&lt;</span><span class="n">ConfigurationNode</span><span class="o">&gt;</span> <span class="n">translator</span> <span class="o">=</span> <span class="n">DataTranslators</span><span class="o">.</span><span class="na">CONFIGURATION_NODE</span><span class="o">;</span>
+    <span class="kd">final</span> <span class="n">DataView</span> <span class="n">container</span> <span class="o">=</span> <span class="n">translator</span><span class="o">.</span><span class="na">translate</span><span class="o">(</span><span class="n">node</span><span class="o">);</span>
     <span class="k">return</span> <span class="n">deserializeHealth</span><span class="o">(</span><span class="n">container</span><span class="o">);</span>
 <span class="o">}</span>
 </pre></div>

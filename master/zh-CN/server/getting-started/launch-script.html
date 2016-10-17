@@ -318,7 +318,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/childcommands.html">子命令</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/service.html">命令管理器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/commandcallable.html">低级命令API</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/commandcallable.html">低级别命令 API</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -338,10 +338,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/assets.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/assets.html">使用 Asset API</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/configuration/index.html">配置插件</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/configuration/index.html">插件配置</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/configuration/loaders.html">配置加载器</a><ul class="simple">
 </ul>
 </li>
@@ -353,24 +353,24 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/text/index.html">Text</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/text/index.html">文本 API</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/text/text.html">创建文本</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/representations/index.html">序列化文本</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../plugin/text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../plugin/text/representations/xml.html">TextXML Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../plugin/text/representations/json.html">JSON Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../plugin/text/representations/configurate.html">Configuration Format</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/pagination.html">分页服务</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/pagination.html">分页</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/messagechannels.html">Message Channels</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/messagechannels.html">消息通道</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/templates.html">TextTemplates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/templates.html">文本模板</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/data/index.html">数据 API</a><ul>
@@ -548,7 +548,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/staff.html">工作人员</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Sponge 词汇表</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Sponge 术语表</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/assets.html">艺术资源</a><ul class="simple">
@@ -596,7 +596,7 @@ pause
 <p>将你的Windows脚本保存为 <code class="docutils literal"><span class="pre">launch.bat</span></code>.</p>
 </div>
 <div class="section" id="mac-os-x">
-<h3>Mac OS X系统<a class="headerlink" href="#mac-os-x" title="永久链接至标题">¶</a></h3>
+<h3>Mac OS X<a class="headerlink" href="#mac-os-x" title="永久链接至标题">¶</a></h3>
 <div class="highlight-none"><div class="highlight"><pre><span></span>#!/bin/bash
 cd &quot;$(dirname &quot;$0&quot;)&quot;
 java -Xms1G -Xmx2G -jar forge-1.8-XYZ-universal.jar
@@ -605,7 +605,7 @@ java -Xms1G -Xmx2G -jar forge-1.8-XYZ-universal.jar
 <p>将你的Mac启动脚本保存为 <code class="docutils literal"><span class="pre">launch.command</span></code>.</p>
 </div>
 <div class="section" id="linux">
-<h3>Linux系统<a class="headerlink" href="#linux" title="永久链接至标题">¶</a></h3>
+<h3>Linux<a class="headerlink" href="#linux" title="永久链接至标题">¶</a></h3>
 <div class="highlight-none"><div class="highlight"><pre><span></span>#!/bin/sh
 cd &quot;$(dirname &quot;$(readlink -fn &quot;$0&quot;)&quot;)&quot;
 java -Xms1G -Xmx2G -jar forge-1.8-XYZ-universal.jar
@@ -620,7 +620,7 @@ java -Xms1G -Xmx2G -jar forge-1.8-XYZ-universal.jar
 <p>您可以通过双击它来运行你的启动脚本。如果你正在使用一个控制台或终端，导航到该脚本的目录并运行它。请记住，为了运行一个服务器，您必须同意 Mojang EULA 。</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">The default Minecraft server GUI console is disabled by Sponge, because it is very processor-intensive.</p>
+<p class="last">Sponge 服务器禁用了 Minecraft 的默认服务端 GUI ，因为它太消耗处理器资源了。</p>
 </div>
 <div class="admonition warning">
 <p class="first admonition-title">警告</p>

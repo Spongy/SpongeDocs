@@ -34,8 +34,8 @@
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 5.0.0 文档" href="../../index.html" />
-        <link rel="up" title="配置插件" href="index.html" />
-        <link rel="next" title="Text" href="../text/index.html" />
+        <link rel="up" title="插件配置" href="index.html" />
+        <link rel="next" title="文本 API" href="../text/index.html" />
         <link rel="prev" title="配置节点" href="nodes.html" />
     
   <script type="text/javascript">
@@ -158,7 +158,7 @@
         <ul>
         <li><a href="../../index.html">Sponge 5.0.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >插件开发</a><i class="fa fa-fw fa-chevron-right"></i></li>
-        <li><a href="index.html" accesskey="U">配置插件</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="index.html" accesskey="U">插件配置</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
     <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -318,7 +318,7 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/childcommands.html">子命令</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../commands/service.html">命令管理器</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/commandcallable.html">低级命令API</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../commands/commandcallable.html">低级别命令 API</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -338,10 +338,10 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../assets.html">The Asset API</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../assets.html">使用 Asset API</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">配置插件</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">插件配置</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="loaders.html">配置加载器</a><ul class="simple">
 </ul>
 </li>
@@ -353,24 +353,24 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../text/index.html">Text</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../text/index.html">文本 API</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../text/text.html">创建文本</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../text/representations/index.html">序列化文本</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/xml.html">TextXML Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/json.html">JSON Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Configuration Format</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">分页服务</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">分页</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/messagechannels.html">Message Channels</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../text/messagechannels.html">消息通道</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">TextTemplates</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../text/templates.html">文本模板</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../data/index.html">数据 API</a><ul>
@@ -548,7 +548,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/staff.html">工作人员</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Sponge 词汇表</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Sponge 术语表</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/assets.html">艺术资源</a><ul class="simple">
@@ -576,11 +576,8 @@
                   
   <div class="section" id="serializing-objects">
 <h1>序列化对象<a class="headerlink" href="#serializing-objects" title="永久链接至标题">¶</a></h1>
-<p>The Configurate library also provides the means to tweak automatic serialization and deserialization of objects.
-Per default, a set of data types can be (de)serialized: among others Strings, ints, doubles, UUIDs, Lists
-(of serializable values) and Maps (where both keys and values are serializable). But if you want to write your
-custom data structures to a config file, this will not be enough.</p>
-<p>Imagine a data structure tracking how many diamonds a player has mined. It might look a little like this:</p>
+<p>Configurate 库还提供了调整对象的自动序列化和反序列化的方法。默认情况下，一组数据类型可以被序列化和反序列化：其中包括字符串，整数，双精度，UUID，列表（其中的值都是可序列化的）和地图（其中的键值对都是可序列化的）。但是如果你想将你的自定义数据结构写入配置文件，这还远远不够。</p>
+<p>想象一个数据结构用于跟踪一个玩家已经挖掘了多少钻石。它可能看起来有点像这样：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">DiamondCounter</span> <span class="o">{</span>
     <span class="kd">private</span> <span class="n">UUID</span> <span class="n">playerUUID</span><span class="o">;</span>
     <span class="kd">private</span> <span class="kt">int</span> <span class="n">diamonds</span><span class="o">;</span>
@@ -589,12 +586,10 @@ custom data structures to a config file, this will not be enough.</p>
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>Also assume some methods to access those fields, a nice constructor setting both of those etc.</p>
+<p>此外，我们还假定一些方法用于访问这些字段，一个漂亮的构造函数用于设置，等等。</p>
 <div class="section" id="creating-a-custom-typeserializer">
-<h2>Creating a custom TypeSerializer<a class="headerlink" href="#creating-a-custom-typeserializer" title="永久链接至标题">¶</a></h2>
-<p>A very straightforward way of writing and loading such a data structure is providing a custom <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/objectmapping/serialize/TypeSerializer.html">TypeSerializer</a>.
-The <code class="docutils literal"><span class="pre">TypeSerializer</span></code> interface provides two methods, one to write the data from an object to a configuration node and
-one to create an object from a given configuration node.</p>
+<h2>自定义一个 TypeSerializer<a class="headerlink" href="#creating-a-custom-typeserializer" title="永久链接至标题">¶</a></h2>
+<p>一种非常直接的编写和加载这种数据结构的方法是提供一个自定义的 <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/objectmapping/serialize/TypeSerializer.html">TypeSerializer</a>。 <code class="docutils literal"><span class="pre">TypeSerializer</span></code> 接口提供了两种方法，一种用于将数据从对象写入配置节点，一种用于从给定的配置节点创建对象。</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">com.google.common.reflect.TypeToken</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">ninja.leaping.configurate.objectmapping.ObjectMappingException</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">ninja.leaping.configurate.objectmapping.serialize.TypeSerializer</span><span class="o">;</span>
@@ -618,16 +613,14 @@ one to create an object from a given configuration node.</p>
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>This <code class="docutils literal"><span class="pre">TypeSerializer</span></code> must then be registered with Configurate. This can be done either globally, by registering to
-the default <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/objectmapping/serialize/TypeSerializerCollection.html">TypeSerializerCollection</a> or locally, by specifying it in the <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/ConfigurationOptions.html">ConfigurationOptions</a>
-when loading your config.</p>
-<p><strong>Code Example: Registering a TypeSerializer globally</strong></p>
+<p>这一 <code class="docutils literal"><span class="pre">TypeSerializer</span></code> 必须通过使用 Configurate 来注册。可以通过全局的注册方式，也就是通过注册到默认的 <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/objectmapping/serialize/TypeSerializerCollection.html">TypeSerializerCollection</a> ，也可以通过本地的注册方式，也就是在加载配置文件时自定义 <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/ConfigurationOptions.html">ConfigurationOptions</a> 来完成。</p>
+<p><strong>代码示例：注册全局的 TypeSerializer</strong></p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ninja.leaping.configurate.objectmapping.serialize.TypeSerializers</span><span class="o">;</span>
 
 <span class="n">TypeSerializers</span><span class="o">.</span><span class="na">getDefaultSerializers</span><span class="o">().</span><span class="na">registerType</span><span class="o">(</span><span class="n">TypeToken</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">DiamondCounter</span><span class="o">.</span><span class="na">class</span><span class="o">),</span> <span class="k">new</span> <span class="n">DiamondCounterSerializer</span><span class="o">());</span>
 </pre></div>
 </div>
-<p><strong>Code Example: Registering a TypeSerializer locally</strong></p>
+<p><strong>代码示例：注册本地的 TypeSerializer</strong></p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ninja.leaping.configurate.ConfigurationNode</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">ninja.leaping.configurate.ConfigurationOptions</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">ninja.leaping.configurate.objectmapping.serialize.TypeSerializerCollection</span><span class="o">;</span>
@@ -641,16 +634,12 @@ when loading your config.</p>
 </div>
 <div class="admonition warning">
 <p class="first admonition-title">警告</p>
-<p class="last">If you provide a custom <code class="docutils literal"><span class="pre">TypeSerializer</span></code> for types that are not introduced by your own plugin, you should only
-ever register them locally in order to avoid conflicts with other plugins or Sponge, caused by a <code class="docutils literal"><span class="pre">TypeSerializer</span></code>
-being overwritten.</p>
+<p class="last">如果你为在你自己的插件中没有引入的类型提供了一个自定义的 <code class="docutils literal"><span class="pre">TypeSerializer</span></code> ，那么你应该只在本地注册它们，以避免因为 <code class="docutils literal"><span class="pre">TypeSerializer</span></code> 被覆盖，而引起的与其他插件或 Sponge 的冲突。</p>
 </div>
 </div>
 <div class="section" id="using-objectmappers">
-<h2>Using ObjectMappers<a class="headerlink" href="#using-objectmappers" title="永久链接至标题">¶</a></h2>
-<p>Since in many cases the (de)serialization boils down to mapping fields to configuration nodes, writing such a
-<code class="docutils literal"><span class="pre">TypeSerializer</span></code> is a rather dull affair and something we&#8217;d like Configurate to do on its own. So let&#8217;s annotate our
-class with the <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/objectmapping/serialize/ConfigSerializable.html">ConfigSerializable</a> and <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/objectmapping/Setting.html">Setting</a> annotations.</p>
+<h2>使用 ObjectMapper<a class="headerlink" href="#using-objectmappers" title="永久链接至标题">¶</a></h2>
+<p>因为在许多情况下，序列化和反序列化都可以归结为映射字段到配置节点，编写这样的 <code class="docutils literal"><span class="pre">TypeSerializer</span></code> 是一个相当沉闷无聊的事情，因此我们希望 Configurate 自己做。所以让我们 使用 <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/objectmapping/serialize/ConfigSerializable.html">ConfigSerializable</a> 和 <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/objectmapping/Setting.html">Setting</a> 两个注解，来注解我们的类。</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">ninja.leaping.configurate.objectmapping.Setting</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">ninja.leaping.configurate.objectmapping.serialize.ConfigSerializable</span><span class="o">;</span>
 
@@ -666,29 +655,17 @@ class with the <a class="reference external" href="http://zml2008.github.io/conf
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>The above example can now be serialized and deserialized from config nodes without further registration. The
-<code class="docutils literal"><span class="pre">&#64;Setting</span></code> annotations map a configuration node to the field that was annotated. It accepts two optional parameters,
-<code class="docutils literal"><span class="pre">value</span></code> and <code class="docutils literal"><span class="pre">comment</span></code>. If the <code class="docutils literal"><span class="pre">value</span></code> parameter exists, it defines the name of the node the field will be
-saved in. If it is not present, the name of the field will be used instead. So in our above example, the
-annotation ensures that the contents of the field <code class="docutils literal"><span class="pre">playerUUID</span></code> are saved to the node &#8220;player&#8221;, commented with
-&#8220;Player UUID&#8221;. The <code class="docutils literal"><span class="pre">diamonds</span></code> field however will be saved under that exact name since its annotation only
-specifies a comment. That comment will be written to the config if the implementation supports commented
-configuration nodes, otherwise it will be discarded.</p>
+<p>以上示例现在可以从配置节点序列化和反序列化，而无需进一步注册。 <code class="docutils literal"><span class="pre">&#64;Setting</span></code> 这一注解将配置节点映射到已被注解的字段。 它接受两个可选参数， <code class="docutils literal"><span class="pre">value</span></code> 和 <code class="docutils literal"><span class="pre">comment</span></code> 。如果 <code class="docutils literal"><span class="pre">value</span></code> 参数存在，它定义了用于保存字段的节点的名称。如果不存在，将使用字段的名称。所以在上面的例子中，字段的注解确保字段 <code class="docutils literal"><span class="pre">playerUUID</span></code> 的内容保存到节点“player”，并使用“Player UUID”注释。不过，“diamonds”字段将被直接保存在“diamonds”名称下，因为它的注解仅仅指定了注释。如果实现的配置节点支持注释，那么该注释将写入配置，否则将被丢弃。</p>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>
-<p class="last">You may also use the shorthand <code class="docutils literal"><span class="pre">&#64;Setting(&quot;someNode&quot;)</span></code> instead of <code class="docutils literal"><span class="pre">&#64;Setting(value=&quot;someNode&quot;)</span></code></p>
+<p class="last">你也可以使用简写的 <code class="docutils literal"><span class="pre">&#64;Setting(&quot;someNode&quot;)</span></code> 而不是 <code class="docutils literal"><span class="pre">&#64;Setting(value=&quot;someNode&quot;)</span></code></p>
 </div>
-<p>The <code class="docutils literal"><span class="pre">&#64;ConfigSerializable</span></code> annotation eliminates the need for any registration since it allows Configurate to
-just generate an <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/objectmapping/ObjectMapper.html">ObjectMapper</a> for the class. The only limitation is that Configurate needs an empty
-constructor to instantiate a new object before filling in the annotated fields.</p>
+<p>通过 <code class="docutils literal"><span class="pre">&#64;ConfigSerializable</span></code> ，我们不需要任何的注册，因为它允许 Configurate 为被注解的类生成一个对应的 <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/objectmapping/ObjectMapper.html">ObjectMapper</a> 。唯一的限制是 Configurate 需要一个空的构造函数来实例化一个新的对象，然后填充被注解的字段。</p>
 </div>
 <div class="section" id="providing-a-custom-objectmapperfactory">
-<h2>Providing a custom ObjectMapperFactory<a class="headerlink" href="#providing-a-custom-objectmapperfactory" title="永久链接至标题">¶</a></h2>
-<p>That restriction, however, can be lifted if we use a different <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/objectmapping/ObjectMapperFactory.html">ObjectMapperFactory</a>, for example a
-<a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/objectmapping/GuiceObjectMapperFactory.html">GuiceObjectMapperFactory</a>. Instead of requiring an empty constructor, it will work on any class that guice
-can create via dependency injection. This also allows for a mixture of <code class="docutils literal"><span class="pre">&#64;Inject</span></code> and <code class="docutils literal"><span class="pre">&#64;Setting</span></code> annotated fields.</p>
-<p>Your plugin can just acquire a <code class="docutils literal"><span class="pre">GuiceObjectMapperFactory</span></code> simply by dependency injection
-(see <a class="reference internal" href="../injection.html"><em>依赖注入</em></a>) and then pass it to the <code class="docutils literal"><span class="pre">ConfigurationOptions</span></code>.</p>
+<h2>提供自定义的 ObjectMapperFactory<a class="headerlink" href="#providing-a-custom-objectmapperfactory" title="永久链接至标题">¶</a></h2>
+<p>然而，如果我们使用不同的 <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/objectmapping/ObjectMapperFactory.html">ObjectMapperFactory</a> ，例如 <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/objectmapping/GuiceObjectMapperFactory.html">GuiceObjectMapperFactory</a> ，那么这个限制可以被解除。它不需要一个空的构造函数，因此可以工作在任何类，因为 Guice 可以通过依赖注入创建。这也允许混合使用 <code class="docutils literal"><span class="pre">&#64;Inject</span></code> 和 <code class="docutils literal"><span class="pre">&#64;Setting</span></code> 用于注解字段。</p>
+<p>你的插件只需通过依赖注入（参见 <a class="reference internal" href="../injection.html"><em>依赖注入</em></a> ）获取一个 <code class="docutils literal"><span class="pre">GuiceObjectMapperFactory</span></code> ，然后将其传递给 <code class="docutils literal"><span class="pre">ConfigurationOptions</span></code> 。</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.event.game.state.GamePreInitializationEvent</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.plugin.Plugin</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">com.google.common.eventbus.Subscribe</span><span class="o">;</span>
@@ -714,7 +691,7 @@ can create via dependency injection. This also allows for a mixture of <code cla
 </div>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">The above code is an example and, for brevity, lacks proper exception handling.</p>
+<p class="last">上面的代码只是一个例子。为了简洁，上面的代码缺少适当的异常处理。</p>
 </div>
 </div>
 </div>

@@ -579,6 +579,11 @@ if all dependencies are present, and sorts plugins by dependency order. Lifecycl
 order. For example, plugin A containing &#8220;[required-]after:B&#8221; will get each event after plugin B has completed work for
 the given state. Additionally, lifecycle states are global. This means that all plugins visible to each other must be
 transitioned through all states at once.</p>
+<div class="admonition warning">
+<p class="first admonition-title">경고</p>
+<p class="last">The Sponge <code class="docutils literal"><span class="pre">Server</span></code> object is not always available. Availability can be checked using the method
+<code class="docutils literal"><span class="pre">Sponge.isServerAvailable()</span></code> or <code class="docutils literal"><span class="pre">Game.isServerAvailable()</span></code>.</p>
+</div>
 <div class="section" id="state-events">
 <h2>State Events<a class="headerlink" href="#state-events" title="제목 주소">¶</a></h2>
 <p>There are three categories of state events:</p>

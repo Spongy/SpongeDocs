@@ -461,7 +461,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="manager.html">Plugin Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="manager.html">Менеджер плагинов</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="game-profile-manager.html">Game Profile Manager</a><ul class="simple">
@@ -476,7 +476,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tab-lists.html">Tab Lists</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="plugin-meta.html">Plugin Metadata</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="plugin-meta.html">Метаданные плагина</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="ray-tracing.html">Ray Tracing</a><ul class="simple">
@@ -575,6 +575,11 @@
   <div class="section" id="plugin-lifecycle">
 <h1>Жизненный цикл плагина<a class="headerlink" href="#plugin-lifecycle" title="Ссылка на этот заголовок">¶</a></h1>
 <p>Перед шагами которые делают плагин видимым, загрузчик плагинов сортирует доступные плагины по порядку, определяя их зависимости. Жизненные циклы этих плагинов выполняются в том-же порядке. Например, - плагин A имеет параметр зависимости &#8220;[required-]after:B&#8221;, то произведет каждое свое действие только после того, как плагин B закончит свои действия. Зависимости жизненного цикла являются глобальными. Это означает, что видимые друг-другу плагины должны пройти все шаги за раз.</p>
+<div class="admonition warning">
+<p class="first admonition-title">Предупреждение</p>
+<p class="last">The Sponge <code class="docutils literal"><span class="pre">Server</span></code> object is not always available. Availability can be checked using the method
+<code class="docutils literal"><span class="pre">Sponge.isServerAvailable()</span></code> or <code class="docutils literal"><span class="pre">Game.isServerAvailable()</span></code>.</p>
+</div>
 <div class="section" id="state-events">
 <h2>События изменения состояния<a class="headerlink" href="#state-events" title="Ссылка на этот заголовок">¶</a></h2>
 <p>There are three categories of state events:</p>
