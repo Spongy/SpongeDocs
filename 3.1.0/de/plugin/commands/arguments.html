@@ -122,6 +122,7 @@
       <div><i class="fa fa-fw fa-tag"></i><a>3.1.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -353,11 +354,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../data/index.html">The Data API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data/index.html">Die Daten API</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../data/keys.html">Using Keys</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../data/datamanipulators.html">Data Manipulators</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../data/datamanipulators.html">Daten-Manipulatoren</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../data/transactions.html">Transactions</a><ul class="simple">
@@ -540,18 +541,14 @@
   <div class="section" id="argument-parsing">
 <h1>Das Parsen von Argumenten<a class="headerlink" href="#argument-parsing" title="Link zu dieser Überschrift">¶</a></h1>
 <p>Der Befehl-Builder-API verfügt über einen schlagkräftigen Argument-Parser. Er konvertiert die Zeichenfolgeneingabe für Java Basistypen (ganze Zahlen, boolesche Werte, Zeichenfolgen) oder Spielobjekte (Spieler, Welten, block Typen,...). Der Parser unterstützt optionale Argumente und Flags. Er behandelt auch befehlszeilenergänzende Argumente.</p>
-<p>The parsed arguments are stored in the <code class="docutils literal"><span class="pre">CommandContext</span></code> object. If the parser returns a single object, obtain it with
-<code class="docutils literal"><span class="pre">args.&lt;T&gt;getOne(String</span> <span class="pre">key)</span></code> (<code class="docutils literal"><span class="pre">T</span></code> is the value type). Optional and weak arguments may return <code class="docutils literal"><span class="pre">Optional.empty()</span></code>.</p>
-<p>Many of the parsers may return more than one object (e.g. multiple players with a matching username). In that case, you
-must use the <code class="docutils literal"><span class="pre">args.&lt;T&gt;getAll(String</span> <span class="pre">key)</span></code> method to get the <code class="docutils literal"><span class="pre">Collection</span></code> of possible matches. <strong>Otherwise, the
-context object will throw an exception!</strong></p>
+<p>Die Analysierten Argumente werden im &#8220;CommandContext&#8221; Objekt gespeichert. Wenn der Parser ein einzelnes Objekt zurückgibt, kann man es mit <code class="docutils literal"><span class="pre">args.&lt;T&gt;getOne(String</span> <span class="pre">key)</span></code> (<code class="docutils literal"><span class="pre">T</span></code> ist der Werte Typ). Optionale und schwache Argumente können <code class="docutils literal"><span class="pre">Optional.empty()</span></code> zurückgeben.</p>
+<p>Viele der Parser können mehr als ein Objekt (z.B. mehrere Spieler mit einem übereinstimmendem Usernamen) zurückgeben. In diesem Fall muss man die <code class="docutils literal"><span class="pre">args.&lt;T&gt;getAll(String</span> <span class="pre">key)</span></code> Methode benutzen, um die <code class="docutils literal"><span class="pre">Collection</span></code> mit möglichen übereinstimmungen zu bekommen.
+<strong>Andernfalls wirft das Content Objekt eine Exception!</strong></p>
 <div class="admonition tip">
 <p class="first admonition-title">Tipp</p>
-<p class="last">You can use the <code class="docutils literal"><span class="pre">onlyOne</span></code> element to limit the amount of returned values to a single one, so you can safely use
-<code class="docutils literal"><span class="pre">args.&lt;T&gt;getOne(String</span> <span class="pre">key)</span></code>.</p>
+<p class="last">Man kann das <code class="docutils literal"><span class="pre">onlyOne</span></code> Element benutzen um die Anzahl der zurückgegebenen Werte auf eins zu Limitieren, so kann man sicher <code class="docutils literal"><span class="pre">args.&lt;T&gt;getOne(String</span> <span class="pre">key)</span></code> benutzen.</p>
 </div>
-<p>To create a new <code class="docutils literal"><span class="pre">CommandElement</span></code> (argument), use the <code class="docutils literal"><span class="pre">GenericArguments</span></code> factory class. Many command elements require
-a short text key, which is displayed in error and help messages.</p>
+<p>Um ein neues <code class="docutils literal"><span class="pre">CommandElement</span></code> (Argument) zu erstellen, benutze die <code class="docutils literal"><span class="pre">GenericArguments</span></code> Factory Klasse. Viele Befehlselemente benötigen einen kurzen Text key, welcher in einer Error- und Hilfenachricht angezeigt wird.</p>
 <p>Apply the <code class="docutils literal"><span class="pre">CommandElement</span></code> to the command builder with the <code class="docutils literal"><span class="pre">setArguments()</span></code> method. It is possible to pass more than
 one <code class="docutils literal"><span class="pre">CommandElement</span></code> to the method, thus chaining multiple arguments (e.g <code class="docutils literal"><span class="pre">/msg</span> <span class="pre">&lt;player&gt;</span> <span class="pre">&lt;msg&gt;</span></code>). This has the same
 effect as wrapping the <code class="docutils literal"><span class="pre">CommandElement</span></code> objects in a <code class="docutils literal"><span class="pre">GenericArguments.seq()</span></code> element.</p>

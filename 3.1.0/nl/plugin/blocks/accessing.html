@@ -122,6 +122,7 @@
       <div><i class="fa fa-fw fa-tag"></i><a>3.1.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -448,7 +449,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../ray-tracing.html">Ray Tracing</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorials.html">Tutorials</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../tutorials.html">Handleidingen</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -557,7 +558,7 @@
 <p class="first admonition-title">Waarschuwing</p>
 <p class="last">Let erop dat het voorbeeld hierboven niet checkt of de wereld bestaat. <code class="docutils literal"><span class="pre">getWorld(worldName).get()</span></code> faalt als er geen wereld is geladen met die naam.</p>
 </div>
-<p>Met het <code class="docutils literal"><span class="pre">Location</span></code> (Locatie) object kan je meer informatie verkrijgen over het blok. De volgende code checkt of de doorgegeven blok een vlag is door te kijken naar het type blok.</p>
+<p>Met het <code class="docutils literal"><span class="pre">Location</span></code> (Locatie) object kan je meer informatie verkrijgen over het blok. De volgende code checkt of de doorgegeven blok een banner is door te kijken naar het type blok.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.block.BlockType</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.block.BlockTypes</span><span class="o">;</span>
 
@@ -611,7 +612,7 @@ fetch the non-optional data by adding <code class="docutils literal"><span class
 </div>
 </div>
 <div class="section" id="block-states">
-<h2>Staten van een blok<a class="headerlink" href="#block-states" title="Permalink naar deze titel">¶</a></h2>
+<h2>Staten van blokken<a class="headerlink" href="#block-states" title="Permalink naar deze titel">¶</a></h2>
 <p>A <code class="docutils literal"><span class="pre">BlockState</span></code> contains a <code class="docutils literal"><span class="pre">BlockType</span></code>,  any <code class="docutils literal"><span class="pre">DataManipulator</span></code>s and properties that are applied to the
 block, and any <code class="docutils literal"><span class="pre">BlockTrait</span></code>s for a block. It stores all immutable value&#8217;s for a particular block. One use of this
 is getting an  <code class="docutils literal"><span class="pre">ImmutableDataManipulator</span></code>, as shown below:</p>

@@ -122,6 +122,7 @@
       <div><i class="fa fa-fw fa-tag"></i><a>3.1.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -353,11 +354,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/data/index.html">The Data API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/data/index.html">Die Daten API</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/data/keys.html">Using Keys</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/data/datamanipulators.html">Data Manipulators</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/data/datamanipulators.html">Daten-Manipulatoren</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/data/transactions.html">Transactions</a><ul class="simple">
@@ -609,7 +610,7 @@
 <td>sponge.command.version</td>
 </tr>
 <tr class="row-even"><td>/sponge timings</td>
-<td><p class="first last">Der Hauptbefehl für das Timings-Modul.</p>
+<td><p class="first last">Der Hauptbefehl für das Zeitmessung-Modul.</p>
 </td>
 <td>sponge.command.timings</td>
 </tr>
@@ -649,8 +650,8 @@
 </div>
 </div>
 <div class="section" id="timings">
-<h3>Timings<a class="headerlink" href="#timings" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Timings sind ein in Sponge eingebautes Werkzeug, das Serveradministratoren erlaubt die Leistung ihres Servers zu überwachen. Timings sammelt Daten über den Server, so dass später eine Auswertung erfolgen kann. Die gesammelten Informationen enthalten die MotD, Version, Uptime, Ram, installierte Plugins, Tps, Prozent der verlorenen Tps, Spielerzahl, Anzahl der Tile Entities und Entities und Chunks. Hier findest du eine Liste von Optionen für den <code class="docutils literal"><span class="pre">/sponge</span> <span class="pre">timings</span></code> Befehl:</p>
+<h3>Zeitmessungen<a class="headerlink" href="#timings" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Zeitmessungen sind ein in Sponge eingebautes Werkzeug, das Serveradministratoren erlaubt die Leistung ihres Servers zu überwachen. Zeitmessungen sammeln Daten über den Server, so das später eine Auswertung erfolgen kann. Die gesammelten Informationen enthalten die MOTD, Version, Laufzet, RAM, installierte Plugins, TPS, Prozent der verlorenen TPS, Spielerzahl, Anzahl der Tile Entities und Entities, und Chunks. Hier findest du eine Liste von Optionen für den <code class="docutils literal"><span class="pre">/sponge</span> <span class="pre">timings</span></code> Befehl:</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="38%" />
@@ -665,11 +666,11 @@
 </thead>
 <tbody valign="top">
 <tr class="row-even"><td>/sponge timings on</td>
-<td><p class="first last">Schaltet das Timings Werkzeug ein. Beachte das dies auch die Timings Daten zurücksetzt.</p>
+<td><p class="first last">Schaltet das Zeitmessung-Werkzeug ein. Beachte das dies auch die Zeitmessungs-Daten zurücksetzt.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>/sponge timings off</td>
-<td><p class="first last">Schaltet das Timings Werkzeug aus. Beachte das die meisten Timings-Befehle dann nicht mehr funktionieren und auch keine Timings aufgezeichnet werden können.</p>
+<td><p class="first last">Schaltet das Zeitmessung-Werkzeug aus. Beachte das die meisten Zeitmessung-Befehle dann nicht mehr funktionieren und auch keine Zeitmessungen aufgezeichnet werden können.</p>
 </td>
 </tr>
 <tr class="row-even"><td>/sponge timings reset</td>
@@ -677,7 +678,7 @@
 </td>
 </tr>
 <tr class="row-odd"><td>/sponge timings report</td>
-<td><p class="first last">Wertet die Timings aus, ein Link zu  <a class="reference external" href="http://timings.aikar.co">http://timings.aikar.co</a> wird bereitgestellt.</p>
+<td><p class="first last">Wertet die Zeitmessungen aus, ein Link zu <a class="reference external" href="http://timings.aikar.co">http://timings.aikar.co</a> wird bereitgestellt.</p>
 </td>
 </tr>
 <tr class="row-even"><td>/sponge timings verbon</td>
@@ -685,12 +686,12 @@
 </td>
 </tr>
 <tr class="row-odd"><td>/sponge timings verboff</td>
-<td>Disables timings monitoring at the
-verbose level. Note that high-frequency
-timings will not be available.</td>
+<td><p class="first last">Deaktiviert eine ausführliche Ausgabe der Zeitmessungen. Beachte das genaue Zeitmessungen nicht mehr verfügbar sein werden.</p>
+</td>
 </tr>
 <tr class="row-even"><td>/sponge timings cost</td>
-<td>Gets the cost of using timings.</td>
+<td><p class="first last">Fragt die Kosten für Zeitmessungen ab.</p>
+</td>
 </tr>
 </tbody>
 </table>

@@ -35,7 +35,7 @@
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 3.1.0 文档" href="../../index.html" />
         <link rel="up" title="使用实体" href="index.html" />
-        <link rel="next" title="Modifying an Entity" href="modifying.html" />
+        <link rel="next" title="修改一个实体" href="modifying.html" />
         <link rel="prev" title="使用实体" href="index.html" />
     
   <script type="text/javascript">
@@ -123,6 +123,7 @@
       <div><i class="fa fa-fw fa-tag"></i><a>3.1.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -196,8 +197,8 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/configuration/index.html">配置Sponge</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/hocon.html">HOCON简介</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/json.html">JSON语法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/hocon.html">HOCON 简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/json.html">JSON 语法</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/sponge-conf.html">global.conf</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/server-properties.html">server.properties</a></li>
 </ul>
@@ -257,10 +258,10 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">插件开发</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../workspace/index.html">建立工作目录</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../workspace/idea.html">架设Intellij IDEA</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../workspace/idea.html">设置 IntelliJ IDEA</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../workspace/eclipse.html">安装和使用Eclipse</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../workspace/eclipse.html">设置 Eclipse</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../workspace/netbeans.html">安装NetBeans</a><ul class="simple">
@@ -284,11 +285,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../lifecycle.html">插件周期</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../optional/index.html">Optionals</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../optional/basic.html">Optionals Explained</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../optional/index.html">使用 Optional</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../optional/basic.html">对于 Optional 的解释</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../optional/usage.html">Usage Examples</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../optional/usage.html">用法示例</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -300,14 +301,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../text/text.html">创建文本</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../text/representations/index.html">序列化文本</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/xml.html">TextXML Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/json.html">JSON Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Configuration Format</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">分页服务</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">分页</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Working with TextTemplates</a></li>
@@ -320,21 +321,21 @@
 <li class="toctree-l3"><a class="reference internal" href="../commands/arguments.html">参数分析</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/childcommands.html">Child Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/service.html">The Command Manager</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/commandcallable.html">低级命令API</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../commands/childcommands.html">子命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commands/service.html">命令管理器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commands/commandcallable.html">低级别命令 API</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../event/index.html">Working with Events</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Event Listeners</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">事件监听器</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/causes.html">Event Causes</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/causes.html">事件原因</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Event Filters</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/filters.html">事件过滤</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Creating Custom Events</a><ul class="simple">
@@ -342,29 +343,29 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">Configuring Plugins</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../configuration/loaders.html">加载器的配置</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">插件配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../configuration/loaders.html">配置加载器</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../configuration/nodes.html">Nodes的配置</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../configuration/nodes.html">配置节点</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../configuration/serialization.html">Serializing Objects</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../configuration/serialization.html">序列化对象</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../data/index.html">数据API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../data/keys.html">使用键盘</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../data/index.html">数据 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data/keys.html">使用数据键</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../data/datamanipulators.html">数据臂</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../data/datamanipulators.html">操作数据</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../data/transactions.html">Transactions</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../data/transactions.html">数据操作记录</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../data/serialization.html">Serializing Data</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../data/serialization.html">序列化数据</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -386,7 +387,7 @@
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">使用实体</a><ul class="current">
 <li class="toctree-l3 current"><a class="current reference internal" href="">生成一个实体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="modifying.html">Modifying an Entity</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="modifying.html">修改一个实体</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -400,7 +401,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../injection.html">注入依赖项</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../injection.html">依赖注入</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../scheduler.html">使用调度程序</a><ul class="simple">
@@ -456,7 +457,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing to Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">向 Sponge 贡献代码</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">贡献指南</a><ul class="simple">
 </ul>
 </li>
@@ -474,7 +475,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/debugging.html">在IDE中调试</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/mixins.html">Mixins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/mixins.html">Mixin</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/datamanipulator.html">Implementing DataManipulators</a><ul class="simple">
 </ul>
 </li>
@@ -493,7 +494,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于Sponge项目</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于 Sponge 项目</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">简介</a><ul class="simple">
 </ul>
 </li>
@@ -512,7 +513,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/staff.html">工作人员</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Sponge 词汇表</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Sponge 术语表</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/assets.html">艺术资源</a><ul class="simple">
@@ -540,10 +541,8 @@
                   
   <div class="section" id="spawning-an-entity">
 <h1>生成一个实体<a class="headerlink" href="#spawning-an-entity" title="永久链接至标题">¶</a></h1>
-<p>You will need three things for spawning in an <code class="docutils literal"><span class="pre">Entity</span></code>, a <code class="docutils literal"><span class="pre">Location</span></code>, an <code class="docutils literal"><span class="pre">Extent</span></code>, and an <code class="docutils literal"><span class="pre">EntityType</span></code>.
-The process for getting these is quite simple, you just need to grab a <code class="docutils literal"><span class="pre">Location</span></code> from somewhere in your plugin
-code and choose the type of <code class="docutils literal"><span class="pre">Entity</span></code> you wish to spawn.</p>
-<p>例如，让我们尝试生成一个苦力怕：</p>
+<p>你需要四样数据以指定如何在世界上生成实体： <a href="#id1"><span class="problematic" id="id2">:javadoc:`Entity`</span></a> 、 <a href="#id3"><span class="problematic" id="id4">:javadoc:`Location`</span></a> 、 <a href="#id5"><span class="problematic" id="id6">:javadoc:`Extent`</span></a> 、和 <a href="#id7"><span class="problematic" id="id8">:javadoc:`EntityType`</span></a> 。获取这些东西其实相当简单，你需要关心的只有需要插件代码中指定的 <code class="docutils literal"><span class="pre">Location</span></code> 和你想要生成的 <code class="docutils literal"><span class="pre">Entity</span></code> 的类型。</p>
+<p>例如，让我们试着去生成一个爬行者：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.entity.Entity</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.entity.EntityTypes</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.event.cause.Cause</span><span class="o">;</span>
@@ -567,9 +566,7 @@ code and choose the type of <code class="docutils literal"><span class="pre">Ent
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>This will grab the extent from our <code class="docutils literal"><span class="pre">Location</span></code>, which we will need for the actual spawning. Next, it uses this extent
-to create the entity, but do note that this does not spawn the entity in, it just will create it. We will need to
-specify the type of <code class="docutils literal"><span class="pre">Entity</span></code> to spawn, and the co-ordinates from our <code class="docutils literal"><span class="pre">Location</span></code>.</p>
+<p>这样我们就指定了 <code class="docutils literal"><span class="pre">Location</span></code> 对应的地域（Extent），用于生成我们想要生成的实体（译者注：可能的地域包括区块（Chunk）或者世界（World）等）。然后，我们使用这一地域创建了一个实体，不过需要注意的是它只是创建了一个实体，还没有在对应的地域内生成这一实体。我们需要指定 <code class="docutils literal"><span class="pre">Entity</span></code> 的类型，和其具体的 <code class="docutils literal"><span class="pre">Location</span></code> 。</p>
 <p>&#8216;CreateEntity()&#8217; 方法返回 &#8216;Optional&#8217;，因为一个&#8217;Location&#8217; 可能不适合生成一个 &#8216;Entity&#8217;。我们只是从&#8217;Optional&#8217;中得到&#8217;Entity&#8217;实例，然后可以用&#8217;Extent&#8217;在世界中生成实体。我们要为生成实体指定一个 &#8216;Cause&#8217;。生成&#8217;Entity&#8217; 最好用 &#8216; EntitySpawnCause &#8216;。在此示例中，我们说过我们的实体是一个插件刷出来的，但是我们可以使用任何原因来最好地说明为什么我们刷实体，比如刷怪笼或刷怪蛋。</p>
 <div class="admonition warning">
 <p class="first admonition-title">警告</p>

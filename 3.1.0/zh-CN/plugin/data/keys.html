@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>使用键盘 &mdash; Sponge 3.1.0 文档</title>
+     <title>使用数据键 &mdash; Sponge 3.1.0 文档</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -34,9 +34,9 @@
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 3.1.0 文档" href="../../index.html" />
-        <link rel="up" title="数据API" href="index.html" />
-        <link rel="next" title="数据臂" href="datamanipulators.html" />
-        <link rel="prev" title="数据API" href="index.html" />
+        <link rel="up" title="数据 API" href="index.html" />
+        <link rel="next" title="操作数据" href="datamanipulators.html" />
+        <link rel="prev" title="数据 API" href="index.html" />
     
   <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -123,6 +123,7 @@
       <div><i class="fa fa-fw fa-tag"></i><a>3.1.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -157,7 +158,7 @@
         <ul>
         <li><a href="../../index.html">Sponge 3.1.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >插件开发</a><i class="fa fa-fw fa-chevron-right"></i></li>
-        <li><a href="index.html" accesskey="U">数据API</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="index.html" accesskey="U">数据 API</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
     <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -196,8 +197,8 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/configuration/index.html">配置Sponge</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/hocon.html">HOCON简介</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/json.html">JSON语法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/hocon.html">HOCON 简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/json.html">JSON 语法</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/sponge-conf.html">global.conf</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/server-properties.html">server.properties</a></li>
 </ul>
@@ -257,10 +258,10 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">插件开发</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../workspace/index.html">建立工作目录</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../workspace/idea.html">架设Intellij IDEA</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../workspace/idea.html">设置 IntelliJ IDEA</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../workspace/eclipse.html">安装和使用Eclipse</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../workspace/eclipse.html">设置 Eclipse</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../workspace/netbeans.html">安装NetBeans</a><ul class="simple">
@@ -284,11 +285,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../lifecycle.html">插件周期</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../optional/index.html">Optionals</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../optional/basic.html">Optionals Explained</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../optional/index.html">使用 Optional</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../optional/basic.html">对于 Optional 的解释</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../optional/usage.html">Usage Examples</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../optional/usage.html">用法示例</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -300,14 +301,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../text/text.html">创建文本</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../text/representations/index.html">序列化文本</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/xml.html">TextXML Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/json.html">JSON Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Configuration Format</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">分页服务</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">分页</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Working with TextTemplates</a></li>
@@ -320,21 +321,21 @@
 <li class="toctree-l3"><a class="reference internal" href="../commands/arguments.html">参数分析</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/childcommands.html">Child Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/service.html">The Command Manager</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/commandcallable.html">低级命令API</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../commands/childcommands.html">子命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commands/service.html">命令管理器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commands/commandcallable.html">低级别命令 API</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../event/index.html">Working with Events</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Event Listeners</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">事件监听器</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/causes.html">Event Causes</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/causes.html">事件原因</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Event Filters</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/filters.html">事件过滤</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Creating Custom Events</a><ul class="simple">
@@ -342,29 +343,29 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">Configuring Plugins</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../configuration/loaders.html">加载器的配置</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">插件配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../configuration/loaders.html">配置加载器</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../configuration/nodes.html">Nodes的配置</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../configuration/nodes.html">配置节点</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../configuration/serialization.html">Serializing Objects</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../configuration/serialization.html">序列化对象</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">数据API</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="">使用键盘</a><ul class="simple">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">数据 API</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="">使用数据键</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="datamanipulators.html">数据臂</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="datamanipulators.html">操作数据</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="transactions.html">Transactions</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="transactions.html">数据操作记录</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="serialization.html">Serializing Data</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="serialization.html">序列化数据</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -386,7 +387,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../entities/index.html">使用实体</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../entities/spawning.html">生成一个实体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../entities/modifying.html">Modifying an Entity</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../entities/modifying.html">修改一个实体</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -400,7 +401,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../injection.html">注入依赖项</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../injection.html">依赖注入</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../scheduler.html">使用调度程序</a><ul class="simple">
@@ -456,7 +457,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing to Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">向 Sponge 贡献代码</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">贡献指南</a><ul class="simple">
 </ul>
 </li>
@@ -474,7 +475,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/debugging.html">在IDE中调试</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/mixins.html">Mixins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/mixins.html">Mixin</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/datamanipulator.html">Implementing DataManipulators</a><ul class="simple">
 </ul>
 </li>
@@ -493,7 +494,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于Sponge项目</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于 Sponge 项目</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">简介</a><ul class="simple">
 </ul>
 </li>
@@ -512,7 +513,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/staff.html">工作人员</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Sponge 词汇表</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Sponge 术语表</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/assets.html">艺术资源</a><ul class="simple">
@@ -539,12 +540,12 @@
                 <div class="body" role="main">
                   
   <div class="section" id="using-keys">
-<h1>使用键盘<a class="headerlink" href="#using-keys" title="永久链接至标题">¶</a></h1>
+<h1>使用数据键<a class="headerlink" href="#using-keys" title="永久链接至标题">¶</a></h1>
 <div class="section" id="getting-and-offering-data-using-a-key">
-<h2>Getting and offering data using a key<a class="headerlink" href="#getting-and-offering-data-using-a-key" title="永久链接至标题">¶</a></h2>
+<h2>使用数据键访问和修改数据<a class="headerlink" href="#getting-and-offering-data-using-a-key" title="永久链接至标题">¶</a></h2>
 <p>A data holder provides methods to retrieve or alter a single point of data identified by a <code class="docutils literal"><span class="pre">Key</span></code>. Let&#8217;s just start
 out with an example:</p>
-<p><strong>Code Example: Healing a data holder, if possible</strong></p>
+<p><strong>代码示例：“治疗”一个数据访问器，如果有可能的话</strong></p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.data.DataHolder</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.data.key.Keys</span><span class="o">;</span>
 
@@ -556,18 +557,9 @@ out with an example:</p>
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>Now for the details of the above function.</p>
-<p>The first line checks if our given data holder supports a current health value. Only if it does, it can be healed after
-all. Since a data holder can not have current health without having a maximum health and vice versa, a check for
-one of the keys using the <code class="docutils literal"><span class="pre">supports()</span></code> method suffices.</p>
-<p>The second line uses the <code class="docutils literal"><span class="pre">get()</span></code> function to ask the data holder for its maximum health. Besides
-<code class="docutils literal"><span class="pre">get()</span></code>, the methods <code class="docutils literal"><span class="pre">getOrNull()</span></code> and <code class="docutils literal"><span class="pre">getOrElse()</span></code> exist, all of which accept a <code class="docutils literal"><span class="pre">Key</span></code> as their first
-parameter. Generally, <code class="docutils literal"><span class="pre">get()</span></code> should be used, which will return an <code class="docutils literal"><span class="pre">Optional</span></code> of the data requested or
-<code class="docutils literal"><span class="pre">Optional.empty()</span></code> if the data holder does not support the supplied key. Since we already verified that the
-<code class="docutils literal"><span class="pre">Key</span></code> is supported, we can just call <code class="docutils literal"><span class="pre">get()</span></code> on the Optional without further checks. We could also use
-<code class="docutils literal"><span class="pre">getOrNull()</span></code> which is basically a shortcut to call <code class="docutils literal"><span class="pre">get(key).orNull()</span></code>, thus getting rid of the
-<code class="docutils literal"><span class="pre">Optional</span></code>. The third possibility would be the <code class="docutils literal"><span class="pre">getOrElse()</span></code>, which accepts a default value as a second
-parameter to be returned if the value is not present on the data holder.</p>
+<p>现在是解释上面这个方法的时候了。</p>
+<p>第一行检查这一数据访问器是否支持一个生命值。如果支持，那么就可以被“治疗”。因为一个数据访问器并没有可能在没有最大生命值的情况下拥有关于生命值的数据，反之亦然。使用 <code class="docutils literal"><span class="pre">supports()</span></code> 检查数据键是否存在足够了。</p>
+<p>第二行使用 <code class="docutils literal"><span class="pre">get()</span></code> 方法试图获取数据访问器的最大生命值。除了 <code class="docutils literal"><span class="pre">get()</span></code> 方法， <code class="docutils literal"><span class="pre">getOrNull()</span></code> 和 <code class="docutils literal"><span class="pre">getOrElse()</span></code> 同样通过在第一个参数传入 <code class="docutils literal"><span class="pre">Key</span></code> 获取数据。一般情况下应该使用 <code class="docutils literal"><span class="pre">get()</span></code> 方法获取一个表示数据的 <code class="docutils literal"><span class="pre">Optional</span></code> ，如果数据不存在则返回一个 <code class="docutils literal"><span class="pre">Optional.empty()</span></code> 。因为我们已经检查并确认了 <code class="docutils literal"><span class="pre">Key</span></code> 的存在，我们就可以直接使用 <code class="docutils literal"><span class="pre">Optional</span></code> 的 <code class="docutils literal"><span class="pre">get()</span></code> 方法，而不必进行更进一步的检查。我们也可以直接使用 <code class="docutils literal"><span class="pre">getOrNull()</span></code> ，它等价于 <code class="docutils literal"><span class="pre">get(key).orNull()</span></code> ，从而摆脱 <code class="docutils literal"><span class="pre">Optional</span></code> 。第三种方式是 <code class="docutils literal"><span class="pre">getOrElse()</span></code> ，在数据不存在时使用第二个参数提供的默认值代替。</p>
 <p>In the third line, we offer data back to the data holder. We provide a <code class="docutils literal"><span class="pre">Key</span></code> denoting the current health and the
 before acquired maximum health, thus healing the data holder to full health. There are a variety of <code class="docutils literal"><span class="pre">offer()</span></code>
 methods accepting different parameter sets, all of which return a <code class="docutils literal"><span class="pre">DataTransactionResult</span></code> containing information
@@ -584,12 +576,9 @@ data holder</p>
 </div>
 </div>
 <div class="section" id="transforming-data">
-<h2>Transforming Data<a class="headerlink" href="#transforming-data" title="永久链接至标题">¶</a></h2>
-<p>Other than getting, modifying and offering a value, there is another way of interacting with data. Using a data
-holder&#8217;s <code class="docutils literal"><span class="pre">transform()</span></code> method we can pass a <code class="docutils literal"><span class="pre">Key</span></code> and a <code class="docutils literal"><span class="pre">Function</span></code>. Internally, the value for the key will be
-retrieved and the given function applied to it. The result is then stored under the key and the <code class="docutils literal"><span class="pre">transform()</span></code>
-method will return a <code class="docutils literal"><span class="pre">DataTransactionResult</span></code> accordingly.</p>
-<p>Now, as an example, imagine we want to buff a data holder by doubling his maximum health.</p>
+<h2>转化数据<a class="headerlink" href="#transforming-data" title="永久链接至标题">¶</a></h2>
+<p>除了获取、修改或者设置一个值，还有一种方式可以和数据进行交互。通过使用数据访问器的 <code class="docutils literal"><span class="pre">transform()</span></code> 方法，我们可以传入一个 <code class="docutils literal"><span class="pre">Key</span></code> 和一个 <code class="docutils literal"><span class="pre">Function</span></code> 。在内部，对应数据键的值会被获取并使用给定的 <code class="docutils literal"><span class="pre">Function</span></code> 作用于其上。返回值随即被设置回数据访问器，并相应地返回一个 <code class="docutils literal"><span class="pre">DataTransactionResult</span></code> 。</p>
+<p>现在，作为示例，我们设置一个数据访问器的最大生命值为原先的两倍。</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.function.Function</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">buff</span><span class="o">(</span><span class="n">DataHolder</span> <span class="n">target</span><span class="o">)</span> <span class="o">{</span>
@@ -602,7 +591,7 @@ method will return a <code class="docutils literal"><span class="pre">DataTransa
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>Or, if you use Java 8, you&#8217;re able to shorten the line with lambda expressions:</p>
+<p>当然，因为你在使用 Java 8，所以你可以直接使用 Lambda 表达式减少代码长度：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">buff</span><span class="o">(</span><span class="n">DataHolder</span> <span class="n">target</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">target</span><span class="o">.</span><span class="na">transform</span><span class="o">(</span><span class="n">Keys</span><span class="o">.</span><span class="na">MAX_HEALTH</span><span class="o">,</span> <span class="n">d</span> <span class="o">-&gt;</span> <span class="o">(</span><span class="n">d</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">?</span> <span class="mi">0</span> <span class="o">:</span> <span class="mi">2</span><span class="o">*</span><span class="n">d</span><span class="o">);</span>
 <span class="o">}</span>
@@ -613,13 +602,13 @@ check has been performed if the target actually supports the <code class="docuti
 the <code class="docutils literal"><span class="pre">transform()</span></code> function will fail and return a <code class="docutils literal"><span class="pre">DataTransactionResult</span></code> indicating so.</p>
 </div>
 <div class="section" id="keyed-values">
-<h2>Keyed Values<a class="headerlink" href="#keyed-values" title="永久链接至标题">¶</a></h2>
+<h2>数据值<a class="headerlink" href="#keyed-values" title="永久链接至标题">¶</a></h2>
 <p>There are cases where you may care about not only the direct value for a Key, but the keyed value
 encapsulating it. In that case, use the <code class="docutils literal"><span class="pre">getValue(key)</span></code> method instead of <code class="docutils literal"><span class="pre">get(key)</span></code>. You will receive an
 object inheriting from <code class="docutils literal"><span class="pre">BaseValue</span></code> which contains a copy of the original value. Since we know that current
 health is a <code class="docutils literal"><span class="pre">MutableBoundedValue</span></code>, we can find out what is the minimum possible value and set our target&#8217;s
 health just a tiny bit above that.</p>
-<p><strong>Code Example: Bring a target to the brink of death</strong></p>
+<p><strong>代码示例：使目标濒临死亡</strong></p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.data.value.mutable.MutableBoundedValue</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">scare</span><span class="o">(</span><span class="n">DataHolder</span> <span class="n">target</span><span class="o">)</span> <span class="o">{</span>
@@ -632,13 +621,7 @@ health just a tiny bit above that.</p>
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>Again, we check if our target support the health key and then obtain the keyed value. A
-<code class="docutils literal"><span class="pre">MutableBoundedValue</span></code> contains a <code class="docutils literal"><span class="pre">getMinValue()</span></code> method, so we obtain the minimal value, add 1 and then set
-it to our data container. Internally, the <code class="docutils literal"><span class="pre">set()</span></code> method performs a check if our supplied value is valid and
-silently fails if it is not. Calling <code class="docutils literal"><span class="pre">health.set(-2)</span></code> would not change the value within <code class="docutils literal"><span class="pre">health</span></code> since it
-would fail the validity checks. To finally apply our changes to the target, we need to offer the keyed value
-back to it. As a keyed value also contains the <code class="docutils literal"><span class="pre">Key</span></code> used to identify it, calling <code class="docutils literal"><span class="pre">target.offer(health)</span></code>
-is equivalent to <code class="docutils literal"><span class="pre">target.offer(health.getKey(),</span> <span class="pre">health.get())</span></code>.</p>
+<p>我们再一次检查目标数据访问器是否支持特定数据键，并获取到了对应的数据值，一个包含有 <code class="docutils literal"><span class="pre">getMinValue()</span></code> 方法的 <code class="docutils literal"><span class="pre">MutableBoundedValue</span></code> 。因此我们可以获得最小生命值，并加一设置回数据访问器。在内部， <code class="docutils literal"><span class="pre">set()</span></code> 这一方法会在设置数据前检查其是否合法并在不合法时悄无声息地返回一个失败结果。执行 <code class="docutils literal"><span class="pre">health.set(-2)</span></code> 并不会改变什么因为设置的数据不合法。最后，我们还是需要把这一包装起来的数据值设置回数据访问器。执行 <code class="docutils literal"><span class="pre">target.offer(health)</span></code> 和执行 <code class="docutils literal"><span class="pre">target.offer(health.getKey(),</span> <span class="pre">health.get())</span></code> 等价。</p>
 </div>
 </div>
 

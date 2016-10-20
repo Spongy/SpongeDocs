@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Transactions &mdash; Sponge 3.1.0 文档</title>
+     <title>数据操作记录 &mdash; Sponge 3.1.0 文档</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -34,9 +34,9 @@
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 3.1.0 文档" href="../../index.html" />
-        <link rel="up" title="数据API" href="index.html" />
-        <link rel="next" title="Serializing Data" href="serialization.html" />
-        <link rel="prev" title="数据臂" href="datamanipulators.html" />
+        <link rel="up" title="数据 API" href="index.html" />
+        <link rel="next" title="序列化数据" href="serialization.html" />
+        <link rel="prev" title="操作数据" href="datamanipulators.html" />
     
   <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -123,6 +123,7 @@
       <div><i class="fa fa-fw fa-tag"></i><a>3.1.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -157,7 +158,7 @@
         <ul>
         <li><a href="../../index.html">Sponge 3.1.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >插件开发</a><i class="fa fa-fw fa-chevron-right"></i></li>
-        <li><a href="index.html" accesskey="U">数据API</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="index.html" accesskey="U">数据 API</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
     <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -196,8 +197,8 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/configuration/index.html">配置Sponge</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/hocon.html">HOCON简介</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/json.html">JSON语法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/hocon.html">HOCON 简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/json.html">JSON 语法</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/sponge-conf.html">global.conf</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/server-properties.html">server.properties</a></li>
 </ul>
@@ -257,10 +258,10 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">插件开发</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../workspace/index.html">建立工作目录</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../workspace/idea.html">架设Intellij IDEA</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../workspace/idea.html">设置 IntelliJ IDEA</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../workspace/eclipse.html">安装和使用Eclipse</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../workspace/eclipse.html">设置 Eclipse</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../workspace/netbeans.html">安装NetBeans</a><ul class="simple">
@@ -284,11 +285,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../lifecycle.html">插件周期</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../optional/index.html">Optionals</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../optional/basic.html">Optionals Explained</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../optional/index.html">使用 Optional</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../optional/basic.html">对于 Optional 的解释</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../optional/usage.html">Usage Examples</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../optional/usage.html">用法示例</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -300,14 +301,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../text/text.html">创建文本</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../text/representations/index.html">序列化文本</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/xml.html">TextXML Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/json.html">JSON Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Configuration Format</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">分页服务</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">分页</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Working with TextTemplates</a></li>
@@ -320,21 +321,21 @@
 <li class="toctree-l3"><a class="reference internal" href="../commands/arguments.html">参数分析</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/childcommands.html">Child Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/service.html">The Command Manager</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/commandcallable.html">低级命令API</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../commands/childcommands.html">子命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commands/service.html">命令管理器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commands/commandcallable.html">低级别命令 API</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../event/index.html">Working with Events</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Event Listeners</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">事件监听器</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/causes.html">Event Causes</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/causes.html">事件原因</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Event Filters</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/filters.html">事件过滤</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Creating Custom Events</a><ul class="simple">
@@ -342,29 +343,29 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">Configuring Plugins</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../configuration/loaders.html">加载器的配置</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">插件配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../configuration/loaders.html">配置加载器</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../configuration/nodes.html">Nodes的配置</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../configuration/nodes.html">配置节点</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../configuration/serialization.html">Serializing Objects</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../configuration/serialization.html">序列化对象</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">数据API</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="keys.html">使用键盘</a><ul class="simple">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">数据 API</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="keys.html">使用数据键</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="datamanipulators.html">数据臂</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="datamanipulators.html">操作数据</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Transactions</a><ul class="simple">
+<li class="toctree-l3 current"><a class="current reference internal" href="">数据操作记录</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="serialization.html">Serializing Data</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="serialization.html">序列化数据</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -386,7 +387,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../entities/index.html">使用实体</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../entities/spawning.html">生成一个实体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../entities/modifying.html">Modifying an Entity</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../entities/modifying.html">修改一个实体</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -400,7 +401,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../injection.html">注入依赖项</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../injection.html">依赖注入</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../scheduler.html">使用调度程序</a><ul class="simple">
@@ -456,7 +457,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing to Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">向 Sponge 贡献代码</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">贡献指南</a><ul class="simple">
 </ul>
 </li>
@@ -474,7 +475,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/debugging.html">在IDE中调试</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/mixins.html">Mixins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/mixins.html">Mixin</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/datamanipulator.html">Implementing DataManipulators</a><ul class="simple">
 </ul>
 </li>
@@ -493,7 +494,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于Sponge项目</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于 Sponge 项目</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">简介</a><ul class="simple">
 </ul>
 </li>
@@ -512,7 +513,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/staff.html">工作人员</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Sponge 词汇表</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Sponge 术语表</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/assets.html">艺术资源</a><ul class="simple">
@@ -539,13 +540,13 @@
                 <div class="body" role="main">
                   
   <div class="section" id="transactions">
-<h1>Transactions<a class="headerlink" href="#transactions" title="永久链接至标题">¶</a></h1>
+<h1>数据操作记录<a class="headerlink" href="#transactions" title="永久链接至标题">¶</a></h1>
 <div class="section" id="reading-the-result">
-<h2>Reading the Result<a class="headerlink" href="#reading-the-result" title="永久链接至标题">¶</a></h2>
+<h2>分析结果<a class="headerlink" href="#reading-the-result" title="永久链接至标题">¶</a></h2>
 <p>For everything you <code class="docutils literal"><span class="pre">offer</span></code> to a data holder, the <code class="docutils literal"><span class="pre">offer</span></code> method will yield a <code class="docutils literal"><span class="pre">DataTransactionResult</span></code>. This
 object will contain the following:</p>
 <div class="section" id="type">
-<h3>Type<a class="headerlink" href="#type" title="永久链接至标题">¶</a></h3>
+<h3>类型（Type）<a class="headerlink" href="#type" title="永久链接至标题">¶</a></h3>
 <p>The <code class="docutils literal"><span class="pre">Type</span></code> indicates whether the transaction was completed successfully and, if not, how it failed.</p>
 <table border="1" class="docutils">
 <colgroup>
@@ -554,27 +555,31 @@ object will contain the following:</p>
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">UNDEFINED</span></code></td>
-<td>No clear result for the transaction - indicates that something went wrong</td>
+<td><p class="first last">并不清楚操作的结果是什么——意味着在某些地方出了错</p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">SUCCESS</span></code></td>
-<td>Transaction was completed successfully</td>
+<td><p class="first last">操作成功</p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">FAILURE</span></code></td>
-<td>Transaction failed for expected reasons (e.g. incompatible data)</td>
+<td><p class="first last">操作由于明确的原因失败了（例如不支持的数据）</p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">ERROR</span></code></td>
-<td>Transaction failed for unexpected reasons</td>
+<td><p class="first last">操作由于意料之外的原因失败了</p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">CANCELLED</span></code></td>
-<td>An event for this transaction was cancelled</td>
+<td><p class="first last">操作触发的事件被取消了</p>
+</td>
 </tr>
 </tbody>
 </table>
 </div>
 <div class="section" id="the-affected-data">
-<h3>The affected Data<a class="headerlink" href="#the-affected-data" title="永久链接至标题">¶</a></h3>
-<p>The result also provides a couple of immutable lists containing immutable value containers representing
-the data that was involved in the transaction.</p>
+<h3>受到影响的数据<a class="headerlink" href="#the-affected-data" title="永久链接至标题">¶</a></h3>
+<p>结果同时提供了一个包含了若干个不可修改的容器的列表，用于储存参与操作的数据。</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="28%" />
@@ -582,56 +587,61 @@ the data that was involved in the transaction.</p>
 </colgroup>
 <tbody valign="top">
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">getSuccessfulData()</span></code></td>
-<td>contains all data that was successfully set</td>
+<td><p class="first last">包含了所有被成功设置的数据</p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">getReplacedData()</span></code></td>
-<td>contains all data that got replaced by successfully set data</td>
+<td><p class="first last">包含了所有被成功设置的数据替换的旧数据</p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">getRejectedData()</span></code></td>
-<td>contains all data that could not be set</td>
+<td><p class="first last">包含所有并未被成功设置的数据</p>
+</td>
 </tr>
 </tbody>
 </table>
 </div>
 </div>
 <div class="section" id="examples">
-<h2>Examples<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
+<h2>示例<a class="headerlink" href="#examples" title="永久链接至标题">¶</a></h2>
 <div class="section" id="healing-a-player">
-<h3>Healing a Player<a class="headerlink" href="#healing-a-player" title="永久链接至标题">¶</a></h3>
-<p>Surely you remember the healing example in the <a class="reference internal" href="keys.html"><em>使用键盘</em></a> page. Imagine a player who is down to half a heart
-(which equals 1 health) being healed that way. The <code class="docutils literal"><span class="pre">DataTransactionResult</span></code> in that case would look like this:</p>
+<h3>治疗一个玩家<a class="headerlink" href="#healing-a-player" title="永久链接至标题">¶</a></h3>
+<p>你一定记得在 <a class="reference internal" href="keys.html"><em>使用数据键</em></a> 这一页面中关于治疗的示例。现在想像玩家的生命值只有半颗心（一点生命值），然后以之前提到的示例得以救治。那么在这种情况下， <code class="docutils literal"><span class="pre">DataTransactionResult</span></code> 应该是这个样子：</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">getType()</span></code> would return <code class="docutils literal"><span class="pre">SUCCESS</span></code></li>
-<li><code class="docutils literal"><span class="pre">getRejectedData()</span></code> would be an empty list</li>
-<li><code class="docutils literal"><span class="pre">getReplacedData()</span></code> would contain one value container for the <code class="docutils literal"><span class="pre">Keys.HEALTH</span></code> key with a value of 1.0</li>
-<li><code class="docutils literal"><span class="pre">getSuccessfulData()</span></code> would contain one value container for the <code class="docutils literal"><span class="pre">Keys.HEALTH</span></code> key with a value of 20.0</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">getType()</span></code> 方法将会返回 <code class="docutils literal"><span class="pre">SUCCESS</span></code></p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">getRejectedData()</span></code> 方法将会返回一个空的列表</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">getReplacedData()</span></code> 方法将会返回一个包含有 <code class="docutils literal"><span class="pre">Keys.HEALTH</span></code> 数据键和对应的包含 1.0 的数据值的键值对</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">getSuccessfulData()</span></code> 方法将会返回一个包含有 <code class="docutils literal"><span class="pre">Keys.HEALTH</span></code> 数据键和对应的包含 20.0 的数据值的键值对</p>
+</li>
 </ul>
-<p>Now what would be different if we used the healing example from the <a class="reference internal" href="datamanipulators.html"><em>数据臂</em></a> page instead? Since
+<p>Now what would be different if we used the healing example from the <a class="reference internal" href="datamanipulators.html"><em>操作数据</em></a> page instead? Since
 the <code class="docutils literal"><span class="pre">HealthData</span></code> data manipulator contains values for both the current and the maximum health, in addition to
 the above result, both the <code class="docutils literal"><span class="pre">getReplacedData()</span></code> list and the <code class="docutils literal"><span class="pre">getSuccessfulData()</span></code> list would contain one more
 element: A value container for the <code class="docutils literal"><span class="pre">Keys.MAX_HEALTH</span></code> key with a value of 20.0.</p>
 </div>
 <div class="section" id="offering-healthdata-to-a-block-of-stone">
-<h3>Offering HealthData to a block of stone<a class="headerlink" href="#offering-healthdata-to-a-block-of-stone" title="永久链接至标题">¶</a></h3>
+<h3>设置一块石头的生命值<a class="headerlink" href="#offering-healthdata-to-a-block-of-stone" title="永久链接至标题">¶</a></h3>
 <p>Now our above-mentioned examples are coded in a such a way that they will fail silently rather than try to offer the
 incompatible data. But imagine we took a (fully healed) player&#8217;s <code class="docutils literal"><span class="pre">HealthData</span></code> and tried to offer it to the
 <code class="docutils literal"><span class="pre">Location</span></code> of the stone block he&#8217;s currently standing on. We can do this, since <code class="docutils literal"><span class="pre">Location</span></code> is also a data
 holder. And if we do, it would reward us with a <code class="docutils literal"><span class="pre">DataTransactionResult</span></code> like this:</p>
 <ul class="simple">
-<li><code class="docutils literal"><span class="pre">getType()</span></code> would return <code class="docutils literal"><span class="pre">FAILURE</span></code></li>
-<li><code class="docutils literal"><span class="pre">getRejectedData()</span></code> would contain two value containers for the <code class="docutils literal"><span class="pre">HEALTH</span></code> and <code class="docutils literal"><span class="pre">MAX_HEALTH</span></code> keys, each with a value of 20.0</li>
-<li><code class="docutils literal"><span class="pre">getReplacedData()</span></code> and <code class="docutils literal"><span class="pre">getSuccessfulData()</span></code> would be empty lists</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">getType()</span></code> 方法将会返回 <code class="docutils literal"><span class="pre">FAILURE</span></code></p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">getRejectedData()</span></code> 方法将会返回两个分别包含有 <code class="docutils literal"><span class="pre">Keys.HEALTH</span></code> 和 <code class="docutils literal"><span class="pre">MAX_HEALTH</span></code> 的数据键，然后它们对应的数据值都是 20.0</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">getReplacedData()</span></code> 和 <code class="docutils literal"><span class="pre">getSuccessfulData()</span></code> 方法将分别返回空的列表</p>
+</li>
 </ul>
 </div>
 </div>
 <div class="section" id="reverting-transactions">
-<h2>Reverting Transactions<a class="headerlink" href="#reverting-transactions" title="永久链接至标题">¶</a></h2>
-<p>Since everything about a transaction result is immutable, it can serve for documentation of data changes. And it
-also allows for those changes it documents to be undone. For that, simply pass a transaction result to the data
-holder&#8217;s <code class="docutils literal"><span class="pre">undo()</span></code> method. This is particularly useful since some data offerings may be partially successful, so
-that one or more values are successfully written to the data holder, yet one more value cannot be accepted. Since
-you may wish to undo the partial successes.</p>
-<p><strong>Code Example: Reverting a transaction</strong></p>
+<h2>撤回操作<a class="headerlink" href="#reverting-transactions" title="永久链接至标题">¶</a></h2>
+<p>因为操作结果是不可变的，所以把它用于存储数据更改是可信的。同时，对于这种更改的撤回是可行的。为此，只需要调用数据访问器的 <code class="docutils literal"><span class="pre">undo()</span></code> 方法，并传入欲撤回的操作结果。在一些部分数据设置成功的场合，撤回这一行为是很有用的。因为只有部分数据设置成功了，所以很多时候不妨把部分设置成功这一操作也撤回掉。</p>
+<p><strong>代码示例：撤回操作</strong></p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.data.DataHolder</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.data.DataTransactionResult</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.data.manipulator.DataManipulator</span><span class="o">;</span>

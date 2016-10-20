@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Contributing to Sponge &mdash; Sponge 3.1.0 文档</title>
+     <title>向 Sponge 贡献代码 &mdash; Sponge 3.1.0 文档</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -122,6 +122,7 @@
       <div><i class="fa fa-fw fa-tag"></i><a>3.1.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -193,8 +194,8 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/configuration/index.html">配置Sponge</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/hocon.html">HOCON简介</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/json.html">JSON语法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/hocon.html">HOCON 简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/json.html">JSON 语法</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/sponge-conf.html">global.conf</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/server-properties.html">server.properties</a></li>
 </ul>
@@ -254,10 +255,10 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../plugin/index.html">插件开发</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/workspace/index.html">建立工作目录</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/workspace/idea.html">架设Intellij IDEA</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../plugin/workspace/idea.html">设置 IntelliJ IDEA</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/workspace/eclipse.html">安装和使用Eclipse</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../plugin/workspace/eclipse.html">设置 Eclipse</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../plugin/workspace/netbeans.html">安装NetBeans</a><ul class="simple">
@@ -281,11 +282,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../plugin/lifecycle.html">插件周期</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/optional/index.html">Optionals</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/optional/basic.html">Optionals Explained</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin/optional/index.html">使用 Optional</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/optional/basic.html">对于 Optional 的解释</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/optional/usage.html">Usage Examples</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../plugin/optional/usage.html">用法示例</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -297,14 +298,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../plugin/text/text.html">创建文本</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/text/representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/text/representations/index.html">序列化文本</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../plugin/text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../plugin/text/representations/xml.html">TextXML Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../plugin/text/representations/json.html">JSON Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../plugin/text/representations/configurate.html">Configuration Format</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/text/pagination.html">分页服务</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../plugin/text/pagination.html">分页</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../plugin/text/templates.html">Working with TextTemplates</a></li>
@@ -317,21 +318,21 @@
 <li class="toctree-l3"><a class="reference internal" href="../plugin/commands/arguments.html">参数分析</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/commands/childcommands.html">Child Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/commands/service.html">The Command Manager</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/commands/commandcallable.html">低级命令API</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../plugin/commands/childcommands.html">子命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/commands/service.html">命令管理器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/commands/commandcallable.html">低级别命令 API</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/event/index.html">Working with Events</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/event/listeners.html">Event Listeners</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../plugin/event/listeners.html">事件监听器</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/event/causes.html">Event Causes</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../plugin/event/causes.html">事件原因</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/event/filters.html">Event Filters</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../plugin/event/filters.html">事件过滤</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../plugin/event/custom.html">Creating Custom Events</a><ul class="simple">
@@ -339,29 +340,29 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/configuration/index.html">Configuring Plugins</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/configuration/loaders.html">加载器的配置</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin/configuration/index.html">插件配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/configuration/loaders.html">配置加载器</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/configuration/nodes.html">Nodes的配置</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../plugin/configuration/nodes.html">配置节点</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/configuration/serialization.html">Serializing Objects</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../plugin/configuration/serialization.html">序列化对象</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/data/index.html">数据API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/data/keys.html">使用键盘</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin/data/index.html">数据 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../plugin/data/keys.html">使用数据键</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/data/datamanipulators.html">数据臂</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../plugin/data/datamanipulators.html">操作数据</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/data/transactions.html">Transactions</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../plugin/data/transactions.html">数据操作记录</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/data/serialization.html">Serializing Data</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../plugin/data/serialization.html">序列化数据</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -383,7 +384,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/entities/index.html">使用实体</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../plugin/entities/spawning.html">生成一个实体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../plugin/entities/modifying.html">Modifying an Entity</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../plugin/entities/modifying.html">修改一个实体</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -397,7 +398,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin/injection.html">注入依赖项</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin/injection.html">依赖注入</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/scheduler.html">使用调度程序</a><ul class="simple">
@@ -453,7 +454,7 @@
 </li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="">Contributing to Sponge</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="">向 Sponge 贡献代码</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="guidelines.html">贡献指南</a><ul class="simple">
 </ul>
 </li>
@@ -471,7 +472,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="implementation/debugging.html">在IDE中调试</a></li>
-<li class="toctree-l3"><a class="reference internal" href="implementation/mixins.html">Mixins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="implementation/mixins.html">Mixin</a></li>
 <li class="toctree-l3"><a class="reference internal" href="implementation/datamanipulator.html">Implementing DataManipulators</a><ul class="simple">
 </ul>
 </li>
@@ -490,7 +491,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于Sponge项目</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于 Sponge 项目</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../about/introduction.html">简介</a><ul class="simple">
 </ul>
 </li>
@@ -509,7 +510,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../about/staff.html">工作人员</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../about/glossary.html">Sponge 词汇表</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../about/glossary.html">Sponge 术语表</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../about/assets.html">艺术资源</a><ul class="simple">
@@ -536,13 +537,11 @@
                 <div class="body" role="main">
                   
   <div class="section" id="contributing-to-sponge">
-<h1>Contributing to Sponge<a class="headerlink" href="#contributing-to-sponge" title="永久链接至标题">¶</a></h1>
-<p>This sections intends to show you ways to get involved with Sponge.</p>
+<h1>向 Sponge 贡献代码<a class="headerlink" href="#contributing-to-sponge" title="永久链接至标题">¶</a></h1>
+<p>这一部分告诉你如何熟悉 Sponge。</p>
 <div class="section" id="what-are-the-projects-i-can-help-with">
-<h2>What are the projects I can help with?<a class="headerlink" href="#what-are-the-projects-i-can-help-with" title="永久链接至标题">¶</a></h2>
-<p>The Sponge Project and its parts are maintained on <a class="reference external" href="https://github.com/spongepowered">GitHub</a>. If you&#8217;re unfamiliar
-with GitHub and the tool git, then take a look at <a class="reference internal" href="howtogit.html"><em>如何使用Git（Hub）</em></a> first. A read of our <a class="reference internal" href="guidelines.html"><em>贡献指南</em></a> is strongly
-advised before starting any work. There are several projects we&#8217;re currently maintaining:</p>
+<h2>我可以帮助的项目是什么？<a class="headerlink" href="#what-are-the-projects-i-can-help-with" title="永久链接至标题">¶</a></h2>
+<p>Sponge 项目和它的所有部分在 <a class="reference external" href="https://github.com/spongepowered">GitHub</a> 上维护。如果你对 GitHub 和其对应的工具 Git 不太熟悉，你可以考虑先看一看 <a class="reference internal" href="howtogit.html"><em>如何使用Git（Hub）</em></a> 这一章节。在你的所有工作开始之前，我们强烈建议你阅读 <a class="reference internal" href="guidelines.html"><em>贡献指南</em></a> 这一部分。我们目前维护的项目部分如下：</p>
 <ul class="simple">
 <li>SpongeAPI</li>
 <li>SpongeForge</li>
@@ -556,28 +555,36 @@ advised before starting any work. There are several projects we&#8217;re current
 <a class="reference internal" href="../about/structure.html"><em>The Structure of the Sponge Project</em></a>.</p>
 </div>
 <div class="section" id="what-kind-of-help-is-needed">
-<h2>What kind of help is needed?<a class="headerlink" href="#what-kind-of-help-is-needed" title="永久链接至标题">¶</a></h2>
+<h2>需要什么样的帮助？<a class="headerlink" href="#what-kind-of-help-is-needed" title="永久链接至标题">¶</a></h2>
 <div class="section" id="basic-contributions">
-<h3>Basic contributions<a class="headerlink" href="#basic-contributions" title="永久链接至标题">¶</a></h3>
-<p>This can be done by almost everyone. You don&#8217;t need to know a programming language like Java or Python to:</p>
+<h3>基本的贡献<a class="headerlink" href="#basic-contributions" title="永久链接至标题">¶</a></h3>
+<p>这里是几乎每一个人都可以完成的贡献。你不需要知道一些诸如 Java 或 Python 等编程语言。</p>
 <ul class="simple">
-<li>test SpongeForge or SpongeVanilla and report bugs or usage quirks</li>
-<li>report or suggest any errors, faults or bugs you encounter</li>
-<li>post suggestions or idea you have which would make Sponge better</li>
+<li><p class="first">测试 SpongeForge 或者 SpongeVanilla 并报告 BUG 或者偶然出现的使用问题</p>
+</li>
+<li><p class="first">报告或者建议你遇到的任何错误、故障、和 BUG。</p>
+</li>
+<li><p class="first">发布可以让 Sponge 变得更好的建议和意见</p>
+</li>
 </ul>
 <p>Reporting bugs best via our <a class="reference external" href="https://github.com/spongepowered/">Github repositories</a>, suggestions fit onto our
 <a class="reference external" href="https://forums.spongepowered.org/">forums</a>. Just have a look at our
 <a class="reference internal" href="../server/spongineer/bugreport.html"><em>Bug Reporting page</em></a> for further instructions.</p>
 </div>
 <div class="section" id="intermediate-contributions">
-<h3>Intermediate Contributions<a class="headerlink" href="#intermediate-contributions" title="永久链接至标题">¶</a></h3>
-<p>You should at least have basic knowledge of Java, Python or reST to help out on the following tasks:</p>
+<h3>中级的贡献<a class="headerlink" href="#intermediate-contributions" title="永久链接至标题">¶</a></h3>
+<p>你应该至少拥有 Java 或 Python 等的编程语言基础知识来帮助我们完成以下的事情：</p>
 <ul class="simple">
-<li>help fixing bugs</li>
-<li>finish the implementation of the API (SpongeForge and SpongeVanilla)</li>
-<li><a class="reference internal" href="spongedocs.html"><em>help writing the SpongeDocs</em></a></li>
-<li>help <a class="reference external" href="https://crowdin.com/project/sponge-docs">translate the Docs on Crowdin</a></li>
-<li>help out developing Ore</li>
+<li><p class="first">帮助修复 BUG</p>
+</li>
+<li><p class="first">完成 API 的实现（包括 SpongeForge 和 SpongeVanilla）</p>
+</li>
+<li><p class="first"><a class="reference internal" href="spongedocs.html"><em>帮助撰写文档</em></a></p>
+</li>
+<li><p class="first">帮助 <a class="reference external" href="https://crowdin.com/project/sponge-docs">在 Crowdin 上翻译文档</a></p>
+</li>
+<li><p class="first">帮助发展 Ore</p>
+</li>
 </ul>
 <p>The development of the <a class="reference external" href="https://github.com/spongepowered/SpongeAPI">Sponge API</a>,
 <a class="reference external" href="https://github.com/spongepowered/SpongeForge">SpongeForge</a>,
@@ -585,7 +592,7 @@ advised before starting any work. There are several projects we&#8217;re current
 well as the <a class="reference external" href="https://github.com/spongepowered/SpongeDocs">SpongeDocs</a> is done in several repositories hosted on Github.</p>
 </div>
 <div class="section" id="advanced-contributions">
-<h3>Advanced Contributions<a class="headerlink" href="#advanced-contributions" title="永久链接至标题">¶</a></h3>
+<h3>高级的贡献<a class="headerlink" href="#advanced-contributions" title="永久链接至标题">¶</a></h3>
 <p>And finally these are the most difficult things you can help out with. Advanced knowledge of Java, Minecraft and at
 least basic knowledge of the <a class="reference external" href="https://github.com/spongepowered/SpongeAPI">Sponge API</a> and its
 <a class="reference external" href="https://jd.spongepowered.org">structure</a> is strongly advised before attempting to help out with:</p>
@@ -596,7 +603,7 @@ least basic knowledge of the <a class="reference external" href="https://github.
 </div>
 </div>
 <div class="section" id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="永久链接至标题">¶</a></h2>
+<h2>目录<a class="headerlink" href="#contents" title="永久链接至标题">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="guidelines.html">贡献指南</a><ul class="simple">
@@ -610,7 +617,7 @@ least basic knowledge of the <a class="reference external" href="https://github.
 <li class="toctree-l2"><a class="reference internal" href="implementation/git-implementation.html">Git Workflow for API and Implementations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="implementation/pr.html">Submitting a Pull-Request</a></li>
 <li class="toctree-l2"><a class="reference internal" href="implementation/debugging.html">在IDE中调试</a></li>
-<li class="toctree-l2"><a class="reference internal" href="implementation/mixins.html">Mixins</a></li>
+<li class="toctree-l2"><a class="reference internal" href="implementation/mixins.html">Mixin</a></li>
 <li class="toctree-l2"><a class="reference internal" href="implementation/datamanipulator.html">Implementing DataManipulators</a></li>
 </ul>
 </li>

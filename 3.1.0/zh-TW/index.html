@@ -121,6 +121,7 @@
       <div><i class="fa fa-fw fa-tag"></i><a>3.1.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -363,7 +364,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="plugin/blocks/index.html">处理方块</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="plugin/blocks/index.html">處理方塊</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="plugin/blocks/concepts.html">概念</a><ul class="simple">
 </ul>
 </li>
@@ -517,7 +518,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="downloads.html">Download</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="downloads.html">下載</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -535,14 +536,11 @@
   <div class="section" id="sponge-documentation">
 <h1>Sponge 開發文檔<a class="headerlink" href="#sponge-documentation" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="introduction">
-<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>Welcome to SpongeDocs, the official documentation for the open-source <a class="reference external" href="http://spongepowered.org">Sponge</a> project.</p>
-<p>The SpongeAPI is your all new plugin API for Minecraft. You can run it on a plain vanilla server (as SpongeVanilla) or
-on your fully modded MinecraftForge server (as SpongeForge). Grab your copy <a class="reference internal" href="downloads.html"><em>here</em></a>.</p>
-<p>Not sure what you&#8217;re looking for? Try our <a class="reference internal" href="about/index.html"><em>About the Sponge Project</em></a> section, which contains a short <a class="reference internal" href="about/introduction.html"><em>Introduction</em></a>,
-our <a class="reference internal" href="about/faq.html"><em>常見問題</em></a> and an article about <a class="reference internal" href="about/structure.html"><em>The Structure of the Sponge Project</em></a>.</p>
-<p>Server owners should read our tips and instructions in <a class="reference internal" href="server/index.html"><em>Creating a Server</em></a> on how to install, run and maintain a Sponge
-based server.</p>
+<h2>簡介<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p>歡迎來到 SpongeDocs，開源專案 &#8216;Sponge &lt;<a class="reference external" href="http://spongepowered.org">http://spongepowered.org</a>&gt;&#8217; 的官方文檔。</p>
+<p>SpongeAPI 是 Minecraft 你所有的新插件 API。你可以在純原版的伺服器上(SpongeVanilla) 或完全modded的 MinecraftForge 伺服器上 (如 SpongeForge)上運行它。在 :doc: &#8216;這裡 &lt;downloads&gt;&#8217; 獲取你的複本。</p>
+<p>不肯定你想要什麼？嘗試我們的 :doc:&#8217; about/index &#8216;部分，其中包含短的 :doc:&#8217; about/introduction &#8216;，我們的 :doc:&#8217; about/faq&#8217; 和一篇關於 :doc:&#8217; about/structure &#8216;。</p>
+<p>伺服器擁有者應閱讀在 :doc:&#8217; server/index &#8216; 我們有關如何安裝、 運行和維護基於Sponge的伺服器的提示和說明。</p>
 <p>The Sponge project has several main components currently, visit their repositories on GitHub or learn more about them
 <a class="reference internal" href="about/structure.html"><em>here</em></a>: <a class="reference external" href="https://github.com/spongepowered/spongeforge">SpongeForge</a> |
 <a class="reference external" href="https://github.com/spongepowered/spongevanilla">SpongeVanilla</a> | <a class="reference external" href="https://github.com/spongepowered/spongeapi">SpongeAPI</a> |
@@ -551,14 +549,14 @@ based server.</p>
 <div class="admonition note">
 <p class="first admonition-title">註解</p>
 <p class="last">Sponge is still in development. Beta builds of SpongeForge and alpha builds of SpongeVanilla are currently
-available for <a class="reference internal" href="downloads.html"><em>Download</em></a>, but an official release will not be available until later in 2016.</p>
+available for <a class="reference internal" href="downloads.html"><em>下載</em></a>, but an official release will not be available until later in 2016.</p>
 </div>
 </div>
 <div class="section" id="contents">
-<h2>Contents<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
+<h2>內容<a class="headerlink" href="#contents" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="creating-a-server">
-<h3>Creating a Server<a class="headerlink" href="#creating-a-server" title="Permalink to this headline">¶</a></h3>
-<p>This section is for users who have a Sponge server or are interested in creating one.</p>
+<h3>創建一個伺服器<a class="headerlink" href="#creating-a-server" title="Permalink to this headline">¶</a></h3>
+<p>這一節是給擁有Sponge伺服器或有興趣創建一個的使用者。</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="server/index.html">Creating a Server</a><ul>
@@ -571,9 +569,8 @@ available for <a class="reference internal" href="downloads.html"><em>Download</
 </div>
 </div>
 <div class="section" id="preparing-for-development">
-<h3>Preparing for Development<a class="headerlink" href="#preparing-for-development" title="Permalink to this headline">¶</a></h3>
-<p>Get yourself and your machine ready to develop Sponge itself or your own plugins! Please read this section before
-<a class="reference internal" href="plugin/index.html"><em>Creating a Plugin</em></a> and <a class="reference internal" href="contributing/index.html"><em>Contributing to Sponge</em></a>.</p>
+<h3>準備開發<a class="headerlink" href="#preparing-for-development" title="Permalink to this headline">¶</a></h3>
+<p>準備好你自己和你的機器去開發Sponge本身或你自己的插件！請閱讀本節前閱讀 :doc:&#8217; plugin/index &#8216;及:doc:&#8217; contributing/index &#8216;。</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="preparing/index.html">Preparing for Development</a><ul>
@@ -587,8 +584,8 @@ available for <a class="reference internal" href="downloads.html"><em>Download</
 </div>
 </div>
 <div class="section" id="creating-plugins">
-<h3>Creating Plugins<a class="headerlink" href="#creating-plugins" title="Permalink to this headline">¶</a></h3>
-<p>Need help and information while coding your plugin for the SpongeAPI? Look no further!</p>
+<h3>創建插件<a class="headerlink" href="#creating-plugins" title="Permalink to this headline">¶</a></h3>
+<p>需要的説明和資訊同時為 SpongeAPI 編寫你的插件嗎？你再看看 ！</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="plugin/index.html">Creating a Plugin</a><ul>
@@ -605,7 +602,7 @@ available for <a class="reference internal" href="downloads.html"><em>Download</
 <li class="toctree-l2"><a class="reference internal" href="plugin/event/index.html">Working with Events</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plugin/configuration/index.html">Configuring Plugins</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plugin/data/index.html">The Data API</a></li>
-<li class="toctree-l2"><a class="reference internal" href="plugin/blocks/index.html">处理方块</a></li>
+<li class="toctree-l2"><a class="reference internal" href="plugin/blocks/index.html">處理方塊</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plugin/entities/index.html">Working with Entities</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plugin/items/index.html">Working with Items</a></li>
 <li class="toctree-l2"><a class="reference internal" href="plugin/injection.html">Dependency Injection</a></li>
@@ -626,8 +623,8 @@ available for <a class="reference internal" href="downloads.html"><em>Download</
 </div>
 </div>
 <div class="section" id="contributing-to-sponge">
-<h3>Contributing to Sponge<a class="headerlink" href="#contributing-to-sponge" title="Permalink to this headline">¶</a></h3>
-<p>Look here if you want to help out in making Sponge better. Make Spongie proud!</p>
+<h3>為Sponge作出貢獻<a class="headerlink" href="#contributing-to-sponge" title="Permalink to this headline">¶</a></h3>
+<p>如果你想為優化海綿幫忙，看看這裡。讓 Spongie 感到驕傲 ！</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="contributing/index.html">Contributing to Sponge</a><ul>
@@ -678,19 +675,16 @@ goals.</p>
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="downloads.html">Download</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="downloads.html">下載</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </div>
 </div>
 <div class="section" id="acknowledgements">
-<h3>Acknowledgements<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h3>
+<h3>致謝<a class="headerlink" href="#acknowledgements" title="Permalink to this headline">¶</a></h3>
 <img alt="_images/yklogo.png" src="_images/yklogo.png" />
-<p>The SpongePowered team are grateful to <em>YourKit</em> for providing its full-featured Java Profiler free to open source
-projects. YourKit, LLC is the creator of <a class="reference external" href="https://www.yourkit.com/java/profiler/index.jsp">YourKit Java Profiler</a>
-and <a class="reference external" href="https://www.yourkit.com/.net/profiler/index.jsp">YourKit .NET Profiler</a>, innovative and intelligent tools
-for profiling Java and .NET applications.</p>
+<p>SpongePowered 團隊感謝 <em>YourKit</em> 免費提供其功能全面的Java探測器到開放原始碼專案。YourKit，LLC 是 &#8216;YourKit JAVA 探測器 &lt;<a class="reference external" href="https://www.yourkit.com/java/profiler/index.jsp">https://www.yourkit.com/java/profiler/index.jsp</a> &gt;&#8217;__ 和&#8217; YourKit.NET 事件探測器 &lt;<a class="reference external" href="https://www.yourkit.com/.net/profiler/index.jsp">https://www.yourkit.com/.net/profiler/index.jsp</a> &gt;&#8217;__，創新及智慧的工具來分析 JAVA 和.NET 應用程式的創造者。</p>
 </div>
 </div>
 <div class="section" id="links">
@@ -704,13 +698,16 @@ for profiling Java and .NET applications.</p>
 </li>
 <li><p class="first"><a class="reference external" href="http://forums.spongepowered.org">Sponge 論壇</a></p>
 </li>
-<li><a class="reference external" href="https://github.com/SpongePowered/SpongeAPI/issues?q=">SpongeAPI Issue Tracker</a></li>
-<li><a class="reference external" href="https://jd.spongepowered.org">SpongeAPI Javadocs</a></li>
+<li><p class="first">&#8216; SpongeAPI 問題追蹤器&lt;<a class="reference external" href="https://github.com/SpongePowered/SpongeAPI/issues?q=">https://github.com/SpongePowered/SpongeAPI/issues?q=</a>&gt;&#8217; __</p>
+</li>
+<li><p class="first"><a class="reference external" href="https://jd.spongepowered.org">SpongeAPI Java文檔</a></p>
+</li>
 <li><p class="first"><a class="reference external" href="https://twitter.com/SpongePowered">Sponge 推特</a></p>
 </li>
 <li><a class="reference external" href="https://reddit.com/r/SpongeProject">Sponge Subreddit</a></li>
 <li><a class="reference external" href="https://github.com/SpongePowered">Sponge GitHub</a></li>
-<li><a class="reference external" href="https://www.patreon.com/Sponge?ty=h">Sponge Patreon Donation Page</a></li>
+<li><p class="first">&#8216;Sponge Patreon 捐贈頁面 &lt;<a class="reference external" href="https://www.patreon.com/Sponge?ty=h">https://www.patreon.com/Sponge?ty=h</a>&gt;&#8217; __</p>
+</li>
 </ul>
 </div>
 </div>

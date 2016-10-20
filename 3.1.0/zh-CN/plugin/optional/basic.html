@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Optionals Explained &mdash; Sponge 3.1.0 文档</title>
+     <title>对于 Optional 的解释 &mdash; Sponge 3.1.0 文档</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -34,9 +34,9 @@
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 3.1.0 文档" href="../../index.html" />
-        <link rel="up" title="Optionals" href="index.html" />
-        <link rel="next" title="Usage Examples" href="usage.html" />
-        <link rel="prev" title="Optionals" href="index.html" />
+        <link rel="up" title="使用 Optional" href="index.html" />
+        <link rel="next" title="用法示例" href="usage.html" />
+        <link rel="prev" title="使用 Optional" href="index.html" />
     
   <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -123,6 +123,7 @@
       <div><i class="fa fa-fw fa-tag"></i><a>3.1.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -157,7 +158,7 @@
         <ul>
         <li><a href="../../index.html">Sponge 3.1.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >插件开发</a><i class="fa fa-fw fa-chevron-right"></i></li>
-        <li><a href="index.html" accesskey="U">Optionals</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="index.html" accesskey="U">使用 Optional</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
     <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -196,8 +197,8 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/configuration/index.html">配置Sponge</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/hocon.html">HOCON简介</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/json.html">JSON语法</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/hocon.html">HOCON 简介</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/json.html">JSON 语法</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/sponge-conf.html">global.conf</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/configuration/server-properties.html">server.properties</a></li>
 </ul>
@@ -257,10 +258,10 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">插件开发</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../workspace/index.html">建立工作目录</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../workspace/idea.html">架设Intellij IDEA</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../workspace/idea.html">设置 IntelliJ IDEA</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../workspace/eclipse.html">安装和使用Eclipse</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../workspace/eclipse.html">设置 Eclipse</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../workspace/netbeans.html">安装NetBeans</a><ul class="simple">
@@ -284,11 +285,11 @@
 <li class="toctree-l2"><a class="reference internal" href="../lifecycle.html">插件周期</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">Optionals</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="">Optionals Explained</a><ul class="simple">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">使用 Optional</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="">对于 Optional 的解释</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="usage.html">Usage Examples</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="usage.html">用法示例</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -300,14 +301,14 @@
 <li class="toctree-l3"><a class="reference internal" href="../text/text.html">创建文本</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/representations/index.html">Text Serializers</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../text/representations/index.html">序列化文本</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/xml.html">TextXML Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/json.html">JSON Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../text/representations/configurate.html">Configuration Format</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">分页服务</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../text/pagination.html">分页</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../text/templates.html">Working with TextTemplates</a></li>
@@ -320,21 +321,21 @@
 <li class="toctree-l3"><a class="reference internal" href="../commands/arguments.html">参数分析</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/childcommands.html">Child Commands</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/service.html">The Command Manager</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../commands/commandcallable.html">低级命令API</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../commands/childcommands.html">子命令</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commands/service.html">命令管理器</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../commands/commandcallable.html">低级别命令 API</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../event/index.html">Working with Events</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Event Listeners</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">事件监听器</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/causes.html">Event Causes</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/causes.html">事件原因</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Event Filters</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../event/filters.html">事件过滤</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Creating Custom Events</a><ul class="simple">
@@ -342,29 +343,29 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">Configuring Plugins</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../configuration/loaders.html">加载器的配置</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">插件配置</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../configuration/loaders.html">配置加载器</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../configuration/nodes.html">Nodes的配置</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../configuration/nodes.html">配置节点</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../configuration/serialization.html">Serializing Objects</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../configuration/serialization.html">序列化对象</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../data/index.html">数据API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../data/keys.html">使用键盘</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../data/index.html">数据 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../data/keys.html">使用数据键</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../data/datamanipulators.html">数据臂</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../data/datamanipulators.html">操作数据</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../data/transactions.html">Transactions</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../data/transactions.html">数据操作记录</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../data/serialization.html">Serializing Data</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../data/serialization.html">序列化数据</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -386,7 +387,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../entities/index.html">使用实体</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../entities/spawning.html">生成一个实体</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../entities/modifying.html">Modifying an Entity</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../entities/modifying.html">修改一个实体</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -400,7 +401,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../injection.html">注入依赖项</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../injection.html">依赖注入</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../scheduler.html">使用调度程序</a><ul class="simple">
@@ -456,7 +457,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Contributing to Sponge</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">向 Sponge 贡献代码</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">贡献指南</a><ul class="simple">
 </ul>
 </li>
@@ -474,7 +475,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/debugging.html">在IDE中调试</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/mixins.html">Mixins</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/mixins.html">Mixin</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/datamanipulator.html">Implementing DataManipulators</a><ul class="simple">
 </ul>
 </li>
@@ -493,7 +494,7 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于Sponge项目</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于 Sponge 项目</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">简介</a><ul class="simple">
 </ul>
 </li>
@@ -512,7 +513,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/staff.html">工作人员</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Sponge 词汇表</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Sponge 术语表</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/assets.html">艺术资源</a><ul class="simple">
@@ -539,43 +540,37 @@
                 <div class="body" role="main">
                   
   <div class="section" id="optionals-explained">
-<h1>Optionals Explained<a class="headerlink" href="#optionals-explained" title="永久链接至标题">¶</a></h1>
-<p>Much of the Sponge API makes use of Java&#8217;s <cite>Optional</cite> system on object accessors, but if you&#8217;ve never used <code class="docutils literal"><span class="pre">Optional</span></code>
-before this might seem like a bit of a peculiar way of doing things. You might be tempted to ask:
-<em>&#8220;why do I need to perform an extra step when fetching something from an API object?&#8221;</em></p>
-<p>This section gives a brief summary of <code class="docutils literal"><span class="pre">Optional</span></code> and explains how - and perhaps more importantly why -
-it&#8217;s used throughout the Sponge API.</p>
-<p>Let&#8217;s start with a little history, and look at how accessors - particularly &#8220;getters&#8221; - typically work when not making
-use of <code class="docutils literal"><span class="pre">Optional</span></code>.</p>
+<h1>对于 Optional 的解释<a class="headerlink" href="#optionals-explained" title="永久链接至标题">¶</a></h1>
+<p>Sponge API 的很多部分都使用了 Java 提供了 <cite>Optional</cite> 系统作为对象的获取方式，然而如果你之前从未使用过 <code class="docutils literal"><span class="pre">Optional</span></code> 的话，你会觉得这种用法有一点点奇怪。你也许会问：“<em>为什么我需要使用这么一套额外的步骤去获取 API 里的一些对象</em>？”</p>
+<p>这一节简要概括了 <code class="docutils literal"><span class="pre">Optional</span></code> 的重要性，同时说明了如何——以及或许更重要的是为什么——整个 Sponge API 都在使用它。</p>
+<p>我们从一点点的历史开始，并且看一看一个访问器——特别是 Getter ——在通常情况下没有 <code class="docutils literal"><span class="pre">Optional</span></code> 时是如何工作的。</p>
 <div class="section" id="implicit-nullable-contracts-and-why-they-suck">
 <h2>1. Implicit Nullable Contracts and Why They Suck<a class="headerlink" href="#implicit-nullable-contracts-and-why-they-suck" title="永久链接至标题">¶</a></h2>
-<p>Let&#8217;s say we have a simple API object <code class="docutils literal"><span class="pre">Entity</span></code> with a <code class="docutils literal"><span class="pre">getFoo()</span></code> method which returns the Entity&#8217;s <code class="docutils literal"><span class="pre">Foo</span></code>.</p>
+<p>我们假设有一个简单的 API 对象 <code class="docutils literal"><span class="pre">Entity</span></code> 并有着一个返回一个 <code class="docutils literal"><span class="pre">Foo</span></code> 的 <code class="docutils literal"><span class="pre">getFoo()</span></code> 方法。</p>
 <img alt="../../_images/optionals1.png" src="../../_images/optionals1.png" />
-<p>In the olden times of yore, our plugin might fetch and use the <code class="docutils literal"><span class="pre">Foo</span></code> from the entity using the <code class="docutils literal"><span class="pre">getter</span></code> like this:</p>
+<p>在比较早的年代，我们的插件可能是这样通过 Getter 获取和使用这个 <code class="docutils literal"><span class="pre">Entity</span></code> 的 <code class="docutils literal"><span class="pre">Foo</span></code> 的：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">someEventHandler</span><span class="o">(</span><span class="n">Entity</span> <span class="n">someEntity</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">Foo</span> <span class="n">entityFoo</span> <span class="o">=</span> <span class="n">someEntity</span><span class="o">.</span><span class="na">getFoo</span><span class="o">();</span>
     <span class="n">entityFoo</span><span class="o">.</span><span class="na">bar</span><span class="o">();</span>
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>The problem arises because - when designing the API - we have to rely an <em>implicit</em> contract on the <code class="docutils literal"><span class="pre">getFoo</span></code> method
-with respect to whether the method can (or cannot) return <code class="docutils literal"><span class="pre">null</span></code>. This <em>implicit contract</em> can be defined in one of
-two ways:</p>
+<p>问题随之出现——因为当设计 API 的时候——当考虑到 <code class="docutils literal"><span class="pre">getFoo</span></code> 到底会不会返回一个 <code class="docutils literal"><span class="pre">null</span></code>，我们就不得不去依赖一个**隐式**约定，这样的**隐式约定**可以有这样两种方式：</p>
 <ul class="simple">
-<li><strong>In the javadoc</strong> - this is bad because it relies on the plugin author reading the javadoc for the method, and the contract may not be clear to the plugin author</li>
-<li><strong>Using nullable annotations</strong> - this is not ideal because in general these annotations require a tool to be of any use, for example relying on the IDE or compiler to handle the annotations.</li>
+<li><p class="first"><strong>在 JavaDoc 中</strong>——这很糟糕，因为它依赖于插件作者怎么去阅读它，因此插件作者并不能够很清楚这个约定到底是什么样子</p>
+</li>
+<li><p class="first"><strong>使用 Nullable 注解</strong>——这也不是很理想，因为在一般情况下这些注解需要一些工具才能真正起到作用，比如依赖于 IDE 或者编译器。</p>
+</li>
 </ul>
 <img alt="../../_images/optionals2.png" src="../../_images/optionals2.png" />
-<p>Let&#8217;s assume that the <code class="docutils literal"><span class="pre">getFoo()</span></code> method can - as part of its contract - return null. This suddenly means that our
-code above is unsafe as it may result in a <code class="docutils literal"><span class="pre">NullPointerException</span></code> if <code class="docutils literal"><span class="pre">entityFoo</span></code> is null.</p>
+<p>我们现在假设这么一个 <code class="docutils literal"><span class="pre">getFoo()</span></code> 方法可能——作为一个约定——返回一个 null。这意味着我们上面的代码是不安全的因为它会导致在返回一个 null 的时候直接抛出一个空指针异常（<code class="docutils literal"><span class="pre">NullPointerException</span></code>）。</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">someEventHandler</span><span class="o">(</span><span class="n">Entity</span> <span class="n">someEntity</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">Foo</span> <span class="n">entityFoo</span> <span class="o">=</span> <span class="n">someEntity</span><span class="o">.</span><span class="na">getFoo</span><span class="o">();</span>
     <span class="n">entityFoo</span><span class="o">.</span><span class="na">bar</span><span class="o">();</span>
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>Let&#8217;s assume our plugin author is savvy to the nullable nature of our <code class="docutils literal"><span class="pre">getFoo</span></code> method and decides to fix the problem
-with null checking. Assuming they have defined a local constant <code class="docutils literal"><span class="pre">Foo</span></code>, the resultant code looks like this:</p>
+<p>我们现在假设我们的插件作者很了解这个 <code class="docutils literal"><span class="pre">getFoo</span></code> 方法返回 null 会发生什么，所以他决定通过检查 null 的方式修复这么一个问题。假设这里定义了一个本地常量 <code class="docutils literal"><span class="pre">Foo</span></code> 那么最后的代码看起来就会是这个样子：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">someEventHandler</span><span class="o">(</span><span class="n">Entity</span> <span class="n">someEntity</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">Foo</span> <span class="n">entityFoo</span> <span class="o">=</span> <span class="n">someEntity</span><span class="o">.</span><span class="na">getFoo</span><span class="o">();</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">entityFoo</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
@@ -585,56 +580,38 @@ with null checking. Assuming they have defined a local constant <code class="doc
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>In this example, the plugin author is aware that the method can return null and has a constant available with a
-default instance of <code class="docutils literal"><span class="pre">Foo</span></code> which can be used instead. Of course the plugin could just short-circuit the call entirely,
-or it could attempt to fetch <cite>Foo</cite> from somewhere else. The key message is that handling nulls even in simple cases
-can lead to spaghetti code quite quickly, and moreover relies on the plugin author to explicitly visit the method&#8217;s
-contract to check whether a null check is necessary in the first place.</p>
-<p>That&#8217;s not the only drawback however. Let&#8217;s consider the API over the longer term and assume that at the time the author
-writes their plugin, they visit the method javadoc and see that the method is guaranteed to never return null
-(since every <cite>Entity</cite> always has a <code class="docutils literal"><span class="pre">Foo</span></code> available). Great! No convoluted null check required!</p>
-<p>However, let&#8217;s now assume that in a later version of the game, the game developers remove or deprecate the concept of
-<code class="docutils literal"><span class="pre">Foo</span></code>. The API authors update the API accordingly and state that from now on the <code class="docutils literal"><span class="pre">getFoo()</span></code> method
-<strong>can</strong> return <code class="docutils literal"><span class="pre">null</span></code> and write this into the method javadoc. Now there&#8217;s a problem: even diligent plugin authors who
-checked the method contract when they first wrote their code are unwittingly handling the method incorrectly: with no
-null check in place any code using the <code class="docutils literal"><span class="pre">Foo</span></code> returned from <code class="docutils literal"><span class="pre">getFoo</span></code> is going to raise an NPE.</p>
-<p>Thus we can see that allowing implicit nullable contracts leaves us with a selection of pretty awful solutions to
-choose from:</p>
+<p>在这个示例中，插件作者意识到了这个方法可能返回 null ，然后定义了一个常量用于 <code class="docutils literal"><span class="pre">Foo</span></code> 的默认实现以替代它。当然这么一个插件可以完全不需要这么一个方法调用，也可以通过别的地方获取这么一个 <code class="docutils literal"><span class="pre">Foo</span></code>。不过这里的重点是处理 null 会很容易导致代码变得一团糟，即使只是简单的情况，而且还取决于插件的作者是否直接去了解了这一方法的约定以确定到底要不要首先检查一下返回值是不是 null。</p>
+<p>然而，这并不是唯一的缺点。现在让我们从长远考虑这一 API，然后假设作者在写插件的时候，它们浏览了方法的 JavaDoc，然后看到了这一方法被保证永远不会返回 null （因为每个 <cite>Entity</cite> 总会有一个 <code class="docutils literal"><span class="pre">Foo</span></code> 可用）。太好了！根本不需要任何的 null 检查！</p>
+<p>然而，现在我们假设，在以后版本的游戏中，游戏开发者把 <code class="docutils literal"><span class="pre">Foo</span></code> 删除或弃用（Deprecate）了。然后这一 API 的作者就相应地更新了它的 API，并声称目前 <code class="docutils literal"><span class="pre">getFoo()</span></code> 方法**会**返回一个 <code class="docutils literal"><span class="pre">null</span></code>，然后写进了 JavaDoc。那么问题来了：即便是勤奋的插件作者在之前查阅了相关的 JavaDoc，然后在他们首次撰写代码的时候没有检查 null，那么目前它就不知不觉得产生了问题：没有在适当的位置检查 null 的使用了 <code class="docutils literal"><span class="pre">Foo</span></code> 的代码都会产生一个空指针异常。</p>
+<p>因为我们看到，如果我们允许可能的 null，那么我们就要在一系列相当糟糕的解决方案中选择：</p>
 <ul class="simple">
-<li>Plugin authors can assume that <strong>all</strong> methods may return null and code defensively accordingly, however we&#8217;ve already seen that this leads to spaghetti code pretty quickly.</li>
-<li>The API authors can define an implicit nullable contract on every API method, in an attempt to make null handling the plugin author&#8217;s problem, which only exacerbates the previous problem.</li>
-<li>The API authors can assert that any implicit nullable contract they define will never be altered going forward. This means that in the eventuality that they need to handle the removal of a feature from the base game then they must either:</li>
+<li><p class="first">插件作者可以假设**所有的**方法都可能返回一个 null 并在相应的地方写代码防守，然后我们已经看到了这会导致的一团糟的代码。</p>
+</li>
+<li><p class="first">API 作者可以在每一个 API 方法上定义一个隐式的 null 约定，以试图处理 null 的方式解决插件作者的问题，但这只会加剧前面的问题。</p>
+</li>
+<li><p class="first">API 作者可以声称他们的任何隐式的 null 约定都不会在将来被改变。这意味着如果需要移除一个特性，他们必须要么：</p>
+</li>
 </ul>
 <blockquote>
 <div><ul class="simple">
-<li>Throw an exception - hardly elegant but certainly easier to diagnose than a loose NPE which may be triggered elsewhere in the codebase and be hard to track down</li>
-<li>Return a &#8220;fake&#8221; object or invalid value - this means that consuming (plugin) code will continue to work, but creates an ever-increasing burden on the API developers going forward since every deprecated feature will require the creation of yet more fake objects. This could soon lead to the situation where a big chunk of the API is filled with junk objects whose only purpose is to support parts of the API which are no longer in service.</li>
+<li><p class="first">抛出一个异常——几乎不够优雅，不过倒是比到处都是的空指针异常更好追踪一些</p>
+</li>
+<li><p class="first">返回一个“假”的对象或者一个无效值——这意味着 API 的使用者（插件）将继续工作，但是这为 API 的开发者产生了不断上升的负担，因为每一个弃用的特性都需要创建一个无效的对象。这很快导致一个体积巨大的 API 里充斥着无用的对象，然而这些对象的功能只是为了支持 API 中那些已经弃用的特性。</p>
+</li>
 </ul>
 </div></blockquote>
-<p>It should be pretty clear by now that there are some sizable headaches attached to <em>implicit</em> nullable contracts, made
-all the more poignant when the API in question is a layer over an extremely unstable base product. Fortunately,
-there is a better way:</p>
+<p>所以我们已经十分清楚，对于 null 的**隐式**约定会导致一些相当头痛的问题，并会在 API 作为一个极不稳定的底层的中间层时加剧。不过幸运的是，我们有一种更好的方式：</p>
 </div>
 <div class="section" id="optional-and-the-explicit-nullable-contract">
 <h2>2. Optional and the Explicit Nullable Contract<a class="headerlink" href="#optional-and-the-explicit-nullable-contract" title="永久链接至标题">¶</a></h2>
-<p>As mentioned above, APIs for Minecraft are in a difficult situation. Ultimately they need to provide a platform with
-a <em>reasonable amount of implied stability</em> atop a platform (the game) with <em>absolutely no amount of implied stability</em>.
-Thus any API for Minecraft needs to be designed with full awareness that any aspect of the game is liable to change at
-any time for any reason in any way imaginable; up to and including being removed altogether!</p>
-<p>This volatility is what leads to the problem with nullable method contracts described above.</p>
-<p><cite>Optional</cite> solves the above problems by replacing <em>implicit contracts</em> with <em>explicit</em> ones. The API never advertises,
-<em>&#8220;here is your object, kthxbai&#8221;</em>, instead it presents accessors with a
-<em>&#8220;here is a box which may or may not contain the object you asked for, ymmv&#8221;</em>.</p>
+<p>如上文所述，用于 Minecraft 的 API 处境十分艰难。最终他们需要提供一个带有*合理数量的隐含稳定*平台凌驾于一个*根本没有隐含稳定*的游戏之上。因此 Minecraft 的任何 API 都需要在设计的时候清楚地意识到，游戏的任何方面都应该对在任何时间以任何理由以任何可以想象的方式被修改负责，适应和包括被完全移除的部分！</p>
+<p>这种不稳定性就是导致上面提到的 null 可能性的罪魁祸首。</p>
+<p><cite>Optional</cite> 通过把*隐式*的 null 可能性转变为*显式*的来解决这一问题。API 从来都不宣称，“<em>这是你的对象，好的，谢谢，再见</em>”，取而代之的是一个访问器，“<em>这是个盒子，里面可能有一个你想要的对象，你看着办</em>”。</p>
 <img alt="../../_images/optionals3.png" src="../../_images/optionals3.png" />
-<p>By encoding the possibility of returning <code class="docutils literal"><span class="pre">null</span></code> into an explicit contract, we replace the concept of
-<em>null checking</em> with the more nuanced concept of <em>may not exist</em>. We also stipulate this contract <em>from day one</em>.</p>
-<p>So what does this mean?</p>
-<p>In a nutshell, no longer do plugin authors have to worry about the possibility of <code class="docutils literal"><span class="pre">null</span></code> being returned. Instead the
-very possibility of a particular object not being available becomes encoded in the very fabric of their plugin code.
-This has the same level of inherent safety as constantly performing null-checks, but with the benefit of much more
-elegant and readable code in order to do so.</p>
-<p>To see why, let&#8217;s take a look at the above example, converted to use a <code class="docutils literal"><span class="pre">getFoo</span></code> method which returns
-<code class="docutils literal"><span class="pre">Optional&lt;Foo&gt;</span></code> instead:</p>
+<p>通过一个可能返回 null 的明确约定，我们把 <em>null 检查</em> 的概念替换成有一点点细微差别的概念 <em>可能存在</em>。我们也从*一开始*就遵照这一规定。</p>
+<p>所以这到底是什么意思？</p>
+<p>一言以蔽之，插件作者不再需要担心返回一个 <code class="docutils literal"><span class="pre">null</span></code> 的可能性。取而代之的是把一个特定的对象是否存在的可能性包装了起来。这在 null 检查的时候有着与生俱来的特性，同时还带来着更优雅、和可读性更好的代码。</p>
+<p>为了看出来为什么会这样，我们来把上面的例子中的 <code class="docutils literal"><span class="pre">getFoo</span></code> 方法的返回值设置成一个 <code class="docutils literal"><span class="pre">Optional&lt;Foo&gt;</span></code> ：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">someEventHandler</span><span class="o">(</span><span class="n">Entity</span> <span class="n">someEntity</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">Optional</span><span class="o">&lt;</span><span class="n">Foo</span><span class="o">&gt;</span> <span class="n">entityFoo</span> <span class="o">=</span> <span class="n">someEntity</span><span class="o">.</span><span class="na">getFoo</span><span class="o">();</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">entityFoo</span><span class="o">.</span><span class="na">isPresent</span><span class="o">())</span> <span class="o">{</span>
@@ -643,31 +620,23 @@ elegant and readable code in order to do so.</p>
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>You may note that this example looks very much like a standard null-check, however the use of <code class="docutils literal"><span class="pre">Optional</span></code> actually
-carries a little more information in the same amount of code. For example, it is not necessary for someone reading
-the above code to check the method contract, it is clear that the method may not return a value, and the handling
-of the value&#8217;s absence is explicit and clear.</p>
-<p>So what? Our explicit contract in this case results in basically the same amount of code as a null check - albeit
-one that is contractually <em>enforced</em> by the getter. <em>&#8220;Whoop de do,&#8221;</em> you say, <em>&#8220;so what?&#8221;</em></p>
-<p>Well the <cite>Optional</cite> boxing allows us to take some of the traditionally more awkward aspects of null-checking and
-make them more elegant: consider the following code:</p>
+<p>你可能注意到这一示例看起来和一个标准的 null 检查没有什么区别，然而在同样的代码量下，使用 <code class="docutils literal"><span class="pre">Optional</span></code> 的的确确地增加了一些额外的信息。例如，对于想要了解这一方法会不会可能返回 null 的人来说，很明显这一方法可能不会返回我们想要的对象，同时处理这一返回的对象的方式是如此明确和清晰。</p>
+<p>那又如何？你呐喊道。我们显式的对 null 可能性的声明和执行对 null 的检查的代码量完全相同——尽管被 Getter 固定住了。“<em>那又如何</em>”？</p>
+<p>好，<a href="#id1"><span class="problematic" id="id2">`</span></a>Optional`这一包装允许我们以比一些传统上的检查方式更优雅的方式，考虑下面的代码：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">someEventHandler</span><span class="o">(</span><span class="n">Entity</span> <span class="n">someEntity</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">Foo</span> <span class="n">entityFoo</span> <span class="o">=</span> <span class="n">someEntity</span><span class="o">.</span><span class="na">getFoo</span><span class="o">().</span><span class="na">orElse</span><span class="o">(</span><span class="n">MyPlugin</span><span class="o">.</span><span class="na">DEFAULT_FOO</span><span class="o">);</span>
     <span class="n">entityFoo</span><span class="o">.</span><span class="na">bar</span><span class="o">();</span>
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>Hold the phone! Did we just replace the tedious null-check-and-default-assignment from the example above with a
-single line of code? Yes indeed we did. In fact, for simple use cases we can even dispense with the assignment:</p>
+<p>停一下！我们就这样把 null 检查和设置默认值这一串繁琐的代码替换成了这么一行？是的，就是这样。实际上，在这个简单的示例里我们甚至可以直接这么做：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">someEventHandler</span><span class="o">(</span><span class="n">Entity</span> <span class="n">someEntity</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">someEntity</span><span class="o">.</span><span class="na">getFoo</span><span class="o">().</span><span class="na">orElse</span><span class="o">(</span><span class="n">MyPlugin</span><span class="o">.</span><span class="na">DEFAULT_FOO</span><span class="o">).</span><span class="na">bar</span><span class="o">();</span>
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>This is perfectly safe provided that <code class="docutils literal"><span class="pre">MyPlugin.DEFAULT_FOO</span></code> is always available.</p>
-<p>Consider the following example with two entities, using an implicit nullable contract we want to use <code class="docutils literal"><span class="pre">Foo</span></code> from the
-first entity, or if not available use <code class="docutils literal"><span class="pre">Foo</span></code> from the second <code class="docutils literal"><span class="pre">entity</span></code>, and fall back on our default if neither is
-available:</p>
+<p>这是完全安全的，只要 <code class="docutils literal"><span class="pre">MyPlugin.DEFAULT_FOO</span></code> 永远是可用的。</p>
+<p>考虑下面的使用两个 <code class="docutils literal"><span class="pre">Entity</span></code> 的示例，使用一个隐式的 null 检查我们首先想要得到第一个 <code class="docutils literal"><span class="pre">Entity</span></code> 的 <code class="docutils literal"><span class="pre">Foo</span></code>，如果第一个 <code class="docutils literal"><span class="pre">Entity</span></code> 不存在这个 <code class="docutils literal"><span class="pre">Foo</span></code> 我们就从第二个获取，如果都不存在我们就使用默认值：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">someEventHandler</span><span class="o">(</span><span class="n">Entity</span> <span class="n">someEntity</span><span class="o">,</span> <span class="n">Entity</span> <span class="n">entity2</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">Foo</span> <span class="n">entityFoo</span> <span class="o">=</span> <span class="n">someEntity</span><span class="o">.</span><span class="na">getFoo</span><span class="o">();</span>
     <span class="k">if</span> <span class="o">(</span><span class="n">entityFoo</span> <span class="o">==</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
@@ -680,21 +649,16 @@ available:</p>
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>Using <code class="docutils literal"><span class="pre">Optional</span></code> we can encode this much much more cleanly as:</p>
+<p>使用 <code class="docutils literal"><span class="pre">Optional</span></code> 我们可以让代码变得非常清晰，就像这样：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kt">void</span> <span class="nf">someEventHandler</span><span class="o">(</span><span class="n">Entity</span> <span class="n">someEntity</span><span class="o">,</span> <span class="n">Entity</span> <span class="n">entity2</span><span class="o">)</span> <span class="o">{</span>
     <span class="n">someEntity</span><span class="o">.</span><span class="na">getFoo</span><span class="o">().</span><span class="na">orElse</span><span class="o">(</span><span class="n">entity2</span><span class="o">.</span><span class="na">getFoo</span><span class="o">().</span><span class="na">orElse</span><span class="o">(</span><span class="n">MyPlugin</span><span class="o">.</span><span class="na">DEFAULT_FOO</span><span class="o">)).</span><span class="na">bar</span><span class="o">();</span>
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>This is merely the tip of the <code class="docutils literal"><span class="pre">Optional</span></code> iceberg. In java 8 <code class="docutils literal"><span class="pre">Optional</span></code> also supports the <code class="docutils literal"><span class="pre">Consumer</span></code> and
-<code class="docutils literal"><span class="pre">Supplier</span></code> interfaces, allowing lambas to be used for <em>absent</em> failover. Usage examples for those can be found on the
-<a class="reference internal" href="usage.html"><em>Usage Examples</em></a> page.</p>
+<p>这仅仅是 <code class="docutils literal"><span class="pre">Optional</span></code> 特性的冰山一角。在 Java 8 中，<code class="docutils literal"><span class="pre">Optional</span></code> 还支持 <code class="docutils literal"><span class="pre">Consumer</span></code> 和 <code class="docutils literal"><span class="pre">Supplier</span></code> 两个接口，允许 Lambda 表达式在*不存在（Absent）*时使用。一些用法示例可以参阅 <a class="reference internal" href="usage.html"><em>用法示例</em></a> 。</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">Another explanation on the rationale behind avoiding null references can be found on
-<a class="reference external" href="https://github.com/google/guava/wiki/UsingAndAvoidingNullExplained/">Guava: Using And Avoiding Null Explained</a>.
-Beware that the guava <code class="docutils literal"><span class="pre">Optional</span></code> class mentioned in the linked article is different from java&#8217;s
-<code class="docutils literal"><span class="pre">java.util.Optional</span></code> and therefore will have method names different from those used here.</p>
+<p class="last">另一种对于避免 null 的理论依据可以参阅 <a class="reference external" href="https://github.com/google/guava/wiki/UsingAndAvoidingNullExplained/">Guava: Using And Avoiding Null Explained</a> 。请注意，Guava 中的 <code class="docutils literal"><span class="pre">Optional</span></code> 类和 Java 的 <code class="docutils literal"><span class="pre">java.util.Optional</span></code> 并不一样，因此相关的方法名等也并不一样。</p>
 </div>
 </div>
 </div>

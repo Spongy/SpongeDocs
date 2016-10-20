@@ -122,6 +122,7 @@
       <div><i class="fa fa-fw fa-tag"></i><a>3.1.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -539,7 +540,7 @@
                   
   <div class="section" id="spawning-an-entity">
 <h1>Спавн Сущности<a class="headerlink" href="#spawning-an-entity" title="Ссылка на этот заголовок">¶</a></h1>
-<p>Вам необходимо три вещи для спавна в <code class="docutils literal"><span class="pre">Entity</span></code>: <code class="docutils literal"><span class="pre">Location</span></code>, <code class="docutils literal"><span class="pre">Extent</span></code>, и <code class="docutils literal"><span class="pre">EntityType</span></code>. Процесс получения довольно простой, Вам всего лишь надо захватить <code class="docutils literal"><span class="pre">Location</span></code> откуда-нибудь в коде вашего плагина и выбрать тип <code class="docutils literal"><span class="pre">Entity</span></code>, который вы желаете заспавнить.</p>
+<p>Вам необходимо три вещи для спавна <code class="docutils literal"><span class="pre">Entity</span></code>: <code class="docutils literal"><span class="pre">Location</span></code>, <code class="docutils literal"><span class="pre">Extent</span></code>, и <code class="docutils literal"><span class="pre">EntityType</span></code>. Процесс получения довольно простой, Вам всего лишь надо получить <code class="docutils literal"><span class="pre">Location</span></code> откуда-нибудь в коде вашего плагина и выбрать тип <code class="docutils literal"><span class="pre">Entity</span></code>, который вы желаете заспавнить.</p>
 <p>Например, давайте попытаемся заспавнить Крипера:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.entity.Entity</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.entity.EntityTypes</span><span class="o">;</span>
@@ -567,18 +568,12 @@
 <p>This will grab the extent from our <code class="docutils literal"><span class="pre">Location</span></code>, which we will need for the actual spawning. Next, it uses this extent
 to create the entity, but do note that this does not spawn the entity in, it just will create it. We will need to
 specify the type of <code class="docutils literal"><span class="pre">Entity</span></code> to spawn, and the co-ordinates from our <code class="docutils literal"><span class="pre">Location</span></code>.</p>
-<p>The <code class="docutils literal"><span class="pre">createEntity()</span></code> method returns an <code class="docutils literal"><span class="pre">Optional</span></code> as the <code class="docutils literal"><span class="pre">Location</span></code> may not be suitable for spawning an
-<code class="docutils literal"><span class="pre">Entity</span></code>. We then just grab our <code class="docutils literal"><span class="pre">Entity</span></code> from the <code class="docutils literal"><span class="pre">Optional</span></code> and can then use <code class="docutils literal"><span class="pre">Extent</span></code> for spawning the
-<code class="docutils literal"><span class="pre">Entity</span></code> into the world. We will need to specify a <code class="docutils literal"><span class="pre">Cause</span></code> for the spawning. For spawning <code class="docutils literal"><span class="pre">Entity</span></code>s, it is best to
-use <code class="docutils literal"><span class="pre">EntitySpawnCause</span></code>. In this example, we stated that our entity was spawned from a plugin, however we can make it
-any cause that best describes why we are spawning this in, such as a mob spawner, or spawn egg.</p>
+<p>Метод <code class="docutils literal"><span class="pre">createEntity()</span></code> возвращает <code class="docutils literal"><span class="pre">Optional</span></code> так как``Location`` может быть непригодна для спавна <code class="docutils literal"><span class="pre">Entity</span></code>. Мы должны получить нашу <code class="docutils literal"><span class="pre">Entity</span></code> из <code class="docutils literal"><span class="pre">Optional</span></code> и после этого может использовать <code class="docutils literal"><span class="pre">Extent</span></code> для спавна <code class="docutils literal"><span class="pre">Entity</span></code> в мир. Мы должны указать <code class="docutils literal"><span class="pre">Cause</span></code> для спавна <code class="docutils literal"><span class="pre">Entity</span></code>s, лучшим выбором будет использовать <code class="docutils literal"><span class="pre">EntitySpawnCause</span></code>. В этом примере мы указали что наша сущность была заспавнена нашим плагин, однако мы может указать любую другую причину, например рассадник мобов, или яйцо спавна.</p>
 <div class="admonition warning">
 <p class="first admonition-title">Предупреждение</p>
-<p>Note that as of API 3.0, <code class="docutils literal"><span class="pre">SpawnCause</span></code> is NOT implemented. Until then, you will need to specify some other cause,
-such as a <code class="docutils literal"><span class="pre">CommandSource</span></code> or a <code class="docutils literal"><span class="pre">Player</span></code>. If you cannot find one that would suit your needs, simply specify your
-main plugin instance as the <code class="docutils literal"><span class="pre">Cause</span></code>. Here is an example of specifying a <code class="docutils literal"><span class="pre">CommandSource</span></code> as the <code class="docutils literal"><span class="pre">Cause</span></code>:</p>
+<p>Обратите внимания на то, что по состоянию на API 3.0 <code class="docutils literal"><span class="pre">SpawnCause</span></code> не реализована. Поэтому вам необходимо использовать другую причину, например <code class="docutils literal"><span class="pre">CommandSource</span></code> или <code class="docutils literal"><span class="pre">Player</span></code>. Если вы не смогли найти то, что будет отвечать вашим потребностям, просто реализуйте свой основной класс как <code class="docutils literal"><span class="pre">Cause</span></code>. Ниже приведен пример указания <code class="docutils literal"><span class="pre">CommandSource</span></code> как <code class="docutils literal"><span class="pre">Cause</span></code>:</p>
 <p><code class="docutils literal"><span class="pre">extent.spawnEntity(item,</span> <span class="pre">Cause.of(src));</span></code></p>
-<p class="last">Take a look at the <a class="reference internal" href="../event/causes.html"><em>cause documentation</em></a> for more information.</p>
+<p class="last">Взгляните на <a class="reference internal" href="../event/causes.html"><em>для получения дополнительной информации по</em></a>.</p>
 </div>
 </div>
 

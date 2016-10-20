@@ -122,6 +122,7 @@
       <div><i class="fa fa-fw fa-tag"></i><a>3.1.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -354,11 +355,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/data/index.html">The Data API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/data/index.html">Die Daten API</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/data/keys.html">Using Keys</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../plugin/data/datamanipulators.html">Data Manipulators</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/data/datamanipulators.html">Daten-Manipulatoren</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/data/transactions.html">Transactions</a><ul class="simple">
@@ -542,9 +543,7 @@
 <h1>global.conf<a class="headerlink" href="#global-conf" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="section" id="global-configuration">
 <h2>Globale Einstellungen<a class="headerlink" href="#global-configuration" title="Link zu dieser Überschrift">¶</a></h2>
-<p>The global.conf file contains the global configuration settings for Sponge. This file is created in the config/sponge
-directory in your server folder. Many of these properties can be also overridden per-world or per-dimension type by
-using the config files in the subfolders of config/worlds.</p>
+<p>Die global.conf Datei enthält die globalen Einstellungen von Sponge. Diese Datei wird im <code class="docutils literal"><span class="pre">config/sponge</span></code> Ordner deines Servers erstellt. Viele dieser Einstellungen können separat pro Dimension oder Welt gesetzt werden, indem du Unterordner (z.B. <code class="docutils literal"><span class="pre">config/worlds</span></code>) erstellst.</p>
 <p>Es folgt eine komplette global.conf-Datei mit allen möglichen Knoten, die auf einem Server vorhanden sein können. Beachte, dass manche Abschnitte nicht von Beginn an vorhanden sind und erst zur Datei hinzugefügt werden, wenn der Server sie erkennt. Diese Konfiguration wurde generiert mit SpongeForge Build 1181, SpongeAPI Version 3.1.0:</p>
 <div class="highlight-none"><div class="highlight"><pre><span></span># 1.0
 #
@@ -803,8 +802,7 @@ block placement tracking.</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td><p class="first last">Aliase</p>
-</td>
+<tr class="row-even"><td>aliases</td>
 <td><p class="first last">String (Zeichenkette)</p>
 </td>
 <td>null</td>
@@ -947,9 +945,8 @@ thread dumps.</td>
 <td><p class="first last">Boolesche Variable</p>
 </td>
 <td>true</td>
-<td>Use activation range on &lt;creature&gt;. Permitted
-values: chicken, cow, entityhorse, mushroomcow,
-ocelot, pig, rabbit, sheep, wolf.</td>
+<td><p class="first last">Nutze Aktivierungsbereich bei &lt;creature&gt;. Erlaubte Werte: chicken, cow, entityhorse, mushroomcow, ocelot, pig, rabbit, sheep, wolf.</p>
+</td>
 </tr>
 <tr class="row-even"><td>enabled</td>
 <td><p class="first last">Boolesche Variable</p>
@@ -968,12 +965,8 @@ ocelot, pig, rabbit, sheep, wolf.</td>
 <td><p class="first last">Boolesche Variable</p>
 </td>
 <td>true</td>
-<td>Use activation range on &lt;entity&gt;. Permitted
-values: armorstand, arrow, boat, fallingsand,
-item, itemframe, leashknot, minecartchest,
-minecartfurnace, minecarthopper,
-minecartrideable, minecarttnt, villager,
-villagergolem, xporb.</td>
+<td><p class="first last">Nutze Aktivierungsbereich bei &lt;entity&gt;. Erlaubte Werte: armorstand, arrow, boat, fallingsand, item, itemframe, leashknot, minecartchest, minecartfurnace, minecarthopper, minecartrideable, minecarttnt, villager, villagergolem, xporb.</p>
+</td>
 </tr>
 <tr class="row-odd"><td><p class="first last"><strong>Minecraft-Monster</strong></p>
 </td>
@@ -985,11 +978,8 @@ villagergolem, xporb.</td>
 <td><p class="first last">Boolesche Variable</p>
 </td>
 <td>true</td>
-<td>Use activation range on &lt;monster&gt;. Permitted
-values: blaze, cavespider, creeper, enderman,
-endermite, ghast, giant, guardian, lavaslime,
-pigzombie, silverfish, skeleton, slime,
-snowman, spider, witch, zombie.</td>
+<td><p class="first last">Nutze Aktivierungsbereich bei &lt;monster&gt;. Erlaubte Werte: blaze, cavespider, creeper, enderman, endermite, ghast, giant, guardian, lavaslime, pigzombie, silverfish, skeleton, slime, snowman, spider, witch, zombie.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>misc-activation-range</td>
 <td>integer</td>
@@ -1202,7 +1192,7 @@ a player without permission.</td>
 <td><p class="first last">Boolesche Variable</p>
 </td>
 <td>true</td>
-<td><p class="first last">Aktiviert Timings-Einstellungen.</p>
+<td><p class="first last">Aktiviert Zetimessungs-Einstellungen.</p>
 </td>
 </tr>
 <tr class="row-odd"><td><strong>SQL</strong></td>
@@ -1210,8 +1200,7 @@ a player without permission.</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td><p class="first last">Aliase</p>
-</td>
+<tr class="row-even"><td>aliases</td>
 <td><p class="first last">String (Zeichenkette)</p>
 </td>
 <td>null</td>

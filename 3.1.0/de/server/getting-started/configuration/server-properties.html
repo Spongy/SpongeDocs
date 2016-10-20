@@ -122,6 +122,7 @@
       <div><i class="fa fa-fw fa-tag"></i><a>3.1.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -354,11 +355,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/data/index.html">The Data API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/data/index.html">Die Daten API</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/data/keys.html">Using Keys</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../plugin/data/datamanipulators.html">Data Manipulators</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/data/datamanipulators.html">Daten-Manipulatoren</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/data/transactions.html">Transactions</a><ul class="simple">
@@ -596,7 +597,7 @@
 <col width="51%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head"><p class="first last">Eigenschaft (englisch <em>key</em>)</p>
+<tr class="row-odd"><th class="head"><p class="first last">Key (Eigenschaft)</p>
 </th>
 <th class="head"><p class="first last">Typ</p>
 </th>
@@ -634,7 +635,7 @@
 <td><p class="first last">Boolesche Variable</p>
 </td>
 <td>true</td>
-<td><p class="first last">Erlaubt dem Server erreichte Achievements der Spieler zu verkünden.</p>
+<td><p class="first last">Erlaubt dem Server erreichte Errungenschaften der Spieler zu verkünden.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>difficulty</td>
@@ -823,7 +824,7 @@
 <div><p><strong>-1</strong> - Die Kompression wird komplett abgeschaltet.</p>
 <p><strong>0</strong> - Alles wird komprimiert.</p>
 </div></blockquote>
-<p class="last"><strong>Achtung:</strong> <a href="#id1"><span class="problematic" id="id2">*</span></a>Die Ethernet Spezifikation legt fest, dass Pakete die kleiner als 64 Bytes sind auf 64 Bytes aufgefüllt werden. Das Setzen eines kleineren Wertes als 64 kann also kontraproduktiv sein. Es ist außerdem nicht empfohlen den Maximalwert (MTU; Maximum Transmission Unit) von typischen 1500 Bytes zu überschreiten.</p>
+<p class="last"><strong>Achtung:</strong> <a href="#id1"><span class="problematic" id="id2">*</span></a>Die Ethernet Spezifikation legt fest, dass Pakete die kleiner als 64 Bytes sind auf 64 Bytes aufgefüllt werden. Das Setzen eines kleineren Wertes als 64 kann also kontraproduktiv sein. Es ist außerdem nicht empfohlen den Maximalwert (MTU; Maximum Transmission Unit) von typischen 1500 Bytes zu überschreiten. *</p>
 </td>
 </tr>
 <tr class="row-odd"><td>online-mode</td>
@@ -856,7 +857,7 @@
 <td>0</td>
 <td><p class="first">Wenn dieser Wert auf einen von 0 verschiedenen Wert gesetzt wird, werden Spieler vom Server geworfen, die mehr Minuten als der angegebene Wert abwesend sind.</p>
 <blockquote class="last">
-<div><p><strong>Notitz:</strong> <a href="#id1"><span class="problematic" id="id2">*</span></a>Die Idle Zeit des Spielers wird zurückgesetzt, wenn der Server eines der folgenden Datenpakete vom Spieler erhält:</p>
+<div><p><strong>Notiz:</strong> <em>Die Idle Zeit des Spielers wird zurückgesetzt, wenn der Server eines der folgenden Datenpakete vom Spieler erhält:</em></p>
 <blockquote>
 <div><ul class="simple">
 <li>102 (0x66) WindowClick</li>
@@ -884,7 +885,7 @@
 <div><p><strong>false</strong> - Spieler können andere Spieler nicht töten (auch als PvE bekannt: Spieler gegen Umgebung).</p>
 <p><strong>true</strong> - Spieler können sich gegenseitig töten.</p>
 </div></blockquote>
-<p class="last"><strong>Anmerkung:</strong> <a href="#id1"><span class="problematic" id="id2">*</span></a>Indirekter, durch Spieler verursachter, Schaden (wie z.B. Lave, TnT, Wasser, fallender Sand etc.) wird anderen Spielern dennoch Schaden zufügen.</p>
+<p class="last"><strong>Anmerkung:</strong> <em>Indirekter, durch Spieler verursachter, Schaden (wie z. B. Lave, TnT, Wasser, fallender Sand etc.) wird anderen Spielern dennoch Schaden zufügen.</em></p>
 </td>
 </tr>
 <tr class="row-odd"><td>query.port</td>

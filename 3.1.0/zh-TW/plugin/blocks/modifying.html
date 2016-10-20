@@ -34,7 +34,7 @@
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 3.1.0 documentation" href="../../index.html" />
-        <link rel="up" title="处理方块" href="index.html" />
+        <link rel="up" title="處理方塊" href="index.html" />
         <link rel="next" title="Working with Tile Entities" href="tileentities.html" />
         <link rel="prev" title="Accessing Blocks" href="accessing.html" />
     
@@ -123,6 +123,7 @@
       <div><i class="fa fa-fw fa-tag"></i><a>3.1.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -157,7 +158,7 @@
         <ul>
         <li><a href="../../index.html">Sponge 3.1.0 documentation</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >Creating a Plugin</a><i class="fa fa-fw fa-chevron-right"></i></li>
-        <li><a href="index.html" accesskey="U">处理方块</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="index.html" accesskey="U">處理方塊</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
     <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -369,7 +370,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="reference internal" href="index.html">处理方块</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="index.html">處理方塊</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="concepts.html">概念</a><ul class="simple">
 </ul>
 </li>
@@ -523,7 +524,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../downloads.html">Download</a><ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="../../downloads.html">下載</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -542,8 +543,7 @@
 <h1>Modifying Blocks<a class="headerlink" href="#modifying-blocks" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="changing-a-blocks-type">
 <h2>Changing a Blocks Type<a class="headerlink" href="#changing-a-blocks-type" title="Permalink to this headline">¶</a></h2>
-<p>Changing the Type of a Block is as simple as calling the <code class="docutils literal"><span class="pre">setBlockType()</span></code> method of a <code class="docutils literal"><span class="pre">Location</span></code> with the new
-<code class="docutils literal"><span class="pre">BlockType</span></code>. For example the following code turns the block at the given <code class="docutils literal"><span class="pre">Location</span></code> into a sponge.</p>
+<p>更改方塊類型是作為調用在&#8217;Location&#8217;&#8216;setBlockType()&#8217; 方法傳入新的 &#8216;BlockType&#8217;一樣簡單。例如下面的代碼在給定的 &#8216;Location &#8216; 方塊變成海綿。</p>
 <blockquote>
 <div><div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.block.BlockTypes</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.world.Location</span><span class="o">;</span>

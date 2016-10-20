@@ -122,6 +122,7 @@
       <div><i class="fa fa-fw fa-tag"></i><a>3.1.0</a></div>
         <ul class="dropdown" id="ddvers">
           <li><a href="/master/en/"><i class="fa fa-fw fa-tag"></i> latest</a></li>
+          <li><a href="/4.1.0/en/"><i class="fa fa-fw fa-tag"></i> 4.1.0</a></li>
           <li><a href="/3.1.0/en/"><i class="fa fa-fw fa-tag"></i> 3.1.0</a></li>
         </ul>
     </div>
@@ -352,11 +353,11 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../data/index.html">The Data API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../data/index.html">Die Daten API</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../data/keys.html">Using Keys</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../data/datamanipulators.html">Data Manipulators</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../data/datamanipulators.html">Daten-Manipulatoren</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../data/transactions.html">Transactions</a><ul class="simple">
@@ -575,8 +576,7 @@ pose too much of an issue if you use an alternate format instead.</p>
 </div>
 <div class="section" id="getting-your-default-plugin-configuration">
 <span id="getting-default-config"></span><h3>Erstellen der Standard-Plugin-Konfiguration<a class="headerlink" href="#getting-your-default-plugin-configuration" title="Link zu dieser Überschrift">¶</a></h3>
-<p>The Sponge API offers the use of the <code class="docutils literal"><span class="pre">&#64;DefaultConfig</span></code> annotation on a field or setter method with the type <code class="docutils literal"><span class="pre">Path</span></code>
-to get the default configuration file for your plugin.</p>
+<p>Die Sponge API erlaubt das Nutzen der <code class="docutils literal"><span class="pre">&#64;DefaultConfig</span></code> Anmerkung vor einer Variable oder einer Methode mit dem Typ <code class="docutils literal"><span class="pre">File</span></code> um die Standardkonfigurationsdatei für dein Plugin zu finden.</p>
 <p>Die <code class="docutils literal"><span class="pre">&#64;DefaultConfig</span></code> Anmerkung benötigt eine boolsche <code class="docutils literal"><span class="pre">sharedRoot</span></code> Variable. Wenn <code class="docutils literal"><span class="pre">sharedRoot</span></code> auf <code class="docutils literal"><span class="pre">true</span></code> gesetzt wird, so liegt der ausgegebene Pfad in einem speziellen Ordner für (Plugin-) Konfigurationen. In diesem Fall wird deine Konfigurationsdatei <code class="docutils literal"><span class="pre">Deine_Plugin_ID.conf</span></code> heissen (mit &#8220;Deine_Plugin_ID&#8221; für die von dir vergebene, einmalige ID deines Plugins).</p>
 <div class="admonition tip">
 <p class="first admonition-title">Tipp</p>
@@ -626,9 +626,7 @@ non-existant paths as the library will handle them appropriately.</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">Bemerkung</p>
-<p class="last">The use of YAML format (<a class="reference external" href="http://yaml.org/spec/1.1/">http://yaml.org/spec/1.1/</a>) is also supported, but the preferred config format for Sponge
-plugins is HOCON. Conversion from YAML to HOCON can be automated by using a <code class="docutils literal"><span class="pre">YamlConfigurationLoader</span></code> to load
-the old config and then saving it using a <code class="docutils literal"><span class="pre">HoconConfigurationLoader</span></code>.</p>
+<p class="last">Die Verwendung des YAML-Formats (<a class="reference external" href="http://yaml.org/spec/1.1/">http://yaml.org/spec/1.1/</a>) wird ebenfalls unterstützt, aber die bevorzugte Config-Format für Sponge-Plugins ist HOCON. Konvertierung von YAML in HOCON automatisierbar mit &#8216;&#8217; YamlConfigurationLoader&#8217;&#8216;, um die alte Config zu laden und sie dann mit einem &#8216;&#8217; HoconConfigurationLoader&#8217;&#8217; zu speichern.</p>
 </div>
 </div>
 </div>
