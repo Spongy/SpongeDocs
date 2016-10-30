@@ -428,7 +428,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Scheduler</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../services.html">Services</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../services.html">服务</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../database.html">Databases</a><ul class="simple">
@@ -595,9 +595,7 @@
 </div>
 <div class="section" id="entity-data-manipulators">
 <h2>操作实体数据<a class="headerlink" href="#entity-data-manipulators" title="永久链接至标题">¶</a></h2>
-<p>Now that we are certain that our <code class="docutils literal"><span class="pre">Entity</span></code> is a creeper, we can apply creeper specific <code class="docutils literal"><span class="pre">DataManipulator</span></code>s to it.
-For example, <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/manipulator/mutable/entity/ExplosionRadiusData.html">ExplosionRadiusData</a> is a <code class="docutils literal"><span class="pre">DataManipulator</span></code> that creepers can have, but not all <code class="docutils literal"><span class="pre">Entity</span></code>s.
-An example of changing an <code class="docutils literal"><span class="pre">Entity</span></code>s explosive radius to 50 can be seen below:</p>
+<p>现在我们清楚这么一个 <code class="docutils literal"><span class="pre">Entity</span></code> 是一个爬行者了，那么我们就可以使用适用于爬行者的特殊 <code class="docutils literal"><span class="pre">DataManipulator</span></code> ，比如 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/manipulator/mutable/entity/ExplosionRadiusData.html">ExplosionRadiusData</a> 。爬行者拥有这一数据，而并非每个实体都拥有。把一个实体的爆炸半径设置成五十的示例如下：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.data.manipulator.mutable.entity.ExplosiveRadiusData</span><span class="o">;</span>
 
 <span class="kd">public</span> <span class="kt">void</span> <span class="nf">explosionRadius50</span><span class="o">(</span><span class="n">Entity</span> <span class="n">creeper</span><span class="o">)</span> <span class="o">{</span>
