@@ -462,7 +462,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../manager.html">Plugin Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../manager.html">Менеджер плагинов</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../game-profile-manager.html">Game Profile Manager</a><ul class="simple">
@@ -477,7 +477,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../tab-lists.html">Tab Lists</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../plugin-meta.html">Plugin Metadata</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../plugin-meta.html">Метаданные плагина</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../ray-tracing.html">Ray Tracing</a><ul class="simple">
@@ -590,7 +590,7 @@ dependency to your project:</p>
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>However, for further Gradle integration with <a class="reference internal" href="../plugin-meta.html"><em>Plugin Metadata</em></a>, we&#8217;re providing an additional <strong>Gradle
+<p>However, for further Gradle integration with <a class="reference internal" href="../plugin-meta.html"><em>Метаданные плагина</em></a>, we&#8217;re providing an additional <strong>Gradle
 plugin</strong> (called <a class="reference external" href="https://github.com/SpongePowered/SpongeGradle">SpongeGradle</a>) for Sponge plugins to use which allows you to minimize the necessary configuration for
 setting up a plugin project using Gradle.</p>
 <div class="section" id="using-spongegradle">
@@ -601,7 +601,7 @@ setting up a plugin project using Gradle.</p>
 properly with very old Gradle versions.</p>
 </div>
 <p>Using <a class="reference external" href="https://github.com/SpongePowered/SpongeGradle">SpongeGradle</a> is very simple and allows you to minimize the necessary Gradle configuration for setting up a
-Sponge plugin on Gradle. Additionally, it provides integration for <a class="reference internal" href="../plugin-meta.html"><em>Plugin Metadata</em></a>, such as automatically
+Sponge plugin on Gradle. Additionally, it provides integration for <a class="reference internal" href="../plugin-meta.html"><em>Метаданные плагина</em></a>, such as automatically
 contributing the group, project name, version and description defined in your build script to the built plugin, so you
 only need to update your plugin version in one file.</p>
 <p>Below is a simple template that should be usable for most plugins. <strong>Make sure to replace the group with the group ID
@@ -625,12 +625,12 @@ you have chosen before.</strong></p>
 <li>Set your project to compile with Java 8</li>
 <li>Add Sponge&#8217;s Maven repository (and Maven Central)</li>
 <li>Set up a plugin with the project name in lower case as <strong>plugin ID</strong></li>
-<li>Automatically includes the project name, description and version in <a class="reference internal" href="../plugin-meta.html"><em>Plugin Metadata</em></a>.</li>
+<li>Automatically includes the project name, description and version in <a class="reference internal" href="../plugin-meta.html"><em>Метаданные плагина</em></a>.</li>
 </ul>
 <div class="section" id="manually-setting-the-plugin-id">
 <h3>Manually setting the plugin ID<a class="headerlink" href="#manually-setting-the-plugin-id" title="Ссылка на этот заголовок">¶</a></h3>
 <p>By default, the Gradle plugin will configure your <strong>plugin ID</strong> with project name (in lowercase) you have configured.
-If you want to use a custom <strong>plugin ID</strong> and still use the <a class="reference internal" href="../plugin-meta.html"><em>Plugin Metadata</em></a> integration you can change it
+If you want to use a custom <strong>plugin ID</strong> and still use the <a class="reference internal" href="../plugin-meta.html"><em>Метаданные плагина</em></a> integration you can change it
 manually:</p>
 <div class="highlight-groovy"><div class="highlight"><pre><span></span><span class="n">sponge</span> <span class="o">{</span>
     <span class="n">plugin</span> <span class="o">{</span>
@@ -643,7 +643,7 @@ manually:</p>
 <div class="section" id="overriding-defaults">
 <h3>Overriding defaults<a class="headerlink" href="#overriding-defaults" title="Ссылка на этот заголовок">¶</a></h3>
 <p>By default the Gradle plugin will contribute the <strong>plugin name</strong>, <strong>plugin version</strong> and <strong>description</strong> automatically
-to <a class="reference internal" href="../plugin-meta.html"><em>Plugin Metadata</em></a> with defaults defined in the project properties. It is also possible to override these if
+to <a class="reference internal" href="../plugin-meta.html"><em>Метаданные плагина</em></a> with defaults defined in the project properties. It is also possible to override these if
 you want to specify them manually:</p>
 <div class="highlight-groovy"><div class="highlight"><pre><span></span><span class="n">sponge</span> <span class="o">{</span>
     <span class="n">plugin</span> <span class="o">{</span>

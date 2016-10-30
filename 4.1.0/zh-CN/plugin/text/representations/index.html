@@ -428,7 +428,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../scheduler.html">Scheduler</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../services.html">Services</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../services.html">服务</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../database.html">Databases</a><ul class="simple">
@@ -576,8 +576,7 @@
                   
   <div class="section" id="text-serializers">
 <h1>序列化文本<a class="headerlink" href="#text-serializers" title="永久链接至标题">¶</a></h1>
-<p><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/serializer/TextSerializer.html">TextSerializer</a>s provide a convenient way to serialize and de-serialize <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/Text.html">Text</a> instances. There
-are three applicable formats:</p>
+<p><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/serializer/TextSerializer.html">TextSerializer</a> 提供了一个便利的方式来进行序列化和反序列化 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/Text.html">Text</a> 实例。它有三种适用格式︰</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a><ul class="simple">
@@ -588,8 +587,7 @@ are three applicable formats:</p>
 <li class="toctree-l1"><a class="reference internal" href="configurate.html">Configuration Format</a></li>
 </ul>
 </div>
-<p>The <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/serializer/TextSerializers.html">TextSerializers</a> class provides three <code class="docutils literal"><span class="pre">TextSerializer</span></code>s for serializing to a representative
-<code class="docutils literal"><span class="pre">String</span></code> or deserializing to a <code class="docutils literal"><span class="pre">Text</span></code> instance:</p>
+<p><a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/serializer/TextSerializers.html">TextSerializers</a> 类提供了三个 <code class="docutils literal"><span class="pre">TextSerializer</span></code> 用于执行 <code class="docutils literal"><span class="pre">String</span></code> 和 <code class="docutils literal"><span class="pre">Text</span></code> 之间的序列化和反序列化操作：</p>
 <ul class="simple">
 <li><code class="docutils literal"><span class="pre">LEGACY_FORMATTING_CODE</span></code></li>
 <li><code class="docutils literal"><span class="pre">FORMATTING_CODE</span></code></li>
@@ -597,17 +595,12 @@ are three applicable formats:</p>
 <li><code class="docutils literal"><span class="pre">TEXT_XML</span></code></li>
 </ul>
 <div class="section" id="serializing-text">
-<h2>Serializing Text<a class="headerlink" href="#serializing-text" title="永久链接至标题">¶</a></h2>
-<p>To serialize a <code class="docutils literal"><span class="pre">Text</span></code> object, simply use the <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/serializer/TextSerializer.html#serialize-org.spongepowered.api.text.Text-">TextSerializer#serialize(Text)</a> method, specifying the
-appropriate <code class="docutils literal"><span class="pre">Text</span></code> object as the only argument. The method will return a <code class="docutils literal"><span class="pre">String</span></code> representing the <code class="docutils literal"><span class="pre">Text</span></code> object.</p>
+<h2>序列化文本<a class="headerlink" href="#serializing-text" title="永久链接至标题">¶</a></h2>
+<p>如果我们想要序列化一个 <code class="docutils literal"><span class="pre">Text</span></code> 对象，我们只需使用 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/serializer/TextSerializer.html#serialize-org.spongepowered.api.text.Text-">TextSerializer#serialize(Text)</a> 方法，并指定适当的 <code class="docutils literal"><span class="pre">Text</span></code> 对象作为唯一的参数。该方法将返回代表 <code class="docutils literal"><span class="pre">Text</span></code> 对象的一个 <code class="docutils literal"><span class="pre">String</span></code> 。</p>
 </div>
 <div class="section" id="deserializing-to-text">
-<h2>Deserializing to Text<a class="headerlink" href="#deserializing-to-text" title="永久链接至标题">¶</a></h2>
-<p>To deserialize a <code class="docutils literal"><span class="pre">String</span></code> into its corresponding <code class="docutils literal"><span class="pre">Text</span></code> object, simply use the
-<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/serializer/TextSerializer.html#deserialize-java.lang.String-">TextSerializer#deserialize(String)</a> method, specififying the input <code class="docutils literal"><span class="pre">String</span></code> as the only argument. If the
-input is incorrectly formatted, a <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/serializer/TextParseException.html">TextParseException</a> will be thrown. Alternatively, use the
-<a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/serializer/TextSerializer.html#deserializeUnchecked-java.lang.String-">TextSerializer#deserializeUnchecked(String)</a> method to deserialize without any exceptions. If there is an
-error, the raw input will be returned in the form of a <code class="docutils literal"><span class="pre">Text</span></code> object.</p>
+<h2>反序列化文本<a class="headerlink" href="#deserializing-to-text" title="永久链接至标题">¶</a></h2>
+<p>如果我们想要反序列化一个 <code class="docutils literal"><span class="pre">String</span></code> 到它对应的 <code class="docutils literal"><span class="pre">Text</span></code> 对象，我们只需使用 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/serializer/TextSerializer.html#deserialize-java.lang.String-">TextSerializer#deserialize(String)</a> 方法，并传入一个 <code class="docutils literal"><span class="pre">String</span></code> 为唯一的参数。如果输入格式不正确，将抛出 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/serializer/TextParseException.html">TextParseException</a> 异常。我们也可以使用 <a class="reference external" href="https://jd.spongepowered.org/4.1.0/org/spongepowered/api/text/serializer/TextSerializer.html#deserializeUnchecked-java.lang.String-">TextSerializer#deserializeUnchecked(String)</a> 方法，通过这一方法反序列化不会抛出任何异常。如果有错误，将以包含有原始输入的 <code class="docutils literal"><span class="pre">Text</span></code> 对象的形式返回。</p>
 </div>
 </div>
 

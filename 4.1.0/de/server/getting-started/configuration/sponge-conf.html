@@ -578,12 +578,8 @@
 <h1>global.conf<a class="headerlink" href="#global-conf" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="section" id="global-configuration">
 <h2>Globale Einstellungen<a class="headerlink" href="#global-configuration" title="Link zu dieser Überschrift">¶</a></h2>
-<p>The global.conf file contains the global configuration settings for Sponge. This file is created in the config/sponge
-directory in your server folder. Many of these properties can be also overridden per-world or per-dimension type by
-using the config files in the subfolders of config/worlds.</p>
-<p>Below is a complete global.conf file with all possible nodes that may be present on a server. Note that certain
-sections will not be present immediately, and will be added to the file when the server encounters them. This config
-was generated using SpongeForge build 1399, SpongeAPI version 4.1:</p>
+<p>Die global.conf Datei enthält die globalen Einstellungen von Sponge. Diese Datei wird im <code class="docutils literal"><span class="pre">config/sponge</span></code> Ordner deines Servers erstellt. Viele dieser Einstellungen können separat pro Dimension oder Welt gesetzt werden, indem du Unterordner (z.B. <code class="docutils literal"><span class="pre">config/worlds</span></code>) erstellst.</p>
+<p>Es folgt eine komplette global.conf-Datei mit allen möglichen Knoten, die auf einem Server vorhanden sein können. Beachte, dass manche Abschnitte nicht von Beginn an vorhanden sind und erst zur Datei hinzugefügt werden, wenn der Server sie erkennt. Diese Konfiguration wurde generiert mit SpongeForge Build 1399, SpongeAPI Version 4.1:</p>
 <div class="highlight-none"><div class="highlight"><pre><span></span># 1.0
 #
 # # If you need help with the configuration or have any questions related to Sponge,
@@ -853,8 +849,7 @@ block placement tracking.</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td><p class="first last">Aliase</p>
-</td>
+<tr class="row-even"><td>aliases</td>
 <td><p class="first last">String (Zeichenkette)</p>
 </td>
 <td>null</td>
@@ -980,7 +975,8 @@ player may potentially despawn</td>
 <td>If enabled, newly discovered entities will be
 added to this config with a default value.</td>
 </tr>
-<tr class="row-odd"><td><strong>Defaults</strong></td>
+<tr class="row-odd"><td><p class="first last"><strong>Standardwerte</strong></p>
+</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>Default activation ranges for all entities unless
@@ -1018,7 +1014,8 @@ entities.</td>
 <td>Per-mod overrides. Refer to the Minecraft default
 mod for example.</td>
 </tr>
-<tr class="row-even"><td><strong>Entity Collisions</strong></td>
+<tr class="row-even"><td><p class="first last"><strong>Entity Kollisionen</strong></p>
+</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -1030,7 +1027,8 @@ mod for example.</td>
 <td>If enabled, newly discovered entities/blocks will
 be added to this config with a default value.</td>
 </tr>
-<tr class="row-even"><td><strong>Defaults</strong></td>
+<tr class="row-even"><td><p class="first last"><strong>Standardwerte</strong></p>
+</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>Default max collisions used for all entities/blocks
@@ -1048,12 +1046,14 @@ can collide with. Set to 0 to disable.</td>
 <td>Per-mod overrides. Refer to the Minecraft default
 mod for example.</td>
 </tr>
-<tr class="row-odd"><td><strong>Minecraft</strong></td>
+<tr class="row-odd"><td><p class="first last"><strong>Minecraftr</strong></p>
+</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td><strong>Blocks</strong></td>
+<tr class="row-even"><td><p class="first last"><strong>Blöcke</strong></p>
+</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
@@ -1093,7 +1093,8 @@ mod for example.</td>
 <td>1</td>
 <td>Max collisions for a &#8220;wooden_pressure_plate&#8221;.</td>
 </tr>
-<tr class="row-even"><td><strong>Defaults</strong></td>
+<tr class="row-even"><td><p class="first last"><strong>Standardwerte</strong></p>
+</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 <td>Default max collisions used for all entities/blocks
@@ -1337,13 +1338,14 @@ a player without permission.</td>
 <td><p class="first last">Boolesche Variable</p>
 </td>
 <td>true</td>
-<td>Enables the optimizations module.</td>
+<td><p class="first last">Aktiviert das Optimierungs-Modul.</p>
+</td>
 </tr>
 <tr class="row-even"><td>timings</td>
 <td><p class="first last">Boolesche Variable</p>
 </td>
 <td>true</td>
-<td><p class="first last">Aktiviert Timings-Einstellungen.</p>
+<td><p class="first last">Aktiviert Zetimessungs-Einstellungen.</p>
 </td>
 </tr>
 <tr class="row-odd"><td><strong>SQL</strong></td>
@@ -1351,8 +1353,7 @@ a player without permission.</td>
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-even"><td><p class="first last">Aliase</p>
-</td>
+<tr class="row-even"><td>aliases</td>
 <td><p class="first last">String (Zeichenkette)</p>
 </td>
 <td>null</td>
@@ -1474,12 +1475,14 @@ it will fallback to default.</td>
 <tr class="row-even"><td>&#8220;minecraft:default_nether&#8221;</td>
 <td>world</td>
 <td>DIM-1</td>
-<td>The default nether world.</td>
+<td><p class="first last">Die Standard Nether Welt.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>&#8220;minecraft:default_the_end&#8221;</td>
 <td>world</td>
 <td>DIM1</td>
-<td>The default end world.</td>
+<td><p class="first last">Die Standard Ende Welt.</p>
+</td>
 </tr>
 <tr class="row-even"><td>pvp-enabled</td>
 <td><p class="first last">Boolesche Variable</p>
@@ -1492,7 +1495,8 @@ it will fallback to default.</td>
 <td><p class="first last">Boolesche Variable</p>
 </td>
 <td>true</td>
-<td>Enable if this world should be registered.</td>
+<td><p class="first last">Aktiviere, um Sponge zu erlauben diese Welt zu registrieren.</p>
+</td>
 </tr>
 </tbody>
 </table>
