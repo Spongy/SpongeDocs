@@ -683,12 +683,12 @@
 <div class="section" id="id2">
 <h4>Mundos<a class="headerlink" href="#id2" title="Link permanente para este título">¶</a></h4>
 <p>E Forge e, consequentemente o SpongeForge (e também o SpongeVanilla), usam a mesma estrutura de mundo que o Minecraft vanilla. O Minecraft Vanilla coloca as dimensões do nether (normalmente <code class="docutils literal"><span class="pre">world_nether</span></code>) e do fim (normalmente <code class="docutils literal"><span class="pre">the_end</span></code>) dentro da pasta <code class="docutils literal"><span class="pre">world</span></code>.</p>
-<p>O Canary move as pastas do <em>nether</em> e do <em>end</em> para fora da pasta <code class="docutils literal"><span class="pre">world</span></code>. Isto deve ser corrigido se quiseres manter estas duas dimensões quando usares o Sponge. Felizmente, o Canary tem uma forma fácil de converter os mundos do Canary para a estrutura usada pelo Sponge que é utilizando o comando <code class="docutils literal"><span class="pre">/makevanilla</span></code>. Se a conversão decorrer sem problemas, os mundos serão colocados na pasta <code class="docutils literal"><span class="pre">vanilla</span></code>.</p>
+<p>O Canary realoca as dimensões do nether e o fim fora da pasta <code class="docutils literal"><span class="pre">world</span></code>, o que precisa ser remediado se deseja manter essas dimensões quando usar o Sponge. Contudo, o Canary tem uma forma fácil de converter os mundos dele em uma estrutura usável pelo Sponge com o comando <code class="docutils literal"><span class="pre">/makevanilla</span></code>. Se a conversão do mundo for bem sucedida, será colocado na pasta <code class="docutils literal"><span class="pre">vanilla</span></code>.</p>
 </div>
 <div class="section" id="id3">
 <h4>Arquivos de configuração do servidor e do mundo<a class="headerlink" href="#id3" title="Link permanente para este título">¶</a></h4>
-<p>O Sponge usa muitos ficheiros que são disponibilizados pelo Minecraft Vanilla, tal como o <code class="docutils literal"><span class="pre">server.properties</span></code>. No entanto, o Canary não; o único ficheiro que o Canary tem em comum com o Minecraft vanila é o <code class="docutils literal"><span class="pre">usercache.json</span></code>. Por isso, o ficheiro <code class="docutils literal"><span class="pre">usercache.json</span></code> é o único ficheiro do Canary que pode ser reutilizado no Sponge.</p>
-<p>No entanto, é possível migrar alguns dos ficheiros de configuração do Canary manualmente, ficheiros esses dispostos abaixo.</p>
+<p>O Sponge usa muitos arquivos que são disponibilizados pelo Minecraft vanilla, como o <code class="docutils literal"><span class="pre">server.properties</span></code>. O Canary, porém, não; o único arquivo que ele tem em comum com o Minecraft vanilla é o <code class="docutils literal"><span class="pre">usercache.json</span></code>. Logo, esse é o único arquivo que pode ser reutilizado no Sponge.</p>
+<p>No entanto, é possível migrar manualmente alguns arquivos de configuração do Canary para o Sponge, que estão disponíveis abaixo.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="50%" />
@@ -726,73 +726,73 @@
 </div>
 <div class="section" id="id4">
 <h4>Plugins<a class="headerlink" href="#id4" title="Link permanente para este título">¶</a></h4>
-<p>O SpongeVanilla e o SpongeForge não têm suporte nativo para plugins do Canary. Poderá ser possível re-implementar a API do Canary com um plugin do Sponge especial.</p>
-<p>O Ore é o repositório oficial do Sponge para encontrar plugins, e recomendamos que todos os plugins do Sponge sejam descarregado do Ore. Quando estiveres à procura de substitutos para os teus plugins do Canary, tem em conta que:</p>
+<p>O SpongeVanilla e o SpongeForge não têm suporte nativo para os plugins do Canary. Pode ser possível reimplementar a API do Canary em um plugin especial do Sponge.</p>
+<p>O Ore é o repositório oficial do Sponge para encontrar plugins, é recomendado baixar todos os plugins do Sponge pelo Ore. Quando encontrar substitutos para seus plugins do Canary, há alguns pontos para ter em mente:</p>
 <ul class="simple">
-<li><p class="first">Nem todos os desenvolvedores do Canary escolheram transferir os seus plugins para o Sponge. No entanto, outras pessoas poderão criar substitutos decentes, ao longo do tempo.</p>
+<li><p class="first">Nem todos os desenvolvedores do Canary decidiram passar seus plugins para o Sponge. Com o tempo, no entanto, alguém pode criar um substituto adequado.</p>
 </li>
-<li><p class="first">Nem todos os plugins do Sponge que são transferidos do Canary vão converter os ficheiros de configuração automaticamente. Cada desenvolvedor tomará a decisão de converter ou não, automaticamente, os ficheiros de configuração.</p>
+<li><p class="first">Nem todos os plugins do Sponge vindos do Canary vão converter automaticamente os aquivos de configuração. Cada desenvolvedor de plugin decide converter ou não os arquivos de configuração automaticamente.</p>
 </li>
-<li><p class="first">Alguns plugins do Sponge que foram transferidos do Canary podem ter alterações na forma como funcionam, e podem nem sequer utilizar a mesma estrutura de configuração.</p>
+<li><p class="first">Alguns plugins do Sponge que vieram do Canary podem mudar na funcionalidade ou até mesmo não usar a mesma estrutura de configuração.</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="section" id="migrating-from-forge">
 <h3><a class="toc-backref" href="#id8">Migrando do Forge</a><a class="headerlink" href="#migrating-from-forge" title="Link permanente para este título">¶</a></h3>
-<p>Migrar de um servidor Forge para um servidor SpongeForge ou SpongeVanilla é um processo simples que quase dispensa qualquer tipo de preparação.</p>
+<p>Migrar de um simples servidor Forge para um servidor SpongeForge ou SpongeVanilla é um processo simples que quase dispensa qualquer tipo de preparação.</p>
 <div class="section" id="migrating-to-spongeforge">
 <h4>Migrando ao SpongeForge<a class="headerlink" href="#migrating-to-spongeforge" title="Link permanente para este título">¶</a></h4>
-<p>Primeiro deves certificar-te de que estás a usar uma versão do Forge compatível com a versão do SpongeForge que planeias usar. Podes encontrar builds recomendadas do Forge na <a class="reference external" href="http://files.minecraftforge.net">página de downloads do Forge</a>. Quaisquer mods que estejas a utilizar também devem ser atualizados.</p>
-<p>Quando estiveres pronto para instalar o SpongeForge, poderás seguir para os passos seguintes:</p>
+<p>Você deve primeiro ter certeza de que você está executando uma versão do Forge que é compatível com a versão do SpongeForge que você pretende usar. Você pode encontrar <em>builds</em> recomendadas do Forge em <a class="reference external" href="http://files.minecraftforge.net">Forge Downloads</a>. Se você você estiver usando outros <em>mods</em>, eles também devem ser atualizados.</p>
+<p>Quando estiver pronto para instalar o SpongeForge, você pode prosseguir com os seguintes passos:</p>
 <ol class="arabic simple">
 <li><p class="first">Pare seu servidor Forge se estiver em execução.</p>
 </li>
-<li><p class="first">Descarrega o SpongeForge do site do Sponge e o Forge do MinecraftForge.</p>
+<li><p class="first">Baixe o SpongeForge no site do Sponge e o Forge no MinecraftForge.</p>
 </li>
-<li><p class="first">Coloca o ficheiro <code class="docutils literal"><span class="pre">SpongeForge.jar</span></code> na pasta <code class="docutils literal"><span class="pre">mods</span></code>.</p>
+<li><p class="first">Coloque o <code class="docutils literal"><span class="pre">SpongeForge.jar</span></code> na pasta <code class="docutils literal"><span class="pre">mods</span></code>.</p>
 </li>
-<li><p class="first">Inicia o servidor!</p>
+<li><p class="first">Inicie o servidor e comemore!</p>
 </li>
 </ol>
 <div class="admonition note">
 <p class="first admonition-title">Nota</p>
-<p class="last">Se o SpongeForge for o único mod no teu servidor, os jogadores poderão ligar-se utilizando o cliente vanilla. Outros mods poderão requerer que os jogadores instalem o Forge nos seus computadores.</p>
+<p class="last">Se o SpongeForge é o único mod em seu servidor, os jogadores poderão se conectar com um cliente vanilla. Outros mods podem requerer que os jogadores instalem o Forge em seus computadores.</p>
 </div>
 </div>
 <div class="section" id="migration-to-spongevanilla">
 <h4>Migração ao SpongeVanilla<a class="headerlink" href="#migration-to-spongevanilla" title="Link permanente para este título">¶</a></h4>
 <div class="admonition warning">
 <p class="first admonition-title">Aviso</p>
-<p class="last">Se migrares para o <strong>SpongeVanilla</strong>, perderás todos os dados, blocos e entidades dos mods do Forge, uma vez que o SpongeVanilla não é capaz de executar mods do Forge. Tem isso em mente ao decidires entre o SpongeForge ou o SpongeVanilla.</p>
+<p class="last">Se migrar para o <strong>SpongeVanilla</strong>: Você perderá todos os dados de mods, blocos e entidades já que o SpongeVanilla não pode executar mods do Forge. Tenha isso em mente quando for decidir entre SpongeForge e SpongeVanilla.</p>
 </div>
-<p>O processo de migração é muito semelhante ao de acima:</p>
+<p>O processo de migração é quase o mesmo ao de cima:</p>
 <ol class="arabic simple">
-<li><p class="first">Para o teu servidor Forge se estiver a correr.</p>
+<li><p class="first">Pare o seu servidor Forge se ainda estiver em execução.</p>
 </li>
-<li><p class="first">Descarrega o SpongeVanilla e o servidor vanilla da Mojang.</p>
+<li><p class="first">Baixe o SpongeVanilla e o servidor vanilla da Mojang.</p>
 </li>
-<li><p class="first">Coloca os mundos e os ficheiros de configuração na pasta do servidor.</p>
+<li><p class="first">Coloque seus mundos e arquivos de configuração na pasta do servidor.</p>
 </li>
-<li><p class="first">Executa o servidor executando o &#8216;spongevanilla.jar &#8216;.</p>
+<li><p class="first">Abra o servidor executando o <code class="docutils literal"><span class="pre">spongevanilla.jar</span></code>.</p>
 </li>
 </ol>
 </div>
 </div>
 <div class="section" id="migrating-from-vanilla">
 <h3><a class="toc-backref" href="#id9">Migrando do Vanilla</a><a class="headerlink" href="#migrating-from-vanilla" title="Link permanente para este título">¶</a></h3>
-<p>Administradores de servidores de Minecraft vanilla podem migrar facilmente porque o Forge, e por conseguinte, o SpongeForge (e o SpongeVanilla), utiliza a mesma estrutura de mundos que o Vanilla. O Sponge também usa os mesmos ficheiros utilizados pelo Minecraft Vanilla, tal como o ficheiro <code class="docutils literal"><span class="pre">server.properties</span></code>.</p>
-<p>Primeiro, tens de decidir se queres usar o SpongeForge ou o SpongeVanilla.</p>
+<p>Administradores dos servidores vanilla de Minecraft podem migrar ao Sponge facilmente já que o Forge, logo o SpongeForge (e SpongeVanilla) usa a mesma estrutura de mundo que o Minecraft vanilla. O Sponge também usa os mesmos arquivos que o Minecraft vanilla, como o <code class="docutils literal"><span class="pre">server.properties</span></code>.</p>
+<p>Primeiro você deve decidir se você quer usar o SpongeForge ou o SpongeVanilla.</p>
 <div class="admonition note">
 <p class="first admonition-title">Nota</p>
-<p class="last">Ambas as variantes do Sponge são capazes de servir os clientes vanilla. Tem em conta que isto só se aplica o SpongeForge desde que não instales mods que requeiram que o cliente também os instale.</p>
+<p class="last">Ambos os sabores do Sponge são capazes de servir clientes vanilla. Tenha em mente que isso apenas se aplica ao SpongeForge se você não instalar mods do Forge que requeiram modificações no cliente.</p>
 </div>
 <ol class="arabic simple">
-<li><p class="first">Para o teu servidor Vanilla se estiver a correr</p>
+<li><p class="first">Pare seu servidor Vanilla se ainda estiver em execução</p>
 </li>
-<li><p class="first">Descarrega o SpongeVanilla ou o SpongeForge.</p>
+<li><p class="first">Baixe o SpongeVanilla ou SpongeForge.</p>
 </li>
-<li><p class="first">Coloca os mundos e os ficheiros de configuração na pasta do servidor.</p>
+<li><p class="first">Coloque seus mundos e arquivos de configuração na pasta do servidor.</p>
 </li>
 <li><p class="first">Execute seu novo servidor.</p>
 </li>
@@ -801,7 +801,7 @@
 </div>
 <div class="section" id="installing-sponge">
 <h2><a class="toc-backref" href="#id10">Instalando o Sponge</a><a class="headerlink" href="#installing-sponge" title="Link permanente para este título">¶</a></h2>
-<p>Os guias <a class="reference internal" href="implementations/spongeforge.html"><em>Installing SpongeForge</em></a> e <a class="reference internal" href="implementations/spongevanilla.html"><em>Installing SpongeVanilla</em></a> fornecem instruções relativas à instalação do Sponge durante a migração.</p>
+<p>Os guias em <a class="reference internal" href="implementations/spongeforge.html"><em>Installing SpongeForge</em></a> e <a class="reference internal" href="implementations/spongevanilla.html"><em>Installing SpongeVanilla</em></a> fornecem instruções para instalar o Sponge enquanto você migra.</p>
 </div>
 </div>
 

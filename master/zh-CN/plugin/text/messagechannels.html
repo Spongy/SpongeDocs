@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>消息通道 &mdash; Sponge 5.0.0 文档</title>
+     <title>信道 &mdash; Sponge 5.0.0 文档</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -358,16 +358,16 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="representations/index.html">序列化文本</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="representations/xml.html">TextXML Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="representations/json.html">JSON Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="representations/configurate.html">Configuration Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="representations/formatting-code-legacy.html">格式化与原生字符串</a></li>
+<li class="toctree-l4"><a class="reference internal" href="representations/xml.html">XML 格式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="representations/json.html">JSON 格式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="representations/configurate.html">配置文件格式</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="pagination.html">分页</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">消息通道</a><ul class="simple">
+<li class="toctree-l3 current"><a class="current reference internal" href="">信道</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="templates.html">文本模板</a></li>
@@ -575,56 +575,32 @@
                 <div class="body" role="main">
                   
   <div class="section" id="message-channels">
-<h1>消息通道<a class="headerlink" href="#message-channels" title="永久链接至标题">¶</a></h1>
-<p>In Sponge, every object that messages may be sent to implements the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/channel/MessageReceiver.html">MessageReceiver</a> interface. A
-<a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/channel/MessageChannel.html">MessageChannel</a> is a device that may send messages to an arbitrary number of <code class="docutils literal"><span class="pre">MessageReceiver</span></code>s and even
-perform actions like recipient-specific formatting of the message.</p>
+<h1>信道<a class="headerlink" href="#message-channels" title="永久链接至标题">¶</a></h1>
+<p>在 Sponge 中，可以发送消息的每个对象，都实现了 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/channel/MessageReceiver.html">MessageReceiver</a> 接口。 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/channel/MessageChannel.html">MessageChannel</a> 是一种设备，用于发送消息到任意数量的 <code class="docutils literal"><span class="pre">MessageReceiver</span></code> ，也可以按照消息的收件人进行特定的格式化等操作。</p>
 <div class="section" id="selecting-message-recipients">
-<h2>Selecting Message Recipients<a class="headerlink" href="#selecting-message-recipients" title="永久链接至标题">¶</a></h2>
-<p>Within the <code class="docutils literal"><span class="pre">MessageChannel</span></code> interface there are constants and static methods that can be used to obtain or create
-commonly used channels. There are also other classes and interfaces that can be used to create a <code class="docutils literal"><span class="pre">MessageChannel</span></code>,
-such as <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/channel/AbstractMutableMessageChannel.html">AbstractMutableMessageChannel</a> and <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/channel/MutableMessageChannel.html">MutableMessageChannel</a>. A complete list of these can be
-found at <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/channel/package-summary.html">org.spongepowered.api.text.channel</a> and its sub-packages.</p>
+<h2>选定消息接受者<a class="headerlink" href="#selecting-message-recipients" title="永久链接至标题">¶</a></h2>
+<p>在 <code class="docutils literal"><span class="pre">MessageChannel</span></code> 接口中，一些常量和静态方法可以用来获取或创建常用的信道。当然，创建一个 <code class="docutils literal"><span class="pre">MessageChannel</span></code> 并不仅限于使用这些类和接口，例如 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/channel/AbstractMutableMessageChannel.html">AbstractMutableMessageChannel</a>， 和 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/channel/MutableMessageChannel.html">MutableMessageChannel</a>。可以在包 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/channel/package-summary.html">org.spongepowered.api.text.channel</a> 及其子包中找到一个完整的列表。</p>
 <div class="section" id="broadcasting">
-<h3>Broadcasting<a class="headerlink" href="#broadcasting" title="永久链接至标题">¶</a></h3>
-<p>The most common channel will be the broadcasting channel. It can be obtained either from the
-<a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/Server.html">Server</a> via the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/Server.html#getBroadcastChannel--">Server#getBroadcastChannel()</a> method or from either the
-<a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/channel/MessageChannel.html#TO_PLAYERS">MessageChannel#TO_PLAYERS</a> or <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/channel/MessageChannel.html#TO_ALL">MessageChannel#TO_ALL</a> constant. The only difference is that
-<code class="docutils literal"><span class="pre">TO_ALL</span></code> includes not only every player connected to the server but also the server <code class="docutils literal"><span class="pre">Console</span></code>.</p>
-<p>The channel returned by <code class="docutils literal"><span class="pre">getBroadcastChannel()</span></code> will generally be the <code class="docutils literal"><span class="pre">MessageChannel.TO_ALL</span></code> channel, however a
-different channel may be set using the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/Server.html#setBroadcastChannel-org.spongepowered.api.text.channel.MessageChannel-">Server#setBroadcastChannel(MessageChannel)</a> method.</p>
+<h3>广播信道<a class="headerlink" href="#broadcasting" title="永久链接至标题">¶</a></h3>
+<p>最常见的信道是广播信道。我们既可以通过 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/Server.html">Server</a> 类中的 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/Server.html#getBroadcastChannel--">Server#getBroadcastChannel()</a> 方法获取，也可以从 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/channel/MessageChannel.html#TO_PLAYERS">MessageChannel#TO_PLAYERS</a> 或者 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/channel/MessageChannel.html#TO_ALL">MessageChannel#TO_ALL</a> 两个常量中获取到广播信道。唯一的区别是 <code class="docutils literal"><span class="pre">TO_ALL</span></code> 不仅包括连接到服务器的每个玩家，还包括服务器的控制台输出（Console）。</p>
+<p><code class="docutils literal"><span class="pre">getBroadcastChannel()</span></code> 方法的返回值一般情况下和常量 <code class="docutils literal"><span class="pre">MessageChannel.TO_ALL</span></code> 相同。不过，我们也可以通过 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/Server.html#setBroadcastChannel-org.spongepowered.api.text.channel.MessageChannel-">Server#setBroadcastChannel(MessageChannel)</a> 方法设置不同的信道。</p>
 </div>
 <div class="section" id="sending-to-a-fixed-list-of-messagereceivers">
-<h3>Sending to a Fixed List of MessageReceivers<a class="headerlink" href="#sending-to-a-fixed-list-of-messagereceivers" title="永久链接至标题">¶</a></h3>
-<p>It is also possible to send a message not to all players connected, but to a number of hand-selected receivers. This
-can be done by passing the list of the intended recipients to the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/channel/MessageChannel.html#fixed-MessageReceiver...-">MessageChannel#fixed(MessageReceiver...)</a>
-method. Unlike most other channels, the list of recipients will not be generated dynamically every time something is
-sent through the channel but remains static for the rest of its existence. However, the references kept are <em>weak</em>.
-This means that if for example a player disconnects and the corresponding <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/entity/living/player/Player.html">Player</a> object is removed by Java&#8217;s
-<em>garbage collector</em>, that player will also vanish from the channels recipient list.</p>
+<h3>指定发送列表的信道<a class="headerlink" href="#sending-to-a-fixed-list-of-messagereceivers" title="永久链接至标题">¶</a></h3>
+<p>另外，也可以不向所有已连接的玩家发送消息，而是手动选择接收消息的目标。这可以通过手动将接收消息的目标列表传入 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/channel/MessageChannel.html#fixed-MessageReceiver...-">MessageChannel#fixed(MessageReceiver...)</a> 方法来完成。与大多数其他信道不同，收件人列表不会在每次发送消息时动态生成，而是静态地保持仍然保持连接的其余部分的引用。不过，这样的引用是 <em>弱</em> 引用。这意味着如果一个玩家断开连接并且相应的 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/entity/living/player/Player.html">Player</a> 对象被 Java 的 <em>垃圾收集器</em> 回收，该玩家也将从该列表中消失。</p>
 </div>
 <div class="section" id="permission-based-selection">
-<h3>Permission-based Selection<a class="headerlink" href="#permission-based-selection" title="永久链接至标题">¶</a></h3>
-<p>It is also possible to create a channel sending to all recipients that hold a specific permission. The channel is
-obtained from the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/channel/MessageChannel.html#permission-java.lang.String-">MessageChannel#permission(String)</a> method with the permission to check for as an argument.
-When a message is then sent through this channel, it will obtain all subjects from the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/permission/PermissionService.html">PermissionService</a>
-that have the given permission.</p>
+<h3>基于权限的选择列表的信道<a class="headerlink" href="#permission-based-selection" title="永久链接至标题">¶</a></h3>
+<p>你也可以创建一个信道，用于发送给拥有特定权限的所有接收者。可以通过 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/channel/MessageChannel.html#permission-java.lang.String-">MessageChannel#permission(String)</a> 方法生成这样一个贪信道，传入的参数将作为检查的权限。当通过这个信道发送消息时，它将向所有拥有给定权限的 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/permission/PermissionService.html">PermissionService</a> 发送消息。</p>
 </div>
 <div class="section" id="combining-channels">
-<h3>Combining Channels<a class="headerlink" href="#combining-channels" title="永久链接至标题">¶</a></h3>
-<p>It is also possible to combine multiple channels into one. This can be done by passing all channels into the
-<a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/channel/MessageChannel.html#combined-MessageChannel...-">MessageChannel#combined(MessageChannel...)</a> method. The resulting channel will relay messages to every
-recipient that is targeted by at least one of the combined channels.</p>
+<h3>合并信道<a class="headerlink" href="#combining-channels" title="永久链接至标题">¶</a></h3>
+<p>你也可以将多个信道组合成一个。这可以通过将所有通道传入 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/channel/MessageChannel.html#combined-MessageChannel...-">MessageChannel#combined(MessageChannel...)</a> 方法来完成。在发送消息时，消息就会传递到出现在任一个信道中的消息接收者中。</p>
 </div>
 </div>
 <div class="section" id="sending-messages">
-<h2>Sending Messages<a class="headerlink" href="#sending-messages" title="永久链接至标题">¶</a></h2>
-<p>Once you have obtained a <code class="docutils literal"><span class="pre">MessageChannel</span></code> you can send a message through it via the
-<a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/channel/MessageChannel.html#send-java.lang.Object-org.spongepowered.api.text.Text-">MessageChannel#send(Object, Text)</a> method. This method is preferred over the
-<a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/channel/MessageChannel.html#send-org.spongepowered.api.text.Text-">MessageChannel#send(Text)</a> method, as the <code class="docutils literal"><span class="pre">Object</span></code> can be used for identification or for performing other
-various actions. Alternatively, you can use a <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/chat/ChatType.html">ChatType</a> to specify where the message will be sent to. Using
-the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/channel/MessageChannel.html#send-java.lang.Object-org.spongepowered.api.text.Text-org.spongepowered.api.text.chat.ChatType-">MessageChannel#send(Object, Text, ChatType)</a> method will allow you to accomplish this. The channel will
-then transform the message for every recipient and send the transformed message.</p>
+<h2>发送消息<a class="headerlink" href="#sending-messages" title="永久链接至标题">¶</a></h2>
+<p>一旦你得到了一个 <code class="docutils literal"><span class="pre">MessageChannel</span></code> ，你就可以通过 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/channel/MessageChannel.html#send-java.lang.Object-org.spongepowered.api.text.Text-">MessageChannel#send(Object, Text)</a> 方法发送消息。和 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/channel/MessageChannel.html#send-org.spongepowered.api.text.Text-">MessageChannel#send(Text)</a> 相比，我们更建议使用前者，因为 <code class="docutils literal"><span class="pre">Object</span></code> 可以用于识别或执行其他各种操作。 你也可以使用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/chat/ChatType.html">ChatType</a> ，并使用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/channel/MessageChannel.html#send-java.lang.Object-org.spongepowered.api.text.Text-org.spongepowered.api.text.chat.ChatType-">MessageChannel#send(Object, Text, ChatType)</a> 方法，来指定消息将发送到哪里。然后，信道将为每个接收者变换消息并发送变换后的消息。</p>
 <div class="section" id="extended-application-chat-channels">
 <h3>Extended Application: Chat Channels<a class="headerlink" href="#extended-application-chat-channels" title="永久链接至标题">¶</a></h3>
 <p>Message channels have a very useful application as they can be used to establish chat channels. For example, you could

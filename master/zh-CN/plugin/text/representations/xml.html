@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>TextXML Format &mdash; Sponge 5.0.0 文档</title>
+     <title>XML 格式 &mdash; Sponge 5.0.0 文档</title>
     
   <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/sponge.css" type="text/css" />
@@ -35,8 +35,8 @@
       <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 5.0.0 文档" href="../../../index.html" />
         <link rel="up" title="序列化文本" href="index.html" />
-        <link rel="next" title="JSON Format" href="json.html" />
-        <link rel="prev" title="Formatting Code &amp; Legacy Format" href="formatting-code-legacy.html" />
+        <link rel="next" title="JSON 格式" href="json.html" />
+        <link rel="prev" title="格式化与原生字符串" href="formatting-code-legacy.html" />
     
   <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -359,16 +359,16 @@
 </ul>
 </li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">序列化文本</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">TextXML Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="json.html">JSON Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="configurate.html">Configuration Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="formatting-code-legacy.html">格式化与原生字符串</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">XML 格式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json.html">JSON 格式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="configurate.html">配置文件格式</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../pagination.html">分页</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../messagechannels.html">消息通道</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../messagechannels.html">信道</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../templates.html">文本模板</a></li>
@@ -576,9 +576,8 @@
                 <div class="body" role="main">
                   
   <div class="section" id="textxml-format">
-<h1>TextXML Format<a class="headerlink" href="#textxml-format" title="永久链接至标题">¶</a></h1>
-<p>Sponge uses a predefined form of <a class="reference external" href="https://en.wikipedia.org/wiki/XML">XML</a> called &#8220;TextXML&#8221; to denote the coloring
-and styling of text. A description of the elements and attributes are as follows:</p>
+<h1>XML 格式<a class="headerlink" href="#textxml-format" title="永久链接至标题">¶</a></h1>
+<p>Sponge 使用一种预定义的 <a class="reference external" href="https://en.wikipedia.org/wiki/XML">XML</a> 格式来表示文本的颜色等样式。下面是一些 XML 元素和属性的说明：</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="16%" />
@@ -586,62 +585,78 @@ and styling of text. A description of the elements and attributes are as follows
 <col width="74%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">Element</th>
-<th class="head">Attribute</th>
-<th class="head">Description</th>
+<tr class="row-odd"><th class="head"><p class="first last">元素</p>
+</th>
+<th class="head"><p class="first last">属性</p>
+</th>
+<th class="head"><p class="first last">描述</p>
+</th>
 </tr>
 </thead>
 <tbody valign="top">
-<tr class="row-even"><td>a (anchor)</td>
+<tr class="row-even"><td><p class="first last">a（链接）</p>
+</td>
 <td>href</td>
-<td>anchor element; Indicates that this text will open the link in the <code class="docutils literal"><span class="pre">href</span></code> attribute
-when clicked.</td>
+<td><p class="first last">代表一个链接，其中的 <code class="docutils literal"><span class="pre">href</span></code> 属性指示此文本将在单击时打开的链接。</p>
+</td>
 </tr>
-<tr class="row-odd"><td>b (bold)</td>
+<tr class="row-odd"><td><p class="first last">b（加粗）</p>
+</td>
 <td>&nbsp;</td>
-<td><strong>Bolds</strong> the text.</td>
+<td><p class="first last">代表被 <strong>加粗</strong> 的一段文本。</p>
+</td>
 </tr>
-<tr class="row-even"><td>c (color)</td>
+<tr class="row-even"><td><p class="first last">c（颜色）</p>
+</td>
 <td>n</td>
-<td>Applies a color indicated by the <code class="docutils literal"><span class="pre">n</span></code> (name) attribute to the text.</td>
+<td><p class="first last">代表彩色的文本，其颜色由 <code class="docutils literal"><span class="pre">n</span></code> （名称）属性决定。</p>
+</td>
 </tr>
-<tr class="row-odd"><td>i (italics)</td>
+<tr class="row-odd"><td><p class="first last">i（斜体）</p>
+</td>
 <td>&nbsp;</td>
-<td><em>Italicizes</em> the text.</td>
+<td><p class="first last">代表一段 <em>倾斜</em> 的文本。</p>
+</td>
 </tr>
-<tr class="row-even"><td>o (obfuscated)</td>
+<tr class="row-even"><td><p class="first last">o（混乱）</p>
+</td>
 <td>&nbsp;</td>
-<td>Obfuscates the text (replaces the characters with random characters that change
-continuously).</td>
+<td><p class="first last">代表混乱的文本，也就是连续变化的随机字符替换原字符得到的文本。</p>
+</td>
 </tr>
-<tr class="row-odd"><td>s (strikethrough)</td>
+<tr class="row-odd"><td><p class="first last">s（删除）</p>
+</td>
 <td>&nbsp;</td>
-<td>Strikes through the text.</td>
+<td><p class="first last">代表被删除线标注的文本。</p>
+</td>
 </tr>
 <tr class="row-even"><td>span</td>
-<td>onClick,
-onHover</td>
-<td>Generic holder element that can have click and/or hover actions indicated by the
-<code class="docutils literal"><span class="pre">onClick</span></code> and <code class="docutils literal"><span class="pre">onHover</span></code> attributes, respectively</td>
+<td><p class="first last">onClick onHover</p>
+</td>
+<td><p class="first last">代表拥有单击或鼠标悬停操作的文本， <code class="docutils literal"><span class="pre">onClick</span></code> 和 <code class="docutils literal"><span class="pre">onHover</span></code> 分别代表单击和鼠标悬停时的操作。</p>
+</td>
 </tr>
-<tr class="row-odd"><td>tr (translation)</td>
+<tr class="row-odd"><td><p class="first last">tr（翻译）</p>
+</td>
 <td>key</td>
-<td>Indicates a text translation</td>
+<td><p class="first last">代表一段需要翻译的文本。</p>
+</td>
 </tr>
-<tr class="row-even"><td>u (underline)</td>
+<tr class="row-even"><td><p class="first last">u（底线）</p>
+</td>
 <td>&nbsp;</td>
-<td>Underlines the text.</td>
+<td><p class="first last">代表一段添加了下划线的文本。</p>
+</td>
 </tr>
 </tbody>
 </table>
-<p>For example, the text &#8220;Hello World!&#8221;, formatted with the color red and an underline would have the following representation
-in the TextXML format:</p>
+<p>作为示例，文本 &#8220;Hello World!&#8221; 被附加上了红色和下划线的格式，那么将有如下形式的 XML 格式代表它：</p>
 <div class="highlight-xml"><div class="highlight"><pre><span></span><span class="nt">&lt;c</span> <span class="na">n=</span><span class="s">&quot;red&quot;</span><span class="nt">&gt;</span>
     <span class="nt">&lt;u&gt;</span>Hello World!<span class="nt">&lt;/u&gt;</span>
 <span class="nt">&lt;/c&gt;</span>
 </pre></div>
 </div>
-<p>This output can be produced using the following code:</p>
+<p>可以使用下面的代码生成 XML 格式︰</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.text.Text</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.text.format.TextColors</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.text.format.TextStyles</span><span class="o">;</span>

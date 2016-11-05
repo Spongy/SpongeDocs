@@ -579,7 +579,7 @@
 <h1>server.properties<a class="headerlink" href="#server-properties" title="Link permanente para este título">¶</a></h1>
 <div class="section" id="default-file">
 <h2>Arquivo padrão<a class="headerlink" href="#default-file" title="Link permanente para este título">¶</a></h2>
-<p>Aqui está o ficheiro server.properties, pré-definido, de um servidor de Minecraft 1.8.1, não modificado.</p>
+<p>Aqui está um server.properties padrão de um servidor de Minecraft 1.8.1 não modificado.</p>
 <div class="highlight-properties"><div class="highlight"><pre><span></span><span class="c">#Minecraft server properties</span>
 <span class="c">#(File modification datestamp)</span>
 <span class="na">spawn-protection</span><span class="o">=</span><span class="s">16</span>
@@ -622,9 +622,9 @@
 </pre></div>
 </div>
 <div class="section" id="property-explanation">
-<h3>Explicação de Propriedades<a class="headerlink" href="#property-explanation" title="Link permanente para este título">¶</a></h3>
-<p>O mérito destas explicações é dos editores da <a class="reference external" href="http://minecraft.gamepedia.com">Minecraft Wiki</a>.</p>
-<p>As propriedades <strong>booleano</strong> só têm dois valores válidos, <em>true</em> e <em>false</em>. As propriedades <strong>inteiro</strong> devem ser números inteiros. Quando é definido um intervalo, o número deve pertencer ao intervalo. Propriedades <strong>string</strong> podem conter qualquer símbolo.</p>
+<h3>Explicação de propriedades<a class="headerlink" href="#property-explanation" title="Link permanente para este título">¶</a></h3>
+<p>O crédito vai aos editores da Minecraft Wiki &lt;<a class="reference external" href="http://minecraft.gamepedia.com">http://minecraft.gamepedia.com</a>&gt;`__ pelas explicações.</p>
+<p>Propriedades <strong>booleanas</strong> só possuem dois valores válidos: <em>true</em> (verdadeiro) e <em>false</em> (falso). Propriedades <strong>inteiras</strong> devem ser apenas números inteiros. Quando um intervalo é definido, o número precisar estar contido nele. Propriedades <strong>string</strong> podem consistir de qualquer símbolo.</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="26%" />
@@ -633,10 +633,11 @@
 <col width="51%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">Key</th>
+<tr class="row-odd"><th class="head"><p class="first last">Chave</p>
+</th>
 <th class="head"><p class="first last">Tipo</p>
 </th>
-<th class="head"><p class="first last">Valor Pré-definido</p>
+<th class="head"><p class="first last">Valor padrão</p>
 </th>
 <th class="head"><p class="first last">Descrição</p>
 </th>
@@ -647,10 +648,10 @@
 <td><p class="first last">booleano</p>
 </td>
 <td>false</td>
-<td><p class="first">Permite que os utilizadores voem no teu servidor enquanto estão no modo de Sobrevivência, se tiverem um mod que o permita.</p>
-<p>Com a key allow-flight ativa, os <em>griefers</em> poderão tornar-se mais comuns, porque o trabalho deles fica facilitado. No modo Criativo esta definição não tem efeito.</p>
+<td><p class="first">Permite que os utilizadores voem no servidor enquanto estão no modo de sobrevivência, se tiverem um mod que o permita.</p>
+<p>Com o allow-flight habilitado, <em>griefers</em> serão mais frequentes já que o trabalho deles seria facilitado. No modo criativo isso não tem efeito.</p>
 <blockquote class="last">
-<div><p><strong>false</strong> - Não é permitido voar (Jogadores que voem durante 5 segundos serão kickados)</p>
+<div><p><strong>false</strong> - Não é permitido voar (Jogadores que voem durante 5 segundos serão expulsos).</p>
 <p><strong>true</strong> - É permitido voar.</p>
 </div></blockquote>
 </td>
@@ -670,11 +671,10 @@
 <td><p class="first last">booleano</p>
 </td>
 <td>true</td>
-<td><p class="first last">Permite que o servidor anuncie quando um jogador desbloqueia uma proeza.</p>
+<td><p class="first last">Permite que o servidor anuncie quando um jogador recebe uma conquista.</p>
 </td>
 </tr>
-<tr class="row-odd"><td><p class="first last">dificuldade</p>
-</td>
+<tr class="row-odd"><td>difficulty</td>
 <td><p class="first last">inteiro (0-3)</p>
 </td>
 <td>1</td>
@@ -691,14 +691,14 @@
 <td><p class="first last">booleano</p>
 </td>
 <td>false</td>
-<td><p class="first last">Ativa o <em>GameSpy4 protocol server listener</em>. Utilizado para obter informação sobre o servidor.</p>
+<td><p class="first last">Ativa o protocolo GameSpy4. Utilizado para obter informação sobre o servidor.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>enable-rcon</td>
 <td><p class="first last">booleano</p>
 </td>
 <td>false</td>
-<td><p class="first last">Permite o acesso remoto à consola do servidor.</p>
+<td><p class="first last">Permite o acesso remoto ao console do servidor.</p>
 </td>
 </tr>
 <tr class="row-even"><td>enable-command-block</td>

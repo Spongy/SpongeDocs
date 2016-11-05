@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Formatting Code &amp; Legacy Format &mdash; Sponge 5.0.0 文档</title>
+     <title>格式化与原生字符串 &mdash; Sponge 5.0.0 文档</title>
     
   <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/sponge.css" type="text/css" />
@@ -35,7 +35,7 @@
       <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 5.0.0 文档" href="../../../index.html" />
         <link rel="up" title="序列化文本" href="index.html" />
-        <link rel="next" title="TextXML Format" href="xml.html" />
+        <link rel="next" title="XML 格式" href="xml.html" />
         <link rel="prev" title="序列化文本" href="index.html" />
     
   <script type="text/javascript">
@@ -359,16 +359,16 @@
 </ul>
 </li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">序列化文本</a><ul class="current">
-<li class="toctree-l4 current"><a class="current reference internal" href="">Formatting Code &amp; Legacy Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="xml.html">TextXML Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="json.html">JSON Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="configurate.html">Configuration Format</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">格式化与原生字符串</a></li>
+<li class="toctree-l4"><a class="reference internal" href="xml.html">XML 格式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="json.html">JSON 格式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="configurate.html">配置文件格式</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../pagination.html">分页</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../messagechannels.html">消息通道</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../messagechannels.html">信道</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../templates.html">文本模板</a></li>
@@ -576,26 +576,17 @@
                 <div class="body" role="main">
                   
   <div class="section" id="formatting-code-legacy-format">
-<h1>Formatting Code &amp; Legacy Format<a class="headerlink" href="#formatting-code-legacy-format" title="永久链接至标题">¶</a></h1>
-<p>Text can be represented by using a special character indicating a formatting <em>of some kind</em> followed by a unique character
-indicating the specific formatting to be used. In the SpongeAPI, there are two different characters that are supported
-by default: the ampersand (&amp;) and the section character (§).</p>
-<p>Both formatting schemes use the codes found at the <a class="reference external" href="http://minecraft.gamepedia.com/Formatting_codes">Minecraft Wiki</a>.
-It is important to note that the Minecraft Wiki only displays the use of the section character (§), but the same codes
-work with the ampersand (&amp;) as well.</p>
+<h1>格式化与原生字符串<a class="headerlink" href="#formatting-code-legacy-format" title="永久链接至标题">¶</a></h1>
+<p>文本可以通过使用一个特殊字符表示 <em>某种类型的</em> 格式，紧随该特殊字符后的文字将应用对应的特殊格式。在 SpongeAPI 中，分别有两种默认支持的表示特殊格式的字符： &amp; 和 § 。</p>
+<p>可以在 <a class="reference external" href="http://minecraft.gamepedia.com/Formatting_codes">Minecraft Wiki</a> 中找到这两种字符对应的特殊格式是怎样的。需要注意的一点是， Minecraft Wiki 只描述了 § 字符的使用，实际上使用 &amp; 字符表示的特殊格式是完全一样的。</p>
 <div class="admonition warning">
 <p class="first admonition-title">警告</p>
-<p class="last">Text serialization using any kind of formatting code is limited to representing only some of the capabilities
-of a <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/Text.html">Text</a>, namely formatting. It cannot represent any kind of click or hover actions. If brevity is not
-an issue (as it is in Minecraft chat), it is recommended to use either the <a class="reference internal" href="xml.html"><em>TextXML Format</em></a> or the <a class="reference internal" href="json.html"><em>JSON Format</em></a>.</p>
+<p class="last">通过这种方式进行格式化的文本字符串只能附加 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/Text.html">Text</a> 的部分功能，也就是样式。它不能用于嵌入任何的点击或者鼠标悬停操作。如有需要（如在聊天界面中），我们建议使用 <a class="reference internal" href="xml.html"><em>XML 格式</em></a> 或者 <a class="reference internal" href="json.html"><em>JSON 格式</em></a> 。</p>
 </div>
 <div class="section" id="ampersand-formatting">
-<h2>Ampersand Formatting<a class="headerlink" href="#ampersand-formatting" title="永久链接至标题">¶</a></h2>
-<p>By default, Sponge supports the formatting character <cite>&amp;</cite> (ampersand). Using the ampersand format allows for easier user
-input of text formatting and is useful in such cases where brevity is necessary, such as in the Minecraft chat console.</p>
-<p>To use this formatting, you can access its corresponding <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/serializer/TextSerializer.html">TextSerializer</a> with
-<a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/serializer/TextSerializers.html#FORMATTING_CODE">TextSerializers#FORMATTING_CODE</a>. From there, you can use the <code class="docutils literal"><span class="pre">serialize</span></code> or <code class="docutils literal"><span class="pre">deserialize</span></code> methods as
-normal:</p>
+<h2>使用 &amp; 符号格式化<a class="headerlink" href="#ampersand-formatting" title="永久链接至标题">¶</a></h2>
+<p>默认情况下， Sponge 支持使用 <cite>&amp;</cite> 符号格式化。使用 &amp; 符号可以允许用户更容易地输入格式化的文本，因为在一些诸如 Minecraft 游戏控制台等情况下，有必要提供简洁的方式输入格式化的文本。</p>
+<p>如果想要得到以这种方式格式化的字符串，你可以通过获取相应的 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/serializer/TextSerializer.html">TextSerializer</a> ，也就是 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/serializer/TextSerializers.html#FORMATTING_CODE">TextSerializers#FORMATTING_CODE</a> ，并分别通过调用其名为 <code class="docutils literal"><span class="pre">serialize</span></code> 或者 <code class="docutils literal"><span class="pre">deserialize</span></code> 方法来实现格式化的字符串和 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/Text.html">Text</a> 的转换。</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.text.Text</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.text.format.TextColors</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.text.format.TextStyles</span><span class="o">;</span>
@@ -605,30 +596,20 @@ normal:</p>
 <span class="n">String</span> <span class="n">ampersandFormattedText</span> <span class="o">=</span> <span class="n">TextSerializers</span><span class="o">.</span><span class="na">FORMATTING_CODE</span><span class="o">.</span><span class="na">serialize</span><span class="o">(</span><span class="n">text</span><span class="o">);</span>
 </pre></div>
 </div>
-<p>For example, the text &#8220;Hello World!&#8221;, formatted with the color red and an underline would have the following representation
-with the ampersand formatting code: <cite>&amp;c&amp;nHello World!</cite></p>
+<p>作为示例，文本 &#8220;Hello World!&#8221; 被附加上了红色和下划线的格式，那么将有如下形式的格式化字符串代表它： <cite>&amp;c&amp;nHello World!</cite> 。</p>
 </div>
 <div class="section" id="legacy-formatting">
-<h2>Legacy Formatting<a class="headerlink" href="#legacy-formatting" title="永久链接至标题">¶</a></h2>
-<p>The legacy text representation is the format widely used in older versions of Minecraft, represented by the section
-character (§). Sponge provides serialization and deserialization using the legacy format <strong>only for compatibility</strong>.
-It should not be used unless absolutely necessary. Rather, it is recommended to use formatting with the ampersand, as
-detailed above. The legacy formatting has a few limitations that the ampersand formatting does not have, the most
-obvious among them being that users cannot easily type the section character into the chat.</p>
-<p>To use this formatting, you can access its corresponding <code class="docutils literal"><span class="pre">TextSerializer</span></code> with
-<a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/serializer/TextSerializers.html#LEGACY_FORMATTING_CODE">TextSerializers#LEGACY_FORMATTING_CODE</a>. From there, you can use the <code class="docutils literal"><span class="pre">serialize</span></code> or <code class="docutils literal"><span class="pre">deserialize</span></code> methods
-as normal:</p>
+<h2>原生字符串<a class="headerlink" href="#legacy-formatting" title="永久链接至标题">¶</a></h2>
+<p>原生字符串是广泛用于旧版本的 Minecraft 中的格式化字符串表现形式，其对应的特殊字符是 <cite>§</cite> 。 <strong>仅仅是为了向前兼容</strong> ， Sponge 提供了对原生字符串的序列化和反序列化方式，换句话说，不到万不得已就不应使用它。相反，我们强烈建议使用上面提到的 <cite>&amp;</cite> 字符。和使用 <cite>&amp;</cite> 字符的字符串不同，原生字符串有着一些限制，最明显的限制就是用户不能在聊天命令行中输入 § 这一字符。</p>
+<p>如果想要得到以这种方式格式化的字符串，你可以通过获取相应的 <code class="docutils literal"><span class="pre">TextSerializer</span></code> ，也就是 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/serializer/TextSerializers.html#LEGACY_FORMATTING_CODE">TextSerializers#LEGACY_FORMATTING_CODE</a> ，并分别通过调用其名为 <code class="docutils literal"><span class="pre">serialize</span></code> 或者 <code class="docutils literal"><span class="pre">deserialize</span></code> 方法来实现原生字符串和 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/Text.html">Text</a> 的转换。</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">Text</span> <span class="n">text</span> <span class="o">=</span> <span class="n">Text</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="n">TextColors</span><span class="o">.</span><span class="na">RED</span><span class="o">,</span> <span class="n">TextStyles</span><span class="o">.</span><span class="na">UNDERLINE</span><span class="o">,</span> <span class="s">&quot;Hello World!&quot;</span><span class="o">);</span>
 <span class="n">String</span> <span class="n">legacyText</span> <span class="o">=</span> <span class="n">TextSerializers</span><span class="o">.</span><span class="na">LEGACY_FORMATTING_CODE</span><span class="o">.</span><span class="na">serialize</span><span class="o">(</span><span class="n">text</span><span class="o">);</span>
 </pre></div>
 </div>
-<p>For example, the text &#8220;Hello World!&#8221;, formatted with the color red and an underline would have the following representation
-in the legacy format: <cite>§c§nHello World!</cite></p>
+<p>作为示例，文本 &#8220;Hello World!&#8221; 被附加上了红色和下划线的格式，那么将有如下形式的原生字符串代表它： <cite>§c§nHello World!</cite> 。</p>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>
-<p class="last">Although its use is not recommended, you can get a <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/serializer/FormattingCodeTextSerializer.html">FormattingCodeTextSerializer</a> using whichever
-formatting character you need by calling <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/serializer/TextSerializers.html#formattingCode-char-">TextSerializers#formattingCode(char)</a>, passing in a <code class="docutils literal"><span class="pre">char</span></code> as
-the only argument.</p>
+<p class="last">你可以通过调用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/serializer/TextSerializers.html#formattingCode-char-">TextSerializers#formattingCode(char)</a> 方法，传入一个字符以获取一个 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/text/serializer/FormattingCodeTextSerializer.html">FormattingCodeTextSerializer</a> 用于自定义特殊字符使用什么，虽然我们不建议你使用这一方法。</p>
 </div>
 </div>
 </div>

@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>JSON Format &mdash; Sponge 5.0.0 文档</title>
+     <title>JSON 格式 &mdash; Sponge 5.0.0 文档</title>
     
   <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/sponge.css" type="text/css" />
@@ -35,8 +35,8 @@
       <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 5.0.0 文档" href="../../../index.html" />
         <link rel="up" title="序列化文本" href="index.html" />
-        <link rel="next" title="Configuration Format" href="configurate.html" />
-        <link rel="prev" title="TextXML Format" href="xml.html" />
+        <link rel="next" title="配置文件格式" href="configurate.html" />
+        <link rel="prev" title="XML 格式" href="xml.html" />
     
   <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -359,16 +359,16 @@
 </ul>
 </li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">序列化文本</a><ul class="current">
-<li class="toctree-l4"><a class="reference internal" href="formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="xml.html">TextXML Format</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">JSON Format</a></li>
-<li class="toctree-l4"><a class="reference internal" href="configurate.html">Configuration Format</a></li>
+<li class="toctree-l4"><a class="reference internal" href="formatting-code-legacy.html">格式化与原生字符串</a></li>
+<li class="toctree-l4"><a class="reference internal" href="xml.html">XML 格式</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">JSON 格式</a></li>
+<li class="toctree-l4"><a class="reference internal" href="configurate.html">配置文件格式</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../pagination.html">分页</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../messagechannels.html">消息通道</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../messagechannels.html">信道</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../templates.html">文本模板</a></li>
@@ -576,13 +576,9 @@
                 <div class="body" role="main">
                   
   <div class="section" id="json-format">
-<h1>JSON Format<a class="headerlink" href="#json-format" title="永久链接至标题">¶</a></h1>
-<p>JSON is <a class="reference external" href="http://www.json.org/">JavaScript Object Notation</a>, a &#8220;light-weight data-interchange format&#8221; that is &#8220;easy
-for humans to read and write&#8221; and &#8220;for machines to parse and generate&#8221;. The
-<a class="reference external" href="http://minecraft.gamepedia.com/Commands#Raw_JSON_Text">Minecraft Wiki</a> details the structure of text represented
-in JSON.</p>
-<p>For example, the text &#8220;Hello World!&#8221;, formatted with the color red and an underline would have the following representation
-in JSON:</p>
+<h1>JSON 格式<a class="headerlink" href="#json-format" title="永久链接至标题">¶</a></h1>
+<p>JSON 的全称为 <a class="reference external" href="http://www.json.org/">JavaScript Object Notation</a> ，是一个“轻量级的、容易被人类和机器读写的数据交换格式”。 <a class="reference external" href="http://minecraft.gamepedia.com/Commands#Raw_JSON_Text">Minecraft Wiki</a> 中有着对于 JSON 格式的详细介绍。</p>
+<p>作为示例，文本 &#8220;Hello World!&#8221; 被附加上了红色和下划线的格式，那么将有如下形式的 JSON 格式代表它：</p>
 <div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">{</span>
     <span class="nt">&quot;underlined&quot;</span><span class="p">:</span><span class="kc">true</span><span class="p">,</span>
     <span class="nt">&quot;color&quot;</span><span class="p">:</span><span class="s2">&quot;red&quot;</span><span class="p">,</span>
@@ -590,7 +586,7 @@ in JSON:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>This output can be produced using the following code:</p>
+<p>可以使用下面的代码生成 JSON 格式︰</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.text.Text</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.text.format.TextColors</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.text.format.TextStyles</span><span class="o">;</span>
