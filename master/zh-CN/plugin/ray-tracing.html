@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Ray Tracing &mdash; Sponge 5.0.0 文档</title>
+     <title>光线追踪 &mdash; Sponge 5.0.0 文档</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -35,7 +35,7 @@
       <link rel="shortcut icon" href="../_static/favicon.ico"/>
         <link rel="top" title="Sponge 5.0.0 文档" href="../index.html" />
         <link rel="up" title="插件开发" href="index.html" />
-        <link rel="next" title="Comparing Bukkit to SpongeAPI" href="bukkit-sponge-compare.html" />
+        <link rel="next" title="Bukkit 和 SpongeAPI 的比较" href="bukkit-sponge-compare.html" />
         <link rel="prev" title="插件的元数据" href="plugin-meta.html" />
     
   <script type="text/javascript">
@@ -183,23 +183,23 @@
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/migrating.html">迁移到 Sponge</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/implementations/index.html">选择一个安装启动</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/implementations/index.html">选择一个实现</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongeforge.html">Installing SpongeForge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongevanilla.html">安装 SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/launch-script.html">创建启动脚本</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/port-forward.html">端口转发</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/bungeecord.html">和BungeeCorge配合使用Sponge</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/bungeecord.html">和 BungeeCorge 配合使用 Sponge</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/configuration/index.html">配置Sponge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/configuration/index.html">配置 Sponge</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/hocon.html">HOCON 简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/json.html">JSON 语法</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/sponge-conf.html">global.conf</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/server-properties.html">server.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/sponge-conf.html">global.conf 文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/server-properties.html">server.properties 文件</a></li>
 </ul>
 </li>
 </ul>
@@ -213,15 +213,15 @@
 <li class="toctree-l3"><a class="reference internal" href="../server/management/plugins.html">安装插件</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../server/management/exploit-patches.html">Exploit Patches</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../server/management/exploit-patches.html">漏洞修复</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../server/management/performance-tweaks.html">Performance Tweaks</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../server/management/performance-tweaks.html">性能调优</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../server/spongineer/index.html">成为Sponge专家</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../server/spongineer/index.html">成为 Sponge 专家</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../server/spongineer/commands.html">命令</a><ul class="simple">
 </ul>
 </li>
@@ -234,7 +234,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../server/spongineer/debugging.html">Debugging</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../server/spongineer/bugreport.html">Reporting Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server/spongineer/bugreport.html">报告问题</a></li>
 </ul>
 </li>
 </ul>
@@ -242,16 +242,16 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../preparing/index.html">为开发做准备</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../preparing/jdk.html">安装JDK</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../preparing/jdk.html">安装 JDK</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../preparing/ide.html">安装IDE</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../preparing/ide.html">安装 IDE</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../preparing/text.html">安装一个文本编辑器</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../preparing/git.html">安装Git</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../preparing/git.html">安装 Git</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -284,13 +284,13 @@
 <li class="toctree-l2"><a class="reference internal" href="plugin-class.html">插件的主类</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="lifecycle.html">插件周期</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="lifecycle.html">插件的生命周期</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="injection.html">依赖注入</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="practices.html">最佳做法</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="practices.html">Sponge 插件开发指南</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="optional/index.html">使用 Optional</a><ul>
@@ -397,7 +397,7 @@
 <li class="toctree-l3"><a class="reference internal" href="blocks/modifying.html">修改方块</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="blocks/tileentities.html">Tile Entity</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="blocks/tileentities.html">方块的 Tile Entity</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="blocks/virtualblock.html">虚拟方块更改</a><ul class="simple">
@@ -412,78 +412,78 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="items/index.html">Items</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="items/usage.html">Basic Item Usage</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="items/index.html">物品</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="items/usage.html">基本用法</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="items/creating.html">Creating an ItemStack</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="items/creating.html">物品的创建</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="effects.html">Effects</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="effects.html">效果</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="scheduler.html">Scheduler</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="scheduler.html">调度器</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="services.html">服务</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="database.html">Databases</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="database.html">数据库</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="permissions.html">Permissions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bans.html">Bans</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="permissions.html">权限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bans.html">黑名单</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="bookview.html">Book Views</a></li>
-<li class="toctree-l2"><a class="reference internal" href="economy/index.html">Economy</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="economy/basics.html">Basic Concepts</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="bookview.html">成书</a></li>
+<li class="toctree-l2"><a class="reference internal" href="economy/index.html">经济 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="economy/basics.html">基本概念</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="economy/using.html">Using the Economy API</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="economy/using.html">使用经济 API</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="economy/practices.html">Economy API Best Practices</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="economy/practices.html">注意事项</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="economy/implementing.html">Implementing the Economy API</a><ul class="simple">
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="wgen/index.html">World Generation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="wgen/modifiers.html">WorldGeneratorModifiers</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="wgen/customwgen.html">Modifying World Generation</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="economy/implementing.html">实现一个经济 API</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="manager.html">Plugin Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="wgen/index.html">世界生成</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wgen/modifiers.html">世界生成修改器</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="game-profile-manager.html">Game Profile Manager</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="wgen/customwgen.html">改变世界生成</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="offline-userplayer-data.html">Offline Player Data</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="debugging.html">Plugin Debugging</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="manager.html">插件管理器</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="tab-lists.html">Tab Lists</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="game-profile-manager.html">玩家资料管理器</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="offline-userplayer-data.html">离线玩家数据</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html">调试插件</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tab-lists.html">玩家列表</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="plugin-meta.html">插件的元数据</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Ray Tracing</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="">光线追踪</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bukkit-sponge-compare.html">Bukkit 和 SpongeAPI 的比较</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html">教程</a><ul class="simple">
 </ul>
 </li>
@@ -495,33 +495,33 @@
 <li class="toctree-l2"><a class="reference internal" href="../contributing/guidelines.html">贡献指南</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../contributing/howtogit.html">如何使用Git（Hub）</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../contributing/howtogit.html">如何使用 Git（Hub）</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../contributing/implementation/index.html">Developing Sponge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/implementation/index.html">参与到 Sponge 的开发工作来</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/codestyle.html">代码规范</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/git-implementation.html">Git Workflow for API and Implementations</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/git-implementation.html">Sponge API 及其实现的 Git 工作流程</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/pr.html">Submitting a Pull-Request</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/pr.html">提交一个 Pull Request</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/debugging.html">在IDE中调试</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/mixins.html">Mixin</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/datamanipulator.html">Implementing DataManipulators</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/debugging.html">在 IDE 中调试</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/mixins.html">使用 Mixin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/datamanipulator.html">实现数据操纵器</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../contributing/spongedocs.html">SpongeDocs文稿</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../contributing/spongedocs.html">开发文档</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../contributing/porting.html">将Sponge移植到其他平台</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../contributing/porting.html">将 Sponge 移植到其他平台</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../contributing/versioning.html">Versioning System and Repository Branch Layout</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../contributing/versioning.html">版本系统和项目仓库分支结构</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -532,10 +532,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../about/introduction.html">简介</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../about/faq.html">常见问题</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../about/faq.html">常见问题及解答</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../about/structure.html">The Structure of the Sponge Project</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../about/structure.html">Sponge 的项目结构</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../about/future.html">未来计划</a></li>
@@ -544,16 +544,16 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../about/rules.html">论坛及 IRC 准则</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../about/staff.html">工作人员</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../about/staff.html">项目组成成员</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../about/glossary.html">Sponge 术语表</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../about/assets.html">艺术资源</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../about/assets.html">艺术内容</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../about/history.html">Sponge的历史</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../about/history.html">Sponge 的历史</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -574,45 +574,37 @@
                 <div class="body" role="main">
                   
   <div class="section" id="ray-tracing">
-<h1>Ray Tracing<a class="headerlink" href="#ray-tracing" title="永久链接至标题">¶</a></h1>
-<p>Generically, ray tracing is a method of determining the path of a particle through a coordinate system. In SpongeAPI,
-this is implemented with the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/blockray/BlockRay.html">BlockRay</a> class to discover blocks in the path of an arbitrary line in space. A
-common use case could be to find the block that a <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/entity/living/player/Player.html">Player</a> is looking at.</p>
-<p>You can specify the origin of the ray using the <code class="docutils literal"><span class="pre">BlockRay#from</span></code> method, passing in either a <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/Location.html">Location</a>, an
-<a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/extent/Extent.html">Extent</a> and a <code class="docutils literal"><span class="pre">Vector3d</span></code>, or an <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/entity/Entity.html">Entity</a>. The method will return a
-<a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/blockray/BlockRay.BlockRayBuilder.html">BlockRay.BlockRayBuilder</a>.</p>
+<h1>光线追踪<a class="headerlink" href="#ray-tracing" title="永久链接至标题">¶</a></h1>
+<p>通常说来，光线追踪的用处是确定粒子通过指定坐标系的路径。在 SpongeAPI 中，解决问题的是 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/blockray/BlockRay.html">BlockRay</a> 类，该类的作用就是发现空间中任意路径经历的方块。一个常见的用法可能是找到一个 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/entity/living/player/Player.html">Player</a> 正在观察的方块。</p>
+<p>你可以通过使用 <code class="docutils literal"><span class="pre">BlockRay#from</span></code> 方法，并传入一个 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/Location.html">Location</a> 、一个 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/extent/Extent.html">Extent</a> 和一个 <code class="docutils literal"><span class="pre">Vector3d</span></code> ，或者只传入一个 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/entity/Entity.html">Entity</a> ，来指定光线的起始点。该方法将返回一个 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/blockray/BlockRay.BlockRayBuilder.html">BlockRay.BlockRayBuilder</a> 。</p>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>
-<p class="last">If you specify the origin of the ray to be an <code class="docutils literal"><span class="pre">Entity</span></code>, the default direction will be the direction in which the
-<code class="docutils literal"><span class="pre">Entity</span></code> is pointing.</p>
+<p class="last">如果你指定光线追踪的原点为 <code class="docutils literal"><span class="pre">Entity</span></code> ，那么默认方向将是 <code class="docutils literal"><span class="pre">Entity</span></code> 所指向的方向。</p>
 </div>
-<p>To specify the end point, you can use the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/blockray/BlockRay.BlockRayBuilder.html#to-com.flowpowered.math.vector.Vector3d-">BlockRay.BlockRayBuilder#to(Vector3d)</a> method, which will set both
-the direction and ending location. Alternatively, you can specify a direction using
-<a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/blockray/BlockRay.BlockRayBuilder.html#direction-com.flowpowered.math.vector.Vector3d-">BlockRay.BlockRayBuilder#direction(Vector3d)</a> and also a block limit using
-<a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/blockray/BlockRay.BlockRayBuilder.html#blockLimit-int-">BlockRay.BlockRayBuilder#blockLimit(int)</a>.</p>
+<p>如果你想要指定终点，你可以通过使用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/blockray/BlockRay.BlockRayBuilder.html#to-com.flowpowered.math.vector.Vector3d-">BlockRay.BlockRayBuilder#to(Vector3d)</a> 方法。该方法将同时设置方向和终点。此外，你也可以使用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/blockray/BlockRay.BlockRayBuilder.html#direction-com.flowpowered.math.vector.Vector3d-">BlockRay.BlockRayBuilder#direction(Vector3d)</a> 方法指定一个方向，然后通过 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/blockray/BlockRay.BlockRayBuilder.html#blockLimit-int-">BlockRay.BlockRayBuilder#blockLimit(int)</a> 方法指定方块数量的限制。</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">The default block limit is 1000 blocks as a safeguard to prevent infinite iteration. To disable the block limit,
-use a negative value with <code class="docutils literal"><span class="pre">BlockRayBuilder#blockLimit(int)</span></code>.</p>
+<p class="last">默认的方块数量限制为 1000 个方块，这个数字已经接近无穷了，它的存在意义只是作为防止无限迭代的保护措施。如要禁用数量方块限制，你可以将一个负数传入 <code class="docutils literal"><span class="pre">BlockRayBuilder#blockLimit(int)</span></code> 方法。</p>
 </div>
 <div class="section" id="filtering">
-<h2>Filtering<a class="headerlink" href="#filtering" title="永久链接至标题">¶</a></h2>
-<p>Filters determine what blocks are accepted by the <code class="docutils literal"><span class="pre">BlockRay</span></code>. To add a filter, use the <code class="docutils literal"><span class="pre">BlockRayBuilder#filter</span></code>
-method, passing in one or many <code class="docutils literal"><span class="pre">Predicate&lt;BlockRayHit&lt;E&gt;&gt;</span></code>s (where <code class="docutils literal"><span class="pre">E</span></code> extends <code class="docutils literal"><span class="pre">Extent</span></code>). For convenience,
-<code class="docutils literal"><span class="pre">BlockRay</span></code> contains the following methods for common filter use cases:</p>
+<h2>筛选器<a class="headerlink" href="#filtering" title="永久链接至标题">¶</a></h2>
+<p>筛选器用于指定哪些方块会被 <code class="docutils literal"><span class="pre">BlockRay</span></code> 追踪到。通过使用 <code class="docutils literal"><span class="pre">BlockRayBuilder#filter</span></code> 方法，并传入一个或若干 <code class="docutils literal"><span class="pre">Predicate&lt;BlockRayHit&lt;E&gt;&gt;</span></code> （泛型 <code class="docutils literal"><span class="pre">E</span></code> 是 <code class="docutils literal"><span class="pre">Extent</span></code> 的子类），你可以添加一个筛选器。为方便起见， <code class="docutils literal"><span class="pre">BlockRay</span></code> 类提供了一些方法用于常见的筛选器类型。</p>
 <blockquote>
 <div><ul class="simple">
-<li><code class="docutils literal"><span class="pre">allFilter</span></code>: returns a filter accepting all blocks</li>
-<li><code class="docutils literal"><span class="pre">onlyAirFilter</span></code>: returns a filter accepting only air</li>
-<li><code class="docutils literal"><span class="pre">blockTypeFilter(BlockType)</span></code>: returns a filter accepting only the specified <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/block/BlockType.html">BlockType</a></li>
-<li><code class="docutils literal"><span class="pre">maxDistanceFilter(Vector3d,</span> <span class="pre">double)</span></code>: returns a filter that stops at certain distance from the given <code class="docutils literal"><span class="pre">Vector3d</span></code></li>
-<li><code class="docutils literal"><span class="pre">continueAfterFilter(Predicate&lt;BlockRayHit&lt;E&gt;&gt;,</span> <span class="pre">int)</span></code>: returns a filter that continues past the given filter by
-the specified number of blocks.</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">allFilter</span></code> ：所有方块都可以通过筛选</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">onlyAirFilter</span></code> ：只有空气方块可以通过筛选</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">blockTypeFilter(BlockType)</span></code> ：只有给定的 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/block/BlockType.html">BlockType</a> 可以通过筛选</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">maxDistanceFilter(Vector3d,</span> <span class="pre">double)</span></code> ：只有距离给定 <code class="docutils literal"><span class="pre">Vector3d</span></code> 的给定最大距离之内的方块可以通过筛选</p>
+</li>
+<li><p class="first"><code class="docutils literal"><span class="pre">continueAfterFilter(Predicate&lt;BlockRayHit&lt;E&gt;&gt;,</span> <span class="pre">int)</span></code> ：不仅通过指定筛选器的方块可以通过筛选，在第一个不满足指定筛选器的方块出现后的指定数量的所有方块都可以通过筛选。</p>
+</li>
 </ul>
 </div></blockquote>
-<p>Of course, you can also write your own <code class="docutils literal"><span class="pre">Predicate&lt;BlockRayHit&lt;E&gt;&gt;</span></code> filter.</p>
-<p>Finally, use <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/blockray/BlockRay.BlockRayBuilder.html#build--">BlockRay.BlockRayBuilder#build()</a> to finish building the <code class="docutils literal"><span class="pre">BlockRay</span></code>. An example usage of
-<code class="docutils literal"><span class="pre">BlockRayBuilder</span></code> to get the first non-air block a <code class="docutils literal"><span class="pre">Player</span></code> is looking at is provided below.</p>
+<p>当然，你也可以写你自己的 <code class="docutils literal"><span class="pre">Predicate&lt;BlockRayHit&lt;E&gt;&gt;</span></code> 筛选器。</p>
+<p>最后，调用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/blockray/BlockRay.BlockRayBuilder.html#build--">BlockRay.BlockRayBuilder#build()</a> 方法生成一个 <code class="docutils literal"><span class="pre">BlockRay</span></code> 。下面是一个使用 <code class="docutils literal"><span class="pre">BlockRayBuilder</span></code> 以试图追踪玩家查看的第一个非空气方块的示例：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.entity.living.player.Player</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.util.blockray.BlockRay</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.world.World</span><span class="o">;</span>
@@ -624,19 +616,12 @@ the specified number of blocks.</li>
 </div>
 </div>
 <div class="section" id="using-blockray">
-<h2>Using BlockRay<a class="headerlink" href="#using-blockray" title="永久链接至标题">¶</a></h2>
-<p>Since <code class="docutils literal"><span class="pre">BlockRay</span></code> implements <code class="docutils literal"><span class="pre">Iterator</span></code>, you can use such methods as <code class="docutils literal"><span class="pre">hasNext</span></code> and <code class="docutils literal"><span class="pre">next</span></code> (but not <code class="docutils literal"><span class="pre">remove</span></code>)
-to iterate through the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/blockray/BlockRayHit.html">BlockRayHit</a>s generated by the <code class="docutils literal"><span class="pre">BlockRay</span></code>. Additionally, you can use the
-<a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/blockray/BlockRay.html#reset--">BlockRay#reset()</a> method to reset the iterator to the starting location. Rather than iterating through the
-<code class="docutils literal"><span class="pre">BlockRayHit</span></code>s, you can also use the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/blockray/BlockRay.html#end--">BlockRay#end()</a> method to trace the block ray to the end of its path
-to get the last block accepted by the filter (or none if the block limit was reached).</p>
+<h2>使用 BlockRay<a class="headerlink" href="#using-blockray" title="永久链接至标题">¶</a></h2>
+<p>因为 <code class="docutils literal"><span class="pre">BlockRay</span></code> 实现了 <code class="docutils literal"><span class="pre">Iterator</span></code> ，所以你可以使用诸如 <code class="docutils literal"><span class="pre">hasNext</span></code> 或者 <code class="docutils literal"><span class="pre">next</span></code> （不过不能使用 <code class="docutils literal"><span class="pre">remove</span></code> ）这样的方法去迭代其生成的 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/blockray/BlockRayHit.html">BlockRayHit</a> 。此外，你可以使用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/blockray/BlockRay.html#reset--">BlockRay#reset()</a> 方法使其回到原位。除了进行普通的迭代外，你还可以通过使用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/blockray/BlockRay.html#end--">BlockRay#end()</a> 方法直接获取最后一个可用的方块（如果达到了方块数量限制，那么将返回空）。</p>
 </div>
 <div class="section" id="using-blockrayhit">
-<h2>Using BlockRayHit<a class="headerlink" href="#using-blockrayhit" title="永久链接至标题">¶</a></h2>
-<p><code class="docutils literal"><span class="pre">BlockRayHit</span></code> contains information about each block intersected by the ray. It contains the location of the block, the
-direction of the ray, the coordinates of the <em>intersection</em> of the ray and the block, and other similar data. The
-following code uses the <code class="docutils literal"><span class="pre">BlockRay</span></code> from the previous example to print out the location of the first non-air block
-in front of the player.</p>
+<h2>使用 BlockRayHit<a class="headerlink" href="#using-blockrayhit" title="永久链接至标题">¶</a></h2>
+<p><code class="docutils literal"><span class="pre">BlockRayHit</span></code> 包含由光线相交的每个块的信息。它包含块的位置，光线的方向，光线和块的 <em>交点</em> 的坐标，以及其他类似的数据。下面的代码使用前面例子中的 <code class="docutils literal"><span class="pre">BlockRay</span></code> 来打印出玩家前面的第一个非空气块的位置。</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.util.blockray.BlockRayHit</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">java.util.Optional</span><span class="o">;</span>
 

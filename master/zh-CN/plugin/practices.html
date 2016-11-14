@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>最佳做法 &mdash; Sponge 5.0.0 文档</title>
+     <title>Sponge 插件开发指南 &mdash; Sponge 5.0.0 文档</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -183,23 +183,23 @@
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/migrating.html">迁移到 Sponge</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/implementations/index.html">选择一个安装启动</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/implementations/index.html">选择一个实现</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongeforge.html">Installing SpongeForge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongevanilla.html">安装 SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/launch-script.html">创建启动脚本</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/port-forward.html">端口转发</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/bungeecord.html">和BungeeCorge配合使用Sponge</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/bungeecord.html">和 BungeeCorge 配合使用 Sponge</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/configuration/index.html">配置Sponge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/configuration/index.html">配置 Sponge</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/hocon.html">HOCON 简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/json.html">JSON 语法</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/sponge-conf.html">global.conf</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/server-properties.html">server.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/sponge-conf.html">global.conf 文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/server-properties.html">server.properties 文件</a></li>
 </ul>
 </li>
 </ul>
@@ -213,15 +213,15 @@
 <li class="toctree-l3"><a class="reference internal" href="../server/management/plugins.html">安装插件</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../server/management/exploit-patches.html">Exploit Patches</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../server/management/exploit-patches.html">漏洞修复</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../server/management/performance-tweaks.html">Performance Tweaks</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../server/management/performance-tweaks.html">性能调优</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../server/spongineer/index.html">成为Sponge专家</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../server/spongineer/index.html">成为 Sponge 专家</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../server/spongineer/commands.html">命令</a><ul class="simple">
 </ul>
 </li>
@@ -234,7 +234,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../server/spongineer/debugging.html">Debugging</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../server/spongineer/bugreport.html">Reporting Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server/spongineer/bugreport.html">报告问题</a></li>
 </ul>
 </li>
 </ul>
@@ -242,16 +242,16 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../preparing/index.html">为开发做准备</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../preparing/jdk.html">安装JDK</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../preparing/jdk.html">安装 JDK</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../preparing/ide.html">安装IDE</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../preparing/ide.html">安装 IDE</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../preparing/text.html">安装一个文本编辑器</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../preparing/git.html">安装Git</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../preparing/git.html">安装 Git</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -284,13 +284,13 @@
 <li class="toctree-l2"><a class="reference internal" href="plugin-class.html">插件的主类</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="lifecycle.html">插件周期</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="lifecycle.html">插件的生命周期</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="injection.html">依赖注入</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">最佳做法</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="">Sponge 插件开发指南</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="optional/index.html">使用 Optional</a><ul>
@@ -397,7 +397,7 @@
 <li class="toctree-l3"><a class="reference internal" href="blocks/modifying.html">修改方块</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="blocks/tileentities.html">Tile Entity</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="blocks/tileentities.html">方块的 Tile Entity</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="blocks/virtualblock.html">虚拟方块更改</a><ul class="simple">
@@ -412,78 +412,78 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="items/index.html">Items</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="items/usage.html">Basic Item Usage</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="items/index.html">物品</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="items/usage.html">基本用法</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="items/creating.html">Creating an ItemStack</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="items/creating.html">物品的创建</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="effects.html">Effects</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="effects.html">效果</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="scheduler.html">Scheduler</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="scheduler.html">调度器</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="services.html">服务</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="database.html">Databases</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="database.html">数据库</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="permissions.html">Permissions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bans.html">Bans</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="permissions.html">权限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bans.html">黑名单</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="bookview.html">Book Views</a></li>
-<li class="toctree-l2"><a class="reference internal" href="economy/index.html">Economy</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="economy/basics.html">Basic Concepts</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="bookview.html">成书</a></li>
+<li class="toctree-l2"><a class="reference internal" href="economy/index.html">经济 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="economy/basics.html">基本概念</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="economy/using.html">Using the Economy API</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="economy/using.html">使用经济 API</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="economy/practices.html">Economy API Best Practices</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="economy/practices.html">注意事项</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="economy/implementing.html">Implementing the Economy API</a><ul class="simple">
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="wgen/index.html">World Generation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="wgen/modifiers.html">WorldGeneratorModifiers</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="wgen/customwgen.html">Modifying World Generation</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="economy/implementing.html">实现一个经济 API</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="manager.html">Plugin Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="wgen/index.html">世界生成</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wgen/modifiers.html">世界生成修改器</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="game-profile-manager.html">Game Profile Manager</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="wgen/customwgen.html">改变世界生成</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="offline-userplayer-data.html">Offline Player Data</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="debugging.html">Plugin Debugging</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="manager.html">插件管理器</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="tab-lists.html">Tab Lists</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="game-profile-manager.html">玩家资料管理器</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="offline-userplayer-data.html">离线玩家数据</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html">调试插件</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tab-lists.html">玩家列表</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="plugin-meta.html">插件的元数据</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="ray-tracing.html">Ray Tracing</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="ray-tracing.html">光线追踪</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bukkit-sponge-compare.html">Bukkit 和 SpongeAPI 的比较</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html">教程</a><ul class="simple">
 </ul>
 </li>
@@ -495,33 +495,33 @@
 <li class="toctree-l2"><a class="reference internal" href="../contributing/guidelines.html">贡献指南</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../contributing/howtogit.html">如何使用Git（Hub）</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../contributing/howtogit.html">如何使用 Git（Hub）</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../contributing/implementation/index.html">Developing Sponge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/implementation/index.html">参与到 Sponge 的开发工作来</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/codestyle.html">代码规范</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/git-implementation.html">Git Workflow for API and Implementations</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/git-implementation.html">Sponge API 及其实现的 Git 工作流程</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/pr.html">Submitting a Pull-Request</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/pr.html">提交一个 Pull Request</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/debugging.html">在IDE中调试</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/mixins.html">Mixin</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/datamanipulator.html">Implementing DataManipulators</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/debugging.html">在 IDE 中调试</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/mixins.html">使用 Mixin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/datamanipulator.html">实现数据操纵器</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../contributing/spongedocs.html">SpongeDocs文稿</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../contributing/spongedocs.html">开发文档</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../contributing/porting.html">将Sponge移植到其他平台</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../contributing/porting.html">将 Sponge 移植到其他平台</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../contributing/versioning.html">Versioning System and Repository Branch Layout</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../contributing/versioning.html">版本系统和项目仓库分支结构</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -532,10 +532,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../about/introduction.html">简介</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../about/faq.html">常见问题</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../about/faq.html">常见问题及解答</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../about/structure.html">The Structure of the Sponge Project</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../about/structure.html">Sponge 的项目结构</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../about/future.html">未来计划</a></li>
@@ -544,16 +544,16 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../about/rules.html">论坛及 IRC 准则</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../about/staff.html">工作人员</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../about/staff.html">项目组成成员</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../about/glossary.html">Sponge 术语表</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../about/assets.html">艺术资源</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../about/assets.html">艺术内容</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../about/history.html">Sponge的历史</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../about/history.html">Sponge 的历史</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -574,53 +574,36 @@
                 <div class="body" role="main">
                   
   <div class="section" id="best-practices">
-<h1>最佳做法<a class="headerlink" href="#best-practices" title="永久链接至标题">¶</a></h1>
-<p>There are many ways to create a plugin, and many pitfalls for an unwary developer. Here we describe the plugin
-development practices that will make the most of the Sponge API, setting sensible boundaries for the benefit of
-compatibility. This information may change and expand as the Sponge project matures.</p>
+<h1>Sponge 插件开发指南<a class="headerlink" href="#best-practices" title="永久链接至标题">¶</a></h1>
+<p>创建一个插件有很多种方法，然而如果一个开发者刚刚接触插件开发，那很难保证他不会踩到坑里去。在这里，我们描述了如何充分利用 Sponge API 进行插件开发，在兼容性和可用性之间找到一个平衡点。该部分可能会随着 Sponge 项目的成熟而改变和扩充。</p>
 <div class="section" id="plugin-development-guidelines">
-<h2>Plugin Development Guidelines<a class="headerlink" href="#plugin-development-guidelines" title="永久链接至标题">¶</a></h2>
-<p>The following guidelines have been prepared to aid Sponge plugin developers. It is not a definitive or comprehensive
-list, merely an attempt to detail some issues that are likely to arise during plugin development, and propose our best
-solutions.</p>
+<h2>开发 Sponge 插件需注意<a class="headerlink" href="#plugin-development-guidelines" title="永久链接至标题">¶</a></h2>
+<p>下面的开发指南针对于 Sponge 插件开发者。这并不是一个明确或全面的列表，因此它存在的意义仅仅是试图说明一些在开发过程中可能出现的问题，以及它们的比较好的解决方案。</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">We reserve the use of <em>Sponge</em> for official SpongePowered works. Please don&#8217;t use <em>Sponge</em> as part of your plugin
-name, unless (1) your plugin primarily concerns the Minecraft block &#8220;Sponge&#8221;, or (2) your plugin also has versions
-for other APIs (in which case you may append &#8220;for Sponge&#8221; to the title).</p>
+<p class="last">我们保留使用 <em>Sponge</em> 用于描述官方 SpongePowered 项目的权利。请不要使用 <em>Sponge</em> 作为您的插件名称的一部分，除非：（1）您的插件主要涉及到 Minecraft 方块“海绵（Sponge）”，（2）您的插件也有依赖其他 API 的版本（在这种情况下， 可以在标题中加入诸如“For Sponge”等字样）。</p>
 </div>
 <div class="section" id="economy-api">
-<h3>Economy API<a class="headerlink" href="#economy-api" title="永久链接至标题">¶</a></h3>
-<p>The Economy API is used to link economy plugins with other plugins that use the economy (i.e. shops). You can read
-about the Economy API <a class="reference internal" href="economy/index.html"><em>here</em></a>, which details everything you need to know about the API.</p>
+<h3>经济 API<a class="headerlink" href="#economy-api" title="永久链接至标题">¶</a></h3>
+<p>经济 API 用于把希望使用经济系统的插件（如商店插件）与提供经济 API 的插件联系起来。你可以在 <a class="reference internal" href="economy/index.html"><em>这里</em></a> 读到关于经济 API 的内容，该部分包含了所有你想要知道的关于经济 API 的部分。</p>
 </div>
 <div class="section" id="mixins">
-<h3>Mixins<a class="headerlink" href="#mixins" title="永久链接至标题">¶</a></h3>
-<p>Mixins are specifically for transforming classes before other mods/plugins start. ForgeModLoader calls these mods
-“Coremods”. SpongeForge is a Coremod, and deploys Mixins on startup. Mixins cannot be used by plugins.</p>
+<h3>Mixin<a class="headerlink" href="#mixins" title="永久链接至标题">¶</a></h3>
+<p>Mixin 是专门用于在其他 Mod 或插件启动前操纵类字节码的工具。FML 将其称为 Coremod，SpongeForge 本身也是一个 Coremod，并且在 Minecraft 启动时使用 Mixin。Mixin 不应由插件使用。</p>
 </div>
 <div class="section" id="packets">
-<h3>Packets<a class="headerlink" href="#packets" title="永久链接至标题">¶</a></h3>
-<p>Anything to do with intercepting packets, or introducing custom items/blocks/entities/etc, is <em>not</em> planned to be part
-of the Sponge API. Note that using packets may be looking at the problem the wrong way, as there may be a solution
-achievable with the existing Sponge API. In some cases it may be possible to add whatever is needed to the Sponge API;
-otherwise, the alternative is to use the Forge API and create a Mod instead.</p>
+<h3>数据包<a class="headerlink" href="#packets" title="永久链接至标题">¶</a></h3>
+<p>与拦截数据包、引入自定义物品、方块、实体等相关的任何事情都 <em>不会</em> 计划作为 Sponge API 的一部分。请注意，如果你使用了数据包，那么你很有可能在使用错误的方式考虑问题，因为可能存在现有 Sponge API 完全可以解决的解决方案。在某些情况下，可以添加 Sponge API 所需的任何东西，否则，替代方案往往是使用 Forge API 并创建一个 Mod 来解决问题。</p>
 </div>
 <div class="section" id="using-forge-or-nms-classes">
-<h3>Using Forge or NMS Classes<a class="headerlink" href="#using-forge-or-nms-classes" title="永久链接至标题">¶</a></h3>
-<p>We do not recommend working with Forge or Minecraft base classes at all, unless it is to provide compatibility with a
-mod for Sponge API. Most uses of NMS (net.minecraft.server) code in plugins do not fail gracefully, making
-troubleshooting very difficult. Maintaining NMS modifications is also more difficult than using the Sponge API. Mods that
-add to the Sponge API using code internals will have to specifically write an API, which does not rely on underlying
-Minecraft code, to be usable by Sponge plugins. However, plugins can be created that load separate “compatibility”
-modules to interact with the underlying implementation (SpongeForge or SpongeVanilla).</p>
-<p>Plugins using implementation-specific code are very likely to break between versions, and should be clearly labelled
-as such wherever they are hosted. These may more appropriately labelled as &#8220;Mods&#8221;.</p>
+<h3>使用 Forge 或者 NMS 的类<a class="headerlink" href="#using-forge-or-nms-classes" title="永久链接至标题">¶</a></h3>
+<p>我们不建议使用 Forge 或 Minecraft 基类，除非开发者想要制作一个与 Sponge API 兼容的 Mod。大多数使用 NMS（net.minecraft.server）的代码的插件不会轻易地出错，因此这使故障排除非常困难。维护因 NMS 修改而带来的修改也比使用 Sponge API 更困难。想要加入 Sponge API 的 Mod 必须专门编写一个不依赖于底层的 Minecraft 代码的 API 并且可以被 Sponge 插件使用。然而，插件要分别创建并加载用于“兼容”的模块与底层实现（SpongeForge 或 SpongeVanilla）进行交互。</p>
+<p>依赖于特定 Minecraft 实现的插件的代码很容易在版本更新时破坏。插件开发者应该在出现不兼容代码的任何地方清楚地标记。因此这些插件会更倾向于被称为 Mod 。</p>
 </div>
 </div>
 <div class="section" id="plugin-interoperability">
-<h2>Plugin Interoperability<a class="headerlink" href="#plugin-interoperability" title="永久链接至标题">¶</a></h2>
-<p>An explanation of how to communicate with other plugins, <em>TBA</em>.</p>
+<h2>插件之间的交互<a class="headerlink" href="#plugin-interoperability" title="永久链接至标题">¶</a></h2>
+<p>解释如何与其他插件交互， <em>未完待续</em> 。</p>
 </div>
 </div>
 

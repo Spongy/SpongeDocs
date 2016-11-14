@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>server.properties &mdash; Sponge 5.0.0 文档</title>
+     <title>server.properties 文件 &mdash; Sponge 5.0.0 文档</title>
     
   <link rel="stylesheet" href="../../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../../_static/sponge.css" type="text/css" />
@@ -34,9 +34,9 @@
     <script type="text/javascript" src="../../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../../_static/favicon.ico"/>
         <link rel="top" title="Sponge 5.0.0 文档" href="../../../index.html" />
-        <link rel="up" title="配置Sponge" href="index.html" />
+        <link rel="up" title="配置 Sponge" href="index.html" />
         <link rel="next" title="服务器管理" href="../../management/index.html" />
-        <link rel="prev" title="global.conf" href="sponge-conf.html" />
+        <link rel="prev" title="global.conf 文件" href="sponge-conf.html" />
     
   <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -159,7 +159,7 @@
         <li><a href="../../../index.html">Sponge 5.0.0 文档</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../../index.html" >创建服务器</a><i class="fa fa-fw fa-chevron-right"></i></li>
         <li><a href="../index.html" >入门指南</a><i class="fa fa-fw fa-chevron-right"></i></li>
-        <li><a href="index.html" accesskey="U">配置Sponge</a><i class="fa fa-fw fa-chevron-right"></i></li>
+        <li><a href="index.html" accesskey="U">配置 Sponge</a><i class="fa fa-fw fa-chevron-right"></i></li>
         </ul>
       </div> 
     <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
@@ -185,23 +185,23 @@
 <li class="toctree-l3"><a class="reference internal" href="../migrating.html">迁移到 Sponge</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../implementations/index.html">选择一个安装启动</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../implementations/index.html">选择一个实现</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../implementations/spongeforge.html">Installing SpongeForge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../implementations/spongevanilla.html">安装 SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../launch-script.html">创建启动脚本</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../port-forward.html">端口转发</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../bungeecord.html">和BungeeCorge配合使用Sponge</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../bungeecord.html">和 BungeeCorge 配合使用 Sponge</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="reference internal" href="index.html">配置Sponge</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="index.html">配置 Sponge</a><ul class="current">
 <li class="toctree-l4"><a class="reference internal" href="hocon.html">HOCON 简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="json.html">JSON 语法</a></li>
-<li class="toctree-l4"><a class="reference internal" href="sponge-conf.html">global.conf</a></li>
-<li class="toctree-l4 current"><a class="current reference internal" href="">server.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="sponge-conf.html">global.conf 文件</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="">server.properties 文件</a></li>
 </ul>
 </li>
 </ul>
@@ -215,15 +215,15 @@
 <li class="toctree-l3"><a class="reference internal" href="../../management/plugins.html">安装插件</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../management/exploit-patches.html">Exploit Patches</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../management/exploit-patches.html">漏洞修复</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../management/performance-tweaks.html">Performance Tweaks</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../management/performance-tweaks.html">性能调优</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../spongineer/index.html">成为Sponge专家</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../spongineer/index.html">成为 Sponge 专家</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../spongineer/commands.html">命令</a><ul class="simple">
 </ul>
 </li>
@@ -236,7 +236,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../spongineer/debugging.html">Debugging</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../spongineer/bugreport.html">Reporting Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../spongineer/bugreport.html">报告问题</a></li>
 </ul>
 </li>
 </ul>
@@ -244,16 +244,16 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../preparing/index.html">为开发做准备</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../../preparing/jdk.html">安装JDK</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../preparing/jdk.html">安装 JDK</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../preparing/ide.html">安装IDE</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../preparing/ide.html">安装 IDE</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../preparing/text.html">安装一个文本编辑器</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../preparing/git.html">安装Git</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../preparing/git.html">安装 Git</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -286,13 +286,13 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../plugin/plugin-class.html">插件的主类</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/lifecycle.html">插件周期</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/lifecycle.html">插件的生命周期</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../plugin/injection.html">依赖注入</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/practices.html">最佳做法</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/practices.html">Sponge 插件开发指南</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../plugin/optional/index.html">使用 Optional</a><ul>
@@ -399,7 +399,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/blocks/modifying.html">修改方块</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../plugin/blocks/tileentities.html">Tile Entity</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/blocks/tileentities.html">方块的 Tile Entity</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/blocks/virtualblock.html">虚拟方块更改</a><ul class="simple">
@@ -414,78 +414,78 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/items/index.html">Items</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../plugin/items/usage.html">Basic Item Usage</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/items/index.html">物品</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/items/usage.html">基本用法</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../plugin/items/creating.html">Creating an ItemStack</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/items/creating.html">物品的创建</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/effects.html">Effects</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/effects.html">效果</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/scheduler.html">Scheduler</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/scheduler.html">调度器</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../plugin/services.html">服务</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/database.html">Databases</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/database.html">数据库</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/permissions.html">Permissions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/bans.html">Bans</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/permissions.html">权限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/bans.html">黑名单</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/bookview.html">Book Views</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/economy/index.html">Economy</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../plugin/economy/basics.html">Basic Concepts</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/bookview.html">成书</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/economy/index.html">经济 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/economy/basics.html">基本概念</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../plugin/economy/using.html">Using the Economy API</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/economy/using.html">使用经济 API</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../plugin/economy/practices.html">Economy API Best Practices</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/economy/practices.html">注意事项</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../plugin/economy/implementing.html">Implementing the Economy API</a><ul class="simple">
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/wgen/index.html">World Generation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../../plugin/wgen/modifiers.html">WorldGeneratorModifiers</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../../plugin/wgen/customwgen.html">Modifying World Generation</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/economy/implementing.html">实现一个经济 API</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/manager.html">Plugin Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/wgen/index.html">世界生成</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/wgen/modifiers.html">世界生成修改器</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/game-profile-manager.html">Game Profile Manager</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/wgen/customwgen.html">改变世界生成</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/offline-userplayer-data.html">Offline Player Data</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/debugging.html">Plugin Debugging</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/manager.html">插件管理器</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/tab-lists.html">Tab Lists</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/game-profile-manager.html">玩家资料管理器</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/offline-userplayer-data.html">离线玩家数据</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/debugging.html">调试插件</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/tab-lists.html">玩家列表</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../plugin/plugin-meta.html">插件的元数据</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/ray-tracing.html">Ray Tracing</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/ray-tracing.html">光线追踪</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../plugin/bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/bukkit-sponge-compare.html">Bukkit 和 SpongeAPI 的比较</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../plugin/tutorials.html">教程</a><ul class="simple">
 </ul>
 </li>
@@ -497,33 +497,33 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../contributing/guidelines.html">贡献指南</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../contributing/howtogit.html">如何使用Git（Hub）</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/howtogit.html">如何使用 Git（Hub）</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../contributing/implementation/index.html">Developing Sponge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/implementation/index.html">参与到 Sponge 的开发工作来</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/codestyle.html">代码规范</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/git-implementation.html">Git Workflow for API and Implementations</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/git-implementation.html">Sponge API 及其实现的 Git 工作流程</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/pr.html">Submitting a Pull-Request</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/pr.html">提交一个 Pull Request</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/debugging.html">在IDE中调试</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/mixins.html">Mixin</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/datamanipulator.html">Implementing DataManipulators</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/debugging.html">在 IDE 中调试</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/mixins.html">使用 Mixin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/datamanipulator.html">实现数据操纵器</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../contributing/spongedocs.html">SpongeDocs文稿</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/spongedocs.html">开发文档</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../contributing/porting.html">将Sponge移植到其他平台</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/porting.html">将 Sponge 移植到其他平台</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../contributing/versioning.html">Versioning System and Repository Branch Layout</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../contributing/versioning.html">版本系统和项目仓库分支结构</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -534,10 +534,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../../../about/introduction.html">简介</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html">常见问题</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../about/faq.html">常见问题及解答</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../about/structure.html">The Structure of the Sponge Project</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../about/structure.html">Sponge 的项目结构</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/future.html">未来计划</a></li>
@@ -546,16 +546,16 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/rules.html">论坛及 IRC 准则</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../../about/staff.html">工作人员</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../about/staff.html">项目组成成员</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../../about/glossary.html">Sponge 术语表</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../about/assets.html">艺术资源</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../about/assets.html">艺术内容</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../../about/history.html">Sponge的历史</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../../about/history.html">Sponge 的历史</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -576,7 +576,7 @@
                 <div class="body" role="main">
                   
   <div class="section" id="server-properties">
-<h1>server.properties<a class="headerlink" href="#server-properties" title="永久链接至标题">¶</a></h1>
+<h1>server.properties 文件<a class="headerlink" href="#server-properties" title="永久链接至标题">¶</a></h1>
 <div class="section" id="default-file">
 <h2>默认文件<a class="headerlink" href="#default-file" title="永久链接至标题">¶</a></h2>
 <p>这是一份 Minecraft 1.8.1 原版服务器的默认server.properties文件</p>
@@ -793,33 +793,24 @@
 <td><p class="first last">整数</p>
 </td>
 <td>256</td>
-<td>The maximum height in which building is allowed. Terrain
-may still naturally generate above a low height limit.</td>
+<td><p class="first last">允许建造方块的最高高度, 地形也会在高度限制内十分自然的生成.</p>
+</td>
 </tr>
 <tr class="row-even"><td>max-players</td>
 <td><p class="first last">整数 (0-2147483647)</p>
 </td>
 <td>20</td>
-<td>The maximum number of players that can play on the server
-at the same time. Note that if more players are on the
-server it will use more resources. Note also, op player
-connections are not supposed to count against the max
-players, but ops currently cannot join a full server.
-Extremely large values for this field result in the
-client-side user list being broken.</td>
+<td><p class="first last">在同一服务器上可以同时容纳玩家的最大数目. 越多玩家同时在线需要更多的服务器资源, 请注意: 有OP权限的玩家将不被计算在线玩家数目中. 但OP不能在服务器满人的情况下加入游戏. 如果你把这个值写的特别大, 游戏会爆炸(逃</p>
+</td>
 </tr>
 <tr class="row-odd"><td>max-tick-time</td>
 <td><p class="first last">整数 (0-(2 ^63-1))</p>
 </td>
 <td>60000</td>
-<td><p class="first">The maximum number of milliseconds a single tick may take
-before the server watchdog stops the server with the
-message: &#8220;A single server tick took 60.00 seconds (should
-be max 0.05); Considering it to be crashed, server will
-forcibly shutdown&#8221;. Once this criteria is met, it calls
-System.exit(1).</p>
+<td><p class="first">单个Tick的最长等待时间, 如果服务器发现超过这个值, 将会输出以下消息: &#8220;A single server tick took 60.00 seconds (should be max 0.05); Considering it to be crashed, server will forcibly shutdown&#8221;. 接着就会调用System.exit(1)来结束服务器运行.</p>
 <blockquote class="last">
-<div><strong>-1</strong> - disable watchdog entirely</div></blockquote>
+<div><p><strong>-1</strong> - 禁用此功能</p>
+</div></blockquote>
 </td>
 </tr>
 <tr class="row-even"><td>max-world-size</td>
@@ -848,14 +839,13 @@ the default doesn&#8217;t appear to do anything.</p>
 <td><em>A</em>
 <em>Minecraft</em>
 <em>Server</em></td>
-<td><p class="first">This is the message that is displayed in the server list
-of the client, below the name.</p>
+<td><p class="first">在服务器名字下的那一行小字(服务器描述).</p>
 <blockquote class="last">
 <div><ul class="simple">
 <li><p class="first">公告支持颜色代码和字体代码。</p>
 </li>
-<li>If the MOTD is over 59 characters, the server list will
-likely report a communication error.</li>
+<li><p class="first">如果MOTD有超过59个字符, 客户端显示MOTD时可能会出现一个通讯错误.</p>
+</li>
 </ul>
 </div></blockquote>
 </td>
@@ -884,21 +874,11 @@ up with a larger result than what went in.</p>
 <td><p class="first last">布尔数值</p>
 </td>
 <td>true</td>
-<td><p class="first">Server checks connecting players against Minecraft&#8217;s
-account database. Only set this to false if your server is
-not connected to the Internet. Hackers with fake accounts
-can connect if this is set to false! If minecraft.net is
-down or inaccessible, no players will be able to connect
-if this is set to true. Setting this variable to off
-purposely is called &#8220;cracking&#8221; a server, and servers that
-are presently in offline mode are called &#8220;cracked&#8221;
-servers, allowing players with unlicensed copies of
-Minecraft to join.</p>
+<td><p class="first">服务器会检查MOJANG服务器内是否有这个玩家. 如果你的服务器没有连接到互联网上. 请把它设置为false.
+如果服务器对盗版玩家开放, 也请把他设置为false. 那么服务器就会在离线模式下运行. 如果你启用了正版验证, 且验证服务器出现问题, 任何人都无法加入服务器.</p>
 <blockquote class="last">
-<div><p><strong>false</strong> - Disabled. The server will not attempt to
-check connecting players.</p>
-<p><strong>true</strong> - Enabled. The server will assume it has an
-Internet connection and check every connecting player.</p>
+<div><p><strong>false</strong> - 已禁用。服务器不会检查玩家是否为正版.</p>
+<p><strong>true</strong> - 服务器将会检查玩家是否为正版.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -919,8 +899,7 @@ Internet connection and check every connecting player.</p>
 <td><p class="first last">整数</p>
 </td>
 <td>0</td>
-<td><p class="first">If non-zero, players are kicked from the server if they
-are idle for more than that many minutes.</p>
+<td><p class="first">值不为0时, 该功能启用, 玩家在这个闲置时间后被自动踢出.</p>
 <blockquote class="last">
 <div><p><strong>Note:</strong> <em>Idle time is reset when the server receives</em>
 <em>one of the following packets:</em></p>
@@ -946,23 +925,20 @@ are idle for more than that many minutes.</p>
 <td><p class="first last">布尔数值</p>
 </td>
 <td>true</td>
-<td><p class="first">Enable PvP on the server. Players shooting themselves with
-arrows will only receive damage if PvP is enabled.</p>
+<td><p class="first">启用服务器的PVP, 玩家们就可以互相伤害了.</p>
 <blockquote>
-<div><p><strong>false</strong> - Players cannot kill other players (also known
-as <strong>Player versus Environment</strong> (<strong>PvE</strong>)).</p>
-<p><strong>true</strong> - Players will be able to kill each other.</p>
+<div><p><strong>false</strong> - 玩家们不能互相伤害 (也就是PvE模式 (<strong>PvE</strong>)).</p>
+<p><strong>true</strong> - 来啊 互相伤害啊.</p>
 </div></blockquote>
-<p class="last"><strong>Note:</strong> <em>Indirect damage sources spawned by players</em>
-<em>(such as lava, fire, TNT and to some extent water, sand</em>
-<em>and gravel) will still deal damage to other players.</em></p>
+<p class="last"><strong>注意:</strong> <em>由别的玩家制造的非直接伤害</em> <em>(*被别人的岩浆烧/TNT爆炸/水淹/沙子盖住</em>) 在PVP关闭的情况下还是有伤害的.*</p>
 </td>
 </tr>
 <tr class="row-odd"><td>query.port</td>
 <td><p class="first last">整数 (1-65534)</p>
 </td>
 <td>25565</td>
-<td>Sets the port for the query server (see <strong>enable-query</strong>).</td>
+<td><p class="first last">设置查询服务器的端口(需要开启这个功能**enable-query**)</p>
+</td>
 </tr>
 <tr class="row-even"><td>rcon.password</td>
 <td>string</td>
@@ -974,13 +950,14 @@ as <strong>Player versus Environment</strong> (<strong>PvE</strong>)).</p>
 <td><p class="first last">整数 (1-65534)</p>
 </td>
 <td>25575</td>
-<td>Sets the port for remote connection.</td>
+<td><p class="first last">设置RCON远程连接的端口.</p>
+</td>
 </tr>
 <tr class="row-even"><td>resource-pack</td>
 <td>string</td>
 <td><em>blank</em></td>
-<td>Optional URI to a resource pack. The player may choose to
-use it.</td>
+<td><p class="first last">设置资源包的路径. 玩家可以选择是否使用服务器提供的资源包.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>resource-pack-hash</td>
 <td>string</td>
@@ -993,16 +970,15 @@ improves the effectiveness and reliability of caching.</td>
 <tr class="row-even"><td>server-ip</td>
 <td>string</td>
 <td><em>blank</em></td>
-<td>Set this if you want the server to bind to a particular
-IP. It is strongly recommended that you leave this blank.</td>
+<td><p class="first last">为服务器设置监听的地址. 强烈建议将这个选项留空.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>server-port</td>
 <td><p class="first last">整数 (1-65534)</p>
 </td>
 <td>25565</td>
-<td>Changes the port the server is hosting (listening) on.
-This port must be forwarded if the server is hosted in a
-network using NAT (If you have a home router/firewall).</td>
+<td><p class="first last">设置服务器要监听的端口. 如果你的服务器没有公网IP/在防火墙之后, 请记得添加端口转发.</p>
+</td>
 </tr>
 <tr class="row-even"><td>snooper-enabled</td>
 <td><p class="first last">布尔数值</p>
@@ -1020,11 +996,10 @@ network using NAT (If you have a home router/firewall).</td>
 <td><p class="first last">布尔数值</p>
 </td>
 <td>true</td>
-<td><p class="first">Determines whether animals will be able to spawn.</p>
+<td><p class="first">设定敌对生物是否生成</p>
 <blockquote>
-<div><p><strong>false</strong> - All animals will immediately vanish, and none
-will spawn.</p>
-<p><strong>true</strong> - Animals spawn as normal.</p>
+<div><p><strong>false</strong> - 所有动物都会消失, 并且不再生成.</p>
+<p><strong>true</strong> - 动物跟往常一样正常生成</p>
 </div></blockquote>
 <p class="last"><em>提示：如果你觉得卡顿和延迟，请设置为false</em></p>
 </td>
@@ -1033,14 +1008,12 @@ will spawn.</p>
 <td><p class="first last">布尔数值</p>
 </td>
 <td>true</td>
-<td><p class="first">Determines whether hostile mobs will be able to spawn.</p>
+<td><p class="first">设置敌对生物是否能够生成</p>
 <blockquote>
-<div><p><strong>false</strong> - All mobs will immediately vanish, and none
-will spawn anywhere, or at any time of day.</p>
-<p><strong>true</strong> - Mobs spawn as normal; in darkness and at
-night.</p>
+<div><p><strong>false</strong> - 所有怪物都会立即消失, 也不再会生成.</p>
+<p><strong>true</strong> - 怪物跟往常一样生成: 在黑暗中或是在晚上生成.</p>
 </div></blockquote>
-<p>This will have no effect if difficulty is set to Peaceful.</p>
+<p>如果你设置难度为和平模式. 该选项无效.</p>
 <p class="last"><em>提示：如果你觉得卡顿和延迟，请设置为false</em></p>
 </td>
 </tr>
@@ -1048,7 +1021,7 @@ night.</p>
 <td><p class="first last">布尔数值</p>
 </td>
 <td>true</td>
-<td><p class="first">Determines if villagers will be spawned.</p>
+<td><p class="first">确定村民是否生成</p>
 <blockquote class="last">
 <div><p><strong>true</strong> - 启用. 将会生成村民.</p>
 <p><strong>false</strong> - 禁用. 没有村民</p>
@@ -1059,14 +1032,13 @@ night.</p>
 <td><p class="first last">整数</p>
 </td>
 <td>16</td>
-<td>Determines the radius of the spawn protection. Setting
-this to 0 will not disable spawn protection. 0 will
-protect the single block at the spawn point. 1 will
-protect a 3x3 area centered on the spawn point. 2 will
-protect 5x5, 3 will protect 7x7, etc. This option is not
-generated on the first server start and appears when the
-first player joins. If there are no ops set on the server,
-the spawn protection will be disabled automatically.</td>
+<td><p class="first last">决定出生点保护半径.
+0: 关闭出生点保护.
+1: 保护出生点附近的3x3范围
+2: 保护出生点附近的5x5范围
+X: 以此类推
+在第一个玩家还没进入服务器之前, 出生点保护还不会启用. 如果你的服务器没有任何一个OP, 也不会启用.</p>
+</td>
 </tr>
 <tr class="row-odd"><td>use-native-transport</td>
 <td><p class="first last">布尔数值</p>
@@ -1074,10 +1046,8 @@ the spawn protection will be disabled automatically.</td>
 <td>true</td>
 <td><p class="first">Linux 服务器性能改进: 在 Linux 上优化数据包发送/接收。</p>
 <blockquote class="last">
-<div><p><strong>false</strong> - Disabled. Disable Linux packet
-sending/receiving optimization.</p>
-<p><strong>true</strong> - Enabled. Enable Linux packet
-sending/receiving optimization.</p>
+<div><p><strong>false</strong> - 已禁用. 禁用 Linux 数据包收发优化。</p>
+<p><strong>true</strong> - 已启用. 启用 Linux 数据包收发优化。</p>
 </div></blockquote>
 </td>
 </tr>
@@ -1087,27 +1057,19 @@ sending/receiving optimization.</p>
 </td>
 <td>10</td>
 <td><p class="first">设置一个服务端世界数据发送给客户端，以玩家半径为准，它将决定服务端观看距离。</p>
-<p class="last"><em>10 is the default/recommended. If you have major lag,</em>
-<em>reduce this value.</em></p>
+<p class="last"><em>10 是默认值. 如果你感觉服务器卡顿,</em> <em>请减小这个值.</em></p>
 </td>
 </tr>
 <tr class="row-odd"><td>white-list</td>
 <td><p class="first last">布尔数值</p>
 </td>
 <td>false</td>
-<td><p class="first">Enables a whitelist on the server.
-See <a class="reference internal" href="../../management/whitelist.html"><em>管理白名单</em></a>.
-With a whitelist enabled, users not on the whitelist will
-be unable to connect. Intended for private servers, such
-as those for real-life friends or strangers carefully
-selected via an application process, for example.</p>
+<td><p class="first">开启服务器白名单. See <a class="reference internal" href="../../management/whitelist.html"><em>管理白名单</em></a>. 白名单开启时不在白名单内的玩家不能进入服务器. 例如你可以用于自己的私人服务器, 如果你只想让你钦定的朋友进入, 请把他们加入到白名单内.</p>
 <blockquote>
 <div><p><strong>false</strong> - 不使用白名单。</p>
-<p><strong>true</strong> - The file <code class="docutils literal"><span class="pre">whitelist.json</span></code> is used to
-generate the white list.</p>
+<p><strong>true</strong> - 文件 <code class="docutils literal"><span class="pre">whitelist.json</span></code> 用来生成玩家白名单.</p>
 </div></blockquote>
-<p class="last"><strong>Note:</strong> <em>Ops are automatically white listed, and there</em>
-<em>is no need to add them to the whitelist.</em></p>
+<p class="last"><strong>注意:</strong> <em>游戏内钦定的OP会被自动加入到这个列表里</em> <em>你不需要再次把他们加入进来.</em></p>
 </td>
 </tr>
 </tbody>

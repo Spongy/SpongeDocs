@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Plugin Debugging &mdash; Sponge 5.0.0 文档</title>
+     <title>调试插件 &mdash; Sponge 5.0.0 文档</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -35,8 +35,8 @@
       <link rel="shortcut icon" href="../_static/favicon.ico"/>
         <link rel="top" title="Sponge 5.0.0 文档" href="../index.html" />
         <link rel="up" title="插件开发" href="index.html" />
-        <link rel="next" title="Tab Lists" href="tab-lists.html" />
-        <link rel="prev" title="Offline Player Data" href="offline-userplayer-data.html" />
+        <link rel="next" title="玩家列表" href="tab-lists.html" />
+        <link rel="prev" title="离线玩家数据" href="offline-userplayer-data.html" />
     
   <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -183,23 +183,23 @@
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/migrating.html">迁移到 Sponge</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/implementations/index.html">选择一个安装启动</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/implementations/index.html">选择一个实现</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongeforge.html">Installing SpongeForge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongevanilla.html">安装 SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/launch-script.html">创建启动脚本</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/port-forward.html">端口转发</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/bungeecord.html">和BungeeCorge配合使用Sponge</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/bungeecord.html">和 BungeeCorge 配合使用 Sponge</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/configuration/index.html">配置Sponge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/configuration/index.html">配置 Sponge</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/hocon.html">HOCON 简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/json.html">JSON 语法</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/sponge-conf.html">global.conf</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/server-properties.html">server.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/sponge-conf.html">global.conf 文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/server-properties.html">server.properties 文件</a></li>
 </ul>
 </li>
 </ul>
@@ -213,15 +213,15 @@
 <li class="toctree-l3"><a class="reference internal" href="../server/management/plugins.html">安装插件</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../server/management/exploit-patches.html">Exploit Patches</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../server/management/exploit-patches.html">漏洞修复</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../server/management/performance-tweaks.html">Performance Tweaks</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../server/management/performance-tweaks.html">性能调优</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../server/spongineer/index.html">成为Sponge专家</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../server/spongineer/index.html">成为 Sponge 专家</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../server/spongineer/commands.html">命令</a><ul class="simple">
 </ul>
 </li>
@@ -234,7 +234,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../server/spongineer/debugging.html">Debugging</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../server/spongineer/bugreport.html">Reporting Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server/spongineer/bugreport.html">报告问题</a></li>
 </ul>
 </li>
 </ul>
@@ -242,16 +242,16 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../preparing/index.html">为开发做准备</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../preparing/jdk.html">安装JDK</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../preparing/jdk.html">安装 JDK</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../preparing/ide.html">安装IDE</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../preparing/ide.html">安装 IDE</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../preparing/text.html">安装一个文本编辑器</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../preparing/git.html">安装Git</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../preparing/git.html">安装 Git</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -284,13 +284,13 @@
 <li class="toctree-l2"><a class="reference internal" href="plugin-class.html">插件的主类</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="lifecycle.html">插件周期</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="lifecycle.html">插件的生命周期</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="injection.html">依赖注入</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="practices.html">最佳做法</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="practices.html">Sponge 插件开发指南</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="optional/index.html">使用 Optional</a><ul>
@@ -397,7 +397,7 @@
 <li class="toctree-l3"><a class="reference internal" href="blocks/modifying.html">修改方块</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="blocks/tileentities.html">Tile Entity</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="blocks/tileentities.html">方块的 Tile Entity</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="blocks/virtualblock.html">虚拟方块更改</a><ul class="simple">
@@ -412,78 +412,78 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="items/index.html">Items</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="items/usage.html">Basic Item Usage</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="items/index.html">物品</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="items/usage.html">基本用法</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="items/creating.html">Creating an ItemStack</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="items/creating.html">物品的创建</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="effects.html">Effects</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="effects.html">效果</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="scheduler.html">Scheduler</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="scheduler.html">调度器</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="services.html">服务</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="database.html">Databases</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="database.html">数据库</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="permissions.html">Permissions</a></li>
-<li class="toctree-l2"><a class="reference internal" href="bans.html">Bans</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="permissions.html">权限</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bans.html">黑名单</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="bookview.html">Book Views</a></li>
-<li class="toctree-l2"><a class="reference internal" href="economy/index.html">Economy</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="economy/basics.html">Basic Concepts</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="bookview.html">成书</a></li>
+<li class="toctree-l2"><a class="reference internal" href="economy/index.html">经济 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="economy/basics.html">基本概念</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="economy/using.html">Using the Economy API</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="economy/using.html">使用经济 API</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="economy/practices.html">Economy API Best Practices</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="economy/practices.html">注意事项</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="economy/implementing.html">Implementing the Economy API</a><ul class="simple">
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="wgen/index.html">World Generation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="wgen/modifiers.html">WorldGeneratorModifiers</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="wgen/customwgen.html">Modifying World Generation</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="economy/implementing.html">实现一个经济 API</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="manager.html">Plugin Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="wgen/index.html">世界生成</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wgen/modifiers.html">世界生成修改器</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="game-profile-manager.html">Game Profile Manager</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="wgen/customwgen.html">改变世界生成</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="offline-userplayer-data.html">Offline Player Data</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Plugin Debugging</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="manager.html">插件管理器</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="tab-lists.html">Tab Lists</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="game-profile-manager.html">玩家资料管理器</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="offline-userplayer-data.html">离线玩家数据</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">调试插件</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tab-lists.html">玩家列表</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="plugin-meta.html">插件的元数据</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="ray-tracing.html">Ray Tracing</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="ray-tracing.html">光线追踪</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bukkit-sponge-compare.html">Bukkit 和 SpongeAPI 的比较</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html">教程</a><ul class="simple">
 </ul>
 </li>
@@ -495,33 +495,33 @@
 <li class="toctree-l2"><a class="reference internal" href="../contributing/guidelines.html">贡献指南</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../contributing/howtogit.html">如何使用Git（Hub）</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../contributing/howtogit.html">如何使用 Git（Hub）</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../contributing/implementation/index.html">Developing Sponge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/implementation/index.html">参与到 Sponge 的开发工作来</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/codestyle.html">代码规范</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/git-implementation.html">Git Workflow for API and Implementations</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/git-implementation.html">Sponge API 及其实现的 Git 工作流程</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/pr.html">Submitting a Pull-Request</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/pr.html">提交一个 Pull Request</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/debugging.html">在IDE中调试</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/mixins.html">Mixin</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/datamanipulator.html">Implementing DataManipulators</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/debugging.html">在 IDE 中调试</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/mixins.html">使用 Mixin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/datamanipulator.html">实现数据操纵器</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../contributing/spongedocs.html">SpongeDocs文稿</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../contributing/spongedocs.html">开发文档</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../contributing/porting.html">将Sponge移植到其他平台</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../contributing/porting.html">将 Sponge 移植到其他平台</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../contributing/versioning.html">Versioning System and Repository Branch Layout</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../contributing/versioning.html">版本系统和项目仓库分支结构</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -532,10 +532,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../about/introduction.html">简介</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../about/faq.html">常见问题</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../about/faq.html">常见问题及解答</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../about/structure.html">The Structure of the Sponge Project</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../about/structure.html">Sponge 的项目结构</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../about/future.html">未来计划</a></li>
@@ -544,16 +544,16 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../about/rules.html">论坛及 IRC 准则</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../about/staff.html">工作人员</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../about/staff.html">项目组成成员</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../about/glossary.html">Sponge 术语表</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../about/assets.html">艺术资源</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../about/assets.html">艺术内容</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../about/history.html">Sponge的历史</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../about/history.html">Sponge 的历史</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -574,181 +574,167 @@
                 <div class="body" role="main">
                   
   <div class="section" id="plugin-debugging">
-<h1>Plugin Debugging<a class="headerlink" href="#plugin-debugging" title="永久链接至标题">¶</a></h1>
-<p>When bugs in your plugin&#8217;s code are hard to pinpoint, you are tired of recompiling after every single change
-and logger outputs are cluttering your code, debugging can be very tedious. Therefore, this section will
-explain how to set up your plugin to utilize Java&#8217;s debugging capabilities.</p>
+<h1>调试插件<a class="headerlink" href="#plugin-debugging" title="永久链接至标题">¶</a></h1>
+<p>平时我们很难定位插件里一个 Bug 的具体位置，重新编译并且加一大堆测试代码会让人想上天，因此，本节教程将教会你如何利用 Java 的 Debug 功能.</p>
 <div class="section" id="preparing-your-workspace">
-<h2>Preparing your workspace<a class="headerlink" href="#preparing-your-workspace" title="永久链接至标题">¶</a></h2>
-<p>Since we will be running both Sponge and your plugin from within your IDE, you&#8217;ll need to import either
-<a class="reference external" href="https://github.com/SpongePowered/SpongeForge">SpongeForge</a> or <a class="reference external" href="https://github.com/SpongePowered/SpongeVanilla">SpongeVanilla</a>, depending on which you want to use, as a project into your
-workspace. The instructions to do so are found on the respective project&#8217;s GitHub page. Follow those instructions
-carefully before proceeding here.</p>
-<p>Now you need to make sure your plugin project is visible to the <strong>SpongeForge/SpongeVanilla</strong> project you just created.
-The steps necessary depend on your IDE.</p>
+<h2>准备你的工作环境<a class="headerlink" href="#preparing-your-workspace" title="永久链接至标题">¶</a></h2>
+<p>由于我们将在你的 IDE 中运行 Sponge 和你的插件，所以您需要导入 <a class="reference external" href="https://github.com/SpongePowered/SpongeForge">SpongeForge</a> 或 <a class="reference external" href="https://github.com/SpongePowered/SpongeVanilla">SpongeVanilla</a> ，具体取决于你要使用哪个。相应项目的 GitHub 页面上提供了如何做的说明。在继续操作之前，请仔细按照这些说明进行操作。</p>
+<p>现在，你需要确保您的插件项目对您刚刚创建的 <strong>SpongeForge/SpongeVanilla</strong> 项目可见。所需的步骤取决于你的 IDE。</p>
 <div class="section" id="intellij-idea">
 <h3>IntelliJ IDEA<a class="headerlink" href="#intellij-idea" title="永久链接至标题">¶</a></h3>
-<p>In IntelliJ, every project has its own workspace(s). To make your project visible to the <strong>Sponge(Vanilla)</strong> project,
-it needs to be a <em>Module</em>. Assuming you already created your project as described in
-<a class="reference internal" href="workspace/idea.html"><em>设置 IntelliJ IDEA</em></a>, import it using the following steps.</p>
+<p>在 IntelliJ 中，每一个项目都有它自己的一个工作环境。所以如果你想要让你的项目对 <strong>Sponge(Vanilla)</strong> 可见，你需要将其作为一个 <em>Module</em> 。假设你已经按照 <a class="reference internal" href="workspace/idea.html"><em>设置 IntelliJ IDEA</em></a> 描述的方式创建了你自己的项目，那么请按下面的步骤做。</p>
 <ul class="simple">
-<li>Open the <code class="docutils literal"><span class="pre">SpongeVanilla</span></code>/<code class="docutils literal"><span class="pre">SpongeForge</span></code> project.</li>
-<li>Click <code class="docutils literal"><span class="pre">File</span></code>, followed by <code class="docutils literal"><span class="pre">New</span></code>, then <code class="docutils literal"><span class="pre">Module</span> <span class="pre">from</span> <span class="pre">Existing</span> <span class="pre">Sources...</span></code>.</li>
-<li>Navigate to the directory of your plugin project.<ul>
-<li>If you&#8217;re using Gradle, select the <code class="docutils literal"><span class="pre">build.gradle</span></code> file, in the next dialog check <code class="docutils literal"><span class="pre">Use</span> <span class="pre">auto-import</span></code> and confirm.</li>
-<li>Otherwise, just select the whole directory and click <code class="docutils literal"><span class="pre">Finish</span></code>.</li>
+<li><p class="first">打开 <code class="docutils literal"><span class="pre">SpongeVanilla</span></code>/<code class="docutils literal"><span class="pre">SpongeForge</span></code> 项目。</p>
+</li>
+<li><p class="first">单击 <code class="docutils literal"><span class="pre">File</span></code> ，然后单击 <code class="docutils literal"><span class="pre">New</span></code> ，然后单击 <code class="docutils literal"><span class="pre">Module</span> <span class="pre">from</span> <span class="pre">Existing</span> <span class="pre">Sources...</span></code> 。</p>
+</li>
+<li><p class="first">定位至你的插件的根目录。</p>
+<ul>
+<li><p class="first">如果你正在使用 Gradle，请选择 <code class="docutils literal"><span class="pre">build.gradle</span></code> 文件，然后在下一步选择 <code class="docutils literal"><span class="pre">Use</span> <span class="pre">auto-import</span></code> 并点击确定。</p>
+</li>
+<li><p class="first">否则请直接选择整个目录并点击 <code class="docutils literal"><span class="pre">Finish</span></code> 。</p>
+</li>
 </ul>
 </li>
-<li>Click <code class="docutils literal"><span class="pre">Finish</span></code>.</li>
+<li><p class="first">点击 <code class="docutils literal"><span class="pre">Finish</span></code> 。</p>
+</li>
 </ul>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>
-<p class="last">If you have not yet created your plugin, click <code class="docutils literal"><span class="pre">Module...</span></code> instead of <code class="docutils literal"><span class="pre">Module</span> <span class="pre">from</span> <span class="pre">Existing</span> <span class="pre">Sources...</span></code>,
-then create your project in the following dialogue.</p>
+<p class="last">如果你还没有创建你自己的插件，请单击 <code class="docutils literal"><span class="pre">Module...</span></code> 而不是 <code class="docutils literal"><span class="pre">Module</span> <span class="pre">from</span> <span class="pre">Existing</span> <span class="pre">Sources...</span></code> ，并按照接下来的指示新建项目。</p>
 </div>
 </div>
 <div class="section" id="eclipse">
 <h3>Eclipse<a class="headerlink" href="#eclipse" title="永久链接至标题">¶</a></h3>
-<p>Just create your project as described here: <a class="reference internal" href="workspace/eclipse.html"><em>设置 Eclipse</em></a>. As long as it is in the same workspace
-as your <code class="docutils literal"><span class="pre">SpongeVanilla</span></code>/<code class="docutils literal"><span class="pre">SpongeForge</span></code> project, it will be visible.</p>
+<p>只需要直接按照 <a class="reference internal" href="workspace/eclipse.html"><em>设置 Eclipse</em></a> 中描述的方式创建项目。只要它和 <code class="docutils literal"><span class="pre">SpongeVanilla</span></code>/<code class="docutils literal"><span class="pre">SpongeForge</span></code> 在同一个工作区，那么你的插件项目就对它们可见。</p>
 </div>
 </div>
 <div class="section" id="adding-plugin-to-sponge-classpath">
-<h2>Adding Plugin to Sponge classpath<a class="headerlink" href="#adding-plugin-to-sponge-classpath" title="永久链接至标题">¶</a></h2>
-<p>The idea behind this is that we&#8217;ll launch Sponge from within your IDE, like normal. However, the difference is that
-we&#8217;ll be adding your plugin to the classpath. Since Sponge will per default load all plugins found in the classpath,
-adding the plugin project to Sponge&#8217;s classpath will rid you of the necessity to rebuild and copy the artifact
-file into your server directory after every change.</p>
-<p>First you need to ensure that you have your Run/Debug Configuration(s) set appropriately, as shown in the Sponge
-<a class="reference external" href="https://github.com/SpongePowered/Sponge/blob/master/README.md#Running">README.md</a></p>
-<p>Then you&#8217;ll need to edit that Run/Debug Configuration so that it will include your project on the class path.
-How to do this, depends on your IDE again:</p>
+<h2>将插件添加到 Sponge 的 CLASSPATH 中<a class="headerlink" href="#adding-plugin-to-sponge-classpath" title="永久链接至标题">¶</a></h2>
+<p>这背后的想法是，我们将从你的 IDE 中像正常项目一样启动 Sponge，但区别在于我们将把你的插件添加到 CLASSPATH 中。由于 Sponge 将默认加载在 CLASSPATH 中找到的所有插件，将插件项目添加到 Sponge 的 CLASSPATH 中将会使你无需在每次更改后重建并将项目文件复制到你的 Sponge 服务器目录下。</p>
+<p>首先你需要确认你的运行和调试配置都已设置好。请根据 <a class="reference external" href="https://github.com/SpongePowered/Sponge/blob/master/README.md#Running">README.md</a> 中的内容进行检查。</p>
+<p>然后你需要编辑你的运行和调试配置使得你的工作目录已被加入到 CLASSPATH 中。请再次根据你的 IDE 进行这一操作：</p>
 <div class="section" id="id1">
 <h3>IntelliJ IDEA<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>Open your Project Structure.<ul>
-<li>Click <code class="docutils literal"><span class="pre">File</span></code>, followed by <code class="docutils literal"><span class="pre">Project</span> <span class="pre">Structure...</span></code>.</li>
-<li>OR, click the <code class="docutils literal"><span class="pre">Project</span> <span class="pre">Structure</span></code> icon, in the upper right-hand corner of the IDE, next to the <code class="docutils literal"><span class="pre">Search</span></code> icon.</li>
+<li><p class="first">打开你的项目的 Project Structure。</p>
+<ul>
+<li><p class="first">单击 <code class="docutils literal"><span class="pre">File</span></code> ，然后单击 <code class="docutils literal"><span class="pre">Project</span> <span class="pre">Structure...</span></code> 。</p>
+</li>
+<li><p class="first">或者直接点击 <code class="docutils literal"><span class="pre">Project</span> <span class="pre">Structure</span></code> 按钮，该按钮位于你的 IDE 的右上角， <code class="docutils literal"><span class="pre">Search</span></code> 按钮的旁边。</p>
+</li>
 </ul>
 </li>
-<li>Click <code class="docutils literal"><span class="pre">Modules</span></code>. Expand the <code class="docutils literal"><span class="pre">SpongeForge</span></code> or <code class="docutils literal"><span class="pre">SpongeVanilla</span></code> group (depending on what you chose).</li>
-<li>Make sure <code class="docutils literal"><span class="pre">SpongeForge_main</span></code> or <code class="docutils literal"><span class="pre">SpongeVanilla_main</span></code> is selected.</li>
-<li>On the right column, select the <code class="docutils literal"><span class="pre">Dependencies</span></code> tab.</li>
-<li>Click the <code class="docutils literal"><span class="pre">+</span></code> symbol (<code class="docutils literal"><span class="pre">Add</span></code>) on the bottom of the column, and select <code class="docutils literal"><span class="pre">Module</span> <span class="pre">Dependency</span></code>.</li>
-<li>Select <code class="docutils literal"><span class="pre">yourplugin_main</span></code>.</li>
-<li>Do NOT check the <code class="docutils literal"><span class="pre">Export</span></code> option on the module, after it is added to the list.</li>
+<li><p class="first">单击 <code class="docutils literal"><span class="pre">Modules</span></code> 并展开 <code class="docutils literal"><span class="pre">SpongeForge</span></code> 或 <code class="docutils literal"><span class="pre">SpongeVanilla</span></code> 组（取决于你选择了什么）。</p>
+</li>
+<li><p class="first">确定你已选择了 <code class="docutils literal"><span class="pre">SpongeForge_main</span></code> 或 <code class="docutils literal"><span class="pre">SpongeVanilla_main</span></code> 中的一个。</p>
+</li>
+<li><p class="first">在右侧列中选择 <code class="docutils literal"><span class="pre">Dependencies</span></code> 选项卡。</p>
+</li>
+<li><p class="first">点击底侧的 <code class="docutils literal"><span class="pre">+</span></code> （添加）按钮，然后选择 <code class="docutils literal"><span class="pre">Module</span> <span class="pre">Dependency</span></code> 。</p>
+</li>
+<li><p class="first">选择你的插件项目（ <code class="docutils literal"><span class="pre">yourplugin_main</span></code> ）</p>
+</li>
+<li><p class="first">在添加后 <strong>不要</strong> 检查 <code class="docutils literal"><span class="pre">Export</span></code> 选项。</p>
+</li>
 </ul>
 </div>
 <div class="section" id="id2">
 <h3>Eclipse<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
 <ul class="simple">
-<li>Find your Run/Debug Configuration<ul>
-<li>Click <code class="docutils literal"><span class="pre">Run</span></code>, followed by <code class="docutils literal"><span class="pre">Run</span> <span class="pre">Configurations...</span></code></li>
-<li>OR, click the drop-down arrow beside the Run/Debug icons and then <code class="docutils literal"><span class="pre">Run</span> <span class="pre">Configurations...</span></code> or
-<code class="docutils literal"><span class="pre">Debug</span> <span class="pre">Configurations...</span></code>, respectively.</li>
+<li><p class="first">找到你的运行或调试配置</p>
+<ul>
+<li><p class="first">单击 <code class="docutils literal"><span class="pre">Run</span></code> ，然后单击 <code class="docutils literal"><span class="pre">Run</span> <span class="pre">Configurations...</span></code></p>
+</li>
+<li><p class="first">或者，请分别点击 Run/Debug 图标对应的下拉菜单后的 <code class="docutils literal"><span class="pre">Run</span> <span class="pre">Configurations...</span></code> 或 <code class="docutils literal"><span class="pre">Debug</span> <span class="pre">Configurations...</span></code> 。</p>
+</li>
 </ul>
 </li>
-<li>Select your Run/Debug Configuration for Sponge (Server) on the left side.</li>
-<li>Switch to the <code class="docutils literal"><span class="pre">Classpath</span></code> tab.</li>
-<li>Select <code class="docutils literal"><span class="pre">User</span> <span class="pre">Entries</span></code>, followed by the <code class="docutils literal"><span class="pre">Add</span> <span class="pre">Projects...</span></code> button.</li>
-<li>Select the appropriate Project for your Plugin.</li>
-<li>Click the <code class="docutils literal"><span class="pre">OK</span></code> button.</li>
-<li>Click the <code class="docutils literal"><span class="pre">Apply</span></code> button on the bottom right corner.</li>
+<li><p class="first">在左侧栏选择关于 Sponge（服务端）的运行或调试配置。</p>
+</li>
+<li><p class="first">切换到 <code class="docutils literal"><span class="pre">Classpath</span></code> 选项卡。</p>
+</li>
+<li><p class="first">选择 <code class="docutils literal"><span class="pre">User</span> <span class="pre">Entries</span></code> ，然后单击 <code class="docutils literal"><span class="pre">Add</span> <span class="pre">Projects...</span></code> 按钮。</p>
+</li>
+<li><p class="first">选择你的插件项目。</p>
+</li>
+<li><p class="first">单击确定按钮。</p>
+</li>
+<li><p class="first">单击右下角的应用按钮。</p>
+</li>
 </ul>
 </div>
 </div>
 <div class="section" id="running-the-configuration">
-<h2>Running the Configuration<a class="headerlink" href="#running-the-configuration" title="永久链接至标题">¶</a></h2>
-<p>After you&#8217;ve followed the previous steps, you should be ready to start debugging.
-If you start your server from your IDE, its working directory will be the <code class="docutils literal"><span class="pre">run</span></code> directory in your
-SpongeForge/SpongeVanilla project. All the files usually created by a server (worlds, configs etc) will be stored in
-that <code class="docutils literal"><span class="pre">run</span></code> directory and persist over multiple runs of your local test server, just as if you manually copied a
-server .jar to the <code class="docutils literal"><span class="pre">run</span></code> directory and started it from there.</p>
+<h2>运行你的配置<a class="headerlink" href="#running-the-configuration" title="永久链接至标题">¶</a></h2>
+<p>在你执行了上面的操作步骤后，你就可以开始调试你的插件了。如果你从你的 IDE 启动你的服务器，那么它的运行目录应为你的 SpongeForge/SpongeVanilla 下的 <code class="docutils literal"><span class="pre">run</span></code> 目录。所有服务端创建的文件（包括世界、配置等）都将存储于该目录并且每次都将从该目录启动服务器，就像你手动将服务端的 JAR 复制到了该目录下并启动一样。</p>
 <div class="section" id="id3">
 <h3>IntelliJ IDEA<a class="headerlink" href="#id3" title="永久链接至标题">¶</a></h3>
-<p>Rather than pressing the Green right-pointing arrow to run your Run/Debug configuration, click the Green icon to the
-right of it, <code class="docutils literal"><span class="pre">Debug</span></code>.</p>
+<p>如果你想要调试，请不要点击表示运行或调试的两个按钮的绿色小箭头，而应点击旁边的绿色 <code class="docutils literal"><span class="pre">Debug</span></code> 按钮。</p>
 </div>
 <div class="section" id="id4">
 <h3>Eclipse<a class="headerlink" href="#id4" title="永久链接至标题">¶</a></h3>
-<p>Rather than pressing the green right-pointing arrow to run your Run/Debug configuration, click the drop down arrow of
-the Debug icon (the one displaying a bug) and click your <code class="docutils literal"><span class="pre">Test</span> <span class="pre">(Server)</span></code> configuration. If it doesn&#8217;t appear in the
-drop-down menu, click <code class="docutils literal"><span class="pre">Debug</span> <span class="pre">Configurations</span></code>. Select <code class="docutils literal"><span class="pre">Test</span> <span class="pre">(Server)</span></code> configuration and hit the <code class="docutils literal"><span class="pre">Debug</span></code> button
-on the bottom left.</p>
+<p>如果你想要调试，请不要点击表示运行或调试的两个按钮的绿色小箭头，而应点击 Debug 按钮旁边的下拉小箭头（因为一个 BUG）弹出一个下拉菜单，然后再点击 <code class="docutils literal"><span class="pre">Test</span> <span class="pre">(Server)</span></code> 配置。如果它并不存在在下拉菜单中，请点击 <code class="docutils literal"><span class="pre">Debug</span> <span class="pre">Configurations</span></code> ，然后点击 <code class="docutils literal"><span class="pre">Test</span> <span class="pre">(Server)</span></code> 配置并点击右下角的 <code class="docutils literal"><span class="pre">Debug</span></code> 按钮。</p>
 </div>
 </div>
 <div class="section" id="using-the-debugger">
-<h2>Using the Debugger<a class="headerlink" href="#using-the-debugger" title="永久链接至标题">¶</a></h2>
-<p>Now that your server (and your Plugin) are running in the Debugger, you can make use of the features it holds.
-The most prominently used are explained below in short, though they are not features of Sponge, but the Java
-Debugger your IDE makes use of.</p>
+<h2>使用调试器<a class="headerlink" href="#using-the-debugger" title="永久链接至标题">¶</a></h2>
+<p>现在你的服务端（和你的插件）都在以调试器的方式运行了。你可以开始利用调试器的种种特性。下面简要介绍最明显的用法，尽管它们不属于 Sponge，而属于 IDE 使用的 Java Debugger 的特性。</p>
 <div class="section" id="breakpoints">
-<h3>Breakpoints<a class="headerlink" href="#breakpoints" title="永久链接至标题">¶</a></h3>
-<p>Breakpoints are a useful tool to take a closer look at the code. A breakpoint can be set at the beginning of a
-line of code or a function. When reaching a breakpoint, the debugger will halt the code execution and your IDE
-will open up a view allowing you to inspect the content of all variables in the current scope. Code execution
-will not resume unless you press the according button in your IDE&#8217;s debugging view.</p>
-<p>Breakpoints may also be added, removed or temporarily disabled while the debugging is in process.</p>
+<h3>断点<a class="headerlink" href="#breakpoints" title="永久链接至标题">¶</a></h3>
+<p>若要仔细看看代码，断点是一个很有用的工具。断点可以在代码行或方法的开头设置。当到达断点时，调试器将停止代码执行，同时 IDE 将打开一个视图，允许您检查当前范围中所有变量的内容。代码执行将不会还原，除非您在 IDE 的调试视图中按相应的按钮。</p>
+<p>在调试的过程中，你可以任意地添加、移除、或者临时禁用断点。</p>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>
-<p class="last">Once a single server tick takes more than a given amount of time, the watchdog will consider the server crashed
-and forcefully shut it down. When working with breakpoints this might occur, so it is recommended that you
-edit your test environments <code class="docutils literal"><span class="pre">server.properties</span></code> file and set the value of <code class="docutils literal"><span class="pre">max-tick-time</span></code> to either a
-very large number (the amount of milliseconds a tick may take) or <code class="docutils literal"><span class="pre">-1</span></code> (to disable the Watchdog completely).</p>
+<p class="last">一旦单个服务器检查需要超过给定的时间，监视器（Watchdog）将会认为服务器崩溃并强制关闭它。当使用断点时这件事就可能会发生了，因此建议您编辑测试环境的 <code class="docutils literal"><span class="pre">server.properties</span></code> 文件，并将``max-tick-time`` （毫秒）的值设置为一个非常大的数字，或干脆直接设置为 <code class="docutils literal"><span class="pre">-1</span></code> （完全禁用监视器）。</p>
 </div>
 <div class="section" id="id5">
 <h4>IntelliJ IDEA<a class="headerlink" href="#id5" title="永久链接至标题">¶</a></h4>
-<p>To add or remove a breakpoint, just left click in the blank space just to the left of your editor.</p>
-<p>Alternatively, have your cursor be in the line where you want the breakpoint added or removed and then click
-<code class="docutils literal"><span class="pre">Run</span></code> followed by <code class="docutils literal"><span class="pre">Toggle</span> <span class="pre">Line</span> <span class="pre">Breakpoint</span></code>.</p>
+<p>若要添加或移除断点，只需在你的 IDE 的文本编辑器界面左侧的空白区域左键单击。</p>
+<p>或者，将光标放在要添加或删除断点的行中，然后单击 <code class="docutils literal"><span class="pre">Run</span></code> 并单击 <code class="docutils literal"><span class="pre">Toggle</span> <span class="pre">Line</span> <span class="pre">Breakpoint</span></code> 。</p>
 </div>
 <div class="section" id="id6">
 <h4>Eclipse<a class="headerlink" href="#id6" title="永久链接至标题">¶</a></h4>
-<p>To add or remove a breakpoint, just right click in the blank space just to the left of your editor and click
-<code class="docutils literal"><span class="pre">Toggle</span> <span class="pre">Breakpoint</span></code>.</p>
-<p>Alternatively, have your cursor be in the line where you want the breakpoint added or removed and then click <code class="docutils literal"><span class="pre">Run</span></code>
-followed by <code class="docutils literal"><span class="pre">Toggle</span> <span class="pre">Breakpoint</span></code>.</p>
+<p>若要添加或移除断点，只需在你的 IDE 的文本编辑器界面左侧的空白区域右键单击并点击 <code class="docutils literal"><span class="pre">Toggle</span> <span class="pre">Breakpoint</span></code> 。</p>
+<p>或者，将光标放在要添加或删除断点的行中，然后单击 <code class="docutils literal"><span class="pre">Run</span></code> 并单击 <code class="docutils literal"><span class="pre">Toggle</span> <span class="pre">Breakpoint</span></code> 。</p>
 </div>
 </div>
 <div class="section" id="code-hotswapping">
-<h3>Code Hotswapping<a class="headerlink" href="#code-hotswapping" title="永久链接至标题">¶</a></h3>
-<p>The other major feat of the debugger is that you will not have to restart your server for every small change you
-make, thanks to code hotswapping. This means that you can just recompile portions of your code while it is
-running in the debugger. However, there are a couple of limitations, the most important of which are:</p>
+<h3>代码热替换<a class="headerlink" href="#code-hotswapping" title="永久链接至标题">¶</a></h3>
+<p>调试器的另一个主要特点是，你不必为每一个小的变化重新启动服务器，因为我们可以进行代码热替换。这意味着您可以在调试器中运行代码时重新编译部分代码。当然，这有几个限制，其中最重要的是：</p>
 <ul>
-<li><p class="first">You cannot create or remove methods.</p>
+<li><p class="first">你不能添加或移除方法。</p>
 <blockquote>
 <div><ul class="simple">
-<li>Changes to methods are limited to code <em>within</em> the method. You cannot modify its signature (that means its name,
-return type and parameter types)</li>
+<li><p class="first">对方法的改变仅限于方法 <em>内</em> 的代码。也就是你甚至连方法的签名（Signature）都不可以改变（这包括方法名称、返回值以及参数类型）。</p>
+</li>
 </ul>
 </div></blockquote>
 </li>
-<li><p class="first">You cannot remove classes.</p>
+<li><p class="first">你不能移除一个类。</p>
 <blockquote>
 <div><ul class="simple">
-<li>You cannot modify a class&#8217; name, superclass or the list of interfaces it implements.</li>
-<li>You can add classes. However, once it&#8217;s been built and hotswapped, the class follows the above rules.</li>
+<li><p class="first">你不能修改一个类的名称、父类、以及它实现的接口列表。</p>
+</li>
+<li><p class="first">你可以添加类。不过，它一旦添加并通过代码热替换的方式进行加载，你就不能对这个类做上面提到的操作了。</p>
+</li>
 </ul>
 </div></blockquote>
 </li>
 </ul>
-<p>You can test this functionality: Introduce a simple command to your plugin that just writes a word, like <code class="docutils literal"><span class="pre">Sponge</span></code>
-Then save it and start the server as described above. Run the command. It will output <code class="docutils literal"><span class="pre">Sponge</span></code>. Now change the
-command to write a different word to console, save the file. After a change, do as follows to hotswap the changes to
-the running program:</p>
+<p>你可以测试这个功能：在插件中引入一个简单的命令，而且该命令的作用只是输出一个词，比如 <code class="docutils literal"><span class="pre">Sponge</span></code> ，然后保存并启动服务器，如上所述。运行命令。它会输出 <code class="docutils literal"><span class="pre">Sponge</span></code> 。现在改变命令，使其输出一个不同的词到控制台，保存文件。更改后，请执行以下操作以将更改传送到正在运行的程序：</p>
 <div class="section" id="id7">
 <h4>IntelliJ IDEA<a class="headerlink" href="#id7" title="永久链接至标题">¶</a></h4>
 <ul class="simple">
-<li>Open the <code class="docutils literal"><span class="pre">Run</span></code> menu, from the top of the IDE.</li>
-<li>Below the first category break, click <code class="docutils literal"><span class="pre">Reload</span> <span class="pre">Changed</span> <span class="pre">Classes</span></code>.</li>
+<li><p class="first">从 IDE 的顶部打开 <code class="docutils literal"><span class="pre">Run</span></code> 菜单。</p>
+</li>
+<li><p class="first">在第一个分组的分隔线后，单击 <code class="docutils literal"><span class="pre">Reload</span> <span class="pre">Changed</span> <span class="pre">Classes</span></code> 。</p>
+</li>
 </ul>
 </div>
 <div class="section" id="id8">
 <h4>Eclipse<a class="headerlink" href="#id8" title="永久链接至标题">¶</a></h4>
-<p>No action needed. As soon as you save the file, it will be rebuilt and automatically hotswapped with the
-currently running debug. Unless you changed this particular default behavior, you will not have to trigger a manual
-hotswap.</p>
+<p>不需要任何操作。你一旦保存这个文件，它将被重新生成，然后热替换到当前运行的调试器中。除非你改变了这种特定的默认行为，否则你不需要手动触发代码热替换。</p>
 </div>
 </div>
 </div>

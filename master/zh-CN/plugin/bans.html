@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Bans &mdash; Sponge 5.0.0 文档</title>
+     <title>黑名单 &mdash; Sponge 5.0.0 文档</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -35,8 +35,8 @@
       <link rel="shortcut icon" href="../_static/favicon.ico"/>
         <link rel="top" title="Sponge 5.0.0 文档" href="../index.html" />
         <link rel="up" title="插件开发" href="index.html" />
-        <link rel="next" title="Book Views" href="bookview.html" />
-        <link rel="prev" title="Permissions" href="permissions.html" />
+        <link rel="next" title="成书" href="bookview.html" />
+        <link rel="prev" title="权限" href="permissions.html" />
     
   <script type="text/javascript">
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -183,23 +183,23 @@
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/migrating.html">迁移到 Sponge</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/implementations/index.html">选择一个安装启动</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/implementations/index.html">选择一个实现</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongeforge.html">Installing SpongeForge</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongevanilla.html">Installing SpongeVanilla</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongevanilla.html">安装 SpongeVanilla</a></li>
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/launch-script.html">创建启动脚本</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/port-forward.html">端口转发</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/bungeecord.html">和BungeeCorge配合使用Sponge</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/bungeecord.html">和 BungeeCorge 配合使用 Sponge</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/configuration/index.html">配置Sponge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/configuration/index.html">配置 Sponge</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/hocon.html">HOCON 简介</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/json.html">JSON 语法</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/sponge-conf.html">global.conf</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/server-properties.html">server.properties</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/sponge-conf.html">global.conf 文件</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/configuration/server-properties.html">server.properties 文件</a></li>
 </ul>
 </li>
 </ul>
@@ -213,15 +213,15 @@
 <li class="toctree-l3"><a class="reference internal" href="../server/management/plugins.html">安装插件</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../server/management/exploit-patches.html">Exploit Patches</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../server/management/exploit-patches.html">漏洞修复</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../server/management/performance-tweaks.html">Performance Tweaks</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../server/management/performance-tweaks.html">性能调优</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../server/spongineer/index.html">成为Sponge专家</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../server/spongineer/index.html">成为 Sponge 专家</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../server/spongineer/commands.html">命令</a><ul class="simple">
 </ul>
 </li>
@@ -234,7 +234,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../server/spongineer/debugging.html">Debugging</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../server/spongineer/bugreport.html">Reporting Bugs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../server/spongineer/bugreport.html">报告问题</a></li>
 </ul>
 </li>
 </ul>
@@ -242,16 +242,16 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../preparing/index.html">为开发做准备</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../preparing/jdk.html">安装JDK</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../preparing/jdk.html">安装 JDK</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../preparing/ide.html">安装IDE</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../preparing/ide.html">安装 IDE</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../preparing/text.html">安装一个文本编辑器</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../preparing/git.html">安装Git</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../preparing/git.html">安装 Git</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -284,13 +284,13 @@
 <li class="toctree-l2"><a class="reference internal" href="plugin-class.html">插件的主类</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="lifecycle.html">插件周期</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="lifecycle.html">插件的生命周期</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="injection.html">依赖注入</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="practices.html">最佳做法</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="practices.html">Sponge 插件开发指南</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="optional/index.html">使用 Optional</a><ul>
@@ -397,7 +397,7 @@
 <li class="toctree-l3"><a class="reference internal" href="blocks/modifying.html">修改方块</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="blocks/tileentities.html">Tile Entity</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="blocks/tileentities.html">方块的 Tile Entity</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="blocks/virtualblock.html">虚拟方块更改</a><ul class="simple">
@@ -412,78 +412,78 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="items/index.html">Items</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="items/usage.html">Basic Item Usage</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="items/index.html">物品</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="items/usage.html">基本用法</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="items/creating.html">Creating an ItemStack</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="items/creating.html">物品的创建</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="effects.html">Effects</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="effects.html">效果</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="scheduler.html">Scheduler</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="scheduler.html">调度器</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="services.html">服务</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="database.html">Databases</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="database.html">数据库</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="permissions.html">Permissions</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">Bans</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="permissions.html">权限</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">黑名单</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="bookview.html">Book Views</a></li>
-<li class="toctree-l2"><a class="reference internal" href="economy/index.html">Economy</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="economy/basics.html">Basic Concepts</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="bookview.html">成书</a></li>
+<li class="toctree-l2"><a class="reference internal" href="economy/index.html">经济 API</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="economy/basics.html">基本概念</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="economy/using.html">Using the Economy API</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="economy/using.html">使用经济 API</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="economy/practices.html">Economy API Best Practices</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="economy/practices.html">注意事项</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="economy/implementing.html">Implementing the Economy API</a><ul class="simple">
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="wgen/index.html">World Generation</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="wgen/modifiers.html">WorldGeneratorModifiers</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="wgen/customwgen.html">Modifying World Generation</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="economy/implementing.html">实现一个经济 API</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="manager.html">Plugin Manager</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="wgen/index.html">世界生成</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="wgen/modifiers.html">世界生成修改器</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="game-profile-manager.html">Game Profile Manager</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="wgen/customwgen.html">改变世界生成</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="offline-userplayer-data.html">Offline Player Data</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="debugging.html">Plugin Debugging</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="manager.html">插件管理器</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="tab-lists.html">Tab Lists</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="game-profile-manager.html">玩家资料管理器</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="offline-userplayer-data.html">离线玩家数据</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="debugging.html">调试插件</a><ul class="simple">
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tab-lists.html">玩家列表</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="plugin-meta.html">插件的元数据</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="ray-tracing.html">Ray Tracing</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="ray-tracing.html">光线追踪</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bukkit-sponge-compare.html">Bukkit 和 SpongeAPI 的比较</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html">教程</a><ul class="simple">
 </ul>
 </li>
@@ -495,33 +495,33 @@
 <li class="toctree-l2"><a class="reference internal" href="../contributing/guidelines.html">贡献指南</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../contributing/howtogit.html">如何使用Git（Hub）</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../contributing/howtogit.html">如何使用 Git（Hub）</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../contributing/implementation/index.html">Developing Sponge</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/implementation/index.html">参与到 Sponge 的开发工作来</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/codestyle.html">代码规范</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/git-implementation.html">Git Workflow for API and Implementations</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/git-implementation.html">Sponge API 及其实现的 Git 工作流程</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/pr.html">Submitting a Pull-Request</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/pr.html">提交一个 Pull Request</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/debugging.html">在IDE中调试</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/mixins.html">Mixin</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/datamanipulator.html">Implementing DataManipulators</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/debugging.html">在 IDE 中调试</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/mixins.html">使用 Mixin</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/implementation/datamanipulator.html">实现数据操纵器</a><ul class="simple">
 </ul>
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../contributing/spongedocs.html">SpongeDocs文稿</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../contributing/spongedocs.html">开发文档</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../contributing/porting.html">将Sponge移植到其他平台</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../contributing/porting.html">将 Sponge 移植到其他平台</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../contributing/versioning.html">Versioning System and Repository Branch Layout</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../contributing/versioning.html">版本系统和项目仓库分支结构</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -532,10 +532,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../about/introduction.html">简介</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../about/faq.html">常见问题</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../about/faq.html">常见问题及解答</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../about/structure.html">The Structure of the Sponge Project</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../about/structure.html">Sponge 的项目结构</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../about/future.html">未来计划</a></li>
@@ -544,16 +544,16 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../about/rules.html">论坛及 IRC 准则</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../about/staff.html">工作人员</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../about/staff.html">项目组成成员</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../about/glossary.html">Sponge 术语表</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../about/assets.html">艺术资源</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../about/assets.html">艺术内容</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../about/history.html">Sponge的历史</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../about/history.html">Sponge 的历史</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -574,28 +574,22 @@
                 <div class="body" role="main">
                   
   <div class="section" id="bans">
-<h1>Bans<a class="headerlink" href="#bans" title="永久链接至标题">¶</a></h1>
-<p>The <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/ban/BanService.html">BanService</a> is a service built into the SpongeAPI that adds the functionality for you to ban or pardon
-users in your plugin. The <code class="docutils literal"><span class="pre">BanService</span></code> provides several methods to do things such as banning users, pardoning users,
-or even getting a <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/ban/Ban.html">Ban</a> and the information on the <code class="docutils literal"><span class="pre">Ban</span></code>.</p>
+<h1>黑名单<a class="headerlink" href="#bans" title="永久链接至标题">¶</a></h1>
+<p>作为一个在 SpongeAPI 中内置的服务， <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/ban/BanService.html">BanService</a> 添加了一些功能，允许插件开发者禁止或解禁用户。 <code class="docutils literal"><span class="pre">BanService</span></code> 提供了若干方法用于将用户禁止、解禁、或者甚至得到关于 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/ban/Ban.html">Ban</a> 和 <code class="docutils literal"><span class="pre">Ban</span></code> 的信息。</p>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>
-<p class="last">For a basic understanding of services, make sure you read <a class="reference internal" href="services.html"><em>服务</em></a> first.</p>
+<p class="last">为了保证你已对服务（Service）这一概念有了基本的了解，请先保证你已了解 <a class="reference internal" href="services.html"><em>服务</em></a> 中的内容。</p>
 </div>
 <div class="section" id="getting-the-banservice">
-<h2>Getting the BanService<a class="headerlink" href="#getting-the-banservice" title="永久链接至标题">¶</a></h2>
-<p>You will need to get the <code class="docutils literal"><span class="pre">BanService</span></code> to actually add bans to the server. Fortunately, this can be done similarly to
-other services in the Sponge API:</p>
+<h2>获取 BanService<a class="headerlink" href="#getting-the-banservice" title="永久链接至标题">¶</a></h2>
+<p>您将需要获取 <code class="docutils literal"><span class="pre">BanService</span></code> 来向服务器实际添加黑名单。幸运的是，完成这件事的方式和 Sponge API 中的其他服务类似：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.Sponge</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.service.ban.BanService</span><span class="o">;</span>
 
 <span class="n">BanService</span> <span class="n">service</span> <span class="o">=</span> <span class="n">Sponge</span><span class="o">.</span><span class="na">getServiceManager</span><span class="o">().</span><span class="na">provide</span><span class="o">(</span><span class="n">BanService</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">get</span><span class="o">();</span>
 </pre></div>
 </div>
-<p>Now with the <code class="docutils literal"><span class="pre">BanService</span></code>, we can perform additional operations. For example, if we want to check if a provided
-<a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/entity/living/player/User.html">User</a> is already banned, we can use the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/ban/BanService.html#isBanned-org.spongepowered.api.profile.GameProfile-">BanService#isBanned(GameProfile)</a> method. Or perhaps if we
-wanted to get information on a ban from a <code class="docutils literal"><span class="pre">User</span></code>, we can use the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/ban/BanService.html#getBanFor-org.spongepowered.api.profile.GameProfile-">BanService#getBanFor(GameProfile)</a> method.
-An example of this is shown below:</p>
+<p>现在有了 <code class="docutils literal"><span class="pre">BanService</span></code> ，我们还可以进行其他操作。例如，如果我们想检查一个给定的 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/entity/living/player/User.html">User</a> 是否在黑名单内，我们可以使用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/ban/BanService.html#isBanned-org.spongepowered.api.profile.GameProfile-">BanService#isBanned(GameProfile)</a> 方法。或者如果我们想从 <code class="docutils literal"><span class="pre">User</span></code> 获取关于黑名单的信息，我们可以使用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/ban/BanService.html#getBanFor-org.spongepowered.api.profile.GameProfile-">BanService#getBanFor(GameProfile)</a> 方法。下面是一个示例：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">java.util.Optional</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.entity.living.player.User</span><span class="o">;</span>
@@ -616,41 +610,32 @@ An example of this is shown below:</p>
 </div>
 </div>
 <div class="section" id="creating-a-ban">
-<h2>Creating a Ban<a class="headerlink" href="#creating-a-ban" title="永久链接至标题">¶</a></h2>
-<p>So now we can obtain the <code class="docutils literal"><span class="pre">BanService</span></code> and the information on a <code class="docutils literal"><span class="pre">Ban</span></code>, but what if we wanted to create our own bans?
-We can use a <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/ban/Ban.Builder.html">Ban.Builder</a> to create our own <code class="docutils literal"><span class="pre">Ban</span></code>. To get a <code class="docutils literal"><span class="pre">Ban.Builder</span></code>, simply call the
-<a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/ban/Ban.html#builder--">Ban#builder()</a> method. Using our builder, we can specify things such as the type of the ban, the reason for
-the ban, or the <code class="docutils literal"><span class="pre">User</span></code> we wish to ban. An example of all of these things is shown below:</p>
+<h2>使用黑名单<a class="headerlink" href="#creating-a-ban" title="永久链接至标题">¶</a></h2>
+<p>所以现在我们可以获得 <code class="docutils literal"><span class="pre">BanService</span></code> 和 <code class="docutils literal"><span class="pre">Ban</span></code> 的信息，但是如果我们想创建自己的 <code class="docutils literal"><span class="pre">Ban</span></code> 呢？ 我们可以调用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/ban/Ban.html#builder--">Ban#builder()</a> 方法，得到 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/ban/Ban.Builder.html">Ban.Builder</a> 并使用它来创建我们自己的 <code class="docutils literal"><span class="pre">Ban</span></code> 。通过使用生成器，我们可以指定加入黑名单的匹配类型，加入黑名单的原因或我们希望禁止的 <code class="docutils literal"><span class="pre">User</span></code> 。下面是所有这些事情的示例：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.util.ban.BanTypes</span><span class="o">;</span>
 
 <span class="n">Ban</span> <span class="n">ban</span> <span class="o">=</span> <span class="n">Ban</span><span class="o">.</span><span class="na">builder</span><span class="o">().</span><span class="na">type</span><span class="o">(</span><span class="n">BanTypes</span><span class="o">.</span><span class="na">PROFILE</span><span class="o">).</span><span class="na">profile</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getProfile</span><span class="o">())</span>
     <span class="o">.</span><span class="na">reason</span><span class="o">(</span><span class="n">Text</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">&quot;The Sponge Council has Spoken!&quot;</span><span class="o">)).</span><span class="na">build</span><span class="o">();</span>
 </pre></div>
 </div>
-<p>Alternatively, you can specify an ip ban on an online player:</p>
+<p>当然，你可以指定以 IP 的方式匹配在线玩家：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">Ban</span> <span class="n">ban</span> <span class="o">=</span> <span class="n">Ban</span><span class="o">.</span><span class="na">builder</span><span class="o">().</span><span class="na">type</span><span class="o">(</span><span class="n">BanTypes</span><span class="o">.</span><span class="na">IP</span><span class="o">)</span>
     <span class="o">.</span><span class="na">address</span><span class="o">(</span><span class="n">player</span><span class="o">.</span><span class="na">getConnection</span><span class="o">().</span><span class="na">getAddress</span><span class="o">().</span><span class="na">getAddress</span><span class="o">())</span>
     <span class="o">.</span><span class="na">reason</span><span class="o">(</span><span class="n">Text</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">&quot;The Sponge Council has Spoken!&quot;</span><span class="o">)).</span><span class="na">build</span><span class="o">();</span>
 </pre></div>
 </div>
-<p>Note that if you wish to create a simple, indefinite ban on a <code class="docutils literal"><span class="pre">User</span></code>, you can use the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/ban/Ban.html#of-org.spongepowered.api.profile.GameProfile-">Ban#of(GameProfile)</a>
-method or the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/ban/Ban.html#of-org.spongepowered.api.profile.GameProfile-org.spongepowered.api.text.Text-">Ban#of(GameProfile, Text)</a> method to quickly construct a ban.</p>
+<p>注意，如果你只是希望创建一个简单的、没有特指的 <code class="docutils literal"><span class="pre">User</span></code> 黑名单，你可以使用 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/ban/Ban.html#of-org.spongepowered.api.profile.GameProfile-">Ban#of(GameProfile)</a> 或者 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/ban/Ban.html#of-org.spongepowered.api.profile.GameProfile-org.spongepowered.api.text.Text-">Ban#of(GameProfile, Text)</a> 方法快速创建。</p>
 <div class="section" id="adding-a-ban">
-<h3>Adding a Ban<a class="headerlink" href="#adding-a-ban" title="永久链接至标题">¶</a></h3>
-<p>Now that we have created our ban, we can now register it to be used in Sponge. Using our <code class="docutils literal"><span class="pre">BanService</span></code> from before, we
-can use the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/ban/BanService.html#addBan-org.spongepowered.api.util.ban.Ban-">BanService#addBan(Ban)</a> method to accomplish this. Note that adding a ban will remove any
-previously existing ban.</p>
+<h3>加入黑名单<a class="headerlink" href="#adding-a-ban" title="永久链接至标题">¶</a></h3>
+<p>现在我们完成了创建，那么我们就可以将其用于 Sponge 了。通过使用之前我们获取的 <code class="docutils literal"><span class="pre">BanService</span></code> 的 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/ban/BanService.html#addBan-org.spongepowered.api.util.ban.Ban-">BanService#addBan(Ban)</a> 方法我们就可以方便地使用新的黑名单。注意添加新的黑名单会移除任何旧的黑名单。</p>
 </div>
 <div class="section" id="pardoning">
-<h3>Pardoning<a class="headerlink" href="#pardoning" title="永久链接至标题">¶</a></h3>
-<p>Now let&#8217;s say we wanted to remove a ban from a user. We can use the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/ban/BanService.html#pardon-org.spongepowered.api.profile.GameProfile-">BanService#pardon(GameProfile)</a> method.
-This method returns a boolean, which specifies if the user had a ban in place previously.</p>
+<h3>解禁<a class="headerlink" href="#pardoning" title="永久链接至标题">¶</a></h3>
+<p>现在我们想要解禁某一个人。我们可以通过 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/ban/BanService.html#pardon-org.spongepowered.api.profile.GameProfile-">BanService#pardon(GameProfile)</a> 方法解决这一问题。这一方法返回一个布尔值用于表示该用户之前是否位于黑名单中。</p>
 </div>
 <div class="section" id="putting-it-all-together">
-<h3>Putting it All Together<a class="headerlink" href="#putting-it-all-together" title="永久链接至标题">¶</a></h3>
-<p>We can create a <code class="docutils literal"><span class="pre">Ban</span></code> using a <code class="docutils literal"><span class="pre">Ban.Builder</span></code> that is obtained using the <code class="docutils literal"><span class="pre">Ban#builder()</span></code> method. We can specify
-things such as the type, the <code class="docutils literal"><span class="pre">User</span></code> to be banned, or the reason for the ban. We then simply grab our <code class="docutils literal"><span class="pre">BanService</span></code>
-and use it to add our <code class="docutils literal"><span class="pre">Ban</span></code>. Here is the full code for doing this:</p>
+<h3>总结<a class="headerlink" href="#putting-it-all-together" title="永久链接至标题">¶</a></h3>
+<p>我们可以使用 <code class="docutils literal"><span class="pre">Ban#builder()</span></code> 方法生成的 <code class="docutils literal"><span class="pre">Ban.Builder</span></code> 创建一个 <code class="docutils literal"><span class="pre">Ban</span></code> 。我们可以指定加入黑名单的匹配类型，要禁止的 <code class="docutils literal"><span class="pre">User</span></code> 以及原因。 然后我们只是使用 <code class="docutils literal"><span class="pre">BanService</span></code> 来添加我们的 <code class="docutils literal"><span class="pre">Ban</span></code> 。下面是所有过程的完整代码：</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="n">BanService</span> <span class="n">service</span> <span class="o">=</span> <span class="n">Sponge</span><span class="o">.</span><span class="na">getServiceManager</span><span class="o">().</span><span class="na">provide</span><span class="o">(</span><span class="n">BanService</span><span class="o">.</span><span class="na">class</span><span class="o">).</span><span class="na">get</span><span class="o">();</span>
 <span class="n">Ban</span> <span class="n">ban</span> <span class="o">=</span> <span class="n">Ban</span><span class="o">.</span><span class="na">builder</span><span class="o">().</span><span class="na">type</span><span class="o">(</span><span class="n">BanTypes</span><span class="o">.</span><span class="na">PROFILE</span><span class="o">).</span><span class="na">profile</span><span class="o">(</span><span class="n">user</span><span class="o">.</span><span class="na">getProfile</span><span class="o">())</span>
     <span class="o">.</span><span class="na">reason</span><span class="o">(</span><span class="n">Text</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">&quot;The Sponge Council has Spoken!&quot;</span><span class="o">)).</span><span class="na">build</span><span class="o">();</span>
