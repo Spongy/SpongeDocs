@@ -184,7 +184,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/implementations/index.html">选择一个实现</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongeforge.html">Installing SpongeForge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongeforge.html">安装SpongeForge</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongevanilla.html">安装 SpongeVanilla</a></li>
 </ul>
 </li>
@@ -192,7 +192,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/port-forward.html">端口转发</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/bungeecord.html">和 BungeeCorge 配合使用 Sponge</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/bungeecord.html">和 BungeeCord 配合使用</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/configuration/index.html">配置 Sponge</a><ul>
@@ -595,42 +595,42 @@
 <div class="section" id="initialization-states">
 <h2>初始化状态<a class="headerlink" href="#initialization-states" title="永久链接至标题">¶</a></h2>
 <p>初始化状态只会出现一次。</p>
-<p><strong>构造中</strong></p>
-<p>触发 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameConstructionEvent.html">GameConstructionEvent</a> 时, 带有``&#64;Plugin``注解的类实例会被构造.</p>
-<p><strong>预载入</strong></p>
-<p>触发 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GamePreInitializationEvent.html">GamePreInitializationEvent</a> 时, 插件准备好初始化, 在这时, 默认消息记录器(Logger) 已经准备好被调用, 同时你也可以开始引用配置文件中的内容.</p>
-<p><strong>初始化</strong></p>
-<p>触发 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameInitializationEvent.html">GameInitializationEvent</a> 时, 插件应该完成他所需功能的所有应该完成的准备工作, 你应该在这个事件发生时注册插件全局事件的订阅.</p>
-<p><strong>载入完成</strong></p>
-<p>事件 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GamePostInitializationEvent.html">GamePostInitializationEvent</a> 触发时. 你应该准备好不同插件之间的交互信息, 插件也提供了一些基础API来接受交互请求.</p>
-<p><strong>载入完成</strong></p>
-<p>事件 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameLoadCompleteEvent.html">GameLoadCompleteEvent</a> 发生时. 所有插件都已经准备就绪.</p>
+<p><strong>CONSTRUCTION</strong></p>
+<p>触发 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameConstructionEvent.html">GameConstructionEvent</a> 时，游戏会构造带有 <code class="docutils literal"><span class="pre">&#64;Plugin</span></code> 注解的类实例。</p>
+<p><strong>PRE_INITIALIZATION</strong></p>
+<p>触发 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GamePreInitializationEvent.html">GamePreInitializationEvent</a> 时，插件准备进行初始化，这时默认的 Logger 已经准备好被调用，同时你也可以开始引用配置文件中的内容。</p>
+<p><strong>INITIALIZATION</strong></p>
+<p>触发 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameInitializationEvent.html">GameInitializationEvent</a> 时，插件应该完成他所需功能的所有应该完成的准备工作，你应该在这个事件发生时注册监听事件。</p>
+<p><strong>POST_INITIALIZATION</strong></p>
+<p>触发 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GamePostInitializationEvent.html">GamePostInitializationEvent</a> 时，你应该准备好不同插件之间的交互信息，有的插件也提供了一些基础 API 来接受交互请求。</p>
+<p><strong>LOAD_COMPLETE</strong></p>
+<p>触发 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameLoadCompleteEvent.html">GameLoadCompleteEvent</a> 时，所有插件都已准备就绪。</p>
 </div>
 <div class="section" id="running-states">
 <h2>运行状态<a class="headerlink" href="#running-states" title="永久链接至标题">¶</a></h2>
-<p>有些状态可能会出现多次, 在 <strong>服务器启动中</strong> 之后可能会出现 <strong>服务器停止</strong> . 因为服务器需要停下来才可以处理载入中发生的错误.</p>
-<p><strong>服务器即将启动</strong></p>
-<p>在 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameAboutToStartServerEvent.html">GameAboutToStartServerEvent</a> 事件触发时, 服务器实例可以被调用, 但世界仍未被载入.</p>
-<p><strong>服务器启动中</strong></p>
-<p>事件 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameStartingServerEvent.html">GameStartingServerEvent</a> 触发时. 服务器初始化和世界载入都已经完成, 你应该在这时注册插件的所以命令.</p>
-<p><strong>服务器启动完成</strong></p>
-<p>事件 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameStartedServerEvent.html">GameStartedServerEvent</a> 发生时, 服务器实例已经可以被调用, 但世界仍未被载入.</p>
-<p><strong>服务器停止</strong></p>
-<p>事件 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameStoppingServerEvent.html">GameStoppingServerEvent</a> 发生时, 服务器会发出最后一个Tick, 紧接着就会开始保存世界.</p>
-<p><strong>服务器关闭</strong></p>
-<p>事件 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameStoppedServerEvent.html">GameStoppedServerEvent</a> 发生时, 任何玩家都无法连接至服务器, 对世界所做的任何更改也不会被保存.</p>
+<p>有些状态可能会出现多次，在 <code class="docutils literal"><span class="pre">SERVER_ABOUT_TO_START</span></code> 阶段后可能紧接着会出现 <code class="docutils literal"><span class="pre">SERVER_STOPPED</span></code> ，同时任何时刻服务器均可能进入 <code class="docutils literal"><span class="pre">SERVER_STOPPED</span></code> 阶段，因为需要停下来处理发生的错误。</p>
+<p><strong>SERVER_ABOUT_TO_START</strong></p>
+<p>触发 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameAboutToStartServerEvent.html">GameAboutToStartServerEvent</a> 时，服务器实例已经可用，但世界仍未被载入。</p>
+<p><strong>SERVER_STARTING</strong></p>
+<p>触发 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameStartingServerEvent.html">GameStartingServerEvent</a> 时，服务器初始化和世界载入都已经完成，你应该在这时注册插件命令。</p>
+<p><strong>SERVER_STARTED</strong></p>
+<p>触发 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameStartedServerEvent.html">GameStartedServerEvent</a> 时，服务器实例已经可用，世界也已被载入。</p>
+<p><strong>SERVER_STOPPING</strong></p>
+<p>触发 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameStoppingServerEvent.html">GameStoppingServerEvent</a> 时，服务器会进入最后一个 Tick，紧接着就会开始保存世界。</p>
+<p><strong>SERVER_STOPPED</strong></p>
+<p>触发 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameStoppedServerEvent.html">GameStoppedServerEvent</a> 时，任何玩家都无法连接至服务器，对世界所做的任何更改也不会被保存。</p>
 </div>
 <div class="section" id="stopping-states">
 <h2>停止状态<a class="headerlink" href="#stopping-states" title="永久链接至标题">¶</a></h2>
-<p>服务器停止中只会有一次. 当游戏正常退出的时候就会变成此状态. 例如你点下命令提示符的关闭按钮, 或者是输入/stop命令. 退出游戏按钮也是一样的.</p>
+<p>服务器停止中只会有一次。当游戏正常退出的时候就会变成此状态，例如你点下命令提示符的关闭按钮，或者是输入 <code class="docutils literal"><span class="pre">/stop</span></code> 命令，或是按下退出游戏按钮。</p>
 <div class="admonition warning">
 <p class="first admonition-title">警告</p>
-<p class="last">Sponge不能保证一定会在关闭前变成即将关闭的状态, 因为 <strong>有时</strong> 服务器会被强制关闭: 服务器崩溃/任务管理器/Ctrl-C 或者其他类似情况.</p>
+<p class="last">Sponge 不能保证一定会在关闭前变成即将关闭的状态，因为 <strong>有时</strong> 服务器会被强制关闭：服务器崩溃、任务管理器、Ctrl-C、或其他类似情况等。</p>
 </div>
-<p><strong>游戏正在停止</strong></p>
-<p>在 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameStoppingServerEvent.html">GameStoppingServerEvent</a> 触发时。这种状态在``GAME_STOPPED``之前就已经发生。插件API仍然可以接受基本调用。</p>
+<p><strong>GAME_STOPPING</strong></p>
+<p>触发 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameStoppingServerEvent.html">GameStoppingServerEvent</a> 时，阶段 <code class="docutils literal"><span class="pre">GAME_STOPPED</span></code> 已经发生了。提供 API 的插件仍然可以接受基本调用。</p>
 <p><strong>游戏已停止</strong></p>
-<p>事件 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameStoppedServerEvent.html">GameStoppedServerEvent</a> 触发时. Minecraft将会立即关闭. 插件无法跟游戏进行任何交互.</p>
+<p>触发 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/game/state/GameStoppedServerEvent.html">GameStoppedServerEvent</a> 时，Minecraft 将会立即关闭，插件无法跟游戏进行任何交互。</p>
 </div>
 </div>
 

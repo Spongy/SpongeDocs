@@ -186,7 +186,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../implementations/index.html">选择一个实现</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../implementations/spongeforge.html">Installing SpongeForge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../implementations/spongeforge.html">安装SpongeForge</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../implementations/spongevanilla.html">安装 SpongeVanilla</a></li>
 </ul>
 </li>
@@ -194,7 +194,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../port-forward.html">端口转发</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../bungeecord.html">和 BungeeCorge 配合使用 Sponge</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../bungeecord.html">和 BungeeCord 配合使用</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3 current"><a class="reference internal" href="index.html">配置 Sponge</a><ul class="current">
@@ -826,10 +826,10 @@ the default doesn&#8217;t appear to do anything.</p>
 <p>示例</p>
 <blockquote class="last">
 <div><ul class="simple">
-<li>Setting max-world-size to 1000 will allow you to have a
-2000x2000 world border.</li>
-<li>Setting max-world-size to 4000 will give you an
-8000x8000 world border.</li>
+<li><p class="first">设定世界大小为1000会让你的世界的长宽为2000x2000</p>
+</li>
+<li><p class="first">设定世界大小为4000会让你的世界的长宽为8000x8000</p>
+</li>
 </ul>
 </div></blockquote>
 </td>
@@ -863,11 +863,7 @@ up with a larger result than what went in.</p>
 <div><p><strong>-1</strong> - disable compression entirely</p>
 <p><strong>0</strong> - compress everything</p>
 </div></blockquote>
-<p class="last"><strong>Note:</strong> <em>The ethernet spec requires that packets less</em>
-<em>than 64 bytes become padded to 64 bytes. Thus, setting a</em>
-<em>value lower than 64 may not be beneficial. It is also</em>
-<em>not recommended to exceed the MTU (Maximum Transmission</em>
-<em>Unit), typically 1500 bytes.</em></p>
+<p class="last"><strong>注意：</strong> <em>以太网规范</em> 要求小于64字节的数据包填充为64字节。 因此，将这个值设置为小于64可能带来坏处。 同时也不建议超过 <a href="#id1"><span class="problematic" id="id2">*</span></a>MTU（最大传输单位） * ，通常为1500字节</p>
 </td>
 </tr>
 <tr class="row-odd"><td>online-mode</td>
@@ -901,8 +897,7 @@ up with a larger result than what went in.</p>
 <td>0</td>
 <td><p class="first">值不为0时, 该功能启用, 玩家在这个闲置时间后被自动踢出.</p>
 <blockquote class="last">
-<div><p><strong>Note:</strong> <em>Idle time is reset when the server receives</em>
-<em>one of the following packets:</em></p>
+<div><p>** 请注意： ** 有时服务器空闲时间将会被重置，例如，当服务器接收到以下数据包时：</p>
 <blockquote>
 <div><ul class="simple">
 <li>102 (0x66) WindowClick</li>
@@ -962,10 +957,8 @@ up with a larger result than what went in.</p>
 <tr class="row-odd"><td>resource-pack-hash</td>
 <td>string</td>
 <td><em>blank</em></td>
-<td>Optional SHA-1 digest of the resource pack, in lowercase
-hexadecimal. It&#8217;s recommended to specify this. This is not
-yet used to verify the integrity of the resource pack, but
-improves the effectiveness and reliability of caching.</td>
+<td><p class="first last">资源包的SHA-1值，请填写为小写十六进制。 建议指定这个值。 这不用于验证资源包的完整性，但是提高了缓存的有效性和可靠性。</p>
+</td>
 </tr>
 <tr class="row-even"><td>server-ip</td>
 <td>string</td>
@@ -984,11 +977,10 @@ improves the effectiveness and reliability of caching.</td>
 <td><p class="first last">布尔数值</p>
 </td>
 <td>true</td>
-<td><p class="first">Sets whether the server sends snoop data regularly to
-<a class="reference external" href="http://snoop.minecraft.net">http://snoop.minecraft.net</a>. (external link)</p>
+<td><p class="first">设置是否服务器定期向 <a class="reference external" href="http://snoop.minecraft.net">http://snoop.minecraft.net</a> 发送 snoop 数据。（外部链接）</p>
 <blockquote class="last">
-<div><p><strong>false</strong> - Disable sending of data.</p>
-<p><strong>true</strong> - Enable sending of data.</p>
+<div><p><strong>false</strong> - 不发送数据。</p>
+<p><strong>true</strong> - 发送数据。</p>
 </div></blockquote>
 </td>
 </tr>

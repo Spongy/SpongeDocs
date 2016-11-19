@@ -184,7 +184,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/implementations/index.html">选择一个实现</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongeforge.html">Installing SpongeForge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongeforge.html">安装SpongeForge</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongevanilla.html">安装 SpongeVanilla</a></li>
 </ul>
 </li>
@@ -192,7 +192,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/port-forward.html">端口转发</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/bungeecord.html">和 BungeeCorge 配合使用 Sponge</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/bungeecord.html">和 BungeeCord 配合使用</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/configuration/index.html">配置 Sponge</a><ul>
@@ -580,7 +580,7 @@
 <h2>可用于注入类型的临时列表<a class="headerlink" href="#temporary-list-of-injected-types" title="永久链接至标题">¶</a></h2>
 <dl class="docutils">
 <dt>ConfigDir（注解 Path 或 File）</dt>
-<dd><p class="first last">用于注入插件的配置目录： <code class="docutils literal"><span class="pre">./mods/</span></code> 或 <code class="docutils literal"><span class="pre">./mods/&lt;Plugin#id&gt;/</span></code> （译者注：实测似乎应为 <code class="docutils literal"><span class="pre">config</span></code> 或 <code class="docutils literal"><span class="pre">config/&lt;Plugin#id&gt;/</span></code> 目录），取决于 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/config/ConfigDir.html#sharedRoot--">ConfigDir#sharedRoot()</a> 。</p>
+<dd><p class="first last">用于注入插件的配置目录： <code class="docutils literal"><span class="pre">./mods/</span></code> 或 <code class="docutils literal"><span class="pre">./mods/&lt;Plugin#id&gt;/</span></code> （译者注：实测似乎应为 <code class="docutils literal"><span class="pre">config/</span></code> 或 <code class="docutils literal"><span class="pre">config/&lt;Plugin#id&gt;/</span></code> 目录），取决于 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/config/ConfigDir.html#sharedRoot--">ConfigDir#sharedRoot()</a> 。</p>
 </dd>
 <dt><a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/loader/ConfigurationLoader.html">ConfigurationLoader&lt;CommentedConfigurationNode&gt;</a></dt>
 <dd><p class="first last">必须使用 <code class="docutils literal"><span class="pre">&#64;DefaultConfig</span></code> 注解。用于注入根据拥有相同注解的 <code class="docutils literal"><span class="pre">File</span></code> 预先生成的 <code class="docutils literal"><span class="pre">ConfigurationLoader</span></code> 。</p>

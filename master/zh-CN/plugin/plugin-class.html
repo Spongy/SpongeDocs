@@ -184,7 +184,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/implementations/index.html">选择一个实现</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongeforge.html">Installing SpongeForge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongeforge.html">安装SpongeForge</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongevanilla.html">安装 SpongeVanilla</a></li>
 </ul>
 </li>
@@ -192,7 +192,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/port-forward.html">端口转发</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/bungeecord.html">和 BungeeCorge 配合使用 Sponge</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/bungeecord.html">和 BungeeCord 配合使用</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/configuration/index.html">配置 Sponge</a><ul>
@@ -581,9 +581,9 @@
 </div>
 <div class="section" id="starting-your-class">
 <h2>开始制作你自己的类<a class="headerlink" href="#starting-your-class" title="永久链接至标题">¶</a></h2>
-<p>在添加一个 Sponge API 作为依赖后的下一步自然就是新建一个类。这个类可以按照你想要的方式去命名，而且可以使用**除了** <code class="docutils literal"><span class="pre">org.spongepowered</span></code> 外的任何一个包。按照惯例，一个类的名称应该首字母大写。</p>
+<p>在添加一个 Sponge API 作为依赖后的下一步自然就是新建一个类。这个类可以按照你想要的方式去命名，而且可以使用 <strong>除了</strong> <code class="docutils literal"><span class="pre">org.spongepowered</span></code> 外的任何一个包。按照惯例，一个类的名称应该首字母大写。</p>
 <p>Oracle <a class="reference external" href="http://docs.oracle.com/javase/tutorial/java/package/namingpkgs.html">推荐</a> 你去使用你自己的域名作为你的包名，如果你有这样的一个域名的话。然而，如果你没有拥有一个域名，一种常见的做法是使用一个电子邮件（如 <code class="docutils literal"><span class="pre">com.gmail.username.project</span></code>），或者一个开源仓库的地址（如 <code class="docutils literal"><span class="pre">io.github.username.project</span></code>）。</p>
-<p>当你创建好你的主类后，你的主类必须有 <a href="#id1"><span class="problematic" id="id2">:javadoc:`&#64;Plugin`</span></a> 这个注解（Annotation）。这个注解能够让 Sponge 在读取插件时找到你的主类。下面是一个示例。</p>
+<p>当你创建好你的主类后，你的主类必须有 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/plugin/Plugin.html">Plugin</a> 这个注解（Annotation）。这个注解能够让 Sponge 在读取插件时找到你的主类。下面是一个示例。</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">package</span> <span class="nn">io.github.username.project</span><span class="o">;</span>
 
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.plugin.Plugin</span><span class="o">;</span>

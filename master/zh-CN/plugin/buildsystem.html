@@ -184,7 +184,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/implementations/index.html">选择一个实现</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongeforge.html">Installing SpongeForge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongeforge.html">安装SpongeForge</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../server/getting-started/implementations/spongevanilla.html">安装 SpongeVanilla</a></li>
 </ul>
 </li>
@@ -192,7 +192,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/port-forward.html">端口转发</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/bungeecord.html">和 BungeeCorge 配合使用 Sponge</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../server/getting-started/bungeecord.html">和 BungeeCord 配合使用</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../server/getting-started/configuration/index.html">配置 Sponge</a><ul>
@@ -578,9 +578,9 @@
 <p>一些诸如 <a class="reference external" href="https://gradle.org/">Gradle</a> 或者 <a class="reference external" href="https://maven.apache.org/">Maven</a> 等构建系统可以帮助你管理你的项目的构建过程。作为一个和 IDE 无关的工具，你可以使用它们来管理你对 SpongeAPI 或者其他的插件的依赖，同时给予其他人一种方便的方式通过源代码构建你的插件。</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">SpongeAPI 并**不**使用构建系统创建插件，然而我们强烈建议使用一个。除了 <a class="reference internal" href="#creating-a-plugin-without-a-build-system">不使用构建系统创建插件</a> 这一部分，下面的部分将假设你正在使用一个可以方便地管理依赖的构建系统。</p>
+<p class="last">SpongeAPI 并 <strong>不</strong> 使用构建系统创建插件，然而我们强烈建议使用一个。除了 <a class="reference internal" href="#creating-a-plugin-without-a-build-system">不使用构建系统创建插件</a> 这一部分，下面的部分将假设你正在使用一个可以方便地管理依赖的构建系统。</p>
 </div>
-<p>一般来说，你可以使用任何支持 <strong>Maven 依赖</strong> 的构建系统，这也是绝大多数的 Java 项目构建系统支持的一项。下面的部分将侧重于 <a class="reference external" href="https://gradle.org/">Gradle</a> 和 <a class="reference external" href="https://maven.apache.org/">Maven</a> 这两个最常见的用于构建的选择。如果你不太确信使用哪个系统更合适，我们推荐你使用 <a class="reference external" href="https://gradle.org/">Gradle</a> ，因为 Sponge 项目也在使用 <a class="reference external" href="https://gradle.org/">Gradle</a> ，此外，<a class="reference external" href="https://gradle.org/">Gradle</a> 同时也可以保证和 Sponge 插件的最佳整合。</p>
+<p>一般来说，你可以使用任何支持 <em>Maven 依赖</em> 的构建系统，这也是绝大多数的 Java 项目构建系统支持的一项。下面的部分将侧重于 <a class="reference external" href="https://gradle.org/">Gradle</a> 和 <a class="reference external" href="https://maven.apache.org/">Maven</a> 这两个最常见的用于构建的选择。如果你不太确信使用哪个系统更合适，我们推荐你使用 <a class="reference external" href="https://gradle.org/">Gradle</a> ，因为 Sponge 项目也在使用 <a class="reference external" href="https://gradle.org/">Gradle</a> ，此外，<a class="reference external" href="https://gradle.org/">Gradle</a> 同时也可以保证和 Sponge 插件的最佳整合。</p>
 <div class="section" id="gradle">
 <h2>Gradle<a class="headerlink" href="#gradle" title="永久链接至标题">¶</a></h2>
 <p><a class="reference external" href="https://gradle.org/">Gradle</a> 使用基于 <a class="reference external" href="http://www.groovy-lang.org/">Groovy</a> 的脚本来配置项目。一个 <a class="reference external" href="https://gradle.org/">Gradle</a> 项目通常包含在你的项目的根目录中，并通过 <code class="docutils literal"><span class="pre">build.gradle</span></code> 这一文件告诉 <a class="reference external" href="https://gradle.org/">Gradle</a> 如何构建这一项目。</p>

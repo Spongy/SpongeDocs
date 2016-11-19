@@ -185,7 +185,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/implementations/index.html">选择一个实现</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">Installing SpongeForge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">安装SpongeForge</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">安装 SpongeVanilla</a></li>
 </ul>
 </li>
@@ -193,7 +193,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/port-forward.html">端口转发</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/bungeecord.html">和 BungeeCorge 配合使用 Sponge</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/bungeecord.html">和 BungeeCord 配合使用</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/configuration/index.html">配置 Sponge</a><ul>
@@ -577,23 +577,25 @@
   <div class="section" id="modifying-world-generation">
 <h1>改变世界生成<a class="headerlink" href="#modifying-world-generation" title="永久链接至标题">¶</a></h1>
 <ul class="simple">
-<li>Modifying Vanilla Generation</li>
-<li>Creating Custom Base Terrain</li>
-<li>Creating Custom GenerationPopulators</li>
-<li>Creating Custom Populators</li>
+<li><p class="first">改变原版世界生成</p>
+</li>
+<li><p class="first">创建自定义地形</p>
+</li>
+<li><p class="first">创建自定义 GenerationPopulator</p>
+</li>
+<li><p class="first">创建自定义 Populator</p>
+</li>
 <li><p class="first">创建自定义生物群落</p>
 </li>
 </ul>
 <div class="section" id="modifying-vanilla-generation">
-<h2>Modifying Vanilla Generation<a class="headerlink" href="#modifying-vanilla-generation" title="永久链接至标题">¶</a></h2>
+<h2>改变原版世界生成<a class="headerlink" href="#modifying-vanilla-generation" title="永久链接至标题">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">This page assumes that you are familiar with setting up your <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/gen/WorldGeneratorModifier.html">WorldGeneratorModifier</a>. If not, then please
-read the article on setting up your modifier at <a class="reference internal" href="modifiers.html"><em>世界生成修改器</em></a>.</p>
+<p class="last">该部分假设读者已经对 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/gen/WorldGeneratorModifier.html">WorldGeneratorModifier</a> 足够熟悉，如果并非如此，请先阅读 <a class="reference internal" href="modifiers.html"><em>世界生成修改器</em></a> 部分。</p>
 </div>
-<p>Sponge exposes a great deal of vanilla world generation, which can be manipulated through the various interfaces.
-Currently, the only elements of the generation process that are <em>easily</em> exposed to manipulation are the populators.</p>
-<p>For a quick example, let&#8217;s look at how we would change the cactii that spawn in deserts to be taller.</p>
+<p>Sponge 提供了大量的原版世界生成的接口用于进行各种操作。目前，世界生成过程中唯一 <em>易于</em> 操作的阶段是 Population 阶段。</p>
+<p>作为一个简单的示例，我们来看看我们如何修改沙漠中的仙人掌（译者注：原文为 Cactii，怀疑其为笔误）以使其高一些。</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.world.biome.BiomeGenerationSettings</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.world.biome.BiomeTypes</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.world.gen.Populator</span><span class="o">;</span>
@@ -608,18 +610,12 @@ Currently, the only elements of the generation process that are <em>easily</em> 
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>Start by getting the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/biome/BiomeGenerationSettings.html">BiomeGenerationSettings</a> for the desert biome. This object is a container for all
-generation settings relating to that biome. Next, iterate through the list of all <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/gen/populator/Cactus.html">Cactus</a> populators and set
-the height to 5, which means it can only generate cactii which are 5 blocks tall.</p>
+<p>首先我们从获取沙漠生物群落对应的 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/biome/BiomeGenerationSettings.html">BiomeGenerationSettings</a> 开始。该对象保存了所有有关于该生物群落的世界生成的配置。然后我们需要找到用于仙人掌的世界生成，也就是所有的 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/gen/populator/Cactus.html">Cactus</a> ，并将其高度设置为五。换句话说，我们设置了所有世界生成中的仙人掌的高度为五。</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">The <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/gen/populator/Cactus.html#setHeight-int-">Cactus#setHeight(int)</a>, and many other similar methods on other populators, also takes a
-<a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/weighted/VariableAmount.html">VariableAmount</a> which can be used to specify the height as a range or other custom value.</p>
+<p class="last"><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/gen/populator/Cactus.html#setHeight-int-">Cactus#setHeight(int)</a> 以及众多类似的方法同时可以接受一个 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/util/weighted/VariableAmount.html">VariableAmount</a> 作为参数以允许开发者自定义高度为一个范围或其他自定义值。</p>
 </div>
-<p>This has been a simple example of how to modify an existing populator. Let&#8217;s look at how we can add a new
-instance of a vanilla populator. This time the populator will be added globally, which means it will be
-applied to all chunks regardless of the biome. Let&#8217;s add a Pumpkin populator globally, causing pumpkins to be
-scattered everywhere throughout the world.</p>
+<p>这是一个如何修改现有世界生成的简单示例。让我们来看看我们如何添加一个新的世界生成。这一次，我们将在所有的世界生成中添加，这意味着它将不考虑特定生物群落而应用于所有地方。让我们在所有的世界生成中添加南瓜的生成，使南瓜散布到世界各地。</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.world.gen.populator.Pumpkin</span><span class="o">;</span>
 
 <span class="nd">@Override</span>
@@ -629,28 +625,17 @@ scattered everywhere throughout the world.</p>
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>Contrary to the previous example, this time you are creating an entirely new populator. To do this, first you need to
-get a builder for that populator. Then set your desired settings for the populator into it - in this case, we want a
-dozen pumpkins to spawn per patch. Finally, add your new populator to the list of populators that are applied globally
-to the world.</p>
-<p>Voila, now we have pumpkins everywhere.</p>
+<p>和上面的示例恰恰相反，这一次你正在定义全新的世界生成。首先你需要一个生成器（Builder）。然后你把你想要的设置设置进去——这里我们会在一个区块生成一打，也就是十二个南瓜。最后我们让全世界都知道我们要生成南瓜了。</p>
+<p>啊哈！现在遍地都是南瓜。</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">In this example we added the pumpkin populator to the end of the populators list, but it should be noted that
-this list is order dependent. So if you would like your populator to be called earlier than other populators,
-as is usually a good idea with Forest populators, then your should add your populator to the start of the list.</p>
+<p class="last">在这个例子中，我们把把关于南瓜的世界生成添加到了列表的最后，需要注意的一点是，这个列表是有序的。所以如果你想要在 Population 阶段比其他世界生成更早进行，比如生成森林，你应该将你的世界生成添加到列表的开头。</p>
 </div>
-<p>These two examples should serve to help you get familiar with the realm of working with vanilla populators.
-This only touches the surface of what is possible. See the javadocs for a complete listing of available populators
-and their properties.</p>
+<p>这两个例子应该帮助了你熟悉原版的世界生成。不过这里我们只介绍了一点点皮毛。若要获取相关的完整列表，请参阅 JavaDocs。</p>
 </div>
 <div class="section" id="creating-custom-base-terrain">
-<h2>Creating Custom Base Terrain<a class="headerlink" href="#creating-custom-base-terrain" title="永久链接至标题">¶</a></h2>
-<p>Changing the base <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/gen/GenerationPopulator.html">GenerationPopulator</a> of a world generator allows you to change the base terrain shape
-generation of the world. A generator populator will roughly follow the procedure of using the seed and biome information
-to seed and modify a series of noise maps, from which the terrain is formed. The terrain created in a modified base
-generator populator should only consist of stone blocks, to allow the biomes to properly replace blocks for
-biome-specific ground cover.</p>
+<h2>创建自定义地形<a class="headerlink" href="#creating-custom-base-terrain" title="永久链接至标题">¶</a></h2>
+<p>通过修改世界的基础 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/gen/GenerationPopulator.html">GenerationPopulator</a> 你可以自定义世界的地形生成。一个 <code class="docutils literal"><span class="pre">GenerationPopulator</span></code> 将粗略地遵循使用种子和生物群落信息来生成一系列噪声图的过程，由此形成地形。在修改的 <code class="docutils literal"><span class="pre">GenerationPopulator</span></code> 中创建的地形应当仅由石块组成，以允许生物群落适当地替换用于特定生物群落的覆盖方块。</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">SinusoidalGenerator</span> <span class="kd">implements</span> <span class="n">GenerationPopulator</span> <span class="o">{</span>
 
     <span class="nd">@Override</span>
@@ -681,37 +666,28 @@ biome-specific ground cover.</p>
 <span class="o">}</span>
 </pre></div>
 </div>
-<p>This is a fairly simple example of a base terrain generation populator (at least, if you look past the math to
-calculate the height). For each column in the buffered area we want to calculate a height value, and then fill
-in everything below that with stone and leave everything above it as air (or water if we&#8217;re still below sea-level).</p>
+<p>这是一个相当简单的基础地形生成器的例子（如果你看一看计算高度的数学方法的话）。对于缓冲区域中的每一列，我们要计算一个高度值，然后用石头填充下面的所有内容，并将上面的所有内容作为空气（如果低于海平面，则为水）。</p>
 </div>
 <div class="section" id="creating-custom-generationpopulators">
-<h2>Creating Custom GenerationPopulators<a class="headerlink" href="#creating-custom-generationpopulators" title="永久链接至标题">¶</a></h2>
+<h2>创建自定义 GenerationPopulator<a class="headerlink" href="#creating-custom-generationpopulators" title="永久链接至标题">¶</a></h2>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">The API for custom GenerationPopulators isn&#8217;t finished yet. This section will be expanded in the future.</p>
+<p class="last">因为 Sponge 团队的拖延症，所以不仅这一节什么都没有，相关的 API 及其实现都没有完成。所以读者请耐心等待这一节的完成。</p>
 </div>
 </div>
 <div class="section" id="creating-custom-populators">
-<h2>Creating Custom Populators<a class="headerlink" href="#creating-custom-populators" title="永久链接至标题">¶</a></h2>
-<p>Custom populators can be used to add a great variety of custom features. To create a custom populator you need
-only create a class implementing the Populator interface and add it to the list of populators attached to a
-biome, or to a world generator if you want it applied globally.</p>
-<p>Your custom populator will be passed an <code class="docutils literal"><span class="pre">Extent</span></code> which is a view onto the world covering the area that you
-should be applying your populator. It is advised that you do not make any assumptions as to the expected size
-or position of this extent, as it may be larger or smaller for operations such as regenerating a chunk.</p>
+<h2>创建自定义 Populator<a class="headerlink" href="#creating-custom-populators" title="永久链接至标题">¶</a></h2>
+<p>自定义的 Populator 可用于添加各种自定义功能。要创建自定义的 Populator 你只需创建一个实现 Populator 接口的类，并将其添加到附加到生物群组的对应列表中，或者添加到世界生成修改器（如果你希望应用于全局）中。</p>
+<p>你的 Populator 将被传递一个地域（Extent）。一个地域是一个覆盖了你的 Populator 应该应用其上的区域的世界的视图。建议您不要对该范围的大小或位置做出任何假设，因为对于诸如重新生成区块的操作，它可能大于或小于你的预期。</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">To allow your populator to overlap chunk boundaries your populator is allowed to extend up to 8 blocks outside
-of the boundaries of the extent.</p>
+<p class="last">为了使你的 Populator 和区块边界重叠，你的 Populator 允许扩展到边界外的八个方块。</p>
 </div>
 </div>
 <div class="section" id="creating-custom-biomes">
 <h2>创建自定义生物群落<a class="headerlink" href="#creating-custom-biomes" title="永久链接至标题">¶</a></h2>
-<p>While it is currently not possible to create entirely new biomes from within sponge, you can replace the system
-by which they are arranged in the world be implementing the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/gen/BiomeGenerator.html">BiomeGenerator</a> interface and setting your custom
-biome generator onto a WorldGenerator.</p>
-<p>Below is an example of a biome generator which creates one large island centered around (0, 0).</p>
+<p>虽然在 Sponge 中并不能新添加生物群落，不过你可以通过实现 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/gen/BiomeGenerator.html">BiomeGenerator</a> 接口来替代世界原有的生成系统同时将其设置成自己的。</p>
+<p>下面是一个在 X 坐标和 Z 坐标均为零的地方生成一个大岛屿的示例。</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">IslandBiomeGen</span> <span class="kd">implements</span> <span class="n">BiomeGenerator</span> <span class="o">{</span>
 
     <span class="kd">private</span> <span class="kd">static</span> <span class="kd">final</span> <span class="kt">double</span> <span class="n">ISLAND_SIZE</span> <span class="o">=</span> <span class="mi">200</span><span class="n">f</span><span class="o">;</span>

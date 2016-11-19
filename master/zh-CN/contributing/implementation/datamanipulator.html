@@ -185,7 +185,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/implementations/index.html">选择一个实现</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">Installing SpongeForge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">安装SpongeForge</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">安装 SpongeVanilla</a></li>
 </ul>
 </li>
@@ -193,7 +193,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/port-forward.html">端口转发</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/bungeecord.html">和 BungeeCorge 配合使用 Sponge</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/bungeecord.html">和 BungeeCord 配合使用</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/configuration/index.html">配置 Sponge</a><ul>
@@ -577,25 +577,27 @@
   <div class="section" id="implementing-datamanipulators">
 <h1>实现数据操纵器<a class="headerlink" href="#implementing-datamanipulators" title="永久链接至标题">¶</a></h1>
 <p>这是一个创建数据操纵器（DataManipulator）的指南，贡献者可以通过本指南来学习如何帮助实现数据 API（Data API）。一个实现数据操纵器的更新目录可以在 <a class="reference external" href="https://github.com/SpongePowered/SpongeCommon/issues/8">SpongeCommon Issue #8</a> 被找到。</p>
-<p>若要完整实现一个 <code class="docutils literal"><span class="pre">数据操纵器（DataManipulator）</span></code> 必须遵循这些步骤：</p>
+<p>若要完整实现一个 <code class="docutils literal"><span class="pre">DataManipulator</span></code> 必须遵循这些步骤：</p>
 <ol class="arabic simple">
-<li><p class="first">实现 <code class="docutils literal"><span class="pre">数据操纵器（DataManipulator）</span></code> 本身</p>
+<li><p class="first">实现 <code class="docutils literal"><span class="pre">DataManipulator</span></code> 本身</p>
 </li>
-<li><p class="first">实现 <code class="docutils literal"><span class="pre">不可变数据操纵器（ImmutableDataManipulator）</span></code></p>
+<li><p class="first">实现 <code class="docutils literal"><span class="pre">ImmutableDataManipulator</span></code></p>
 </li>
 </ol>
 <p>当这些步骤完成后，下列的这些事情也要完成：</p>
 <ol class="arabic simple" start="3">
-<li><p class="first">注册 <code class="docutils literal"><span class="pre">数据键（Key）</span></code> 在 <code class="docutils literal"><span class="pre">数据键注册器（KeyRegistry）</span></code> 中</p>
+<li><p class="first">在 <code class="docutils literal"><span class="pre">KeyRegistry</span></code> 中注册 <code class="docutils literal"><span class="pre">Key</span></code></p>
 </li>
 <li><p class="first">实现 <code class="docutils literal"><span class="pre">DataProcessor</span></code></p>
 </li>
-<li>Implement the <code class="docutils literal"><span class="pre">ValueProcessor</span></code> for each value being represented by the <code class="docutils literal"><span class="pre">DataManipulator</span></code></li>
-<li>Register everything in the <code class="docutils literal"><span class="pre">SpongeSerializationRegistry</span></code></li>
+<li><p class="first">为每个表示 <code class="docutils literal"><span class="pre">DataManipulator</span></code> 的值实现 <code class="docutils literal"><span class="pre">ValueProcessor</span></code></p>
+</li>
+<li><p class="first">在 <code class="docutils literal"><span class="pre">SpongeSerializationRegistry</span></code> 中注册一切</p>
+</li>
 </ol>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">Make sure you follow our <a class="reference internal" href="../guidelines.html"><em>贡献指南</em></a>.</p>
+<p class="last">确保你遵守了 <a class="reference internal" href="../guidelines.html"><em>贡献指南</em></a> 。</p>
 </div>
 <div class="section" id="implement-the-datamanipulator">
 <h2>1. Implement the DataManipulator<a class="headerlink" href="#implement-the-datamanipulator" title="永久链接至标题">¶</a></h2>

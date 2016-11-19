@@ -184,7 +184,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/implementations/index.html">选择一个实现</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">Installing SpongeForge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">安装SpongeForge</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongevanilla.html">安装 SpongeVanilla</a></li>
 </ul>
 </li>
@@ -192,7 +192,7 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/port-forward.html">端口转发</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/bungeecord.html">和 BungeeCorge 配合使用 Sponge</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/bungeecord.html">和 BungeeCord 配合使用</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/configuration/index.html">配置 Sponge</a><ul>
@@ -605,10 +605,8 @@
 <div class="section" id="the-population-phase">
 <h3>Population 阶段<a class="headerlink" href="#the-population-phase" title="永久链接至标题">¶</a></h3>
 <p><em>Population 阶段</em> 只会在一个区块及其 X 轴与 Z 轴相邻的正方向的三个区块都被加载时进行世界生成。这允许在这一阶段的某种特性（Object）在不需要为 <code class="docutils literal"><span class="pre">GenerationPopulator</span></code> 进行部分生成的情况下，扩展到已经生成的 16x16 区块外。为了支持这一点，实际的 16x16 大小区块的生成会在 X 轴和 Z 轴的方向进行各 8 格的偏移。</p>
-<p>Only the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/gen/Populator.html">Populator</a>s of the biome at the position (x*16+16, 0, z*16+16) are applied to this area. It does
-not apply a union of all the biomes as is the case for <code class="docutils literal"><span class="pre">GenerationPopulator</span></code>s.</p>
-<p>Populators are ideal for small features (eg. desert wells) and additional terrain covering (eg. trees).
-Sponge provides access to a great number of vanilla specified populators which may be reconfigured for your use.</p>
+<p>只有位于 <code class="docutils literal"><span class="pre">(x*16+16,</span> <span class="pre">0,</span> <span class="pre">z*16+16)</span></code> 处的生物群系中的 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/world/gen/Populator.html">Populator</a> 才会应用于这一块。也就是说游戏不会将所有该区域中的 <code class="docutils literal"><span class="pre">GenerationPopulator</span></code> 联合到一起。</p>
+<p><code class="docutils literal"><span class="pre">Populator</span></code> 可以用于生成小的建筑（如沙漠水井等）或者附加的地形特征（如树等）。Sponge 提供了大量的原版的可复用的世界生成的 <code class="docutils literal"><span class="pre">Populator</span></code> ，开发者可以通过对它们的配置进行复用。</p>
 </div>
 </div>
 </div>
