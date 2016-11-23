@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>The Asset API &mdash; Sponge 5.0.0 ドキュメント</title>
+     <title>アセット API &mdash; Sponge 5.0.0 ドキュメント</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -336,7 +336,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="">The Asset API</a><ul class="simple">
+<li class="toctree-l2 current"><a class="current reference internal" href="">アセット API</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="configuration/index.html">プラグインの設定</a><ul>
@@ -575,16 +575,16 @@
                 <div class="body" role="main">
                   
   <div class="section" id="the-asset-api">
-<h1>The Asset API<a class="headerlink" href="#the-asset-api" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>The <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/asset/AssetManager.html">AssetManager</a> allows developers to retrieve resources from a plugin JAR.</p>
-<p>A plugin&#8217;s assets resides in a directory named <code class="docutils literal"><span class="pre">assets/myplugin/</span></code> where <code class="docutils literal"><span class="pre">myplugin</span></code> is the plugin ID.</p>
-<p>Once properly configured you can retrieve a resource for your (or any) plugin using the following code:</p>
+<h1>アセット API<a class="headerlink" href="#the-asset-api" title="このヘッドラインへのパーマリンク">¶</a></h1>
+<p><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/asset/AssetManager.html">AssetManager</a> で開発者はプラグインJARからリソースを取得することができます。</p>
+<p>プラグインのアセットは``assets/myplugin/<a href="#id1"><span class="problematic" id="id2">``</span></a>（<a href="#id3"><span class="problematic" id="id4">``</span></a>myplugin``はプラグインID）と言うディレクトリ内に属します。</p>
+<p>正常に設定されている場合、下記のコードを使用することであなたの(もしくは他の製作者の) プラグインからリソースを取得することができます。</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.asset.Asset</span><span class="o">;</span>
 
 <span class="n">Asset</span> <span class="n">asset</span> <span class="o">=</span> <span class="n">plugin</span><span class="o">.</span><span class="na">getAsset</span><span class="o">(</span><span class="s">&quot;myfile.txt&quot;</span><span class="o">).</span><span class="na">get</span><span class="o">();</span>
 </pre></div>
 </div>
-<p>Alternatively, you can retrieve assets through the <code class="docutils literal"><span class="pre">AssetManager</span></code> class:</p>
+<p>もしくは、<a href="#id1"><span class="problematic" id="id2">``</span></a>AssetManager``クラスを通じてアセットを取得することができます。</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.Sponge</span><span class="o">;</span>
 
 <span class="n">Asset</span> <span class="n">asset</span> <span class="o">=</span> <span class="n">Sponge</span><span class="o">.</span><span class="na">getAssetManager</span><span class="o">().</span><span class="na">getAsset</span><span class="o">(</span><span class="n">plugin</span><span class="o">,</span> <span class="s">&quot;myfile.txt&quot;</span><span class="o">).</span><span class="na">get</span><span class="o">();</span>

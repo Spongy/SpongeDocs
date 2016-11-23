@@ -366,7 +366,7 @@
 <li class="toctree-l3"><a class="reference internal" href="text/pagination.html">分页</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="text/messagechannels.html">信道</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="text/messagechannels.html">消息通道</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="text/templates.html">文本模板</a></li>
@@ -578,42 +578,43 @@
   <div class="section" id="permissions">
 <h1>权限<a class="headerlink" href="#permissions" title="永久链接至标题">¶</a></h1>
 <div class="section" id="permission">
-<h2>Permission<a class="headerlink" href="#permission" title="永久链接至标题">¶</a></h2>
-<p>A permission is a case-insensitive hierarchical string key that is used to determine whether a Subject can do a specific
-action or not.
-The string is split into separate parts using the dot character.
-Permissions should be structured like this.</p>
+<h2>Permission 字符串<a class="headerlink" href="#permission" title="永久链接至标题">¶</a></h2>
+<p>Permission 字符串对大小写不敏感，其用于决定一个 Subject 可以和不可以做什么。该字符串使用小数点分隔成若干分立的部分。一个 Permission 字符串应该长这样：</p>
 <div class="highlight-text"><div class="highlight"><pre><span></span>&lt;PluginID&gt;.&lt;MainGroup&gt;.&lt;Subgroup1&gt;...
 </pre></div>
 </div>
-<p>Allowed characters are:</p>
+<p>允许使用的字符有：</p>
 <ul class="simple">
-<li>&#8220;A&#8221; - &#8220;Z&#8221;</li>
-<li>&#8220;a&#8221; - &#8220;z&#8221;</li>
-<li>&#8220;0&#8221; - &#8220;9&#8221;</li>
-<li>&#8220;_&#8221;</li>
-<li>&#8220;-&#8220;</li>
-<li>&#8221;.&#8221;</li>
+<li><p class="first">大写英文字母（A 到 Z）</p>
+</li>
+<li><p class="first">小写英文字母（a 到 z）</p>
+</li>
+<li><p class="first">阿拉伯数字（0 到 9）</p>
+</li>
+<li><p class="first">下划线（_）</p>
+</li>
+<li><p class="first">短横线（-）</p>
+</li>
+<li><p class="first">小数点（.）</p>
+</li>
 </ul>
 <div class="section" id="inheritance">
-<h3>Inheritance<a class="headerlink" href="#inheritance" title="永久链接至标题">¶</a></h3>
-<p>If a user has the permission <code class="docutils literal"><span class="pre">myPlugin.commands</span></code> then they automatically have all sub permissions such as
-<code class="docutils literal"><span class="pre">myPlugin.commands.teleport</span></code> unless the permissions are explicitly removed.</p>
+<h3>继承<a class="headerlink" href="#inheritance" title="永久链接至标题">¶</a></h3>
+<p>如果一个用户具有 <code class="docutils literal"><span class="pre">myPlugin.commands</span></code> 的权限，那么所有诸如 <code class="docutils literal"><span class="pre">myPlugin.commands.teleport</span></code> 等子权限都将自动拥有，除非它被显式地删除。</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">There is no such thing as a <code class="docutils literal"><span class="pre">myPlugin.commands.*</span></code> wildcard permission.
-Use <code class="docutils literal"><span class="pre">myPlugin.commands</span></code> for that.</p>
+<p class="last">没有诸如 <code class="docutils literal"><span class="pre">myPlugin.commands.*</span></code> 的通配符形式。请使用 <code class="docutils literal"><span class="pre">myPlugin.commands</span></code> 解决问题。</p>
 </div>
 </div>
 <div class="section" id="structure-example">
-<h3>Structure-Example<a class="headerlink" href="#structure-example" title="永久链接至标题">¶</a></h3>
-<p>The following example show one possible way of structuring permissions, but following this structure is not required at
-all.</p>
+<h3>结构示例：<a class="headerlink" href="#structure-example" title="永久链接至标题">¶</a></h3>
+<p>下面的示例展示了一个构造 Permission 字符串的通常方法，当然按照该结构来并不是必须的。</p>
 <ul>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">myPlugin</span></code></dt>
 <dd><ul class="first last simple">
-<li>Grants <strong>full</strong> access to all plugin&#8217;s permissions.</li>
+<li><p class="first">给予有关该插件的 <strong>所有</strong> 权限。</p>
+</li>
 </ul>
 </dd>
 </dl>
@@ -621,7 +622,8 @@ all.</p>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">myPlugin.commands</span></code></dt>
 <dd><ul class="first last simple">
-<li>Grants <strong>full</strong> access to all plugin&#8217;s commands.</li>
+<li><p class="first">给予有关该插件的命令的 <strong>所有</strong> 权限。</p>
+</li>
 </ul>
 </dd>
 </dl>
@@ -629,9 +631,8 @@ all.</p>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">myPlugin.commands.teleport.execute</span></code></dt>
 <dd><ul class="first last simple">
-<li>Only grants the user the permission to execute the command. Without this permission he is not able to execute the
-command even if he has other <cite>teleport</cite> permissions.
-(With this permission alone the user would only be able to teleport himself to others in his current world.)</li>
+<li><p class="first">仅仅给予用户执行指定命令的权限。如果用户没有该权限，那么即便他拥有其他有关于 <cite>teleport</cite> 的权限，他也没有办法运行该命令（拥有该权限的用户只能将自己传送到其所在世界的其他人的位置）。</p>
+</li>
 </ul>
 </dd>
 </dl>
@@ -639,7 +640,8 @@ command even if he has other <cite>teleport</cite> permissions.
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">myPlugin.commands.teleport.all</span></code></dt>
 <dd><ul class="first last simple">
-<li>Only grants the user the permission to teleport all players at once.</li>
+<li><p class="first">仅仅给予用户一次性传送所有玩家的权限。</p>
+</li>
 </ul>
 </dd>
 </dl>
@@ -647,7 +649,8 @@ command even if he has other <cite>teleport</cite> permissions.
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">myPlugin.commands.teleport.worlds</span></code></dt>
 <dd><ul class="first last simple">
-<li>Only grants the user the permission to teleport to all worlds.</li>
+<li><p class="first">仅仅给予用户传送所有世界的玩家的权限。</p>
+</li>
 </ul>
 </dd>
 </dl>
@@ -655,7 +658,8 @@ command even if he has other <cite>teleport</cite> permissions.
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">myPlugin.commands.teleport.worlds.mynetherworld</span></code></dt>
 <dd><ul class="first last simple">
-<li>Only grants the user the permission to teleport to <em>mynetherworld</em>.</li>
+<li><p class="first">仅仅给予用户传送到 <em>mynetherworld</em> 的权限。</p>
+</li>
 </ul>
 </dd>
 </dl>
@@ -664,21 +668,22 @@ command even if he has other <cite>teleport</cite> permissions.
 </div>
 </div>
 <div class="section" id="permissiondescription">
-<h2>PermissionDescription<a class="headerlink" href="#permissiondescription" title="永久链接至标题">¶</a></h2>
-<p>The <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/permission/PermissionDescription.html">PermissionDescription</a> is an utility that is meant to provide the server owner with details on a certain
-permission. <code class="docutils literal"><span class="pre">PermissionDescription</span></code>s are an optional feature a <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/permission/PermissionService.html">PermissionService</a> can provide. The creation
-of a PermissionDescription does <strong>not</strong> have any impact on whether a permission exists, who has access or what its
-default value is.</p>
-<p>The description consists of:</p>
+<h2>权限描述<a class="headerlink" href="#permissiondescription" title="永久链接至标题">¶</a></h2>
+<p>一个权限描述是一个 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/permission/PermissionDescription.html">PermissionDescription</a> 对象，用于向服主提供有关于某些权限的详细信息。 <code class="docutils literal"><span class="pre">PermissionDescription</span></code> 是 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/permission/PermissionService.html">PermissionService</a> 可以提供的可选特性。创建权限描述并 <strong>不</strong> 会影响已有的权限是否存在，拥有权限的都有谁，以及其默认值是什么。</p>
+<p>权限描述包括：</p>
 <ul class="simple">
-<li>the target permission id</li>
-<li>a Text description</li>
-<li>one or more assigned roles</li>
-<li>the owning plugin</li>
+<li><p class="first">目标 Permission 字符串</p>
+</li>
+<li><p class="first">一个用于描述的 Text 对象</p>
+</li>
+<li><p class="first">一个或多个分配规则</p>
+</li>
+<li><p class="first">提供该权限的插件</p>
+</li>
 </ul>
-<p>If you have a dynamic element such as a <code class="docutils literal"><span class="pre">World</span></code> or <code class="docutils literal"><span class="pre">ItemType</span></code> then you can use <code class="docutils literal"><span class="pre">&lt;TemplateParts&gt;</span></code>.</p>
+<p>如果你有一个诸如 <code class="docutils literal"><span class="pre">World</span></code> 或者 <code class="docutils literal"><span class="pre">ItemType</span></code> 的动态元素，那么你可以使用 <code class="docutils literal"><span class="pre">&lt;TemplateParts&gt;</span></code> 。</p>
 <div class="section" id="usage-example">
-<h3>Usage-Example<a class="headerlink" href="#usage-example" title="永久链接至标题">¶</a></h3>
+<h3>用法示例<a class="headerlink" href="#usage-example" title="永久链接至标题">¶</a></h3>
 <div class="highlight-text"><div class="highlight"><pre><span></span>import org.spongepowered.api.service.permission.PermissionDescription;
 import org.spongepowered.api.service.permission.PermissionDescription.Builder;
 import org.spongepowered.api.service.permission.PermissionService;
@@ -697,7 +702,7 @@ if (optBuilder.isPresent()) {
 </div>
 </div>
 <div class="section" id="simple-result">
-<h3>Simple-Result<a class="headerlink" href="#simple-result" title="永久链接至标题">¶</a></h3>
+<h3>简单的结果<a class="headerlink" href="#simple-result" title="永久链接至标题">¶</a></h3>
 <div class="highlight-text"><div class="highlight"><pre><span></span>myPlugin.commands.teleport.execute
 
 Description: Allows the user to execute the teleport command.
@@ -707,7 +712,7 @@ Owner: MyPlugin v1.2.3
 </div>
 </div>
 <div class="section" id="template-result">
-<h3>Template-Result<a class="headerlink" href="#template-result" title="永久链接至标题">¶</a></h3>
+<h3>带有动态元素的结果<a class="headerlink" href="#template-result" title="永久链接至标题">¶</a></h3>
 <div class="highlight-text"><div class="highlight"><pre><span></span>myPlugin.commands.teleport.worlds.&lt;World&gt;
 
 Description: Allows the user to teleport to the world &lt;World&gt;.
@@ -717,26 +722,16 @@ Owner: MyPlugin v1.2.3
 </div>
 <div class="admonition tip">
 <p class="first admonition-title">小技巧</p>
-<p class="last">You might skip writing descriptions for some parent permission groups such as <code class="docutils literal"><span class="pre">myPlugin.commands.teleport.worlds</span></code>
-or <code class="docutils literal"><span class="pre">myPlugin.commands</span></code> as their meaning can be derived from the permission structure and the defined children
-alone.</p>
+<p class="last">你可能不会为某些父权限组编写描述，例如 <code class="docutils literal"><span class="pre">myPlugin.commands.teleport.worlds</span></code> 或者 <code class="docutils literal"><span class="pre">myPlugin.commands</span></code> 等，因为相应的权限结构和其对应的子权限已经足够描述该权限的意义了。</p>
 </div>
 </div>
 </div>
 <div class="section" id="subject">
-<h2>Subject<a class="headerlink" href="#subject" title="永久链接至标题">¶</a></h2>
-<p>A <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/permission/Subject.html">Subject</a> is a holder of assigned permissions. It can be obtained from the <code class="docutils literal"><span class="pre">PermissionService</span></code> via
-<a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/permission/SubjectCollection.html">SubjectCollection</a>s.
-<a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/CommandSource.html">CommandSource</a>s such as <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/entity/living/player/Player.html">Player</a>s are <code class="docutils literal"><span class="pre">Subject</span></code>s by default, but there are many other types of
-<code class="docutils literal"><span class="pre">Subject</span></code>s. Anything that has permissions is a Subject even if it just delegates the checks to a contained Subject.
-Permissions can be granted or denied to a Subject. If a permission is neither granted nor denied its setting will be
-inherited. See Inheritance.
-Subjects provide methods to check whether they have a certain permission or not.
-Plugins that use this method should only query for the specific permission they want to check. It is the
-PermissionService&#8217;s task to respect the permission and subject inheritance.</p>
+<h2>权限主体<a class="headerlink" href="#subject" title="永久链接至标题">¶</a></h2>
+<p>一个权限主体是一个 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/permission/Subject.html">Subject</a> 对象，持有着若干权限。通过 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/permission/SubjectCollection.html">SubjectCollection</a> 我们可以从 <code class="docutils literal"><span class="pre">PermissionService</span></code> 中获取到权限主体。一些诸如 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/CommandSource.html">CommandSource</a> （比如 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/entity/living/player/Player.html">Player</a> 等）的对象本身就属于 <code class="docutils literal"><span class="pre">Subject</span></code> 。不过同样有其他多种多样的 <code class="docutils literal"><span class="pre">Subject</span></code> 。任何具有权限的东西都是权限主体，即使它只是将检查委托给一个包含的权限主体。可以向权限主体授予或去除权限。如果权限既不被授予也不被去除，那么其设置将被继承（请参阅后面的内容）。权限主体提供方法来检查他们是否具有某种权限。使用此方法的插件应仅查询其要检查的特定权限，而 PermissionService 的任务才是管理权限及其继承。</p>
 <div class="section" id="example">
-<h3>Example<a class="headerlink" href="#example" title="永久链接至标题">¶</a></h3>
-<p>The following example could be used to check whether the Player is allowed to execute the teleport command.</p>
+<h3>示例<a class="headerlink" href="#example" title="永久链接至标题">¶</a></h3>
+<p>下面的示例可以用于检查玩家是否允许执行传送命令。</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.entity.living.player.Player</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.world.World</span><span class="o">;</span>
 
@@ -749,10 +744,8 @@ PermissionService&#8217;s task to respect the permission and subject inheritance
 </div>
 </div>
 <div class="section" id="id1">
-<h3>Inheritance<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
-<p>If a <code class="docutils literal"><span class="pre">Subject</span></code> has a permission assigned, it will use that value.
-Otherwise it will be inherited from any parent <code class="docutils literal"><span class="pre">Subject</span></code>. It does not matter what kind of parent (e.g. group or
-player) <code class="docutils literal"><span class="pre">Subject</span></code> that might be.</p>
+<h3>继承<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
+<p>如果 <code class="docutils literal"><span class="pre">Subject</span></code> 被指定了是否拥有给定的权限，那么它将按照指定的方式去做。否则它会继承任何父 <code class="docutils literal"><span class="pre">Subject</span></code> ，而不管父 <code class="docutils literal"><span class="pre">Subject</span></code> 是什么样子的（如用户组或玩家等）。</p>
 <p>If neither the subject itself nor any parent subjects grant or deny a permission then it will be inherited from the
 default <code class="docutils literal"><span class="pre">Subject</span></code>s. Each <code class="docutils literal"><span class="pre">SubjectCollection</span></code> defines its own defaults. The global and weakest default subject can be
 obtained from the <code class="docutils literal"><span class="pre">PermissionService</span></code>. Plugins may define their own permissions to the default&#8217;s transient
@@ -919,7 +912,7 @@ context key with your plugin id) unless these contexts are meant to be shared.</
 <p class="last">Please make sure that your <code class="docutils literal"><span class="pre">ContextCalculator</span></code> responds as fast as possible as it will get called frequently.</p>
 </div>
 <div class="section" id="id2">
-<h3>Example<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
+<h3>示例<a class="headerlink" href="#id2" title="永久链接至标题">¶</a></h3>
 <p>Your <code class="docutils literal"><span class="pre">ContextCalculator</span></code> may look like this:</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">org.spongepowered.api.command.CommandSource</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.service.context.Context</span><span class="o">;</span>

@@ -368,7 +368,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/pagination.html">分页</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/messagechannels.html">信道</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/messagechannels.html">消息通道</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/text/templates.html">文本模板</a></li>
@@ -588,19 +588,21 @@
 <div class="section" id="reading-the-download-filename">
 <h2>阅读下载的文件名<a class="headerlink" href="#reading-the-download-filename" title="永久链接至标题">¶</a></h2>
 <p>当你已经下载SpongeForge，它的文件名提供了一些非常重要的版本信息，其中包括了SpongeForge所兼容的Forge构建号。只有少数构建号没有被支持。</p>
-<p>However, SpongeForge usually updates to a new Forge build fairly soon after it&#8217;s released, so you needn&#8217;t
-worry about always having to run an outdated Forge version in order to use SpongeForge.</p>
-<p>The format of the filename is <code class="docutils literal"><span class="pre">spongeforge-{MCVersion}-{ForgeVersion}-{SpongeAPIVersion}-{SpongeBuildId}</span></code></p>
+<p>然而，SpongeForge经常在新版本Forge发布后构建到这个新的版本，所以你不需要担心为了使用SpongeForge而不得不用老版本的Forge</p>
+<p>文件名的格式为``spongeforge-{MC版本}-{Forge版本}-{SpongeAPI版本}-{Sponge构建ID}``</p>
 <table border="1" class="docutils">
 <colgroup>
 <col width="19%" />
 <col width="81%" />
 </colgroup>
 <tbody valign="top">
-<tr class="row-odd"><td><code class="docutils literal"><span class="pre">MCVersion</span></code></td>
-<td>The Minecraft version. Only clients compatible with this version can connect.</td>
+<tr class="row-odd"><td><p class="first last"><code class="docutils literal"><span class="pre">MC版本</span></code></p>
+</td>
+<td><p class="first last">Minecraft的版本。只有此版本兼容的minecraft客户端才能连接</p>
+</td>
 </tr>
-<tr class="row-even"><td><code class="docutils literal"><span class="pre">ForgeVersion</span></code></td>
+<tr class="row-even"><td><p class="first last"><code class="docutils literal"><span class="pre">Forge版本</span></code></p>
+</td>
 <td>The version of Forge this file is built for. Preferably your server should run this exact
 version of Forge.</td>
 </tr>
@@ -674,7 +676,7 @@ Example: <code class="docutils literal"><span class="pre">wget</span> <span clas
 </ol>
 </div>
 <div class="section" id="installing-forge-via-gui">
-<h4>Installing Forge via GUI<a class="headerlink" href="#installing-forge-via-gui" title="永久链接至标题">¶</a></h4>
+<h4>通过GUI界面安装Forge<a class="headerlink" href="#installing-forge-via-gui" title="永久链接至标题">¶</a></h4>
 <ol class="arabic simple">
 <li>Download the Minecraft Forge installer from the <a class="reference external" href="http://files.minecraftforge.net/">Minecraft Forge website</a> for the version
 matching the one listed <a class="reference internal" href=""><em>in the filename of the SpongeForge download</em></a>.</li>
@@ -684,11 +686,12 @@ and then click OK.</li>
 </ol>
 </div>
 <div class="section" id="adding-spongeforge-to-forge">
-<h4>Adding SpongeForge to Forge<a class="headerlink" href="#adding-spongeforge-to-forge" title="永久链接至标题">¶</a></h4>
+<h4>为SpongeForge添加Forge<a class="headerlink" href="#adding-spongeforge-to-forge" title="永久链接至标题">¶</a></h4>
 <ol class="arabic simple">
-<li>Download SpongeForge from the Sponge website and put it into the <code class="docutils literal"><span class="pre">mods</span></code> folder in your server directory.
-Create the folder if it does not yet exist.</li>
-<li>You may now launch the server via command or launch script <code class="docutils literal"><span class="pre">java</span> <span class="pre">-jar</span> <span class="pre">forge-version-XYZ.jar</span></code>.</li>
+<li><p class="first">从Sponge网站上下载SpongeForge并将它放进在你的服务器目录里的``mods`` 文件夹 . 如果此文件夹不存在请自行创建。</p>
+</li>
+<li><p class="first">现在你可以通过命令或者启动脚本来启动服务器``java -jar forge-version-XYZ.jar``。</p>
+</li>
 <li>If operating from home, set up <a class="reference internal" href="../port-forward.html"><em>端口转发</em></a> to ensure others can connect.</li>
 </ol>
 <p>Next, learn how you can create and use a <a class="reference internal" href="../launch-script.html"><em>launch-script</em></a>,
@@ -697,9 +700,10 @@ Create the folder if it does not yet exist.</li>
 </div>
 </div>
 <div class="section" id="links">
-<h2>Links<a class="headerlink" href="#links" title="永久链接至标题">¶</a></h2>
+<h2>网址<a class="headerlink" href="#links" title="永久链接至标题">¶</a></h2>
 <ul class="simple">
-<li><a class="reference external" href="http://spongepowered.org/">Homepage</a></li>
+<li><p class="first"><a class="reference external" href="http://spongepowered.org/">主页</a></p>
+</li>
 <li><a class="reference external" href="https://github.com/SpongePowered/SpongeForge">GitHub</a></li>
 </ul>
 </div>
