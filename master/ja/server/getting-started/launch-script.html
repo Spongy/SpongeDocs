@@ -485,7 +485,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/ray-tracing.html">レイトレーシング</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/bukkit-sponge-compare.html">Bukkit と SpongeAPI の比較</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/tutorials.html">チュートリアル</a><ul class="simple">
 </ul>
 </li>
@@ -583,14 +582,10 @@
 </div>
 <div class="section" id="writing-a-launch-script">
 <h2>起動スクリプトの作成<a class="headerlink" href="#writing-a-launch-script" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>First, open a text editor such as Atom, Sublime Text, or Notepad. Write (or paste) a launch script for your server.
-Examples of simple launch scripts for Windows, Mac OS X, and Linux have been provided below. Keep the RAM limitations
-of your machine in mind.</p>
+<p>まず、AtomやSublime text、メモ帳等のテキストエディタを起動して下さい。次に、サーバー起動用のスプリクトを記述(またはコピペ) してサーバーのフォルダに保存して下さい。Windows、Mac OS X、Linux用のスプリクト例は下記を参照して下さい。メモリ利用量制限の調整もお忘れなきよう。</p>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
-<p class="last">The following examples are generic. For a Forge server using Sponge (coremod), change <code class="docutils literal"><span class="pre">forge-1.8-XYZ-universal.jar</span></code>
-to whatever your Forge version in the server directory is named. To launch a SpongeVanilla server, change
-<code class="docutils literal"><span class="pre">forge-1.8-XYZ-universal.jar</span></code> to the name of the SpongeVanilla.jar file.</p>
+<p class="last">これらの例は一部であなたの環境に合わせた記述が必要です。<code class="docutils literal"><span class="pre">forge-1.8-XYZ-universal.jar</span></code> を、Forge導入済みの環境にSpongeForge(coremod) を導入する場合は導入したForgeのjarファイル名に、バニラ環境にSpongeVanillaを導入する場合はSpongeVanillaのjarファイル名にそれぞれ記述しなおして下さい。</p>
 </div>
 <div class="section" id="windows">
 <h3>Windows<a class="headerlink" href="#windows" title="このヘッドラインへのパーマリンク">¶</a></h3>
@@ -621,17 +616,15 @@ java -Xms1G -Xmx2G -jar forge-1.8-XYZ-universal.jar
 </div>
 <div class="section" id="running-a-launch-script">
 <h2>起動スクリプトの実行<a class="headerlink" href="#running-a-launch-script" title="このヘッドラインへのパーマリンク">¶</a></h2>
-<p>Ensure you are running your launch script out of a folder created especially for your server. This is for your own
-sanity; unfortunately, Spongie is unable to soak up your tears if you do not do this.</p>
-<p>You may run your launch script by double-clicking it. If you are using a console or terminal, navigate to the directory
-of the script and run it. Keep in mind that you must agree to the Mojang EULA in order to run a server.</p>
+<p>確かに起動スクリプトをサーバーの実行ファイルが置かれたディレクトリに配置したことを確認して実行して下さい。この手順を怠った場合、Spongeはあなたの涙を汲むことができません。</p>
+<p>起動スクリプトをダブルクリックしてサーバーを起動します。コンソールやターミナルを利用する場合は、サーバーのディレクトリに移動して起動スプリクトを実行して下さい。サーバーを実行する際、Mojangのエンドユーザーライセンス規約に同意する必要があります。</p>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
-<p class="last">The default Minecraft server GUI console is disabled by Sponge, because it is very processor-intensive.</p>
+<p class="last">デフォルトのサーバーGUIはプロセッサの負荷を高めるため、Spongeによって無効化されます。</p>
 </div>
 <div class="admonition warning">
 <p class="first admonition-title">警告</p>
-<p>If you get a permissions error when attempting to launch your server on a Mac, try this:</p>
+<p>Macでパーミッションエラーが出てサーバーが起動できない場合は、次の手順を試して下さい：</p>
 <ul class="last simple">
 <li><p class="first">ターミナルを起動</p>
 </li>

@@ -485,7 +485,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../ray-tracing.html">Ray Tracing</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../bukkit-sponge-compare.html">Comparing Bukkit to SpongeAPI</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials.html">Tutorials</a><ul class="simple">
 </ul>
 </li>
@@ -577,11 +576,8 @@
                   
   <div class="section" id="serializing-data">
 <h1>Serializing Data<a class="headerlink" href="#serializing-data" title="Permalink to this headline">¶</a></h1>
-<p>While an <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/manipulator/ImmutableDataManipulator.html">ImmutableDataManipulator</a> is a good way to store data while the server is running, it will not
-persist over a restart. However, every <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/manipulator/DataManipulator.html">DataManipulator</a> implements the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/DataSerializable.html">DataSerializable</a> interface
-and thus can be serialized to a <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/DataContainer.html">DataContainer</a> and deserialized by a <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/persistence/DataBuilder.html">DataBuilder</a>.</p>
-<p>After this initial conversion from the specialized <code class="docutils literal"><span class="pre">DataManipulator</span></code> to a more general structure, the <code class="docutils literal"><span class="pre">DataContainer</span></code>
-can be further processed.</p>
+<p>While an <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/manipulator/ImmutableDataManipulator.html">ImmutableDataManipulator</a> is a good way to store data while the server is running, it will not persist over a restart. However, every <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/manipulator/DataManipulator.html">DataManipulator</a> implements the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/DataSerializable.html">DataSerializable</a> interface and thus can be serialised to a <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/DataContainer.html">DataContainer</a> and deserialised by a <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/persistence/DataBuilder.html">DataBuilder</a>.</p>
+<p>After this initial conversion from the specialised <code class="docutils literal"><span class="pre">DataManipulator</span></code> to a more general structure, the <code class="docutils literal"><span class="pre">DataContainer</span></code> can be further processed.</p>
 <div class="section" id="datacontainer-and-dataview">
 <h2>DataContainer and DataView<a class="headerlink" href="#datacontainer-and-dataview" title="Permalink to this headline">¶</a></h2>
 <p>A <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/DataView.html">DataView</a> is a general-purpose structure for holding any kind of data. It supports multiple values and even

@@ -485,7 +485,6 @@
 <li class="toctree-l2"><a class="reference internal" href="ray-tracing.html">光线追踪</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="bukkit-sponge-compare.html">Bukkit 和 SpongeAPI 的比较</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html">教程</a><ul class="simple">
 </ul>
 </li>
@@ -746,20 +745,10 @@ Owner: MyPlugin v1.2.3
 <div class="section" id="id1">
 <h3>继承<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
 <p>如果 <code class="docutils literal"><span class="pre">Subject</span></code> 被指定了是否拥有给定的权限，那么它将按照指定的方式去做。否则它会继承任何父 <code class="docutils literal"><span class="pre">Subject</span></code> ，而不管父 <code class="docutils literal"><span class="pre">Subject</span></code> 是什么样子的（如用户组或玩家等）。</p>
-<p>If neither the subject itself nor any parent subjects grant or deny a permission then it will be inherited from the
-default <code class="docutils literal"><span class="pre">Subject</span></code>s. Each <code class="docutils literal"><span class="pre">SubjectCollection</span></code> defines its own defaults. The global and weakest default subject can be
-obtained from the <code class="docutils literal"><span class="pre">PermissionService</span></code>. Plugins may define their own permissions to the default&#8217;s transient
-<a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/permission/SubjectData.html">SubjectData</a> during every server start-up. This allows server owners to overwrite the defaults defined by
-plugins according to their needs using the default&#8217;s persistent <code class="docutils literal"><span class="pre">SubjectData</span></code>. If you would like to provide a
-configuration guideline for server owners use <code class="docutils literal"><span class="pre">PermissionDescription</span></code>&#8216;s role-templates instead.</p>
+<p>如果权限主体本身或任何父权限主体都不授予或去除一个权限，那么它将继承于默认的 <code class="docutils literal"><span class="pre">Subject</span></code> 。每个 <code class="docutils literal"><span class="pre">SubjectCollection</span></code> 都定义了自己的默认值。全局和最弱的默认 <code class="docutils literal"><span class="pre">Subject</span></code> 可以从 <code class="docutils literal"><span class="pre">PermissionService</span></code> 获得。插件可以在每个服务器启动期间定义它们自己对默认 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/service/permission/SubjectData.html">SubjectData</a> 的权限。这允许服主根据自己的需要使用默认的 <code class="docutils literal"><span class="pre">SubjectData</span></code> 来覆盖插件定义的默认值。如果你想为服主提供一个配置指南，请使用 <code class="docutils literal"><span class="pre">PermissionDescription</span></code> 。</p>
 <div class="admonition warning">
 <p class="first admonition-title">警告</p>
-<p class="last">You should think carefully before granting default permissions to users. By granting the permissions you are
-assuming that all server owners will want these defaults (at least the first time the plugin runs) and that
-exceptions will require server owners to explicitly deny the permissions (which can&#8217;t even be done without a custom
-permissions service implementation). This should roughly correspond to a guest on a single player lan world without
-cheats. For example a chat plugin would allow sending chat messages by default to imitate vanilla game behaviour
-for features that were changed by the plugin.</p>
+<p class="last">在向用户授予权限前，你应该仔细考虑考虑。你对于这些默认权限的设置相当于你默许所有服主（至少在第一次插件运行时）都接受这些默认值，并且在特殊情况下才会去除相应权限（如果没有插件可用于管理权限，自由去除权限的事甚至无法完成）。插件开发者应该考虑在单人用户的无作弊局域网下，一个玩家加入多人游戏时应有的默认权限。比如一个聊天插件将允许默认情况下发送聊天信息以在基于原版游戏允许做的事的基础上加入自己的特性。</p>
 </div>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
