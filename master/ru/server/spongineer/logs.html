@@ -13,7 +13,7 @@
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.1/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-  <link href='//fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:400italic,700italic,700,400' rel='stylesheet' type='text/css' />
+  <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro|Roboto:400italic,700italic,700,400|Montserrat:400,700" rel="stylesheet" type="text/css" />
   <link rel="stylesheet" href="../../_static/tomorrow.css" type="text/css" />
   <link id="syntax-highlighting-ref" rel="stylesheet" href="../../_static/tomorrow_night.css" type="text/css" />
       
@@ -32,6 +32,8 @@
     <script type="text/javascript" src="../../_static/store.min.js"></script>
     <script type="text/javascript" src="../../_static/lights.js"></script>
       <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+        <link rel="index" title="Алфавитный указатель" href="../../genindex.html" />
+        <link rel="search" title="Поиск" href="../../search.html" />
         <link rel="top" title="Документация Sponge 5.0.0" href="../../index.html" />
         <link rel="up" title="Станьте экспертом по серверам Sponge" href="index.html" />
         <link rel="next" title="Отладка" href="debugging.html" />
@@ -76,19 +78,21 @@
   <div role="navigation" aria-label="related navigation">
     <div class="sp-logo-container sp-not-mobileview sp-mobileview">
       <a class="sp-logo-link" data-auto-route="true" href="/">
-        <img height="40px" id="site-logo" class="logo-big" alt="Sponge Forums" src="../../_static/spongelogo.png">
+        <img height="40px" id="site-logo" class="logo-big" alt="" src="https://www.spongepowered.org/assets/img/icons/spongie-mark.svg">
+        <span id="sp-site-title">Sponge</span>
       </a>
       <div class="sp-logo-bg"></div>
       <div class="sp-logo-chevron"><i class="fa fa-fw fa-chevron-down"></i></div>
       <div class="sp-logo-menu sp-skip-handler">
         <ul class="sp-logo-dropdown" id="ddleft">
           <a href="https://www.spongepowered.org"><li><i class="fa-fw fa fa-home"></i>Homepage</li></a>
-          <a href="https://forums.spongepowered.org"><li><i class="fa-fw fa fa-comment"></i>Forums</li></a>
+          <a href="https://forums.spongepowered.org"><li><i class="fa-fw fa fa-comments"></i>Forums</li></a>
           <a href="https://github.com/SpongePowered"><li><i class="fa-fw fa fa-code"></i>Code</li></a>
-          <a class="sp-forums-home" href="https://docs.spongepowered.org"><li class="active"><i class="fa-fw fa fa-book"></i>SpongeDocs</li></a>
-          <a href="https://jd.spongepowered.org"><li><i class="fa-fw fa fa-graduation-cap"></i>JavaDocs</li></a>
+          <a class="sp-forums-home" href="https://docs.spongepowered.org"><li class="active"><i class="fa-fw fa fa-book"></i>Docs</li></a>
+          <a href="https://jd.spongepowered.org"><li><i class="fa-fw fa fa-graduation-cap"></i>Javadocs</li></a>
           <a href="https://forums.spongepowered.org/c/plugins/plugin-releases"><li><i class="fa-fw fa fa-plug"></i>Plugins</li></a>
-          <a href="https://forums.spongepowered.org/t/sponge-downloads/11448"><li><i class="fa-fw fa fa-download"></i>Get Sponge</li></a>
+          <a href="https://www.spongepowered.org/downloads"><li><i class="fa-fw fa fa-download"></i>Downloads</li></a>
+          <a href="https://www.spongepowered.org/chat"><li><i class="fa-fw fa fa-comment"></i>Chat</li></a>
         </ul>
       </div>
     </div>
@@ -177,24 +181,16 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Создание сервера</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="../getting-started/index.html">Начало работы</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../getting-started/jre.html">Установка Java</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../getting-started/migrating.html">Переход на Sponge</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/jre.html">Установка Java</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/migrating.html">Переход на Sponge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../getting-started/implementations/index.html">Выбор реализации</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../getting-started/implementations/spongeforge.html">Установка SpongeForge</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../getting-started/implementations/spongevanilla.html">Установка SpongeVanilla</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../getting-started/launch-script.html">Создание сценария (скрипта) запуска</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/launch-script.html">Создание сценария (скрипта) запуска</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../getting-started/port-forward.html">Перенаправление портов</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../getting-started/bungeecord.html">Sponge и BungeeCord</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../getting-started/bungeecord.html">Sponge и BungeeCord</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../getting-started/configuration/index.html">Настройка Sponge</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../getting-started/configuration/hocon.html">Основы HOCON</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../getting-started/configuration/json.html">Синтаксис JSON</a></li>
@@ -207,33 +203,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../management/index.html">Управление сервером</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../management/whitelist.html">Управление WhiteList</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../management/bans.html">Управление банами</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../management/permissions.html">Управление правами игроков</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../management/plugins.html">Установка плагинов</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../management/exploit-patches.html">Патчи уязвимостей</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../management/performance-tweaks.html">Настройки производительности</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../management/permissions.html">Управление правами игроков</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../management/plugins.html">Установка плагинов</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../management/exploit-patches.html">Патчи уязвимостей</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../management/performance-tweaks.html">Настройки производительности</a></li>
 </ul>
 </li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Станьте экспертом по серверам Sponge</a><ul class="current">
-<li class="toctree-l3"><a class="reference internal" href="commands.html">Команды</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html">Устранение неполадок</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Лог-файлы</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="debugging.html">Отладка</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="commands.html">Команды</a></li>
+<li class="toctree-l3"><a class="reference internal" href="troubleshooting.html">Устранение неполадок</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Лог-файлы</a></li>
+<li class="toctree-l3"><a class="reference internal" href="debugging.html">Отладка</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bugreport.html">Сообщение о проблемах</a></li>
 </ul>
 </li>
@@ -242,120 +222,62 @@
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../preparing/index.html">Подготовка к разработке</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../preparing/jdk.html">Установка JDK</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../preparing/ide.html">Установка IDE</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../preparing/text.html">Установка текстового редактора</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../preparing/git.html">Установка Git</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../../preparing/jdk.html">Установка JDK</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preparing/ide.html">Установка IDE</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preparing/text.html">Установка текстового редактора</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../preparing/git.html">Установка Git</a></li>
 </ul>
 </li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../plugin/index.html">Создание плагина</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/buildsystem.html">Система сборки</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/buildsystem.html">Система сборки</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/workspace/index.html">Подготовка рабочего пространства</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/workspace/idea.html">Настройка IntelliJ IDEA</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/workspace/eclipse.html">Настройка Eclipse</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/workspace/idea.html">Настройка IntelliJ IDEA</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/workspace/eclipse.html">Настройка Eclipse</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/project/index.html">Setting Up Your Project</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/project/gradle.html">Setting Up Gradle</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/project/maven.html">Setting Up Maven</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/project/gradle.html">Setting Up Gradle</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/project/maven.html">Setting Up Maven</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/plugin-identifier.html">Идентификаторы плагина</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/plugin-class.html">Основной класс плагина</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/lifecycle.html">Жизненный цикл плагина</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/injection.html">Внедрение зависимостей</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/practices.html">Практические рекомендации</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/plugin-class.html">Основной класс плагина</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/lifecycle.html">Жизненный цикл плагина</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/injection.html">Внедрение зависимостей</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/practices.html">Практические рекомендации</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/optional/index.html">Дополнительно</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/optional/basic.html">Optionals Explained</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/optional/basic.html">Optionals Explained</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/optional/usage.html">Примеры использования</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/optional/usage.html">Примеры использования</a><ul class="simple">
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/logging.html">Ведение логов (журналов) и отладка</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/logging.html">Ведение логов (журналов) и отладка</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/commands/index.html">Команды</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/creating.html">Создание команды</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/arguments.html">Парсинг аргументов</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/flags.html">Command Flags</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/creating.html">Создание команды</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/arguments.html">Парсинг аргументов</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/flags.html">Command Flags</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/childcommands.html">Дочерние Команды</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/service.html">Менеджер команд</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/commandcallable.html">Low-Level Command API</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/commandcallable.html">Low-Level Command API</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/event/index.html">События</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/listeners.html">Event Listeners</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/listeners.html">Event Listeners</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/causes.html">Event Causes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/filters.html">Event Filters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/custom.html">Custom Events</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/causes.html">Event Causes</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/filters.html">Event Filters</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/custom.html">Custom Events</a><ul class="simple">
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/assets.html">The Asset API</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/assets.html">The Asset API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/configuration/index.html">Configuring Plugins</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/configuration/loaders.html">Configuration Loaders</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/configuration/nodes.html">Configuration Nodes</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/configuration/serialization.html">Serializing Objects</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/configuration/loaders.html">Configuration Loaders</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/configuration/nodes.html">Configuration Nodes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/configuration/serialization.html">Serializing Objects</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/text/index.html">Текст</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/text.html">Создание текста</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/text.html">Создание текста</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/text/representations/index.html">Text Serializers</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../plugin/text/representations/formatting-code-legacy.html">Formatting Code &amp; Legacy Format</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../../plugin/text/representations/xml.html">TextXML Format</a></li>
@@ -363,207 +285,101 @@
 <li class="toctree-l4"><a class="reference internal" href="../../plugin/text/representations/configurate.html">Configuration Format</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/pagination.html">The Pagination Service</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/messagechannels.html">Каналы сообщений</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/pagination.html">The Pagination Service</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/text/messagechannels.html">Каналы сообщений</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/text/templates.html">TextTemplates</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/data/index.html">The Data API</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/data/keys.html">Использование ключей</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/data/datamanipulators.html">Манипуляторы данных</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/data/transactions.html">Транзакции</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/data/serialization.html">Serializing Data</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/data/keys.html">Использование ключей</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/data/datamanipulators.html">Манипуляторы данных</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/data/transactions.html">Транзакции</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/data/serialization.html">Serializing Data</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/blocks/index.html">Блоки</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/concepts.html">Концепты</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/accessing.html">Доступ к блокам</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/modifying.html">Изменение блоков</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/tileentities.html">Tile Entities</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/virtualblock.html">Виртуальные изменения блока</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/concepts.html">Концепты</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/accessing.html">Доступ к блокам</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/modifying.html">Изменение блоков</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/tileentities.html">Tile Entities</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/virtualblock.html">Виртуальные изменения блока</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/entities/index.html">Сущности</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/entities/spawning.html">Спавн Сущности</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/entities/modifying.html">Modifying an Entity</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/entities/modifying.html">Modifying an Entity</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/items/index.html">Items</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/items/usage.html">Basic Item Usage</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/items/usage.html">Basic Item Usage</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/items/creating.html">Создание ItemStack</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/items/creating.html">Создание ItemStack</a><ul class="simple">
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/effects.html">Эффекты</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/scheduler.html">Планировщик</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/services.html">Сервисы</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/database.html">Базы данных</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/permissions.html">Разрешения</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/bans.html">Блокировки</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/effects.html">Эффекты</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/scheduler.html">Планировщик</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/services.html">Сервисы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/database.html">Базы данных</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/permissions.html">Разрешения</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/bans.html">Блокировки</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/bookview.html">Книга просмотров</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/economy/index.html">Экономика</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/economy/basics.html">Основные понятия</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/economy/using.html">Using the Economy API</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/economy/practices.html">Economy API Best Practices</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/economy/implementing.html">Implementing the Economy API</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/economy/basics.html">Основные понятия</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/economy/using.html">Using the Economy API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/economy/practices.html">Economy API Best Practices</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/economy/implementing.html">Implementing the Economy API</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/wgen/index.html">Генерация мира</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/wgen/modifiers.html">WorldGeneratorModifiers</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/wgen/modifiers.html">WorldGeneratorModifiers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/wgen/customwgen.html">Модифицирование генерации мира</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/wgen/customwgen.html">Модифицирование генерации мира</a><ul class="simple">
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/manager.html">Менеджер плагинов</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/game-profile-manager.html">Game Profile Manager</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/offline-userplayer-data.html">Offline Player Data</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/debugging.html">Plugin Debugging</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/tab-lists.html">Tab Lists</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/plugin-meta.html">Метаданные плагина</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/ray-tracing.html">Ray Tracing</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/tutorials.html">Туториалы</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/manager.html">Менеджер плагинов</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/game-profile-manager.html">Game Profile Manager</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/offline-userplayer-data.html">Offline Player Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/debugging.html">Plugin Debugging</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/tab-lists.html">Tab Lists</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/plugin-meta.html">Метаданные плагина</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/ray-tracing.html">Ray Tracing</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/tutorials.html">Туториалы</a></li>
 </ul>
 </li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../contributing/index.html">Участие в разработке Sponge</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">Указания по содействию</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../contributing/howtogit.html">How to Git(Hub)</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/guidelines.html">Указания по содействию</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/howtogit.html">How to Git(Hub)</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../contributing/implementation/index.html">Разработка Sponge</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/codestyle.html">Стиль кода</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/git-implementation.html">Рабочий поток данных Git-a для самого API и выполнения API</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/pr.html">Submitting a Pull-Request</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/codestyle.html">Стиль кода</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/git-implementation.html">Рабочий поток данных Git-a для самого API и выполнения API</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/pr.html">Submitting a Pull-Request</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/debugging.html">Отладка Sponge В IDE</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/mixins.html">Mixins</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/datamanipulator.html">Implementing DataManipulators</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/implementation/datamanipulator.html">Implementing DataManipulators</a></li>
 </ul>
 </li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../contributing/spongedocs.html">Написание англоязычной документации SpongeDocs</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../contributing/porting.html">Перенос Sponge на другие платформы</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../contributing/versioning.html">Versioning System and Repository Branch Layout</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/spongedocs.html">Написание англоязычной документации SpongeDocs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/porting.html">Перенос Sponge на другие платформы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/versioning.html">Versioning System and Repository Branch Layout</a></li>
 </ul>
 </li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../about/index.html">О проекте Sponge</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">Введение</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/faq.html">Часто задаваемые вопросы</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/structure.html">Структура Sponge</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">Введение</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/faq.html">Часто задаваемые вопросы</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/structure.html">Структура Sponge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/future.html">Планы на будущее</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/license.html">Лицензия</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/posting.html">Советы по отправке постов на форуме</a><ul class="simple">
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/posting.html">Советы по отправке постов на форуме</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/rules.html">Правила форума &amp; IRC</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/staff.html">Коллектив</a><ul class="simple">
+<li class="toctree-l2"><a class="reference internal" href="../../about/staff.html">Коллектив</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Словарь Sponge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/assets.html">Арты</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/history.html">История Sponge</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/glossary.html">Словарь Sponge</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/assets.html">Арты</a><ul class="simple">
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/history.html">История Sponge</a><ul class="simple">
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../../downloads.html">Загрузки</a><ul class="simple">
-</ul>
-</li>
-</ul>
-<ul class="simple">
+<li class="toctree-l1"><a class="reference internal" href="../../downloads.html">Загрузки</a></li>
 </ul>
 
       </div>
@@ -606,14 +422,14 @@
 <h3><a class="toc-backref" href="#id3">fml-junk-earlystartup.log</a><a class="headerlink" href="#fml-junk-earlystartup-log" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Примечание</p>
-<p class="last">Здесь указаны несколько строк для примера. Чтобы просмотреть полный образец лога перейдите по этой ссылке: <a class="reference download internal" href="../../_downloads/forge-1521-fml-junk-earlystartup.txt"><code class="xref download docutils literal"><span class="pre">SpongeForge</span> <span class="pre">1521</span> <span class="pre">fml-junk-earlystartup.log</span> <span class="pre">file</span></code></a></p>
+<p class="last">Здесь указаны несколько строк для примера. Чтобы просмотреть полный образец лога перейдите по этой ссылке: <a class="reference download internal" href="../../_downloads/forge-1521-fml-junk-earlystartup.txt" download=""><code class="xref download docutils literal"><span class="pre">SpongeForge</span> <span class="pre">1521</span> <span class="pre">fml-junk-earlystartup.log</span> <span class="pre">file</span></code></a></p>
 </div>
 </div>
 <div class="section" id="fml-server-latest-log">
 <h3><a class="toc-backref" href="#id4">fml-server-latest.log</a><a class="headerlink" href="#fml-server-latest-log" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Примечание</p>
-<p class="last">Здесь указаны несколько строк для примера. Чтобы просмотреть полный образец лога перейдите по этой ссылке: <a class="reference download internal" href="../../_downloads/forge-1521-fml-server-latest.txt"><code class="xref download docutils literal"><span class="pre">SpongeForge</span> <span class="pre">1521</span> <span class="pre">fml-server-latest.log</span></code></a></p>
+<p class="last">Здесь указаны несколько строк для примера. Чтобы просмотреть полный образец лога перейдите по этой ссылке: <a class="reference download internal" href="../../_downloads/forge-1521-fml-server-latest.txt" download=""><code class="xref download docutils literal"><span class="pre">SpongeForge</span> <span class="pre">1521</span> <span class="pre">fml-server-latest.log</span></code></a></p>
 </div>
 <div class="highlight-none"><div class="highlight"><pre><span></span>[main/INFO] [FML/]: Forge Mod Loader version 11.14.3.1521 for Minecraft 1.8 loading
 [main/INFO] [FML/]: Java is Java HotSpot(TM) 64-Bit Server VM, version 1.8.0_51, running on Windows 8.1:amd64:6.3, installed at ##PATH_TO_JAVA_HERE##
@@ -638,13 +454,13 @@
 [main/INFO] [FML/]: Loading tweaker org.spongepowered.asm.launch.MixinTweaker from spongeforge-1.8-1521-2.1-DEV-750.jar
 </pre></div>
 </div>
-<p>Это означает, что SpongeForge 750 был найден и загружен при помощи Forge. Для дальнейшей помощи в чтении схемы наименования SpongeForge ознакомьтесь со статьёй <a class="reference internal" href="../getting-started/implementations/spongeforge.html"><em>Установка SpongeForge</em></a>.</p>
+<p>Это означает, что SpongeForge 750 был найден и загружен при помощи Forge. Для дальнейшей помощи в чтении схемы наименования SpongeForge ознакомьтесь со статьёй <a class="reference internal" href="../getting-started/implementations/spongeforge.html"><span class="doc">Установка SpongeForge</span></a>.</p>
 </div>
 <div class="section" id="latest-log">
 <h3><a class="toc-backref" href="#id5">latest.log</a><a class="headerlink" href="#latest-log" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Примечание</p>
-<p class="last">Здесь указаны несколько строк для примера. Чтобы просмотреть полный образец лога перейдите по этой ссылке: <a class="reference download internal" href="../../_downloads/forge-1521-latest.txt"><code class="xref download docutils literal"><span class="pre">SpongeForge</span> <span class="pre">1521</span> <span class="pre">latest.log</span></code></a></p>
+<p class="last">Здесь указаны несколько строк для примера. Чтобы просмотреть полный образец лога перейдите по этой ссылке: <a class="reference download internal" href="../../_downloads/forge-1521-latest.txt" download=""><code class="xref download docutils literal"><span class="pre">SpongeForge</span> <span class="pre">1521</span> <span class="pre">latest.log</span></code></a></p>
 </div>
 <p>Этот вывод вы увидите в графическом интерфейсе сервера Minecraft.</p>
 </div>
@@ -655,14 +471,14 @@
 <h3><a class="toc-backref" href="#id7">latest.log</a><a class="headerlink" href="#id1" title="Ссылка на этот заголовок">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">Примечание</p>
-<p class="last">Здесь указаны несколько строк для примера. Чтобы просмотреть полный образец лога перейдите по этой ссылке: <a class="reference download internal" href="../../_downloads/vanilla-47-latest.txt"><code class="xref download docutils literal"><span class="pre">SpongeVanilla</span> <span class="pre">47</span> <span class="pre">latest.log</span></code></a></p>
+<p class="last">Здесь указаны несколько строк для примера. Чтобы просмотреть полный образец лога перейдите по этой ссылке: <a class="reference download internal" href="../../_downloads/vanilla-47-latest.txt" download=""><code class="xref download docutils literal"><span class="pre">SpongeVanilla</span> <span class="pre">47</span> <span class="pre">latest.log</span></code></a></p>
 </div>
 <p>Этот вывод вы увидите в графическом интерфейсе сервера Minecraft.</p>
 </div>
 </div>
 <div class="section" id="reading-logfiles">
 <h2><a class="toc-backref" href="#id8">Чтение лог-файлов</a><a class="headerlink" href="#reading-logfiles" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Если вы не знаете как читать общие краш-логи, вы найдёте помощь тут, но для начала нам нужен будет краш-лог. Для этого короткого введения мы будем использовать образец краш-лога из статьи <a class="reference internal" href="debugging.html"><em>Отладка</em></a>: <a class="reference download internal" href="../../_downloads/crashlog-sponge575-plugin750.txt"><code class="xref download docutils literal"><span class="pre">Пример</span> <span class="pre">краш-лога</span> <span class="pre">устаревшей</span> <span class="pre">версии</span> <span class="pre">SpongeForge</span></code></a>.</p>
+<p>Если вы не знаете как читать общие краш-логи, вы найдёте помощь тут, но для начала нам нужен будет краш-лог. Для этого короткого введения мы будем использовать образец краш-лога из статьи <a class="reference internal" href="debugging.html"><span class="doc">Отладка</span></a>: <a class="reference download internal" href="../../_downloads/crashlog-sponge575-plugin750.txt" download=""><code class="xref download docutils literal"><span class="pre">Пример</span> <span class="pre">краш-лога</span> <span class="pre">устаревшей</span> <span class="pre">версии</span> <span class="pre">SpongeForge</span></code></a>.</p>
 <div class="highlight-none"><div class="highlight"><pre><span></span>WARNING: coremods are present:
 SpongeCoremod (sponge-1.8-1499-2.1DEV-575.jar)
 Contact their authors BEFORE contacting forge
@@ -672,7 +488,7 @@ Contact their authors BEFORE contacting forge
 <div class="highlight-none"><div class="highlight"><pre><span></span>java.lang.NoClassDefFoundError: org/spongepowered/api/event/game/state/GameStartingServerEvent
 </pre></div>
 </div>
-<p>Несколько строк ниже это фактическая ошибка. Строки такого вида переводить не надо. В нашем случае это <code class="docutils literal"><span class="pre">NoClassDefFoundError</span></code> Если вы не знаете что это значит — загляните на страницу <a class="reference internal" href="debugging.html"><em>Отладка</em></a>. Если это распространённая ошибка, то она будет отражена на этой странице. Если нет, то вы всегда можете задать об этом вопрос на нашем форуме! Только убедитесь, что вы предоставляете полный лог ошибки.</p>
+<p>Несколько строк ниже это фактическая ошибка. Строки такого вида переводить не надо. В нашем случае это <code class="docutils literal"><span class="pre">NoClassDefFoundError</span></code> Если вы не знаете что это значит — загляните на страницу <a class="reference internal" href="debugging.html"><span class="doc">Отладка</span></a>. Если это распространённая ошибка, то она будет отражена на этой странице. Если нет, то вы всегда можете задать об этом вопрос на нашем форуме! Только убедитесь, что вы предоставляете полный лог ошибки.</p>
 <p>К счастью, детали вашей системы будут приведены в нижней части лога ошибки:</p>
 <div class="highlight-none"><div class="highlight"><pre><span></span>Minecraft Version: 1.8
 Operating System: Windows 8.1 (amd64) version 6.3
@@ -720,11 +536,11 @@ SpongeCoremod (sponge-1.8-1499-2.1DEV-575.jar)
 <li><p class="first">Версия SpongeForge не совпадает с версией Forge: требуется 1499, установлена 1521</p>
 </li>
 </ul>
-<p>Если вы хотите узнать как решить это — загляните в наш список на странице <a class="reference internal" href="debugging.html"><em>Отладка</em></a>.</p>
+<p>Если вы хотите узнать как решить это — загляните в наш список на странице <a class="reference internal" href="debugging.html"><span class="doc">Отладка</span></a>.</p>
 </div>
 <div class="section" id="common-errors">
 <h2><a class="toc-backref" href="#id9">Распространенные ошибки</a><a class="headerlink" href="#common-errors" title="Ссылка на этот заголовок">¶</a></h2>
-<p>Направляйтесь на <a class="reference internal" href="debugging.html"><em>Отладка</em></a> чтобы узнать о самых распространённых ошибках.</p>
+<p>Направляйтесь на <a class="reference internal" href="debugging.html"><span class="doc">Отладка</span></a> чтобы узнать о самых распространённых ошибках.</p>
 </div>
 </div>
 
@@ -736,7 +552,7 @@ SpongeCoremod (sponge-1.8-1499-2.1DEV-575.jar)
         </div>
         <div class="footer" role="contentinfo">
               &copy; Copyright 2014-2016, Sponge Contributors.
-            Создано с помощью <a href="http://sphinx-doc.org/">Sphinx</a> 1.3.3.
+            Создано с помощью <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
         </div>
     </div>
   </body>
