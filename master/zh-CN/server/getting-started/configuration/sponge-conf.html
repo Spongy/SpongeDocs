@@ -508,7 +508,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/git-implementation.html">Sponge API 及其实现的 Git 工作流程</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/pr.html">提交一个 Pull Request</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/pr.html">提交拉取请求</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/debugging.html">在 IDE 中调试</a></li>
@@ -580,8 +580,8 @@
 <h1>global.conf 文件<a class="headerlink" href="#global-conf" title="永久链接至标题">¶</a></h1>
 <div class="section" id="global-configuration">
 <h2>全局配置<a class="headerlink" href="#global-configuration" title="永久链接至标题">¶</a></h2>
-<p>Global.conf 包含Sponge的全局配置设置。会自动在 Sponge目录下/Config目录下 创建此文件。许多默认的配置选项可以通过使用配置文件中的配置来替换.</p>
-<p>下面是一个完整的，含有所有可能存在于服务器上的节点的 global.conf 文件。请注意，某些部分不会在初次运行时立即生成，但会在服务器处理到它们时添加到文件中。这个配置文件由 SpongeForge build 1399 SpongeAPI 4.1 版本生成︰</p>
+<p>Sponge 的全局配置储存在 global.conf 文件中。游戏会自动在 config/sponge 目录下创建该文件。许多配置同时可以通过特定世界或维度中对应的配置文件中的配置来覆盖。</p>
+<p>下面是一个完整的，含有所有可能存在于服务器上的节点的 global.conf 文件。请注意，某些部分不会在初次运行时立即生成，但会在服务器处理到它们时添加到文件中。该配置文件由 SpongeForge build 1399 及 SpongeAPI 4.1 版本生成︰</p>
 <div class="highlight-none"><div class="highlight"><pre><span></span># 1.0
 #
 # # If you need help with the configuration or have any questions related to Sponge,
@@ -897,7 +897,7 @@ sponge {
 </div>
 </div>
 <div class="section" id="global-properties-of-sponge">
-<h2>海绵的全局属性<a class="headerlink" href="#global-properties-of-sponge" title="永久链接至标题">¶</a></h2>
+<h2>Sponge 的全局属性<a class="headerlink" href="#global-properties-of-sponge" title="永久链接至标题">¶</a></h2>
 <table border="1" class="docutils">
 <colgroup>
 <col width="35%" />
@@ -906,11 +906,11 @@ sponge {
 <col width="49%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head"><p class="first last">属性</p>
+<tr class="row-odd"><th class="head"><p class="first last">属性名</p>
 </th>
 <th class="head"><p class="first last">类型</p>
 </th>
-<th class="head"><p class="first last">默认</p>
+<th class="head"><p class="first last">默认值</p>
 </th>
 <th class="head"><p class="first last">描述</p>
 </th>
@@ -923,13 +923,11 @@ sponge {
 <td>&nbsp;</td>
 <td>&nbsp;</td>
 </tr>
-<tr class="row-odd"><td><p class="first last">方块黑名单</p>
-</td>
+<tr class="row-odd"><td>block-blacklist</td>
 <td><p class="first last">字符串</p>
 </td>
-<td><p class="first last">空</p>
-</td>
-<td><p class="first last">添加您希望禁止玩家放置的方块id。</p>
+<td>null</td>
+<td><p class="first last">添加你希望禁止玩家放置的方块 ID。</p>
 </td>
 </tr>
 <tr class="row-even"><td>enabled</td>
@@ -980,8 +978,7 @@ when there are too many phases being entered.</td>
 <tr class="row-odd"><td>aliases</td>
 <td><p class="first last">字符串</p>
 </td>
-<td><p class="first last">空</p>
-</td>
+<td>null</td>
 <td><p class="first">Alias will resolve conflicts when multiple
 plugins request a specific command. Correct
 syntax is
@@ -1560,8 +1557,7 @@ permission.</td>
 <tr class="row-even"><td>aliases</td>
 <td><p class="first last">字符串</p>
 </td>
-<td><p class="first last">空</p>
-</td>
+<td>null</td>
 <td><p class="first last">SQL 连接的别名。格式是这样的 <code class="docutils literal"><span class="pre">jdbc:protocol://[username[:password]&#64;]host/database</span></code></p>
 </td>
 </tr>

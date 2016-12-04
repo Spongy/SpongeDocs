@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Performance Tweaks &mdash; documentation Sponge 5.0.0</title>
+     <title>Réglages de performance &mdash; documentation Sponge 5.0.0</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -216,7 +216,7 @@
 <li class="toctree-l3"><a class="reference internal" href="exploit-patches.html">Correctifs d&#8217;exploitation de bugs</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3 current"><a class="current reference internal" href="">Performance Tweaks</a><ul class="simple">
+<li class="toctree-l3 current"><a class="current reference internal" href="">Réglages de performance</a><ul class="simple">
 </ul>
 </li>
 </ul>
@@ -575,19 +575,15 @@
                 <div class="body" role="main">
                   
   <div class="section" id="performance-tweaks">
-<h1>Performance Tweaks<a class="headerlink" href="#performance-tweaks" title="Lien permanent vers ce titre">¶</a></h1>
-<p>Sponge provides several performance enhancing and tweaking options to help you run a lag-free server, even
-under heavy load.</p>
+<h1>Réglages de performance<a class="headerlink" href="#performance-tweaks" title="Lien permanent vers ce titre">¶</a></h1>
+<p>Sponge fournit plusieurs options pour accélérer votre performance et vous aider à faire tourner un serveur sans décalage, même sous forte pression.</p>
 <div class="admonition note">
 <p class="first admonition-title">Note</p>
-<p class="last">While we try to improve the performance of every server, the performance gains depend on your setup. Please run some
-tests to ensure you configured your Sponge server to get the most out of it!</p>
+<p class="last">Bien que nous essayons d&#8217;améliorer la performance de chaque serveur, les gains de performance dépendent sur votre installation. Veuillez S.V.P exécuter quelques évaluations pour vous assurez que vous avez bien configuré votre serveur Sponge pour en tirer le plus possible!</p>
 </div>
 <div class="section" id="entity-activation-range">
-<h2>Entity Activation Range<a class="headerlink" href="#entity-activation-range" title="Lien permanent vers ce titre">¶</a></h2>
-<p>This setting will alter the loading behaviour of entities around players. Lowering the value will only load close
-entities, while raising it will also load entities that are far away from the player. Lower this to improve your
-servers performance, especially with high entity and player counts.</p>
+<h2>Zone d&#8217;activation pour l&#8217;entité<a class="headerlink" href="#entity-activation-range" title="Lien permanent vers ce titre">¶</a></h2>
+<p>Ce paramètre va altérer le comportement de chargement autour des joueurs. Diminuer la valeur va seulement charger les entités les plus près, et augmenter ceci va également charger les entités qui sont loin du joueur. Diminuez ceci pour améliorer la performance de votre serveur, surtout avec un nombre élevé d&#8217;entités et de joueurs.</p>
 <div class="admonition tip">
 <p class="first admonition-title">Astuce</p>
 <p class="last">It&#8217;s possible to specify the activation range <em>per mob</em>. You can set <code class="docutils literal"><span class="pre">auto-populate</span></code> to <code class="docutils literal"><span class="pre">true</span></code> and Sponge
@@ -675,7 +671,7 @@ amount of memory for caching purposes. If you run out of memory, try to disable 
 </div>
 </div>
 <div class="section" id="auto-saving-interval-adjustment">
-<h2>Auto-Saving Interval Adjustment<a class="headerlink" href="#auto-saving-interval-adjustment" title="Lien permanent vers ce titre">¶</a></h2>
+<h2>Intervalle d’ajustement pour l’enregistrement automatique<a class="headerlink" href="#auto-saving-interval-adjustment" title="Lien permanent vers ce titre">¶</a></h2>
 <p>Vanilla Minecraft defaults to saving all chunks every 900 ticks (45 seconds). If you wish to raise or
 lower this interval, then change it in the servers <code class="docutils literal"><span class="pre">global.conf</span></code> file:</p>
 <div class="highlight-none"><div class="highlight"><pre><span></span>world {

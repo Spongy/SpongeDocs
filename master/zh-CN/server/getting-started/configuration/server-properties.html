@@ -508,7 +508,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/git-implementation.html">Sponge API 及其实现的 Git 工作流程</a><ul class="simple">
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/pr.html">提交一个 Pull Request</a><ul class="simple">
+<li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/pr.html">提交拉取请求</a><ul class="simple">
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../../../contributing/implementation/debugging.html">在 IDE 中调试</a></li>
@@ -818,12 +818,7 @@
 <td><p class="first last">整数 (1-29999984)</p>
 </td>
 <td>29999984</td>
-<td><p class="first">This sets the maximum possible size in blocks, expressed
-as a radius, that the world border can obtain. Setting the
-world border bigger causes the commands to complete
-successfully, but the actual border will not move past
-this block limit. Setting the max-world-size higher than
-the default doesn&#8217;t appear to do anything.</p>
+<td><p class="first">这设置了世界边界包含的最大方块数量，也就是设置了世界半径。虽然把该数字调大在命令输出结果上看不出什么异常，但是游戏潜在的世界边界并不会发生变化，也就是说，设置 max-world-size 大于默认值将什么都不会发生。</p>
 <p>示例</p>
 <blockquote class="last">
 <div><ul class="simple">
@@ -855,14 +850,10 @@ the default doesn&#8217;t appear to do anything.</p>
 <td><p class="first last">整数</p>
 </td>
 <td>256</td>
-<td><p class="first">By default it allows packets that are n-1 bytes big to go
-normally, but a packet that n bytes or more will be
-compressed down. So, lower number means more compression
-but compressing small amounts of bytes might actually end
-up with a larger result than what went in.</p>
+<td><p class="first">默认情况下它允许大小不超过 n-1 字节的数据包正常传输，而不小于 n 字节的数据包将会被压缩。因此把该数字调小会导致游戏进行更多的数据包压缩，不过对于小的数据包来说，压缩这一操作并不会使数据包变小多少，甚至可能还会变大。</p>
 <blockquote>
-<div><p><strong>-1</strong> - disable compression entirely</p>
-<p><strong>0</strong> - compress everything</p>
+<div><p><strong>-1</strong> - 禁用压缩</p>
+<p><strong>0</strong> - 全部压缩</p>
 </div></blockquote>
 <p class="last"><strong>注意：</strong> <em>以太网规范</em> 要求小于64字节的数据包填充为64字节。 因此，将这个值设置为小于64可能带来坏处。 同时也不建议超过 <a href="#id1"><span class="problematic" id="id2">*</span></a>MTU（最大传输单位） * ，通常为1500字节</p>
 </td>

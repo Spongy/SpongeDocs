@@ -575,14 +575,10 @@
                   
   <div class="section" id="build-systems">
 <h1>ビルドシステム<a class="headerlink" href="#build-systems" title="このヘッドラインへのパーマリンク">¶</a></h1>
-<p>Build systems such as <a class="reference external" href="https://gradle.org/">Gradle</a> or <a class="reference external" href="https://maven.apache.org/">Maven</a> can manage the build process of your projects. As an independent tool from your
-IDE, you can use them to manage your dependency on SpongeAPI or other plugins and give other people an easy way to
-build your plugin from the source.</p>
+<p><a class="reference external" href="https://gradle.org/">Gradle</a> や <a class="reference external" href="https://maven.apache.org/">Maven</a> のようなビルドシステムはプロジェクトのビルド処理を管理するためのツールです。統合開発環境(IDE) から独立しており、SpongeAPIや他のプラグインとの依存関係管理や、あなたが開発したプラグインのビルド処理の簡略化を配布用に組み込むといった機能を提供します。</p>
 <div class="admonition note">
 <p class="first admonition-title">注釈</p>
-<p class="last">SpongeAPI does <strong>not</strong> require using a build system for creating plugins, however we strongly recommend using one.
-Except the short explanation at <a class="reference internal" href="#creating-a-plugin-without-a-build-system">Creating a plugin without a build system</a>, the following parts will assume you&#8217;re
-using a build system, which can manage the dependencies for you.</p>
+<p class="last">SpongeAPIでプラグインを作成する場合、ビルドシステムは必要とされ <strong>ません</strong> 。が、ビルドシステムを併用することを推奨します。 <a class="reference internal" href="#creating-a-plugin-without-a-build-system">ビルドシステムなしでプラグインを作成</a> の項を除く、これらの文献はすべて依存関係管理を可能とするビルドシステムの併用を前提としています。</p>
 </div>
 <p>Generally, you can use any build system which supports <em>Maven dependencies</em>, which is a standard supported by the
 majority of build systems for Java projects. The following sections will focus on <a class="reference external" href="https://gradle.org/">Gradle</a> and <a class="reference external" href="https://maven.apache.org/">Maven</a>, which are the two
