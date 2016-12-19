@@ -184,11 +184,11 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Java installeren</a></li>
 <li class="toctree-l3"><a class="reference internal" href="migrating.html">Overschakelen naar Sponge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="implementations/index.html">Het kiezen van een implementatie</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="implementations/spongeforge.html">Installing SpongeForge</a></li>
+<li class="toctree-l4"><a class="reference internal" href="implementations/spongeforge.html">SpongeForge installeren</a></li>
 <li class="toctree-l4"><a class="reference internal" href="implementations/spongevanilla.html">SpongeVanilla installeren</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="launch-script.html">Een start script maken</a></li>
+<li class="toctree-l3"><a class="reference internal" href="launch-script.html">Een opstart script maken</a></li>
 <li class="toctree-l3"><a class="reference internal" href="port-forward.html">Poort Doorsturen (Port Forwarding)</a></li>
 <li class="toctree-l3"><a class="reference internal" href="bungeecord.html">Using Sponge with BungeeCord</a></li>
 <li class="toctree-l3"><a class="reference internal" href="configuration/index.html">Sponge configureren</a><ul>
@@ -200,7 +200,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../management/index.html">Server beheren</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../management/index.html">Serverbeheer</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../management/whitelist.html">Het beheren van de Whitelist</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../management/bans.html">Het beheren van Bans</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../management/permissions.html">Toegang beheren</a></li>
@@ -392,31 +392,22 @@
                   
   <div class="section" id="installing-java">
 <h1>Java installeren<a class="headerlink" href="#installing-java" title="Permalink naar deze titel">¶</a></h1>
-<p>Java is needed to run Sponge and Minecraft. You most likely already have Java, but you may need to update it.</p>
-<p>Sponge requires Java 8 (specifically <code class="docutils literal"><span class="pre">1.8.0_40</span></code> or above) at this time. Older Java versions are deprecated and will not
-work with Sponge. The difference between major versions of Java (6, 7, 8) is significant, and older versions cannot run
-Sponge properly.</p>
+<p>Java is vereist voor het uitvoeren van Sponge en Minecraft. U heeft Java waarschijnlijk al geïnstalleerd, maar mogelijk moet u het nog bijwerken.</p>
+<p>Sponge vereist Java 8 (specifiek <code class="docutils literal"><span class="pre">1.8.0_40</span></code> of hoger) op dit moment. Oudere Java-versies zijn verouderd en werken niet meer met Sponge. Het verschil tussen de grote versies van Java (6, 7 en 8) zijn significant, waardoor oudere versies Sponge niet goed kunnen uitvoeren.</p>
 <div class="section" id="id1">
 <h2>Java installeren<a class="headerlink" href="#id1" title="Permalink naar deze titel">¶</a></h2>
-<p>If you have Windows or Mac OS X for your computer, you can <a class="reference external" href="https://java.com/en/download/manual.jsp">download Java from the official website</a>.</p>
-<p>Linux users can install OpenJDK via their package manager. OpenJDK is the open source version of the Oracle version of
-Java, and it should work just as well, if not better. However, it&#8217;s also possible to <a class="reference external" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download the Oracle version for
-Linux</a>, but be aware that many Java-dependent
-Linux packages will still install OpenJDK anyway.</p>
+<p>Als u Windows of macOS heeft op uw computer, kunt u <a class="reference external" href="https://java.com/en/download/manual.jsp">Java downloaden van de officiële website</a>.</p>
+<p>Linux gebruikers kunnen OpenJDK installeren via hun pakketmanager. OpenJDK is de open source versie van de Oracle versie van Java en het zou net zo goed moeten werken, misschien wel beter. Het is echter ook mogelijk om <a class="reference external" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">de Linux versie van Java te downloaden</a>, maar wees ervan bewust dat veel Java-afhankelijke Linux pakketten nog steeds OpenJDK zullen installeren.</p>
 <div class="section" id="bit-vs-64-bit">
-<h3>32-bit vs. 64-bit<a class="headerlink" href="#bit-vs-64-bit" title="Permalink naar deze titel">¶</a></h3>
-<p>If your computer supports it, you should use 64-bit versions of Java whenever possible. The Java installers from the
-linked website should detect whether your computer is ready for 64-bit.</p>
-<p>Because the 64-bit version of Java runs considerably better, and also lets Java use more than ~3 GB of your RAM (memory),
-we always recommend it over 32-bit.</p>
-<p>Most modern computers support 64-bit.</p>
+<h3>32-bits versus 64-bits<a class="headerlink" href="#bit-vs-64-bit" title="Permalink naar deze titel">¶</a></h3>
+<p>Als uw computer dit ondersteunt, moet u de 64-bits versies van Java gebruiken waar het mogelijk is. De Java installateurs van de gelinkte website zouden moeten detecteren of uw computer geschikt is voor 64-bits.</p>
+<p>Omdat de 64-bits versie van Java aanzienlijk beter werkt en ook meer dan ~3 GB van uw RAM (geheugen) door Java laat gebruiken, raden wij 64-bits aan in plaats van 32-bits.</p>
+<p>De meeste moderne computers ondersteunen 64-bits.</p>
 </div>
 <div class="section" id="jdk-vs-jre">
-<h3>JDK vs. JRE<a class="headerlink" href="#jdk-vs-jre" title="Permalink naar deze titel">¶</a></h3>
-<p>The JRE (Java Runtime Environment) is used to run Java applications. The download page linked above provides the JRE.</p>
-<p>The JDK (Java Development Kit) is used to create Java applications, and you do not need it unless you plan to make
-Sponge plugins or work on Sponge. However, in some cases, you may need the JDK to diagnose a running Java application
-such as Sponge. You can download the JDK <a class="reference external" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">from a different site</a>.</p>
+<h3>JDK versus JRE<a class="headerlink" href="#jdk-vs-jre" title="Permalink naar deze titel">¶</a></h3>
+<p>De JRE (Java Runtime Environment) wordt gebruikt voor het uitvoeren van Java applicaties. De download pagina hierboven biedt u de JRE aan.</p>
+<p>De JDK (Java Development Kit) wordt gebruikt om Java applicaties te maken en je hebt het niet nodig als je niet van plan bent om Sponge plugins te maken of te werken aan Sponge. Echter, in sommige gevallen, heb je de JDK nodig om een actieve Java applicatie te diagnosticeren, zoals Sponge. Je kan de JDK downloaden van een <a class="reference external" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">andere website</a>.</p>
 </div>
 </div>
 </div>
@@ -429,7 +420,7 @@ such as Sponge. You can download the JDK <a class="reference external" href="htt
         </div>
         <div class="footer" role="contentinfo">
               &copy; Copyright 2014-2016, Sponge Contributors.
-            Aangemaakt met <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+            Aangemaakt met <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.
         </div>
     </div>
   </body>

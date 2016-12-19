@@ -423,10 +423,10 @@ Use <code class="docutils literal"><span class="pre">myPlugin.commands</span></c
 <h3>Structure-Example<a class="headerlink" href="#structure-example" title="Permalink til denne overskrift">¶</a></h3>
 <p>The following example show one possible way of structuring permissions, but following this structure is not required at
 all.</p>
-<ul>
+<ul class="simple">
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">myPlugin</span></code></dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>Grants <strong>full</strong> access to all plugin&#8217;s permissions.</li>
 </ul>
 </dd>
@@ -434,7 +434,7 @@ all.</p>
 </li>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">myPlugin.commands</span></code></dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>Grants <strong>full</strong> access to all plugin&#8217;s commands.</li>
 </ul>
 </dd>
@@ -442,7 +442,7 @@ all.</p>
 </li>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">myPlugin.commands.teleport.execute</span></code></dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>Only grants the user the permission to execute the command. Without this permission he is not able to execute the
 command even if he has other <cite>teleport</cite> permissions.
 (With this permission alone the user would only be able to teleport himself to others in his current world.)</li>
@@ -452,7 +452,7 @@ command even if he has other <cite>teleport</cite> permissions.
 </li>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">myPlugin.commands.teleport.all</span></code></dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>Only grants the user the permission to teleport all players at once.</li>
 </ul>
 </dd>
@@ -460,7 +460,7 @@ command even if he has other <cite>teleport</cite> permissions.
 </li>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">myPlugin.commands.teleport.worlds</span></code></dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>Only grants the user the permission to teleport to all worlds.</li>
 </ul>
 </dd>
@@ -468,7 +468,7 @@ command even if he has other <cite>teleport</cite> permissions.
 </li>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">myPlugin.commands.teleport.worlds.mynetherworld</span></code></dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>Only grants the user the permission to teleport to <em>mynetherworld</em>.</li>
 </ul>
 </dd>
@@ -592,10 +592,10 @@ then it is automatically denied.</p>
 <div class="admonition note">
 <p class="first admonition-title">Bemærk</p>
 <p>Order of precedence in descending order:</p>
-<ul class="last">
+<ul class="last simple">
 <li><dl class="first docutils">
 <dt>Subject itself</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>Transient</li>
 <li>Persistent</li>
 </ul>
@@ -604,7 +604,7 @@ then it is automatically denied.</p>
 </li>
 <li><dl class="first docutils">
 <dt>Parent Subjects</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>Transient</li>
 <li>Persistent</li>
 </ul>
@@ -613,7 +613,7 @@ then it is automatically denied.</p>
 </li>
 <li><dl class="first docutils">
 <dt>SubjectCollection Defaults</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>Persistent</li>
 <li>Transient</li>
 </ul>
@@ -622,15 +622,14 @@ then it is automatically denied.</p>
 </li>
 <li><dl class="first docutils">
 <dt>PermissionService Defaults</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>Persistent</li>
 <li>Transient</li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p class="first">Deny permission</p>
-</li>
+<li>Deny permission</li>
 </ul>
 </div>
 </div>
@@ -639,10 +638,10 @@ then it is automatically denied.</p>
 <h2>SubjectCollections<a class="headerlink" href="#subjectcollections" title="Permalink til denne overskrift">¶</a></h2>
 <p>A container for subjects that can be used to obtain a Subject by name.
 These are the default Subject Collections:</p>
-<ul>
+<ul class="simple">
 <li><dl class="first docutils">
 <dt>User</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>Contains all on-line <code class="docutils literal"><span class="pre">Player</span></code>s and all off-line <code class="docutils literal"><span class="pre">User</span></code>s (at least those with none-default settings).</li>
 </ul>
 </dd>
@@ -650,7 +649,7 @@ These are the default Subject Collections:</p>
 </li>
 <li><dl class="first docutils">
 <dt>Group</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>Contains all group <code class="docutils literal"><span class="pre">Subject</span></code>. Groups are a simple way of structuring a <code class="docutils literal"><span class="pre">Subject</span></code>&#8216;s inheritance tree using
 named <code class="docutils literal"><span class="pre">Subject</span></code>s. Groups should be used if a specific subset of <code class="docutils literal"><span class="pre">Subject</span></code>s have additional permission
 settings such as a team, faction or role.</li>
@@ -660,7 +659,7 @@ settings such as a team, faction or role.</li>
 </li>
 <li><dl class="first docutils">
 <dt>System</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>Contains other <code class="docutils literal"><span class="pre">Subject</span></code>s used by the server such as the the console and possible remote consoles.</li>
 </ul>
 </dd>
@@ -668,7 +667,7 @@ settings such as a team, faction or role.</li>
 </li>
 <li><dl class="first docutils">
 <dt>Command Block</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>Contains all <code class="docutils literal"><span class="pre">Subject</span></code>s for command blocks. These are useful if you would like to run a <code class="docutils literal"><span class="pre">CommandBlock</span></code> only
 with the permissions of the creator.</li>
 </ul>
@@ -677,7 +676,7 @@ with the permissions of the creator.</li>
 </li>
 <li><dl class="first docutils">
 <dt>Role Template</dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li>Contains all role template subjects that are used in <code class="docutils literal"><span class="pre">PermissionDescription</span></code>s. Useful to lookup all recommended
 permissions for a user. These should not be used for inheritance.</li>
 </ul>
@@ -820,8 +819,8 @@ context key with your plugin id) unless these contexts are meant to be shared.</
           <div class="clearer"></div>
         </div>
         <div class="footer" role="contentinfo">
-              &copy; Ophavsret 2014-2016, Sponge Contributors.
-            Bygget med <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+              &copy; Copyright 2014-2016, Sponge Contributors.
+            Bygget med <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.
         </div>
     </div>
   </body>

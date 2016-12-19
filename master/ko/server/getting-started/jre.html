@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Installing Java &mdash; Sponge 5.0.0 documentation</title>
+     <title>Java 설치 &mdash; Sponge 5.0.0 documentation</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -181,7 +181,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../index.html">Creating a Server</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">시작하기</a><ul class="current">
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Installing Java</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Java 설치</a></li>
 <li class="toctree-l3"><a class="reference internal" href="migrating.html">Migrating to Sponge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="implementations/index.html">구현물 선택하기</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="implementations/spongeforge.html">Installing SpongeForge</a></li>
@@ -262,18 +262,18 @@
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/commands/commandcallable.html">Low-Level Command API</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/event/index.html">Events</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/listeners.html">Event Listeners</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/causes.html">Event Causes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/filters.html">Event Filters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/custom.html">Custom Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/event/index.html">이벤트들</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/listeners.html">이벤트 리스너</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/causes.html">이벤트 원인</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/filters.html">이벤트 필터</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/event/custom.html">사용자 지정 이벤트</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/assets.html">The Asset API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/configuration/index.html">Configuring Plugins</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/configuration/loaders.html">Configuration Loaders</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/configuration/nodes.html">Configuration Nodes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/configuration/serialization.html">Serializing Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/configuration/serialization.html">객체를 직렬화하기</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../plugin/text/index.html">Text</a><ul>
@@ -294,18 +294,18 @@
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/data/keys.html">Using Keys</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/data/datamanipulators.html">Data Manipulators</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/data/transactions.html">Transactions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/data/serialization.html">Serializing Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/data/serialization.html">데이터 직렬화하기</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/blocks/index.html">Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/blocks/index.html">블록들</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/concepts.html">개념</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/accessing.html">Accessing Blocks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/modifying.html">Modifying Blocks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/tileentities.html">Tile Entities</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/virtualblock.html">Virtual Block Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../plugin/blocks/virtualblock.html">가상 블록 변경</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../plugin/entities/index.html">Entities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../plugin/entities/index.html">엔티티들</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/entities/spawning.html">엔티티를 소환하기</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../plugin/entities/modifying.html">Modifying an Entity</a></li>
 </ul>
@@ -391,29 +391,29 @@
                 <div class="body" role="main">
                   
   <div class="section" id="installing-java">
-<h1>Installing Java<a class="headerlink" href="#installing-java" title="제목 주소">¶</a></h1>
-<p>Java is needed to run Sponge and Minecraft. You most likely already have Java, but you may need to update it.</p>
+<h1>Java 설치<a class="headerlink" href="#installing-java" title="제목 주소">¶</a></h1>
+<p>Java는 스폰지와 마인크래프트를 실행하는데에 필요합니다. 당신은 이미 Java를 가지고 있을 가능성이 높습니다. 하지만 그것을 업데이트 해야할지도 모릅니다.</p>
 <p>Sponge requires Java 8 (specifically <code class="docutils literal"><span class="pre">1.8.0_40</span></code> or above) at this time. Older Java versions are deprecated and will not
 work with Sponge. The difference between major versions of Java (6, 7, 8) is significant, and older versions cannot run
 Sponge properly.</p>
 <div class="section" id="id1">
-<h2>Installing Java<a class="headerlink" href="#id1" title="제목 주소">¶</a></h2>
-<p>If you have Windows or Mac OS X for your computer, you can <a class="reference external" href="https://java.com/en/download/manual.jsp">download Java from the official website</a>.</p>
+<h2>Java 설치<a class="headerlink" href="#id1" title="제목 주소">¶</a></h2>
+<p>만약 Windows 혹은 Mac OS X가 당신의 컴퓨터에 설치되었다면 당신은 <a class="reference external" href="https://java.com/ko/download/manual.jsp">공식 웹사이트에서 Java를 다운로드할 수 있습니다</a>.</p>
 <p>Linux users can install OpenJDK via their package manager. OpenJDK is the open source version of the Oracle version of
 Java, and it should work just as well, if not better. However, it&#8217;s also possible to <a class="reference external" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">download the Oracle version for
 Linux</a>, but be aware that many Java-dependent
 Linux packages will still install OpenJDK anyway.</p>
 <div class="section" id="bit-vs-64-bit">
-<h3>32-bit vs. 64-bit<a class="headerlink" href="#bit-vs-64-bit" title="제목 주소">¶</a></h3>
+<h3>32비트 vs 64비트<a class="headerlink" href="#bit-vs-64-bit" title="제목 주소">¶</a></h3>
 <p>If your computer supports it, you should use 64-bit versions of Java whenever possible. The Java installers from the
 linked website should detect whether your computer is ready for 64-bit.</p>
 <p>Because the 64-bit version of Java runs considerably better, and also lets Java use more than ~3 GB of your RAM (memory),
 we always recommend it over 32-bit.</p>
-<p>Most modern computers support 64-bit.</p>
+<p>대부분의 컴퓨터들은 64 비트를 지원합니다.</p>
 </div>
 <div class="section" id="jdk-vs-jre">
 <h3>JDK vs. JRE<a class="headerlink" href="#jdk-vs-jre" title="제목 주소">¶</a></h3>
-<p>The JRE (Java Runtime Environment) is used to run Java applications. The download page linked above provides the JRE.</p>
+<p>JRE(자바 런타임 환경) 은 자바 프로그램을 실행하는데에 필요합니다. 위에 링크에서 다운로드할 수 있습니다.</p>
 <p>The JDK (Java Development Kit) is used to create Java applications, and you do not need it unless you plan to make
 Sponge plugins or work on Sponge. However, in some cases, you may need the JDK to diagnose a running Java application
 such as Sponge. You can download the JDK <a class="reference external" href="http://www.oracle.com/technetwork/java/javase/downloads/index.html">from a different site</a>.</p>
@@ -429,7 +429,7 @@ such as Sponge. You can download the JDK <a class="reference external" href="htt
         </div>
         <div class="footer" role="contentinfo">
               &copy; Copyright 2014-2016, Sponge Contributors.
-            Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+            Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.
         </div>
     </div>
   </body>

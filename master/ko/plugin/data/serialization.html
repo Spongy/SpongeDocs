@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Serializing Data &mdash; Sponge 5.0.0 documentation</title>
+     <title>데이터 직렬화하기 &mdash; Sponge 5.0.0 documentation</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -36,7 +36,7 @@
         <link rel="search" title="검색" href="../../search.html" />
         <link rel="top" title="Sponge 5.0.0 documentation" href="../../index.html" />
         <link rel="up" title="The Data API" href="index.html" />
-        <link rel="next" title="Blocks" href="../blocks/index.html" />
+        <link rel="next" title="블록들" href="../blocks/index.html" />
         <link rel="prev" title="Transactions" href="transactions.html" />
     
   <script type="text/javascript">
@@ -181,7 +181,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Creating a Server</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../server/getting-started/index.html">시작하기</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/jre.html">Installing Java</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/jre.html">Java 설치</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/migrating.html">Migrating to Sponge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/implementations/index.html">구현물 선택하기</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">Installing SpongeForge</a></li>
@@ -262,18 +262,18 @@
 <li class="toctree-l3"><a class="reference internal" href="../commands/commandcallable.html">Low-Level Command API</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Events</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Event Listeners</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../event/causes.html">Event Causes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Event Filters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Custom Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../event/index.html">이벤트들</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">이벤트 리스너</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../event/causes.html">이벤트 원인</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../event/filters.html">이벤트 필터</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">사용자 지정 이벤트</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../assets.html">The Asset API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">Configuring Plugins</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../configuration/loaders.html">Configuration Loaders</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../configuration/nodes.html">Configuration Nodes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../configuration/serialization.html">Serializing Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration/serialization.html">객체를 직렬화하기</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../text/index.html">Text</a><ul>
@@ -294,18 +294,18 @@
 <li class="toctree-l3"><a class="reference internal" href="keys.html">Using Keys</a></li>
 <li class="toctree-l3"><a class="reference internal" href="datamanipulators.html">Data Manipulators</a></li>
 <li class="toctree-l3"><a class="reference internal" href="transactions.html">Transactions</a></li>
-<li class="toctree-l3 current"><a class="current reference internal" href="#">Serializing Data</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">데이터 직렬화하기</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../blocks/index.html">Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../blocks/index.html">블록들</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../blocks/concepts.html">개념</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../blocks/accessing.html">Accessing Blocks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../blocks/modifying.html">Modifying Blocks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">Tile Entities</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../blocks/virtualblock.html">Virtual Block Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../blocks/virtualblock.html">가상 블록 변경</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../entities/index.html">Entities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../entities/index.html">엔티티들</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../entities/spawning.html">엔티티를 소환하기</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../entities/modifying.html">Modifying an Entity</a></li>
 </ul>
@@ -391,7 +391,7 @@
                 <div class="body" role="main">
                   
   <div class="section" id="serializing-data">
-<h1>Serializing Data<a class="headerlink" href="#serializing-data" title="제목 주소">¶</a></h1>
+<h1>데이터 직렬화하기<a class="headerlink" href="#serializing-data" title="제목 주소">¶</a></h1>
 <p>While an <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/manipulator/ImmutableDataManipulator.html">ImmutableDataManipulator</a> is a good way to store data while the server is running, it will not
 persist over a restart. However, every <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/manipulator/DataManipulator.html">DataManipulator</a> implements the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/DataSerializable.html">DataSerializable</a> interface
 and thus can be serialized to a <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/DataContainer.html">DataContainer</a> and deserialized by a <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/data/persistence/DataBuilder.html">DataBuilder</a>.</p>
@@ -488,7 +488,7 @@ from persistent files using the <a class="reference internal" href="../configura
         </div>
         <div class="footer" role="contentinfo">
               &copy; Copyright 2014-2016, Sponge Contributors.
-            Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+            Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.
         </div>
     </div>
   </body>

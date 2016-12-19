@@ -365,10 +365,10 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于 Sponge 项目</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于 Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../about/introduction.html">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../about/faq.html">常见问题及解答</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../about/structure.html">Sponge 的项目结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/structure.html">Sponge 项目的架构</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../about/future.html">未来计划</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../about/license.html">许可</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../about/posting.html">论坛发帖准则</a></li>
@@ -379,7 +379,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../about/history.html">Sponge 的历史</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../downloads.html">下载</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads.html">相关下载</a></li>
 </ul>
 
       </div>
@@ -396,13 +396,13 @@
 <div class="section" id="temporary-list-of-injected-types">
 <h2>可用于注入类型的临时列表<a class="headerlink" href="#temporary-list-of-injected-types" title="永久链接至标题">¶</a></h2>
 <dl class="docutils">
-<dt><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/config/ConfigDir.html">ConfigDir</a> (annotation on Path or File)</dt>
+<dt><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/config/ConfigDir.html">ConfigDir</a> （注解 Path 或 File）</dt>
 <dd><p class="first last">用于注入插件的配置目录： <code class="docutils literal"><span class="pre">./mods/</span></code> 或 <code class="docutils literal"><span class="pre">./mods/&lt;Plugin#id&gt;/</span></code> （译者注：实测似乎应为 <code class="docutils literal"><span class="pre">config/</span></code> 或 <code class="docutils literal"><span class="pre">config/&lt;Plugin#id&gt;/</span></code> 目录），取决于 <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/config/ConfigDir.html#sharedRoot--">ConfigDir#sharedRoot()</a> 。</p>
 </dd>
 <dt><a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/loader/ConfigurationLoader.html">ConfigurationLoader&lt;CommentedConfigurationNode&gt;</a></dt>
 <dd><p class="first last">必须使用 <code class="docutils literal"><span class="pre">&#64;DefaultConfig</span></code> 注解。用于注入根据拥有相同注解的 <code class="docutils literal"><span class="pre">File</span></code> 预先生成的 <code class="docutils literal"><span class="pre">ConfigurationLoader</span></code> 。</p>
 </dd>
-<dt><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/config/DefaultConfig.html">DefaultConfig</a> (annotation on Path, ConfigurationLoader or File)</dt>
+<dt><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/config/DefaultConfig.html">DefaultConfig</a> （注解 Path 或 ConfigurationLoader 或 File）</dt>
 <dd><p class="first last">用于注入插件的特定配置文件： <code class="docutils literal"><span class="pre">&lt;Plugin#id&gt;.conf</span></code> 。</p>
 </dd>
 <dt><a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/EventManager.html">EventManager</a></dt>
@@ -543,8 +543,8 @@
           <div class="clearer"></div>
         </div>
         <div class="footer" role="contentinfo">
-              &copy; 版权所有 2014-2016, Sponge Contributors.
-            由 <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9 创建。
+              &copy; Copyright 2014-2016, Sponge Contributors.
+            由 <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1 创建。
         </div>
     </div>
   </body>

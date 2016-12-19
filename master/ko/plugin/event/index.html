@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>Events &mdash; Sponge 5.0.0 documentation</title>
+     <title>이벤트들 &mdash; Sponge 5.0.0 documentation</title>
     
   <link rel="stylesheet" href="../../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../../_static/sponge.css" type="text/css" />
@@ -36,7 +36,7 @@
         <link rel="search" title="검색" href="../../search.html" />
         <link rel="top" title="Sponge 5.0.0 documentation" href="../../index.html" />
         <link rel="up" title="플러그인 만들기" href="../index.html" />
-        <link rel="next" title="Event Listeners" href="listeners.html" />
+        <link rel="next" title="이벤트 리스너" href="listeners.html" />
         <link rel="prev" title="Low-Level Command API" href="../commands/commandcallable.html" />
     
   <script type="text/javascript">
@@ -180,7 +180,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Creating a Server</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../server/getting-started/index.html">시작하기</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/jre.html">Installing Java</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/jre.html">Java 설치</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/migrating.html">Migrating to Sponge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/implementations/index.html">구현물 선택하기</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">Installing SpongeForge</a></li>
@@ -261,18 +261,18 @@
 <li class="toctree-l3"><a class="reference internal" href="../commands/commandcallable.html">Low-Level Command API</a></li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Events</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="listeners.html">Event Listeners</a></li>
-<li class="toctree-l3"><a class="reference internal" href="causes.html">Event Causes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="filters.html">Event Filters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="custom.html">Custom Events</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">이벤트들</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="listeners.html">이벤트 리스너</a></li>
+<li class="toctree-l3"><a class="reference internal" href="causes.html">이벤트 원인</a></li>
+<li class="toctree-l3"><a class="reference internal" href="filters.html">이벤트 필터</a></li>
+<li class="toctree-l3"><a class="reference internal" href="custom.html">사용자 지정 이벤트</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../assets.html">The Asset API</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../configuration/index.html">Configuring Plugins</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../configuration/loaders.html">Configuration Loaders</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../configuration/nodes.html">Configuration Nodes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../configuration/serialization.html">Serializing Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../configuration/serialization.html">객체를 직렬화하기</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../text/index.html">Text</a><ul>
@@ -293,18 +293,18 @@
 <li class="toctree-l3"><a class="reference internal" href="../data/keys.html">Using Keys</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../data/datamanipulators.html">Data Manipulators</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../data/transactions.html">Transactions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../data/serialization.html">Serializing Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data/serialization.html">데이터 직렬화하기</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../blocks/index.html">Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../blocks/index.html">블록들</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../blocks/concepts.html">개념</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../blocks/accessing.html">Accessing Blocks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../blocks/modifying.html">Modifying Blocks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">Tile Entities</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../blocks/virtualblock.html">Virtual Block Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../blocks/virtualblock.html">가상 블록 변경</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../entities/index.html">Entities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../entities/index.html">엔티티들</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../entities/spawning.html">엔티티를 소환하기</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../entities/modifying.html">Modifying an Entity</a></li>
 </ul>
@@ -390,13 +390,13 @@
                 <div class="body" role="main">
                   
   <div class="section" id="events">
-<h1>Events<a class="headerlink" href="#events" title="제목 주소">¶</a></h1>
+<h1>이벤트들<a class="headerlink" href="#events" title="제목 주소">¶</a></h1>
 <p>Events are used to inform plugins of certain happenings. Many events can also be <em>cancelled</em> &#8211; that is, the action that
 the event refers to can be prevented from occurring. Cancellable events implement the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/event/Cancellable.html">Cancellable</a> interface.</p>
 <p>Sponge itself contains many events; however, plugins can create their own events which other plugins can listen to.</p>
 <p>Event listeners are assigned a priority that determines the order in which the event listener is run in context of other
 event listeners (such as those from other plugins). For example, an event listener with <code class="docutils literal"><span class="pre">EARLY</span></code> priority will return
-before most other event listeners. See <a class="reference internal" href="listeners.html#about-listener"><span class="std std-ref">About &#64;Listener</span></a> for more information.</p>
+before most other event listeners. See <a class="reference internal" href="listeners.html#about-listener"><span class="std std-ref">&#64;Listener 에 대해</span></a> for more information.</p>
 <p>Events cannot be sent to a specific set of plugins. All plugins that listen to an event will be notified of the event.</p>
 <p>The event bus or event manager is the class that keeps track of which plugins are listening to which event,
 and is also responsible for distributing events to event listeners.</p>
@@ -405,10 +405,10 @@ and is also responsible for distributing events to event listeners.</p>
 <h2>Contents<a class="headerlink" href="#contents" title="제목 주소">¶</a></h2>
 <div class="toctree-wrapper compound">
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="listeners.html">Event Listeners</a></li>
-<li class="toctree-l1"><a class="reference internal" href="causes.html">Event Causes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="filters.html">Event Filters</a></li>
-<li class="toctree-l1"><a class="reference internal" href="custom.html">Custom Events</a></li>
+<li class="toctree-l1"><a class="reference internal" href="listeners.html">이벤트 리스너</a></li>
+<li class="toctree-l1"><a class="reference internal" href="causes.html">이벤트 원인</a></li>
+<li class="toctree-l1"><a class="reference internal" href="filters.html">이벤트 필터</a></li>
+<li class="toctree-l1"><a class="reference internal" href="custom.html">사용자 지정 이벤트</a></li>
 </ul>
 </div>
 </div>
@@ -422,7 +422,7 @@ and is also responsible for distributing events to event listeners.</p>
         </div>
         <div class="footer" role="contentinfo">
               &copy; Copyright 2014-2016, Sponge Contributors.
-            Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+            Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.
         </div>
     </div>
   </body>

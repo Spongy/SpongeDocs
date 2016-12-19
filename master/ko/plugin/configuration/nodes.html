@@ -36,7 +36,7 @@
         <link rel="search" title="검색" href="../../search.html" />
         <link rel="top" title="Sponge 5.0.0 documentation" href="../../index.html" />
         <link rel="up" title="Configuring Plugins" href="index.html" />
-        <link rel="next" title="Serializing Objects" href="serialization.html" />
+        <link rel="next" title="객체를 직렬화하기" href="serialization.html" />
         <link rel="prev" title="Configuration Loaders" href="loaders.html" />
     
   <script type="text/javascript">
@@ -181,7 +181,7 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../server/index.html">Creating a Server</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../server/getting-started/index.html">시작하기</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/jre.html">Installing Java</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/jre.html">Java 설치</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/migrating.html">Migrating to Sponge</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../../server/getting-started/implementations/index.html">구현물 선택하기</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../../server/getting-started/implementations/spongeforge.html">Installing SpongeForge</a></li>
@@ -262,18 +262,18 @@
 <li class="toctree-l3"><a class="reference internal" href="../commands/commandcallable.html">Low-Level Command API</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../event/index.html">Events</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">Event Listeners</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../event/causes.html">Event Causes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../event/filters.html">Event Filters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">Custom Events</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../event/index.html">이벤트들</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../event/listeners.html">이벤트 리스너</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../event/causes.html">이벤트 원인</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../event/filters.html">이벤트 필터</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../event/custom.html">사용자 지정 이벤트</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../assets.html">The Asset API</a></li>
 <li class="toctree-l2 current"><a class="reference internal" href="index.html">Configuring Plugins</a><ul class="current">
 <li class="toctree-l3"><a class="reference internal" href="loaders.html">Configuration Loaders</a></li>
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Configuration Nodes</a></li>
-<li class="toctree-l3"><a class="reference internal" href="serialization.html">Serializing Objects</a></li>
+<li class="toctree-l3"><a class="reference internal" href="serialization.html">객체를 직렬화하기</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../text/index.html">Text</a><ul>
@@ -294,18 +294,18 @@
 <li class="toctree-l3"><a class="reference internal" href="../data/keys.html">Using Keys</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../data/datamanipulators.html">Data Manipulators</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../data/transactions.html">Transactions</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../data/serialization.html">Serializing Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../data/serialization.html">데이터 직렬화하기</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../blocks/index.html">Blocks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../blocks/index.html">블록들</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../blocks/concepts.html">개념</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../blocks/accessing.html">Accessing Blocks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../blocks/modifying.html">Modifying Blocks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../blocks/tileentities.html">Tile Entities</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../blocks/virtualblock.html">Virtual Block Changes</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../blocks/virtualblock.html">가상 블록 변경</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../entities/index.html">Entities</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../entities/index.html">엔티티들</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../entities/spawning.html">엔티티를 소환하기</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../entities/modifying.html">Modifying an Entity</a></li>
 </ul>
@@ -436,9 +436,9 @@ acquired as follows.</p>
 </div>
 </div>
 <div class="section" id="values">
-<h2>Values<a class="headerlink" href="#values" title="제목 주소">¶</a></h2>
+<h2>값<a class="headerlink" href="#values" title="제목 주소">¶</a></h2>
 <div class="section" id="basic-values">
-<h3>Basic Values<a class="headerlink" href="#basic-values" title="제목 주소">¶</a></h3>
+<h3>기본 값<a class="headerlink" href="#basic-values" title="제목 주소">¶</a></h3>
 <p>Basic value types like <code class="docutils literal"><span class="pre">int</span></code>, <code class="docutils literal"><span class="pre">double</span></code>, <code class="docutils literal"><span class="pre">boolean</span></code> or <code class="docutils literal"><span class="pre">String</span></code> each have their own convenience getter method
 which will return the value or a default if the node does not contain a value of that type. Let&#8217;s check if the server
 administrator wants our plugin to enable its blockCheats module by checking the value at the
@@ -466,7 +466,7 @@ primitive data types, <code class="docutils literal"><span class="pre">String</s
 </div>
 </div>
 <div class="section" id="de-serialization">
-<h3>(De)Serialization<a class="headerlink" href="#de-serialization" title="제목 주소">¶</a></h3>
+<h3>(역) 직렬화<a class="headerlink" href="#de-serialization" title="제목 주소">¶</a></h3>
 <p>If you attempt to read or write an object that is not one of the basic types mentioned above, you will need to pass it
 through deserialization first. In the <code class="docutils literal"><span class="pre">ConfigurationOptions</span></code> used to create your root <code class="docutils literal"><span class="pre">ConfigurationNode</span></code>, there
 is a collection of <a class="reference external" href="http://zml2008.github.io/configurate/apidocs/ninja/leaping/configurate/objectmapping/serialize/TypeSerializer.html">TypeSerializer</a>s that Configurate uses to convert your objects to a
@@ -510,7 +510,7 @@ even generic types can conveniently be written and read.</p>
 </ul>
 </div>
 <div class="section" id="defaults">
-<h3>Defaults<a class="headerlink" href="#defaults" title="제목 주소">¶</a></h3>
+<h3>기본값<a class="headerlink" href="#defaults" title="제목 주소">¶</a></h3>
 <p>Unlike the Sponge API, the Configurate library does not use <code class="docutils literal"><span class="pre">Optional</span></code> for values that might not be present but null.
 While the getters for primitive methods (like <code class="docutils literal"><span class="pre">getBoolean()</span></code> or <code class="docutils literal"><span class="pre">getInt()</span></code>) might return <code class="docutils literal"><span class="pre">false</span></code> or <code class="docutils literal"><span class="pre">0</span></code>, those
 that would return an object (like <code class="docutils literal"><span class="pre">getString()</span></code>) will return <code class="docutils literal"><span class="pre">null</span></code> if no value is present. If you do not want to
@@ -556,7 +556,7 @@ When the config is then finished, the value <code class="docutils literal"><span
         </div>
         <div class="footer" role="contentinfo">
               &copy; Copyright 2014-2016, Sponge Contributors.
-            Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9.
+            Created using <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1.
         </div>
     </div>
   </body>

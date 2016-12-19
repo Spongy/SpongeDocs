@@ -365,10 +365,10 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于 Sponge 项目</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../about/index.html">关于 Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../about/introduction.html">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../about/faq.html">常见问题及解答</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../about/structure.html">Sponge 的项目结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../about/structure.html">Sponge 项目的架构</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../about/future.html">未来计划</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../about/license.html">许可</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../about/posting.html">论坛发帖准则</a></li>
@@ -379,7 +379,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../about/history.html">Sponge 的历史</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../downloads.html">下载</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../downloads.html">相关下载</a></li>
 </ul>
 
       </div>
@@ -424,10 +424,10 @@
 <div class="section" id="structure-example">
 <h3>结构示例：<a class="headerlink" href="#structure-example" title="永久链接至标题">¶</a></h3>
 <p>下面的示例展示了一个构造 Permission 字符串的通常方法，当然按照该结构来并不是必须的。</p>
-<ul>
+<ul class="simple">
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">myPlugin</span></code></dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li><p class="first">给予有关该插件的 <strong>所有</strong> 权限。</p>
 </li>
 </ul>
@@ -436,7 +436,7 @@
 </li>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">myPlugin.commands</span></code></dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li><p class="first">给予有关该插件的命令的 <strong>所有</strong> 权限。</p>
 </li>
 </ul>
@@ -445,7 +445,7 @@
 </li>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">myPlugin.commands.teleport.execute</span></code></dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li><p class="first">仅仅给予用户执行指定命令的权限。如果用户没有该权限，那么即便他拥有其他有关于 <cite>teleport</cite> 的权限，他也没有办法运行该命令（拥有该权限的用户只能将自己传送到其所在世界的其他人的位置）。</p>
 </li>
 </ul>
@@ -454,7 +454,7 @@
 </li>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">myPlugin.commands.teleport.all</span></code></dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li><p class="first">仅仅给予用户一次性传送所有玩家的权限。</p>
 </li>
 </ul>
@@ -463,7 +463,7 @@
 </li>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">myPlugin.commands.teleport.worlds</span></code></dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li><p class="first">仅仅给予用户传送所有世界的玩家的权限。</p>
 </li>
 </ul>
@@ -472,7 +472,7 @@
 </li>
 <li><dl class="first docutils">
 <dt><code class="docutils literal"><span class="pre">myPlugin.commands.teleport.worlds.mynetherworld</span></code></dt>
-<dd><ul class="first last simple">
+<dd><ul class="first last">
 <li><p class="first">仅仅给予用户传送到 <em>mynetherworld</em> 的权限。</p>
 </li>
 </ul>
@@ -571,99 +571,106 @@ Owner: MyPlugin v1.2.3
 <p class="last">The default <code class="docutils literal"><span class="pre">Subject</span></code>s&#8217; persistent <code class="docutils literal"><span class="pre">SubjectData</span></code>s take precedence over the transient ones.
 For all other <code class="docutils literal"><span class="pre">Subject</span></code>s the transient <code class="docutils literal"><span class="pre">SubjectData</span></code>s take precedence over the persistent ones.</p>
 </div>
-<p>If neither the Subject, nor any of its parents, nor the defaults assign a value to a permission,
-then it is automatically denied.</p>
+<p>如果权限主体本身、其所有的父权限主体、以及默认情况都没有声明授予还是去除一个权限，那么该权限将自动拒绝授予给该权限主体，也就是去除。</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p>Order of precedence in descending order:</p>
-<ul class="last">
+<p>优先次序从先到后排序：</p>
+<ul class="last simple">
 <li><dl class="first docutils">
-<dt>Subject itself</dt>
-<dd><ul class="first last simple">
-<li>Transient</li>
-<li>Persistent</li>
+<dt>权限主体本身</dt>
+<dd><ul class="first last">
+<li><p class="first">暂时</p>
+</li>
+<li><p class="first">持续</p>
+</li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Parent Subjects</dt>
-<dd><ul class="first last simple">
-<li>Transient</li>
-<li>Persistent</li>
+<dt>父权限主体</dt>
+<dd><ul class="first last">
+<li><p class="first">暂时</p>
+</li>
+<li><p class="first">持续</p>
+</li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>SubjectCollection Defaults</dt>
-<dd><ul class="first last simple">
-<li>Persistent</li>
-<li>Transient</li>
+<dt>SubjectCollection 的默认情况</dt>
+<dd><ul class="first last">
+<li><p class="first">持续</p>
+</li>
+<li><p class="first">暂时</p>
+</li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>PermissionService Defaults</dt>
-<dd><ul class="first last simple">
-<li>Persistent</li>
-<li>Transient</li>
+<dt>PermissionService 的默认情况</dt>
+<dd><ul class="first last">
+<li><p class="first">持续</p>
+</li>
+<li><p class="first">暂时</p>
+</li>
 </ul>
 </dd>
 </dl>
 </li>
-<li><p class="first">Deny permission</p>
+<li><p class="first">拒绝</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
 <div class="section" id="subjectcollections">
-<h2>SubjectCollections<a class="headerlink" href="#subjectcollections" title="永久链接至标题">¶</a></h2>
-<p>A container for subjects that can be used to obtain a Subject by name.
-These are the default Subject Collections:</p>
-<ul>
+<h2>SubjectCollection<a class="headerlink" href="#subjectcollections" title="永久链接至标题">¶</a></h2>
+<p>SubjectCollection 是一个用于根据名称获取权限主体的容器。有一些默认的 SubjectCollection：</p>
+<ul class="simple">
 <li><dl class="first docutils">
-<dt>User</dt>
-<dd><ul class="first last simple">
-<li>Contains all on-line <code class="docutils literal"><span class="pre">Player</span></code>s and all off-line <code class="docutils literal"><span class="pre">User</span></code>s (at least those with none-default settings).</li>
+<dt>用户（User）</dt>
+<dd><ul class="first last">
+<li><p class="first">包含了所有在线的 <code class="docutils literal"><span class="pre">Player</span></code> 及不在线的 <code class="docutils literal"><span class="pre">User</span></code> （至少是那些非默认的）。</p>
+</li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Group</dt>
-<dd><ul class="first last simple">
-<li>Contains all group <code class="docutils literal"><span class="pre">Subject</span></code>. Groups are a simple way of structuring a <code class="docutils literal"><span class="pre">Subject</span></code>&#8216;s inheritance tree using
-named <code class="docutils literal"><span class="pre">Subject</span></code>s. Groups should be used if a specific subset of <code class="docutils literal"><span class="pre">Subject</span></code>s have additional permission
-settings such as a team, faction or role.</li>
+<dt>组（Group）</dt>
+<dd><ul class="first last">
+<li><p class="first">包含了所有组合在一起的 <code class="docutils literal"><span class="pre">Subject</span></code> 。组通过一种简单的方式把 <code class="docutils literal"><span class="pre">Subject</span></code> 用命名过的 <code class="docutils literal"><span class="pre">Subject</span></code> 方式组成继承树。组通常用于有额外附加权限的 <code class="docutils literal"><span class="pre">Subject</span></code> 如队伍、派别、或职务等。</p>
+</li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>System</dt>
-<dd><ul class="first last simple">
-<li>Contains other <code class="docutils literal"><span class="pre">Subject</span></code>s used by the server such as the the console and possible remote consoles.</li>
+<dt>系统（System）</dt>
+<dd><ul class="first last">
+<li><p class="first">包括了所有服务端用到的 <code class="docutils literal"><span class="pre">Subject</span></code> ，如服务端控制台等终端。</p>
+</li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Command Block</dt>
-<dd><ul class="first last simple">
-<li>Contains all <code class="docutils literal"><span class="pre">Subject</span></code>s for command blocks. These are useful if you would like to run a <code class="docutils literal"><span class="pre">CommandBlock</span></code> only
-with the permissions of the creator.</li>
+<dt>命令方块（Command Block）</dt>
+<dd><ul class="first last">
+<li><p class="first">包括了所有命令方块的 <code class="docutils literal"><span class="pre">Subject</span></code> 。如果你只想要命令方块拥有相关权限如命令方块创建者的权限，那么该 SubjectCollection 将起到帮助。</p>
+</li>
 </ul>
 </dd>
 </dl>
 </li>
 <li><dl class="first docutils">
-<dt>Role Template</dt>
-<dd><ul class="first last simple">
-<li>Contains all role template subjects that are used in <code class="docutils literal"><span class="pre">PermissionDescription</span></code>s. Useful to lookup all recommended
-permissions for a user. These should not be used for inheritance.</li>
+<dt>角色模板（Role Template）</dt>
+<dd><ul class="first last">
+<li><p class="first">包括了所有用于 <code class="docutils literal"><span class="pre">PermissionDescription</span></code> 的角色模板权限主体。这对于查找一个用户的权限来说是很有帮助的，不过不要将其用于继承。</p>
+</li>
 </ul>
 </dd>
 </dl>
@@ -671,24 +678,24 @@ permissions for a user. These should not be used for inheritance.</li>
 </ul>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">When <code class="docutils literal"><span class="pre">SubjectCollection</span></code>s are queried for a <code class="docutils literal"><span class="pre">Subject</span></code> they will automatically be created, if they do not already
-exist. However they might not necessarily show up in <code class="docutils literal"><span class="pre">getAllSubjects()</span></code> unless none-default values are set.</p>
+<p class="last">当试图从 <code class="docutils literal"><span class="pre">SubjectCollection</span></code> 中查询 <code class="docutils literal"><span class="pre">Subject</span></code> 时，如果它们不存在，它们将被自动创建。然而它们并不一定显示在 <code class="docutils literal"><span class="pre">getAllSubjects()</span></code> 中，除非设置了非默认值。</p>
 </div>
 </div>
 <div class="section" id="subjectdata">
 <h2>SubjectData<a class="headerlink" href="#subjectdata" title="永久链接至标题">¶</a></h2>
-<p>SubjectData are the actual permission stores connected to the Subject.
-There are two types of Subject stores:</p>
+<p>SubjectData 是存储权限主体的权限数据的真正地方。我们有两种存储方式：</p>
 <ul class="simple">
-<li>Transient = Only lasts for the duration of the session, it is never saved</li>
-<li>Regular (persistent) = Might be saved somewhere, and therefore be persisted and exist forever. Its recommended for
-<code class="docutils literal"><span class="pre">PermissionService</span></code>s to implement a persistent store, however it is not a requirement. It might also depend on the
-subject type. If there is no persistence then the transient store will be returned in both methods.</li>
+<li><p class="first">暂时（Transient）：只会在相关时间段中持续，也就是说不会保存</p>
+</li>
+<li><p class="first">持续（Persistent）：可能会存储在什么地方，也就是说会永远保存下去。我们建议 <code class="docutils literal"><span class="pre">PermissionService</span></code> 提供关于持续 SubjectData 的实现，尽管这并非必要。当然这也取决于权限主体。如果没有办法以持续的方式存储，那么两个方法将都返回暂时数据。</p>
+</li>
 </ul>
-<p>Plugin authors should consider whether it is necessary to persist a value when choosing between them.</p>
+<p>插件开发者若要在两者之间选择，应仔细考虑是否需要持续地存储数据。</p>
 <ul class="simple">
-<li>If it is only for a short time (e.g. during a minigame) then use the transient one.</li>
-<li>If it is for a long time or forever (e.g. a promotion to VIP) use the regular (persistent) one.</li>
+<li><p class="first">一般情况下往往只有使用很短时间的权限（如小游戏）才需要暂时存储的 SubjectData。</p>
+</li>
+<li><p class="first">需要使用长时间的权限（如 VIP）应使用持续方式存储。</p>
+</li>
 </ul>
 <p>Please refer to the Inheritance section if want to know more about the inheritance and precedence of the transient
 and persistent <code class="docutils literal"><span class="pre">SubjectData</span></code>s.</p>
@@ -804,8 +811,8 @@ context key with your plugin id) unless these contexts are meant to be shared.</
           <div class="clearer"></div>
         </div>
         <div class="footer" role="contentinfo">
-              &copy; 版权所有 2014-2016, Sponge Contributors.
-            由 <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9 创建。
+              &copy; Copyright 2014-2016, Sponge Contributors.
+            由 <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1 创建。
         </div>
     </div>
   </body>

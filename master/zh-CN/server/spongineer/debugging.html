@@ -366,10 +366,10 @@
 </li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于 Sponge 项目</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../about/index.html">关于 Sponge</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../about/introduction.html">简介</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/faq.html">常见问题及解答</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../../about/structure.html">Sponge 的项目结构</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../about/structure.html">Sponge 项目的架构</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/future.html">未来计划</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/license.html">许可</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../about/posting.html">论坛发帖准则</a></li>
@@ -380,7 +380,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../../about/history.html">Sponge 的历史</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../../downloads.html">下载</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../downloads.html">相关下载</a></li>
 </ul>
 
       </div>
@@ -393,24 +393,20 @@
                   
   <div class="section" id="debugging">
 <h1>Debugging<a class="headerlink" href="#debugging" title="永久链接至标题">¶</a></h1>
-<p>Logs are an essential part when it comes to debugging your server and figuring what went wrong. This page will show
-some basic logging examples and will try to explain what you can do to fix your issues, when encountering them.</p>
+<p>Logs是用于服务器的调试和找什么地方出错的一个重要组成部分。此页将展示一些基本的日志例子，并试着解释当遇到他们时，你可以做什么来解决您的问题</p>
 <div class="section" id="checklist">
 <h2>Checklist<a class="headerlink" href="#checklist" title="永久链接至标题">¶</a></h2>
-<p>Whenever you encounter a crash or warning make sure you set SpongeForge or SpongeVanilla up correctly. Here&#8217;s a short
-checklist to help you out. If you&#8217;re unsure on how to aquire the information needed, have a look at the <a class="reference internal" href="logs.html"><span class="doc">日志文件</span></a> page.
-It explains how you get the desired answers out of your logfiles.</p>
+<p>每当你遇到崩溃或警告，首先确认你的 SpongeForge 或 SpongeVanilla 已经被正确设置了。这里是一个简短的检查列表，为您排忧解难。如果您不确定如何获取所需的信息，看看 :doc: 日志( logs )页面。它解释了如何从你的日志文件获取所需的答案。</p>
 <ol class="arabic simple">
-<li>Is Java 8 installed and is Sponge using it?</li>
+<li><p class="first">Sponge 使用了Java8吗？</p>
+</li>
 </ol>
-<p>Sponge requires Java 8 and will crash when using Java 7 or older.</p>
+<p>Sponge 需要 Java 8 ，使用Java 7 或更旧的 Java 会导致崩溃。</p>
 <ol class="arabic simple" start="2">
-<li>Is the recommended Forge version installed?</li>
+<li><p class="first">使用了推荐的 Forge 版本？</p>
+</li>
 </ol>
-<p>Usually SpongeForge will run on older or newer Forge builds than the recommended build.
-However it is strongly advised to run the recommended build only.
-If you encounter a crash and your versions are mismatching, match them first and try again.
-If you&#8217;re unsure which Forge build you need, take a look at <a class="reference internal" href="../getting-started/implementations/spongeforge.html"><span class="doc">安装SpongeForge</span></a></p>
+<p>通常 SpongeForge 可以在在更旧或更新的 Forge 上使用。然而强烈建议运行在推荐的Forge 版本上。如果您遇到崩溃或者版本不匹配，先选择匹配的版本，然后再试。如果你不确定你需要哪个 Forge ，看看 :doc: &#8216;/server/getting-started/implementations/spongeforge&#8217;</p>
 <ol class="arabic simple" start="3">
 <li>Are there any other coremods (besides SpongeForge) installed?</li>
 </ol>
@@ -421,57 +417,44 @@ staff to solve these issues as soon as possible.</p>
 <ol class="arabic simple" start="4">
 <li>Is every plugin you&#8217;re using built against your desired Sponge build?</li>
 </ol>
-<p>The Sponge API is subject to change sometimes. When you try to use an older plugin on the most recent Sponge build and
-a crash occurs, try downgrading Sponge or contact the plugin author to get an updated plugin. If you&#8217;re on an older
-Sponge build and a recent plugin crashes, try to update Sponge first. If that doesn&#8217;t fix the issue, contact the
-plugin author and ask for a fix.</p>
+<p>Sponge API 有时会改变。当您在最近的Sponge版本上使用旧版本插件发生了崩溃时，请尝试 降级 Sponge 或与插件作者联系获得更新的插件。如果你在旧的Sponge版本和使用新版本插件发生了崩溃时，尝试首先更新Sponge。如果这不能解决问题，联系插件作者。</p>
 <ol class="arabic simple" start="5">
 <li>Separating a faulty plugin</li>
 </ol>
-<p>If the problem still persists, try to remove all plugins and re-add them one by one while trying to start the server
-every time you added a plugin.</p>
-<p>If you&#8217;re still unsure why and what exactly crashed, have a look at your crashlog. Some common crashes and common
-solutions are listed below.</p>
+<p>如果问题仍然存在，删除所有插件并重新逐一添加，并且每次都重启服务端。</p>
+<p>如果你仍然不确定为什么崩溃，看一看你的 crashlog。下面列出了一些常见的崩溃和解决办法。</p>
 </div>
 <div class="section" id="general-warnings">
 <h2>General Warnings<a class="headerlink" href="#general-warnings" title="永久链接至标题">¶</a></h2>
-<p>A common source of errors and bugs is a version mismatch between either SpongeForge and Forge or
-SpongeForge and Plugins. First we&#8217;ll have a look at the general warning Forge gives us upon crashing:</p>
+<p>常见的错误和 bug 来源是 SpongeForge 与 Sponge 之间或 SpongeForge 和插件之间的版本不匹配。首先我们来看看在Forge给出的一般警告︰</p>
 <div class="highlight-none"><div class="highlight"><pre><span></span>WARNING: coremods are present:
    SpongeForge (sponge-1.8-1521-2.1DEV-750.jar)
 Contact their authors BEFORE contacting forge
 </pre></div>
 </div>
-<p>This isn&#8217;t a bug or error, it&#8217;s just Forge telling you that a Coremod (here: SpongeForge) is installed. Forge advises
-you to contact the Sponge developers first, before asking the Forge support for help. Nothing to worry about.</p>
+<p>这不是一个 bug 或错误，它只是Forge告诉你，Coremod (在这里︰ SpongeForge) 安装。Forge建议您在联系他们之前先联系Sponge开发人员。Don&#8217;t Worry。</p>
 </div>
 <div class="section" id="common-exceptions">
 <h2>Common Exceptions<a class="headerlink" href="#common-exceptions" title="永久链接至标题">¶</a></h2>
 <p>Here are some common exceptions and some reasons why you might encounter them.</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">If you encountered a crash, error or any other malfunction <strong>not</strong> listed here, please report it on the
-<a class="reference external" href="https://forums.spongepowered.org/">Sponge Forums</a> or on <a class="reference external" href="https://github.com/spongepowered/">GitHub</a>.
-This will help others, who are running into the same issue.</p>
+<p class="last">如果你遇到崩溃、 错误或任何带有 <a href="#id1"><span class="problematic" id="id2">**</span></a>not**的故障 ，请在这里报告： &#8216;GitHub &lt; <a class="reference external" href="https://github.com/spongepowered/">https://github.com/spongepowered/</a> &gt;&#8217; 或者在这里： &#8216; 海绵论坛 &lt; <a class="reference external" href="https://forums.spongepowered.org/">https://forums.spongepowered.org/</a> &gt;&#8217;。这将帮助碰到同样问题的人，。</p>
 </div>
 <div class="section" id="mismatched-spongeforge-and-forge">
-<h3>Mismatched SpongeForge and Forge<a class="headerlink" href="#mismatched-spongeforge-and-forge" title="永久链接至标题">¶</a></h3>
+<h3>SpongeForge 与 Forge 不匹配<a class="headerlink" href="#mismatched-spongeforge-and-forge" title="永久链接至标题">¶</a></h3>
 <div class="highlight-none"><div class="highlight"><pre><span></span>[12:59:21] [main/ERROR] [mixin/]: @Mixin target net.minecraftforge.event.world.BlockEvent$NeighborNotifyEvent was not found mixins.forge.core.json:event.block.MixinEventNotifyNeighborBlock
 </pre></div>
 </div>
-<p>This is a common crash when you try to run SpongeForge on the wrong Forge build. Note that the target/Mixin can vary.
-Always match Forge against SpongeForge! If you&#8217;re unsure which version of Forge is required and you already got your
-SpongeForge build, take a look at: <a class="reference internal" href="../getting-started/implementations/spongeforge.html"><span class="doc">安装SpongeForge</span></a></p>
+<p>这是一些常见的SpongeForge与Forge版本不匹配的崩溃，始终保持版本匹配！如果你不确定需要Forge的那个版本，或者你已经有了一个不可改变版本的 SpongeForge，看这里 <a class="reference internal" href="../getting-started/implementations/spongeforge.html"><span class="doc">安装SpongeForge</span></a></p>
 </div>
 <div class="section" id="other-common-errors">
-<h3>Other common errors<a class="headerlink" href="#other-common-errors" title="永久链接至标题">¶</a></h3>
+<h3>其它未知错误。<a class="headerlink" href="#other-common-errors" title="永久链接至标题">¶</a></h3>
 <div class="highlight-none"><div class="highlight"><pre><span></span>Caused by: java.lang.ClassNotFoundException: org.spongepowered.api.event.state.ServerStartedEvent
 Caused by: java.lang.NullPointerException
 </pre></div>
 </div>
-<p>The first error indicates that a <code class="docutils literal"><span class="pre">Class</span></code> is missing, the second is a NullPointer Exception which indicated that the
-plugin you&#8217;re trying to use relies on missing parameters. This happens when you try to run and older plugin on a newer
-SpongeForge or SpongeVanilla build and vice versa.</p>
+<p>第一个错误是 <strong>Class</strong> is missing ，第二个错误是 NullPointer Exception 表明你安装的插件缺少依赖元素，这通常发生在插件版本和Sponge版本不匹配的情况下</p>
 <div class="highlight-none"><div class="highlight"><pre><span></span>java.lang.AbstractMethodError: net.minecraft.entity.player.EntityPlayerMP.getTabList()Lorg/spongepowered/api/entity/living/player/tab/TabList;
 at (...)
 </pre></div>
@@ -487,13 +470,9 @@ java.lang.NoClassDefFoundError: org/spongepowered/api/event/game/state/GameStart
 </div>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">Read the full example crashlog here:
-<a class="reference download internal" href="../../_downloads/crashlog-sponge575-plugin750.txt" download=""><code class="xref download docutils literal"><span class="pre">SpongeForge</span> <span class="pre">575</span> <span class="pre">crashlog</span> <span class="pre">with</span> <span class="pre">a</span> <span class="pre">plugin</span> <span class="pre">built</span> <span class="pre">against</span> <span class="pre">build</span> <span class="pre">750</span></code></a></p>
+<p class="last">读更多更全的崩溃报告？在这里 <a class="reference download internal" href="../../_downloads/crashlog-sponge575-plugin750.txt" download=""><code class="xref download docutils literal"><span class="pre">SpongeForge</span> <span class="pre">575</span> <span class="pre">crashlog</span> <span class="pre">with</span> <span class="pre">a</span> <span class="pre">plugin</span> <span class="pre">built</span> <span class="pre">against</span> <span class="pre">build</span> <span class="pre">750</span></code></a></p>
 </div>
-<p>A <code class="docutils literal"><span class="pre">NoClassDefFoundError</span></code> occurs when the plugin tries to access a class that isn&#8217;t on the classpath. This happens
-when the API got adjusted or refactored lately and you&#8217;re trying to run an older plugin on a newer build of Sponge
-and vice versa. Always try to use the correct version! Either ask the Plugin author which Sponge version he build
-against or try updating/downgrading your SpongeForge or SpongeVanilla to solve this.</p>
+<p><a href="#id1"><span class="problematic" id="id2">**</span></a>NoClassDefFoundError**这种错误表示这个Class不存在于classpath中，一般发生在API调整或者重构时，亦或者版本不匹配时。请使用正确的版本，你可以去问插件作者啥时候更新，也可以自己升降级 Sponge 来解决。</p>
 </div>
 </div>
 </div>
@@ -505,8 +484,8 @@ against or try updating/downgrading your SpongeForge or SpongeVanilla to solve t
           <div class="clearer"></div>
         </div>
         <div class="footer" role="contentinfo">
-              &copy; 版权所有 2014-2016, Sponge Contributors.
-            由 <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.9 创建。
+              &copy; Copyright 2014-2016, Sponge Contributors.
+            由 <a href="http://sphinx-doc.org/">Sphinx</a> 1.5.1 创建。
         </div>
     </div>
   </body>
