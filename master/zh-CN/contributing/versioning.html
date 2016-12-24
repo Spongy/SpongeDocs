@@ -315,6 +315,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../plugin/items/creating.html">物品的创建</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/trade-offers.html">Trade-Offers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/effects.html">效果</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/scheduler.html">调度器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/services.html">服务</a></li>
@@ -348,7 +349,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">向 Sponge 贡献代码</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="guidelines.html">贡献指南</a></li>
-<li class="toctree-l2"><a class="reference internal" href="howtogit.html">如何使用 Git（Hub）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="howtogit.html">如何使用 Git/GitHub</a></li>
 <li class="toctree-l2"><a class="reference internal" href="implementation/index.html">参与到 Sponge 的开发工作来</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="implementation/codestyle.html">代码规范</a></li>
 <li class="toctree-l3"><a class="reference internal" href="implementation/git-implementation.html">Sponge API 及其实现的 Git 工作流程</a></li>
@@ -392,78 +393,43 @@
                   
   <div class="section" id="versioning-system-and-repository-branch-layout">
 <h1>版本系统和项目仓库分支结构<a class="headerlink" href="#versioning-system-and-repository-branch-layout" title="永久链接至标题">¶</a></h1>
-<p>With the release for beta we&#8217;ve moved the SpongeAPI versioning to semantic versioning (see <a class="reference external" href="http://semver.org/">http://semver.org/</a>).
-This change means that every time that we make a release we have to increment the version according to the rules
-of semver.</p>
+<p>继 SpongeAPI 的 beta 版本发布后，我们开始在 SpongeAPI 上使用语义化版本控制规范（见 <a class="reference external" href="http://semver.org/">http://semver.org/</a> ）。这意味着，我们每次发布时新版 SpongeAPI 时，都需要按照语义化版本的约定递增版本号。</p>
 <div class="section" id="semver">
-<h2>SemVer<a class="headerlink" href="#semver" title="永久链接至标题">¶</a></h2>
-<p>SemVer uses the scheme <code class="docutils literal"><span class="pre">X.Y.Z</span></code>, where <code class="docutils literal"><span class="pre">X</span></code> is a <em>major</em> version, <code class="docutils literal"><span class="pre">Y</span></code> is a <em>minor</em> one and <code class="docutils literal"><span class="pre">Z</span></code> finally is a
-<em>patch</em> version.
-A release containing changes which are not backwards-compatible must be one <em>major</em> version ahead of the previous
-release. If there are only new features that are still backwards compatible, then the new release will be one <em>minor</em>
-version ahead of the previous release, and if the release strictly contains bugfixes then only the <em>patch</em> version will
-be incremented.</p>
-<p>This means that for example <code class="docutils literal"><span class="pre">3.2.0</span></code> is fully compatible to <code class="docutils literal"><span class="pre">3.0.0</span></code> while <code class="docutils literal"><span class="pre">4.0.0</span></code> isn&#8217;t binary compatible to
-<code class="docutils literal"><span class="pre">3.0.0</span></code>. <code class="docutils literal"><span class="pre">3.1.0</span></code> and <code class="docutils literal"><span class="pre">3.1.2</span></code> are fully interchangeable besides the bugs that were fixed.</p>
-<p>The layout of our branches (described below) is designed to assist this process by allowing us to make minor releases
-without a breaking change forcing us to make it a major release. This branch layout applies to the SpongeAPI,
-SpongeCommon, SpongeForge, and SpongeVanilla repositories but not to the SpongeDocs.</p>
+<h2>语义化版本 (SemVer)<a class="headerlink" href="#semver" title="永久链接至标题">¶</a></h2>
+<p>SemVer的格式如下：<code class="docutils literal"><span class="pre">X.Y.Z</span></code>，其中 <code class="docutils literal"><span class="pre">X</span></code> 指*主*版本号， <code class="docutils literal"><span class="pre">Y</span></code> 指次版本号，而结尾 <code class="docutils literal"><span class="pre">Z</span></code> 则指*修订*号。当更新中包含不向后兼容的更新时，需要将主版本号加一；若更新是完全向后兼容的，则只需将次版本号加一；若更新中只有bug修复则只需要将修订号加一即可。</p>
+<p>换言之， <code class="docutils literal"><span class="pre">3.2.0</span></code> 意味着和 <code class="docutils literal"><span class="pre">3.0.0</span></code> 完全兼容，然而 <code class="docutils literal"><span class="pre">4.0.0</span></code> 不与 <code class="docutils literal"><span class="pre">3.0.0</span></code> 二进制兼容 (Binary Compatible) ； <code class="docutils literal"><span class="pre">3.0.0</span></code> 、 <code class="docutils literal"><span class="pre">3.1.0</span></code> 和 <code class="docutils literal"><span class="pre">3.1.2</span></code> 除了漏洞修复外没有任何差别。</p>
+<p>为达成这一目标，我们对SpongeAPI、SpongeCommon、SpongeForge和SpongeVanilla的仓库采用了分支布局策略（下文将给出解释），该策略将允许我们在不破坏向后兼容的情况下发布次要更新。SpongeDocs的更新不受该策略影响。</p>
 </div>
 <div class="section" id="spongeapi-spongecommon-spongeforge-and-spongevanilla">
-<h2>SpongeAPI, SpongeCommon, SpongeForge and SpongeVanilla<a class="headerlink" href="#spongeapi-spongecommon-spongeforge-and-spongevanilla" title="永久链接至标题">¶</a></h2>
+<h2>SpongeAPI、SpongeCommon、SpongeForge和SpongeVanilla<a class="headerlink" href="#spongeapi-spongecommon-spongeforge-and-spongevanilla" title="永久链接至标题">¶</a></h2>
 <div class="section" id="the-bleeding-branch">
-<h3>The Bleeding Branch<a class="headerlink" href="#the-bleeding-branch" title="永久链接至标题">¶</a></h3>
-<p>The core of our repositories is the <code class="docutils literal"><span class="pre">bleeding</span></code> branch. Almost all changes will be added to <code class="docutils literal"><span class="pre">bleeding</span></code>, including
-new features, changes, and bugfixes. The version of <code class="docutils literal"><span class="pre">bleeding</span></code> will always be the next major release version
-appended with <code class="docutils literal"><span class="pre">-SNAPSHOT</span></code> (eg <code class="docutils literal"><span class="pre">6.0.0-SNAPSHOT</span></code>) to denote that it is not yet a final build and subject to change.</p>
-<p>The primary reason for having the <code class="docutils literal"><span class="pre">bleeding</span></code> branch is to have a testing ground for changes. Even experienced
-members of the Sponge team can accidentally cause a build to fail or miss a bug. The <code class="docutils literal"><span class="pre">bleeding</span></code> branch will be
-tested by people in the community that want the very latest, and it means that we can fix bugs that arise far more
-readily.</p>
+<h3>不稳定分支<a class="headerlink" href="#the-bleeding-branch" title="永久链接至标题">¶</a></h3>
+<p>我们仓库的核心便是 <code class="docutils literal"><span class="pre">bleeding</span></code> 分支。几乎全部变更都会被合并入 <code class="docutils literal"><span class="pre">bleeding</span></code> 分支，不论这个更新是新特性、修订还是简单的漏洞修复。 <code class="docutils literal"><span class="pre">bleeding</span></code> 分支对应的版本总会是下一个主要版本，并带一个 <code class="docutils literal"><span class="pre">-SNAPSHOT</span></code> 后缀以注明此为快照版，并非最终发布版本，在发布之前仍然会有更新。（例如： <code class="docutils literal"><span class="pre">6.0.0-SNAPSHOT</span></code> ）</p>
+<p>设立 <code class="docutils literal"><span class="pre">bleeding</span></code> 分支主要是出于对测试变更的需求。即便是 Sponge 团队中有经验的成员，也有可能会意外导致构建失败，或是遗漏一个bug。而这 <code class="docutils literal"><span class="pre">bleeding</span></code> 分支的构建将会交由那些始终保持最新构建的社区成员进行测试，从而保证我们能尽快发现并解决各种问题。</p>
 </div>
 <div class="section" id="stable-branches">
 <h3>稳定分支<a class="headerlink" href="#stable-branches" title="永久链接至标题">¶</a></h3>
-<p>Stable branches represent a much more stable platform which plugins and server implementations can be built upon. There
-will be no breakages to API, only non-breaking additions. There is a branch named after each major API release, which
-contains the latest API/implementation for that release including any minor or patch releases.</p>
-<p>When the time comes to release a major version, a new <code class="docutils literal"><span class="pre">stable-x</span></code> branch will be created from <code class="docutils literal"><span class="pre">bleeding</span></code>, where
-<code class="docutils literal"><span class="pre">x</span></code> is the new major version - for example, <code class="docutils literal"><span class="pre">stable-5</span></code>. <code class="docutils literal"><span class="pre">bleeding</span></code> will be appropriately updated to be the next
-major release as described above.</p>
-<p>Changes that have been in <code class="docutils literal"><span class="pre">bleeding</span></code> for a while, which have no known bugs, and that can be applied to a previous
-major release will be cherry-picked to the relevant <code class="docutils literal"><span class="pre">stable</span></code> branch for future release. Changes will be grouped into
-a new minor version, unless an immediate fix is preferred in which case a bugfix version will be created instead. When
-a version is released, the API repository will have a tag created pointing to that release&#8217;s commit.</p>
+<p>稳定分支象征着一个插件开发和服务器部署的可靠平台。稳定分支中只会有向后兼容的新功能。每当 API 迎来一次主要版本更新后，就会多出一个对应的稳定分支，涵盖了已经定型的最新 API 及实现，以及未来可能出现的次要更新或修订。</p>
+<p>每次主要更新时都会从 <code class="docutils literal"><span class="pre">bleeding</span></code> 分支中衍生出一个新的稳定分支，名字形如 <code class="docutils literal"><span class="pre">stable-x</span></code> ，其中 <code class="docutils literal"><span class="pre">x</span></code> 是主要更新的版本号，举个例子： <code class="docutils literal"><span class="pre">stable-5</span></code> 。 <code class="docutils literal"><span class="pre">bleeding</span></code> 将会按上文所叙述的那样得到妥善更新，并成为下一个主要版本。</p>
+<p>那些在 <code class="docutils literal"><span class="pre">bleeding</span></code> 分支中经过测验，没有产生问题，并且可进入之前的主要稳定版本中的变更将会被直接移植 (cherry-pick) 入相关的 <code class="docutils literal"><span class="pre">stable</span></code> 分支中。这些变更最终会组合成一个新的次要版本，但对于紧急修复来说，可能会导致一个新的修订版本的产生。每个版本的发布都会直接导致 API 仓库中产生一个新标签，指向发布时的提交。</p>
 </div>
 <div class="section" id="feature-branches">
-<h3>Feature Branches<a class="headerlink" href="#feature-branches" title="永久链接至标题">¶</a></h3>
-<p>New features or changes should be created in a <code class="docutils literal"><span class="pre">feature/foo</span></code> or <code class="docutils literal"><span class="pre">fix/bar</span></code> branch. This should be based on the most
-recent commit to <code class="docutils literal"><span class="pre">bleeding</span></code>. The only exception to this is if the changes are incompatible with the breaking changes
-in <code class="docutils literal"><span class="pre">bleeding</span></code>, in which case you should base against the relevant <code class="docutils literal"><span class="pre">stable-x</span></code>. You should state in your pull
-request why your change cannot be included in <code class="docutils literal"><span class="pre">bleeding</span></code> - such as fixing a bug in a feature that was removed by
-Mojang in a later release.</p>
-<p>If the changes made are not breaking for a previous release, the Sponge team may also cherry-pick the changes to one
-or more <code class="docutils literal"><span class="pre">stable</span></code> branches assuming that no problems arise after the change is merged into <code class="docutils literal"><span class="pre">bleeding</span></code>.</p>
+<h3>特性分支<a class="headerlink" href="#feature-branches" title="永久链接至标题">¶</a></h3>
+<p>新特性或更改应在名字形如 <code class="docutils literal"><span class="pre">feature/foo</span></code> 或 <code class="docutils literal"><span class="pre">fix/bar</span></code> 这样的分支中出现。通常，新特性分支应当直接从 <code class="docutils literal"><span class="pre">bleeding</span></code> 分支上最近的一次提交衍生而来。但若是该分支的内容与 <code class="docutils literal"><span class="pre">bleeding</span></code> 分支不兼容，可考虑从 <code class="docutils literal"><span class="pre">stable-x</span></code> 分支上衍生出新分支；同时，在拉取请求中你应当清楚地阐明为什么你的分支不是基于 <code class="docutils literal"><span class="pre">bleeding</span></code> 的——例如，修复一个因Mojang更新而导致的某个被移除特性中的bug。</p>
+<p>若新的更新仍对旧版本保持向后兼容，Sponge团队会考虑在这些变更合并入 <code class="docutils literal"><span class="pre">bleeding</span></code> 后直接将这些变更移植 (cherry-pick) 入若干 <code class="docutils literal"><span class="pre">stable</span></code> 分支中；这同时也意味着Sponge团队假定这些变更没有引发新问题。</p>
 </div>
 </div>
 <div class="section" id="spongedocs">
 <h2>SpongeDocs<a class="headerlink" href="#spongedocs" title="永久链接至标题">¶</a></h2>
-<p>The SpongeDocs themselves are unversioned following our philosophy that they will never be finished, but instead in a
-constant flux of ever increasing usability. However they <em>target</em> a specific version of the API, generally the most
-recent <em>release</em> of SpongeAPI.</p>
+<p>SpongeDocs则没有版本号，因为我们相信它永远不会完成，只会在不断地更新中越来越完善。然而，SpongeDocs通常都会*针对*某个特定版本的SpongeAPI发布；一般，这个特定版本是指最近的*发布版*。</p>
 <div class="section" id="core-branch">
 <h3>核心分支<a class="headerlink" href="#core-branch" title="永久链接至标题">¶</a></h3>
-<p>The core branch for the SpongeDocs is <code class="docutils literal"><span class="pre">master</span></code>. Each new commit to <code class="docutils literal"><span class="pre">master</span></code> triggers a rebuild of the <a class="reference external" href="https://docs.spongepowered.org/">docs website</a>. Commits to <code class="docutils literal"><span class="pre">master</span></code> are generally made to document the most current SpongeAPI
-release or to fix minor mistakes on the Docs.</p>
+<p>SpongeDocs 的核心分支便是 <code class="docutils literal"><span class="pre">master</span></code> 分支。每笔 <code class="docutils literal"><span class="pre">master</span></code> 分支上的新提交都会触发 <a class="reference external" href="https://docs.spongepowered.org/">文档</a> 的重新构建。一般， <code class="docutils literal"><span class="pre">master</span></code> 上的新提交都是针对最新SpongeAPI的发布版的新内容，或是小的修正。</p>
 </div>
 <div class="section" id="id1">
-<h3>Feature Branches<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
-<p>Whenever a new feature is described, older texts are updated or reworded or the documents are restructured, it is done
-in a <code class="docutils literal"><span class="pre">feature/foo</span></code> or <code class="docutils literal"><span class="pre">fix/bar</span></code> branch. Those branches will then be reviewed and, once they are deemed complete,
-may be merged.</p>
-<p>A feature branch may only be merged into master if the changes / additions made in it are correct regarding the
-<strong>SpongeAPI release currently targeted by the SpongeDocs</strong>. Any feature branches that describe features not yet included
-in a release stay unmerged until the corresponding API version is released and becomes the new targeted version for the
-SpongeDocs. However the Docs team might collect additions for a specific version on a single branch.</p>
+<h3>特性分支<a class="headerlink" href="#id1" title="永久链接至标题">¶</a></h3>
+<p>不论是新特性描述，还是旧文本更新或重写，抑或是整个文档的改组，都需要在名字形如 <code class="docutils literal"><span class="pre">feature/foo</span></code> 或 <code class="docutils literal"><span class="pre">fix/bar</span></code> 的新分支中完成。这些分支将会在经过复核，确认满足要求后，得到合并。</p>
+<p>当且仅当特性分支的新内容对于**当前 SpongeDocs 所指向的 SpongeAPI 发布版**来说是正确无误的时候，才有可能合并入主分支。任何针对非发布版中的特性的分支都只会在这些新特性发布后才有可能合并。然而，文档团队可能会将某个版本新内容收集到一个独立的分支上去。</p>
 <img alt="release branch example" src="../_images/versioning-release-branch.svg" /></div>
 <div class="section" id="release-branches">
 <h3>稳定版分支<a class="headerlink" href="#release-branches" title="永久链接至标题">¶</a></h3>

@@ -317,6 +317,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../../../plugin/items/creating.html">Creating an ItemStack</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../../../plugin/trade-offers.html">Trade-Offers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../plugin/effects.html">Effects</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../plugin/scheduler.html">Scheduler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../../plugin/services.html">Services</a></li>
@@ -522,17 +523,17 @@
 <td><p class="first last">booleano</p>
 </td>
 <td>false</td>
-<td><p class="first last">Ativa os blocos de comandos.</p>
+<td><p class="first last">Habilita blocos de comando.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>force-gamemode</td>
 <td><p class="first last">booleano</p>
 </td>
 <td>false</td>
-<td><p class="first">Força os jogadores a juntarem-se no modo de jogo pré-definido.</p>
+<td><p class="first">Força os jogadores a entrar com o modo de jogo padrão.</p>
 <blockquote class="last">
-<div><p><strong>false</strong> -  Os jogadores juntar-se-ão com o modo de jogo que tinham quando saíram do servidor.</p>
-<p><strong>true</strong> - Os jogadores juntar-se-ão sempre com o modo de jogo pré-definido.</p>
+<div><p><strong>false</strong> - Os jogadores entrarão com o modo de jogo que estavam quando saíram pela última vez.</p>
+<p><strong>true</strong> - Os jogadores sempre entrarão com o modo de jogo padrão.</p>
 </div></blockquote>
 </td>
 </tr>
@@ -555,17 +556,17 @@
 <td>true</td>
 <td><p class="first">Define se estruturas (como aldeias) serão geradas em novos <em>chunks</em>.</p>
 <blockquote>
-<div><p><strong>false</strong> - As estruturas não serão geradas.</p>
-<p><strong>true</strong> - As estruturas serão geradas</p>
+<div><p><strong>false</strong> - Estruturas não serão geradas.</p>
+<p><strong>true</strong> - Estruturas serão geradas.</p>
 </div></blockquote>
-<p class="last"><strong>Nota:</strong> As masmorras são geradas independentemente desta definição.</p>
+<p class="last"><strong>Nota:</strong> Dungeons serão geradas mesmo se isso for definido como false.</p>
 </td>
 </tr>
 <tr class="row-even"><td>generator-settings</td>
 <td>string</td>
-<td><p class="first last"><em>em branco</em></p>
+<td><p class="first last"><em>vazio</em></p>
 </td>
-<td><p class="first last">As definições utilizadas para personalizar o processo de criação do mundo. Vê <a class="reference external" href="http://minecraft.gamepedia.com/Superflat">Superflat</a> e <a class="reference external" href="http://minecraft.gamepedia.com/Customized">Customized</a> na Minecraft Wiki (links externos) para definições possíveis e exemplos.</p>
+<td><p class="first last">As configurações usadas para personalizar a geração do mundo. Veja <a class="reference external" href="http://minecraft.gamepedia.com/Superflat">Superflat</a> e <a class="reference external" href="http://minecraft.gamepedia.com/Customized">Customized</a> na Minecraft Wiki (links externos) para possíveis configurações e exemplos.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>hardcore</td>
@@ -578,17 +579,17 @@
 <tr class="row-even"><td>level-name</td>
 <td>string</td>
 <td>world</td>
-<td><p class="first">O valor de &#8220;level-name&#8221; será utilizado como nome do mundo e também da pasta que o contém. Podes copiar a pasta do teu jogo para aqui, e mudares o seu nome para o nome do mundo que deve ser carregado.</p>
+<td><p class="first">O valor de &#8220;level-name&#8221; será usado como o nome do mundo e seu nome de pasta. Você também pode copiar a pasta do seu jogo salvo aqui e alterar o valor para o mesmo da pasta a ser carregada.</p>
 <blockquote class="last">
-<div><p>Caracteres tais como &#8216; (apóstrofe) poderão precisar de ser <em>escaped</em> adicionando uma barra invertida (\) antes.</p>
+<div><p>Caracteres como &#8216; (apóstrofo) poderão precisar ser antecedidas pela adição de barra invertida (\) antes deles.</p>
 </div></blockquote>
 </td>
 </tr>
 <tr class="row-odd"><td>level-seed</td>
 <td>string</td>
-<td><p class="first last"><em>em branco</em></p>
+<td><p class="first last"><em>vazio</em></p>
 </td>
-<td><p class="first">Adicionar uma <em>seed</em> ao teu mundo, como no <em>Singleplayer</em>.</p>
+<td><p class="first">Adicionar uma semente ao seu mundo, como no singleplayer.</p>
 <blockquote class="last">
 <div><p>Alguns exemplos são: minecraft, 404, 1a2b3c.</p>
 </div></blockquote>
@@ -745,7 +746,7 @@
 </tr>
 <tr class="row-even"><td>rcon.password</td>
 <td>string</td>
-<td><p class="first last"><em>em branco</em></p>
+<td><p class="first last"><em>vazio</em></p>
 </td>
 <td><p class="first last">Define a password para a ligação remota.</p>
 </td>
@@ -759,21 +760,21 @@
 </tr>
 <tr class="row-even"><td>resource-pack</td>
 <td>string</td>
-<td><p class="first last"><em>em branco</em></p>
+<td><p class="first last"><em>vazio</em></p>
 </td>
 <td><p class="first last">URI opcional para um pacote de recurso. O jogador pode escolher utilizá-lo.</p>
 </td>
 </tr>
 <tr class="row-odd"><td>resource-pack-hash</td>
 <td>string</td>
-<td><p class="first last"><em>em branco</em></p>
+<td><p class="first last"><em>vazio</em></p>
 </td>
 <td><p class="first last">Digest SHA-1 do pacote de recursos, opcional, em hexadecimal, em minúsculas. É recomendado que especifiques isto. Isto ainda não é utilizado para verificar a integridade do pacote de recursos mas ajuda à eficiência e à fiabilidade da cache.</p>
 </td>
 </tr>
 <tr class="row-even"><td>server-ip</td>
 <td>string</td>
-<td><p class="first last"><em>em branco</em></p>
+<td><p class="first last"><em>vazio</em></p>
 </td>
 <td><p class="first last">Define isto se queres que o teu servidor responda a um IP específico. Recomendamos seriamente que deixes isto em branco.</p>
 </td>

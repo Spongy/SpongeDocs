@@ -8,7 +8,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-     <title>如何使用 Git（Hub） &mdash; Sponge 5.0.0 文档</title>
+     <title>如何使用 Git/GitHub &mdash; Sponge 5.0.0 文档</title>
     
   <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
   <link rel="stylesheet" href="../_static/sponge.css" type="text/css" />
@@ -315,6 +315,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../plugin/items/creating.html">物品的创建</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/trade-offers.html">Trade-Offers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/effects.html">效果</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/scheduler.html">调度器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/services.html">服务</a></li>
@@ -348,7 +349,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">向 Sponge 贡献代码</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="guidelines.html">贡献指南</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">如何使用 Git（Hub）</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">如何使用 Git/GitHub</a></li>
 <li class="toctree-l2"><a class="reference internal" href="implementation/index.html">参与到 Sponge 的开发工作来</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="implementation/codestyle.html">代码规范</a></li>
 <li class="toctree-l3"><a class="reference internal" href="implementation/git-implementation.html">Sponge API 及其实现的 Git 工作流程</a></li>
@@ -391,7 +392,7 @@
                 <div class="body" role="main">
                   
   <div class="section" id="how-to-git-hub">
-<h1>如何使用 Git（Hub）<a class="headerlink" href="#how-to-git-hub" title="永久链接至标题">¶</a></h1>
+<h1>如何使用 Git/GitHub<a class="headerlink" href="#how-to-git-hub" title="永久链接至标题">¶</a></h1>
 <p>如果你想要协助开发 Sponge 或者你对 API 的补充有了一个好的想法，或者你想要改进一下我们的文档，那么你就需要对 <code class="docutils literal"><span class="pre">git</span></code> 和 GitHub 非常熟悉。如果你已经对诸如复刻（Fork）、分支（Branch）、Issue、Pull Request 或者提交等概念非常熟悉，那么你可以直接跳过这一部分。如果你不清楚我们在说些什么的话，请接着读下去。</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
@@ -404,16 +405,9 @@
 <p class="first admonition-title">小技巧</p>
 <p class="last">如果你不熟悉Git和GitHub的相关词汇，可以看一看GitHub提供的术语表：&lt;<a class="reference external" href="https://help.github.com/articles/github-glossary/">https://help.github.com/articles/github-glossary/</a>&gt;。</p>
 </div>
-<img alt="Repo Overview" src="../_images/repo-overview.svg" /><p>因此，这一代码仓库被命名为``SpongePowered``，并拥有两个分别名为``master``和``feature 1``的分支，和其上的若干提交。</p>
-<p>Let&#8217;s put these terms into context - beginning with the <em>repository</em>. The repository (short: <em>repo</em>) is the place where
-a project stores its files. The SpongePowered repositories are located at <a class="reference external" href="http://github.com/spongepowered">GitHub</a>.
-However, this repo has some access restrictions to preserve it from unwanted or malicious changes. You can&#8217;t simply make
-changes yourself, as the repo is read-only for regular users. Now you may wonder how you&#8217;re supposed to file proposals
-and changes. Well, that&#8217;s where <em>forks</em> come into play. You can grab a copy of the SpongePowered repos, and make your
-changes there. When you&#8217;re done, you open it as a pull request (<em>PR</em>) on our repository. Your proposed additions and
-changes can then be reviewed, and staff will tell you if something is wrong, or needs improvement, and eventually merge
-the final PR.</p>
-<p>Here&#8217;s a short summary of the procedure described above, before we go into detail:</p>
+<img alt="Repo Overview" src="../_images/repo-overview.svg" /><p>举例，有一名为 <code class="docutils literal"><span class="pre">SpongePowered</span></code> 代码仓库，拥有两个分别名为``master``和``feature 1``的分支，和其上的若干提交。</p>
+<p>我们来将术语放在具体情境下解释——从*仓库* (Repository) 开始。仓库（通常会略称 <em>repo</em> ）是一个项目中所有文件的储藏地点。这个名为 <cite>SpongePowered</cite> 的仓库位于 <a class="reference external" href="http://github.com/spongepowered">GitHub</a> 。然而，这个仓库有权限控制，避免不必要，甚至是恶意变更波及正常的开发工作。因此你作为普通用户，权限只有只读，并不能写入新的变更。你现在或许已开始思考如何进行变更了。很好，这个时候就需要*复刻* (Fork) 了。你可以复制一份 SpongePowered 仓库，然后在你自己复制出来的仓库中进行修改。修改完成后，你需要向 SpongePowered 提出*拉取请求*（即 Pull Requst ，或简称 PR）。你所提请的变更将会经过我们的复核，一些工作人员会指出其中的不足之处，并协助修改，并最终合并此请求。</p>
+<p>在细讲之前，我们先简单过一遍整个流程：</p>
 <ol class="arabic simple">
 <li><p class="first">Fork 你选择的项目</p>
 </li>
@@ -421,16 +415,20 @@ the final PR.</p>
 </li>
 <li><p class="first">创建新分支</p>
 </li>
-<li>Make the desired changes</li>
-<li><p class="first">测试所有东西能不能正常运作</p>
+<li><p class="first">做出需要的修改</p>
+</li>
+<li><p class="first">测试所有东西能否正常运作</p>
 </li>
 <li><p class="first">提交变更</p>
 </li>
 <li><p class="first">同步到 GitHub</p>
 </li>
-<li>Propose the changes in a PR to the SpongePowered Repo</li>
-<li>Amend to your PR if necessary</li>
-<li>Your PR gets pulled into master by staff</li>
+<li><p class="first">就你的变更向 SpongePowered 提出拉取申请</p>
+</li>
+<li><p class="first">如有必要，修订申请</p>
+</li>
+<li><p class="first">你的提交将会被工作人员合并</p>
+</li>
 </ol>
 </div>
 <div class="section" id="details-please">
@@ -439,17 +437,12 @@ the final PR.</p>
 <h3>1. Forking a Repo<a class="headerlink" href="#forking-a-repo" title="永久链接至标题">¶</a></h3>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">This step is only required if you don&#8217;t have push rights on the repo you&#8217;re making changes to. If you&#8217;re working on
-your own repo, no fork is required. Just skip this step and <code class="docutils literal"><span class="pre">clone</span></code> directly. If you&#8217;re making changes to Sponge
-and you <strong>aren&#8217;t</strong> staff, this step is required.</p>
+<p class="last">仅当你没有推送权的时候，你才需要Fork。若仓库的所有者是你，你不需要Fork，可直接忽略此步骤，直接克隆整个仓库即可。若你打算为 Sponge 贡献代码，但你**不是** Sponge 团队的工作人员，你必须Fork。</p>
 </div>
-<p>Now that you know the basic concept, we&#8217;ll discuss the details. First you need to fork the repository you want to
-make changes to. This can be done on GitHub.com, where you&#8217;ll find a <code class="docutils literal"><span class="pre">Fork</span></code> button at the top of the repositories page.
-After pressing it, GitHub will do some work and present a clone of the original repo to you. You&#8217;ll notice that the
-clone is now located at <code class="docutils literal"><span class="pre">YourGitHubAccount/ClonedRepoName</span></code>. Alright, first step completed.</p>
+<p>现在你大概只有一个基本概念，不过没关系，我们会进行详细解释的。首先你需要Fork你想修改的仓库。这个操作可以透过 GitHub完成：在仓库的页面上方你可以找到一个 <code class="docutils literal"><span class="pre">Fork</span></code> 按钮，点击此按钮后 GitHub就会开始帮你进行一系列必要的操作，然后你就可以发现你多了一个名字类似 <code class="docutils literal"><span class="pre">你的</span> <span class="pre">GitHub</span> <span class="pre">用户名/被克隆的仓库名</span></code> 的新仓库了。很好，第一步完成。</p>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">All branches from the original repository will get forked too, you recieve an exact clone of the forked repo.</p>
+<p class="last">整个仓库，包括所有的分支，都会精确地复制进你 Fork 的仓库中。</p>
 </div>
 <img alt="Repo forking" src="../_images/repo-fork.svg" /></div>
 <div class="section" id="cloning-the-fork-to-your-local-machine">

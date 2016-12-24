@@ -315,6 +315,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../plugin/items/creating.html">物品的创建</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../plugin/trade-offers.html">Trade-Offers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/effects.html">效果</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/scheduler.html">调度器</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../plugin/services.html">服务</a></li>
@@ -348,7 +349,7 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">向 Sponge 贡献代码</a><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="guidelines.html">贡献指南</a></li>
-<li class="toctree-l2"><a class="reference internal" href="howtogit.html">如何使用 Git（Hub）</a></li>
+<li class="toctree-l2"><a class="reference internal" href="howtogit.html">如何使用 Git/GitHub</a></li>
 <li class="toctree-l2"><a class="reference internal" href="implementation/index.html">参与到 Sponge 的开发工作来</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="implementation/codestyle.html">代码规范</a></li>
 <li class="toctree-l3"><a class="reference internal" href="implementation/git-implementation.html">Sponge API 及其实现的 Git 工作流程</a></li>
@@ -392,90 +393,94 @@
                   
   <div class="section" id="spongedocs-writing">
 <h1>开发文档<a class="headerlink" href="#spongedocs-writing" title="永久链接至标题">¶</a></h1>
-<p>SpongeDocs, 是海绵服务器项目的官方文档. 本文档意在:</p>
+<p>SpongeDocs ，是Sponge服务器项目的官方文档。本文档旨在：</p>
 <ul class="simple">
-<li><p class="first">帮助服主们创建一个他们自己的服务器.</p>
+<li><p class="first">帮助服主们建立他们自己的服务器。</p>
 </li>
-<li>Provide developers with information on how to contribute to the Sponge project.</li>
-<li>Provide developers with information on how to get started with plugin development.</li>
+<li><p class="first">为有意向 Sponge 贡献代码的开发者指明方向。</p>
+</li>
+<li><p class="first">为开发者提供关于 Sponge 插件开发的相关信息。</p>
+</li>
 </ul>
 <div class="section" id="reporting-problems">
 <h2>报告问题<a class="headerlink" href="#reporting-problems" title="永久链接至标题">¶</a></h2>
-<p>It may always occur that a page gets outdated, an error sneaks in or you just look at a page and think &#8220;Well, there is a
-better way of explaining this.&#8221; If that is the case and you are for some reason not able to provide a fix yourself,
-there are three ways of making us aware of the problem:</p>
+<p>然而，文档难免会有疏漏，诸如过期内容，或是错别字，抑或你觉得某段文本换个表达方式会更好。如果你遇到了这样的情况，但你因为种种原因无法直接为我们提供帮助，我们仍然留有三条反馈的途径：</p>
 <ol class="arabic simple">
-<li>Create an <a class="reference external" href="https://github.com/SpongePowered/SpongeDocs/issues">Issue on the SpongeDocs GitHub</a></li>
-<li>Create a Posting on the <a class="reference external" href="https://forums.spongepowered.org/c/sponge-docs">SpongeDocs Forums Category</a></li>
-<li>Visit us in the <a class="reference external" href="irc://irc.esper.net:6667/spongedocs">#spongedocs channel on irc.esper.net</a> (you need to be registered)</li>
+<li><p class="first">在 <a class="reference external" href="https://github.com/SpongePowered/SpongeDocs/issues">SpongeDocs 位于 GitHub 的 问题追踪器</a> 中反馈</p>
+</li>
+<li><p class="first">在 <a class="reference external" href="https://forums.spongepowered.org/c/sponge-docs">论坛中的 SpongeDocs 版块</a> 下发帖求助</p>
+</li>
+<li><p class="first">加入IRC频道 <a class="reference external" href="irc://irc.esper.net:6667/spongedocs">#spongedocs （位于 irc.esper.net ）</a> （你需要先注册）</p>
+</li>
 </ol>
 </div>
 <div class="section" id="writing-the-docs">
-<h2>编写文档<a class="headerlink" href="#writing-the-docs" title="永久链接至标题">¶</a></h2>
-<p>Changes and additions to SpongeDocs should be submitted as a pull request to the <a class="reference external" href="https://github.com/SpongePowered/SpongeDocs">SpongeDocs repository on GitHub</a>. We do not require it to be perfect right away as it is common for pull
-requests to be refined during the review process. Incomplete explanations are also welcome, so don&#8217;t shy away if there
-are some parts you do not understand. There will always be someone able to fill in the gaps.</p>
-<p>The Docs are written in reStructuredText (reST), if you&#8217;re familiar with Markdown (md) the step to reST shouldn&#8217;t be to
-hard. If you&#8217;re having issues with it we suggest that you join our <a class="reference external" href="https://forums.spongepowered.org/">forums</a> or
-<a class="reference external" href="irc://irc.esper.net:6667/spongedocs">#SpongeDocs</a> on Esper.net and ask for help there.</p>
+<h2>撰写文档<a class="headerlink" href="#writing-the-docs" title="永久链接至标题">¶</a></h2>
+<p>对 SpongeDocs 任何形式的变动都应当通过 <a class="reference external" href="https://github.com/SpongePowered/SpongeDocs">SpongeDocs 位于 GitHub 的仓库</a> 完成。我们并不期望你的 Pull Request 从一开始就是完美的，毕竟人无完人，金无足赤，绝大部分Pull Request也都会在复核时得到进一步完善；甚至我们还欢迎不完整的解释，所以——不要因为你有地方搞不明白而感到害怕；总会有人协助填补空白的。</p>
+<p>SpongeDocs 使用 reStructuredText (reST) 标记语言写就，若是你在此之前熟悉 Markdown (md) 这样的文本标记语言， reST 对你来说将不会有太大困难。若遇到困难，我们建议你前往 <a class="reference external" href="https://forums.spongepowered.org/">论坛</a> 或 <cite>我们在 Esper.net 上的 IRC 频道 #SpongeDocs &lt;irc://irc.esper.net:6667/spongedocs&gt;</cite> 寻求帮助。</p>
 </div>
 <div class="section" id="style-guide">
-<h2>Style Guide<a class="headerlink" href="#style-guide" title="永久链接至标题">¶</a></h2>
-<p>To make sure we have consistent format across all SpongeDocs pages, here are the guidelines we have developed for
-writing Sponge Documentation. This list may get added to (or bent out of shape) as the Docs get bigger.</p>
+<h2>文档规范指南<a class="headerlink" href="#style-guide" title="永久链接至标题">¶</a></h2>
+<p>为确保所有 SpongeDocs 页面的排版一致性，我们在此规定了一套文档规范。随着文档的扩张，规范的内容也可能会有更新或变动。</p>
 <ol class="arabic simple">
-<li>Headings Should Be Written in Title Case (&lt;- example) [unless #8 applies].</li>
-<li>Page headings should be meaningful (the heading appears as a link).</li>
-<li>Program code should be contained in <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/roles.html#literal">inline literals</a>
-or code blocks.</li>
+<li><p class="first">标题应首字母大写（例如： Lorem Ipsum Dolor Sit Amet ）， #8 适用的情况除外</p>
+</li>
+<li><p class="first">应当使用有意义标题。（标题将会以链接形式出现）</p>
+</li>
+<li><p class="first">程序代码应以 <a class="reference external" href="http://docutils.sourceforge.net/docs/ref/rst/roles.html#literal">行内纯文本 (inline literal)</a>  的形式出现，或包含在代码块中。</p>
+</li>
 </ol>
 <blockquote>
 <div><ol class="lowerroman simple">
-<li>Try not to put too much text in code blocks, as they cannot be translated.
-Contributors are discouraged from commenting in code blocks wherever possible. Simple place-holder text may be
-necessary in some examples. Ideally, code block examples will be short, and followed by an explanation for each
-example in the body text. Of course, there may be some concepts that cannot be illustrated with a short example.</li>
+<li><p class="first">尽量不要让大量文本出现在代码块中，因为代码块不能被标记翻译。我们建议贡献者尽量避免代码块内的代码注释。理想的情况应当是一段简短的代码块，并在接下来的正文中给出详尽的解释。自然地，不是所有的概念都能用几行代码就能解释清楚，所以还请尽力而为。</p>
+</li>
 </ol>
 </div></blockquote>
 <ol class="arabic simple" start="4">
-<li>Keep separate areas for Users, Plugin Devs, and Sponge Devs.</li>
-<li>Avoid repetition by sharing pages where possible.</li>
-<li>Link to external resources rather than reproduce them.</li>
+<li><p class="first">面向用户、插件开发者和 Sponge 开发者的内容应区别对待。</p>
+</li>
+<li><p class="first">避免重复解释同一内容——请尽量使用超链接。</p>
+</li>
+<li><p class="first">对于外部资料，请给出链接，不要直接复制。</p>
+</li>
 </ol>
 <blockquote>
 <div><ol class="lowerroman simple">
-<li>Some exceptions are made for translation purposes.</li>
+<li><p class="first">对于翻译项目，会有些许例外。</p>
+</li>
 </ol>
 </div></blockquote>
 <ol class="arabic simple" start="7">
-<li><p class="first">区分 SpongeForge, SpongeVanilla和SpongeAPI</p>
+<li><p class="first">区分 SpongeForge 、 SpongeVanilla 和 SpongeAPI 。</p>
 </li>
-<li>If it looks awful in your language, invent your own rules.</li>
-<li>Sponge is the Project Title and should NOT be translated.</li>
+<li><p class="first">若翻译后的文本在你的语言中看起来不通顺，你可以自行确立新的规则。</p>
+</li>
+<li><p class="first">Sponge 作为项目的名称，不应被翻译。</p>
+</li>
 </ol>
 <blockquote>
 <div><ol class="lowerroman simple">
-<li>Some languages may wish to use a phonetic translation as well.</li>
+<li><p class="first">某些语言可选择使用音译（例如中文）。</p>
+</li>
 </ol>
 </div></blockquote>
 <ol class="arabic simple" start="10">
-<li><p class="first">通常是不建议直接机翻(例如谷歌翻译), 机翻往往有不少语义错误。</p>
+<li><p class="first">我们强烈不建议使用诸如谷歌翻译之类的机翻工具。机翻往往有大量语义错误，通常也会被直接拒绝。</p>
 </li>
-<li>Page Titles and Section Headings should be plain text, avoiding literal blocks and other formatting.</li>
-<li>Code symbols should be capitalised in their original form and have no extra spaces (eg. blockState (a field name) or
-BlockState (a class name), rather than <em>block state</em>). They should also be formatted as a literal using double
-backticks (eg. <code class="docutils literal"><span class="pre">blockState</span></code>) in body text.</li>
-<li>Lines should have a maximum length of 120 characters.</li>
-<li>Imports should be written out in code blocks the first time they are referenced in each article, but not repeated
-after the first time.</li>
+<li><p class="first">页标题和段落标题应以纯文本出现，不应出现纯文本块或其它形式的排版。</p>
+</li>
+<li><p class="first">代码名应保持原样（例如作为实例域 (Field) 存在的 blockState ，或是作为类名存在的 BlockState ，这两个就不能转写为 <em>block state</em> ）。同时，正文中的代码名应当以纯文本形式出现（例如， <code class="docutils literal"><span class="pre">blockState</span></code> ）。</p>
+</li>
+<li><p class="first">每行最多120个字符。</p>
+</li>
+<li><p class="first">导入应在文章中第一次需要导入的代码块中声明，此后毋需重复声明导入。</p>
+</li>
 </ol>
 <div class="admonition note">
 <p class="first admonition-title">注解</p>
-<p class="last">As Sponge is still in a state of flux, a shortfall of development docs is to be expected. Until official release of
-Sponge, there are sure to be voids in many subjects. Nevertheless, SpongeDocs is a living document, always subject
-to edit. It&#8217;s never going to be perfect, just beaten into shape as needs demand.</p>
+<p class="last">有鉴于 Sponge 仍然处在不断地变化之中，我们也可以预见到 SpongeDocs 的编纂工作将会出现间歇性的停滞。可以肯定，在 Sponge 正式发布之前，很多资料将仍是空白。尽管如此， SpongeDocs 作为一个仍处于活跃状态的文档来说，仍然会有更新。在有生之年，它或许不会完美，但定将变得越来越完善。</p>
 </div>
-<p><em>Contributions, suggestions and corrections are always welcome.</em></p>
+<p><em>不论何时，我们都欢迎各种贡献、建议和订正。</em></p>
 </div>
 </div>
 

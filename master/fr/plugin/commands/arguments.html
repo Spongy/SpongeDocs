@@ -315,6 +315,7 @@
 <li class="toctree-l3"><a class="reference internal" href="../items/creating.html">Création d&#8217;un ItemStack</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="../trade-offers.html">Trade-Offers</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../effects.html">Effets</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../scheduler.html">Scheduler</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../services.html">Services</a></li>
@@ -394,9 +395,7 @@
 <h1>Séparation des Arguments<a class="headerlink" href="#argument-parsing" title="Lien permanent vers ce titre">¶</a></h1>
 <p>L&#8217;API de Construction de Commandes est doté d&#8217;un analyseur d&#8217;arguments très puissant. Il convertit les caractères entrées en types de java de base (integers, booleans, strings) ou en objets du jeu (joueurs, mondes, types de bloc, ...). L&#8217;analyseur supporte les arguments optionnels et les flags. Il supporte également la achèvements des arguments a l&#8217;aide de TAB.</p>
 <p>L&#8217;analyseur d&#8217;arguments est stocké dans l&#8217;objet <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/CommandContext.html">CommandContext</a>. Si l&#8217;analyseur renvoie un seul objet, on peut l&#8217;obtenir avec <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/CommandContext.html#getOne-java.lang.String-">CommandContext#getOne(String)</a>. Les arguments optionnel ou faible peuvent renvoyer <code class="docutils literal"><span class="pre">Optional.absent()</span></code>.</p>
-<p>Many of the parsers may return more than one object (e.g. multiple players with a matching username). In that case, you
-must use the <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/CommandContext.html#getAll-java.lang.String-">CommandContext#getAll(String)</a> method to get the <code class="docutils literal"><span class="pre">Collection</span></code> of possible matches.
-<strong>Otherwise, the context object will throw an exception!</strong></p>
+<p>Un certain nombre d&#8217;analyseurs peuvent retourner plus d&#8217;un objet (ex: plusieurs joueurs avec un pseudo correspondant). Dans ce cas, vous devez utiliser la méthode <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/CommandContext.html#getAll-string-">CommandContext#getAll(string)</a> des correspondances possibles. <strong>Autrement, l&#8217;objet contexte va renvoyer une exception!</strong></p>
 <div class="admonition tip">
 <p class="first admonition-title">Astuce</p>
 <p class="last">Vous pouvez utiliser l&#8217;élément <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/GenericArguments.html#onlyOne-org.spongepowered.api.command.args.CommandElement-">GenericArguments#onlyOne(CommandElement)</a> pour limiter le nombre de valeurs renvoyées à une seule valeur, donc vous vous pouvez utilisez prudemment <code class="docutils literal"><span class="pre">args.&lt;T&gt;getOne(String</span> <span class="pre">key)</span></code>.</p>
@@ -451,7 +450,8 @@ must use the <a class="reference external" href="https://jd.spongepowered.org/5.
 <col width="21%" />
 </colgroup>
 <thead valign="bottom">
-<tr class="row-odd"><th class="head">Command Element</th>
+<tr class="row-odd"><th class="head"><p class="first last">Élément de commande</p>
+</th>
 <th class="head">Description</th>
 <th class="head"><p class="first last">Type de Valeur &amp; Quantité</p>
 </th>
@@ -473,7 +473,8 @@ must use the <a class="reference external" href="https://jd.spongepowered.org/5.
 </td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">remainingJoinedStrings</span></code></td>
-<td>Concatenates all remaining arguments separated by spaces (useful for message commands).</td>
+<td><p class="first last">Concatène tous les autres arguments séparés par des espaces (utiles pour les commandes de message).</p>
+</td>
 <td><p class="first last">une <code class="docutils literal"><span class="pre">String</span></code></p>
 </td>
 </tr>
@@ -484,24 +485,29 @@ must use the <a class="reference external" href="https://jd.spongepowered.org/5.
 </td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">integer</span></code></td>
-<td>Require an argument to be an integer.</td>
+<td><p class="first last">Nécessite un argument de type entier.</p>
+</td>
 <td><p class="first last">un <code class="docutils literal"><span class="pre">Integer</span></code></p>
 </td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">doubleNum</span></code></td>
-<td>Require an argument to be a double.</td>
+<td><p class="first last">Nécessite un argument de type double.</p>
+</td>
 <td><p class="first last">un <code class="docutils literal"><span class="pre">Double</span></code></p>
 </td>
 </tr>
-<tr class="row-odd"><td colspan="3"><strong>Game Objects</strong></td>
+<tr class="row-odd"><td colspan="3"><p class="first last"><strong>Objet du jeu</strong></p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">player</span></code></td>
-<td>Expect an argument to represent an online player. <strong>May return multiple players!</strong></td>
+<td><p class="first last">Attend un argument représentant un joueur connecté. <strong>Peut renvoyé plusieurs joueurs!</strong></p>
+</td>
 <td><p class="first last">plusieurs instances de <code class="docutils literal"><span class="pre">Player</span></code></p>
 </td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">playerOrSource</span></code></td>
-<td>Like <code class="docutils literal"><span class="pre">player</span></code>, but returns the sender of the command if no matching player was found.</td>
+<td><p class="first last">Comme <code class="docutils literal"><span class="pre">player</span></code>, mais renvoie l’expéditeur de la commande si aucun joueur n&#8217;est trouvé.</p>
+</td>
 <td><p class="first last">plusieurs instances de <code class="docutils literal"><span class="pre">Player</span></code></p>
 </td>
 </tr>
@@ -512,121 +518,135 @@ must use the <a class="reference external" href="https://jd.spongepowered.org/5.
 </td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">world</span></code></td>
-<td>Expect an argument to represent a world (also includes unloaded worlds).</td>
+<td><p class="first last">Attend un argument représentant un monde (inclut également les mondes non-chargés).</p>
+</td>
 <td><p class="first last">plusieurs <code class="docutils literal"><span class="pre">WorldProperties</span></code></p>
 </td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">dimension</span></code></td>
-<td>Expect an argument to represent a dimension (<code class="docutils literal"><span class="pre">END</span></code>, <code class="docutils literal"><span class="pre">NETHER</span></code>, <code class="docutils literal"><span class="pre">OVERWORLD</span></code>).</td>
-<td>multiple <code class="docutils literal"><span class="pre">DimensionType</span></code>
-instances</td>
+<td><p class="first last">Attend un argument représentant une dimension (<code class="docutils literal"><span class="pre">END</span></code>, <code class="docutils literal"><span class="pre">NETHER</span></code>, <code class="docutils literal"><span class="pre">OVERWORLD</span></code>).</p>
+</td>
+<td><p class="first last">plusieurs instances de <code class="docutils literal"><span class="pre">DimensionType</span></code></p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">location</span></code></td>
-<td>Expect an argument to represent a <code class="docutils literal"><span class="pre">Location</span></code>.</td>
+<td><p class="first last">Attend un argument représentant une <code class="docutils literal"><span class="pre">Location</span></code>.</p>
+</td>
 <td><p class="first last">une <code class="docutils literal"><span class="pre">Location</span></code></p>
 </td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">vector3d</span></code></td>
-<td>Expect an argument to represent a <code class="docutils literal"><span class="pre">Vector3d</span></code>.</td>
+<td><p class="first last">Attend un argument du type <code class="docutils literal"><span class="pre">Vector3d</span></code>.</p>
+</td>
 <td><p class="first last">un <code class="docutils literal"><span class="pre">Vector3d</span></code></p>
 </td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">catalogedElement</span></code></td>
 <td><p class="first last">Attend un argument qui est membre d&#8217;un <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/CatalogType.html">CatalogType</a> spécifique.</p>
 </td>
-<td>multiple matching elements
-of the specified catalog type</td>
+<td><p class="first last">plusieurs éléments correspondants à ce catalogue de type spécifique</p>
+</td>
 </tr>
-<tr class="row-even"><td colspan="3"><strong>Matchers</strong></td>
+<tr class="row-even"><td colspan="3"><p class="first last"><strong>Correspondants</strong></p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">choices</span></code></td>
-<td>Return an argument that allows selecting from a limited set of values.</td>
+<td><p class="first last">Renvoie un argument qui permet de choisir parmi un ensemble de valeurs.</p>
+</td>
 <td><p class="first last">une valeur spécifiée</p>
 </td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">literal</span></code></td>
-<td>Expect a literal sequence of arguments (e.g. <code class="docutils literal"><span class="pre">&quot;i&quot;,</span> <span class="pre">&quot;luv&quot;,</span> <span class="pre">&quot;u&quot;</span></code>: <code class="docutils literal"><span class="pre">/cmd</span> <span class="pre">i</span> <span class="pre">luv</span> <span class="pre">u</span></code>).
-Throws an error if the arguments do not match.</td>
+<td><p class="first last">Attend une séquence littéral d&#8217;arguments (ex: <code class="docutils literal"><span class="pre">&quot;i&quot;,</span> <span class="pre">&quot;luv&quot;,</span> <span class="pre">&quot;u&quot;</span></code>: <code class="docutils literal"><span class="pre">/cmd</span> <span class="pre">i</span> <span class="pre">luv</span> <span class="pre">u</span></code>). Génère une erreur si les arguments ne correspondent pas.</p>
+</td>
 <td><p class="first last">une valeur spécifiée</p>
 </td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">enumValue</span></code></td>
-<td>Require the argument to be a key under the provided enum.</td>
-<td>multiple matching elements
-of the specified enum</td>
+<td><p class="first last">Nécessite l&#8217;argument pour être une clef sous forme d&#8217;énumération fournie.</p>
+</td>
+<td><p class="first last">plusieurs éléments correspondants à une liste spécifiée</p>
+</td>
 </tr>
-<tr class="row-even"><td colspan="3"><p class="first"><strong>Utilities</strong></p>
-<p class="last">Can be wrapped around command elements. The value type is inherited from the wrapped element.</p>
+<tr class="row-even"><td colspan="3"><p class="first"><strong>Utilités</strong></p>
+<p class="last">Peut être encapsulé autour des éléments de commande. Le type de valeur est hérité de l&#8217;élément encapsulé.</p>
 </td>
 </tr>
 <tr class="row-odd"><td><p class="first last">&#8216;seq&#8217;</p>
 </td>
-<td>Builds a sequence of command elements (e.g. <code class="docutils literal"><span class="pre">/cmd</span> <span class="pre">&lt;arg1&gt;</span> <span class="pre">&lt;arg2&gt;</span> <span class="pre">&lt;arg3&gt;</span></code>).</td>
-<td>inherited</td>
+<td><p class="first last">Génère une séquence d&#8217;éléments de commande (ex: <code class="docutils literal"><span class="pre">/cmd</span> <span class="pre">&lt;arg1&gt;</span> <span class="pre">&lt;arg2&gt;</span> <span class="pre">&lt;arg3&gt;</span></code>).</p>
+</td>
+<td><p class="first last">hérité</p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">repeated</span></code></td>
-<td>Require a given command element to be provided a certain number of times.</td>
-<td>multiple inherited</td>
+<td><p class="first last">Nécessite un élément de la commande donnée pour être fournit un certains nombres de fois.</p>
+</td>
+<td><p class="first last">plusieurs hérités</p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">allOf</span></code></td>
-<td>Require all remaining args to match the provided command element.</td>
-<td>multiple inherited</td>
+<td><p class="first last">Nécessite tous les arguments restants pour correspondre à l&#8217;élément de commande fourni.</p>
+</td>
+<td><p class="first last">plusieurs hérités</p>
+</td>
 </tr>
 <tr class="row-even"><td><p class="first last"><code class="docutils literal"><span class="pre">facultatif</span></code></p>
 </td>
-<td>Make the provided command element optional. Throws an error if the argument
-is of invalid format and there are no more args.</td>
-<td>inherited</td>
+<td><p class="first last">Fait de la commande fournie une option. Génère une erreur si l&#8217;argument est de format non valide et il n&#8217;y a plus d&#8217;arguments.</p>
+</td>
+<td><p class="first last">hérité</p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">optionalWeak</span></code></td>
-<td>Make the provided command element optional. Does not throw an error if the argument
-is of invalid format and there are no more args.</td>
-<td>inherited</td>
+<td><p class="first last">Fait de la commande fournie une option. Ne génère pas une erreur si l&#8217;argument est de format non valide et il n&#8217;y a plus d&#8217;arguments.</p>
+</td>
+<td><p class="first last">hérité</p>
+</td>
 </tr>
 <tr class="row-even"><td><code class="docutils literal"><span class="pre">firstParsing</span></code></td>
-<td>Returns a command element that matches the first of the provided elements that parses
-(useful for command overloading, e.g. <code class="docutils literal"><span class="pre">/settime</span> <span class="pre">&lt;day|night|&lt;number&gt;&gt;</span></code>).</td>
-<td>inherited</td>
+<td><p class="first last">Retourne un élément de commande qui correspond à la première qui analyse les éléments fournis (utile pour commande une surcharge, par exemple <code class="docutils literal"><span class="pre">/settime</span> <span class="pre">&lt;day|night|&lt;number&gt;&gt;</span></code>).</p>
+</td>
+<td><p class="first last">hérité</p>
+</td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">onlyOne</span></code></td>
-<td>Restricts the given command element to only insert one value into the context at the
-provided key.</td>
-<td>inherited</td>
+<td><p class="first last">Limite la commande donnée à insérer seulement une valeur dans le contexte à la clé mise à disposition.</p>
+</td>
+<td><p class="first last">hérité</p>
+</td>
 </tr>
 <tr class="row-even"><td><p class="first last">&#8216;flags&#8217;</p>
 </td>
 <td><p class="first">Renvoie un constructeur pour les flags de la commande (ex: &#8216;/cmd [-a] [-b &lt;value&gt;]&#8217;).</p>
-<p class="last">See <a class="reference internal" href="flags.html"><span class="doc">Command Flags</span></a></p>
+<p class="last">Voir <a class="reference internal" href="flags.html"><span class="doc">Command Flags</span></a></p>
 </td>
 <td><p class="first">Court Flag: un &#8216;Boolean&#8217;</p>
 <p>Long Flag: une &#8216;String&#8217;</p>
-<p class="last">Value Flag: inherited</p>
+<p class="last">Valeur du Flag: hérité</p>
 </td>
 </tr>
 <tr class="row-odd"><td><code class="docutils literal"><span class="pre">requiringPermission</span></code></td>
-<td>Requires the command sender to have the specified permission in order to use the given
-command argument</td>
-<td>inherited</td>
+<td><p class="first last">Nécessite l’expéditeur de la commande de disposer de l’autorisation spécifiée afin d’utiliser l’argument de commande donnée</p>
+</td>
+<td><p class="first last">hérité</p>
+</td>
 </tr>
 </tbody>
 </table>
 <div class="admonition tip">
 <p class="first admonition-title">Astuce</p>
-<p class="last">See the Javadocs for <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/GenericArguments.html">GenericArguments</a> for more information.</p>
+<p class="last">Voir les Javadocs pour <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/GenericArguments.html">GenericArguments</a> pour plus d’informations.</p>
 </div>
 </div>
 <div class="section" id="custom-command-elements">
 <h2>Elements de Commandes Personalisés<a class="headerlink" href="#custom-command-elements" title="Lien permanent vers ce titre">¶</a></h2>
-<p>It is possible to create custom command elements (e.g. a URL parser or a <code class="docutils literal"><span class="pre">Vector2i</span></code> element) by extending the abstract
-<code class="docutils literal"><span class="pre">CommandElement</span></code> class.</p>
-<p>The <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/CommandElement.html#parseValue-org.spongepowered.api.command.CommandSource-org.spongepowered.api.command.args.CommandArgs-">CommandElement#parseValue(CommandSource, CommandArgs)</a> method should fetch a raw argument string with
-<a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/CommandArgs.html#next--">CommandArgs#next()</a> and convert it to an object. The method should throw an <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/ArgumentParseException.html">ArgumentParseException</a>
-if the parsing fails.</p>
-<p>The <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/CommandElement.html#complete-org.spongepowered.api.command.CommandSource-org.spongepowered.api.command.args.CommandArgs-org.spongepowered.api.command.args.CommandContext-">CommandElement#complete(CommandSource, CommandArgs, CommandContext)</a> method should use
-<a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/CommandArgs.html#peek--">CommandArgs#peek()</a> to read the next raw argument. It returns a list of suggestions for TAB completion.</p>
+<p>Il est possible de créer des éléments de commande personnalisée (par exemple un analyseur d’URL ou d’un élément de <code class="docutils literal"><span class="pre">Vector2i</span></code>) en étendant la classe abstraite <code class="docutils literal"><span class="pre">CommandElement</span></code>.</p>
+<p>La méthode <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/CommandElement.html#parseValue-org.spongepowered.api.command.CommandSource-org.spongepowered.api.command.args.CommandArgs-">CommandElement#parseValue(CommandSource, CommandArgs)</a> doit récupérer une chaîne d&#8217;arguments brute avec <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/CommandArgs.html#next--">CommandArgs#next()</a> et la convertir en objet. La méthode doit générer <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/ArgumentParseException.html">ArgumentParseException</a> si l&#8217;analyse échoue.</p>
+<p>La méthode <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/CommandElement.html#complete-org.spongepowered.api.command.CommandSource-org.spongepowered.api.command.args.CommandArgs-org.spongepowered.api.command.args.CommandContext-">CommandElement#complete(CommandSource, CommandArgs, CommandContext)</a> doit utiliser <a class="reference external" href="https://jd.spongepowered.org/5.0.0/org/spongepowered/api/command/args/CommandArgs.html#peek--">CommandArgs#peek()</a> pour lire l&#8217;argument brut suivant. Il retourne une liste de suggestions pour l&#8217;autocomplétion (tab).</p>
 <div class="section" id="example-vector2i-command-element-definition">
-<h3>Example: <code class="docutils literal"><span class="pre">Vector2i</span></code> command element definition<a class="headerlink" href="#example-vector2i-command-element-definition" title="Lien permanent vers ce titre">¶</a></h3>
-<p>The parser in this example reads two input arguments and converts them to a vector.</p>
+<h3>Exemple&nbsp;: Définition de l’élément de commande <code class="docutils literal"><span class="pre">Vector2i</span></code><a class="headerlink" href="#example-vector2i-command-element-definition" title="Lien permanent vers ce titre">¶</a></h3>
+<p>L’analyseur dans cet exemple lit les deux arguments d’entrée et les convertit en un vecteur.</p>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">com.flowpowered.math.vector.Vector2i</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.command.args.ArgumentParseException</span><span class="o">;</span>
 <span class="kn">import</span> <span class="nn">org.spongepowered.api.command.args.CommandArgs</span><span class="o">;</span>
@@ -680,7 +700,7 @@ if the parsing fails.</p>
 </div>
 </div>
 <div class="section" id="example-vector2i-command-element-usage">
-<h3>Example: <code class="docutils literal"><span class="pre">Vector2i</span></code> command element usage<a class="headerlink" href="#example-vector2i-command-element-usage" title="Lien permanent vers ce titre">¶</a></h3>
+<h3>Exemple&nbsp;: Utilisation de l’élément de commande <code class="docutils literal"><span class="pre">Vector2i</span></code><a class="headerlink" href="#example-vector2i-command-element-usage" title="Lien permanent vers ce titre">¶</a></h3>
 <div class="highlight-java"><div class="highlight"><pre><span></span><span class="c1">// /plottp &lt;x&gt; &lt;y&gt;</span>
 <span class="n">CommandSpec</span> <span class="n">myCommandSpec</span> <span class="o">=</span> <span class="n">CommandSpec</span><span class="o">.</span><span class="na">builder</span><span class="o">()</span>
         <span class="o">.</span><span class="na">description</span><span class="o">(</span><span class="n">Text</span><span class="o">.</span><span class="na">of</span><span class="o">(</span><span class="s">&quot;Teleport to a plot&quot;</span><span class="o">))</span>
@@ -694,8 +714,7 @@ if the parsing fails.</p>
 </div>
 <div class="admonition tip">
 <p class="first admonition-title">Astuce</p>
-<p class="last">Look at the <a class="reference external" href="https://github.com/SpongePowered/SpongeAPI/blob/master/src/main/java/org/spongepowered/api/command/args/GenericArguments.java">source code</a>
-of the <code class="docutils literal"><span class="pre">GenericArguments</span></code> class for more examples.</p>
+<p class="last">Aller voir le <a class="reference external" href="https://github.com/SpongePowered/SpongeAPI/blob/master/src/main/java/org/spongepowered/api/command/args/GenericArguments.java">code source</a> de la classe <code class="docutils literal"><span class="pre">GenericArguments</span></code> pour plus d&#8217;exemples.</p>
 </div>
 </div>
 </div>
